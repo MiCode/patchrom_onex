@@ -1,0 +1,8 @@
+/system ext4 /dev/block/mmcblk0p12
+/data ext4 /dev/block/mmcblk0p15
+/cache ext4 /dev/block/mmcblk0p13
+/boot emmc /dev/block/mmcblk0p4
+/data/secure/data tmpfs tmpfs
+/data/htcfs fuse.htcfs htcfs
+/data/data/btips_tmp tmpfs tmpfs
+/data/DxDrm/fuse fuse.DxDrmServerIpc DxDrmServerIpc
