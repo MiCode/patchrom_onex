@@ -374,7 +374,7 @@
 
 .field private mVoiceCapable:Z
 
-.field private mVolumePanel:Lcom/htc/view/VolumePanel;
+.field private mVolumePanel:Lmiui/view/VolumePanel;
 
 .field private preRingerMode:I
 
@@ -800,198 +800,157 @@
 
     iput v3, p0, Landroid/media/AudioService;->SOUND_EFFECT_VOLUME_DB:I
 
-    .line 457
-    new-instance v3, Lcom/htc/view/VolumePanel;
+    new-instance v3, Lmiui/view/VolumePanel;
 
-    invoke-direct {v3, p1, p0}, Lcom/htc/view/VolumePanel;-><init>(Landroid/content/Context;Landroid/media/AudioService;)V
+    invoke-direct {v3, p1, p0}, Lmiui/view/VolumePanel;-><init>(Landroid/content/Context;Landroid/media/AudioService;)V
 
-    iput-object v3, p0, Landroid/media/AudioService;->mVolumePanel:Lcom/htc/view/VolumePanel;
+    iput-object v3, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
-    .line 458
     iput v6, p0, Landroid/media/AudioService;->mForcedUseForComm:I
 
-    .line 459
     invoke-direct {p0}, Landroid/media/AudioService;->createAudioSystemThread()V
 
-    .line 460
     invoke-direct {p0}, Landroid/media/AudioService;->readPersistedSettings()V
 
-    .line 461
     new-instance v3, Landroid/media/AudioService$SettingsObserver;
 
     invoke-direct {v3, p0}, Landroid/media/AudioService$SettingsObserver;-><init>(Landroid/media/AudioService;)V
 
     iput-object v3, p0, Landroid/media/AudioService;->mSettingsObserver:Landroid/media/AudioService$SettingsObserver;
 
-    .line 462
     iput v6, p0, Landroid/media/AudioService;->mHeadsetState:I
 
-    .line 463
     invoke-direct {p0}, Landroid/media/AudioService;->createStreamStates()V
 
-    .line 465
     iput v6, p0, Landroid/media/AudioService;->mMode:I
 
-    .line 466
     iput-boolean v9, p0, Landroid/media/AudioService;->mMediaServerOk:Z
 
-    .line 470
     iput v6, p0, Landroid/media/AudioService;->mRingerModeMutedStreams:I
 
-    .line 472
     iput v6, p0, Landroid/media/AudioService;->mRingerModeMaxVolumeStreams:I
 
-    .line 474
     invoke-virtual {p0}, Landroid/media/AudioService;->getRingerMode()I
 
     move-result v3
 
     invoke-direct {p0, v3, v6}, Landroid/media/AudioService;->setRingerModeInt(IZ)V
 
-    .line 476
     iget-object v3, p0, Landroid/media/AudioService;->mAudioSystemCallback:Landroid/media/AudioSystem$ErrorCallback;
 
     invoke-static {v3}, Landroid/media/AudioSystem;->setErrorCallback(Landroid/media/AudioSystem$ErrorCallback;)V
 
-    .line 478
     iput-boolean v6, p0, Landroid/media/AudioService;->mBluetoothHeadsetConnected:Z
 
-    .line 481
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v3, "android.intent.action.HEADSET_PLUG"
 
     invoke-direct {v0, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 484
     .local v0, intentFilter:Landroid/content/IntentFilter;
     const-string v3, "android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 485
     const-string v3, "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 486
     const-string v3, "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 487
     const-string v3, "android.intent.action.DOCK_EVENT"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 489
     const-string v3, "HDMI_DISCONNECTED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 490
     const-string v3, "HDMI_CONNECTED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 491
     const-string v3, "android.intent.category.DEFAULT"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 493
     const-string v3, "android.intent.action.USB_ANLG_HEADSET_PLUG"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 494
     const-string v3, "android.intent.action.USB_DGTL_HEADSET_PLUG"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 496
     const-string v3, "android.intent.action.FM"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 497
     const-string v3, "android.intent.action.FMTX"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 499
     const-string v3, "android.intent.action.HDMI_AUDIO_PLUG"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 500
     const-string v3, "com.htc.MIRROR_DISPLAY_STATE_CHANGED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 501
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 502
     const-string v3, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 503
     const-string v3, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 505
     const-string v3, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 507
     iget-boolean v3, p0, Landroid/media/AudioService;->mHasDockModeProjects:Z
 
     if-eqz v3, :cond_0
 
-    .line 508
     sget-object v3, Landroid/app/UiModeManager;->ACTION_EXIT_DESK_MODE:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 509
     sget-object v3, Landroid/app/UiModeManager;->ACTION_ENTER_DESK_MODE:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 512
     :cond_0
     iget-object v3, p0, Landroid/media/AudioService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 515
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 516
     .local v1, pkgFilter:Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 517
-    const-string/jumbo v3, "package"
+    const-string v3, "package"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 518
     iget-object v3, p0, Landroid/media/AudioService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v3, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 521
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0           #intentFilter:Landroid/content/IntentFilter;
@@ -8701,26 +8660,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 4285
     :goto_0
     return-void
 
-    .line 4282
     :cond_0
     iput-object v0, p0, Landroid/media/AudioService;->mSkin:Ljava/lang/String;
 
-    .line 4283
     iget-object v2, p0, Landroid/media/AudioService;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v2}, Landroid/media/AudioService;->getSkinContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v1
 
-    .line 4284
-    .local v1, wrappedContext:Landroid/content/Context;
-    iget-object v2, p0, Landroid/media/AudioService;->mVolumePanel:Lcom/htc/view/VolumePanel;
-
-    invoke-virtual {v2, v1}, Lcom/htc/view/VolumePanel;->resetProgressBar(Landroid/content/Context;)V
 
     goto :goto_0
 .end method
@@ -9227,9 +9178,9 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 954
-    iget-object v1, p0, Landroid/media/AudioService;->mVolumePanel:Lcom/htc/view/VolumePanel;
+    iget-object v1, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
-    invoke-virtual {v1, p1, p4}, Lcom/htc/view/VolumePanel;->postVolumeChanged(II)V
+    invoke-virtual {v1, p1, p4}, Lmiui/view/VolumePanel;->postVolumeChanged(II)V
 
     .line 955
     const-string v1, "AudioService"
@@ -16302,10 +16253,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1895
-    iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lcom/htc/view/VolumePanel;
-
-    invoke-virtual {v0, p1}, Lcom/htc/view/VolumePanel;->setVolumePanelOrientation(I)V
 
     .line 1896
     return-void

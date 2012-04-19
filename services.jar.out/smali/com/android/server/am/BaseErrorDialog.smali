@@ -17,8 +17,9 @@
     .prologue
     const/high16 v2, 0x2
 
+    const v0, 0x30d0020
     .line 33
-    invoke-direct {p0, p1}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1, v0}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
     .line 73
     new-instance v0, Lcom/android/server/am/BaseErrorDialog$1;

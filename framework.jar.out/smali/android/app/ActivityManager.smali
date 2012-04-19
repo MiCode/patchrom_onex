@@ -121,36 +121,32 @@
 
     if-ltz v4, :cond_1
 
-    .line 237
     :cond_0
     :goto_0
     return v3
 
-    .line 229
     :cond_1
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 230
     .local v0, p:Landroid/graphics/Point;
     invoke-virtual {p0, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 231
     iget v4, v0, Landroid/graphics/Point;->x:I
 
     iget v5, v0, Landroid/graphics/Point;->y:I
 
     mul-int v1, v4, v5
 
-    .line 232
     .local v1, pixels:I
     const v4, 0x96000
 
     if-ge v1, v4, :cond_0
 
-    .line 237
-    const/4 v3, 0x0
+    invoke-static {p0}, Landroid/app/ExtraActivityManager;->isHighEndGfx(Landroid/view/Display;)Z
+
+    move-result v3
 
     goto :goto_0
 .end method

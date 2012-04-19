@@ -146,6 +146,13 @@
 
 .field public static final sFileExtensions:Ljava/lang/String;
 
+.field public static final FILE_TYPE_APE:I = 0x3e9
+
+.field private static final FIRST_FFMPEG_AUDIO_FILE_TYPE:I = 0x3e9
+
+.field private static final LAST_FFMPEG_AUDIO_FILE_TYPE:I = 0x3e9
+
+
 .field private static sFileTypeMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -313,14 +320,6 @@
 
     invoke-static {v2, v3, v4}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 206
-    invoke-static {}, Landroid/media/MediaFile;->isWMAEnabled()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 207
     const-string v2, "WMA"
 
     const/4 v3, 0x6
@@ -505,6 +504,14 @@
     invoke-static {v2, v6, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 239
+    const-string v2, "APE"
+
+    const/16 v3, 0x3e9
+
+    const-string v4, "audio/x-monkeys-audio"
+
+    invoke-static {v2, v3, v4}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
+
     const-string v2, "MPEG"
 
     const/16 v3, 0x15
@@ -1832,10 +1839,12 @@
 .end method
 
 .method public static isAudioFileType(I)Z
-    .locals 2
+    .locals 3
     .parameter "fileType"
 
     .prologue
+    const/16 v2, 0x3e9
+
     const/4 v0, 0x1
 
     .line 331
@@ -1857,7 +1866,14 @@
     :cond_1
     const/16 v1, 0x33
 
-    if-ne p0, v1, :cond_3
+    if-ne p0, v1, :cond_4
+
+    goto :goto_0    
+    
+    :cond_4
+    if-lt p0, v2, :cond_3
+
+    if-gt p0, v2, :cond_3
 
     :cond_2
     :goto_0

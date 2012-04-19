@@ -442,6 +442,11 @@
 
 .field mWindowAttributesChangesFlag:I
 
+.field private mSkipResizedMsg:Z
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
 
 # direct methods
 .method static constructor <clinit>()V
@@ -545,166 +550,136 @@
 
     const/4 v4, 0x0
 
-    .line 365
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 171
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/view/ViewRootImpl;->mLastTrackballTime:J
 
-    .line 172
     new-instance v0, Landroid/view/ViewRootImpl$TrackballAxis;
 
     invoke-direct {v0}, Landroid/view/ViewRootImpl$TrackballAxis;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTrackballAxisX:Landroid/view/ViewRootImpl$TrackballAxis;
 
-    .line 173
     new-instance v0, Landroid/view/ViewRootImpl$TrackballAxis;
 
     invoke-direct {v0}, Landroid/view/ViewRootImpl$TrackballAxis;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTrackballAxisY:Landroid/view/ViewRootImpl$TrackballAxis;
 
-    .line 180
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTmpLocation:[I
 
-    .line 182
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTmpValue:Landroid/util/TypedValue;
 
-    .line 185
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingEvents:Landroid/util/SparseArray;
 
-    .line 186
     iput v4, p0, Landroid/view/ViewRootImpl;->mPendingEventSeq:I
 
-    .line 192
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 205
     iput-boolean v6, p0, Landroid/view/ViewRootImpl;->mAppVisible:Z
 
-    .line 206
     iput v5, p0, Landroid/view/ViewRootImpl;->mOrigWindowType:I
 
-    .line 210
     iput-boolean v4, p0, Landroid/view/ViewRootImpl;->mStopped:Z
 
-    .line 212
     iput-boolean v4, p0, Landroid/view/ViewRootImpl;->mLastInCompatMode:Z
 
-    .line 225
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mCurrentDirty:Landroid/graphics/Rect;
 
-    .line 226
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPreviousDirty:Landroid/graphics/Rect;
 
-    .line 251
     iput-object v1, p0, Landroid/view/ViewRootImpl;->mPendingInputEvents:Landroid/view/ViewRootImpl$InputEventMessage;
 
-    .line 253
     iput-boolean v4, p0, Landroid/view/ViewRootImpl;->mWindowAttributesChanged:Z
 
-    .line 254
     iput v4, p0, Landroid/view/ViewRootImpl;->mWindowAttributesChangesFlag:I
 
-    .line 258
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0}, Landroid/view/Surface;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mSurface:Landroid/view/Surface;
 
-    .line 266
     iput v5, p0, Landroid/view/ViewRootImpl;->mPenModeStatus:I
 
-    .line 267
     iput v4, p0, Landroid/view/ViewRootImpl;->mLastPenButtonState:I
 
-    .line 268
     iput-boolean v4, p0, Landroid/view/ViewRootImpl;->mIsSketcherDisabledInCurrentTask:Z
 
-    .line 276
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingVisibleInsets:Landroid/graphics/Rect;
 
-    .line 277
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingContentInsets:Landroid/graphics/Rect;
 
-    .line 278
     new-instance v0, Landroid/view/ViewTreeObserver$InternalInsetsInfo;
 
     invoke-direct {v0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastGivenInsets:Landroid/view/ViewTreeObserver$InternalInsetsInfo;
 
-    .line 281
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastConfiguration:Landroid/content/res/Configuration;
 
-    .line 282
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingConfiguration:Landroid/content/res/Configuration;
 
-    .line 308
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mDragPoint:Landroid/graphics/PointF;
 
-    .line 309
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastTouchPoint:Landroid/graphics/PointF;
 
-    .line 316
     iput-wide v7, p0, Landroid/view/ViewRootImpl;->mFpsStartTime:J
 
-    .line 317
     iput-wide v7, p0, Landroid/view/ViewRootImpl;->mFpsPrevTime:J
 
-    .line 338
+    iput-boolean v4, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
     invoke-static {}, Landroid/view/InputEventConsistencyVerifier;->isInstrumentationEnabled()Z
 
     move-result v0
@@ -14254,7 +14229,24 @@
 
     .line 2720
     .local v14, ri:Landroid/view/ViewRootImpl$ResizedInfo;
+
+    move-object/from16 v1, p0
+
+    invoke-direct {v1, v14, v0}, Landroid/view/ViewRootImpl;->tryToSkipResizedMsg(Landroid/view/ViewRootImpl$ResizedInfo;Landroid/os/Message;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
     move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v14, v1}, Landroid/view/ViewRootImpl;->tryToSkipResizedMsg(Landroid/view/ViewRootImpl$ResizedInfo;Landroid/os/Message;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     iget-object v2, v0, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
 
@@ -17837,4 +17829,84 @@
 
     .line 4257
     goto :goto_1
+.end method
+
+.method public skipNextResizedMsg()V
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
+    return-void
+.end method
+
+.method private tryToSkipResizedMsg(Landroid/view/ViewRootImpl$ResizedInfo;Landroid/os/Message;)Z
+    .locals 3
+    .parameter "ri"
+    .parameter "msg"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    iget v2, p2, Landroid/os/Message;->arg1:I
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    iget v2, p2, Landroid/os/Message;->arg2:I
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mPendingContentInsets:Landroid/graphics/Rect;
+
+    iget-object v2, p1, Landroid/view/ViewRootImpl$ResizedInfo;->coveredInsets:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/ViewRootImpl$ResizedInfo;
+
+    iget-object v0, v0, Landroid/view/ViewRootImpl$ResizedInfo;->newConfig:Landroid/content/res/Configuration;
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
+    if-eqz v0, :cond_0
+
+    iput-boolean v1, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
 .end method

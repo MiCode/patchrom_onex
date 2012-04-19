@@ -9068,6 +9068,60 @@
     return-void
 .end method
 
+.method private notifyFirewallDataSetupComplete()V
+    .locals 7
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x0
+
+    .local v0, current:Lcom/android/internal/telephony/DataConnectionAc;
+    iget-object v3, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mDataConnectionAsyncChannels:Ljava/util/HashMap;
+
+    invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    .local v2, i$:Ljava/util/Iterator;
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/internal/telephony/DataConnectionAc;
+
+    .local v1, dcac:Lcom/android/internal/telephony/DataConnectionAc;
+    invoke-virtual {v1}, Lcom/android/internal/telephony/DataConnectionAc;->getApnSettingSync()Lcom/android/internal/telephony/ApnSetting;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mActiveApn:Lcom/android/internal/telephony/ApnSetting;
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/telephony/ApnSetting;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    move-object v0, v1
+
+    .end local v1           #dcac:Lcom/android/internal/telephony/DataConnectionAc;
+    :cond_1
+    return-void
+.end method
+
 .method private notifyNoData(Lcom/android/internal/telephony/DataConnection$FailCause;)V
     .locals 1
     .parameter "lastFailCauseCode"
@@ -17456,6 +17510,7 @@
     .line 2177
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->updatePreferredApn(Lcom/android/internal/telephony/ApnContext;)V
 
+    invoke-direct {p0}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->notifyFirewallDataSetupComplete()V
     .line 2178
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->notifyDefaultData(Lcom/android/internal/telephony/ApnContext;)V
 

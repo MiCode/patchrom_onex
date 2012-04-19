@@ -559,6 +559,8 @@
     .end annotation
 .end field
 
+.field mRoundedCorners:Lcom/miui/server/wm/RoundedCornersSurface;
+
 .field mSafeMode:Z
 
 .field mScreenFrozenLock:Landroid/os/PowerManager$WakeLock;
@@ -6420,6 +6422,15 @@
     invoke-static {}, Landroid/view/Surface;->openTransaction()V
 
     .line 8420
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v55
+
+    move/from16 v2, v47
+
+    invoke-direct {v0, v1, v2}, Lcom/android/server/wm/WindowManagerService;->createRoundCorners(II)V
+
     if-eqz v44, :cond_5
 
     .line 8421
@@ -8344,6 +8355,12 @@
     invoke-static {}, Landroid/view/Surface;->closeTransaction()V
 
     .line 9634
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/wm/WindowManagerService;->mRoundedCorners:Lcom/miui/server/wm/RoundedCornersSurface;
+
+    invoke-virtual {v4}, Lcom/miui/server/wm/RoundedCornersSurface;->drawIfNeeded()V
+
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wm/WindowManagerService;->mWatermark:Lcom/android/server/wm/Watermark;
@@ -14714,6 +14731,10 @@
     iput v3, v2, Landroid/content/res/Configuration;->fontScale:F
 
     .line 3860
+    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService;->mTempConfiguration:Landroid/content/res/Configuration;
+
+    invoke-static {p1, v2}, Landroid/app/MiuiThemeHelper;->copyExtraConfigurations(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService;->mTempConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {p0, v2}, Lcom/android/server/wm/WindowManagerService;->computeNewConfigurationLocked(Landroid/content/res/Configuration;)Z
@@ -43545,4 +43566,56 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method private createRoundCorners(II)V
+    .locals 6
+    .parameter "dw"
+    .parameter "dh"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mRoundedCorners:Lcom/miui/server/wm/RoundedCornersSurface;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/miui/server/wm/RoundedCornersSurface;
+
+    iget-object v1, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/android/server/wm/WindowManagerService;->mFxSession:Landroid/view/SurfaceSession;
+
+    iget-object v3, p0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
+
+    const/16 v4, 0x7e6
+
+    invoke-interface {v3, v4}, Landroid/view/WindowManagerPolicy;->windowTypeToLayerLw(I)I
+
+    move-result v3
+
+    mul-int/lit16 v3, v3, 0x2710
+
+    add-int/lit16 v3, v3, 0x3e8
+
+    iget v4, p0, Lcom/android/server/wm/WindowManagerService;->mInitialDisplayWidth:I
+
+    iget v5, p0, Lcom/android/server/wm/WindowManagerService;->mInitialDisplayHeight:I
+
+    invoke-direct/range {v0 .. v5}, Lcom/miui/server/wm/RoundedCornersSurface;-><init>(Landroid/content/Context;Landroid/view/SurfaceSession;III)V
+
+    iput-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mRoundedCorners:Lcom/miui/server/wm/RoundedCornersSurface;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mRoundedCorners:Lcom/miui/server/wm/RoundedCornersSurface;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mRoundedCorners:Lcom/miui/server/wm/RoundedCornersSurface;
+
+    invoke-virtual {v0, p1, p2}, Lcom/miui/server/wm/RoundedCornersSurface;->positionSurface(II)V
+
+    :cond_1
+    return-void
 .end method

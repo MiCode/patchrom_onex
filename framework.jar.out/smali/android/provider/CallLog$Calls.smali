@@ -748,7 +748,7 @@
     move-result v4
 
     if-nez v4, :cond_b
-
+    goto :cond_b
     .line 571
     const-string v4, "city_id"
 
@@ -1179,7 +1179,6 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2, v1, v4, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     .line 663
     return-void

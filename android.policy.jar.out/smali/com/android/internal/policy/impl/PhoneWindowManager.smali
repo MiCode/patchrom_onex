@@ -321,7 +321,7 @@
 
 .field mForceStatusBar:Z
 
-.field mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
+.field mGlobalActions:Lcom/android/internal/policy/impl/MiuiGlobalActions;
 
 .field private mHDMIObserver:Landroid/os/UEventObserver;
 
@@ -435,7 +435,7 @@
 
 .field private mPowerKeyTriggered:Z
 
-.field private final mPowerLongPress:Ljava/lang/Runnable;
+.field mPowerLongPress:Ljava/lang/Runnable;
 
 .field private final mPowerLongPress_Toast:Ljava/lang/Runnable;
 
@@ -473,7 +473,7 @@
 
 .field mScreenOnFully:Z
 
-.field private final mScreenshotChordLongPress:Ljava/lang/Runnable;
+.field final mScreenshotChordLongPress:Ljava/lang/Runnable;
 
 .field mScreenshotConnection:Landroid/content/ServiceConnection;
 
@@ -1671,7 +1671,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     .line 776
     :cond_0
@@ -1735,7 +1735,7 @@
     goto :goto_0
 .end method
 
-.method private interceptPowerKeyUp(Z)Z
+.method interceptPowerKeyUp(Z)Z
     .locals 3
     .parameter "canceled"
 
@@ -7040,9 +7040,9 @@
     iput-object p4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerManager:Landroid/os/LocalPowerManager;
 
     .line 1108
-    new-instance v8, Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    invoke-static {p1, p0, p4}, Lcom/android/internal/policy/impl/MiuiClassFactory;->createKeyguardViewMediator(Landroid/content/Context;Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/os/LocalPowerManager;)Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
-    invoke-direct {v8, p1, p0, p4}, Lcom/android/internal/policy/impl/KeyguardViewMediator;-><init>(Landroid/content/Context;Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/os/LocalPowerManager;)V
+    move-result-object v8
 
     iput-object v8, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
 
@@ -10186,7 +10186,6 @@
     move-result v5
 
     .line 3779
-    if-eqz v7, :cond_5
 
     move/from16 v0, p2
 
@@ -10207,8 +10206,16 @@
     .line 3783
     const/16 v20, 0x0
 
+    if-eqz v7, :cond_39
+    
     const/16 v21, 0x1
 
+    goto :goto_12
+
+    :cond_39
+    const/16 v21, 0x2
+
+    :goto_12
     const/16 v22, 0x0
 
     move-object/from16 v0, p0
@@ -11017,7 +11024,7 @@
     :cond_21
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v6}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
+    invoke-virtual {v0, v6}, Lcom/android/internal/policy/impl/PhoneWindowManager;->interceptPowerKeyUp(Z)Z
 
     move-result v20
 
@@ -11466,6 +11473,8 @@
     move-result v20
 
     if-eqz v20, :cond_32
+
+    goto/16 :cond_32
 
     .line 4159
     const/16 v20, 0x1
@@ -16240,18 +16249,18 @@
 
     .line 968
     :cond_1
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/MiuiGlobalActions;
 
     if-nez v1, :cond_2
 
     .line 969
-    new-instance v1, Lcom/android/internal/policy/impl/GlobalActions;
+    new-instance v1, Lcom/android/internal/policy/impl/MiuiGlobalActions;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Lcom/android/internal/policy/impl/GlobalActions;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/internal/policy/impl/MiuiGlobalActions;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
+    iput-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/MiuiGlobalActions;
 
     .line 971
     :cond_2
@@ -16263,13 +16272,13 @@
 
     .line 972
     .local v0, keyguardShowing:Z
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/GlobalActions;
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mGlobalActions:Lcom/android/internal/policy/impl/MiuiGlobalActions;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->isDeviceProvisioned()Z
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/internal/policy/impl/GlobalActions;->showDialog(ZZ)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/internal/policy/impl/MiuiGlobalActions;->showDialog(ZZ)V
 
     .line 973
     if-eqz v0, :cond_0

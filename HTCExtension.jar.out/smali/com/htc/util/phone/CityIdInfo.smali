@@ -232,7 +232,7 @@
     move v0, v2
 
     :goto_0
-    sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
+    sput-boolean v2, Lcom/htc/util/phone/CityIdInfo;->CALL_LOCATION:Z
 
     .line 66
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
@@ -314,7 +314,7 @@
     move v0, v2
 
     :goto_3
-    sput-boolean v0, Lcom/htc/util/phone/CityIdInfo;->EXCEPTION_PROJECTS:Z
+    sput-boolean v1, Lcom/htc/util/phone/CityIdInfo;->EXCEPTION_PROJECTS:Z
 
     .line 92
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
