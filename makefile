@@ -23,7 +23,7 @@ local-phone-apps := AppSharing BackupRestoreConfirmation Bluetooth BluetoothFtps
 	FilePicker FaceLock FM_Radio FMRadioService GoogleTTS HTC_IME HtcBeatsNotify HtcMusic HtcMusicEnhancer \
 	HtcMusicWidget HTMLViewer IMEHWRPenPower IMEXT9English KeyChain LMW MarketUpdater \
 	Nfc OneTimeInitializer PhaseBeam PluginManager SDCardWizard SharedStorageBackup Stk+VIE_EVA_ENR_PRO \
-	TrimIt Usage WifiRouter MediaProvider
+	TrimIt Usage WifiRouter MediaProvider CIMEXT9 HTCAlbum HtcVideoPlayer
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -63,8 +63,9 @@ local-zip-misc:
 	rm $(ZIP_DIR)/system/media/theme/default/lockscreen
 	cp other/lockscreen $(ZIP_DIR)/system/media/theme/default/lockscreen
 
-	@echo add LiveWallpaperPicker
+	@echo add LiveWallpaper
 	cp other/LiveWallpapersPicker.apk $(ZIP_DIR)/system/app/LiveWallpapersPicker.apk
+	cp other/LiveWallpapers.apk $(ZIP_DIR)/system/app/LiveWallpapers.apk
 	
 	@echo delete redundance files
 	rm $(ZIP_DIR)/system/customize/resource/*.png
