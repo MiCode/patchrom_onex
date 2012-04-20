@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/function_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mainbar_function_bar_item_margin_top" android:layout_alignParentTop="true">
+        <RelativeLayout android:layout_width="@dimen/mainbar_function_bar_item_width" android:layout_height="@dimen/mainbar_function_bar_item_width" android:layout_marginLeft="@dimen/mainbar_function_bar_item_margin_left_right" android:layout_alignParentLeft="true">
+            <com.htc.widget.HtcIconButton android:id="@id/function_bar_item_capture_modes" android:paddingLeft="50.0dip" android:paddingRight="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/camera_icon_btn_auto" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="@dimen/mainbar_function_bar_item_width" android:layout_height="@dimen/mainbar_function_bar_item_width" android:layout_centerInParent="true">
+            <com.htc.widget.HtcIconButton android:id="@id/function_bar_item_settings" android:paddingLeft="50.0dip" android:paddingRight="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/camera_icon_btn_settings" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="@dimen/mainbar_function_bar_item_width" android:layout_height="@dimen/mainbar_function_bar_item_width" android:layout_marginRight="@dimen/mainbar_function_bar_item_margin_left_right" android:layout_alignParentRight="true">
+            <com.htc.widget.HtcIconButton android:id="@id/function_bar_item_flash" android:paddingLeft="50.0dip" android:paddingRight="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

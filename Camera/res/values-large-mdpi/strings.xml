@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="custom_res_shutter_pressed">shutter_btn_pressed</string>
+    <string name="custom_res_mainbar_btn_background">camera_main_bar_selector</string>
+    <string name="custom_res_effect_item_background">effect_item_background_selector</string>
+    <string name="custom_res_effect_item_selected">photo_preset_frame_selected</string>
+    <string name="custom_res_action_btn_background1">taskbar_center</string>
+    <string name="custom_res_action_btn_background2">taskbar_center</string>
+    <string name="custom_res_action_btn_background3">taskbar_center</string>
+    <string name="custom_res_action_btn_background4">taskbar_center</string>
+    <string name="custom_res_request_btn_background">common_b_button</string>
+    <string name="custom_res_tumbler">tumbler_level_current</string>
+    <string name="custom_res_submenu_handle_press">submenu_bar_pressed</string>
+    <string name="custom_res_submenu_handle_open_press">submenu_bar_open_pressed</string>
+    <string name="custom_res_menu_bar_press">menu_bar_pressed</string>
+    <string name="custom_res_menu_bar_open_press">menu_bar_open_pressed</string>
+    <string name="custom_res_cameraflip_btn_background">icon_camera_flip_selector</string>
+    <string name="custom_res_common_radio_on">common_radiobutton_on</string>
+    <string name="custom_res_common_radio_selected">common_radiobutton_selected</string>
+    <string name="custom_res_common_radio_off">common_radiobutton_off</string>
+    <string name="custom_res_common_radio_off_selected">common_radiobutton_off_selected</string>
+</resources>

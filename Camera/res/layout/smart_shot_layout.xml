@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/smart_shot_review_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:layout_centerInParent="true" />
+    <com.android.camera.rotate.RotateRelativeLayout android:id="@id/init_toast_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/bubble_toast_container_margin_left" android:layout_marginTop="@dimen/bubble_toast_container_margin_top" android:layout_marginRight="@dimen/bubble_toast_container_margin_right" android:layout_marginBottom="@dimen/bubble_toast_container_margin_bottom">
+        <TextView android:gravity="center" android:id="@id/group_portrait_init_toast_text" android:background="@drawable/camera_bubble_base" android:padding="@dimen/bubble_toast_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/how_to_start_group_portrait" style="@style/text_style_bubble_toast_text" />
+    </com.android.camera.rotate.RotateRelativeLayout>
+    <com.android.camera.rotate.RotateRelativeLayout android:id="@id/draw_faces_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.camera.widget.DrawFaceAnimationView android:id="@id/draw_faces" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.android.camera.rotate.RotateRelativeLayout>
+</RelativeLayout>
