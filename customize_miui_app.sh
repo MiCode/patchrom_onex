@@ -5,6 +5,8 @@
 #
 
 XMLMERGYTOOL=$PORT_ROOT/tools/ResValuesModify/jar/ResValuesModify
+GIT_APPLY=$PORT_ROOT/tools/git.apply
+
 curdir=`pwd`
 
 if [ $1 = "Phone" ];then
@@ -27,13 +29,13 @@ if [ $1 = "ThemeManager" ];then
 fi
 
 if [ $1 = "Settings" ];then
-    cp $1/Settings.part out/
+    cp $1/*.part out/
     cd out
-    git.apply Settings.part
+    $GIT_APPLY Settings.part
     cd ..
     for file in `find $2 -name *.rej`
     do
-	echo "Settings patch fail"
+	echo "Fatal error: Settings patch fail"
         exit 1
     done
 
