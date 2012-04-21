@@ -4847,7 +4847,6 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 2111
     return-void
