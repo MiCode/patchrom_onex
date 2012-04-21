@@ -15812,7 +15812,7 @@
     .line 1291
     const-string v3, "qemu.hw.mainkeys"
 
-    const-string v6, "0"
+    const-string v6, "1"
 
     invoke-static {v3, v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
