@@ -63,10 +63,11 @@ local-zip-misc:
 	rm $(ZIP_DIR)/system/media/theme/default/lockscreen
 	cp other/lockscreen $(ZIP_DIR)/system/media/theme/default/lockscreen
 
-	@echo add LiveWallpaper
+	@echo add system app
 	cp other/LiveWallpapersPicker.apk $(ZIP_DIR)/system/app/LiveWallpapersPicker.apk
 	cp other/LiveWallpapers.apk $(ZIP_DIR)/system/app/LiveWallpapers.apk
-	
+	cp other/UserDictionaryProvider.apk $(ZIP_DIR)/system/app/UserDictionaryProvider.apk
+
 	@echo delete redundance files
 	rm $(ZIP_DIR)/system/customize/resource/*.png
 	rm -rf $(ZIP_DIR)/system/media/weather
