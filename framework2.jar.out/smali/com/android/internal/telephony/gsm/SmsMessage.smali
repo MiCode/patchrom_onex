@@ -5799,3 +5799,38 @@
 
     return v0
 .end method
+
+.method isUsimDataDownload()Z
+    .locals 2
+
+    .prologue
+    .line 1174
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->messageClass:Landroid/telephony/SmsMessage$MessageClass;
+
+    sget-object v1, Landroid/telephony/SmsMessage$MessageClass;->CLASS_2:Landroid/telephony/SmsMessage$MessageClass;
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->protocolIdentifier:I
+
+    const/16 v1, 0x7f
+
+    if-eq v0, v1, :cond_0
+
+    iget v0, p0, Lcom/android/internal/telephony/gsm/SmsMessage;->protocolIdentifier:I
+
+    const/16 v1, 0x7c
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
