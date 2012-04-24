@@ -64,10 +64,7 @@ local-zip-misc:
 	cp other/lockscreen $(ZIP_DIR)/system/media/theme/default/lockscreen
 
 	@echo add system app
-	cp other/LiveWallpapersPicker.apk $(ZIP_DIR)/system/app/LiveWallpapersPicker.apk
-	cp other/LiveWallpapers.apk $(ZIP_DIR)/system/app/LiveWallpapers.apk
-	cp other/UserDictionaryProvider.apk $(ZIP_DIR)/system/app/UserDictionaryProvider.apk
-	cp other/CIMEXT9.apk $(ZIP_DIR)/system/app/CIMEXT9.apk
+	cp other/system_app/*.apk $(ZIP_DIR)/system/app/
 
 	@echo delete redundance files
 	rm $(ZIP_DIR)/system/customize/resource/*.png
