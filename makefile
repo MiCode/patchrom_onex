@@ -67,6 +67,7 @@ local-zip-misc:
 	cp other/LiveWallpapersPicker.apk $(ZIP_DIR)/system/app/LiveWallpapersPicker.apk
 	cp other/LiveWallpapers.apk $(ZIP_DIR)/system/app/LiveWallpapers.apk
 	cp other/UserDictionaryProvider.apk $(ZIP_DIR)/system/app/UserDictionaryProvider.apk
+	cp other/CIMEXT9.apk $(ZIP_DIR)/system/app/CIMEXT9.apk
 
 	@echo delete redundance files
 	rm $(ZIP_DIR)/system/customize/resource/*.png
