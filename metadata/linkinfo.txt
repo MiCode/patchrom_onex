@@ -325,7 +325,6 @@ system/xbin/strings|system/xbin/busybox
 system/xbin/stty|system/xbin/busybox
 system/xbin/sulogin|system/xbin/busybox
 system/xbin/sum|system/xbin/busybox
-system/xbin/su|system/xbin/busybox
 system/xbin/svlogd|system/xbin/busybox
 system/xbin/sv|system/xbin/busybox
 system/xbin/swapoff|system/xbin/busybox

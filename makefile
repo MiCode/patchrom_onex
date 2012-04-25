@@ -70,6 +70,8 @@ local-zip-misc:
 	rm $(ZIP_DIR)/system/customize/resource/*.png
 	rm -rf $(ZIP_DIR)/system/media/weather
 	rm -rf $(ZIP_DIR)/system/media/video
+	rm $(ZIP_DIR)/system/bin/su
+
 local-test:
 #	rm -f $(local-out-zip-file)
 #	cp .build/$(local-out-zip-file) .
