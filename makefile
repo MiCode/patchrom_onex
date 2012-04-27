@@ -65,7 +65,10 @@ local-zip-misc:
 	cp other/lockscreen $(ZIP_DIR)/system/media/theme/default/lockscreen
 
 	@echo add system app
-	cp other/system_app/*.apk $(ZIP_DIR)/system/app/
+	cp other/system_app/* $(ZIP_DIR)/system/app/
+
+	@echo add system config
+	cp other/system_etc/* $(ZIP_DIR)/system/etc/
 
 	@echo delete redundance files
 	rm $(ZIP_DIR)/system/customize/resource/*.png
