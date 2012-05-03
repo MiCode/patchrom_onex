@@ -3845,9 +3845,13 @@
     .local v5, a:Landroid/content/res/TypedArray;
     new-instance v31, Landroid/app/AlertDialog$Builder;
 
+    const/16 v33, 0x3
+
     move-object/from16 v0, v31
 
-    invoke-direct {v0, v8}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    move/from16 v1, v33
+
+    invoke-direct {v0, v8, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
     const v33, 0x104042a
 
@@ -3903,11 +3907,23 @@
     .line 2224
     new-instance v6, Lcom/android/server/InputMethodManagerService$ImeSubtypeListAdapter;
 
-    const v31, 0x1090096
+    move-object/from16 v0, p0
 
-    move/from16 v0, v31
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
-    invoke-direct {v6, v8, v0, v14, v7}, Lcom/android/server/InputMethodManagerService$ImeSubtypeListAdapter;-><init>(Landroid/content/Context;ILjava/util/List;I)V
+    move-object/from16 v31, v0
+
+    invoke-virtual/range {v31 .. v31}, Landroid/app/AlertDialog$Builder;->getContext()Landroid/content/Context;
+
+    move-result-object v31
+
+    const v33, 0x1090096
+
+    move-object/from16 v0, v31
+
+    move/from16 v1, v33
+
+    invoke-direct {v6, v0, v1, v14, v7}, Lcom/android/server/InputMethodManagerService$ImeSubtypeListAdapter;-><init>(Landroid/content/Context;ILjava/util/List;I)V
 
     .line 2228
     .local v6, adapter:Lcom/android/server/InputMethodManagerService$ImeSubtypeListAdapter;
