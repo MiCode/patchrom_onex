@@ -18,11 +18,11 @@ local-miui-modified-apps := Phone ThemeManager Mms MiuiHome Settings MiuiGallery
 local-miui-removed-apps  := LatinIME MediaProvider SettingsProvider
 
 # All apps need to be reserved from original ZIP file
-local-phone-apps := AppSharing BackupRestoreConfirmation Bluetooth BluetoothFtps BluetoothMap \
+local-phone-apps := AppSharing BackupRestoreConfirmation \
 	CertInstaller CustomizationSettingsProvider Camera DefaultContainerService DFPI DrmProvider \
 	FilePicker FaceLock FM_Radio FMRadioService GoogleTTS HTC_IME HtcBeatsNotify HtcMusic HtcMusicEnhancer \
 	HtcMusicWidget HTMLViewer IMEHWRPenPower IMEXT9English KeyChain LMW MarketUpdater \
-	Nfc OneTimeInitializer PhaseBeam PluginManager SDCardWizard SharedStorageBackup Stk+VIE_EVA_ENR_PRO \
+	Nfc OneTimeInitializer PhaseBeam PluginManager SDCardWizard SharedStorageBackup \
 	TrimIt Usage WifiRouter MediaProvider CIMEXT9 HTCAlbum HtcVideoPlayer SettingsProvider \
 	HtcSoundEnhancerSetting HtcDMC DLNAMiddleLayer
 
