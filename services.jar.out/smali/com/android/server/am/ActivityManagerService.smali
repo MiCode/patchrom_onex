@@ -36118,7 +36118,9 @@
     sget v8, Lcom/android/server/am/ActivityManagerService;->MAX_VISIBLE_TASKS:I
 
     if-le v7, v8, :cond_9
-
+    
+    goto :cond_9
+    
     .line 2683
     invoke-virtual {v6}, Lcom/android/server/am/TaskRecord;->hide()V
 
