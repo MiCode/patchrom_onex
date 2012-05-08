@@ -24919,7 +24919,7 @@
 
     .line 1491
     .local v2, context:Landroid/content/Context;
-    const v6, 0x1030128
+    const v6, 0x103006e
 
     invoke-virtual {v2, v6}, Landroid/content/Context;->setTheme(I)V
 
