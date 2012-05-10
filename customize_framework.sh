@@ -11,18 +11,10 @@ if [ $2 = "out/framework" ];then
 	echo "delete framework redundance files"
 	rm -rf "out/framework/smali/com/android/internal/telephony"
 
-	echo "make framework-miui.jar"
-	mkdir -p "out/framework-miui/smali"
-	touch "out/framework-miui/apktool.yml"
-	echo "version: 1.4.3" >> "out/framework-miui/apktool.yml"
-	echo "apkFileName: framework-miui.jar" >> "out/framework-miui/apktool.yml"
-	mv "out/framework/smali/miui" "out/framework-miui/smali"
-	$APKTOOL b "out/framework-miui" "out/framework-miui.jar"
-	mkdir -p "out/ZIP/system/framework"
-	cp "out/framework-miui.jar" "out/ZIP/system/framework/framework-miui.jar"
-	
 	echo "make framework2.jar"
+	mkdir -p "out/ZIP/system/framework"
 	cp -r "framework2.jar.out" "out/framework2.jar.out" 
+	mv "out/framework/smali/miui" "out/framework2.jar.out/smali"
 
 	for file in `find "$1/smali/com/android/internal/telephony" -name "*.smali"`
 	do
