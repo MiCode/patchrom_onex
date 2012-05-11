@@ -82,7 +82,7 @@ ro.board.platform=tegra
 # ro.build.product is obsolete; use ro.product.device
 ro.build.product=endeavoru
 # Do not try to parse ro.build.description or .fingerprint
-ro.build.description=1.28.707.10 IML74K CL56939 release-keys
+ro.build.description=1.28.707.10 4.0.3 IML74K CL56939 release-keys
 ro.build.changelist=56939
 ro.build.fingerprint=htc_asia_wwe/endeavoru/endeavoru:4.0.3/IML74K/56939.10:user/release-keys
 ro.build.characteristics=default
