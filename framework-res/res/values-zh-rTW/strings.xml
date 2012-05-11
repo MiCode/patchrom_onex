@@ -876,7 +876,7 @@
     <string name="searchview_description_search">搜尋</string>
     <string name="searchview_description_query">搜尋查詢</string>
     <string name="searchview_description_clear">清除查詢</string>
-    <string name="searchview_description_submit">提交查詢</string>
+    <string name="searchview_description_submit">送出查詢</string>
     <string name="searchview_description_voice">語音搜尋</string>
     <string name="oneMonthDurationPast">1 個月以前</string>
     <string name="beforeOneMonthDurationPast">1 個月前</string>
@@ -1093,7 +1093,7 @@
     <string name="upload_file">選擇檔案</string>
     <string name="no_file_chosen">未選擇任何檔案</string>
     <string name="reset">重設</string>
-    <string name="submit">提交</string>
+    <string name="submit">送出</string>
     <string name="car_mode_disable_notification_title">已啟用車用模式</string>
     <string name="car_mode_disable_notification_message">選取以結束車用模式。</string>
     <string name="tethered_notification_title">啟動數據連線或無線基地台已啟用</string>

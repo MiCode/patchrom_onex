@@ -8,6 +8,7 @@
     value = {
         Lcom/htc/framework/internal/R$style;,
         Lcom/htc/framework/internal/R$string;,
+        Lcom/htc/framework/internal/R$plurals;,
         Lcom/htc/framework/internal/R$layout;,
         Lcom/htc/framework/internal/R$id;,
         Lcom/htc/framework/internal/R$drawable;,
@@ -25,6 +26,6 @@
     .line 10
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1577
+    .line 2793
     return-void
 .end method

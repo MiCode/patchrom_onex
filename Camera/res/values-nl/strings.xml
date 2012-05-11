@@ -230,7 +230,7 @@
     <string name="click_screensave_msg">Tik op het scherm of druk op de actietoets om de camera te activeren</string>
     <string name="click_screensave_msg_camcorder">Tik op het scherm of druk op de actietoets om de camcorder te activeren</string>
     <string name="limit_size_unit">KB</string>
-    <string name="mms_recording_limit_size">Maximale opnamegrootte voor MMS is ongeveer %s.</string>
+    <string name="mms_recording_limit_size">Maximale opnamegrootte voor mms is ongeveer %s.</string>
     <string name="action_screen_confirm_delete_message">Weet je zeker dat je %s wil verwijderen?</string>
     <string name="action_screen_confirm_delete_message_burst">"Weet je zeker dat je de gemaakte foto's wilt verwijderen?"</string>
     <string name="action_screen_share_image">Deze afbeelding delen via</string>

@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 6203
+    .line 6207
     iput-object p1, p0, Lcom/android/camera/HTCCamera$23;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,14 +66,14 @@
     .end annotation
 
     .prologue
-    .line 6207
+    .line 6211
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/ExternalCommandEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/HTCCamera$23;->this$0:Lcom/android/camera/HTCCamera;
 
     #calls: Lcom/android/camera/HTCCamera;->onExternalCommandReceived(Lcom/android/camera/ExternalCommandEventArgs;)V
     invoke-static {v0, p3}, Lcom/android/camera/HTCCamera;->access$4400(Lcom/android/camera/HTCCamera;Lcom/android/camera/ExternalCommandEventArgs;)V
 
-    .line 6208
+    .line 6212
     return-void
 .end method
 
@@ -84,7 +84,7 @@
     .parameter "x2"
 
     .prologue
-    .line 6203
+    .line 6207
     check-cast p3, Lcom/android/camera/ExternalCommandEventArgs;
 
     .end local p3

@@ -71,7 +71,7 @@
     .prologue
     const/16 v6, 0x1a
 
-    const v5, 0x20803e1
+    const v5, 0x20803e2
 
     const/16 v4, 0x1e
 

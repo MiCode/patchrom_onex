@@ -62,7 +62,8 @@
     <module name="Crash_Report">
       <function name="setting">
         <set name="single">
-          <item name="turn_off_report" type="boolean">no</item>
+          <item name="turn_off_report" type="boolean">yes</item>
+          <item name="turn_off_application_log" type="boolean">yes</item>
         </set>
       </function>
     </module>

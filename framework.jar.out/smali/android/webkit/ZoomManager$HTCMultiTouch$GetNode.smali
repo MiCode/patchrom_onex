@@ -31,7 +31,7 @@
     .parameter
 
     .prologue
-    .line 2468
+    .line 2481
     iput-object p1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -47,21 +47,21 @@
     .prologue
     const/16 v4, -0x14
 
-    .line 2471
+    .line 2484
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
     iget-object v1, v1, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_SmartZoomHitNodeInfo:Landroid/webkit/SelectionUnitInfo;
 
     invoke-virtual {v1}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 2472
+    .line 2485
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
     iget-object v1, v1, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->nativeResetSelection()V
 
-    .line 2473
+    .line 2486
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
     iget-object v1, v1, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -72,7 +72,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/webkit/WebView;->nativeStartSelection(II)Z
 
-    .line 2474
+    .line 2487
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
     iget-object v1, v1, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -83,12 +83,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/webkit/WebView;->nativeExtendSelection(II)V
 
-    .line 2476
+    .line 2489
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 2477
+    .line 2490
     .local v0, hitSel:Landroid/graphics/Rect;
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
@@ -96,10 +96,10 @@
 
     invoke-virtual {v1, v0}, Landroid/webkit/WebView;->nativeGetSelectionEnd(Landroid/graphics/Rect;)V
 
-    .line 2478
+    .line 2491
     invoke-virtual {v0, v4, v4}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 2479
+    .line 2492
     iget v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->contentX:I
 
     iget v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->contentY:I
@@ -110,7 +110,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 2480
+    .line 2493
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
     iget-object v1, v1, Landroid/webkit/ZoomManager$HTCMultiTouch;->mWebView:Landroid/webkit/WebView;
@@ -135,7 +135,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/webkit/HTCWebCore;->nativeFindTextBound(IILandroid/webkit/SelectionUnitInfo;Z)I
 
-    .line 2481
+    .line 2494
     :cond_0
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 
@@ -154,10 +154,10 @@
     :goto_0
     iput v1, v2, Landroid/webkit/ZoomManager$HTCMultiTouch;->m_nSmartZoomHitNode:I
 
-    .line 2482
+    .line 2495
     return-void
 
-    .line 2481
+    .line 2494
     :cond_1
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCMultiTouch$GetNode;->this$1:Landroid/webkit/ZoomManager$HTCMultiTouch;
 

@@ -24430,13 +24430,11 @@
 
     invoke-interface {v3, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1787
     :cond_e
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1789
     invoke-static {}, Lmiui/net/FirewallManager;->getInstance()Lmiui/net/FirewallManager;
 
     move-result-object v3
@@ -24453,7 +24451,6 @@
 
     if-ltz v18, :cond_f
 
-    .line 1791
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

@@ -1243,7 +1243,7 @@ pre účet %s"</string>
     <string name="verizon_retry_msg">Správa neúspešná. Chcete opakovať?</string>
     <string name="action_mode_close">Zavrieť</string>
     <string name="sms_roam_guard_dialog_title">Odchádzajúca správa</string>
-    <string name="sms_roam_guard_dialog_subject">Ste v roamingu v medzinárodných sieťach. Po odoslaní tejto správy môžu byť operátorom účtované ďalšie poplatky. Čo chcete urobiť:</string>
+    <string name="sms_roam_guard_dialog_subject">Nachádzate sa v roamingu medzinárodných sietí. Po odoslaní tejto správy môžu byť operátorom účtované ďalšie poplatky. Čo chcete urobiť:</string>
     <string name="sms_roam_guard_dialog_radio_auto_send">Odoslať automaticky v národnom pokrytí</string>
     <string name="sms_roam_guard_dialog_send_now">Odoslať teraz</string>
     <string name="sms_roam_guard_dialog_send_later">Odoslať neskôr</string>
@@ -1252,7 +1252,7 @@ pre účet %s"</string>
     <string name="sd_encrypt_notify_title">Je potrebné šifrovanie karty SD</string>
     <string name="sd_encrypt_notify_text">Kliknutím sem aktivujte</string>
     <string name="data_encrypt_notify_title">Šifrovanie interných údajov aktivované</string>
-    <string name="data_encrypt_convert_diag">Odšifrováva sa...</string>
+    <string name="data_encrypt_convert_diag">Dešifruje sa...</string>
     <string name="disable_notify_title">Zakázané od IT:</string>
     <string name="it_notify_text">Zásady vynútené od IT</string>
     <string name="permission_notify_title">Zablokované od IT:</string>
@@ -1267,7 +1267,7 @@ pre účet %s"</string>
     <string name="install_notify_title">Inštalácia zablokovaná od IT:</string>
     <string name="uninstall_notify_title">Odinštalovanie zablokované od IT:</string>
     <string name="wifi_notify_title">IT zakázalo Wi-Fi</string>
-    <string name="sim_puk_contact_customer_care_information">Obráťte sa na Centrum zákazníkov so žiadosťou o kód PUK</string>
+    <string name="sim_puk_contact_customer_care_information">Obráťte sa na Centrum zákazníkov so žiadosťou o PUK kód</string>
     <string name="permlab_accessCWFolder">Prístup k priečinku funkcie sprievodcu prispôsobením</string>
     <string name="permdesc_accessCWFolder">Umožňuje aplikácii prístup k priečinku funkcie sprievodcu prispôsobením</string>
     <string name="permlab_accessRecoveryFolder">Prístup k priečinku obnovy</string>
@@ -1276,7 +1276,7 @@ pre účet %s"</string>
     <string name="permdesc_setappname">Umožňuje aplikácii dynamicky meniť názov aplikácie.</string>
     <string name="text_limitation">Nie je možné vybrať príliš veľa slov na zdieľanie.</string>
     <string name="sms_roam_guild_dialog_title">Odchádzajúca správa</string>
-    <string name="sms_roam_guild_dialog_subject">Ste v roamingu v medzinárodných sieťach. Po odoslaní tejto správy môžu byť operátorom účtované ďalšie poplatky. Čo chcete urobiť:</string>
+    <string name="sms_roam_guild_dialog_subject">Nachádzate sa v roamingu medzinárodných sietí. Po odoslaní tejto správy môžu byť operátorom účtované ďalšie poplatky. Čo chcete urobiť:</string>
     <string name="sms_roam_guild_dialog_radio_auto_send">Odoslať automaticky v národnom pokrytí</string>
     <string name="sms_roam_guild_dialog_send_now">Odoslať teraz</string>
     <string name="sms_roam_guild_dialog_send_later">Odoslať neskôr</string>
@@ -1317,7 +1317,7 @@ pre účet %s"</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
     <string name="dongle_noti_text_multiple_found">Klepnutím vyberte</string>
     <string name="wireless_display_output_tv_title">Media Link HD</string>
-    <string name="wireless_display_output_tv_text">"Chcete odoslať prehrávanie do televízora?
+    <string name="wireless_display_output_tv_text">"Chcete odoslať na prehranie v televízore?
 
 Zostáva %1$s s..."</string>
     <string name="wireless_display_output_tv_checkbox">Už viac nezobrazovať</string>

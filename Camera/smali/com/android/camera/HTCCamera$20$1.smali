@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 5975
+    .line 5979
     iput-object p1, p0, Lcom/android/camera/HTCCamera$20$1;->this$1:Lcom/android/camera/HTCCamera$20;
 
     iput-object p2, p0, Lcom/android/camera/HTCCamera$20$1;->val$event:Lcom/android/camera/event/Event;
@@ -56,7 +56,7 @@
     .locals 4
 
     .prologue
-    .line 5978
+    .line 5982
     iget-object v0, p0, Lcom/android/camera/HTCCamera$20$1;->this$1:Lcom/android/camera/HTCCamera$20;
 
     iget-object v0, v0, Lcom/android/camera/HTCCamera$20;->this$0:Lcom/android/camera/HTCCamera;
@@ -70,6 +70,6 @@
     #calls: Lcom/android/camera/HTCCamera;->onCameraThreadEventReceived(Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/camera/HTCCamera;->access$4100(Lcom/android/camera/HTCCamera;Lcom/android/camera/event/Event;Ljava/lang/Object;Lcom/android/camera/event/EventArgs;)V
 
-    .line 5979
+    .line 5983
     return-void
 .end method

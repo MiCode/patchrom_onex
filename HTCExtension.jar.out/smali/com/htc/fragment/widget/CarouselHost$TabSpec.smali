@@ -33,20 +33,20 @@
     .parameter "tag"
 
     .prologue
-    .line 1170
+    .line 1169
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1168
+    .line 1167
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mHasMenu:Z
 
-    .line 1171
+    .line 1170
     iput-object p2, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mTag:Ljava/lang/String;
 
-    .line 1172
+    .line 1171
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .parameter "x2"
 
     .prologue
-    .line 1162
+    .line 1161
     invoke-direct {p0, p1, p2}, Lcom/htc/fragment/widget/CarouselHost$TabSpec;-><init>(Lcom/htc/fragment/widget/CarouselHost;Ljava/lang/String;)V
 
     return-void
@@ -68,7 +68,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1162
+    .line 1161
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mIndicatorStrategy:Lcom/htc/fragment/widget/CarouselHost$IndicatorStrategy;
 
     return-object v0
@@ -79,7 +79,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1162
+    .line 1161
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mTag:Ljava/lang/String;
 
     return-object v0
@@ -90,7 +90,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1162
+    .line 1161
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mContentStrategy:Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;
 
     return-object v0
@@ -102,7 +102,7 @@
     .locals 6
 
     .prologue
-    .line 1258
+    .line 1257
     :try_start_0
     iget-object v4, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
@@ -119,7 +119,7 @@
 
     move-result-object v2
 
-    .line 1259
+    .line 1258
     .local v2, f:Landroid/app/Fragment;
     const-class v4, Landroid/app/Fragment;
 
@@ -129,7 +129,7 @@
 
     move-result-object v3
 
-    .line 1260
+    .line 1259
     .local v3, fHasMenu:Ljava/lang/reflect/Field;
     invoke-virtual {v3}, Ljava/lang/reflect/Field;->isAccessible()Z
     :try_end_0
@@ -137,45 +137,45 @@
 
     move-result v0
 
-    .line 1262
+    .line 1261
     .local v0, b:Z
     const/4 v4, 0x1
 
     :try_start_1
     invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1263
+    .line 1262
     invoke-virtual {v3, v2}, Ljava/lang/reflect/Field;->getBoolean(Ljava/lang/Object;)Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mHasMenu:Z
 
-    .line 1264
+    .line 1263
     iget-boolean v4, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mHasMenu:Z
 
     if-eqz v4, :cond_0
 
-    .line 1265
+    .line 1264
     const/4 v4, 0x0
 
     invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1267
+    .line 1266
     :cond_0
     :try_start_2
     invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1273
+    .line 1272
     .end local v0           #b:Z
     .end local v2           #f:Landroid/app/Fragment;
     .end local v3           #fHasMenu:Ljava/lang/reflect/Field;
     :goto_0
     return-void
 
-    .line 1267
+    .line 1266
     .restart local v0       #b:Z
     .restart local v2       #f:Landroid/app/Fragment;
     .restart local v3       #fHasMenu:Ljava/lang/reflect/Field;
@@ -188,14 +188,14 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1269
+    .line 1268
     .end local v0           #b:Z
     .end local v2           #f:Landroid/app/Fragment;
     .end local v3           #fHasMenu:Ljava/lang/reflect/Field;
     :catch_0
     move-exception v1
 
-    .line 1270
+    .line 1269
     .local v1, e:Ljava/lang/Exception;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -240,21 +240,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1219
+    .line 1218
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mContentStrategy:Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;
 
     invoke-interface {v0}, Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;->tabRemoved()V
 
-    .line 1220
+    .line 1219
     iput-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mTag:Ljava/lang/String;
 
-    .line 1222
+    .line 1221
     iput-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mIndicatorStrategy:Lcom/htc/fragment/widget/CarouselHost$IndicatorStrategy;
 
-    .line 1223
+    .line 1222
     iput-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mContentStrategy:Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;
 
-    .line 1224
+    .line 1223
     return-void
 .end method
 
@@ -262,7 +262,7 @@
     .locals 6
 
     .prologue
-    .line 1281
+    .line 1280
     :try_start_0
     iget-object v4, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
@@ -279,7 +279,7 @@
 
     move-result-object v2
 
-    .line 1282
+    .line 1281
     .local v2, f:Landroid/app/Fragment;
     const-class v4, Landroid/app/Fragment;
 
@@ -289,7 +289,7 @@
 
     move-result-object v3
 
-    .line 1283
+    .line 1282
     .local v3, fHasMenu:Ljava/lang/reflect/Field;
     invoke-virtual {v3}, Ljava/lang/reflect/Field;->isAccessible()Z
     :try_end_0
@@ -297,14 +297,14 @@
 
     move-result v0
 
-    .line 1285
+    .line 1284
     .local v0, b:Z
     const/4 v4, 0x1
 
     :try_start_1
     invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1286
+    .line 1285
     iget-boolean v4, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mHasMenu:Z
 
     invoke-virtual {v3, v2}, Ljava/lang/reflect/Field;->getBoolean(Ljava/lang/Object;)Z
@@ -313,26 +313,26 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 1287
+    .line 1286
     iget-boolean v4, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mHasMenu:Z
 
     invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1289
+    .line 1288
     :cond_0
     :try_start_2
     invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1294
+    .line 1293
     .end local v0           #b:Z
     .end local v2           #f:Landroid/app/Fragment;
     .end local v3           #fHasMenu:Ljava/lang/reflect/Field;
     :goto_0
     return-void
 
-    .line 1289
+    .line 1288
     .restart local v0       #b:Z
     .restart local v2       #f:Landroid/app/Fragment;
     .restart local v3       #fHasMenu:Ljava/lang/reflect/Field;
@@ -345,14 +345,14 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1291
+    .line 1290
     .end local v0           #b:Z
     .end local v2           #f:Landroid/app/Fragment;
     .end local v3           #fHasMenu:Ljava/lang/reflect/Field;
     :catch_0
     move-exception v1
 
-    .line 1292
+    .line 1291
     .local v1, e:Ljava/lang/Exception;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -395,7 +395,7 @@
     .locals 1
 
     .prologue
-    .line 1252
+    .line 1251
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mContentStrategy:Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;
 
     invoke-interface {v0}, Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;->getCacheView()Landroid/view/View;
@@ -409,7 +409,7 @@
     .locals 1
 
     .prologue
-    .line 1208
+    .line 1207
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mTag:Ljava/lang/String;
 
     return-object v0
@@ -421,7 +421,7 @@
     .parameter "labelRes"
 
     .prologue
-    .line 1191
+    .line 1190
     new-instance v0, Lcom/htc/fragment/widget/CarouselHost$IntentContentStrategy;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->this$0:Lcom/htc/fragment/widget/CarouselHost;
@@ -438,7 +438,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mContentStrategy:Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;
 
-    .line 1192
+    .line 1191
     return-object p0
 .end method
 
@@ -448,7 +448,7 @@
     .parameter "label"
 
     .prologue
-    .line 1199
+    .line 1198
     new-instance v0, Lcom/htc/fragment/widget/CarouselHost$IntentContentStrategy;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->this$0:Lcom/htc/fragment/widget/CarouselHost;
@@ -465,7 +465,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mContentStrategy:Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;
 
-    .line 1200
+    .line 1199
     return-object p0
 .end method
 
@@ -477,7 +477,7 @@
     .parameter "showIcon"
 
     .prologue
-    .line 1180
+    .line 1179
     new-instance v0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;
 
     iget-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->this$0:Lcom/htc/fragment/widget/CarouselHost;
@@ -498,7 +498,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mIndicatorStrategy:Lcom/htc/fragment/widget/CarouselHost$IndicatorStrategy;
 
-    .line 1181
+    .line 1180
     return-object p0
 .end method
 
@@ -507,7 +507,7 @@
     .parameter "taskInfo"
 
     .prologue
-    .line 1231
+    .line 1230
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mTag:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/htc/fragment/widget/TaskInfo;->taskTag:Ljava/lang/String;
@@ -518,7 +518,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1232
+    .line 1231
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -557,13 +557,13 @@
 
     throw v0
 
-    .line 1234
+    .line 1233
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$TabSpec;->mContentStrategy:Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;
 
     invoke-interface {v0, p1}, Lcom/htc/fragment/widget/CarouselHost$ContentStrategy;->sync(Lcom/htc/fragment/widget/TaskInfo;)V
 
-    .line 1235
+    .line 1234
     return-void
 .end method
 
@@ -571,7 +571,7 @@
     .locals 2
 
     .prologue
-    .line 1243
+    .line 1242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

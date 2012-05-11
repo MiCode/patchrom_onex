@@ -313,7 +313,7 @@
     <string name="permlab_statusBar">statusbalk uitschakelen of wijzigen</string>
     <string name="permdesc_statusBar">Hiermee kan een applicatie de statusbalk uitschakelen of systeempictogrammen toevoegen en verwijderen.</string>
     <string name="permlab_statusBarService">statusbalk</string>
-    <string name="permdesc_statusBarService">Hiermee kan de toepassing de statusbalk zijn.</string>
+    <string name="permdesc_statusBarService">Hiermee kan de app de statusbalk zijn.</string>
     <string name="permlab_expandStatusBar">statusbalk uitvouwen/samenvouwen</string>
     <string name="permdesc_expandStatusBar">Hiermee kan de applicatie de statusbalk uitvouwen of samenvouwen.</string>
     <string name="permlab_processOutgoingCalls">uitgaande oproepen onderscheppen</string>
@@ -949,7 +949,7 @@ Wil je het sluiten?"</string>
     <string name="volume_music_hint_silent_ringtone_selected">Stille beltoon geselecteerd</string>
     <string name="volume_call">Gespreksvolume</string>
     <string name="volume_bluetooth_call">Volume tijdens gesprek in Bluetooth-modus</string>
-    <string name="volume_alarm">Alarmvolume</string>
+    <string name="volume_alarm">Alarm volume</string>
     <string name="volume_notification">Meldingsvolume</string>
     <string name="volume_unknown">Volume</string>
     <string name="volume_icon_description_bluetooth">Bluetooth-volume</string>
@@ -995,7 +995,7 @@ Wil je het sluiten?"</string>
     <string name="perms_show_all"><b>Alles weergeven</b></string>
     <string name="usb_storage_activity_title">USB-massaopslag</string>
     <string name="usb_storage_title">USB-verbinding</string>
-    <string name="usb_storage_message">Je heeft je telefoon via USB op jouw computer aangesloten. Raak de onderstaande knop aan als je bestanden tussen jouw computer en de SD-kaart van je toestel wilt kopiëren.</string>
+    <string name="usb_storage_message">Je hebt je telefoon via USB op je computer aangesloten. Raak de onderstaande knop aan als je bestanden tussen jouw computer en de SD-kaart van je toestel wilt kopiëren.</string>
     <string name="usb_storage_button_mount">USB-opslag inschakelen</string>
     <string name="usb_storage_error_message">Er is een probleem bij het gebruik van jou USB-opslag voor USB-massaopslag.</string>
     <string name="usb_storage_notification_title">USB-verbinding</string>
@@ -1007,7 +1007,7 @@ Wil je het sluiten?"</string>
     <string name="usb_storage_stop_button_mount">USB-opslag uitschakelen</string>
     <string name="usb_storage_stop_error_message">Er is een probleem opgetreden tijdens het uitschakelen van de USB-opslag. Controleer of je de USB-host heeft losgekoppeld en probeer het opnieuw.</string>
     <string name="dlg_confirm_kill_storage_users_title">USB-opslag inschakelen</string>
-    <string name="dlg_confirm_kill_storage_users_text">Als je USB-opslag inschakelt, worden bepaalde applicatie die je gebruikt, gestopt en worden deze mogelijk pas weer beschikbaar wanneer je USB-opslag uitschakelt.</string>
+    <string name="dlg_confirm_kill_storage_users_text">Als je USB-opslag inschakelt worden bepaalde applicatie die je gebruikt gestopt en worden deze mogelijk pas weer beschikbaar wanneer je USB-opslag uitschakelt.</string>
     <string name="dlg_error_title">USB-bewerking mislukt</string>
     <string name="dlg_ok">OK</string>
     <string name="usb_mtp_notification_title">Gekoppeld als media-apparaat</string>
@@ -1018,8 +1018,8 @@ Wil je het sluiten?"</string>
     <string name="extmedia_format_title">SD-kaart formatteren</string>
     <string name="extmedia_format_message">Weet je zeker dat je de SD-kaart wil formatteren? Alle gegevens op je kaart gaan dan verloren.</string>
     <string name="extmedia_format_button_format">Formatteren</string>
-    <string name="adb_active_notification_title">USB-foutopsporing verbonden</string>
-    <string name="adb_active_notification_message">Selecteer deze optie om USB-foutopsporing uit te schakelen.</string>
+    <string name="adb_active_notification_title">USB foutopsporing verbonden</string>
+    <string name="adb_active_notification_message">Selecteer deze optie om USB foutopsporing uit te schakelen.</string>
     <string name="locale_replacement" />
     <string name="select_input_method">Invoermethode selecteren</string>
     <string name="configure_input_methods">Invoermethoden configureren</string>
@@ -1251,7 +1251,7 @@ voor account '%s'"</string>
     <string name="htc_framework_pm">PM</string>
     <string name="sd_encrypt_notify_title">SD-kaartcodering vereist</string>
     <string name="sd_encrypt_notify_text">Klik hier om in te schakelen</string>
-    <string name="data_encrypt_notify_title">Interne datacodering ingeschakeld</string>
+    <string name="data_encrypt_notify_title">Interne data-codering ingeschakeld</string>
     <string name="data_encrypt_convert_diag">Decoderen...</string>
     <string name="disable_notify_title">IT uitgeschakeld:</string>
     <string name="it_notify_text">Beleid afgedwongen door IT</string>
@@ -1266,15 +1266,15 @@ voor account '%s'"</string>
     <string name="camera_notify_title">IT heeft camera uitgeschakeld</string>
     <string name="install_notify_title">IT heeft installatie geblokkeerd:</string>
     <string name="uninstall_notify_title">IT heeft verwijderen geblokkeerd:</string>
-    <string name="wifi_notify_title">IT heeft WiFi uitgeschakeld</string>
+    <string name="wifi_notify_title">IT heeft Wi-Fi uitgeschakeld</string>
     <string name="sim_puk_contact_customer_care_information">Neem contact op met de klantenservice om de PUK-code aan te vragen</string>
-    <string name="permlab_accessCWFolder">Toegang tot de map met de aanpasassistent</string>
-    <string name="permdesc_accessCWFolder">Geeft een toepassing toegang tot de map met de optie aanpasassistent</string>
+    <string name="permlab_accessCWFolder">Toegang tot de map met de aanpassings wizard</string>
+    <string name="permdesc_accessCWFolder">Geeft een toepassing toegang tot de map met de optie aanpassings wizard</string>
     <string name="permlab_accessRecoveryFolder">Herstelmap openen</string>
-    <string name="permdesc_accessRecoveryFolder">Hiermee kan een toepassing de herstelmap openen.</string>
-    <string name="permlab_setappname">Dynamisch om naam van toepassing te wijzigen</string>
-    <string name="permdesc_setappname">Hiermee kun je de naam van een toepassing dynamisch opgeven en wijzigen.</string>
-    <string name="text_limitation">Je mag niet te veel woorden selecteren om te delen.</string>
+    <string name="permdesc_accessRecoveryFolder">Hiermee kan een app de herstelmap openen.</string>
+    <string name="permlab_setappname">Dynamisch om naam van applicatie te wijzigen</string>
+    <string name="permdesc_setappname">Hiermee kun je de naam van een applicatie dynamisch opgeven en wijzigen.</string>
+    <string name="text_limitation">Je kan te veel woorden selecteren om te delen.</string>
     <string name="sms_roam_guild_dialog_title">Uitgaand bericht</string>
     <string name="sms_roam_guild_dialog_subject">Je roamt op internationale netwerken. Voor het verzenden van dit bericht zal je mobiele dienstverlener mogelijk extra kosten in rekening brengen. Wil je:</string>
     <string name="sms_roam_guild_dialog_radio_auto_send">Automatisch verzenden bij nationale dekking</string>
@@ -1286,7 +1286,7 @@ voor account '%s'"</string>
     <string name="permdesc_changeUsbnetState">Hiermee kan een applicatie zich koppelen aan en loskoppelen van UsbNet toegangspunten en wijzigingen aanbrengen in geconfigureerde UsbNet-netwerken.</string>
     <string name="permlab_changeUsbnetMulticastState">UsbNet Multicast-ontvangst toestaan</string>
     <string name="permdesc_changeUsbnetMulticastState">Hiermee kan een applicatie pakketten ontvangen die niet rechtstreeks zijn geadresseerd aan je apparaat. Dit kan handig zijn wanneer services in de buurt worden ontdekt. Dit verbruikt meer energie dan de niet-multicastmodus.</string>
-    <string name="hutch_htctethered_notification_title">PocketWifi geactiveerd</string>
+    <string name="hutch_htctethered_notification_title">Pocket Wi-fi geactiveerd</string>
     <string name="localized_opertator_name_kddi_roaming">Internationaal roamen</string>
     <string name="localized_opertator_name_unknown">Onbekend netwerk</string>
     <string name="encryption_password_required">Coderingswachtwoord vereist</string>
@@ -1312,12 +1312,12 @@ voor account '%s'"</string>
     <string name="font_settings">Lettertype-instellingen</string>
     <string name="font_alignment">Lettertype-uitlijning</string>
     <string name="image">Afbeelding</string>
-    <string name="dongle_noti_ticker">Media Link HD-apparaat gedetecteerd</string>
-    <string name="dongle_noti_title_multiple_found">HTC Media Link-apparaten gevonden</string>
+    <string name="dongle_noti_ticker">Media Link HD gedetecteerd</string>
+    <string name="dongle_noti_title_multiple_found">HTC Media Link gevonden</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
     <string name="dongle_noti_text_multiple_found">Tikken om te selecteren</string>
     <string name="wireless_display_output_tv_title">Media Link HD</string>
-    <string name="wireless_display_output_tv_text">"Wilt u dit spel naar de tv sturen?
+    <string name="wireless_display_output_tv_text">"Wil jedit spel naar de tv sturen?
 
 %1$s seconden resterend..."</string>
     <string name="wireless_display_output_tv_checkbox">Niet meer laten zien</string>

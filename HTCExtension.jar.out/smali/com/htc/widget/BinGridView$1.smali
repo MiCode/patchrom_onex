@@ -100,7 +100,7 @@
 
     .line 358
     .local v0, imageView:Landroid/widget/ImageView;
-    const v1, 0x208019d
+    const v1, 0x208019e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 

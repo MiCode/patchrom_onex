@@ -243,7 +243,7 @@
     <string name="text_title_location_disable">Джерела координатних даних вимкнено</string>
     <string name="text_message_location_disable">Для роботи цієї програми потрібен доступ до розташування. Для отримання поточного розташування увімкніть бездротову мережу або супутник GPS у налаштуваннях.</string>
     <string name="txt_query_switch_storage_title">Задайте місце збереження</string>
-    <string name="txt_query_switch_to_phone_storage">"Переключитися на пам'ять телефону?"</string>
+    <string name="txt_query_switch_to_phone_storage">"Перемкнутися на пам'ять телефону?"</string>
     <string name="txt_query_switch_to_sdcard">"Переключитися на карту пам'яті?"</string>
     <string name="txt_switch_to_phone_storage">"Карта пам'яті заповнена або недоступна. Зберігання переключено на пам'ять телефону."</string>
     <string name="txt_switch_to_sdcard">"Пам'ять телефону заповнена або недоступна. Зберігання переключено на карту пам'яті."</string>

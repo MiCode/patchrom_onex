@@ -925,7 +925,7 @@
     .line 115
     iget-object v3, p0, Lcom/htc/widget/HeaderBarDropDown;->indicatorView:Landroid/widget/ImageView;
 
-    const v4, 0x208018d
+    const v4, 0x208018e
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1612,7 +1612,7 @@
     .line 606
     iget-object v2, p0, Lcom/htc/widget/HeaderBarDropDown;->indicatorView:Landroid/widget/ImageView;
 
-    const v3, 0x208018d
+    const v3, 0x208018e
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -3032,7 +3032,7 @@
     .line 567
     iget-object v5, p0, Lcom/htc/widget/HeaderBarDropDown;->indicatorView:Landroid/widget/ImageView;
 
-    const v6, 0x208018f
+    const v6, 0x2080190
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 

@@ -488,7 +488,7 @@
     iput-object v3, p0, Lcom/htc/quickselection/HtcQuickSelectionWindow;->mCircularProgress:Landroid/graphics/drawable/Drawable;
 
     .line 185
-    const v3, 0x2080301
+    const v3, 0x2080302
 
     :try_start_0
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;

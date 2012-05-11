@@ -36,21 +36,21 @@
     .parameter "thread"
 
     .prologue
-    .line 910
+    .line 917
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$AppDeathRecipient;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 914
+    .line 921
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$AppDeathRecipient;->mApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 915
+    .line 922
     iput p3, p0, Lcom/android/server/am/ActivityManagerService$AppDeathRecipient;->mPid:I
 
-    .line 916
+    .line 923
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$AppDeathRecipient;->mAppThread:Landroid/app/IApplicationThread;
 
-    .line 917
+    .line 924
     return-void
 .end method
 
@@ -60,12 +60,12 @@
     .locals 6
 
     .prologue
-    .line 924
+    .line 931
     sget-object v1, Lcom/android/server/SystemServer;->mCrossServiceLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 925
+    .line 932
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$AppDeathRecipient;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -73,7 +73,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 926
+    .line 933
     :try_start_1
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$AppDeathRecipient;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -85,21 +85,21 @@
 
     invoke-virtual {v0, v3, v4, v5}, Lcom/android/server/am/ActivityManagerService;->appDiedLocked(Lcom/android/server/am/ProcessRecord;ILandroid/app/IApplicationThread;)V
 
-    .line 927
+    .line 934
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 928
+    .line 935
     :try_start_2
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 930
+    .line 937
     return-void
 
-    .line 927
+    .line 934
     :catchall_0
     move-exception v0
 
@@ -111,7 +111,7 @@
     :try_start_4
     throw v0
 
-    .line 928
+    .line 935
     :catchall_1
     move-exception v0
 

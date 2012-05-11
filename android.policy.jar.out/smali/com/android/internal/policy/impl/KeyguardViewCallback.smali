@@ -10,6 +10,9 @@
 .method public abstract isHidden()Z
 .end method
 
+.method public abstract isScreenOn()Z
+.end method
+
 .method public abstract keyguardDone(Z)V
 .end method
 

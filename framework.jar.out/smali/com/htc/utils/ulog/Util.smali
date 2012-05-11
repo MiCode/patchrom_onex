@@ -121,7 +121,7 @@
 
     move-result-object v0
 
-    const-string v1, "htc_error_report_setting"
+    const-string/jumbo v1, "htc_error_report_setting"
 
     const/4 v2, 0x0
 

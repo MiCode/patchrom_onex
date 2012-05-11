@@ -380,7 +380,7 @@
 
     move-result-object v3
 
-    const v5, 0x2080185
+    const v5, 0x2080186
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -405,7 +405,7 @@
 
     move-result-object v3
 
-    const v5, 0x2080184
+    const v5, 0x2080185
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

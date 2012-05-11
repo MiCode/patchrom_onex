@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3816
+    .line 3826
     iput-object p1, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
     iput-object p2, p0, Lcom/android/server/PowerManagerService$13;->val$finalReason:Ljava/lang/String;
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 3818
+    .line 3828
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -71,10 +71,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3819
+    .line 3829
     monitor-enter p0
 
-    .line 3820
+    .line 3830
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$13;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -89,13 +89,13 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/internal/app/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 3821
+    .line 3831
     monitor-exit p0
 
-    .line 3823
+    .line 3833
     return-void
 
-    .line 3821
+    .line 3831
     :catchall_0
     move-exception v0
 

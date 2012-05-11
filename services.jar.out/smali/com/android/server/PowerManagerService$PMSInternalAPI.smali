@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4801
+    .line 4811
     iput-object p1, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +39,13 @@
     .parameter "enable"
 
     .prologue
-    .line 4804
+    .line 4814
     iget-object v0, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->enableCpuApDvcs(Z)V
     invoke-static {v0, p1}, Lcom/android/server/PowerManagerService;->access$8200(Lcom/android/server/PowerManagerService;Z)V
 
-    .line 4805
+    .line 4815
     return-void
 .end method
 
@@ -54,13 +54,13 @@
     .parameter "mode"
 
     .prologue
-    .line 4808
+    .line 4818
     iget-object v0, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->setScreenBrightnessMode(I)V
     invoke-static {v0, p1}, Lcom/android/server/PowerManagerService;->access$2300(Lcom/android/server/PowerManagerService;I)V
 
-    .line 4809
+    .line 4819
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .parameter "delayInterval"
 
     .prologue
-    .line 4812
+    .line 4822
     iget-object v0, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -81,10 +81,10 @@
 
     monitor-enter v1
 
-    .line 4813
+    .line 4823
     if-eq p1, p2, :cond_0
 
-    .line 4814
+    .line 4824
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -95,7 +95,7 @@
 
     invoke-virtual {v0, p3}, Lcom/android/server/PowerManagerService$BrightnessState;->setCustomizedDelay(I)V
 
-    .line 4815
+    .line 4825
     iget-object v0, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
@@ -118,14 +118,14 @@
 
     invoke-virtual {v0, p1, v2, p2, v3}, Lcom/android/server/PowerManagerService$BrightnessState;->setTargetLocked(IIII)Z
 
-    .line 4817
+    .line 4827
     :cond_0
     monitor-exit v1
 
-    .line 4818
+    .line 4828
     return-void
 
-    .line 4817
+    .line 4827
     :catchall_0
     move-exception v0
 
@@ -140,7 +140,7 @@
     .locals 3
 
     .prologue
-    .line 4821
+    .line 4831
     iget-object v0, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -150,7 +150,7 @@
 
     monitor-enter v1
 
-    .line 4822
+    .line 4832
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$PMSInternalAPI;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -163,13 +163,13 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/PowerManagerService$BrightnessState;->setCustomizedDelay(I)V
 
-    .line 4823
+    .line 4833
     monitor-exit v1
 
-    .line 4824
+    .line 4834
     return-void
 
-    .line 4823
+    .line 4833
     :catchall_0
     move-exception v0
 

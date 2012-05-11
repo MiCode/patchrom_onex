@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 5971
+    .line 5975
     iput-object p1, p0, Lcom/android/camera/HTCCamera$20;->this$0:Lcom/android/camera/HTCCamera;
 
     iput-object p2, p0, Lcom/android/camera/HTCCamera$20;->val$uiHandler:Landroid/os/Handler;
@@ -49,7 +49,7 @@
     .parameter "e"
 
     .prologue
-    .line 5974
+    .line 5978
     iget-object v0, p0, Lcom/android/camera/HTCCamera$20;->val$uiHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/camera/HTCCamera$20$1;
@@ -58,6 +58,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 5981
+    .line 5985
     return-void
 .end method

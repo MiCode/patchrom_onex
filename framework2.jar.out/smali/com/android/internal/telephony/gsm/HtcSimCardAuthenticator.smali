@@ -639,7 +639,7 @@
 
     .line 410
     .local v25, sw1sw2:[B
-    const-string v26, "sres"
+    const-string v26, "res"
 
     move-object/from16 v0, v21
 

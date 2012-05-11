@@ -214,19 +214,19 @@
     .locals 2
 
     .prologue
-    .line 85
+    .line 83
     const-string v0, "LocationHandler"
 
     const-string v1, "initLocationManager()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 86
+    .line 84
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 87
+    .line 85
     invoke-virtual {p0}, Lcom/android/camera/LocationHandler;->hasGeoTagging()Z
 
     move-result v0
@@ -235,7 +235,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 88
+    .line 86
     iget-object v0, p0, Lcom/android/camera/LocationHandler;->mHTCCamera:Lcom/android/camera/HTCCamera;
 
     const-string v1, "location"
@@ -248,18 +248,18 @@
 
     sput-object v0, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 89
+    .line 87
     const-string v0, "LocationHandler"
 
     const-string v1, "hasGeoTagging() = true - set mLocationManager"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 93
+    .line 91
     :goto_0
     return-void
 
-    .line 91
+    .line 89
     :cond_0
     const-string v0, "LocationHandler"
 
@@ -304,19 +304,12 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 78
     :goto_0
     return v1
 
     .line 63
     :cond_0
-    invoke-static {}, Lcom/android/camera/HTCCameraAdvanceSetting;->isSetDefault()Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    .line 64
     iget-object v3, p0, Lcom/android/camera/LocationHandler;->mHTCCamera:Lcom/android/camera/HTCCamera;
 
     const-string v4, "pref_camera_geo_tagging"
@@ -329,11 +322,11 @@
 
     move-result v0
 
-    .line 65
+    .line 64
     .local v0, bGeoTagging:Z
     if-ne v0, v2, :cond_2
 
-    .line 66
+    .line 65
     invoke-direct {p0}, Lcom/android/camera/LocationHandler;->checkLocationSetting()Z
 
     move-result v3
@@ -347,9 +340,24 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 69
+    iget-object v2, p0, Lcom/android/camera/LocationHandler;->mHTCCamera:Lcom/android/camera/HTCCamera;
+
+    invoke-virtual {v2}, Lcom/android/camera/HTCCamera;->getSettings()Lcom/android/camera/CameraSettings;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/android/camera/CameraSettings;->isGeoTaggingEnabled:Lcom/android/camera/property/Property;
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
+
     goto :goto_0
 
-    .line 71
+    .line 72
     :cond_1
     const-string v1, "LocationHandler"
 
@@ -359,25 +367,14 @@
 
     move v1, v2
 
-    .line 72
+    .line 74
     goto :goto_0
 
-    .line 75
+    .line 77
     :cond_2
     const-string v2, "LocationHandler"
 
     const-string v3, "hasGeoTagging() = false: not select geo-tagging photo"
-
-    invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 79
-    .end local v0           #bGeoTagging:Z
-    :cond_3
-    const-string v2, "LocationHandler"
-
-    const-string v3, "hasGeoTagging() = false: reset to default"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -404,34 +401,34 @@
     .locals 8
 
     .prologue
-    .line 97
+    .line 95
     const-string v0, "LocationHandler"
 
     const-string v1, "startReceivingLocationUpdates()"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
+    .line 97
     invoke-direct {p0}, Lcom/android/camera/LocationHandler;->initLocationManager()V
 
-    .line 101
+    .line 99
     sget-object v0, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
 
     if-nez v0, :cond_1
 
-    .line 102
+    .line 100
     const-string v0, "LocationHandler"
 
     const-string v1, "mLocationManager == null"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
+    .line 135
     :cond_0
     :goto_0
     return-void
 
-    .line 107
+    .line 105
     :cond_1
     :try_start_0
     sget-object v0, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
@@ -444,7 +441,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 108
+    .line 106
     sget-object v0, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
 
     const-string v1, "network"
@@ -465,7 +462,7 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 123
+    .line 121
     :cond_2
     :goto_1
     :try_start_1
@@ -479,7 +476,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 122
     sget-object v0, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
 
     const-string v1, "gps"
@@ -502,11 +499,11 @@
 
     goto :goto_0
 
-    .line 130
+    .line 128
     :catch_0
     move-exception v6
 
-    .line 131
+    .line 129
     .local v6, ex:Ljava/lang/SecurityException;
     const-string v0, "LocationHandler"
 
@@ -516,12 +513,12 @@
 
     goto :goto_0
 
-    .line 114
+    .line 112
     .end local v6           #ex:Ljava/lang/SecurityException;
     :catch_1
     move-exception v6
 
-    .line 115
+    .line 113
     .restart local v6       #ex:Ljava/lang/SecurityException;
     const-string v0, "LocationHandler"
 
@@ -531,12 +528,12 @@
 
     goto :goto_1
 
-    .line 116
+    .line 114
     .end local v6           #ex:Ljava/lang/SecurityException;
     :catch_2
     move-exception v6
 
-    .line 117
+    .line 115
     .local v6, ex:Ljava/lang/IllegalArgumentException;
     const-string v0, "LocationHandler"
 
@@ -546,12 +543,12 @@
 
     goto :goto_1
 
-    .line 118
+    .line 116
     .end local v6           #ex:Ljava/lang/IllegalArgumentException;
     :catch_3
     move-exception v6
 
-    .line 119
+    .line 117
     .local v6, ex:Ljava/lang/Exception;
     const-string v0, "LocationHandler"
 
@@ -561,12 +558,12 @@
 
     goto :goto_1
 
-    .line 132
+    .line 130
     .end local v6           #ex:Ljava/lang/Exception;
     :catch_4
     move-exception v6
 
-    .line 133
+    .line 131
     .local v6, ex:Ljava/lang/IllegalArgumentException;
     const-string v0, "LocationHandler"
 
@@ -576,12 +573,12 @@
 
     goto :goto_0
 
-    .line 134
+    .line 132
     .end local v6           #ex:Ljava/lang/IllegalArgumentException;
     :catch_5
     move-exception v6
 
-    .line 135
+    .line 133
     .local v6, ex:Ljava/lang/Exception;
     const-string v0, "LocationHandler"
 
@@ -596,30 +593,30 @@
     .locals 4
 
     .prologue
-    .line 141
+    .line 139
     const-string v2, "LocationHandler"
 
     const-string v3, "stopReceivingLocationUpdates()"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
+    .line 141
     sget-object v2, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
 
     if-nez v2, :cond_0
 
-    .line 144
+    .line 142
     const-string v2, "LocationHandler"
 
     const-string v3, "mLocationManager == null"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
+    .line 155
     :goto_0
     return-void
 
-    .line 148
+    .line 146
     :cond_0
     const/4 v1, 0x0
 
@@ -631,7 +628,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 150
+    .line 148
     :try_start_0
     sget-object v2, Lcom/android/camera/LocationHandler;->mLocationManager:Landroid/location/LocationManager;
 
@@ -641,7 +638,7 @@
 
     invoke-virtual {v2, v3}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 151
+    .line 149
     sget-object v2, Lcom/android/camera/LocationHandler;->mLocationListeners:[Lcom/android/camera/LocationHandler$LocationListener;
 
     aget-object v2, v2, v1
@@ -652,17 +649,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
+    .line 146
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 152
+    .line 150
     :catch_0
     move-exception v0
 
-    .line 153
+    .line 151
     .local v0, ex:Ljava/lang/Exception;
     const-string v2, "LocationHandler"
 
@@ -672,7 +669,7 @@
 
     goto :goto_2
 
-    .line 156
+    .line 154
     .end local v0           #ex:Ljava/lang/Exception;
     :cond_1
     const/4 v2, 0x0

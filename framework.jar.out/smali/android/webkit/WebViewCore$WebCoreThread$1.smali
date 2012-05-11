@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 712
+    .line 720
     iput-object p1, p0, Landroid/webkit/WebViewCore$WebCoreThread$1;->this$0:Landroid/webkit/WebViewCore$WebCoreThread;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -49,29 +49,29 @@
 
     const/4 v3, 0x0
 
-    .line 715
+    .line 723
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 771
+    .line 779
     :goto_0
     return-void
 
-    .line 717
+    .line 725
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/webkit/WebViewCore;
 
-    .line 718
+    .line 726
     .local v0, core:Landroid/webkit/WebViewCore;
     #calls: Landroid/webkit/WebViewCore;->initialize()V
     invoke-static {v0}, Landroid/webkit/WebViewCore;->access$500(Landroid/webkit/WebViewCore;)V
 
     goto :goto_0
 
-    .line 723
+    .line 731
     .end local v0           #core:Landroid/webkit/WebViewCore;
     :sswitch_1
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
@@ -82,7 +82,7 @@
 
     if-ne v1, v6, :cond_1
 
-    .line 726
+    .line 734
     :cond_0
     const-string v1, "WebCore"
 
@@ -90,14 +90,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 727
+    .line 735
     invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
 
     move-result-object v1
 
     invoke-virtual {v1, v4, v3}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 728
+    .line 736
     invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
 
     move-result-object v1
@@ -106,7 +106,7 @@
 
     invoke-virtual {v1, v5, v2}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 730
+    .line 738
     :cond_1
     const/4 v1, 0x3
 
@@ -114,7 +114,7 @@
 
     goto :goto_0
 
-    .line 736
+    .line 744
     :sswitch_2
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -124,7 +124,7 @@
 
     if-ne v1, v6, :cond_3
 
-    .line 739
+    .line 747
     :cond_2
     const-string v1, "WebCore"
 
@@ -132,58 +132,31 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 740
+    .line 748
     invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
 
     move-result-object v1
 
     invoke-virtual {v1, v4, v4}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 741
+    .line 749
     invoke-static {}, Landroid/webkit/WebViewCore$WebCoreThread;->access$600()Lorg/codeaurora/Performance;
 
     move-result-object v1
 
     invoke-virtual {v1, v5, v3}, Lorg/codeaurora/Performance;->cpuSetOptions(II)I
 
-    .line 743
+    .line 751
     :cond_3
     invoke-static {v3}, Landroid/os/Process;->setThreadPriority(I)V
 
     goto :goto_0
 
-    .line 748
+    .line 756
     :sswitch_3
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     if-nez v1, :cond_4
-
-    .line 749
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "No WebView has been created in this process!"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    .line 752
-    :cond_4
-    sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
-
-    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v2, v1}, Landroid/webkit/JWebCoreJavaBridge;->addPackageName(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 756
-    :sswitch_4
-    sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
-
-    if-nez v1, :cond_5
 
     .line 757
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -195,22 +168,22 @@
     throw v1
 
     .line 760
-    :cond_5
+    :cond_4
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Landroid/webkit/JWebCoreJavaBridge;->removePackageName(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Landroid/webkit/JWebCoreJavaBridge;->addPackageName(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 764
-    :sswitch_5
+    :sswitch_4
     sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_5
 
     .line 765
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -222,6 +195,33 @@
     throw v1
 
     .line 768
+    :cond_5
+    sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
+
+    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {v2, v1}, Landroid/webkit/JWebCoreJavaBridge;->removePackageName(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 772
+    :sswitch_5
+    sget-object v1, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
+
+    if-nez v1, :cond_6
+
+    .line 773
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "No WebView has been created in this process!"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    .line 776
     :cond_6
     sget-object v2, Landroid/webkit/BrowserFrame;->sJavaBridge:Landroid/webkit/JWebCoreJavaBridge;
 
@@ -233,7 +233,7 @@
 
     goto/16 :goto_0
 
-    .line 715
+    .line 723
     nop
 
     :sswitch_data_0

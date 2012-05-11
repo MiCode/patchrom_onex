@@ -39,6 +39,14 @@
     .end annotation
 .end method
 
+.method public abstract getSecureElementUid(Ljava/lang/String;)Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract open(Ljava/lang/String;Landroid/os/IBinder;)Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Throws;
         value = {

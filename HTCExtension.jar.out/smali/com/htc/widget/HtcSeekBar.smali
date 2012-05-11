@@ -212,7 +212,7 @@
 
     const-string v3, "common_progress_button"
 
-    const v4, 0x2080187
+    const v4, 0x2080188
 
     invoke-direct {p0, v2, v3, v4}, Lcom/htc/widget/HtcSeekBar;->getSkinDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
@@ -230,7 +230,7 @@
 
     const-string v3, "htcseekbar"
 
-    const v4, 0x20801c1
+    const v4, 0x20801c2
 
     invoke-direct {p0, v2, v3, v4}, Lcom/htc/widget/HtcSeekBar;->getSkinDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
@@ -243,7 +243,7 @@
 
     const-string v3, "htcseekbar_b"
 
-    const v4, 0x20801c2
+    const v4, 0x20801c3
 
     invoke-direct {p0, v2, v3, v4}, Lcom/htc/widget/HtcSeekBar;->getSkinDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 

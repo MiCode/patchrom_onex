@@ -382,30 +382,30 @@
     .parameter "activity"
 
     .prologue
-    .line 500
+    .line 499
     const-string v2, "pref_camera_face_number"
 
     invoke-static {p0, v2}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 501
+    .line 500
     .local v1, value:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 502
+    .line 501
     .local v0, number:I
     if-nez v1, :cond_1
 
-    .line 503
+    .line 502
     const/4 v0, 0x0
 
-    .line 509
+    .line 508
     :cond_0
     :goto_0
     return v0
 
-    .line 504
+    .line 503
     :cond_1
     const-string v2, "1face"
 
@@ -415,12 +415,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 505
+    .line 504
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 506
+    .line 505
     :cond_2
     const-string v2, "2faces"
 
@@ -430,7 +430,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 507
+    .line 506
     const/4 v0, 0x2
 
     goto :goto_0
@@ -592,18 +592,18 @@
     .parameter "activity"
 
     .prologue
-    .line 513
+    .line 512
     const-string v2, "pref_camera_recording_limit"
 
     invoke-static {p0, v2}, Lcom/android/camera/HTCCameraAdvanceSetting;->getPrefenceValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 515
+    .line 514
     .local v1, value:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 516
+    .line 515
     .local v0, choice:I
     if-eqz v1, :cond_0
 
@@ -619,16 +619,16 @@
 
     if-eqz v2, :cond_2
 
-    .line 518
+    .line 517
     :cond_0
     const/4 v0, 0x0
 
-    .line 534
+    .line 533
     :cond_1
     :goto_0
     return v0
 
-    .line 519
+    .line 518
     :cond_2
     const-string v2, "250kb"
 
@@ -638,12 +638,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 520
+    .line 519
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 521
+    .line 520
     :cond_3
     const-string v2, "1mb"
 
@@ -653,12 +653,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 522
+    .line 521
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 523
+    .line 522
     :cond_4
     const-string v2, "2mb"
 
@@ -668,12 +668,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 524
+    .line 523
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 525
+    .line 524
     :cond_5
     const-string v2, "10s"
 
@@ -683,12 +683,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 526
+    .line 525
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 527
+    .line 526
     :cond_6
     const-string v2, "30s"
 
@@ -698,12 +698,12 @@
 
     if-eqz v2, :cond_7
 
-    .line 528
+    .line 527
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 529
+    .line 528
     :cond_7
     const-string v2, "1min"
 
@@ -713,12 +713,12 @@
 
     if-eqz v2, :cond_8
 
-    .line 530
+    .line 529
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 531
+    .line 530
     :cond_8
     const-string v2, "3min"
 
@@ -728,7 +728,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 532
+    .line 531
     const/4 v0, 0x7
 
     goto :goto_0
@@ -806,14 +806,16 @@
     .line 248
     const/4 v15, 0x1
 
-    .line 495
+    .line 494
     .end local v9           #reset:Z
+    .end local p0
     :goto_0
     monitor-exit v16
 
     return v15
 
     .line 251
+    .restart local p0
     :cond_0
     :try_start_1
     const-string v15, "HTCCameraAdvanceSetting"
@@ -1378,12 +1380,13 @@
 
     goto/16 :goto_0
 
-    .line 493
+    .line 492
     .end local v4           #i:I
     .end local v5           #item:Lcom/android/camera/HTCCameraAdvanceSetting$Item;
     .end local v7           #level_def:I
     .end local v11           #size:I
     .end local v13           #storage:Ljava/lang/String;
+    .end local p0
     :catchall_0
     move-exception v15
 
@@ -1414,6 +1417,7 @@
     .restart local v8       #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
     .restart local v10       #result:Z
     .restart local v12       #sp:Landroid/content/SharedPreferences;
+    .restart local p0
     :cond_2
     :try_start_4
     const-string v15, "HTCCameraAdvanceSetting"
@@ -1695,26 +1699,35 @@
 
     move-result-object v3
 
-    .line 424
-    invoke-static {}, Lcom/android/camera/DisplayDevice;->EnableGeoTagByDefault()Z
+    .line 425
+    const-string v18, "pref_camera_geo_tagging"
+
+    check-cast p0, Lcom/android/camera/HTCCamera;
+
+    .end local p0
+    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/HTCCamera;->getSettings()Lcom/android/camera/CameraSettings;
+
+    move-result-object v15
+
+    iget-object v15, v15, Lcom/android/camera/CameraSettings;->isGeoTaggingEnabled:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v15}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, Ljava/lang/Boolean;
+
+    invoke-virtual {v15}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v15
 
-    if-eqz v15, :cond_8
+    move-object/from16 v0, v18
 
-    .line 425
-    const-string v15, "pref_camera_geo_tagging"
-
-    const/16 v18, 0x1
-
-    move/from16 v0, v18
-
-    invoke-interface {v3, v15, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v0, v15}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v3
 
-    .line 429
-    :goto_5
+    .line 428
     const-string v15, "pref_post_processing"
 
     const/16 v18, 0x1
@@ -1725,7 +1738,7 @@
 
     move-result-object v3
 
-    .line 431
+    .line 430
     const-string v15, "pref_stereo_recording"
 
     const/16 v18, 0x1
@@ -1736,7 +1749,7 @@
 
     move-result-object v3
 
-    .line 433
+    .line 432
     const-string v15, "pref_continuous_burst"
 
     const/16 v18, 0x1
@@ -1747,7 +1760,7 @@
 
     move-result-object v3
 
-    .line 435
+    .line 434
     const-string v15, "pref_camera_auto_focus"
 
     const/16 v18, 0x1
@@ -1758,7 +1771,7 @@
 
     move-result-object v3
 
-    .line 437
+    .line 436
     const-string v15, "pref_camera_tap_capture"
 
     const/16 v18, 0x0
@@ -1769,7 +1782,7 @@
 
     move-result-object v3
 
-    .line 439
+    .line 438
     const-string v15, "pref_play_shutter_sound"
 
     const/16 v18, 0x1
@@ -1780,7 +1793,7 @@
 
     move-result-object v3
 
-    .line 441
+    .line 440
     const-string v15, "pref_video_stabilization"
 
     const/16 v18, 0x1
@@ -1791,7 +1804,7 @@
 
     move-result-object v3
 
-    .line 443
+    .line 442
     const-string v15, "pref_grid"
 
     const/16 v18, 0x0
@@ -1802,7 +1815,7 @@
 
     move-result-object v3
 
-    .line 445
+    .line 444
     const-string v15, "pref_camera_self_portrait"
 
     const/16 v18, 0x0
@@ -1813,7 +1826,7 @@
 
     move-result-object v3
 
-    .line 448
+    .line 447
     const-string v15, "pref_camera_record_with_audio"
 
     const/16 v18, 0x1
@@ -1824,7 +1837,7 @@
 
     move-result-object v3
 
-    .line 451
+    .line 450
     const-string v15, "pref_camera_3D_status"
 
     const/16 v18, 0x0
@@ -1835,7 +1848,7 @@
 
     move-result-object v3
 
-    .line 454
+    .line 453
     const-string v15, "pref_smile_capture"
 
     const/16 v18, 0x0
@@ -1846,7 +1859,7 @@
 
     move-result-object v3
 
-    .line 455
+    .line 454
     const-string v15, "pref_blink detection"
 
     const/16 v18, 0x1
@@ -1857,7 +1870,7 @@
 
     move-result-object v3
 
-    .line 458
+    .line 457
     const-string v15, "pref_fast_fps"
 
     const/16 v18, 0x0
@@ -1868,15 +1881,15 @@
 
     move-result-object v3
 
-    .line 460
+    .line 459
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     move-result v10
 
-    .line 461
+    .line 460
     if-nez v10, :cond_7
 
-    .line 462
+    .line 461
     const-string v15, "camera advance settnigs"
 
     const-string v18, "commit fail on writePreference"
@@ -1885,30 +1898,16 @@
 
     invoke-static {v15, v0}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
+    .line 492
     :cond_7
     monitor-exit v17
-
-    move v15, v10
-
-    .line 495
-    goto/16 :goto_0
-
-    .line 427
-    :cond_8
-    const-string v15, "pref_camera_geo_tagging"
-
-    const/16 v18, 0x0
-
-    move/from16 v0, v18
-
-    invoke-interface {v3, v15, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    move-result-object v3
+    move v15, v10
 
-    goto/16 :goto_5
+    .line 494
+    goto/16 :goto_0
 .end method
 
 .method public static declared-synchronized isSetDefault()Z

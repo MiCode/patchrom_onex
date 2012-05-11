@@ -135,12 +135,12 @@
     .parameter "context"
 
     .prologue
-    .line 390
+    .line 383
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/htc/fragment/widget/Gallery2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 391
+    .line 384
     return-void
 .end method
 
@@ -150,12 +150,12 @@
     .parameter "attrs"
 
     .prologue
-    .line 394
+    .line 387
     const v0, 0x1010070
 
     invoke-direct {p0, p1, p2, v0}, Lcom/htc/fragment/widget/Gallery2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 395
+    .line 388
     return-void
 .end method
 
@@ -176,115 +176,115 @@
 
     const/4 v6, 0x0
 
-    .line 398
+    .line 391
     invoke-direct {p0, p1, p2, p3}, Lcom/htc/fragment/widget/AbsSpinner;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 79
+    .line 78
     iput v6, p0, Lcom/htc/fragment/widget/Gallery2;->mSpacing:I
 
-    .line 85
+    .line 84
     const/16 v5, 0x190
 
     iput v5, p0, Lcom/htc/fragment/widget/Gallery2;->mAnimationDuration:I
 
-    .line 122
+    .line 121
     new-instance v5, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;
 
     invoke-direct {v5, p0}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;-><init>(Lcom/htc/fragment/widget/Gallery2;)V
 
     iput-object v5, p0, Lcom/htc/fragment/widget/Gallery2;->mFlingRunnable:Lcom/htc/fragment/widget/Gallery2$FlingRunnable;
 
-    .line 128
+    .line 127
     new-instance v5, Lcom/htc/fragment/widget/Gallery2$1;
 
     invoke-direct {v5, p0}, Lcom/htc/fragment/widget/Gallery2$1;-><init>(Lcom/htc/fragment/widget/Gallery2;)V
 
     iput-object v5, p0, Lcom/htc/fragment/widget/Gallery2;->mDisableSuppressSelectionChangedRunnable:Ljava/lang/Runnable;
 
-    .line 152
+    .line 151
     iput-boolean v7, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldCallbackDuringFling:Z
 
-    .line 157
+    .line 156
     iput-boolean v7, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldCallbackOnUnselectedItemClick:Z
 
-    .line 237
+    .line 236
     iput v9, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
-    .line 239
+    .line 238
     iput v10, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
-    .line 241
+    .line 240
     iput v10, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_CURRENT:I
 
-    .line 730
+    .line 723
     iput v6, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 1912
+    .line 1905
     iput v6, p0, Lcom/htc/fragment/widget/Gallery2;->mCurrentTab:I
 
-    .line 2035
+    .line 2028
     const/4 v5, 0x0
 
     iput-object v5, p0, Lcom/htc/fragment/widget/Gallery2;->mHook:Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;
 
-    .line 2036
+    .line 2029
     const/4 v5, 0x0
 
     iput-object v5, p0, Lcom/htc/fragment/widget/Gallery2;->mFastScrollerFromWidget:Lcom/htc/fragment/widget/FastScroller;
 
-    .line 2045
+    .line 2038
     new-instance v5, Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
     invoke-direct {v5, p0}, Lcom/htc/fragment/widget/Gallery2$RecycleBin;-><init>(Lcom/htc/fragment/widget/Gallery2;)V
 
     iput-object v5, p0, Lcom/htc/fragment/widget/Gallery2;->mRecycler:Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
-    .line 400
+    .line 393
     new-instance v5, Landroid/view/GestureDetector;
 
     invoke-direct {v5, p1, p0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
     iput-object v5, p0, Lcom/htc/fragment/widget/Gallery2;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 401
+    .line 394
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v5, v7}, Landroid/view/GestureDetector;->setIsLongpressEnabled(Z)V
 
-    .line 403
+    .line 396
     sget-object v5, Lcom/android/internal/R$styleable;->Gallery:[I
 
     invoke-virtual {p1, p2, v5, p3, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 406
+    .line 399
     .local v0, a:Landroid/content/res/TypedArray;
     invoke-virtual {v0, v6, v8}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
-    .line 407
+    .line 400
     .local v2, index:I
     if-ltz v2, :cond_0
 
-    .line 408
+    .line 401
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/Gallery2;->setGravity(I)V
 
-    .line 411
+    .line 404
     :cond_0
     invoke-virtual {v0, v7, v8}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
-    .line 413
+    .line 406
     .local v1, animationDuration:I
     if-lez v1, :cond_1
 
-    .line 414
+    .line 407
     invoke-virtual {p0, v1}, Lcom/htc/fragment/widget/Gallery2;->setAnimationDuration(I)V
 
-    .line 417
+    .line 410
     :cond_1
     const/4 v5, 0x2
 
@@ -292,42 +292,42 @@
 
     move-result v3
 
-    .line 419
+    .line 412
     .local v3, spacing:I
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/Gallery2;->setSpacing(I)V
 
-    .line 421
+    .line 414
     const/high16 v5, 0x3f00
 
     invoke-virtual {v0, v9, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v4
 
-    .line 423
+    .line 416
     .local v4, unselectedAlpha:F
     invoke-virtual {p0, v4}, Lcom/htc/fragment/widget/Gallery2;->setUnselectedAlpha(F)V
 
-    .line 425
+    .line 418
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 429
+    .line 422
     iget v5, p0, Lcom/htc/fragment/widget/Gallery2;->mGroupFlags:I
 
     or-int/lit16 v5, v5, 0x400
 
     iput v5, p0, Lcom/htc/fragment/widget/Gallery2;->mGroupFlags:I
 
-    .line 431
+    .line 424
     iget v5, p0, Lcom/htc/fragment/widget/Gallery2;->mGroupFlags:I
 
     or-int/lit16 v5, v5, 0x800
 
     iput v5, p0, Lcom/htc/fragment/widget/Gallery2;->mGroupFlags:I
 
-    .line 434
+    .line 427
     iput v6, p0, Lcom/htc/fragment/widget/Gallery2;->mCurrentTab:I
 
-    .line 436
+    .line 429
     return-void
 .end method
 
@@ -337,7 +337,7 @@
     .parameter "x1"
 
     .prologue
-    .line 66
+    .line 65
     iput-boolean p1, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
     return p1
@@ -348,7 +348,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mPaddingLeft:I
 
     return v0
@@ -359,7 +359,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->dispatchUnpress()V
 
     return-void
@@ -370,7 +370,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mAnimationDuration:I
 
     return v0
@@ -381,7 +381,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->scrollIntoSlots()V
 
     return-void
@@ -392,7 +392,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldStopFling:Z
 
     return v0
@@ -404,7 +404,7 @@
     .parameter "x1"
 
     .prologue
-    .line 66
+    .line 65
     iput-boolean p1, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldStopFling:Z
 
     return p1
@@ -416,7 +416,7 @@
     .parameter "x1"
 
     .prologue
-    .line 66
+    .line 65
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
     return p1
@@ -427,7 +427,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mPaddingLeft:I
 
     return v0
@@ -438,7 +438,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mPaddingRight:I
 
     return v0
@@ -449,7 +449,7 @@
     .parameter "x0"
 
     .prologue
-    .line 66
+    .line 65
     iget v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mPaddingRight:I
 
     return v0
@@ -461,14 +461,14 @@
     .parameter "duringLayout"
 
     .prologue
-    .line 1188
+    .line 1181
     if-eqz p2, :cond_0
 
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getMeasuredHeight()I
 
     move-result v3
 
-    .line 1189
+    .line 1182
     .local v3, myHeight:I
     :goto_0
     if-eqz p2, :cond_1
@@ -477,22 +477,22 @@
 
     move-result v1
 
-    .line 1191
+    .line 1184
     .local v1, childHeight:I
     :goto_1
     const/4 v2, 0x0
 
-    .line 1193
+    .line 1186
     .local v2, childTop:I
     iget v4, p0, Lcom/htc/fragment/widget/Gallery2;->mGravity:I
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 1206
+    .line 1199
     :goto_2
     return v2
 
-    .line 1188
+    .line 1181
     .end local v1           #childHeight:I
     .end local v2           #childTop:I
     .end local v3           #myHeight:I
@@ -503,7 +503,7 @@
 
     goto :goto_0
 
-    .line 1189
+    .line 1182
     .restart local v3       #myHeight:I
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
@@ -512,7 +512,7 @@
 
     goto :goto_1
 
-    .line 1195
+    .line 1188
     .restart local v1       #childHeight:I
     .restart local v2       #childTop:I
     :sswitch_0
@@ -520,10 +520,10 @@
 
     iget v2, v4, Landroid/graphics/Rect;->top:I
 
-    .line 1196
+    .line 1189
     goto :goto_2
 
-    .line 1198
+    .line 1191
     :sswitch_1
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mSpinnerPadding:Landroid/graphics/Rect;
 
@@ -539,7 +539,7 @@
 
     sub-int v0, v4, v1
 
-    .line 1200
+    .line 1193
     .local v0, availableSpace:I
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mSpinnerPadding:Landroid/graphics/Rect;
 
@@ -549,10 +549,10 @@
 
     add-int v2, v4, v5
 
-    .line 1201
+    .line 1194
     goto :goto_2
 
-    .line 1203
+    .line 1196
     .end local v0           #availableSpace:I
     :sswitch_2
     iget-object v4, p0, Lcom/htc/fragment/widget/AbsSpinner;->mSpinnerPadding:Landroid/graphics/Rect;
@@ -565,7 +565,7 @@
 
     goto :goto_2
 
-    .line 1193
+    .line 1186
     nop
 
     :sswitch_data_0
@@ -581,47 +581,47 @@
     .parameter "toLeft"
 
     .prologue
-    .line 739
+    .line 732
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v6
 
-    .line 740
+    .line 733
     .local v6, numChildren:I
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
-    .line 741
+    .line 734
     .local v2, firstPosition:I
     const/4 v7, 0x0
 
-    .line 742
+    .line 735
     .local v7, start:I
     const/4 v1, 0x0
 
-    .line 744
+    .line 737
     .local v1, count:I
     if-eqz p1, :cond_3
 
-    .line 745
+    .line 738
     iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mPaddingLeft:I
 
-    .line 747
+    .line 740
     .local v3, galleryLeft:I
     iput v3, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 748
+    .line 741
     const/4 v5, 0x0
 
     .local v5, i:I
     :goto_0
     if-ge v5, v6, :cond_0
 
-    .line 749
+    .line 742
     invoke-virtual {p0, v5}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 751
+    .line 744
     .local v0, child:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getRight()I
 
@@ -629,14 +629,14 @@
 
     iput v8, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 752
+    .line 745
     invoke-virtual {v0}, Landroid/view/View;->getRight()I
 
     move-result v8
 
     if-lt v8, v3, :cond_2
 
-    .line 754
+    .line 747
     add-int/lit8 v8, v6, -0x1
 
     invoke-virtual {p0, v8}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
@@ -649,46 +649,46 @@
 
     iput v8, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 783
+    .line 776
     .end local v0           #child:Landroid/view/View;
     .end local v3           #galleryLeft:I
     :cond_0
     :goto_1
     invoke-virtual {p0, v7, v1}, Lcom/htc/fragment/widget/Gallery2;->detachViewsFromParent(II)V
 
-    .line 785
+    .line 778
     if-eqz p1, :cond_1
 
-    .line 786
+    .line 779
     iget v8, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     add-int/2addr v8, v1
 
     iput v8, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
-    .line 788
+    .line 781
     :cond_1
     return-void
 
-    .line 757
+    .line 750
     .restart local v0       #child:Landroid/view/View;
     .restart local v3       #galleryLeft:I
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
-    .line 758
+    .line 751
     iget-object v8, p0, Lcom/htc/fragment/widget/Gallery2;->mRecycler:Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
     add-int v9, v2, v5
 
     invoke-virtual {v8, v9, v0}, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->put(ILandroid/view/View;)V
 
-    .line 748
+    .line 741
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 763
+    .line 756
     .end local v0           #child:Landroid/view/View;
     .end local v3           #galleryLeft:I
     .end local v5           #i:I
@@ -701,23 +701,23 @@
 
     sub-int v4, v8, v9
 
-    .line 765
+    .line 758
     .local v4, galleryRight:I
     iput v4, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 766
+    .line 759
     add-int/lit8 v5, v6, -0x1
 
     .restart local v5       #i:I
     :goto_2
     if-ltz v5, :cond_0
 
-    .line 767
+    .line 760
     invoke-virtual {p0, v5}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 769
+    .line 762
     .restart local v0       #child:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
@@ -725,14 +725,14 @@
 
     iput v8, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 770
+    .line 763
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
     move-result v8
 
     if-gt v8, v4, :cond_4
 
-    .line 772
+    .line 765
     const/4 v8, 0x0
 
     invoke-virtual {p0, v8}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
@@ -747,21 +747,21 @@
 
     goto :goto_1
 
-    .line 775
+    .line 768
     :cond_4
     move v7, v5
 
-    .line 776
+    .line 769
     add-int/lit8 v1, v1, 0x1
 
-    .line 777
+    .line 770
     iget-object v8, p0, Lcom/htc/fragment/widget/Gallery2;->mRecycler:Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
     add-int v9, v2, v5
 
     invoke-virtual {v8, v9, v0}, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->put(ILandroid/view/View;)V
 
-    .line 766
+    .line 759
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_2
@@ -774,16 +774,16 @@
     .parameter "id"
 
     .prologue
-    .line 1495
+    .line 1488
     const/4 v6, 0x0
 
-    .line 1497
+    .line 1490
     .local v6, handled:Z
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOnItemLongClickListener:Lcom/htc/fragment/widget/AdapterView$OnItemLongClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 1498
+    .line 1491
     iget-object v0, p0, Lcom/htc/fragment/widget/AdapterView;->mOnItemLongClickListener:Lcom/htc/fragment/widget/AdapterView$OnItemLongClickListener;
 
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchView:Landroid/view/View;
@@ -798,23 +798,23 @@
 
     move-result v6
 
-    .line 1502
+    .line 1495
     :cond_0
     if-nez v6, :cond_1
 
-    .line 1503
+    .line 1496
     new-instance v0, Lcom/htc/fragment/widget/AdapterView$AdapterContextMenuInfo;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/htc/fragment/widget/AdapterView$AdapterContextMenuInfo;-><init>(Landroid/view/View;IJ)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mContextMenuInfo:Lcom/htc/fragment/widget/AdapterView$AdapterContextMenuInfo;
 
-    .line 1506
+    .line 1499
     invoke-super {p0, p1}, Lcom/htc/fragment/widget/AbsSpinner;->showContextMenuForChild(Landroid/view/View;)Z
 
     move-result v6
 
-    .line 1514
+    .line 1507
     :cond_1
     return v6
 .end method
@@ -826,17 +826,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1411
+    .line 1404
     if-eqz p1, :cond_0
 
-    .line 1412
+    .line 1405
     invoke-virtual {p1, v0}, Landroid/view/View;->setPressed(Z)V
 
-    .line 1415
+    .line 1408
     :cond_0
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->setPressed(Z)V
 
-    .line 1416
+    .line 1409
     return-void
 .end method
 
@@ -846,7 +846,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1420
+    .line 1413
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v1
@@ -857,23 +857,23 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 1421
+    .line 1414
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 1420
+    .line 1413
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 1424
+    .line 1417
     :cond_0
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/Gallery2;->setPressed(Z)V
 
-    .line 1425
+    .line 1418
     return-void
 .end method
 
@@ -881,31 +881,31 @@
     .locals 7
 
     .prologue
-    .line 989
+    .line 982
     iget v3, p0, Lcom/htc/fragment/widget/Gallery2;->mSpacing:I
 
-    .line 990
+    .line 983
     .local v3, itemSpacing:I
     iget v2, p0, Lcom/htc/fragment/widget/AbsSpinner;->mPaddingLeft:I
 
-    .line 994
+    .line 987
     .local v2, galleryLeft:I
     iget v5, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     add-int/lit8 v0, v5, -0x1
 
-    .line 995
+    .line 988
     .local v0, curPosition:I
     iget v1, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 1010
+    .line 1003
     .local v1, curRightEdge:I
     :goto_0
     if-le v1, v2, :cond_0
 
     if-ltz v0, :cond_0
 
-    .line 1011
+    .line 1004
     iget v5, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     sub-int v5, v0, v5
@@ -916,23 +916,23 @@
 
     move-result-object v4
 
-    .line 1016
+    .line 1009
     .local v4, prevIterationView:Landroid/view/View;
     iput v0, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
-    .line 1019
+    .line 1012
     invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
     move-result v5
 
     sub-int v1, v5, v3
 
-    .line 1020
+    .line 1013
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 1022
+    .line 1015
     .end local v4           #prevIterationView:Landroid/view/View;
     :cond_0
     return-void
@@ -942,10 +942,10 @@
     .locals 9
 
     .prologue
-    .line 1025
+    .line 1018
     iget v3, p0, Lcom/htc/fragment/widget/Gallery2;->mSpacing:I
 
-    .line 1026
+    .line 1019
     .local v3, itemSpacing:I
     iget v7, p0, Lcom/htc/fragment/widget/AdapterView;->mRight:I
 
@@ -957,34 +957,34 @@
 
     sub-int v2, v7, v8
 
-    .line 1027
+    .line 1020
     .local v2, galleryRight:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v4
 
-    .line 1028
+    .line 1021
     .local v4, numChildren:I
     iget v5, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
-    .line 1032
+    .line 1025
     .local v5, numItems:I
     iget v7, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     add-int v1, v7, v4
 
-    .line 1033
+    .line 1026
     .local v1, curPosition:I
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 1047
+    .line 1040
     .local v0, curLeftEdge:I
     :goto_0
     if-ge v0, v2, :cond_0
 
     if-ge v1, v5, :cond_0
 
-    .line 1048
+    .line 1041
     iget v7, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     sub-int v7, v1, v7
@@ -995,7 +995,7 @@
 
     move-result-object v6
 
-    .line 1053
+    .line 1046
     .local v6, prevIterationView:Landroid/view/View;
     invoke-virtual {v6}, Landroid/view/View;->getRight()I
 
@@ -1003,12 +1003,12 @@
 
     add-int v0, v7, v3
 
-    .line 1054
+    .line 1047
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1056
+    .line 1049
     .end local v6           #prevIterationView:Landroid/view/View;
     :cond_0
     return-void
@@ -1019,7 +1019,7 @@
     .parameter "view"
 
     .prologue
-    .line 726
+    .line 719
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
     move-result v0
@@ -1040,7 +1040,7 @@
     .parameter "offset"
 
     .prologue
-    .line 710
+    .line 703
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v1
@@ -1051,19 +1051,19 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 711
+    .line 704
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, p1}, Landroid/view/View;->offsetLeftAndRight(I)V
 
-    .line 710
+    .line 703
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 713
+    .line 706
     :cond_0
     return-void
 .end method
@@ -1072,24 +1072,24 @@
     .locals 1
 
     .prologue
-    .line 810
+    .line 803
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
     if-eqz v0, :cond_0
 
-    .line 811
+    .line 804
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
-    .line 814
+    .line 807
     invoke-super {p0}, Lcom/htc/fragment/widget/AbsSpinner;->selectionChanged()V
 
-    .line 816
+    .line 809
     :cond_0
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->invalidate()V
 
-    .line 817
+    .line 810
     return-void
 .end method
 
@@ -1097,7 +1097,7 @@
     .locals 4
 
     .prologue
-    .line 796
+    .line 789
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v3
@@ -1108,12 +1108,12 @@
 
     if-nez v3, :cond_1
 
-    .line 807
+    .line 800
     :cond_0
     :goto_0
     return-void
 
-    .line 798
+    .line 791
     :cond_1
     iget-object v3, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
@@ -1121,28 +1121,28 @@
 
     move-result v1
 
-    .line 799
+    .line 792
     .local v1, selectedCenter:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getCenterOfGallery()I
 
     move-result v2
 
-    .line 801
+    .line 794
     .local v2, targetCenter:I
     sub-int v0, v2, v1
 
-    .line 802
+    .line 795
     .local v0, scrollAmount:I
     if-eqz v0, :cond_2
 
-    .line 803
+    .line 796
     iget-object v3, p0, Lcom/htc/fragment/widget/Gallery2;->mFlingRunnable:Lcom/htc/fragment/widget/Gallery2$FlingRunnable;
 
     invoke-virtual {v3, v0}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->startUsingDistance(I)V
 
     goto :goto_0
 
-    .line 805
+    .line 798
     :cond_2
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->onFinishedMovement()V
 
@@ -1154,16 +1154,16 @@
     .parameter "childPosition"
 
     .prologue
-    .line 1620
+    .line 1613
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1622
+    .line 1615
     .local v0, child:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 1623
+    .line 1616
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getCenterOfGallery()I
 
     move-result v2
@@ -1174,16 +1174,16 @@
 
     sub-int v1, v2, v3
 
-    .line 1624
+    .line 1617
     .local v1, distance:I
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2;->mFlingRunnable:Lcom/htc/fragment/widget/Gallery2$FlingRunnable;
 
     invoke-virtual {v2, v1}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->startUsingDistance(I)V
 
-    .line 1625
+    .line 1618
     const/4 v2, 0x1
 
-    .line 1628
+    .line 1621
     .end local v1           #distance:I
     :goto_0
     return v2
@@ -1198,27 +1198,27 @@
     .locals 10
 
     .prologue
-    .line 832
+    .line 825
     iget-object v7, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
-    .line 833
+    .line 826
     .local v7, selView:Landroid/view/View;
     iget-object v8, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
     if-nez v8, :cond_1
 
-    .line 874
+    .line 867
     :cond_0
     :goto_0
     return-void
 
-    .line 835
+    .line 828
     :cond_1
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getCenterOfGallery()I
 
     move-result v3
 
-    .line 838
+    .line 831
     .local v3, galleryCenter:I
     invoke-virtual {v7}, Landroid/view/View;->getLeft()I
 
@@ -1232,15 +1232,15 @@
 
     if-ge v8, v3, :cond_0
 
-    .line 843
+    .line 836
     :cond_2
     const v2, 0x7fffffff
 
-    .line 844
+    .line 837
     .local v2, closestEdgeDistance:I
     const/4 v6, 0x0
 
-    .line 845
+    .line 838
     .local v6, newSelectedChildIndex:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
@@ -1252,12 +1252,12 @@
     :goto_1
     if-ltz v4, :cond_3
 
-    .line 847
+    .line 840
     invoke-virtual {p0, v4}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 849
+    .line 842
     .local v0, child:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
@@ -1271,26 +1271,26 @@
 
     if-lt v8, v3, :cond_4
 
-    .line 851
+    .line 844
     move v6, v4
 
-    .line 863
+    .line 856
     .end local v0           #child:Landroid/view/View;
     :cond_3
     iget v8, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     add-int v5, v8, v6
 
-    .line 865
+    .line 858
     .local v5, newPos:I
     iget v8, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     if-eq v5, v8, :cond_0
 
-    .line 868
+    .line 861
     invoke-super {p0, v5}, Lcom/htc/fragment/widget/AbsSpinner;->setSelectedPositionInt(I)V
 
-    .line 869
+    .line 862
     iget v8, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v9, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -1303,15 +1303,15 @@
 
     iput-object v8, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
-    .line 871
+    .line 864
     invoke-virtual {p0, v5}, Lcom/htc/fragment/widget/Gallery2;->setNextSelectedPositionInt(I)V
 
-    .line 872
+    .line 865
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->checkSelectionChanged()V
 
     goto :goto_0
 
-    .line 855
+    .line 848
     .end local v5           #newPos:I
     .restart local v0       #child:Landroid/view/View;
     :cond_4
@@ -1339,17 +1339,17 @@
 
     move-result v1
 
-    .line 857
+    .line 850
     .local v1, childClosestEdgeDistance:I
     if-ge v1, v2, :cond_5
 
-    .line 858
+    .line 851
     move v2, v1
 
-    .line 859
+    .line 852
     move v6, v4
 
-    .line 845
+    .line 838
     :cond_5
     add-int/lit8 v4, v4, -0x1
 
@@ -1364,10 +1364,10 @@
 
     const/4 v4, 0x0
 
-    .line 1641
+    .line 1634
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
-    .line 1643
+    .line 1636
     .local v1, oldSelectedChild:Landroid/view/View;
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
@@ -1381,25 +1381,25 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
-    .line 1645
+    .line 1638
     .local v0, child:Landroid/view/View;
     if-eqz v0, :cond_0
 
     if-ne v1, v0, :cond_1
 
-    .line 1669
+    .line 1662
     :cond_0
     :goto_0
     return-void
 
-    .line 1649
+    .line 1642
     :cond_1
     invoke-virtual {v0, v5}, Landroid/view/View;->setSelected(Z)V
 
-    .line 1650
+    .line 1643
     invoke-virtual {v0, v5}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 1653
+    .line 1646
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->hasFocus()Z
 
     move-result v2
@@ -1412,17 +1412,17 @@
 
     if-nez v2, :cond_2
 
-    .line 1654
+    .line 1647
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    .line 1659
+    .line 1652
     :cond_2
     if-eqz v1, :cond_0
 
-    .line 1662
+    .line 1655
     invoke-virtual {v1, v4}, Landroid/view/View;->setSelected(Z)V
 
-    .line 1666
+    .line 1659
     invoke-virtual {v1, v4}, Landroid/view/View;->setFocusable(Z)V
 
     goto :goto_0
@@ -1434,7 +1434,7 @@
     .locals 2
 
     .prologue
-    .line 382
+    .line 375
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1489,95 +1489,77 @@
 .end method
 
 .method protected checkAnimationModeAndType()V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v2, 0x0
-
     const/4 v1, 0x1
 
-    .line 269
+    const/4 v2, 0x0
+
+    .line 268
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     and-int/lit8 v0, v0, -0x2
 
     if-eqz v0, :cond_0
 
-    .line 270
+    .line 269
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->isHardwareAccelerated()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 283
+    .line 282
     :cond_0
-    sget-object v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Extra_Sense_Version:Ljava/lang/String;
+    iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
-    const-string v3, "4.0a"
+    if-ne v0, v1, :cond_4
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    .line 283
+    iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     if-eqz v0, :cond_1
 
-    .line 284
-    iput v1, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
-
-    .line 285
-    iput v1, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_CURRENT:I
-
-    .line 289
-    :cond_1
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
-    if-ne v0, v1, :cond_5
-
-    .line 290
-    iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
-
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     move v0, v1
 
     :goto_0
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineFakeView:Z
 
-    .line 291
+    .line 284
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     move v0, v1
 
     :goto_1
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineAnyAnimation:Z
 
-    .line 292
+    .line 285
     iput-boolean v2, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineClickAnimation:Z
 
-    .line 293
+    .line 286
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     :goto_2
     iput-boolean v1, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineDragAnimation:Z
 
-    .line 300
+    .line 293
     :goto_3
     const-string v0, "ani"
 
@@ -1605,7 +1587,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 301
+    .line 294
     const-string v0, "ani"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1666,121 +1648,121 @@
 
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 307
+    .line 300
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->checkAnimationSettings()V
 
-    .line 308
+    .line 301
     return-void
+
+    :cond_1
+    move v0, v2
+
+    .line 283
+    goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 290
-    goto :goto_0
-
-    :cond_3
-    move v0, v2
-
-    .line 291
+    .line 284
     goto :goto_1
 
-    :cond_4
+    :cond_3
     move v1, v2
 
-    .line 293
+    .line 286
     goto :goto_2
 
-    .line 295
-    :cond_5
+    .line 288
+    :cond_4
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     and-int/lit8 v0, v0, 0x1
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     move v0, v1
 
     :goto_4
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineFakeView:Z
 
-    .line 296
+    .line 289
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     and-int/lit8 v0, v0, -0x2
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
     move v0, v1
 
     :goto_5
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineAnyAnimation:Z
 
-    .line 297
+    .line 290
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     and-int/lit8 v0, v0, 0x1
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     and-int/lit8 v0, v0, -0x2
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     move v0, v1
 
     :goto_6
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineClickAnimation:Z
 
-    .line 298
+    .line 291
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     and-int/lit8 v0, v0, 0x2
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     and-int/lit8 v0, v0, -0x2
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
     :goto_7
     iput-boolean v1, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineDragAnimation:Z
 
     goto/16 :goto_3
 
+    :cond_5
+    move v0, v2
+
+    .line 288
+    goto :goto_4
+
     :cond_6
     move v0, v2
 
-    .line 295
-    goto :goto_4
+    .line 289
+    goto :goto_5
 
     :cond_7
     move v0, v2
 
-    .line 296
-    goto :goto_5
-
-    :cond_8
-    move v0, v2
-
-    .line 297
+    .line 290
     goto :goto_6
 
-    :cond_9
+    :cond_8
     move v1, v2
 
-    .line 298
+    .line 291
     goto :goto_7
 .end method
 
@@ -1792,12 +1774,12 @@
 
     const/4 v2, 0x0
 
-    .line 312
+    .line 305
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     if-ne v0, v1, :cond_3
 
-    .line 313
+    .line 306
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     if-eqz v0, :cond_0
@@ -1811,7 +1793,7 @@
     :goto_0
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingFakeView:Z
 
-    .line 314
+    .line 307
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     if-eqz v0, :cond_1
@@ -1825,10 +1807,10 @@
     :goto_1
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingAnyAnimation:Z
 
-    .line 315
+    .line 308
     iput-boolean v2, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingClickAnimation:Z
 
-    .line 316
+    .line 309
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     if-eqz v0, :cond_2
@@ -1842,7 +1824,7 @@
     :goto_2
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingDragAnimation:Z
 
-    .line 323
+    .line 316
     :goto_3
     const-string v0, "ani"
 
@@ -1870,7 +1852,7 @@
 
     invoke-static {v0, v3}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 324
+    .line 317
     const-string v0, "ani"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1931,7 +1913,7 @@
 
     invoke-static {v0, v3}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
+    .line 322
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     if-eqz v0, :cond_8
@@ -1945,28 +1927,28 @@
     :goto_4
     invoke-virtual {p0, v1}, Lcom/htc/fragment/widget/Gallery2;->setStaticTransformationsEnabled(Z)V
 
-    .line 330
+    .line 323
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 313
+    .line 306
     goto/16 :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 314
+    .line 307
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 316
+    .line 309
     goto :goto_2
 
-    .line 318
+    .line 311
     :cond_3
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
@@ -1983,7 +1965,7 @@
     :goto_5
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingFakeView:Z
 
-    .line 319
+    .line 312
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     if-eqz v0, :cond_5
@@ -1999,7 +1981,7 @@
     :goto_6
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingAnyAnimation:Z
 
-    .line 320
+    .line 313
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     and-int/lit8 v0, v0, 0x1
@@ -2017,7 +1999,7 @@
     :goto_7
     iput-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingClickAnimation:Z
 
-    .line 321
+    .line 314
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     and-int/lit8 v0, v0, 0x2
@@ -2040,31 +2022,31 @@
     :cond_4
     move v0, v2
 
-    .line 318
+    .line 311
     goto :goto_5
 
     :cond_5
     move v0, v2
 
-    .line 319
+    .line 312
     goto :goto_6
 
     :cond_6
     move v0, v2
 
-    .line 320
+    .line 313
     goto :goto_7
 
     :cond_7
     move v0, v2
 
-    .line 321
+    .line 314
     goto :goto_8
 
     :cond_8
     move v1, v2
 
-    .line 329
+    .line 322
     goto :goto_4
 .end method
 
@@ -2073,7 +2055,7 @@
     .parameter "p"
 
     .prologue
-    .line 564
+    .line 557
     instance-of v0, p1, Lcom/htc/fragment/widget/Gallery2$LayoutParams;
 
     return v0
@@ -2083,7 +2065,7 @@
     .locals 1
 
     .prologue
-    .line 535
+    .line 528
     const/4 v0, 0x1
 
     return v0
@@ -2093,7 +2075,7 @@
     .locals 1
 
     .prologue
-    .line 545
+    .line 538
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     return v0
@@ -2103,7 +2085,7 @@
     .locals 1
 
     .prologue
-    .line 555
+    .line 548
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     return v0
@@ -2116,17 +2098,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1524
+    .line 1517
     invoke-virtual {p1, p0, v0, v0}, Landroid/view/KeyEvent;->dispatch(Landroid/view/KeyEvent$Callback;Landroid/view/KeyEvent$DispatcherState;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1525
+    .line 1518
     const/4 v0, 0x1
 
-    .line 1528
+    .line 1521
     :goto_0
     return v0
 
@@ -2143,17 +2125,17 @@
     .parameter "pressed"
 
     .prologue
-    .line 1448
+    .line 1441
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 1449
+    .line 1442
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setPressed(Z)V
 
-    .line 1451
+    .line 1444
     :cond_0
     return-void
 .end method
@@ -2163,7 +2145,7 @@
     .parameter "selected"
 
     .prologue
-    .line 1438
+    .line 1431
     return-void
 .end method
 
@@ -2172,7 +2154,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 369
+    .line 362
     const-string v0, "ani"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2197,27 +2179,27 @@
 
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/CarouselLog;->de(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 371
+    .line 364
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineAnyAnimation:Z
 
     if-nez v0, :cond_0
 
-    .line 379
+    .line 372
     :goto_0
     return-void
 
-    .line 373
+    .line 366
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 374
+    .line 367
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->switchAnimationType(I)V
 
     goto :goto_0
 
-    .line 377
+    .line 370
     :cond_1
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
@@ -2236,7 +2218,7 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 597
+    .line 590
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
@@ -2249,7 +2231,7 @@
     .parameter "attrs"
 
     .prologue
-    .line 582
+    .line 575
     new-instance v0, Lcom/htc/fragment/widget/Gallery2$LayoutParams;
 
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getContext()Landroid/content/Context;
@@ -2266,7 +2248,7 @@
     .parameter "p"
 
     .prologue
-    .line 573
+    .line 566
     new-instance v0, Lcom/htc/fragment/widget/Gallery2$LayoutParams;
 
     invoke-direct {v0, p1}, Lcom/htc/fragment/widget/Gallery2$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
@@ -2278,7 +2260,7 @@
     .locals 2
 
     .prologue
-    .line 719
+    .line 712
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getWidth()I
 
     move-result v0
@@ -2306,24 +2288,24 @@
     .parameter "i"
 
     .prologue
-    .line 1696
+    .line 1689
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     sub-int v0, v1, v2
 
-    .line 1699
+    .line 1692
     .local v0, selectedIndex:I
     if-gez v0, :cond_1
 
-    .line 1709
+    .line 1702
     .end local p2
     :cond_0
     :goto_0
     return p2
 
-    .line 1701
+    .line 1694
     .restart local p2
     :cond_1
     add-int/lit8 v1, p1, -0x1
@@ -2332,14 +2314,14 @@
 
     move p2, v0
 
-    .line 1703
+    .line 1696
     goto :goto_0
 
-    .line 1704
+    .line 1697
     :cond_2
     if-lt p2, v0, :cond_0
 
-    .line 1706
+    .line 1699
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
@@ -2350,7 +2332,7 @@
     .parameter "child"
 
     .prologue
-    .line 620
+    .line 613
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
@@ -2364,10 +2346,10 @@
     .parameter "t"
 
     .prologue
-    .line 522
+    .line 515
     invoke-virtual {p2}, Landroid/view/animation/Transformation;->clear()V
 
-    .line 523
+    .line 516
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
     if-ne p1, v0, :cond_0
@@ -2377,12 +2359,12 @@
     :goto_0
     invoke-virtual {p2, v0}, Landroid/view/animation/Transformation;->setAlpha(F)V
 
-    .line 525
+    .line 518
     const/4 v0, 0x1
 
     return v0
 
-    .line 523
+    .line 516
     :cond_0
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mUnselectedAlpha:F
 
@@ -2393,7 +2375,7 @@
     .locals 1
 
     .prologue
-    .line 1459
+    .line 1452
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mContextMenuInfo:Lcom/htc/fragment/widget/AdapterView$AdapterContextMenuInfo;
 
     return-object v0
@@ -2407,14 +2389,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 672
+    .line 665
     if-eqz p1, :cond_1
 
     iget v6, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     add-int/lit8 v3, v6, -0x1
 
-    .line 673
+    .line 666
     .local v3, extremeItemPosition:I
     :goto_0
     iget v6, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -2425,13 +2407,13 @@
 
     move-result-object v1
 
-    .line 675
+    .line 668
     .local v1, extremeChild:Landroid/view/View;
     if-nez v1, :cond_2
 
     move v5, p2
 
-    .line 698
+    .line 691
     :cond_0
     :goto_1
     return v5
@@ -2441,10 +2423,10 @@
     :cond_1
     move v3, v5
 
-    .line 672
+    .line 665
     goto :goto_0
 
-    .line 679
+    .line 672
     .restart local v1       #extremeChild:Landroid/view/View;
     .restart local v3       #extremeItemPosition:I
     :cond_2
@@ -2452,24 +2434,24 @@
 
     move-result v2
 
-    .line 680
+    .line 673
     .local v2, extremeChildCenter:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getCenterOfGallery()I
 
     move-result v4
 
-    .line 682
+    .line 675
     .local v4, galleryCenter:I
     if-eqz p1, :cond_4
 
-    .line 683
+    .line 676
     if-le v2, v4, :cond_0
 
-    .line 696
+    .line 689
     :cond_3
     sub-int v0, v4, v2
 
-    .line 698
+    .line 691
     .local v0, centerDifference:I
     if-eqz p1, :cond_5
 
@@ -2479,14 +2461,14 @@
 
     goto :goto_1
 
-    .line 689
+    .line 682
     .end local v0           #centerDifference:I
     :cond_4
     if-lt v2, v4, :cond_3
 
     goto :goto_1
 
-    .line 698
+    .line 691
     .restart local v0       #centerDifference:I
     :cond_5
     invoke-static {v0, p2}, Ljava/lang/Math;->min(II)I
@@ -2500,7 +2482,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 255
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineAnyAnimation:Z
 
     return v0
@@ -2510,7 +2492,7 @@
     .locals 1
 
     .prologue
-    .line 254
+    .line 253
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineClickAnimation:Z
 
     return v0
@@ -2520,7 +2502,7 @@
     .locals 1
 
     .prologue
-    .line 255
+    .line 254
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineDragAnimation:Z
 
     return v0
@@ -2530,7 +2512,7 @@
     .locals 1
 
     .prologue
-    .line 253
+    .line 252
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isDefineFakeView:Z
 
     return v0
@@ -2540,7 +2522,7 @@
     .locals 1
 
     .prologue
-    .line 263
+    .line 262
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mFastScrollerFromWidget:Lcom/htc/fragment/widget/FastScroller;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/FastScroller;->isDragging()Z
@@ -2564,7 +2546,7 @@
     .locals 1
 
     .prologue
-    .line 260
+    .line 259
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingAnyAnimation:Z
 
     return v0
@@ -2574,7 +2556,7 @@
     .locals 1
 
     .prologue
-    .line 258
+    .line 257
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingClickAnimation:Z
 
     return v0
@@ -2584,7 +2566,7 @@
     .locals 1
 
     .prologue
-    .line 259
+    .line 258
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingDragAnimation:Z
 
     return v0
@@ -2594,7 +2576,7 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 256
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->isUsingFakeView:Z
 
     return v0
@@ -2608,7 +2590,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 889
+    .line 882
     iget-object v3, p0, Lcom/htc/fragment/widget/Gallery2;->mHook:Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;
 
     if-eqz v3, :cond_0
@@ -2653,18 +2635,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 986
+    .line 979
     :cond_0
     :goto_0
     return-void
 
-    .line 897
+    .line 890
     :cond_1
     iget-boolean v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mBlockLayoutRequests:Z
 
     if-eqz v3, :cond_2
 
-    .line 898
+    .line 891
     const-string v3, "naeco"
 
     const-string v4, "block layout!!! because mFlingRunnable isRunning!!!"
@@ -2673,13 +2655,13 @@
 
     goto :goto_0
 
-    .line 917
+    .line 910
     :cond_2
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mSpinnerPadding:Landroid/graphics/Rect;
 
     iget v0, v3, Landroid/graphics/Rect;->left:I
 
-    .line 918
+    .line 911
     .local v0, childrenLeft:I
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mRight:I
 
@@ -2699,16 +2681,16 @@
 
     sub-int v1, v3, v4
 
-    .line 920
+    .line 913
     .local v1, childrenWidth:I
     iget-boolean v3, p0, Lcom/htc/fragment/widget/AdapterView;->mDataChanged:Z
 
     if-eqz v3, :cond_3
 
-    .line 921
+    .line 914
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->handleDataChanged()V
 
-    .line 927
+    .line 920
     :cond_3
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAdapter:Landroid/widget/SpinnerAdapter;
 
@@ -2718,46 +2700,46 @@
 
     if-nez v3, :cond_4
 
-    .line 928
+    .line 921
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->resetList()V
 
     goto :goto_0
 
-    .line 933
+    .line 926
     :cond_4
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedPosition:I
 
     if-ltz v3, :cond_5
 
-    .line 934
+    .line 927
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mNextSelectedPosition:I
 
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/Gallery2;->setSelectedPositionInt(I)V
 
-    .line 938
+    .line 931
     :cond_5
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->recycleAllViews()V
 
-    .line 942
+    .line 935
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->detachAllViewsFromParent()V
 
-    .line 948
+    .line 941
     iput v5, p0, Lcom/htc/fragment/widget/Gallery2;->mRightMost:I
 
-    .line 949
+    .line 942
     iput v5, p0, Lcom/htc/fragment/widget/Gallery2;->mLeftMost:I
 
-    .line 958
+    .line 951
     iget v3, p0, Lcom/htc/fragment/widget/Gallery2;->mCurrentTab:I
 
     iput v3, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
-    .line 959
+    .line 952
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iput v3, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
-    .line 960
+    .line 953
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     const/4 v4, 0x1
@@ -2766,40 +2748,40 @@
 
     move-result-object v2
 
-    .line 971
+    .line 964
     .local v2, sel:Landroid/view/View;
     iget v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mPaddingLeft:I
 
     iput v3, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
-    .line 972
+    .line 965
     iget v3, p0, Lcom/htc/fragment/widget/Gallery2;->startLayoutAt:I
 
     invoke-virtual {v2, v3}, Landroid/view/View;->offsetLeftAndRight(I)V
 
-    .line 975
+    .line 968
     iget-object v3, p0, Lcom/htc/fragment/widget/Gallery2;->mRecycler:Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
     invoke-virtual {v3}, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->clear()V
 
-    .line 977
+    .line 970
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->invalidate()V
 
-    .line 978
+    .line 971
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->checkSelectionChanged()V
 
-    .line 980
+    .line 973
     iput-boolean v5, p0, Lcom/htc/fragment/widget/AdapterView;->mDataChanged:Z
 
-    .line 981
+    .line 974
     iput-boolean v5, p0, Lcom/htc/fragment/widget/AdapterView;->mNeedSync:Z
 
-    .line 982
+    .line 975
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/Gallery2;->setNextSelectedPositionInt(I)V
 
-    .line 984
+    .line 977
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->updateSelectedItemMetadata()V
 
     goto :goto_0
@@ -2813,28 +2795,28 @@
     .parameter "fromLeft"
 
     .prologue
-    .line 1078
+    .line 1071
     iget-boolean v0, p0, Lcom/htc/fragment/widget/AdapterView;->mDataChanged:Z
 
     if-nez v0, :cond_0
 
-    .line 1079
+    .line 1072
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mRecycler:Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
     invoke-virtual {v0, p1}, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->get(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1080
+    .line 1073
     .local v1, child:Landroid/view/View;
     if-eqz v1, :cond_0
 
-    .line 1082
+    .line 1075
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v7
 
-    .line 1085
+    .line 1078
     .local v7, childLeft:I
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mRightMost:I
 
@@ -2850,7 +2832,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/Gallery2;->mRightMost:I
 
-    .line 1087
+    .line 1080
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mLeftMost:I
 
     invoke-static {v0, v7}, Ljava/lang/Math;->min(II)I
@@ -2859,7 +2841,7 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/Gallery2;->mLeftMost:I
 
-    .line 1090
+    .line 1083
     const/4 v5, 0x1
 
     move-object v0, p0
@@ -2874,14 +2856,14 @@
 
     move-object v6, v1
 
-    .line 1102
+    .line 1095
     .end local v1           #child:Landroid/view/View;
     .end local v7           #childLeft:I
     .local v6, child:Landroid/view/View;
     :goto_0
     return-object v6
 
-    .line 1097
+    .line 1090
     .end local v6           #child:Landroid/view/View;
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAdapter:Landroid/widget/SpinnerAdapter;
@@ -2892,7 +2874,7 @@
 
     move-result-object v1
 
-    .line 1100
+    .line 1093
     .restart local v1       #child:Landroid/view/View;
     const/4 v5, 0x0
 
@@ -2908,7 +2890,7 @@
 
     move-object v6, v1
 
-    .line 1102
+    .line 1095
     .end local v1           #child:Landroid/view/View;
     .restart local v6       #child:Landroid/view/View;
     goto :goto_0
@@ -2918,7 +2900,7 @@
     .locals 2
 
     .prologue
-    .line 1611
+    .line 1604
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     if-lez v0, :cond_0
@@ -2931,7 +2913,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1612
+    .line 1605
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -2942,10 +2924,10 @@
 
     invoke-direct {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->scrollToChild(I)Z
 
-    .line 1613
+    .line 1606
     const/4 v0, 0x1
 
-    .line 1615
+    .line 1608
     :goto_0
     return v0
 
@@ -2959,7 +2941,7 @@
     .locals 2
 
     .prologue
-    .line 1602
+    .line 1595
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     if-lez v0, :cond_0
@@ -2968,7 +2950,7 @@
 
     if-lez v0, :cond_0
 
-    .line 1603
+    .line 1596
     iget v0, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -2979,10 +2961,10 @@
 
     invoke-direct {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->scrollToChild(I)Z
 
-    .line 1604
+    .line 1597
     const/4 v0, 0x1
 
-    .line 1606
+    .line 1599
     :goto_0
     return v0
 
@@ -2996,13 +2978,13 @@
     .locals 0
 
     .prologue
-    .line 2125
+    .line 2118
     invoke-super {p0}, Lcom/htc/fragment/widget/AbsSpinner;->onAttachedToWindow()V
 
-    .line 2127
+    .line 2120
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->checkAnimationModeAndType()V
 
-    .line 2128
+    .line 2121
     return-void
 .end method
 
@@ -3010,10 +2992,10 @@
     .locals 0
 
     .prologue
-    .line 1374
+    .line 1367
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->onUp()V
 
-    .line 1375
+    .line 1368
     return-void
 .end method
 
@@ -3024,14 +3006,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1341
+    .line 1334
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mFlingRunnable:Lcom/htc/fragment/widget/Gallery2$FlingRunnable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->stop(Z)V
 
-    .line 1344
+    .line 1337
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -3050,12 +3032,12 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
-    .line 1346
+    .line 1339
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
     if-ltz v0, :cond_0
 
-    .line 1347
+    .line 1340
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -3068,16 +3050,16 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchView:Landroid/view/View;
 
-    .line 1348
+    .line 1341
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 1352
+    .line 1345
     :cond_0
     iput-boolean v2, p0, Lcom/htc/fragment/widget/Gallery2;->mIsFirstScroll:Z
 
-    .line 1355
+    .line 1348
     return v2
 .end method
 
@@ -3091,24 +3073,24 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1270
+    .line 1263
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldCallbackDuringFling:Z
 
     if-nez v0, :cond_0
 
-    .line 1274
+    .line 1267
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDisableSuppressSelectionChangedRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1277
+    .line 1270
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
     if-nez v0, :cond_0
 
     iput-boolean v2, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
-    .line 1281
+    .line 1274
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mFlingRunnable:Lcom/htc/fragment/widget/Gallery2$FlingRunnable;
 
@@ -3118,7 +3100,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->startUsingVelocity(I)V
 
-    .line 1283
+    .line 1276
     return v2
 .end method
 
@@ -3129,22 +3111,22 @@
     .parameter "previouslyFocusedRect"
 
     .prologue
-    .line 1719
+    .line 1712
     invoke-super {p0, p1, p2, p3}, Lcom/htc/fragment/widget/AbsSpinner;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    .line 1726
+    .line 1719
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 1727
+    .line 1720
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
     invoke-virtual {v0, p2}, Landroid/view/View;->requestFocus(I)Z
 
-    .line 1730
+    .line 1723
     :cond_0
     return-void
 .end method
@@ -3155,10 +3137,10 @@
     .parameter "event"
 
     .prologue
-    .line 1541
+    .line 1534
     sparse-switch p1, :sswitch_data_0
 
-    .line 1562
+    .line 1555
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/htc/fragment/widget/AbsSpinner;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -3166,7 +3148,7 @@
 
     return v0
 
-    .line 1558
+    .line 1551
     :sswitch_0
     const/4 v0, 0x1
 
@@ -3174,7 +3156,7 @@
 
     goto :goto_0
 
-    .line 1541
+    .line 1534
     :sswitch_data_0
     .sparse-switch
         0x17 -> :sswitch_0
@@ -3188,10 +3170,10 @@
     .parameter "event"
 
     .prologue
-    .line 1571
+    .line 1564
     sparse-switch p1, :sswitch_data_0
 
-    .line 1598
+    .line 1591
     invoke-super {p0, p1, p2}, Lcom/htc/fragment/widget/AbsSpinner;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v1
@@ -3199,23 +3181,23 @@
     :goto_0
     return v1
 
-    .line 1575
+    .line 1568
     :sswitch_0
     iget-boolean v1, p0, Lcom/htc/fragment/widget/Gallery2;->mReceivedInvokeKeyDown:Z
 
     if-eqz v1, :cond_0
 
-    .line 1576
+    .line 1569
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     if-lez v1, :cond_0
 
-    .line 1578
+    .line 1571
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery2;->mSelectedChild:Landroid/view/View;
 
     invoke-direct {p0, v1}, Lcom/htc/fragment/widget/Gallery2;->dispatchPress(Landroid/view/View;)V
 
-    .line 1579
+    .line 1572
     new-instance v1, Lcom/htc/fragment/widget/Gallery2$2;
 
     invoke-direct {v1, p0}, Lcom/htc/fragment/widget/Gallery2$2;-><init>(Lcom/htc/fragment/widget/Gallery2;)V
@@ -3228,14 +3210,14 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/htc/fragment/widget/Gallery2;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1585
+    .line 1578
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     sub-int v0, v1, v2
 
-    .line 1586
+    .line 1579
     .local v0, selectedIndex:I
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
@@ -3253,19 +3235,19 @@
 
     invoke-virtual {p0, v1, v2, v3, v4}, Lcom/htc/fragment/widget/Gallery2;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 1592
+    .line 1585
     .end local v0           #selectedIndex:I
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/fragment/widget/Gallery2;->mReceivedInvokeKeyDown:Z
 
-    .line 1594
+    .line 1587
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1571
+    .line 1564
     :sswitch_data_0
     .sparse-switch
         0x17 -> :sswitch_0
@@ -3284,21 +3266,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 607
+    .line 600
     invoke-super/range {p0 .. p5}, Lcom/htc/fragment/widget/AbsSpinner;->onLayout(ZIIII)V
 
-    .line 613
+    .line 606
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/AdapterView;->mInLayout:Z
 
-    .line 614
+    .line 607
     invoke-virtual {p0, v1, v1}, Lcom/htc/fragment/widget/Gallery2;->layout(IZ)V
 
-    .line 615
+    .line 608
     iput-boolean v1, p0, Lcom/htc/fragment/widget/AdapterView;->mInLayout:Z
 
-    .line 616
+    .line 609
     return-void
 .end method
 
@@ -3307,29 +3289,29 @@
     .parameter "e"
 
     .prologue
-    .line 1386
+    .line 1379
     iget v2, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
     if-gez v2, :cond_0
 
-    .line 1393
+    .line 1386
     :goto_0
     return-void
 
-    .line 1390
+    .line 1383
     :cond_0
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/Gallery2;->performHapticFeedback(I)Z
 
-    .line 1391
+    .line 1384
     iget v2, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
     invoke-virtual {p0, v2}, Lcom/htc/fragment/widget/Gallery2;->getItemIdAtPosition(I)J
 
     move-result-wide v0
 
-    .line 1392
+    .line 1385
     .local v0, id:J
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchView:Landroid/view/View;
 
@@ -3352,29 +3334,29 @@
 
     const/4 v3, 0x1
 
-    .line 1306
+    .line 1299
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mParent:Landroid/view/ViewParent;
 
     invoke-interface {v0, v3}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1310
+    .line 1303
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldCallbackDuringFling:Z
 
     if-nez v0, :cond_2
 
-    .line 1311
+    .line 1304
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mIsFirstScroll:Z
 
     if-eqz v0, :cond_1
 
-    .line 1317
+    .line 1310
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
     if-nez v0, :cond_0
 
     iput-boolean v3, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
-    .line 1318
+    .line 1311
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDisableSuppressSelectionChangedRunnable:Ljava/lang/Runnable;
 
@@ -3382,7 +3364,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/htc/fragment/widget/Gallery2;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1325
+    .line 1318
     :cond_1
     :goto_0
     float-to-int v0, p3
@@ -3391,13 +3373,13 @@
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->trackMotionScroll(I)V
 
-    .line 1327
+    .line 1320
     iput-boolean v4, p0, Lcom/htc/fragment/widget/Gallery2;->mIsFirstScroll:Z
 
-    .line 1328
+    .line 1321
     return v3
 
-    .line 1321
+    .line 1314
     :cond_2
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
@@ -3413,7 +3395,7 @@
     .parameter "e"
 
     .prologue
-    .line 1405
+    .line 1398
     return-void
 .end method
 
@@ -3422,12 +3404,12 @@
     .parameter "e"
 
     .prologue
-    .line 1244
+    .line 1237
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
     if-ltz v0, :cond_2
 
-    .line 1247
+    .line 1240
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
 
     iget v1, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
@@ -3436,7 +3418,7 @@
 
     invoke-direct {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->scrollToChild(I)Z
 
-    .line 1250
+    .line 1243
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldCallbackOnUnselectedItemClick:Z
 
     if-nez v0, :cond_0
@@ -3447,7 +3429,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1251
+    .line 1244
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mDownTouchView:Landroid/view/View;
 
@@ -3463,11 +3445,11 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/htc/fragment/widget/Gallery2;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 1255
+    .line 1248
     :cond_1
     const/4 v0, 0x1
 
-    .line 1258
+    .line 1251
     :goto_0
     return v0
 
@@ -3482,47 +3464,47 @@
     .parameter "event"
 
     .prologue
-    .line 1217
+    .line 1210
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v2, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v1
 
-    .line 1219
+    .line 1212
     .local v1, retValue:Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 1220
+    .line 1213
     .local v0, action:I
     const/4 v2, 0x1
 
     if-ne v0, v2, :cond_2
 
-    .line 1222
+    .line 1215
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->onUp()V
 
-    .line 1228
+    .line 1221
     :cond_0
     :goto_0
     if-nez v1, :cond_1
 
-    .line 1229
+    .line 1222
     invoke-super {p0, p1}, Lcom/htc/fragment/widget/AbsSpinner;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 1232
+    .line 1225
     :cond_1
     return v1
 
-    .line 1223
+    .line 1216
     :cond_2
     const/4 v2, 0x3
 
     if-ne v0, v2, :cond_0
 
-    .line 1224
+    .line 1217
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->onCancel()V
 
     goto :goto_0
@@ -3532,7 +3514,7 @@
     .locals 1
 
     .prologue
-    .line 1363
+    .line 1356
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2;->mFlingRunnable:Lcom/htc/fragment/widget/Gallery2$FlingRunnable;
 
     #getter for: Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mScroller:Landroid/widget/Scroller;
@@ -3546,14 +3528,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1364
+    .line 1357
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->scrollIntoSlots()V
 
-    .line 1367
+    .line 1360
     :cond_0
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->dispatchUnpress()V
 
-    .line 1368
+    .line 1361
     return-void
 .end method
 
@@ -3561,16 +3543,16 @@
     .locals 6
 
     .prologue
-    .line 2096
+    .line 2089
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v0
 
-    .line 2097
+    .line 2090
     .local v0, childCount:I
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
-    .line 2100
+    .line 2093
     .local v2, position:I
     const/4 v1, 0x0
 
@@ -3578,7 +3560,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2101
+    .line 2094
     iget-object v3, p0, Lcom/htc/fragment/widget/Gallery2;->mRecycler:Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
     add-int v4, v2, v1
@@ -3589,12 +3571,12 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->put(ILandroid/view/View;)V
 
-    .line 2100
+    .line 2093
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2105
+    .line 2098
     :cond_0
     return-void
 .end method
@@ -3604,19 +3586,19 @@
     .parameter "deltax"
 
     .prologue
-    .line 1861
+    .line 1854
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 1877
+    .line 1870
     :cond_0
     :goto_0
     return-void
 
-    .line 1865
+    .line 1858
     :cond_1
     iget v3, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
@@ -3630,23 +3612,23 @@
 
     if-eqz v3, :cond_0
 
-    .line 1868
+    .line 1861
     const/4 v3, 0x0
 
     invoke-virtual {p0, v3}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1869
+    .line 1862
     .local v0, firstChild:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 1870
+    .line 1863
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    .line 1871
+    .line 1864
     .local v1, itemWidth:I
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
@@ -3662,7 +3644,7 @@
 
     add-int v2, v3, v4
 
-    .line 1873
+    .line 1866
     .local v2, previousDeltax:I
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mFastScroller:Lcom/htc/fragment/widget/FastScroller;
 
@@ -3676,7 +3658,7 @@
 
     add-int/2addr v2, v3
 
-    .line 1874
+    .line 1867
     :cond_2
     sub-int v3, v2, p1
 
@@ -3689,15 +3671,15 @@
     .locals 1
 
     .prologue
-    .line 821
+    .line 814
     iget-boolean v0, p0, Lcom/htc/fragment/widget/Gallery2;->mSuppressSelectionChanged:Z
 
     if-nez v0, :cond_0
 
-    .line 822
+    .line 815
     invoke-super {p0}, Lcom/htc/fragment/widget/AbsSpinner;->selectionChanged()V
 
-    .line 824
+    .line 817
     :cond_0
     return-void
 .end method
@@ -3707,10 +3689,10 @@
     .parameter "animationDurationMillis"
 
     .prologue
-    .line 482
+    .line 475
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->mAnimationDuration:I
 
-    .line 483
+    .line 476
     return-void
 .end method
 
@@ -3719,18 +3701,18 @@
     .parameter "mode"
 
     .prologue
-    .line 333
+    .line 326
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
     if-eq v0, p1, :cond_0
 
-    .line 334
+    .line 327
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->ANIMODE:I
 
-    .line 335
+    .line 328
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->checkAnimationModeAndType()V
 
-    .line 337
+    .line 330
     :cond_0
     return-void
 .end method
@@ -3740,12 +3722,12 @@
     .parameter "type"
 
     .prologue
-    .line 339
+    .line 332
     iget v2, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
     if-eq v2, p1, :cond_3
 
-    .line 340
+    .line 333
     iget v2, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_CURRENT:I
 
     and-int/lit8 v2, v2, 0x1
@@ -3754,12 +3736,12 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 341
+    .line 334
     and-int/lit8 v2, p1, 0x1
 
     if-eqz v2, :cond_0
 
-    .line 342
+    .line 335
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -3772,7 +3754,7 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 343
+    .line 336
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2;->mHook:Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;
 
     invoke-virtual {v2, v0}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->getChildAt(I)Landroid/view/View;
@@ -3783,17 +3765,17 @@
 
     invoke-virtual {v2}, Lcom/htc/fragment/widget/CarouselHost$TabContainer;->switchToFakeView()V
 
-    .line 342
+    .line 335
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 346
+    .line 339
     .end local v0           #i:I
     :cond_0
     const/4 v1, 0x0
 
-    .line 347
+    .line 340
     .local v1, tab:Lcom/htc/fragment/widget/CarouselHost$TabContainer;
     const/4 v0, 0x0
 
@@ -3807,7 +3789,7 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 348
+    .line 341
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2;->mHook:Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;
 
     invoke-virtual {v2, v0}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->getChildAt(I)Landroid/view/View;
@@ -3817,7 +3799,7 @@
     .end local v1           #tab:Lcom/htc/fragment/widget/CarouselHost$TabContainer;
     check-cast v1, Lcom/htc/fragment/widget/CarouselHost$TabContainer;
 
-    .line 349
+    .line 342
     .restart local v1       #tab:Lcom/htc/fragment/widget/CarouselHost$TabContainer;
     invoke-virtual {v1}, Lcom/htc/fragment/widget/CarouselHost$TabContainer;->getChildCount()I
 
@@ -3827,28 +3809,28 @@
 
     if-le v2, v3, :cond_1
 
-    .line 350
+    .line 343
     invoke-virtual {v1}, Lcom/htc/fragment/widget/CarouselHost$TabContainer;->switchToContentView()V
 
-    .line 347
+    .line 340
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 354
+    .line 347
     .end local v0           #i:I
     .end local v1           #tab:Lcom/htc/fragment/widget/CarouselHost$TabContainer;
     :cond_2
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_DEFINED:I
 
-    .line 355
+    .line 348
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_CURRENT:I
 
-    .line 356
+    .line 349
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->checkAnimationModeAndType()V
 
-    .line 358
+    .line 351
     :cond_3
     return-void
 .end method
@@ -3858,10 +3840,10 @@
     .parameter "shouldCallback"
 
     .prologue
-    .line 452
+    .line 445
     iput-boolean p1, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldCallbackDuringFling:Z
 
-    .line 453
+    .line 446
     return-void
 .end method
 
@@ -3870,10 +3852,10 @@
     .parameter "shouldCallback"
 
     .prologue
-    .line 465
+    .line 458
     iput-boolean p1, p0, Lcom/htc/fragment/widget/Gallery2;->mShouldCallbackOnUnselectedItemClick:Z
 
-    .line 466
+    .line 459
     return-void
 .end method
 
@@ -3884,20 +3866,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1914
+    .line 1907
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->mCurrentTab:I
 
-    .line 1918
+    .line 1911
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_CURRENT:I
 
     and-int/lit8 v0, v0, -0x2
 
     if-nez v0, :cond_0
 
-    .line 1919
+    .line 1912
     invoke-virtual {p0, v1, v1}, Lcom/htc/fragment/widget/Gallery2;->layout(IZ)V
 
-    .line 1920
+    .line 1913
     :cond_0
     return-void
 .end method
@@ -3907,18 +3889,18 @@
     .parameter "gravity"
 
     .prologue
-    .line 1683
+    .line 1676
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->mGravity:I
 
     if-eq v0, p1, :cond_0
 
-    .line 1684
+    .line 1677
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->mGravity:I
 
-    .line 1685
+    .line 1678
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->requestLayout()V
 
-    .line 1687
+    .line 1680
     :cond_0
     return-void
 .end method
@@ -3928,13 +3910,13 @@
     .parameter "position"
 
     .prologue
-    .line 1633
+    .line 1626
     invoke-super {p0, p1}, Lcom/htc/fragment/widget/AbsSpinner;->setSelectedPositionInt(I)V
 
-    .line 1636
+    .line 1629
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->updateSelectedItemMetadata()V
 
-    .line 1637
+    .line 1630
     return-void
 .end method
 
@@ -3943,10 +3925,10 @@
     .parameter "spacing"
 
     .prologue
-    .line 497
+    .line 490
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->mSpacing:I
 
-    .line 498
+    .line 491
     return-void
 .end method
 
@@ -3955,10 +3937,10 @@
     .parameter "unselectedAlpha"
 
     .prologue
-    .line 512
+    .line 505
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->mUnselectedAlpha:F
 
-    .line 513
+    .line 506
     return-void
 .end method
 
@@ -3971,25 +3953,25 @@
     .parameter "skipRelayout"
 
     .prologue
-    .line 1126
+    .line 1119
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
-    .line 1127
+    .line 1120
     .local v6, lp:Landroid/view/ViewGroup$LayoutParams;
     if-nez v6, :cond_0
 
-    .line 1128
+    .line 1121
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
-    .line 1131
+    .line 1124
     :cond_0
     if-eqz p5, :cond_2
 
-    .line 1132
+    .line 1125
     if-eqz p4, :cond_1
 
     const/4 v8, -0x1
@@ -3997,18 +3979,18 @@
     :goto_0
     invoke-virtual {p0, p1, v8, v6}, Lcom/htc/fragment/widget/Gallery2;->attachViewToParent(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1137
+    .line 1130
     :goto_1
     iget-boolean v8, p0, Lcom/htc/fragment/widget/AbsSpinner;->mBlockLayoutRequests:Z
 
     if-eqz v8, :cond_5
 
-    .line 1138
+    .line 1131
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
 
-    .line 1139
+    .line 1132
     .local v7, width:I
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getMeasuredWidth()I
 
@@ -4026,29 +4008,29 @@
 
     if-ne v8, v9, :cond_5
 
-    .line 1140
+    .line 1133
     if-eqz p4, :cond_4
 
-    .line 1141
+    .line 1134
     invoke-virtual {p1, p3}, Landroid/view/View;->setLeft(I)V
 
-    .line 1142
+    .line 1135
     add-int v8, p3, v7
 
     invoke-virtual {p1, v8}, Landroid/view/View;->setRight(I)V
 
-    .line 1179
+    .line 1172
     :goto_2
     return-void
 
-    .line 1132
+    .line 1125
     .end local v7           #width:I
     :cond_1
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 1134
+    .line 1127
     :cond_2
     if-eqz p4, :cond_3
 
@@ -4064,19 +4046,19 @@
 
     goto :goto_3
 
-    .line 1144
+    .line 1137
     .restart local v7       #width:I
     :cond_4
     sub-int v8, p3, v7
 
     invoke-virtual {p1, v8}, Landroid/view/View;->setLeft(I)V
 
-    .line 1145
+    .line 1138
     invoke-virtual {p1, p3}, Landroid/view/View;->setRight(I)V
 
     goto :goto_2
 
-    .line 1151
+    .line 1144
     .end local v7           #width:I
     :cond_5
     if-nez p2, :cond_6
@@ -4086,7 +4068,7 @@
     :goto_4
     invoke-virtual {p1, v8}, Landroid/view/View;->setSelected(Z)V
 
-    .line 1154
+    .line 1147
     iget v8, p0, Lcom/htc/fragment/widget/AbsSpinner;->mHeightMeasureSpec:I
 
     iget-object v9, p0, Lcom/htc/fragment/widget/AbsSpinner;->mSpinnerPadding:Landroid/graphics/Rect;
@@ -4105,7 +4087,7 @@
 
     move-result v1
 
-    .line 1156
+    .line 1149
     .local v1, childHeightSpec:I
     iget v8, p0, Lcom/htc/fragment/widget/AbsSpinner;->mWidthMeasureSpec:I
 
@@ -4125,18 +4107,18 @@
 
     move-result v5
 
-    .line 1160
+    .line 1153
     .local v5, childWidthSpec:I
     invoke-virtual {p1, v5, v1}, Landroid/view/View;->measure(II)V
 
-    .line 1166
+    .line 1159
     const/4 v8, 0x1
 
     invoke-direct {p0, p1, v8}, Lcom/htc/fragment/widget/Gallery2;->calculateTop(Landroid/view/View;Z)I
 
     move-result v4
 
-    .line 1167
+    .line 1160
     .local v4, childTop:I
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -4144,31 +4126,31 @@
 
     add-int v0, v4, v8
 
-    .line 1169
+    .line 1162
     .local v0, childBottom:I
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
 
-    .line 1170
+    .line 1163
     .restart local v7       #width:I
     if-eqz p4, :cond_7
 
-    .line 1171
+    .line 1164
     move v2, p3
 
-    .line 1172
+    .line 1165
     .local v2, childLeft:I
     add-int v3, v2, v7
 
-    .line 1178
+    .line 1171
     .local v3, childRight:I
     :goto_5
     invoke-virtual {p1, v2, v4, v3, v0}, Landroid/view/View;->layout(IIII)V
 
     goto :goto_2
 
-    .line 1151
+    .line 1144
     .end local v0           #childBottom:I
     .end local v1           #childHeightSpec:I
     .end local v2           #childLeft:I
@@ -4181,7 +4163,7 @@
 
     goto :goto_4
 
-    .line 1174
+    .line 1167
     .restart local v0       #childBottom:I
     .restart local v1       #childHeightSpec:I
     .restart local v4       #childTop:I
@@ -4190,7 +4172,7 @@
     :cond_7
     sub-int v2, p3, v7
 
-    .line 1175
+    .line 1168
     .restart local v2       #childLeft:I
     move v3, p3
 
@@ -4204,13 +4186,13 @@
     .parameter "scroller"
 
     .prologue
-    .line 2038
+    .line 2031
     iput-object p1, p0, Lcom/htc/fragment/widget/Gallery2;->mHook:Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;
 
-    .line 2039
+    .line 2032
     iput-object p2, p0, Lcom/htc/fragment/widget/Gallery2;->mFastScrollerFromWidget:Lcom/htc/fragment/widget/FastScroller;
 
-    .line 2040
+    .line 2033
     return-void
 .end method
 
@@ -4218,7 +4200,7 @@
     .locals 5
 
     .prologue
-    .line 1485
+    .line 1478
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->isPressed()Z
 
     move-result v2
@@ -4229,20 +4211,20 @@
 
     if-ltz v2, :cond_0
 
-    .line 1486
+    .line 1479
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
     iget v3, p0, Lcom/htc/fragment/widget/AdapterView;->mFirstPosition:I
 
     sub-int v0, v2, v3
 
-    .line 1487
+    .line 1480
     .local v0, index:I
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1488
+    .line 1481
     .local v1, v:Landroid/view/View;
     iget v2, p0, Lcom/htc/fragment/widget/AdapterView;->mSelectedPosition:I
 
@@ -4252,7 +4234,7 @@
 
     move-result v2
 
-    .line 1491
+    .line 1484
     .end local v0           #index:I
     .end local v1           #v:Landroid/view/View;
     :goto_0
@@ -4269,23 +4251,23 @@
     .parameter "originalView"
 
     .prologue
-    .line 1469
+    .line 1462
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/Gallery2;->getPositionForView(Landroid/view/View;)I
 
     move-result v2
 
-    .line 1470
+    .line 1463
     .local v2, longPressPosition:I
     if-gez v2, :cond_0
 
-    .line 1471
+    .line 1464
     const/4 v3, 0x0
 
-    .line 1475
+    .line 1468
     :goto_0
     return v3
 
-    .line 1474
+    .line 1467
     :cond_0
     iget-object v3, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAdapter:Landroid/widget/SpinnerAdapter;
 
@@ -4293,7 +4275,7 @@
 
     move-result-wide v0
 
-    .line 1475
+    .line 1468
     .local v0, longPressId:J
     invoke-direct {p0, p1, v2, v0, v1}, Lcom/htc/fragment/widget/Gallery2;->dispatchLongPress(Landroid/view/View;IJ)Z
 
@@ -4307,12 +4289,12 @@
     .parameter "type"
 
     .prologue
-    .line 361
+    .line 354
     iget v0, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_CURRENT:I
 
     if-eq v0, p1, :cond_0
 
-    .line 362
+    .line 355
     const-string v0, "ani"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4347,13 +4329,13 @@
 
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/CarouselLog;->dd(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 363
+    .line 356
     iput p1, p0, Lcom/htc/fragment/widget/Gallery2;->ANITYPE_CURRENT:I
 
-    .line 364
+    .line 357
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->checkAnimationSettings()V
 
-    .line 366
+    .line 359
     :cond_0
     return-void
 .end method
@@ -4363,19 +4345,19 @@
     .parameter "deltaX"
 
     .prologue
-    .line 632
+    .line 625
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->getChildCount()I
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 669
+    .line 662
     :cond_0
     :goto_0
     return-void
 
-    .line 636
+    .line 629
     :cond_1
     iget-object v1, p0, Lcom/htc/fragment/widget/AbsSpinner;->mAdapter:Landroid/widget/SpinnerAdapter;
 
@@ -4385,47 +4367,47 @@
 
     if-eqz v1, :cond_0
 
-    .line 639
+    .line 632
     if-gez p1, :cond_2
 
     const/4 v0, 0x1
 
-    .line 650
+    .line 643
     .local v0, toLeft:Z
     :goto_1
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/Gallery2;->offsetChildrenLeftAndRight(I)V
 
-    .line 652
+    .line 645
     invoke-direct {p0, v0}, Lcom/htc/fragment/widget/Gallery2;->detachOffScreenChildren(Z)V
 
-    .line 654
+    .line 647
     if-eqz v0, :cond_3
 
-    .line 656
+    .line 649
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->fillToGalleryRight()V
 
-    .line 663
+    .line 656
     :goto_2
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery2;->mRecycler:Lcom/htc/fragment/widget/Gallery2$RecycleBin;
 
     invoke-virtual {v1}, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->clear()V
 
-    .line 665
+    .line 658
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->setSelectionToCenterChild()V
 
-    .line 667
+    .line 660
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2;->invalidate()V
 
     goto :goto_0
 
-    .line 639
+    .line 632
     .end local v0           #toLeft:Z
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 659
+    .line 652
     .restart local v0       #toLeft:Z
     :cond_3
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2;->fillToGalleryLeft()V

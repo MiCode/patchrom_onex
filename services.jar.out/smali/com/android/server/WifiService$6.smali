@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 816
+    .line 817
     iput-object p1, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +40,14 @@
     .parameter "intent"
 
     .prologue
-    .line 820
+    .line 821
     const-string v0, "WifiService"
 
     const-string v1, ">>>>>>>>sky: start checkHtcCustomization<<<<<<<<"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 821
+    .line 822
     iget-object v0, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
 
     iget-object v1, p0, Lcom/android/server/WifiService$6;->this$0:Lcom/android/server/WifiService;
@@ -60,13 +60,13 @@
     #calls: Lcom/android/server/WifiService;->checkHtcCustomization(Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/android/server/WifiService;->access$2700(Lcom/android/server/WifiService;Landroid/content/Context;)V
 
-    .line 822
+    .line 823
     const-string v0, "WifiService"
 
     const-string v1, ">>>>>>>>sky: end checkHtcCustomization<<<<<<<<"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 823
+    .line 824
     return-void
 .end method

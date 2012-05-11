@@ -57,13 +57,13 @@
         <item>Majhna</item>
     </string-array>
     <string-array name="select_font_color_items">
-        <item>Belo</item>
+        <item>Bela</item>
         <item>Črna</item>
         <item>Siva</item>
         <item>Rdeča</item>
         <item>Zelena</item>
         <item>Rumena</item>
-        <item>Modro</item>
+        <item>Modra</item>
     </string-array>
     <string-array name="select_font_settings_items">
         <item>Podčrtano</item>

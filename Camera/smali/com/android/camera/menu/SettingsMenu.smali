@@ -2451,7 +2451,7 @@
 
     const v4, 0x7f0a00ce
 
-    const/4 v5, 0x0
+    const/4 v5, 0x1
 
     invoke-direct {v13, v3, v1, v4, v5}, Lcom/android/camera/menu/CheckBoxPreferenceMenuItem;-><init>(Lcom/android/camera/Settings;Ljava/lang/String;IZ)V
 

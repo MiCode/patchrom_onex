@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3650
+    .line 3697
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$RecorderErrorCallback;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3650
+    .line 3697
     invoke-direct {p0, p1}, Lcom/htc/server/WirelessDisplayService$RecorderErrorCallback;-><init>(Lcom/htc/server/WirelessDisplayService;)V
 
     return-void
@@ -58,7 +58,7 @@
     .prologue
     const/16 v4, 0x33
 
-    .line 3653
+    .line 3700
     const-string v1, "WirelessDisplayService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -91,23 +91,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3657
+    .line 3704
     iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$RecorderErrorCallback;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #calls: Lcom/htc/server/WirelessDisplayService;->stopDisplayRecorder()I
-    invoke-static {v1}, Lcom/htc/server/WirelessDisplayService;->access$4100(Lcom/htc/server/WirelessDisplayService;)I
+    invoke-static {v1}, Lcom/htc/server/WirelessDisplayService;->access$4200(Lcom/htc/server/WirelessDisplayService;)I
 
-    .line 3658
-    iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$RecorderErrorCallback;->this$0:Lcom/htc/server/WirelessDisplayService;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    #calls: Lcom/htc/server/WirelessDisplayService;->setMirrorModeState(II)V
-    invoke-static {v1, v2, v3}, Lcom/htc/server/WirelessDisplayService;->access$200(Lcom/htc/server/WirelessDisplayService;II)V
-
-    .line 3659
+    .line 3709
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v1
@@ -120,7 +110,7 @@
 
     move-result-object v0
 
-    .line 3660
+    .line 3710
     .local v0, msg:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -128,15 +118,15 @@
 
     invoke-virtual {v1, v4}, Lcom/htc/server/WirelessDisplayService$H;->removeMessages(I)V
 
-    .line 3661
+    .line 3711
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v1
 
-    const-wide/16 v2, 0x2
+    const-wide/16 v2, 0x7d0
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/htc/server/WirelessDisplayService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3662
+    .line 3712
     return-void
 .end method

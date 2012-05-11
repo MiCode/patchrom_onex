@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 7471
+    .line 7475
     iput-object p1, p0, Lcom/android/camera/HTCCamera$29;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -44,22 +44,22 @@
     .parameter "event"
 
     .prologue
-    .line 7474
+    .line 7478
     sparse-switch p2, :sswitch_data_0
 
-    .line 7483
+    .line 7487
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 7478
+    .line 7482
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 7481
+    .line 7485
     :sswitch_1
     invoke-static {}, Lcom/android/camera/FeatureConfig;->canChangeZoomByVolumeKeys()Z
 
@@ -67,7 +67,7 @@
 
     goto :goto_0
 
-    .line 7474
+    .line 7478
     :sswitch_data_0
     .sparse-switch
         0x18 -> :sswitch_1

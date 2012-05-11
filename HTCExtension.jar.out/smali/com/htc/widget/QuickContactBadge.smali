@@ -389,7 +389,7 @@
 
     move-result-object v3
 
-    const v4, 0x208017e
+    const v4, 0x208017f
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -564,7 +564,7 @@
 
     const-string v4, "common_photo_frame_mask"
 
-    const v5, 0x208017d
+    const v5, 0x208017e
 
     invoke-static {p1, v4, v5}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 
@@ -623,7 +623,7 @@
 
     const-string v4, "common_photo_frame_quick_contact_mask"
 
-    const v5, 0x208017f
+    const v5, 0x2080180
 
     invoke-static {p1, v4, v5}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 
@@ -2257,7 +2257,7 @@
 
     const-string v3, "common_photo_frame_mask"
 
-    const v4, 0x208017d
+    const v4, 0x208017e
 
     invoke-static {v2, v3, v4}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 
@@ -2400,7 +2400,7 @@
 
     const-string v3, "common_photo_frame_quick_contact_mask"
 
-    const v4, 0x208017f
+    const v4, 0x2080180
 
     invoke-static {v2, v3, v4}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

@@ -3437,7 +3437,7 @@
     iput-object v4, p0, Lcom/htc/widget/MoreExpandableHtcListView;->mFakeDivider:Landroid/graphics/drawable/Drawable;
 
     .line 215
-    const v4, 0x2080199
+    const v4, 0x208019a
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

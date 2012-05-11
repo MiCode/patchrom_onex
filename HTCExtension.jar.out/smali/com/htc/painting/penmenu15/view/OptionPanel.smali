@@ -400,7 +400,7 @@
     .line 294
     iget-object v0, p0, Lcom/htc/painting/penmenu15/view/OptionPanel;->mHLColorPicker:Lcom/htc/painting/penmenu15/view/HighlightColorPicker;
 
-    const v1, 0x20802e1
+    const v1, 0x20802e2
 
     invoke-virtual {v0, v1}, Lcom/htc/painting/penmenu15/view/HighlightColorPicker;->setBackgroundResource(I)V
 
@@ -449,7 +449,7 @@
     .line 284
     iget-object v1, p0, Lcom/htc/painting/penmenu15/view/OptionPanel;->mPenTypesSector:Lcom/htc/painting/penmenu15/view/PenTypeSector;
 
-    const v2, 0x20802e1
+    const v2, 0x20802e2
 
     invoke-virtual {v1, v2}, Lcom/htc/painting/penmenu15/view/PenTypeSector;->setBackgroundResource(I)V
 
@@ -502,7 +502,7 @@
     .line 264
     iget-object v0, p0, Lcom/htc/painting/penmenu15/view/OptionPanel;->mSizeSector:Lcom/htc/painting/penmenu15/view/SizeSector;
 
-    const v2, 0x20802e0
+    const v2, 0x20802e1
 
     invoke-virtual {v0, v2}, Lcom/htc/painting/penmenu15/view/SizeSector;->setBackgroundResource(I)V
 
@@ -525,9 +525,9 @@
     .local v1, btnDist:I
     iget-object v0, p0, Lcom/htc/painting/penmenu15/view/OptionPanel;->mSizeSector:Lcom/htc/painting/penmenu15/view/SizeSector;
 
-    const v2, 0x20802de
+    const v2, 0x20802df
 
-    const v3, 0x20802dd
+    const v3, 0x20802de
 
     iget v4, p0, Lcom/htc/painting/penmenu15/view/OptionPanel;->INNER_RADIUS:I
 
@@ -539,7 +539,7 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    const v5, 0x20802ce
+    const v5, 0x20802cf
 
     invoke-virtual/range {v0 .. v5}, Lcom/htc/painting/penmenu15/view/SizeSector;->initialize(IIIII)V
 
@@ -720,7 +720,7 @@
 
     const v5, 0x20403ba
 
-    const v6, 0x20802da
+    const v6, 0x20802db
 
     move-object v0, p0
 
@@ -750,7 +750,7 @@
 
     const v5, 0x20403bb
 
-    const v6, 0x20802d7
+    const v6, 0x20802d8
 
     move-object v0, p0
 
@@ -780,7 +780,7 @@
 
     const v5, 0x20403b9
 
-    const v6, 0x20802d4
+    const v6, 0x20802d5
 
     move-object v0, p0
 
@@ -1813,7 +1813,7 @@
     .parameter "excludeSet"
 
     .prologue
-    const v9, 0x20802c8
+    const v9, 0x20802c9
 
     .line 118
     const-string v2, "PenMenuNew"
@@ -2017,11 +2017,11 @@
 
     .line 246
     .local v9, result:Lcom/htc/painting/penmenu15/view/TextLabeledOptionButton;
-    const v0, 0x20802d1
+    const v0, 0x20802d2
 
-    const v1, 0x20802d2
+    const v1, 0x20802d3
 
-    const v2, 0x20802d3
+    const v2, 0x20802d4
 
     invoke-virtual {v9, v0, v1, v2}, Lcom/htc/painting/penmenu15/view/TextLabeledOptionButton;->setButtonBackgroundResource(III)V
 

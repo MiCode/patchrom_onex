@@ -1276,10 +1276,10 @@ za nalog %s"</string>
     <string name="permdesc_setappname">Dozvoljava aplikaciji da dinamički promeni određeno ime aplikacije.</string>
     <string name="text_limitation">Nije moguće izabrati previše reči za deljenje.</string>
     <string name="sms_roam_guild_dialog_title">Odlazna poruka</string>
-    <string name="sms_roam_guild_dialog_subject">Vi ste u romingu u okviru međunarodnih mreža. Za slanje ove poruke provajder bežičnog prenosa može dodatno tarifirati prenos podataka. Da li želite da:</string>
-    <string name="sms_roam_guild_dialog_radio_auto_send">Automatsko slanje u okviru nacionalnog pokrivanja</string>
-    <string name="sms_roam_guild_dialog_send_now">Pošalji sada</string>
-    <string name="sms_roam_guild_dialog_send_later">Pošalji kasnije</string>
+    <string name="sms_roam_guild_dialog_subject">Vi ste u romingu u okviru međunarodnih mreža. Za slanje ove poruke provajder bežičnog prenosa može dodatno tarifirati prenos podataka. Da li želite:</string>
+    <string name="sms_roam_guild_dialog_radio_auto_send">Automatsko slanje kada telefon bude u okviru nacionalnog pokrivanja</string>
+    <string name="sms_roam_guild_dialog_send_now">Poslati sada</string>
+    <string name="sms_roam_guild_dialog_send_later">Polati kasnije</string>
     <string name="permlab_accessUsbnetState">prikaz UsbNet statusa</string>
     <string name="permdesc_accessUsbnetState">Dozvoljava aplikaciji da prikaže informaciju o stanju UsbNeta.</string>
     <string name="permlab_changeUsbnetState">promena UsbNet statusa</string>
@@ -1309,7 +1309,7 @@ za nalog %s"</string>
     <string name="text_editing">Uređivanje teksta</string>
     <string name="font_size">Veličina fonta</string>
     <string name="font_color">Boja fonta</string>
-    <string name="font_settings">Postavke za font</string>
+    <string name="font_settings">Podešavanja za font</string>
     <string name="font_alignment">Poravnanje slova</string>
     <string name="image">Slika</string>
     <string name="dongle_noti_ticker">Otkriven je Media Link HD uređaj</string>

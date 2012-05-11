@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3074
+    .line 3078
     iput-object p1, p0, Lcom/android/camera/HTCCamera$14;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,6 +40,6 @@
     .parameter "intent"
 
     .prologue
-    .line 3092
+    .line 3096
     return-void
 .end method

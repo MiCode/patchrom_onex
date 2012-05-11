@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final FIRST_LETTER_SELECTION_OFFSET:I = 0x3
+.field private static final FIRST_LETTER_SELECTION_OFFSET:I = 0x2
 
 .field private static final LAST_LETTER_SELECTION_OFFSET:I = 0x3
 
@@ -336,7 +336,7 @@
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
-    add-int/lit8 v0, v0, 0x3
+    add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 .end method

@@ -875,6 +875,8 @@
 
 .field private misCacheDrawBitmap:Z
 
+.field private needVibrate:Z
+
 .field ownerActivityContext:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1242,62 +1244,62 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 12379
+    .line 12386
     sput-boolean v3, Landroid/webkit/WebView;->mTopOverScrollEnabled:Z
 
-    .line 12380
+    .line 12387
     sput-boolean v3, Landroid/webkit/WebView;->mBottomOverScrollEnabled:Z
 
-    .line 12381
+    .line 12388
     const/4 v0, -0x1
 
     sput v0, Landroid/webkit/WebView;->mOverscrollMode:I
 
-    .line 14359
+    .line 14590
     sput v3, Landroid/webkit/WebView;->DEFAULT_TEXT_WIDTH:I
 
-    .line 14360
+    .line 14591
     const v0, 0x3faaaaab
 
     sput v0, Landroid/webkit/WebView;->DEFAULT_TEXT_RATIO:F
 
-    .line 14361
+    .line 14592
     const/16 v0, 0x82
 
     sput v0, Landroid/webkit/WebView;->MIN_SMARTZOOM_SCALE:I
 
-    .line 14362
+    .line 14593
     const/16 v0, 0x96
 
     sput v0, Landroid/webkit/WebView;->MAX_SMARTZOOM_SCALE:I
 
-    .line 14576
+    .line 14807
     sput-boolean v4, Landroid/webkit/WebView;->m_bHostFullScreenMode:Z
 
-    .line 14645
+    .line 14876
     sput-boolean v3, Landroid/webkit/WebView;->gbIsAnimationZoomOut:Z
 
-    .line 14660
+    .line 14891
     const/high16 v0, 0x3f00
 
     sput v0, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14661
+    .line 14892
     const v0, 0x3f333333
 
     sput v0, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14662
+    .line 14893
     const v0, 0x3ef0a3d7
 
     sput v0, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14663
+    .line 14894
     const v0, 0x3f547ae1
 
     sput v0, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
-    .line 15025
+    .line 15256
     const/4 v0, 0x0
 
     sput-object v0, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
@@ -1559,73 +1561,73 @@
     .line 1006
     iput-object v2, p0, Landroid/webkit/WebView;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 1702
+    .line 1706
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/webkit/WebView;->mCachedOverlappingActionModeHeight:I
 
-    .line 3219
+    .line 3223
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mLastVisibleRectSent:Landroid/graphics/Rect;
 
-    .line 3220
+    .line 3224
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mLastGlobalRect:Landroid/graphics/Rect;
 
-    .line 3221
+    .line 3225
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mVisibleRect:Landroid/graphics/Rect;
 
-    .line 3222
+    .line 3226
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mGlobalVisibleRect:Landroid/graphics/Rect;
 
-    .line 3223
+    .line 3227
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mScrollOffset:Landroid/graphics/Point;
 
-    .line 3258
+    .line 3262
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mGlobalVisibleOffset:Landroid/graphics/Point;
 
-    .line 3296
+    .line 3300
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mContentVisibleRect:Landroid/graphics/Rect;
 
-    .line 3329
+    .line 3333
     iput-boolean v5, p0, Landroid/webkit/WebView;->mPausedTimerByZoom:Z
 
-    .line 4026
+    .line 4030
     iput-boolean v5, p0, Landroid/webkit/WebView;->mCustomFindMode:Z
 
-    .line 4200
+    .line 4204
     iput-boolean v5, p0, Landroid/webkit/WebView;->mInLoading:Z
 
-    .line 5155
+    .line 5162
     iput v5, p0, Landroid/webkit/WebView;->mOrientation:I
 
-    .line 5367
+    .line 5374
     new-instance v0, Landroid/graphics/PaintFlagsDrawFilter;
 
     const/16 v1, 0x86
@@ -1636,7 +1638,7 @@
 
     iput-object v0, p0, Landroid/webkit/WebView;->mZoomFilter:Landroid/graphics/DrawFilter;
 
-    .line 5370
+    .line 5377
     new-instance v0, Landroid/graphics/PaintFlagsDrawFilter;
 
     const/4 v1, 0x6
@@ -1645,316 +1647,319 @@
 
     iput-object v0, p0, Landroid/webkit/WebView;->mScrollFilter:Landroid/graphics/DrawFilter;
 
-    .line 5584
+    .line 5591
     iput-boolean v5, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
-    .line 5585
+    .line 5592
     iput-object v2, p0, Landroid/webkit/WebView;->mHistoryPicture:Landroid/graphics/Picture;
 
-    .line 5586
+    .line 5593
     iput v5, p0, Landroid/webkit/WebView;->mHistoryWidth:I
 
-    .line 5587
+    .line 5594
     iput v5, p0, Landroid/webkit/WebView;->mHistoryHeight:I
 
-    .line 5962
+    .line 5969
     iput-boolean v5, p0, Landroid/webkit/WebView;->mGotCenterDown:Z
 
-    .line 6945
+    .line 6952
     iput-boolean v5, p0, Landroid/webkit/WebView;->mIsTouchOnScreen:Z
 
-    .line 8035
+    .line 8042
     iput-wide v7, p0, Landroid/webkit/WebView;->mTrackballFirstTime:J
 
-    .line 8036
+    .line 8043
     iput-wide v7, p0, Landroid/webkit/WebView;->mTrackballLastTime:J
 
-    .line 8037
+    .line 8044
     iput v3, p0, Landroid/webkit/WebView;->mTrackballRemainsX:F
 
-    .line 8038
+    .line 8045
     iput v3, p0, Landroid/webkit/WebView;->mTrackballRemainsY:F
 
-    .line 8039
+    .line 8046
     iput v5, p0, Landroid/webkit/WebView;->mTrackballXMove:I
 
-    .line 8040
+    .line 8047
     iput v5, p0, Landroid/webkit/WebView;->mTrackballYMove:I
 
-    .line 8041
+    .line 8048
     iput-boolean v5, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
-    .line 8042
+    .line 8049
     iput-boolean v5, p0, Landroid/webkit/WebView;->mSelectionStarted:Z
 
-    .line 8043
+    .line 8050
     iput-boolean v5, p0, Landroid/webkit/WebView;->mExtendSelection:Z
 
-    .line 8044
+    .line 8051
     iput-boolean v5, p0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
-    .line 8054
+    .line 8061
     iput v5, p0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 8055
+    .line 8062
     iput v5, p0, Landroid/webkit/WebView;->mSelectY:I
 
-    .line 8056
+    .line 8063
     iput-boolean v5, p0, Landroid/webkit/WebView;->mFocusSizeChanged:Z
 
-    .line 8057
+    .line 8064
     iput-boolean v5, p0, Landroid/webkit/WebView;->mTrackballDown:Z
 
-    .line 8058
+    .line 8065
     iput-wide v7, p0, Landroid/webkit/WebView;->mTrackballUpTime:J
 
-    .line 8059
+    .line 8066
     iput-wide v7, p0, Landroid/webkit/WebView;->mLastCursorTime:J
 
-    .line 8065
+    .line 8072
     iput-boolean v6, p0, Landroid/webkit/WebView;->mMapTrackballToArrowKeys:Z
 
-    .line 10366
+    .line 10373
     iput-boolean v5, p0, Landroid/webkit/WebView;->mHtcContentSizeChanged:Z
 
-    .line 11479
+    .line 11486
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bsetScaleWithoutCheck:Z
 
-    .line 11480
+    .line 11487
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bMailClientUsed:Z
 
-    .line 11494
+    .line 11501
     iput-object v2, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 11495
+    .line 11502
     iput-object v2, p0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
-    .line 11496
+    .line 11503
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Landroid/webkit/WebView;->mMatrixValues:[F
 
-    .line 11497
+    .line 11504
     iput v5, p0, Landroid/webkit/WebView;->mTitleBarHeight:I
 
-    .line 11498
+    .line 11505
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
-    .line 11499
+    .line 11506
     const v0, 0xd0f7a7
 
     iput v0, p0, Landroid/webkit/WebView;->m_nSelectHighlightColor:I
 
-    .line 11561
+    .line 11568
     iput v5, p0, Landroid/webkit/WebView;->howToSelection:I
 
-    .line 11562
+    .line 11569
     iput v5, p0, Landroid/webkit/WebView;->selectionUIType:I
 
-    .line 11715
+    .line 11722
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->cursorRect:Landroid/graphics/Rect;
 
-    .line 11719
+    .line 11726
     new-instance v0, Landroid/webkit/WebViewAutoScroller;
 
     invoke-direct {v0}, Landroid/webkit/WebViewAutoScroller;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mAutoScroller:Landroid/webkit/WebViewAutoScroller;
 
-    .line 11720
+    .line 11727
     iput-boolean v5, p0, Landroid/webkit/WebView;->shortTapOnWebView:Z
 
-    .line 12471
+    .line 12478
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
-    .line 12472
+    .line 12479
     iput v5, p0, Landroid/webkit/WebView;->m_nTextWrapWidth_pauseTextReflow:I
 
-    .line 12539
+    .line 12546
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mPositionRectLock:Ljava/lang/Object;
 
-    .line 12540
+    .line 12547
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mPositionRectStart:Landroid/graphics/Rect;
 
-    .line 12541
+    .line 12548
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mPositionRectEnd:Landroid/graphics/Rect;
 
-    .line 12542
+    .line 12549
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mPositionRectBase:Landroid/graphics/Rect;
 
-    .line 12543
+    .line 12550
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mPositionRectExtend:Landroid/graphics/Rect;
 
-    .line 12581
+    .line 12588
     iput-boolean v5, p0, Landroid/webkit/WebView;->triggerByTouch:Z
 
-    .line 12582
+    .line 12589
     iput-boolean v5, p0, Landroid/webkit/WebView;->willSelectWord:Z
 
-    .line 12583
+    .line 12590
     iput-boolean v5, p0, Landroid/webkit/WebView;->skipMove:Z
 
-    .line 12587
+    .line 12591
+    iput-boolean v5, p0, Landroid/webkit/WebView;->needVibrate:Z
+
+    .line 12595
     new-instance v0, Landroid/webkit/WebView$AutoScrollerWrapper;
 
     invoke-direct {v0, p0}, Landroid/webkit/WebView$AutoScrollerWrapper;-><init>(Landroid/webkit/WebView;)V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
 
-    .line 14063
+    .line 14294
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bIsLoading:Z
 
-    .line 14181
+    .line 14412
     iput-boolean v6, p0, Landroid/webkit/WebView;->m_bIsLoadFinish:Z
 
-    .line 14205
+    .line 14436
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bNeedRestore:Z
 
-    .line 14206
+    .line 14437
     iput v5, p0, Landroid/webkit/WebView;->m_nRestoreScrollX:I
 
-    .line 14207
+    .line 14438
     iput v5, p0, Landroid/webkit/WebView;->m_nRestoreScrollY:I
 
-    .line 14208
+    .line 14439
     const/high16 v0, 0x3f80
 
     iput v0, p0, Landroid/webkit/WebView;->m_fResotreActualScale:F
 
-    .line 14209
+    .line 14440
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bIsScrollingPause:Z
 
-    .line 14211
+    .line 14442
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bPauseAll:Z
 
-    .line 14365
+    .line 14596
     iput-boolean v5, p0, Landroid/webkit/WebView;->mPluginHide:Z
 
-    .line 14385
+    .line 14616
     iput-boolean v5, p0, Landroid/webkit/WebView;->misCacheDrawBitmap:Z
 
-    .line 14641
+    .line 14872
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/webkit/WebView;->mStartTime:J
 
-    .line 14642
+    .line 14873
     const/16 v0, 0x15e
 
     iput v0, p0, Landroid/webkit/WebView;->mDefaultZoomInDuration:I
 
-    .line 14643
+    .line 14874
     iget v0, p0, Landroid/webkit/WebView;->mDefaultZoomInDuration:I
 
     iput v0, p0, Landroid/webkit/WebView;->mZoomInDuration:I
 
-    .line 14644
+    .line 14875
     iput-object v2, p0, Landroid/webkit/WebView;->mAnimationZoomOutBitmap:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 14646
+    .line 14877
     iput-boolean v6, p0, Landroid/webkit/WebView;->mbIsAnimationZoomOutFinish:Z
 
-    .line 14647
+    .line 14878
     const v0, 0x3f181062
 
     iput v0, p0, Landroid/webkit/WebView;->DEFAULT_TAB_MIN_RATIO:F
 
-    .line 14648
+    .line 14879
     const v0, 0x3f181062
 
     iput v0, p0, Landroid/webkit/WebView;->mfTabRatio:F
 
-    .line 14649
+    .line 14880
     iput-boolean v5, p0, Landroid/webkit/WebView;->mbNeedCallBack:Z
 
-    .line 14650
+    .line 14881
     iput v5, p0, Landroid/webkit/WebView;->m_nCurrentTabMinTop:I
 
-    .line 14651
+    .line 14882
     iput v5, p0, Landroid/webkit/WebView;->m_nCurrentTabMinLeft:I
 
-    .line 14652
+    .line 14883
     iput v5, p0, Landroid/webkit/WebView;->m_nCurrentTabMinTop_modify:I
 
-    .line 14653
+    .line 14884
     iput v5, p0, Landroid/webkit/WebView;->m_nCurrentTabMinLeft_modify:I
 
-    .line 14654
+    .line 14885
     iput-object v2, p0, Landroid/webkit/WebView;->mAnimZoomOutBitmap_modify:Landroid/graphics/Bitmap;
 
-    .line 14655
+    .line 14886
     iput-object v2, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 14656
+    .line 14887
     iput v5, p0, Landroid/webkit/WebView;->m_nHostStatusbarHeight:I
 
-    .line 14657
+    .line 14888
     iput v5, p0, Landroid/webkit/WebView;->m_nVisibleTitleHeight:I
 
-    .line 14658
+    .line 14889
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bNeedInvokeTabDialog:Z
 
-    .line 14928
+    .line 15159
     new-instance v0, Landroid/webkit/WebView$13;
 
     invoke-direct {v0, p0}, Landroid/webkit/WebView$13;-><init>(Landroid/webkit/WebView;)V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mTabEffectTimeout:Ljava/lang/Runnable;
 
-    .line 15031
+    .line 15262
     iput-boolean v5, p0, Landroid/webkit/WebView;->mDragAfterActionDown:Z
 
-    .line 15043
+    .line 15274
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bEnableTBS:Z
 
-    .line 15044
+    .line 15275
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bCustomizeEnableTBS:Z
 
-    .line 15045
+    .line 15276
     iput-boolean v5, p0, Landroid/webkit/WebView;->m_bHasNewWebView:Z
 
-    .line 15159
+    .line 15390
     iput-boolean v5, p0, Landroid/webkit/WebView;->mHtcCustomizedDefaultScale:Z
 
-    .line 15160
+    .line 15391
     iput-boolean v5, p0, Landroid/webkit/WebView;->mBrowserCustomizedDefaultScale:Z
 
-    .line 15195
+    .line 15426
     iput-boolean v5, p0, Landroid/webkit/WebView;->mPureZoomMode:Z
 
-    .line 15223
+    .line 15454
     iput v5, p0, Landroid/webkit/WebView;->mPendingScrollX:I
 
-    .line 15224
+    .line 15455
     iput v5, p0, Landroid/webkit/WebView;->mPendingScrollY:I
 
-    .line 15225
+    .line 15456
     iput-boolean v5, p0, Landroid/webkit/WebView;->mIsHeavyWebSite:Z
 
     .line 1149
@@ -2098,10 +2103,10 @@
     .parameter "Listener"
 
     .prologue
-    .line 15028
+    .line 15259
     sput-object p0, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
-    .line 15029
+    .line 15260
     return-void
 .end method
 
@@ -2109,17 +2114,17 @@
     .locals 1
 
     .prologue
-    .line 3184
+    .line 3188
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 3185
+    .line 3189
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/WebView;->mLastVelocity:F
 
-    .line 3186
+    .line 3190
     return-void
 .end method
 
@@ -2715,7 +2720,30 @@
     return v0
 .end method
 
-.method static synthetic access$15000(Landroid/webkit/WebView;)J
+.method static synthetic access$15000(Landroid/webkit/WebView;)Z
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 362
+    iget-boolean v0, p0, Landroid/webkit/WebView;->needVibrate:Z
+
+    return v0
+.end method
+
+.method static synthetic access$15002(Landroid/webkit/WebView;Z)Z
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 362
+    iput-boolean p1, p0, Landroid/webkit/WebView;->needVibrate:Z
+
+    return p1
+.end method
+
+.method static synthetic access$15100(Landroid/webkit/WebView;)J
     .locals 2
     .parameter "x0"
 
@@ -2726,7 +2754,7 @@
     return-wide v0
 .end method
 
-.method static synthetic access$15100(Landroid/webkit/WebView;)Landroid/content/Context;
+.method static synthetic access$15200(Landroid/webkit/WebView;)Landroid/content/Context;
     .locals 1
     .parameter "x0"
 
@@ -2737,7 +2765,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$15200(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
+.method static synthetic access$15300(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -2749,26 +2777,18 @@
     return-void
 .end method
 
-.method static synthetic access$15300(Landroid/webkit/WebView;)I
+.method static synthetic access$15400(Landroid/webkit/WebView;Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 1
     .parameter "x0"
+    .parameter "x1"
 
     .prologue
     .line 362
-    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
+    invoke-direct {p0, p1}, Landroid/webkit/WebView;->contentToViewRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method static synthetic access$15400(Landroid/webkit/WebView;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 362
-    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
-
-    return v0
+    return-object v0
 .end method
 
 .method static synthetic access$15500(Landroid/webkit/WebView;)I
@@ -2777,7 +2797,7 @@
 
     .prologue
     .line 362
-    iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
+    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     return v0
 .end method
@@ -2799,23 +2819,31 @@
 
     .prologue
     .line 362
-    iget v0, p0, Landroid/webkit/WebView;->selectionUIType:I
+    iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
 
     return v0
 .end method
 
-.method static synthetic access$16000(Landroid/webkit/WebView;Landroid/graphics/Rect;)Landroid/graphics/Rect;
+.method static synthetic access$15800(Landroid/webkit/WebView;)I
     .locals 1
     .parameter "x0"
-    .parameter "x1"
 
     .prologue
     .line 362
-    invoke-direct {p0, p1}, Landroid/webkit/WebView;->contentToViewRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    move-result-object v0
+    return v0
+.end method
 
-    return-object v0
+.method static synthetic access$15900(Landroid/webkit/WebView;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 362
+    iget v0, p0, Landroid/webkit/WebView;->selectionUIType:I
+
+    return v0
 .end method
 
 .method static synthetic access$1602(Landroid/webkit/WebView;I)I
@@ -2830,7 +2858,7 @@
     return p1
 .end method
 
-.method static synthetic access$16100(Landroid/webkit/WebView;ILandroid/graphics/Region;)V
+.method static synthetic access$16200(Landroid/webkit/WebView;ILandroid/graphics/Region;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -2843,7 +2871,7 @@
     return-void
 .end method
 
-.method static synthetic access$16200(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
+.method static synthetic access$16300(Landroid/webkit/WebView;Landroid/graphics/Rect;)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -2855,7 +2883,7 @@
     return-void
 .end method
 
-.method static synthetic access$16400(Landroid/webkit/WebView;IIZI)Z
+.method static synthetic access$16500(Landroid/webkit/WebView;IIZI)Z
     .locals 1
     .parameter "x0"
     .parameter "x1"
@@ -2872,7 +2900,7 @@
     return v0
 .end method
 
-.method static synthetic access$16500(Landroid/webkit/WebView;)Landroid/content/Context;
+.method static synthetic access$16600(Landroid/webkit/WebView;)Landroid/content/Context;
     .locals 1
     .parameter "x0"
 
@@ -2883,15 +2911,26 @@
     return-object v0
 .end method
 
-.method static synthetic access$16800(Landroid/webkit/WebView;)Landroid/content/Context;
+.method static synthetic access$16700(Landroid/webkit/WebView;)I
     .locals 1
     .parameter "x0"
 
     .prologue
     .line 362
-    iget-object v0, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
+    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    return-object v0
+    return v0
+.end method
+
+.method static synthetic access$16800(Landroid/webkit/WebView;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 362
+    iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
+
+    return v0
 .end method
 
 .method static synthetic access$16900(Landroid/webkit/WebView;)I
@@ -2911,7 +2950,7 @@
 
     .prologue
     .line 362
-    iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
+    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     return v0
 .end method
@@ -2928,29 +2967,7 @@
     return p1
 .end method
 
-.method static synthetic access$17100(Landroid/webkit/WebView;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 362
-    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
-
-    return v0
-.end method
-
 .method static synthetic access$17200(Landroid/webkit/WebView;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 362
-    iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
-
-    return v0
-.end method
-
-.method static synthetic access$17300(Landroid/webkit/WebView;)I
     .locals 1
     .parameter "x0"
 
@@ -4067,7 +4084,7 @@
     .locals 1
 
     .prologue
-    .line 11143
+    .line 11150
     iget-boolean v0, p0, Landroid/webkit/WebView;->mAccessibilityScriptInjected:Z
 
     return v0
@@ -4079,7 +4096,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1468
+    .line 1472
     iget-object v2, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -4102,25 +4119,25 @@
 
     if-eqz v2, :cond_0
 
-    .line 1471
+    .line 1475
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 1472
+    .line 1476
     .local v0, ctx:Landroid/content/Context;
     if-eqz v0, :cond_0
 
-    .line 1473
+    .line 1477
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1474
+    .line 1478
     .local v1, packageName:Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 1475
+    .line 1479
     new-instance v2, Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
@@ -4149,14 +4166,14 @@
 
     iput-object v2, p0, Landroid/webkit/WebView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
-    .line 1477
+    .line 1481
     iget-object v2, p0, Landroid/webkit/WebView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     const-string v3, "accessibility"
 
     invoke-virtual {p0, v2, v3}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1481
+    .line 1485
     .end local v0           #ctx:Landroid/content/Context;
     .end local v1           #packageName:Ljava/lang/String;
     :cond_0
@@ -4176,7 +4193,7 @@
 
     const v12, 0x400ccccd
 
-    .line 11636
+    .line 11643
     iget-object v10, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     if-eqz v10, :cond_0
@@ -4185,22 +4202,22 @@
 
     if-nez v10, :cond_1
 
-    .line 11710
+    .line 11717
     :cond_0
     :goto_0
     return-void
 
-    .line 11639
+    .line 11646
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 11641
+    .line 11648
     .local v7, url:Ljava/lang/String;
     if-eqz v7, :cond_0
 
-    .line 11644
+    .line 11651
     const-string/jumbo v10, "m.yahoo.com"
 
     invoke-virtual {v7, v10}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -4209,18 +4226,18 @@
 
     if-ltz v10, :cond_c
 
-    .line 11646
+    .line 11653
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidateType()I
 
     move-result v6
 
-    .line 11647
+    .line 11654
     .local v6, type:I
     const/4 v10, 0x3
 
     if-ne v6, v10, :cond_0
 
-    .line 11651
+    .line 11658
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v10
@@ -4229,16 +4246,16 @@
 
     move-result-object v8
 
-    .line 11652
+    .line 11659
     .local v8, useragent:Ljava/lang/String;
     if-nez v8, :cond_4
 
-    .line 11653
+    .line 11660
     .local v1, idx:I
     :goto_1
     if-ltz v1, :cond_0
 
-    .line 11656
+    .line 11663
     invoke-virtual {p0}, Landroid/webkit/WebView;->getRight()I
 
     move-result v10
@@ -4251,7 +4268,7 @@
 
     const/4 v2, 0x1
 
-    .line 11657
+    .line 11664
     .local v2, landscape:Z
     :goto_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->nativeFocusCandidateTextSize()F
@@ -4260,11 +4277,11 @@
 
     float-to-int v4, v10
 
-    .line 11658
+    .line 11665
     .local v4, textsize:I
     add-int v5, v4, v4
 
-    .line 11659
+    .line 11666
     .local v5, textsize2:I
     iget-object v10, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -4272,11 +4289,11 @@
 
     move-result v0
 
-    .line 11660
+    .line 11667
     .local v0, actualScale:F
     if-eqz v2, :cond_9
 
-    .line 11662
+    .line 11669
     invoke-virtual {p0}, Landroid/webkit/WebView;->getRight()I
 
     move-result v10
@@ -4287,19 +4304,19 @@
 
     move v9, v5
 
-    .line 11663
+    .line 11670
     .local v9, widthoffset:I
     :goto_3
     cmpl-float v10, v0, v13
 
     if-lez v10, :cond_2
 
-    .line 11665
+    .line 11672
     cmpg-float v10, v0, v12
 
     if-gez v10, :cond_7
 
-    .line 11667
+    .line 11674
     sub-float v10, v0, v13
 
     const v11, 0x3f19999a
@@ -4316,7 +4333,7 @@
 
     add-int/2addr v9, v10
 
-    .line 11676
+    .line 11683
     :cond_2
     :goto_4
     iget v10, p1, Landroid/graphics/Rect;->right:I
@@ -4325,11 +4342,11 @@
 
     iput v10, p1, Landroid/graphics/Rect;->right:I
 
-    .line 11690
+    .line 11697
     :goto_5
     add-int/lit8 v5, v5, 0x4
 
-    .line 11691
+    .line 11698
     iget v10, p1, Landroid/graphics/Rect;->right:I
 
     if-lez v10, :cond_3
@@ -4340,7 +4357,7 @@
 
     if-ge v10, v5, :cond_0
 
-    .line 11692
+    .line 11699
     :cond_3
     iget v10, p1, Landroid/graphics/Rect;->left:I
 
@@ -4350,7 +4367,7 @@
 
     goto :goto_0
 
-    .line 11652
+    .line 11659
     .end local v0           #actualScale:F
     .end local v1           #idx:I
     .end local v2           #landscape:Z
@@ -4366,14 +4383,14 @@
 
     goto :goto_1
 
-    .line 11656
+    .line 11663
     .restart local v1       #idx:I
     :cond_5
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 11662
+    .line 11669
     .restart local v0       #actualScale:F
     .restart local v2       #landscape:Z
     .restart local v4       #textsize:I
@@ -4383,7 +4400,7 @@
 
     goto :goto_3
 
-    .line 11671
+    .line 11678
     .restart local v9       #widthoffset:I
     :cond_7
     const v10, 0x40733333
@@ -4392,10 +4409,10 @@
 
     if-lez v10, :cond_8
 
-    .line 11672
+    .line 11679
     const v0, 0x40733333
 
-    .line 11673
+    .line 11680
     :cond_8
     sub-float v10, v0, v12
 
@@ -4415,28 +4432,28 @@
 
     goto :goto_4
 
-    .line 11680
+    .line 11687
     .end local v9           #widthoffset:I
     :cond_9
     add-int v9, v5, v4
 
-    .line 11681
+    .line 11688
     .restart local v9       #widthoffset:I
     cmpl-float v10, v0, v12
 
     if-lez v10, :cond_b
 
-    .line 11683
+    .line 11690
     const v10, 0x404ccccd
 
     cmpl-float v10, v0, v10
 
     if-lez v10, :cond_a
 
-    .line 11684
+    .line 11691
     const v0, 0x404ccccd
 
-    .line 11685
+    .line 11692
     :cond_a
     sub-float v10, v0, v12
 
@@ -4454,7 +4471,7 @@
 
     add-int/2addr v9, v10
 
-    .line 11687
+    .line 11694
     :cond_b
     iget v10, p1, Landroid/graphics/Rect;->right:I
 
@@ -4464,7 +4481,7 @@
 
     goto :goto_5
 
-    .line 11694
+    .line 11701
     .end local v0           #actualScale:F
     .end local v1           #idx:I
     .end local v2           #landscape:Z
@@ -4482,7 +4499,7 @@
 
     if-eqz v10, :cond_0
 
-    .line 11696
+    .line 11703
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v10
@@ -4505,7 +4522,7 @@
 
     if-eqz v10, :cond_0
 
-    .line 11701
+    .line 11708
     :cond_d
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -4515,21 +4532,21 @@
 
     move-result-object v8
 
-    .line 11702
+    .line 11709
     .restart local v8       #useragent:Ljava/lang/String;
     if-nez v8, :cond_e
 
-    .line 11703
+    .line 11710
     .restart local v1       #idx:I
     :goto_6
     if-ltz v1, :cond_0
 
-    .line 11706
+    .line 11713
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidatePaddingRect()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 11707
+    .line 11714
     .local v3, padding:Landroid/graphics/Rect;
     iget v10, p1, Landroid/graphics/Rect;->left:I
 
@@ -4541,7 +4558,7 @@
 
     goto/16 :goto_0
 
-    .line 11702
+    .line 11709
     .end local v1           #idx:I
     .end local v3           #padding:Landroid/graphics/Rect;
     :cond_e
@@ -4559,7 +4576,7 @@
     .parameter "r"
 
     .prologue
-    .line 3268
+    .line 3272
     iget v1, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v1, :cond_0
@@ -4570,12 +4587,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 3269
+    .line 3273
     iget-object v1, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v0, v1, Landroid/webkit/WebView$QuickSelectAbs;->testWordPos:Landroid/graphics/Point;
 
-    .line 3270
+    .line 3274
     .local v0, ct:Landroid/graphics/Point;
     iget v1, v0, Landroid/graphics/Point;->x:I
 
@@ -4595,16 +4612,16 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 3294
+    .line 3298
     .end local v0           #ct:Landroid/graphics/Point;
     :goto_0
     return-void
 
-    .line 3275
+    .line 3279
     :cond_0
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->calcOurVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 3276
+    .line 3280
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->viewToContentX(I)I
@@ -4613,7 +4630,7 @@
 
     iput v1, p1, Landroid/graphics/Rect;->left:I
 
-    .line 3281
+    .line 3285
     iget v1, p1, Landroid/graphics/Rect;->top:I
 
     invoke-direct {p0}, Landroid/webkit/WebView;->getVisibleTitleHeightImpl()I
@@ -4628,7 +4645,7 @@
 
     iput v1, p1, Landroid/graphics/Rect;->top:I
 
-    .line 3282
+    .line 3286
     iget v1, p1, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->viewToContentX(I)I
@@ -4637,7 +4654,7 @@
 
     iput v1, p1, Landroid/graphics/Rect;->right:I
 
-    .line 3283
+    .line 3287
     iget v1, p1, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->viewToContentY(I)I
@@ -4654,12 +4671,12 @@
     .parameter "r"
 
     .prologue
-    .line 3302
+    .line 3306
     iget-object v0, p0, Landroid/webkit/WebView;->mContentVisibleRect:Landroid/graphics/Rect;
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->calcOurVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 3303
+    .line 3307
     iget-object v0, p0, Landroid/webkit/WebView;->mContentVisibleRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -4670,7 +4687,7 @@
 
     iput v0, p1, Landroid/graphics/RectF;->left:F
 
-    .line 3308
+    .line 3312
     iget-object v0, p0, Landroid/webkit/WebView;->mContentVisibleRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -4687,7 +4704,7 @@
 
     iput v0, p1, Landroid/graphics/RectF;->top:F
 
-    .line 3309
+    .line 3313
     iget-object v0, p0, Landroid/webkit/WebView;->mContentVisibleRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -4698,7 +4715,7 @@
 
     iput v0, p1, Landroid/graphics/RectF;->right:F
 
-    .line 3310
+    .line 3314
     iget-object v0, p0, Landroid/webkit/WebView;->mContentVisibleRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -4709,7 +4726,7 @@
 
     iput v0, p1, Landroid/graphics/RectF;->bottom:F
 
-    .line 3311
+    .line 3315
     return-void
 .end method
 
@@ -4718,12 +4735,12 @@
     .parameter "r"
 
     .prologue
-    .line 3261
+    .line 3265
     iget-object v0, p0, Landroid/webkit/WebView;->mGlobalVisibleOffset:Landroid/graphics/Point;
 
     invoke-virtual {p0, p1, v0}, Landroid/webkit/WebView;->getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/Point;)Z
 
-    .line 3262
+    .line 3266
     iget-object v0, p0, Landroid/webkit/WebView;->mGlobalVisibleOffset:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
@@ -4738,7 +4755,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 3263
+    .line 3267
     return-void
 .end method
 
@@ -4748,17 +4765,17 @@
     .parameter "dy"
 
     .prologue
-    .line 7077
+    .line 7084
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
 
-    .line 7078
+    .line 7085
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result p2
 
-    .line 7079
+    .line 7086
     int-to-double v0, p2
 
     int-to-double v2, p1
@@ -4776,22 +4793,22 @@
     .locals 1
 
     .prologue
-    .line 1833
+    .line 1837
     iget-object v0, p0, Landroid/webkit/WebView;->mListBoxDialog:Lcom/htc/dialog/HtcAlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 1834
+    .line 1838
     iget-object v0, p0, Landroid/webkit/WebView;->mListBoxDialog:Lcom/htc/dialog/HtcAlertDialog;
 
     invoke-virtual {v0}, Lcom/htc/dialog/HtcAlertDialog;->cancel()V
 
-    .line 1835
+    .line 1839
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mListBoxDialog:Lcom/htc/dialog/HtcAlertDialog;
 
-    .line 1837
+    .line 1841
     :cond_0
     return-void
 .end method
@@ -4804,22 +4821,22 @@
 
     const/4 v1, 0x3
 
-    .line 7982
+    .line 7989
     iget-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    .line 7983
+    .line 7990
     iget-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 7984
+    .line 7991
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 7987
+    .line 7994
     :cond_0
     iget v0, p0, Landroid/webkit/WebView;->mTouchMode:I
 
@@ -4834,48 +4851,48 @@
 
     if-nez v0, :cond_2
 
-    .line 7990
+    .line 7997
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnScrollingEnd()V
 
-    .line 7992
+    .line 7999
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 7993
+    .line 8000
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 7994
+    .line 8001
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 7996
+    .line 8003
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7997
+    .line 8004
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7998
+    .line 8005
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7999
+    .line 8006
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 8000
+    .line 8007
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
@@ -4886,24 +4903,24 @@
 
     if-eqz v0, :cond_3
 
-    .line 8001
+    .line 8008
     invoke-direct {p0}, Landroid/webkit/WebView;->removeTouchHighlight()V
 
-    .line 8003
+    .line 8010
     :cond_3
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 8004
+    .line 8011
     const/4 v0, 0x7
 
     iput v0, p0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 8005
+    .line 8012
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHideCursor()V
 
-    .line 8006
+    .line 8013
     return-void
 .end method
 
@@ -4920,44 +4937,44 @@
 
     const/4 v5, 0x0
 
-    .line 7825
+    .line 7832
     invoke-direct {p0}, Landroid/webkit/WebView;->shouldForwardTouchEvent()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 7826
+    .line 7833
     if-eqz p3, :cond_0
 
-    .line 7827
+    .line 7834
     iget-object v3, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v3, v7}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 7829
+    .line 7836
     :cond_0
     new-instance v0, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 7830
+    .line 7837
     .local v0, ted:Landroid/webkit/WebViewCore$TouchEventData;
     new-array v3, v6, [I
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 7831
+    .line 7838
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
     aput v5, v3, v5
 
-    .line 7832
+    .line 7839
     new-array v3, v6, [Landroid/graphics/Point;
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 7833
+    .line 7840
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
     new-instance v4, Landroid/graphics/Point;
@@ -4966,12 +4983,12 @@
 
     aput-object v4, v3, v5
 
-    .line 7834
+    .line 7841
     new-array v3, v6, [Landroid/graphics/Point;
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 7835
+    .line 7842
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->contentToViewX(I)I
 
     move-result v3
@@ -4980,7 +4997,7 @@
 
     sub-int v1, v3, v4
 
-    .line 7836
+    .line 7843
     .local v1, viewX:I
     invoke-virtual {p0, p2}, Landroid/webkit/WebView;->contentToViewY(I)I
 
@@ -4990,7 +5007,7 @@
 
     sub-int v2, v3, v4
 
-    .line 7837
+    .line 7844
     .local v2, viewY:I
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
@@ -5000,12 +5017,12 @@
 
     aput-object v4, v3, v5
 
-    .line 7838
+    .line 7845
     const/4 v3, 0x3
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 7839
+    .line 7846
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
 
     const/4 v4, 0x0
@@ -5016,7 +5033,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 7841
+    .line 7848
     iget-object v3, p0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
 
     invoke-virtual {v3}, Landroid/webkit/WebView$TouchEventQueue;->nextTouchSequence()J
@@ -5025,25 +5042,25 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 7842
+    .line 7849
     iget-object v3, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v3, v7, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 7843
+    .line 7850
     const/4 v3, 0x4
 
     iput v3, p0, Landroid/webkit/WebView;->mPreventDefault:I
 
-    .line 7845
+    .line 7852
     if-eqz p3, :cond_1
 
-    .line 7848
+    .line 7855
     iget-object v3, p0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
 
     invoke-virtual {v3}, Landroid/webkit/WebView$TouchEventQueue;->ignoreCurrentlyMissingEvents()V
 
-    .line 7851
+    .line 7858
     .end local v0           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     .end local v1           #viewX:I
     .end local v2           #viewY:I
@@ -5055,7 +5072,7 @@
     .locals 3
 
     .prologue
-    .line 11224
+    .line 11231
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -5066,7 +5083,7 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 11225
+    .line 11232
     new-instance v0, Ljava/lang/Throwable;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5115,7 +5132,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    .line 11230
+    .line 11237
     .local v0, throwable:Ljava/lang/Throwable;
     const-string/jumbo v1, "webview"
 
@@ -5125,10 +5142,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11231
+    .line 11238
     invoke-static {v0}, Landroid/os/StrictMode;->onWebViewMethodCalledOnWrongThread(Ljava/lang/Throwable;)V
 
-    .line 11233
+    .line 11240
     :cond_0
     return-void
 .end method
@@ -5137,7 +5154,7 @@
     .locals 1
 
     .prologue
-    .line 1804
+    .line 1808
     iget v0, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v0, :cond_2
@@ -5154,32 +5171,32 @@
 
     if-eqz v0, :cond_2
 
-    .line 1806
+    .line 1810
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
-    .line 1812
+    .line 1816
     :cond_0
     :goto_0
     iget-object v0, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     if-eqz v0, :cond_1
 
-    .line 1813
+    .line 1817
     iget-object v0, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     invoke-virtual {v0}, Landroid/webkit/FindActionModeCallback;->finish()V
 
-    .line 1815
+    .line 1819
     :cond_1
     return-void
 
-    .line 1809
+    .line 1813
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
     if-eqz v0, :cond_0
 
-    .line 1810
+    .line 1814
     iget-object v0, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
     invoke-virtual {v0}, Landroid/webkit/SelectActionModeCallback;->finish()V
@@ -5191,19 +5208,19 @@
     .locals 0
 
     .prologue
-    .line 1823
+    .line 1827
     invoke-virtual {p0}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 1824
+    .line 1828
     invoke-direct {p0}, Landroid/webkit/WebView;->clearActionModes()V
 
-    .line 1825
+    .line 1829
     invoke-direct {p0}, Landroid/webkit/WebView;->dismissFullScreenMode()V
 
-    .line 1826
+    .line 1830
     invoke-direct {p0}, Landroid/webkit/WebView;->cancelSelectDialog()V
 
-    .line 1830
+    .line 1834
     return-void
 .end method
 
@@ -5213,7 +5230,7 @@
     .parameter "dy"
 
     .prologue
-    .line 4129
+    .line 4133
     invoke-static {p0}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -5226,13 +5243,13 @@
 
     move-result v0
 
-    .line 4130
+    .line 4134
     .local v0, distance:I
     mul-int/lit16 v2, v0, 0x3e8
 
     div-int/lit16 v1, v2, 0x1e0
 
-    .line 4131
+    .line 4135
     .local v1, duration:I
     const/16 v2, 0x2ee
 
@@ -5247,15 +5264,15 @@
     .locals 2
 
     .prologue
-    .line 3470
+    .line 3474
     iget-boolean v0, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-eqz v0, :cond_0
 
-    .line 3471
+    .line 3475
     iget v0, p0, Landroid/webkit/WebView;->mHistoryWidth:I
 
-    .line 3474
+    .line 3478
     :goto_0
     return v0
 
@@ -5287,15 +5304,15 @@
     .locals 2
 
     .prologue
-    .line 3500
+    .line 3504
     iget-boolean v0, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-eqz v0, :cond_0
 
-    .line 3501
+    .line 3505
     iget v0, p0, Landroid/webkit/WebView;->mHistoryHeight:I
 
-    .line 3504
+    .line 3508
     :goto_0
     return v0
 
@@ -5328,7 +5345,7 @@
     .parameter "updateLayout"
 
     .prologue
-    .line 4438
+    .line 4442
     iget v0, p0, Landroid/webkit/WebView;->mContentWidth:I
 
     iget v1, p0, Landroid/webkit/WebView;->mContentHeight:I
@@ -5337,18 +5354,18 @@
 
     if-nez v0, :cond_1
 
-    .line 4463
+    .line 4467
     :cond_0
     :goto_0
     return-void
 
-    .line 4442
+    .line 4446
     :cond_1
     iget-boolean v0, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
     if-eqz v0, :cond_3
 
-    .line 4443
+    .line 4447
     invoke-virtual {p0}, Landroid/webkit/WebView;->getMeasuredHeight()I
 
     move-result v0
@@ -5363,19 +5380,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 4445
+    .line 4449
     :cond_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->requestLayout()V
 
     goto :goto_0
 
-    .line 4447
+    .line 4451
     :cond_3
     iget-boolean v0, p0, Landroid/webkit/WebView;->mWidthCanMeasure:Z
 
     if-eqz v0, :cond_5
 
-    .line 4448
+    .line 4452
     invoke-virtual {p0}, Landroid/webkit/WebView;->getMeasuredWidth()I
 
     move-result v0
@@ -5390,13 +5407,13 @@
 
     if-eqz p1, :cond_0
 
-    .line 4450
+    .line 4454
     :cond_4
     invoke-virtual {p0}, Landroid/webkit/WebView;->requestLayout()V
 
     goto :goto_0
 
-    .line 4461
+    .line 4465
     :cond_5
     const/4 v0, 0x0
 
@@ -5410,7 +5427,7 @@
     .parameter "x"
 
     .prologue
-    .line 3126
+    .line 3130
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -5448,58 +5465,58 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1850
+    .line 1854
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
-    .line 1852
+    .line 1856
     iget-object v1, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
     if-eqz v1, :cond_0
 
-    .line 1853
+    .line 1857
     const-string/jumbo v1, "webview"
 
     const-string v2, "Webview destroy release video buffer"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1854
+    .line 1858
     iget-object v1, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
     invoke-virtual {v1}, Landroid/webkit/HTML5VideoViewProxy;->release()V
 
-    .line 1855
+    .line 1859
     iput-object v3, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
-    .line 1857
+    .line 1861
     :cond_0
     iget-object v1, p0, Landroid/webkit/WebView;->mListBoxDialog:Lcom/htc/dialog/HtcAlertDialog;
 
     if-eqz v1, :cond_1
 
-    .line 1858
+    .line 1862
     iget-object v1, p0, Landroid/webkit/WebView;->mListBoxDialog:Lcom/htc/dialog/HtcAlertDialog;
 
     invoke-virtual {v1}, Lcom/htc/dialog/HtcAlertDialog;->dismiss()V
 
-    .line 1859
+    .line 1863
     iput-object v3, p0, Landroid/webkit/WebView;->mListBoxDialog:Lcom/htc/dialog/HtcAlertDialog;
 
-    .line 1862
+    .line 1866
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     if-eqz v1, :cond_2
 
-    .line 1863
+    .line 1867
     iget-object v1, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v1}, Landroid/webkit/WebTextView;->remove()V
 
-    .line 1864
+    .line 1868
     iput-object v3, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
-    .line 1866
+    .line 1870
     :cond_2
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
@@ -5507,115 +5524,115 @@
 
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeStopGL()V
 
-    .line 1867
+    .line 1871
     :cond_3
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v1, :cond_4
 
-    .line 1870
+    .line 1874
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1, v3}, Landroid/webkit/CallbackProxy;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 1871
+    .line 1875
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1, v3}, Landroid/webkit/CallbackProxy;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 1873
+    .line 1877
     monitor-enter p0
 
-    .line 1874
+    .line 1878
     :try_start_0
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
-    .line 1875
+    .line 1879
     .local v0, webViewCore:Landroid/webkit/WebViewCore;
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
-    .line 1876
+    .line 1880
     invoke-virtual {v0}, Landroid/webkit/WebViewCore;->destroy()V
 
-    .line 1877
+    .line 1881
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1879
+    .line 1883
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 1880
+    .line 1884
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1, v3}, Landroid/webkit/CallbackProxy;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 1883
+    .line 1887
     iget-object v2, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     monitor-enter v2
 
-    .line 1884
+    .line 1888
     :try_start_1
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 1885
+    .line 1889
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1887
+    .line 1891
     .end local v0           #webViewCore:Landroid/webkit/WebViewCore;
     :cond_4
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v1, :cond_5
 
-    .line 1888
+    .line 1892
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeDestroy()V
 
-    .line 1889
+    .line 1893
     const/4 v1, 0x0
 
     iput v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
-    .line 1894
+    .line 1898
     :cond_5
     iget-object v1, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_6
 
-    .line 1895
+    .line 1899
     iget-object v1, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1896
+    .line 1900
     iput-object v3, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 1898
+    .line 1902
     :cond_6
     iget-object v1, p0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
     if-eqz v1, :cond_7
 
-    .line 1899
+    .line 1903
     iput-object v3, p0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
-    .line 1901
+    .line 1905
     :cond_7
     iput-object v3, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
-    .line 1903
+    .line 1907
     return-void
 
-    .line 1877
+    .line 1881
     :catchall_0
     move-exception v1
 
@@ -5626,7 +5643,7 @@
 
     throw v1
 
-    .line 1885
+    .line 1889
     .restart local v0       #webViewCore:Landroid/webkit/WebViewCore;
     :catchall_1
     move-exception v1
@@ -5644,34 +5661,34 @@
     .parameter "intersection"
 
     .prologue
-    .line 5193
+    .line 5200
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidateNodeBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 5199
+    .line 5206
     .local v0, contentBounds:Landroid/graphics/Rect;
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->contentToViewRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 5200
+    .line 5207
     .local v2, vBox:Landroid/graphics/Rect;
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 5201
+    .line 5208
     .local v3, visibleRect:Landroid/graphics/Rect;
     invoke-direct {p0, v3}, Landroid/webkit/WebView;->calcOurVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 5202
+    .line 5209
     invoke-direct {p0, v2}, Landroid/webkit/WebView;->offsetByLayerScrollPosition(Landroid/graphics/Rect;)V
 
-    .line 5207
+    .line 5214
     packed-switch p1, :pswitch_data_0
 
-    .line 5218
+    .line 5225
     new-instance v4, Ljava/lang/AssertionError;
 
     const-string/jumbo v5, "invalid parameter passed to didUpdateWebTextViewDimensions"
@@ -5680,18 +5697,18 @@
 
     throw v4
 
-    .line 5209
+    .line 5216
     :pswitch_0
     invoke-virtual {v3, v2}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
 
     move-result v1
 
-    .line 5221
+    .line 5228
     .local v1, onScreen:Z
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 5222
+    .line 5229
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     iget v5, v2, Landroid/graphics/Rect;->left:I
@@ -5708,53 +5725,53 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Landroid/webkit/WebTextView;->setRect(IIII)V
 
-    .line 5224
+    .line 5231
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4}, Landroid/webkit/WebTextView;->updateTextSize()V
 
-    .line 5225
+    .line 5232
     invoke-virtual {p0}, Landroid/webkit/WebView;->updateWebTextViewPadding()V
 
-    .line 5226
+    .line 5233
     const/4 v4, 0x1
 
-    .line 5234
+    .line 5241
     :goto_1
     return v4
 
-    .line 5212
+    .line 5219
     .end local v1           #onScreen:Z
     :pswitch_1
     invoke-static {v3, v2}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
 
     move-result v1
 
-    .line 5213
+    .line 5220
     .restart local v1       #onScreen:Z
     goto :goto_0
 
-    .line 5215
+    .line 5222
     .end local v1           #onScreen:Z
     :pswitch_2
     const/4 v1, 0x1
 
-    .line 5216
+    .line 5223
     .restart local v1       #onScreen:Z
     goto :goto_0
 
-    .line 5233
+    .line 5240
     :cond_0
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4}, Landroid/webkit/WebTextView;->remove()V
 
-    .line 5234
+    .line 5241
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 5207
+    .line 5214
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -5769,43 +5786,43 @@
     .end annotation
 
     .prologue
-    .line 1931
+    .line 1935
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1932
+    .line 1936
     const-class v2, Landroid/webkit/WebView;
 
     monitor-enter v2
 
-    .line 1933
+    .line 1937
     :try_start_0
     invoke-static {}, Landroid/webkit/Network;->disablePlatformNotifications()V
 
-    .line 1934
+    .line 1938
     const/4 v1, 0x0
 
     sput-boolean v1, Landroid/webkit/WebView;->sNotificationsEnabled:Z
 
-    .line 1935
+    .line 1939
     invoke-static {}, Landroid/webkit/JniUtil;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 1936
+    .line 1940
     .local v0, context:Landroid/content/Context;
     if-eqz v0, :cond_0
 
-    .line 1937
+    .line 1941
     invoke-static {v0}, Landroid/webkit/WebView;->disableProxyListener(Landroid/content/Context;)V
 
-    .line 1938
+    .line 1942
     :cond_0
     monitor-exit v2
 
-    .line 1939
+    .line 1943
     return-void
 
-    .line 1938
+    .line 1942
     :catchall_0
     move-exception v1
 
@@ -5872,24 +5889,24 @@
     .locals 1
 
     .prologue
-    .line 6933
+    .line 6940
     invoke-direct {p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6934
+    .line 6941
     iget-object v0, p0, Landroid/webkit/WebView;->mFullScreenHolder:Landroid/webkit/PluginFullScreenHolder;
 
     invoke-virtual {v0}, Landroid/webkit/PluginFullScreenHolder;->hide()V
 
-    .line 6935
+    .line 6942
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mFullScreenHolder:Landroid/webkit/PluginFullScreenHolder;
 
-    .line 6937
+    .line 6944
     :cond_0
     return-void
 .end method
@@ -5903,7 +5920,7 @@
 
     const/4 v3, 0x0
 
-    .line 5671
+    .line 5678
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -5916,7 +5933,7 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 5675
+    .line 5682
     .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -5936,12 +5953,12 @@
 
     move v1, v2
 
-    .line 5676
+    .line 5683
     .local v1, zoom:Z
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 5677
+    .line 5684
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget v5, p0, Landroid/webkit/WebView;->mLastTouchX:I
@@ -5954,7 +5971,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/webkit/ZoomManager;->setZoomCenter(FF)V
 
-    .line 5678
+    .line 5685
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget-object v5, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -5965,21 +5982,21 @@
 
     invoke-virtual {v4, v5, v3}, Landroid/webkit/ZoomManager;->setZoomScale(FZ)V
 
-    .line 5680
+    .line 5687
     :cond_0
     if-eqz p1, :cond_3
 
-    .line 5681
+    .line 5688
     invoke-virtual {p0}, Landroid/webkit/WebView;->rebuildWebTextView()V
 
-    .line 5682
+    .line 5689
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 5683
+    .line 5690
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     iget-object v5, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
@@ -5990,13 +6007,13 @@
 
     invoke-virtual {v0, v4, v3, v5}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;ILandroid/os/ResultReceiver;)Z
 
-    .line 5684
+    .line 5691
     if-eqz v1, :cond_1
 
-    .line 5685
+    .line 5692
     invoke-direct {p0, v2}, Landroid/webkit/WebView;->didUpdateWebTextViewDimensions(I)Z
 
-    .line 5696
+    .line 5703
     :cond_1
     :goto_1
     return-void
@@ -6005,10 +6022,10 @@
     :cond_2
     move v1, v3
 
-    .line 5675
+    .line 5682
     goto :goto_0
 
-    .line 5695
+    .line 5702
     .restart local v1       #zoom:Z
     :cond_3
     invoke-virtual {v0, p0, v3}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
@@ -6022,35 +6039,35 @@
     .parameter "deltaY"
 
     .prologue
-    .line 7899
+    .line 7906
     or-int v2, p1, p2
 
     if-eqz v2, :cond_3
 
-    .line 7900
+    .line 7907
     move-object/from16 v0, p0
 
     iget v5, v0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 7901
+    .line 7908
     .local v5, oldX:I
     move-object/from16 v0, p0
 
     iget v6, v0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 7902
+    .line 7909
     .local v6, oldY:I
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->computeMaxScrollX()I
 
     move-result v7
 
-    .line 7903
+    .line 7910
     .local v7, rangeX:I
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->computeMaxScrollY()I
 
     move-result v8
 
-    .line 7904
+    .line 7911
     .local v8, rangeY:I
     move-object/from16 v0, p0
 
@@ -6058,7 +6075,7 @@
 
     move/from16 v16, v0
 
-    .line 7910
+    .line 7917
     .local v16, overscrollDistance:I
     move-object/from16 v0, p0
 
@@ -6066,12 +6083,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 7911
+    .line 7918
     invoke-virtual/range {p0 .. p1}, Landroid/webkit/WebView;->viewToContentDimension(I)I
 
     move-result v12
 
-    .line 7912
+    .line 7919
     .local v12, contentX:I
     move-object/from16 v0, p0
 
@@ -6081,7 +6098,7 @@
 
     move-result v13
 
-    .line 7916
+    .line 7923
     .local v13, contentY:I
     move-object/from16 v0, p0
 
@@ -6089,7 +6106,7 @@
 
     iget v14, v2, Landroid/graphics/Rect;->right:I
 
-    .line 7917
+    .line 7924
     .local v14, maxX:I
     move-object/from16 v0, p0
 
@@ -6097,7 +6114,7 @@
 
     iget v15, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 7918
+    .line 7925
     .local v15, maxY:I
     const/4 v2, 0x0
 
@@ -6117,7 +6134,7 @@
 
     move-result v17
 
-    .line 7920
+    .line 7927
     .local v17, resultX:I
     const/4 v2, 0x0
 
@@ -6137,7 +6154,7 @@
 
     move-result v18
 
-    .line 7923
+    .line 7930
     .local v18, resultY:I
     move-object/from16 v0, p0
 
@@ -6159,7 +6176,7 @@
 
     if-eq v0, v2, :cond_4
 
-    .line 7926
+    .line 7933
     :cond_0
     const/16 v2, 0x9
 
@@ -6167,33 +6184,33 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7927
+    .line 7934
     move/from16 p1, v12
 
-    .line 7928
+    .line 7935
     move/from16 p2, v13
 
-    .line 7929
+    .line 7936
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v5, v2, Landroid/graphics/Rect;->left:I
 
-    .line 7930
+    .line 7937
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v6, v2, Landroid/graphics/Rect;->top:I
 
-    .line 7931
+    .line 7938
     move v7, v14
 
-    .line 7932
+    .line 7939
     move v8, v15
 
-    .line 7942
+    .line 7949
     .end local v12           #contentX:I
     .end local v13           #contentY:I
     .end local v14           #maxX:I
@@ -6208,7 +6225,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 7943
+    .line 7950
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
@@ -6219,7 +6236,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/webkit/OverScrollGlow;->setOverScrollDeltas(II)V
 
-    .line 7946
+    .line 7953
     :cond_2
     move-object/from16 v0, p0
 
@@ -6239,7 +6256,7 @@
 
     invoke-virtual/range {v2 .. v11}, Landroid/webkit/WebView;->overScrollBy(IIIIIIIIZ)Z
 
-    .line 7949
+    .line 7956
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
@@ -6256,10 +6273,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 7950
+    .line 7957
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 7953
+    .line 7960
     .end local v5           #oldX:I
     .end local v6           #oldY:I
     .end local v7           #rangeX:I
@@ -6272,10 +6289,10 @@
 
     invoke-virtual {v2}, Landroid/webkit/ZoomManager;->keepZoomPickerVisible()V
 
-    .line 7954
+    .line 7961
     return-void
 
-    .line 7938
+    .line 7945
     .restart local v5       #oldX:I
     .restart local v6       #oldY:I
     .restart local v7       #rangeX:I
@@ -6301,35 +6318,35 @@
     .locals 30
 
     .prologue
-    .line 8370
+    .line 8377
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v2, :cond_1
 
-    .line 8520
+    .line 8527
     :cond_0
     :goto_0
     return-void
 
-    .line 8373
+    .line 8380
     :cond_1
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->computeMaxScrollX()I
 
     move-result v6
 
-    .line 8374
+    .line 8381
     .local v6, maxX:I
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->computeMaxScrollY()I
 
     move-result v8
 
-    .line 8377
+    .line 8384
     .local v8, maxY:I
     const/16 v24, 0x3e8
 
-    .line 8378
+    .line 8385
     .local v24, initFlingVelocity:I
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -6343,11 +6360,11 @@
 
     if-ne v2, v5, :cond_3
 
-    .line 8380
+    .line 8387
     :cond_2
     const/16 v24, 0x5dc
 
-    .line 8382
+    .line 8389
     :cond_3
     move-object/from16 v0, p0
 
@@ -6363,7 +6380,7 @@
 
     invoke-virtual {v2, v0, v5}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 8385
+    .line 8392
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -6376,7 +6393,7 @@
 
     move/from16 v28, v0
 
-    .line 8386
+    .line 8393
     .local v28, vx:I
     move-object/from16 v0, p0
 
@@ -6390,19 +6407,19 @@
 
     move/from16 v29, v0
 
-    .line 8388
+    .line 8395
     .local v29, vy:I
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 8389
+    .line 8396
     .local v3, scrollX:I
     move-object/from16 v0, p0
 
     iget v4, v0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 8390
+    .line 8397
     .local v4, scrollY:I
     move-object/from16 v0, p0
 
@@ -6410,7 +6427,7 @@
 
     move/from16 v25, v0
 
-    .line 8391
+    .line 8398
     .local v25, overscrollDistance:I
     move-object/from16 v0, p0
 
@@ -6418,7 +6435,7 @@
 
     move/from16 v19, v0
 
-    .line 8394
+    .line 8401
     .local v19, overflingDistance:I
     move-object/from16 v0, p0
 
@@ -6428,40 +6445,40 @@
 
     if-ne v2, v5, :cond_4
 
-    .line 8395
+    .line 8402
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v3, v2, Landroid/graphics/Rect;->left:I
 
-    .line 8396
+    .line 8403
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v4, v2, Landroid/graphics/Rect;->top:I
 
-    .line 8397
+    .line 8404
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v6, v2, Landroid/graphics/Rect;->right:I
 
-    .line 8398
+    .line 8405
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v8, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 8400
+    .line 8407
     const/16 v19, 0x0
 
     move/from16 v25, v19
 
-    .line 8403
+    .line 8410
     :cond_4
     move-object/from16 v0, p0
 
@@ -6469,7 +6486,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 8404
+    .line 8411
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
@@ -6480,10 +6497,10 @@
 
     if-ne v2, v5, :cond_a
 
-    .line 8405
+    .line 8412
     const/16 v29, 0x0
 
-    .line 8410
+    .line 8417
     :cond_5
     :goto_1
     if-nez v6, :cond_6
@@ -6495,28 +6512,28 @@
 
     if-nez v28, :cond_b
 
-    .line 8412
+    .line 8419
     :cond_7
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->fnScrollingEnd()V
 
-    .line 8414
+    .line 8421
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 8415
+    .line 8422
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-nez v2, :cond_8
 
-    .line 8416
+    .line 8423
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v2}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 8418
+    .line 8425
     :cond_8
     move-object/from16 v0, p0
 
@@ -6532,10 +6549,10 @@
 
     if-eqz v2, :cond_9
 
-    .line 8419
+    .line 8426
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 8422
+    .line 8429
     :cond_9
     const/4 v2, 0x1
 
@@ -6551,7 +6568,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 8426
+    .line 8433
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -6568,13 +6585,13 @@
 
     goto/16 :goto_0
 
-    .line 8407
+    .line 8414
     :cond_a
     const/16 v28, 0x0
 
     goto :goto_1
 
-    .line 8432
+    .line 8439
     :cond_b
     move-object/from16 v0, p0
 
@@ -6584,7 +6601,7 @@
 
     move-result v21
 
-    .line 8433
+    .line 8440
     .local v21, currentVelocity:F
     move/from16 v0, v28
 
@@ -6602,7 +6619,7 @@
 
     move/from16 v27, v0
 
-    .line 8434
+    .line 8441
     .local v27, velocity:F
     move-object/from16 v0, p0
 
@@ -6632,7 +6649,7 @@
 
     if-lez v2, :cond_d
 
-    .line 8436
+    .line 8443
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mLastVelY:F
@@ -6671,11 +6688,11 @@
 
     move/from16 v22, v0
 
-    .line 8438
+    .line 8445
     .local v22, deltaR:F
     const v20, 0x40c90fdb
 
-    .line 8439
+    .line 8446
     .local v20, circle:F
     const v2, 0x40b4f4ab
 
@@ -6689,7 +6706,7 @@
 
     if-gez v2, :cond_d
 
-    .line 8440
+    .line 8447
     :cond_c
     move/from16 v0, v28
 
@@ -6713,7 +6730,7 @@
 
     move/from16 v28, v0
 
-    .line 8441
+    .line 8448
     move/from16 v0, v29
 
     int-to-float v2, v0
@@ -6736,7 +6753,7 @@
 
     move/from16 v29, v0
 
-    .line 8442
+    .line 8449
     move/from16 v0, v28
 
     int-to-double v9, v0
@@ -6753,7 +6770,7 @@
 
     move/from16 v27, v0
 
-    .line 8459
+    .line 8466
     .end local v20           #circle:F
     .end local v22           #deltaR:F
     :cond_d
@@ -6772,10 +6789,10 @@
 
     if-ge v2, v5, :cond_f
 
-    .line 8460
+    .line 8467
     const/16 v28, 0x0
 
-    .line 8462
+    .line 8469
     :cond_f
     if-eqz v4, :cond_10
 
@@ -6792,10 +6809,10 @@
 
     if-ge v2, v5, :cond_11
 
-    .line 8463
+    .line 8470
     const/16 v29, 0x0
 
-    .line 8466
+    .line 8473
     :cond_11
     move/from16 v0, v25
 
@@ -6803,7 +6820,7 @@
 
     if-ge v0, v1, :cond_17
 
-    .line 8467
+    .line 8474
     if-lez v28, :cond_12
 
     move/from16 v0, v25
@@ -6819,11 +6836,11 @@
 
     if-ne v3, v2, :cond_14
 
-    .line 8469
+    .line 8476
     :cond_13
     const/16 v28, 0x0
 
-    .line 8471
+    .line 8478
     :cond_14
     if-lez v29, :cond_15
 
@@ -6840,11 +6857,11 @@
 
     if-ne v4, v2, :cond_17
 
-    .line 8473
+    .line 8480
     :cond_16
     const/16 v29, 0x0
 
-    .line 8477
+    .line 8484
     :cond_17
     move/from16 v0, v28
 
@@ -6854,7 +6871,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mLastVelX:F
 
-    .line 8478
+    .line 8485
     move/from16 v0, v29
 
     int-to-float v2, v0
@@ -6863,14 +6880,14 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mLastVelY:F
 
-    .line 8479
+    .line 8486
     move/from16 v0, v27
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastVelocity:F
 
-    .line 8482
+    .line 8489
     move-object/from16 v0, p0
 
     iget-object v9, v0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -6902,7 +6919,7 @@
 
     invoke-virtual/range {v9 .. v19}, Landroid/widget/OverScroller;->fling(IIIIIIIIII)V
 
-    .line 8489
+    .line 8496
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -6911,7 +6928,7 @@
 
     move-result v26
 
-    .line 8492
+    .line 8499
     .local v26, time:I
     move-object/from16 v0, p0
 
@@ -6921,14 +6938,14 @@
 
     if-eq v2, v5, :cond_18
 
-    .line 8493
+    .line 8500
     move-object/from16 v0, p0
 
     move/from16 v1, v26
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->awakenScrollBars(I)Z
 
-    .line 8497
+    .line 8504
     :cond_18
     const/4 v2, 0x1
 
@@ -6938,14 +6955,14 @@
 
     if-ne v2, v5, :cond_19
 
-    .line 8499
+    .line 8506
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v2, :cond_1b
 
-    .line 8501
+    .line 8508
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -6960,7 +6977,7 @@
 
     invoke-virtual {v2, v5, v0}, Landroid/webkit/WebView$QuickSelectAbs;->showQuickActions(Landroid/graphics/Rect;I)V
 
-    .line 8519
+    .line 8526
     :cond_19
     :goto_3
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
@@ -6971,10 +6988,10 @@
     :cond_1a
     move/from16 v18, v19
 
-    .line 8482
+    .line 8489
     goto :goto_2
 
-    .line 8506
+    .line 8513
     .restart local v26       #time:I
     :cond_1b
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->isEditable()Z
@@ -6995,12 +7012,12 @@
 
     if-ne v2, v5, :cond_19
 
-    .line 8508
+    .line 8515
     new-instance v23, Landroid/graphics/Rect;
 
     invoke-direct/range {v23 .. v23}, Landroid/graphics/Rect;-><init>()V
 
-    .line 8509
+    .line 8516
     .local v23, hili:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -7010,7 +7027,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/HTCWebCore;->nativeGetVSbound(Landroid/graphics/Rect;)I
 
-    .line 8510
+    .line 8517
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -7032,14 +7049,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 8768
+    .line 8775
     iget v1, p0, Landroid/webkit/WebView;->mNavSlop:I
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->viewToContentDimension(I)I
 
     move-result v0
 
-    .line 8769
+    .line 8776
     .local v0, slop:I
     invoke-direct {p0, p1, p2, v0}, Landroid/webkit/WebView;->nativeMotionUp(III)Z
 
@@ -7051,14 +7068,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 8770
+    .line 8777
     const v1, 0x11206
 
     new-array v2, v3, [Ljava/lang/Object;
 
     invoke-static {v1, v2}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 8772
+    .line 8779
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHasCursorNode()Z
 
@@ -7072,10 +7089,10 @@
 
     if-nez v1, :cond_1
 
-    .line 8773
+    .line 8780
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->playSoundEffect(I)V
 
-    .line 8775
+    .line 8782
     :cond_1
     return-void
 .end method
@@ -7084,17 +7101,17 @@
     .locals 7
 
     .prologue
-    .line 8710
+    .line 8717
     iget v5, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v5, :cond_1
 
-    .line 8765
+    .line 8772
     :cond_0
     :goto_0
     return-void
 
-    .line 8713
+    .line 8720
     :cond_1
     iget v5, p0, Landroid/webkit/WebView;->mPreventDefault:I
 
@@ -7102,26 +7119,26 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 8716
+    .line 8723
     const/4 v5, 0x7
 
     iput v5, p0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 8719
+    .line 8726
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    .line 8721
+    .line 8728
     invoke-direct {p0}, Landroid/webkit/WebView;->updateSelection()V
 
-    .line 8722
+    .line 8729
     :cond_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 8724
+    .line 8731
     iget v5, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
     iget v6, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -7132,7 +7149,7 @@
 
     move-result v0
 
-    .line 8725
+    .line 8732
     .local v0, contentX:I
     iget v5, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
@@ -7144,7 +7161,7 @@
 
     move-result v1
 
-    .line 8726
+    .line 8733
     .local v1, contentY:I
     iget v5, p0, Landroid/webkit/WebView;->mNavSlop:I
 
@@ -7152,7 +7169,7 @@
 
     move-result v3
 
-    .line 8741
+    .line 8748
     .local v3, slop:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
 
@@ -7160,12 +7177,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 8742
+    .line 8749
     invoke-direct {p0, v0, v1}, Landroid/webkit/WebView;->doMotionUp(II)V
 
     goto :goto_0
 
-    .line 8745
+    .line 8752
     :cond_3
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -7177,21 +7194,21 @@
 
     if-eqz v5, :cond_4
 
-    .line 8746
+    .line 8753
     invoke-direct {p0}, Landroid/webkit/WebView;->removeTouchHighlight()V
 
-    .line 8747
+    .line 8754
     new-instance v4, Landroid/webkit/WebViewCore$TouchUpData;
 
     invoke-direct {v4}, Landroid/webkit/WebViewCore$TouchUpData;-><init>()V
 
-    .line 8750
+    .line 8757
     .local v4, touchUpData:Landroid/webkit/WebViewCore$TouchUpData;
     const/4 v5, 0x0
 
     iput v5, v4, Landroid/webkit/WebViewCore$TouchUpData;->mMoveGeneration:I
 
-    .line 8751
+    .line 8758
     iget-object v5, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v6, 0x8c
@@ -7200,7 +7217,7 @@
 
     goto :goto_0
 
-    .line 8752
+    .line 8759
     .end local v4           #touchUpData:Landroid/webkit/WebViewCore$TouchUpData;
     :cond_4
     invoke-direct {p0, v0, v1, v3}, Landroid/webkit/WebView;->nativePointInNavCache(III)Z
@@ -7209,12 +7226,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 8753
+    .line 8760
     new-instance v2, Landroid/webkit/WebViewCore$MotionUpData;
 
     invoke-direct {v2}, Landroid/webkit/WebViewCore$MotionUpData;-><init>()V
 
-    .line 8755
+    .line 8762
     .local v2, motionUpData:Landroid/webkit/WebViewCore$MotionUpData;
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCacheHitFramePointer()I
 
@@ -7222,27 +7239,27 @@
 
     iput v5, v2, Landroid/webkit/WebViewCore$MotionUpData;->mFrame:I
 
-    .line 8756
+    .line 8763
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCacheHitNodePointer()I
 
     move-result v5
 
     iput v5, v2, Landroid/webkit/WebViewCore$MotionUpData;->mNode:I
 
-    .line 8757
+    .line 8764
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCacheHitNodeBounds()Landroid/graphics/Rect;
 
     move-result-object v5
 
     iput-object v5, v2, Landroid/webkit/WebViewCore$MotionUpData;->mBounds:Landroid/graphics/Rect;
 
-    .line 8758
+    .line 8765
     iput v0, v2, Landroid/webkit/WebViewCore$MotionUpData;->mX:I
 
-    .line 8759
+    .line 8766
     iput v1, v2, Landroid/webkit/WebViewCore$MotionUpData;->mY:I
 
-    .line 8760
+    .line 8767
     iget-object v5, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v6, 0x92
@@ -7251,7 +7268,7 @@
 
     goto :goto_0
 
-    .line 8763
+    .line 8770
     .end local v2           #motionUpData:Landroid/webkit/WebViewCore$MotionUpData;
     :cond_5
     invoke-direct {p0, v0, v1}, Landroid/webkit/WebView;->doMotionUp(II)V
@@ -7265,7 +7282,7 @@
     .parameter "metaState"
 
     .prologue
-    .line 8244
+    .line 8251
     move-object/from16 v0, p0
 
     iget-wide v5, v0, Landroid/webkit/WebView;->mTrackballLastTime:J
@@ -7278,14 +7295,14 @@
 
     long-to-int v12, v5
 
-    .line 8245
+    .line 8252
     .local v12, elapsed:I
     if-nez v12, :cond_0
 
-    .line 8246
+    .line 8253
     const/16 v12, 0xc8
 
-    .line 8248
+    .line 8255
     :cond_0
     move-object/from16 v0, p0
 
@@ -7299,7 +7316,7 @@
 
     div-float v22, v3, v5
 
-    .line 8249
+    .line 8256
     .local v22, xRate:F
     move-object/from16 v0, p0
 
@@ -7313,19 +7330,19 @@
 
     div-float v24, v3, v5
 
-    .line 8250
+    .line 8257
     .local v24, yRate:F
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v19
 
-    .line 8251
+    .line 8258
     .local v19, viewWidth:I
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewHeight()I
 
     move-result v18
 
-    .line 8252
+    .line 8259
     .local v18, viewHeight:I
     move-object/from16 v0, p0
 
@@ -7333,14 +7350,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 8253
+    .line 8260
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
     if-nez v3, :cond_1
 
-    .line 8257
+    .line 8264
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->nativeSelectionX()I
 
     move-result v3
@@ -7355,7 +7372,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 8258
+    .line 8265
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->nativeSelectionY()I
 
     move-result v3
@@ -7370,7 +7387,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mSelectY:I
 
-    .line 8259
+    .line 8266
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
@@ -7381,10 +7398,10 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
-    .line 8260
+    .line 8267
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->nativeSetExtendSelection()V
 
-    .line 8262
+    .line 8269
     :cond_1
     move-object/from16 v0, p0
 
@@ -7414,7 +7431,7 @@
 
     invoke-virtual {v0, v3, v5}, Landroid/webkit/WebView;->moveSelection(FF)V
 
-    .line 8264
+    .line 8271
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -7425,30 +7442,30 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTrackballRemainsX:F
 
-    .line 8330
+    .line 8337
     :cond_2
     :goto_0
     return-void
 
-    .line 8267
+    .line 8274
     :cond_3
     invoke-static/range {v22 .. v22}, Ljava/lang/Math;->abs(F)F
 
     move-result v9
 
-    .line 8268
+    .line 8275
     .local v9, ax:F
     invoke-static/range {v24 .. v24}, Ljava/lang/Math;->abs(F)F
 
     move-result v10
 
-    .line 8269
+    .line 8276
     .local v10, ay:F
     invoke-static {v9, v10}, Ljava/lang/Math;->max(FF)F
 
     move-result v15
 
-    .line 8277
+    .line 8284
     .local v15, maxA:F
     move-object/from16 v0, p0
 
@@ -7456,7 +7473,7 @@
 
     sub-int v20, v3, v19
 
-    .line 8278
+    .line 8285
     .local v20, width:I
     move-object/from16 v0, p0
 
@@ -7464,19 +7481,19 @@
 
     sub-int v13, v3, v18
 
-    .line 8279
+    .line 8286
     .local v13, height:I
     if-gez v20, :cond_4
 
     const/16 v20, 0x0
 
-    .line 8280
+    .line 8287
     :cond_4
     if-gez v13, :cond_5
 
     const/4 v13, 0x0
 
-    .line 8281
+    .line 8288
     :cond_5
     move-object/from16 v0, p0
 
@@ -7490,7 +7507,7 @@
 
     move-result v9
 
-    .line 8282
+    .line 8289
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mTrackballRemainsY:F
@@ -7503,12 +7520,12 @@
 
     move-result v10
 
-    .line 8283
+    .line 8290
     invoke-static {v9, v10}, Ljava/lang/Math;->max(FF)F
 
     move-result v15
 
-    .line 8284
+    .line 8291
     const/4 v3, 0x0
 
     float-to-int v5, v15
@@ -7517,7 +7534,7 @@
 
     move-result v11
 
-    .line 8285
+    .line 8292
     .local v11, count:I
     move-object/from16 v0, p0
 
@@ -7525,7 +7542,7 @@
 
     move/from16 v16, v0
 
-    .line 8286
+    .line 8293
     .local v16, oldScrollX:I
     move-object/from16 v0, p0
 
@@ -7533,11 +7550,11 @@
 
     move/from16 v17, v0
 
-    .line 8287
+    .line 8294
     .local v17, oldScrollY:I
     if-lez v11, :cond_b
 
-    .line 8288
+    .line 8295
     cmpg-float v3, v9, v10
 
     if-gez v3, :cond_7
@@ -7554,7 +7571,7 @@
 
     const/16 v4, 0x13
 
-    .line 8292
+    .line 8299
     .local v4, selectKeyCode:I
     :goto_1
     const/16 v3, 0xa
@@ -7563,7 +7580,7 @@
 
     move-result v11
 
-    .line 8299
+    .line 8306
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mNativeClass:I
@@ -7576,14 +7593,14 @@
 
     if-eqz v3, :cond_f
 
-    .line 8300
+    .line 8307
     const/4 v14, 0x0
 
     .local v14, i:I
     :goto_2
     if-ge v14, v11, :cond_9
 
-    .line 8301
+    .line 8308
     const/4 v7, 0x1
 
     move-object/from16 v3, p0
@@ -7594,12 +7611,12 @@
 
     invoke-direct/range {v3 .. v8}, Landroid/webkit/WebView;->letPageHandleNavKey(IJZI)V
 
-    .line 8300
+    .line 8307
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_2
 
-    .line 8288
+    .line 8295
     .end local v4           #selectKeyCode:I
     .end local v14           #i:I
     :cond_6
@@ -7627,7 +7644,7 @@
 
     goto :goto_1
 
-    .line 8303
+    .line 8310
     .restart local v4       #selectKeyCode:I
     .restart local v14       #i:I
     :cond_9
@@ -7641,7 +7658,7 @@
 
     invoke-direct/range {v3 .. v8}, Landroid/webkit/WebView;->letPageHandleNavKey(IJZI)V
 
-    .line 8307
+    .line 8314
     .end local v14           #i:I
     :cond_a
     :goto_3
@@ -7655,14 +7672,14 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTrackballRemainsX:F
 
-    .line 8309
+    .line 8316
     .end local v4           #selectKeyCode:I
     :cond_b
     const/4 v3, 0x5
 
     if-lt v11, v3, :cond_2
 
-    .line 8310
+    .line 8317
     move-object/from16 v0, p0
 
     move/from16 v1, v22
@@ -7673,7 +7690,7 @@
 
     move-result v21
 
-    .line 8311
+    .line 8318
     .local v21, xMove:I
     move-object/from16 v0, p0
 
@@ -7683,7 +7700,7 @@
 
     move-result v23
 
-    .line 8320
+    .line 8327
     .local v23, yMove:I
     move-object/from16 v0, p0
 
@@ -7701,10 +7718,10 @@
 
     if-le v3, v5, :cond_c
 
-    .line 8321
+    .line 8328
     const/16 v21, 0x0
 
-    .line 8323
+    .line 8330
     :cond_c
     move-object/from16 v0, p0
 
@@ -7722,16 +7739,16 @@
 
     if-le v3, v5, :cond_d
 
-    .line 8324
+    .line 8331
     const/16 v23, 0x0
 
-    .line 8326
+    .line 8333
     :cond_d
     if-nez v21, :cond_e
 
     if-eqz v23, :cond_2
 
-    .line 8327
+    .line 8334
     :cond_e
     const/4 v3, 0x1
 
@@ -7747,7 +7764,7 @@
 
     goto/16 :goto_0
 
-    .line 8304
+    .line 8311
     .end local v21           #xMove:I
     .end local v23           #yMove:I
     .restart local v4       #selectKeyCode:I
@@ -7766,7 +7783,7 @@
 
     if-eqz v3, :cond_a
 
-    .line 8305
+    .line 8312
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Landroid/webkit/WebView;->keyCodeToSoundsEffect(I)I
@@ -7784,14 +7801,14 @@
     .locals 2
 
     .prologue
-    .line 2923
+    .line 2927
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2924
+    .line 2928
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x7a
@@ -7802,7 +7819,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2926
+    .line 2930
     :cond_0
     return-void
 .end method
@@ -7813,7 +7830,7 @@
     .parameter "drawRings"
 
     .prologue
-    .line 4687
+    .line 4691
     iget v1, p0, Landroid/webkit/WebView;->mBackgroundColor:I
 
     iget-boolean v0, p0, Landroid/webkit/WebView;->mDrawCursorRing:Z
@@ -7827,10 +7844,10 @@
     :goto_0
     invoke-virtual {p0, p1, v1, v0}, Landroid/webkit/WebView;->drawCoreAndCursorRing(Landroid/graphics/Canvas;IZ)V
 
-    .line 4689
+    .line 4693
     return-void
 
-    .line 4687
+    .line 4691
     :cond_0
     const/4 v0, 0x0
 
@@ -7842,19 +7859,19 @@
     .parameter "canvas"
 
     .prologue
-    .line 4696
+    .line 4700
     sget-object v0, Landroid/webkit/WebView;->mOverScrollBackground:Landroid/graphics/Paint;
 
     if-nez v0, :cond_0
 
-    .line 4697
+    .line 4701
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     sput-object v0, Landroid/webkit/WebView;->mOverScrollBackground:Landroid/graphics/Paint;
 
-    .line 4698
+    .line 4702
     iget-object v0, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -7867,7 +7884,7 @@
 
     move-result-object v6
 
-    .line 4701
+    .line 4705
     .local v6, bm:Landroid/graphics/Bitmap;
     sget-object v0, Landroid/webkit/WebView;->mOverScrollBackground:Landroid/graphics/Paint;
 
@@ -7881,46 +7898,46 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 4703
+    .line 4707
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     sput-object v0, Landroid/webkit/WebView;->mOverScrollBorder:Landroid/graphics/Paint;
 
-    .line 4704
+    .line 4708
     sget-object v0, Landroid/webkit/WebView;->mOverScrollBorder:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 4705
+    .line 4709
     sget-object v0, Landroid/webkit/WebView;->mOverScrollBorder:Landroid/graphics/Paint;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 4706
+    .line 4710
     sget-object v0, Landroid/webkit/WebView;->mOverScrollBorder:Landroid/graphics/Paint;
 
     const v1, -0x444445
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 4709
+    .line 4713
     .end local v6           #bm:Landroid/graphics/Bitmap;
     :cond_0
     const/4 v9, 0x0
 
-    .line 4710
+    .line 4714
     .local v9, top:I
     invoke-direct {p0}, Landroid/webkit/WebView;->computeRealHorizontalScrollRange()I
 
     move-result v8
 
-    .line 4711
+    .line 4715
     .local v8, right:I
     invoke-direct {p0}, Landroid/webkit/WebView;->computeRealVerticalScrollRange()I
 
@@ -7928,11 +7945,11 @@
 
     add-int v7, v9, v0
 
-    .line 4713
+    .line 4717
     .local v7, bottom:I
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 4714
+    .line 4718
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     int-to-float v0, v0
@@ -7943,7 +7960,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 4715
+    .line 4719
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     neg-int v0, v0
@@ -7974,15 +7991,15 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->clipRect(FFFFLandroid/graphics/Region$Op;)Z
 
-    .line 4717
+    .line 4721
     sget-object v0, Landroid/webkit/WebView;->mOverScrollBackground:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
 
-    .line 4718
+    .line 4722
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 4720
+    .line 4724
     const/high16 v1, -0x4080
 
     const/4 v0, -0x1
@@ -7999,12 +8016,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 4722
+    .line 4726
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0, v9, v8, v7}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 4723
+    .line 4727
     return-void
 .end method
 
@@ -8015,10 +8032,10 @@
     .prologue
     const/4 v10, 0x4
 
-    .line 12666
+    .line 12674
     const/4 v2, 0x0
 
-    .line 12669
+    .line 12677
     .local v2, flag:I
     const/4 v8, 0x1
 
@@ -8026,18 +8043,18 @@
 
     move-result v2
 
-    .line 12670
+    .line 12678
     iget-object v8, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v8}, Landroid/webkit/ZoomManager;->getScale()F
 
     move-result v6
 
-    .line 12671
+    .line 12679
     .local v6, scale:F
     invoke-virtual {p1, v6, v6}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 12674
+    .line 12682
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selectionPaint:Landroid/graphics/Paint;
@@ -8046,7 +8063,7 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 12675
+    .line 12683
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selectionPaint:Landroid/graphics/Paint;
@@ -8055,36 +8072,36 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 12678
+    .line 12686
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-boolean v7, v8, Landroid/webkit/WebView$QuickSelectAbs;->showMagnifier:Z
 
-    .line 12681
+    .line 12689
     .local v7, showingMagniier:Z
     if-eqz v7, :cond_0
 
-    .line 12682
+    .line 12690
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mSelectPath:Landroid/graphics/Path;
 
     invoke-virtual {v8}, Landroid/graphics/Path;->rewind()V
 
-    .line 12684
+    .line 12692
     :cond_0
     iget-object v8, p0, Landroid/webkit/WebView;->mTextSelectionRegion:Landroid/graphics/Region;
 
     invoke-virtual {v8}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 12685
+    .line 12693
     iget v8, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     iget-object v9, p0, Landroid/webkit/WebView;->mTextSelectionRegion:Landroid/graphics/Region;
 
     invoke-direct {p0, v8, v9}, Landroid/webkit/WebView;->nativeGetTextSelectionRegion(ILandroid/graphics/Region;)V
 
-    .line 12687
+    .line 12695
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mQSMethod:Landroid/webkit/WebViewSelectionMethod;
@@ -8101,32 +8118,32 @@
 
     iget-object v1, v8, Landroid/webkit/WebView$QuickSelectAbs;->mSelectRegion:Landroid/graphics/Region;
 
-    .line 12690
+    .line 12698
     .local v1, drawRegion:Landroid/graphics/Region;
     :goto_0
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    .line 12691
+    .line 12699
     .local v4, r:Landroid/graphics/Rect;
     new-instance v5, Landroid/graphics/RectF;
 
     invoke-direct {v5}, Landroid/graphics/RectF;-><init>()V
 
-    .line 12692
+    .line 12700
     .local v5, rf:Landroid/graphics/RectF;
     new-instance v3, Landroid/graphics/RegionIterator;
 
     invoke-direct {v3, v1}, Landroid/graphics/RegionIterator;-><init>(Landroid/graphics/Region;)V
 
-    .line 12693
+    .line 12701
     .local v3, iter:Landroid/graphics/RegionIterator;
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getClipBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 12694
+    .line 12702
     .local v0, clip:Landroid/graphics/Rect;
     :cond_1
     :goto_1
@@ -8136,17 +8153,17 @@
 
     if-eqz v8, :cond_3
 
-    .line 12695
+    .line 12703
     invoke-virtual {v4, v0}, Landroid/graphics/Rect;->intersect(Landroid/graphics/Rect;)Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 12696
+    .line 12704
     invoke-virtual {v5, v4}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 12697
+    .line 12705
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mSelectPath:Landroid/graphics/Path;
@@ -8157,7 +8174,7 @@
 
     goto :goto_1
 
-    .line 12687
+    .line 12695
     .end local v0           #clip:Landroid/graphics/Rect;
     .end local v1           #drawRegion:Landroid/graphics/Region;
     .end local v3           #iter:Landroid/graphics/RegionIterator;
@@ -8168,7 +8185,7 @@
 
     goto :goto_0
 
-    .line 12703
+    .line 12711
     .restart local v0       #clip:Landroid/graphics/Rect;
     .restart local v1       #drawRegion:Landroid/graphics/Region;
     .restart local v3       #iter:Landroid/graphics/RegionIterator;
@@ -8181,7 +8198,7 @@
 
     invoke-virtual {v5, v8}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 12704
+    .line 12712
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mSelectPath:Landroid/graphics/Path;
@@ -8190,14 +8207,14 @@
 
     invoke-virtual {v8, v5, v9}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 12705
+    .line 12713
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->selStart:Landroid/graphics/Rect;
 
     invoke-virtual {v5, v8}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 12706
+    .line 12714
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mSelectPath:Landroid/graphics/Path;
@@ -8206,7 +8223,7 @@
 
     invoke-virtual {v8, v5, v9}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 12709
+    .line 12717
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mSelectPath:Landroid/graphics/Path;
@@ -8217,24 +8234,24 @@
 
     invoke-virtual {p1, v8, v9}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 12713
+    .line 12721
     if-nez v7, :cond_4
 
-    .line 12714
+    .line 12722
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mSelectPath:Landroid/graphics/Path;
 
     invoke-virtual {v8}, Landroid/graphics/Path;->rewind()V
 
-    .line 12718
+    .line 12726
     :cond_4
     if-eqz v2, :cond_5
 
-    .line 12719
+    .line 12727
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 12721
+    .line 12729
     :cond_5
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
@@ -8242,7 +8259,7 @@
 
     if-eqz v8, :cond_6
 
-    .line 12722
+    .line 12730
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v9, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -8255,11 +8272,11 @@
 
     invoke-virtual {v8, v9, v10}, Landroid/webkit/WebView$QuickSelectAbs;->showAnchors(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 12728
+    .line 12736
     :goto_2
     return-void
 
-    .line 12725
+    .line 12733
     :cond_6
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
@@ -8267,7 +8284,7 @@
 
     invoke-virtual {v8, v10}, Lcom/htc/textselection/SelectionAnchor;->setVisibility(I)V
 
-    .line 12726
+    .line 12734
     iget-object v8, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v8, v8, Landroid/webkit/WebView$QuickSelectAbs;->mPostAnchor:Lcom/htc/textselection/SelectionAnchor;
@@ -8282,44 +8299,44 @@
     .parameter "canvas"
 
     .prologue
-    .line 5509
+    .line 5516
     iget-object v8, p0, Landroid/webkit/WebView;->mTextSelectionPaint:Landroid/graphics/Paint;
 
     if-nez v8, :cond_0
 
-    .line 5510
+    .line 5517
     new-instance v8, Landroid/graphics/Paint;
 
     invoke-direct {v8}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v8, p0, Landroid/webkit/WebView;->mTextSelectionPaint:Landroid/graphics/Paint;
 
-    .line 5511
+    .line 5518
     iget-object v8, p0, Landroid/webkit/WebView;->mTextSelectionPaint:Landroid/graphics/Paint;
 
     sget v9, Landroid/webkit/WebView;->HIGHLIGHT_COLOR:I
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 5513
+    .line 5520
     :cond_0
     iget-object v8, p0, Landroid/webkit/WebView;->mTextSelectionRegion:Landroid/graphics/Region;
 
     invoke-virtual {v8}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 5514
+    .line 5521
     iget v8, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     iget-object v9, p0, Landroid/webkit/WebView;->mTextSelectionRegion:Landroid/graphics/Region;
 
     invoke-direct {p0, v8, v9}, Landroid/webkit/WebView;->nativeGetTextSelectionRegion(ILandroid/graphics/Region;)V
 
-    .line 5515
+    .line 5522
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    .line 5516
+    .line 5523
     .local v5, r:Landroid/graphics/Rect;
     new-instance v4, Landroid/graphics/RegionIterator;
 
@@ -8327,13 +8344,13 @@
 
     invoke-direct {v4, v8}, Landroid/graphics/RegionIterator;-><init>(Landroid/graphics/Region;)V
 
-    .line 5517
+    .line 5524
     .local v4, iter:Landroid/graphics/RegionIterator;
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getClipBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 5518
+    .line 5525
     .local v0, clip:Landroid/graphics/Rect;
     :cond_1
     :goto_0
@@ -8343,7 +8360,7 @@
 
     if-eqz v8, :cond_2
 
-    .line 5519
+    .line 5526
     iget v8, v5, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p0, v8}, Landroid/webkit/WebView;->contentToViewDimension(I)I
@@ -8370,27 +8387,27 @@
 
     invoke-virtual {v5, v8, v9, v10, v11}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 5523
+    .line 5530
     invoke-virtual {v5, v0}, Landroid/graphics/Rect;->intersect(Landroid/graphics/Rect;)Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 5524
+    .line 5531
     iget-object v8, p0, Landroid/webkit/WebView;->mTextSelectionPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v5, v8}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     goto :goto_0
 
-    .line 5551
+    .line 5558
     :cond_2
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
 
     if-nez v8, :cond_3
 
-    .line 5552
+    .line 5559
     iget-object v8, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -8405,19 +8422,19 @@
 
     iput-object v8, p0, Landroid/webkit/WebView;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
 
-    .line 5556
+    .line 5563
     :cond_3
     const/4 v8, 0x4
 
     new-array v3, v8, [I
 
-    .line 5557
+    .line 5564
     .local v3, handles:[I
     iget v8, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     invoke-direct {p0, v8, v3}, Landroid/webkit/WebView;->nativeGetSelectionHandles(I[I)V
 
-    .line 5558
+    .line 5565
     const/4 v8, 0x0
 
     aget v8, v3, v8
@@ -8426,7 +8443,7 @@
 
     move-result v6
 
-    .line 5559
+    .line 5566
     .local v6, start_x:I
     const/4 v8, 0x1
 
@@ -8436,7 +8453,7 @@
 
     move-result v7
 
-    .line 5560
+    .line 5567
     .local v7, start_y:I
     const/4 v8, 0x2
 
@@ -8446,7 +8463,7 @@
 
     move-result v1
 
-    .line 5561
+    .line 5568
     .local v1, end_x:I
     const/4 v8, 0x3
 
@@ -8456,7 +8473,7 @@
 
     move-result v2
 
-    .line 5563
+    .line 5570
     .local v2, end_y:I
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
 
@@ -8470,7 +8487,7 @@
 
     sub-int/2addr v6, v8
 
-    .line 5564
+    .line 5571
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
 
     iget-object v9, p0, Landroid/webkit/WebView;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
@@ -8491,12 +8508,12 @@
 
     invoke-virtual {v8, v6, v7, v9, v10}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 5567
+    .line 5574
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
 
     if-nez v8, :cond_4
 
-    .line 5568
+    .line 5575
     iget-object v8, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -8511,7 +8528,7 @@
 
     iput-object v8, p0, Landroid/webkit/WebView;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
 
-    .line 5571
+    .line 5578
     :cond_4
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
 
@@ -8523,7 +8540,7 @@
 
     sub-int/2addr v1, v8
 
-    .line 5572
+    .line 5579
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
 
     iget-object v9, p0, Landroid/webkit/WebView;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
@@ -8544,17 +8561,17 @@
 
     invoke-virtual {v8, v1, v2, v9, v10}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 5579
+    .line 5586
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleLeft:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v8, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 5580
+    .line 5587
     iget-object v8, p0, Landroid/webkit/WebView;->mSelectHandleRight:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v8, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 5581
+    .line 5588
     return-void
 .end method
 
@@ -8564,43 +8581,43 @@
     .end annotation
 
     .prologue
-    .line 1913
+    .line 1917
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1914
+    .line 1918
     const-class v2, Landroid/webkit/WebView;
 
     monitor-enter v2
 
-    .line 1915
+    .line 1919
     :try_start_0
     invoke-static {}, Landroid/webkit/Network;->enablePlatformNotifications()V
 
-    .line 1916
+    .line 1920
     const/4 v1, 0x1
 
     sput-boolean v1, Landroid/webkit/WebView;->sNotificationsEnabled:Z
 
-    .line 1917
+    .line 1921
     invoke-static {}, Landroid/webkit/JniUtil;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 1918
+    .line 1922
     .local v0, context:Landroid/content/Context;
     if-eqz v0, :cond_0
 
-    .line 1919
+    .line 1923
     invoke-static {v0}, Landroid/webkit/WebView;->setupProxyListener(Landroid/content/Context;)V
 
-    .line 1920
+    .line 1924
     :cond_0
     monitor-exit v2
 
-    .line 1921
+    .line 1925
     return-void
 
-    .line 1920
+    .line 1924
     :catchall_0
     move-exception v1
 
@@ -8616,27 +8633,27 @@
     .parameter "present"
 
     .prologue
-    .line 4314
+    .line 4318
     if-eqz p1, :cond_1
 
-    .line 4315
+    .line 4319
     iget-object v0, p0, Landroid/webkit/WebView;->mAccessibilityInjector:Landroid/webkit/AccessibilityInjector;
 
     if-nez v0, :cond_0
 
-    .line 4316
+    .line 4320
     new-instance v0, Landroid/webkit/AccessibilityInjector;
 
     invoke-direct {v0, p0}, Landroid/webkit/AccessibilityInjector;-><init>(Landroid/webkit/WebView;)V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mAccessibilityInjector:Landroid/webkit/AccessibilityInjector;
 
-    .line 4321
+    .line 4325
     :cond_0
     :goto_0
     return-void
 
-    .line 4319
+    .line 4323
     :cond_1
     const/4 v0, 0x0
 
@@ -8652,14 +8669,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2658
+    .line 2662
     iget-object v3, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v3}, Landroid/widget/OverScroller;->getFinalY()I
 
     move-result v0
 
-    .line 2659
+    .line 2663
     .local v0, finalY:I
     add-int v3, v0, p1
 
@@ -8667,21 +8684,21 @@
 
     move-result v1
 
-    .line 2660
+    .line 2664
     .local v1, newY:I
     if-ne v1, v0, :cond_0
 
-    .line 2663
+    .line 2667
     :goto_0
     return v2
 
-    .line 2661
+    .line 2665
     :cond_0
     iget-object v3, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v3, v1}, Landroid/widget/OverScroller;->setFinalY(I)V
 
-    .line 2662
+    .line 2666
     iget-object v3, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-static {v2, p1}, Landroid/webkit/WebView;->computeDuration(II)I
@@ -8690,7 +8707,7 @@
 
     invoke-virtual {v3, v2}, Landroid/widget/OverScroller;->extendDuration(I)V
 
-    .line 2663
+    .line 2667
     const/4 v2, 0x1
 
     goto :goto_0
@@ -8702,12 +8719,12 @@
     .prologue
     const/16 v1, 0x258
 
-    .line 5293
+    .line 5300
     iget-boolean v0, p0, Landroid/webkit/WebView;->mInLoading:Z
 
     if-eqz v0, :cond_0
 
-    .line 5295
+    .line 5302
     :cond_0
     return v1
 .end method
@@ -8716,15 +8733,15 @@
     .locals 1
 
     .prologue
-    .line 5299
+    .line 5306
     iget-boolean v0, p0, Landroid/webkit/WebView;->mInLoading:Z
 
     if-eqz v0, :cond_0
 
-    .line 5300
+    .line 5307
     const/16 v0, 0x3e8
 
-    .line 5301
+    .line 5308
     :goto_0
     return v0
 
@@ -8739,10 +8756,10 @@
     .parameter "addr"
 
     .prologue
-    .line 3967
+    .line 3971
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3968
+    .line 3972
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Landroid/webkit/WebView;->findAddress(Ljava/lang/String;Z)Ljava/lang/String;
@@ -8758,7 +8775,7 @@
     .parameter "caseInsensitive"
 
     .prologue
-    .line 3994
+    .line 3998
     invoke-static {p0, p1}, Landroid/webkit/WebViewCore;->nativeFindAddress(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
@@ -8778,7 +8795,7 @@
 
     const/4 v1, 0x0
 
-    .line 15092
+    .line 15323
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -8790,11 +8807,11 @@
     :cond_0
     move v0, v1
 
-    .line 15107
+    .line 15338
     :goto_0
     return v0
 
-    .line 15095
+    .line 15326
     :cond_1
     if-eqz p1, :cond_2
 
@@ -8817,14 +8834,14 @@
     :cond_2
     move v0, v1
 
-    .line 15097
+    .line 15328
     goto :goto_0
 
-    .line 15100
+    .line 15331
     :cond_3
     const/4 v0, 0x0
 
-    .line 15101
+    .line 15332
     .local v0, ret:I
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -8838,7 +8855,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 15102
+    .line 15333
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -8861,7 +8878,7 @@
 
     goto :goto_0
 
-    .line 15104
+    .line 15335
     :cond_4
     invoke-static {p0, p1, p2, p3}, Landroid/webkit/WebViewCore;->nativeFindAddressAndPhone(Ljava/lang/String;[I[I[I)I
 
@@ -8886,7 +8903,7 @@
     .parameter "cityLength"
 
     .prologue
-    .line 15113
+    .line 15344
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -8895,15 +8912,15 @@
 
     if-nez v1, :cond_1
 
-    .line 15114
+    .line 15345
     :cond_0
     const/4 v13, 0x0
 
-    .line 15137
+    .line 15368
     :goto_0
     return v13
 
-    .line 15116
+    .line 15347
     :cond_1
     if-eqz p1, :cond_2
 
@@ -8933,13 +8950,13 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 15118
+    .line 15349
     :cond_2
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 15120
+    .line 15351
     :cond_3
     if-eqz p4, :cond_4
 
@@ -9021,17 +9038,17 @@
 
     if-ge v1, v2, :cond_5
 
-    .line 15124
+    .line 15355
     :cond_4
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 15126
+    .line 15357
     :cond_5
     const/4 v13, 0x0
 
-    .line 15127
+    .line 15358
     .local v13, ret:I
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -9045,7 +9062,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 15128
+    .line 15359
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -9092,7 +9109,7 @@
 
     goto/16 :goto_0
 
-    .line 15132
+    .line 15363
     :cond_6
     invoke-static/range {p0 .. p11}, Landroid/webkit/WebViewCore;->nativeFindAddressAndPhone2(Ljava/lang/String;[I[I[I[I[I[I[I[I[I[I[I)I
 
@@ -9106,17 +9123,17 @@
     .parameter "enable"
 
     .prologue
-    .line 12527
+    .line 12534
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     if-eqz v0, :cond_0
 
-    .line 12528
+    .line 12535
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     invoke-virtual {v0, p1}, Landroid/webkit/HTCWebCore;->nativeEnableTextReflowWithBreakWords(Z)V
 
-    .line 12529
+    .line 12536
     :cond_0
     return-void
 .end method
@@ -9126,12 +9143,12 @@
     .parameter "url"
 
     .prologue
-    .line 4330
+    .line 4334
     iget-object v2, p0, Landroid/webkit/WebView;->mMatchAxsUrlParameterPattern:Ljava/util/regex/Pattern;
 
     if-nez v2, :cond_0
 
-    .line 4331
+    .line 4335
     const-string v2, "(\\?axs=(0|1))|(&axs=(0|1))"
 
     invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -9140,7 +9157,7 @@
 
     iput-object v2, p0, Landroid/webkit/WebView;->mMatchAxsUrlParameterPattern:Ljava/util/regex/Pattern;
 
-    .line 4333
+    .line 4337
     :cond_0
     iget-object v2, p0, Landroid/webkit/WebView;->mMatchAxsUrlParameterPattern:Ljava/util/regex/Pattern;
 
@@ -9148,7 +9165,7 @@
 
     move-result-object v1
 
-    .line 4334
+    .line 4338
     .local v1, matcher:Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -9156,7 +9173,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 4335
+    .line 4339
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
 
     move-result v2
@@ -9169,7 +9186,7 @@
 
     move-result-object v0
 
-    .line 4336
+    .line 4340
     .local v0, keyValuePair:Ljava/lang/String;
     const-string v2, "="
 
@@ -9185,7 +9202,7 @@
 
     move-result v2
 
-    .line 4338
+    .line 4342
     .end local v0           #keyValuePair:Ljava/lang/String;
     :goto_0
     return v2
@@ -9200,7 +9217,7 @@
     .locals 1
 
     .prologue
-    .line 14376
+    .line 14607
     sget v0, Landroid/webkit/WebView;->DEFAULT_TEXT_WIDTH:I
 
     return v0
@@ -9212,29 +9229,29 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1705
+    .line 1709
     iget-object v1, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     if-nez v1, :cond_0
 
-    .line 1713
+    .line 1717
     :goto_0
     return v0
 
-    .line 1708
+    .line 1712
     :cond_0
     iget v1, p0, Landroid/webkit/WebView;->mCachedOverlappingActionModeHeight:I
 
     if-gez v1, :cond_1
 
-    .line 1709
+    .line 1713
     iget-object v1, p0, Landroid/webkit/WebView;->mGlobalVisibleRect:Landroid/graphics/Rect;
 
     iget-object v2, p0, Landroid/webkit/WebView;->mGlobalVisibleOffset:Landroid/graphics/Point;
 
     invoke-virtual {p0, v1, v2}, Landroid/webkit/WebView;->getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/Point;)Z
 
-    .line 1710
+    .line 1714
     iget-object v1, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     invoke-virtual {v1}, Landroid/webkit/FindActionModeCallback;->getActionModeGlobalBottom()I
@@ -9253,7 +9270,7 @@
 
     iput v0, p0, Landroid/webkit/WebView;->mCachedOverlappingActionModeHeight:I
 
-    .line 1713
+    .line 1717
     :cond_1
     iget v0, p0, Landroid/webkit/WebView;->mCachedOverlappingActionModeHeight:I
 
@@ -9266,7 +9283,7 @@
     .end annotation
 
     .prologue
-    .line 4629
+    .line 4633
     const-class v1, Landroid/webkit/WebView;
 
     monitor-enter v1
@@ -9274,7 +9291,7 @@
     :try_start_0
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4630
+    .line 4634
     new-instance v0, Landroid/webkit/PluginList;
 
     invoke-direct {v0}, Landroid/webkit/PluginList;-><init>()V
@@ -9285,7 +9302,7 @@
 
     return-object v0
 
-    .line 4629
+    .line 4633
     :catchall_0
     move-exception v0
 
@@ -9298,19 +9315,19 @@
     .locals 3
 
     .prologue
-    .line 11011
+    .line 11018
     iget-boolean v2, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
     if-nez v2, :cond_0
 
-    .line 11012
+    .line 11019
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v2
 
     div-int/lit8 v1, v2, 0x4
 
-    .line 11019
+    .line 11026
     .local v1, width:I
     :goto_0
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->viewToContentX(I)I
@@ -9319,18 +9336,18 @@
 
     return v2
 
-    .line 11014
+    .line 11021
     .end local v1           #width:I
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 11015
+    .line 11022
     .local v0, visRect:Landroid/graphics/Rect;
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->calcOurVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 11016
+    .line 11023
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -9345,19 +9362,19 @@
     .locals 4
 
     .prologue
-    .line 11024
+    .line 11031
     iget-boolean v2, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
     if-nez v2, :cond_0
 
-    .line 11025
+    .line 11032
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeight()I
 
     move-result v2
 
     div-int/lit8 v0, v2, 0x4
 
-    .line 11034
+    .line 11041
     .local v0, height:I
     :goto_0
     int-to-float v2, v0
@@ -9376,18 +9393,18 @@
 
     return v2
 
-    .line 11027
+    .line 11034
     .end local v0           #height:I
     :cond_0
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 11028
+    .line 11035
     .local v1, visRect:Landroid/graphics/Rect;
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->calcOurVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 11029
+    .line 11036
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v2
@@ -9402,7 +9419,7 @@
     .locals 3
 
     .prologue
-    .line 1698
+    .line 1702
     invoke-virtual {p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v0
@@ -9434,13 +9451,13 @@
     .parameter "ignoreSnapshot"
 
     .prologue
-    .line 2638
+    .line 2642
     if-eqz p1, :cond_0
 
-    .line 2639
+    .line 2643
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
-    .line 2640
+    .line 2644
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x6a
@@ -9452,11 +9469,11 @@
     :goto_0
     invoke-virtual {v1, v2, p1, v0}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 2643
+    .line 2647
     :cond_0
     return-void
 
-    .line 2640
+    .line 2644
     :cond_1
     const/4 v0, 0x0
 
@@ -9468,7 +9485,7 @@
     .parameter "steps"
 
     .prologue
-    .line 2626
+    .line 2630
     iget v0, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v0, :cond_0
@@ -9481,22 +9498,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 2627
+    .line 2631
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
-    .line 2628
+    .line 2632
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCQuickSearch:Landroid/webkit/HTCQuickSearch;
 
     invoke-virtual {v0}, Landroid/webkit/HTCQuickSearch;->leaveQuickSearchShareMode()V
 
-    .line 2629
+    .line 2633
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2635
+    .line 2639
     :goto_0
     return-void
 
-    .line 2634
+    .line 2638
     :cond_0
     const/4 v0, 0x0
 
@@ -9556,12 +9573,12 @@
     .parameter "y"
 
     .prologue
-    .line 7088
+    .line 7095
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v19
 
-    .line 7094
+    .line 7101
     .local v19, eventTime:J
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewWidth()I
 
@@ -9575,7 +9592,7 @@
 
     move-result p3
 
-    .line 7095
+    .line 7102
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
     move-result v3
@@ -9588,14 +9605,14 @@
 
     move-result p4
 
-    .line 7097
+    .line 7104
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mLastTouchX:I
 
     sub-int v15, v3, p3
 
-    .line 7098
+    .line 7105
     .local v15, deltaX:I
     move-object/from16 v0, p0
 
@@ -9603,7 +9620,7 @@
 
     sub-int v16, v3, p4
 
-    .line 7099
+    .line 7106
     .local v16, deltaY:I
     move-object/from16 v0, p0
 
@@ -9617,7 +9634,7 @@
 
     move-result v10
 
-    .line 7100
+    .line 7107
     .local v10, contentX:I
     move-object/from16 v0, p0
 
@@ -9631,7 +9648,7 @@
 
     move-result v12
 
-    .line 7103
+    .line 7110
     .local v12, contentY:I
     const/4 v3, 0x1
 
@@ -9639,10 +9656,10 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->triggerByTouch:Z
 
-    .line 7106
+    .line 7113
     packed-switch p2, :pswitch_data_0
 
-    .line 7717
+    .line 7724
     :cond_0
     :goto_0
     const/4 v3, 0x1
@@ -9650,7 +9667,7 @@
     :goto_1
     return v3
 
-    .line 7108
+    .line 7115
     :pswitch_0
     const/4 v3, 0x0
 
@@ -9658,35 +9675,35 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
 
-    .line 7109
+    .line 7116
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
-    .line 7110
+    .line 7117
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v3, v0, Landroid/webkit/WebView;->mInitialHitTestResult:Landroid/webkit/WebView$HitTestResult;
 
-    .line 7113
+    .line 7120
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->willSelectWord:Z
 
-    .line 7114
+    .line 7121
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mIsTouchOnScreen:Z
 
-    .line 7115
+    .line 7122
     sget v3, Landroid/webkit/WebView;->mOverscrollMode:I
 
     const/4 v4, 0x5
@@ -9699,7 +9716,7 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 7116
+    .line 7123
     :cond_1
     move-object/from16 v0, p0
 
@@ -9712,7 +9729,7 @@
     :goto_2
     sput-boolean v3, Landroid/webkit/WebView;->mTopOverScrollEnabled:Z
 
-    .line 7117
+    .line 7124
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollY:I
@@ -9740,7 +9757,7 @@
     :goto_3
     sput-boolean v3, Landroid/webkit/WebView;->mBottomOverScrollEnabled:Z
 
-    .line 7120
+    .line 7127
     :cond_2
     move-object/from16 v0, p0
 
@@ -9752,31 +9769,31 @@
 
     if-nez v3, :cond_8
 
-    .line 7124
+    .line 7131
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v3}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 7125
+    .line 7132
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7128
+    .line 7135
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->fnScrollingEnd()V
 
-    .line 7130
+    .line 7137
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 7214
+    .line 7221
     :cond_3
     :goto_4
     move-object/from16 v0, p0
@@ -9801,7 +9818,7 @@
 
     if-ne v3, v4, :cond_19
 
-    .line 7216
+    .line 7223
     :cond_4
     move-object/from16 v0, p0
 
@@ -9830,7 +9847,7 @@
     :goto_5
     invoke-virtual {v5, v6, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 7219
+    .line 7226
     move-object/from16 v0, p0
 
     iget-object v5, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -9858,7 +9875,7 @@
     :goto_6
     invoke-virtual {v5, v6, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 7222
+    .line 7229
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
 
     move-result v3
@@ -9871,7 +9888,7 @@
 
     if-eqz v3, :cond_16
 
-    .line 7223
+    .line 7230
     :cond_5
     const/4 v3, 0x3
 
@@ -9879,7 +9896,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
 
-    .line 7230
+    .line 7237
     :goto_7
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->shouldForwardTouchEvent()Z
 
@@ -9887,12 +9904,12 @@
 
     if-eqz v3, :cond_19
 
-    .line 7231
+    .line 7238
     new-instance v24, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v24 .. v24}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 7232
+    .line 7239
     .local v24, ted:Landroid/webkit/WebViewCore$TouchEventData;
     move/from16 v0, p2
 
@@ -9900,7 +9917,7 @@
 
     iput v0, v1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 7233
+    .line 7240
     const/4 v3, 0x1
 
     new-array v3, v3, [I
@@ -9909,7 +9926,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 7234
+    .line 7241
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -9926,7 +9943,7 @@
 
     aput v5, v3, v4
 
-    .line 7235
+    .line 7242
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -9935,7 +9952,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 7236
+    .line 7243
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -9948,7 +9965,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7237
+    .line 7244
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -9957,7 +9974,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 7238
+    .line 7245
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -9974,7 +9991,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7239
+    .line 7246
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -9983,7 +10000,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 7240
+    .line 7247
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -9992,7 +10009,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 7241
+    .line 7248
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -10009,7 +10026,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 7243
+    .line 7250
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -10022,7 +10039,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 7244
+    .line 7251
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -10031,7 +10048,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 7245
+    .line 7252
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -10042,21 +10059,21 @@
 
     invoke-virtual {v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 7246
+    .line 7253
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
 
     if-eqz v3, :cond_18
 
-    .line 7248
+    .line 7255
     move/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 7249
+    .line 7256
     move/from16 v0, p4
 
     move-object/from16 v1, p0
@@ -10065,20 +10082,20 @@
 
     goto/16 :goto_0
 
-    .line 7116
+    .line 7123
     .end local v24           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_6
     const/4 v3, 0x0
 
     goto/16 :goto_2
 
-    .line 7117
+    .line 7124
     :cond_7
     const/4 v3, 0x0
 
     goto/16 :goto_3
 
-    .line 7131
+    .line 7138
     :cond_8
     move-object/from16 v0, p0
 
@@ -10092,7 +10109,7 @@
 
     if-eqz v3, :cond_c
 
-    .line 7132
+    .line 7139
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -10101,7 +10118,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7133
+    .line 7140
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v3
@@ -10112,10 +10129,10 @@
 
     if-eqz v3, :cond_9
 
-    .line 7134
+    .line 7141
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->removeTouchHighlight()V
 
-    .line 7136
+    .line 7143
     :cond_9
     mul-int v3, v15, v15
 
@@ -10129,7 +10146,7 @@
 
     if-ge v3, v4, :cond_a
 
-    .line 7137
+    .line 7144
     const/4 v3, 0x6
 
     move-object/from16 v0, p0
@@ -10138,18 +10155,18 @@
 
     goto/16 :goto_4
 
-    .line 7140
+    .line 7147
     :cond_a
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->doShortPress()V
 
-    .line 7141
+    .line 7148
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7142
+    .line 7149
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
@@ -10186,7 +10203,7 @@
 
     goto :goto_8
 
-    .line 7151
+    .line 7158
     :cond_c
     move-object/from16 v0, p0
 
@@ -10194,21 +10211,21 @@
 
     if-eqz v3, :cond_11
 
-    .line 7152
+    .line 7159
     const/4 v3, 0x3
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7153
+    .line 7160
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mDragAfterActionDown:Z
 
-    .line 7157
+    .line 7164
     :goto_9
     move-object/from16 v0, p0
 
@@ -10239,14 +10256,14 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
 
-    .line 7161
+    .line 7168
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v3, :cond_d
 
-    .line 7162
+    .line 7169
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -10255,7 +10272,7 @@
 
     invoke-virtual {v3, v4}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 7165
+    .line 7172
     :cond_d
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -10267,26 +10284,26 @@
 
     if-eqz v3, :cond_f
 
-    .line 7166
+    .line 7173
     new-instance v14, Landroid/webkit/WebViewCore$TouchHighlightData;
 
     invoke-direct {v14}, Landroid/webkit/WebViewCore$TouchHighlightData;-><init>()V
 
-    .line 7167
+    .line 7174
     .local v14, data:Landroid/webkit/WebViewCore$TouchHighlightData;
     iput v10, v14, Landroid/webkit/WebViewCore$TouchHighlightData;->mX:I
 
-    .line 7168
+    .line 7175
     iput v12, v14, Landroid/webkit/WebViewCore$TouchHighlightData;->mY:I
 
-    .line 7169
+    .line 7176
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v3, v14, Landroid/webkit/WebViewCore$TouchHighlightData;->mNativeLayerRect:Landroid/graphics/Rect;
 
-    .line 7170
+    .line 7177
     iget-object v3, v14, Landroid/webkit/WebViewCore$TouchHighlightData;->mNativeLayerRect:Landroid/graphics/Rect;
 
     const/4 v4, 0x0
@@ -10299,7 +10316,7 @@
 
     iput v3, v14, Landroid/webkit/WebViewCore$TouchHighlightData;->mNativeLayer:I
 
-    .line 7172
+    .line 7179
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mNavSlop:I
@@ -10312,21 +10329,21 @@
 
     iput v3, v14, Landroid/webkit/WebViewCore$TouchHighlightData;->mSlop:I
 
-    .line 7173
+    .line 7180
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
 
     invoke-virtual {v3}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 7174
+    .line 7181
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v3, :cond_e
 
-    .line 7175
+    .line 7182
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -10335,7 +10352,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebView;->mTouchHighlightRequested:J
 
-    .line 7176
+    .line 7183
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -10344,7 +10361,7 @@
 
     invoke-virtual {v3, v4, v14}, Landroid/webkit/WebViewCore;->sendMessageAtFrontOfQueue(ILjava/lang/Object;)V
 
-    .line 7180
+    .line 7187
     :cond_e
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -10356,7 +10373,7 @@
 
     if-eqz v3, :cond_f
 
-    .line 7181
+    .line 7188
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollX:I
@@ -10367,7 +10384,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchHighlightX:I
 
-    .line 7182
+    .line 7189
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollY:I
@@ -10378,7 +10395,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchHighlightY:I
 
-    .line 7183
+    .line 7190
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -10393,7 +10410,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 7192
+    .line 7199
     .end local v14           #data:Landroid/webkit/WebViewCore$TouchHighlightData;
     :cond_f
     sget-boolean v3, Landroid/webkit/WebView;->mLogEvent:Z
@@ -10412,7 +10429,7 @@
 
     if-gez v3, :cond_10
 
-    .line 7193
+    .line 7200
     const v3, 0x111d6
 
     const/4 v4, 0x2
@@ -10443,7 +10460,7 @@
 
     invoke-static {v3, v4}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 7196
+    .line 7203
     :cond_10
     move-object/from16 v0, p0
 
@@ -10451,14 +10468,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 7198
+    .line 7205
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v3, :cond_13
 
-    .line 7199
+    .line 7206
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -10469,7 +10486,7 @@
 
     goto/16 :goto_4
 
-    .line 7155
+    .line 7162
     :cond_11
     const/4 v3, 0x1
 
@@ -10479,13 +10496,13 @@
 
     goto/16 :goto_9
 
-    .line 7157
+    .line 7164
     :cond_12
     const/4 v3, 0x0
 
     goto/16 :goto_a
 
-    .line 7204
+    .line 7211
     :cond_13
     const/4 v3, 0x0
 
@@ -10493,7 +10510,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
-    .line 7205
+    .line 7212
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v10, v12}, Landroid/webkit/WebView;->nativeStartSelection(II)Z
@@ -10504,24 +10521,24 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSelectionStarted:Z
 
-    .line 7209
+    .line 7216
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_4
 
-    .line 7216
+    .line 7223
     :cond_14
     const-wide/16 v3, 0x12c
 
     goto/16 :goto_5
 
-    .line 7219
+    .line 7226
     :cond_15
     const-wide/16 v3, 0x2bc
 
     goto/16 :goto_6
 
-    .line 7224
+    .line 7231
     :cond_16
     move-object/from16 v0, p0
 
@@ -10535,7 +10552,7 @@
 
     if-eqz v3, :cond_17
 
-    .line 7225
+    .line 7232
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
@@ -10544,7 +10561,7 @@
 
     goto/16 :goto_7
 
-    .line 7227
+    .line 7234
     :cond_17
     const/4 v3, 0x0
 
@@ -10554,7 +10571,7 @@
 
     goto/16 :goto_7
 
-    .line 7252
+    .line 7259
     .restart local v24       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_18
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
@@ -10563,7 +10580,7 @@
 
     if-nez v3, :cond_19
 
-    .line 7253
+    .line 7260
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -10572,7 +10589,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7254
+    .line 7261
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -10595,7 +10612,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 7260
+    .line 7267
     .end local v24           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_19
     move/from16 v0, p3
@@ -10612,7 +10629,7 @@
 
     invoke-direct {v0, v3, v4, v1, v2}, Landroid/webkit/WebView;->startTouch(FFJ)V
 
-    .line 7262
+    .line 7269
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -10621,7 +10638,7 @@
 
     goto/16 :goto_0
 
-    .line 7269
+    .line 7276
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -10653,7 +10670,7 @@
 
     if-le v3, v4, :cond_1d
 
-    .line 7270
+    .line 7277
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mTouchMode:I
@@ -10670,7 +10687,7 @@
 
     if-ne v3, v4, :cond_1c
 
-    .line 7272
+    .line 7279
     :cond_1a
     move-object/from16 v0, p0
 
@@ -10680,7 +10697,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7276
+    .line 7283
     :cond_1b
     :goto_b
     const/4 v3, 0x7
@@ -10689,12 +10706,12 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7277
+    .line 7284
     const/4 v3, 0x1
 
     goto/16 :goto_1
 
-    .line 7273
+    .line 7280
     :cond_1c
     move-object/from16 v0, p0
 
@@ -10704,7 +10721,7 @@
 
     if-ne v3, v4, :cond_1b
 
-    .line 7274
+    .line 7281
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -10715,11 +10732,11 @@
 
     goto :goto_b
 
-    .line 7280
+    .line 7287
     :cond_1d
     const/16 v21, 0x0
 
-    .line 7281
+    .line 7288
     .local v21, firstMove:Z
     move-object/from16 v0, p0
 
@@ -10739,7 +10756,7 @@
 
     if-lt v3, v4, :cond_1f
 
-    .line 7283
+    .line 7290
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -10748,7 +10765,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7284
+    .line 7291
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -10757,17 +10774,17 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7285
+    .line 7292
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
-    .line 7286
+    .line 7293
     const/16 v21, 0x1
 
-    .line 7287
+    .line 7294
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mTouchMode:I
@@ -10776,14 +10793,14 @@
 
     if-ne v3, v4, :cond_1e
 
-    .line 7288
+    .line 7295
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7290
+    .line 7297
     :cond_1e
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -10795,10 +10812,10 @@
 
     if-eqz v3, :cond_1f
 
-    .line 7291
+    .line 7298
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->removeTouchHighlight()V
 
-    .line 7295
+    .line 7302
     :cond_1f
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->shouldForwardTouchEvent()Z
 
@@ -10830,13 +10847,13 @@
 
     if-lez v3, :cond_21
 
-    .line 7297
+    .line 7304
     :cond_20
     new-instance v24, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v24 .. v24}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 7298
+    .line 7305
     .restart local v24       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     move/from16 v0, p2
 
@@ -10844,7 +10861,7 @@
 
     iput v0, v1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 7299
+    .line 7306
     const/4 v3, 0x1
 
     new-array v3, v3, [I
@@ -10853,7 +10870,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 7300
+    .line 7307
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -10870,7 +10887,7 @@
 
     aput v5, v3, v4
 
-    .line 7301
+    .line 7308
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -10879,7 +10896,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 7302
+    .line 7309
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -10892,7 +10909,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7303
+    .line 7310
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -10901,7 +10918,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 7304
+    .line 7311
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -10918,7 +10935,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7305
+    .line 7312
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -10927,7 +10944,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 7306
+    .line 7313
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -10936,7 +10953,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 7307
+    .line 7314
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
@@ -10945,7 +10962,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 7308
+    .line 7315
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -10956,7 +10973,7 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 7309
+    .line 7316
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -10969,7 +10986,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 7310
+    .line 7317
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -10978,7 +10995,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 7311
+    .line 7318
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -10989,21 +11006,21 @@
 
     invoke-virtual {v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 7312
+    .line 7319
     move-wide/from16 v0, v19
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Landroid/webkit/WebView;->mLastSentTouchTime:J
 
-    .line 7313
+    .line 7320
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
 
     if-nez v3, :cond_0
 
-    .line 7316
+    .line 7323
     if-eqz v21, :cond_21
 
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
@@ -11012,7 +11029,7 @@
 
     if-nez v3, :cond_21
 
-    .line 7317
+    .line 7324
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -11035,7 +11052,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 7322
+    .line 7329
     .end local v24           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_21
     move-object/from16 v0, p0
@@ -11054,14 +11071,14 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 7328
+    .line 7335
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v3, :cond_25
 
-    .line 7329
+    .line 7336
     const-string/jumbo v3, "webview"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -11116,7 +11133,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7336
+    .line 7343
     :goto_c
     move-object/from16 v0, p0
 
@@ -11124,14 +11141,14 @@
 
     if-eqz v3, :cond_23
 
-    .line 7338
+    .line 7345
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v3, :cond_26
 
-    .line 7339
+    .line 7346
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -11158,7 +11175,7 @@
 
     if-nez v3, :cond_0
 
-    .line 7343
+    .line 7350
     :cond_22
     move-object/from16 v0, p0
 
@@ -11178,7 +11195,7 @@
 
     if-nez v3, :cond_0
 
-    .line 7375
+    .line 7382
     :cond_23
     move-object/from16 v0, p0
 
@@ -11196,14 +11213,14 @@
 
     if-eq v3, v4, :cond_32
 
-    .line 7378
+    .line 7385
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
     if-eqz v3, :cond_0
 
-    .line 7382
+    .line 7389
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
@@ -11220,7 +11237,7 @@
 
     if-ne v3, v4, :cond_2f
 
-    .line 7386
+    .line 7393
     :cond_24
     move-wide/from16 v0, v19
 
@@ -11230,7 +11247,7 @@
 
     goto/16 :goto_0
 
-    .line 7334
+    .line 7341
     :cond_25
     move-object/from16 v0, p0
 
@@ -11242,7 +11259,7 @@
 
     goto :goto_c
 
-    .line 7349
+    .line 7356
     :cond_26
     move-object/from16 v0, p0
 
@@ -11250,23 +11267,23 @@
 
     if-eqz v3, :cond_23
 
-    .line 7353
+    .line 7360
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v23
 
-    .line 7354
+    .line 7361
     .local v23, parent:Landroid/view/ViewParent;
     if-eqz v23, :cond_27
 
-    .line 7355
+    .line 7362
     const/4 v3, 0x1
 
     move-object/from16 v0, v23
 
     invoke-interface {v0, v3}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 7357
+    .line 7364
     :cond_27
     move-object/from16 v0, p0
 
@@ -11283,7 +11300,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAutoScrollX:I
 
-    .line 7359
+    .line 7366
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mMinAutoScrollY:I
@@ -11299,7 +11316,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAutoScrollY:I
 
-    .line 7361
+    .line 7368
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAutoScrollX:I
@@ -11319,14 +11336,14 @@
 
     if-nez v3, :cond_29
 
-    .line 7363
+    .line 7370
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSentAutoScrollMessage:Z
 
-    .line 7364
+    .line 7371
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -11337,24 +11354,24 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 7367
+    .line 7374
     :cond_29
     if-nez v15, :cond_2a
 
     if-eqz v16, :cond_0
 
-    .line 7368
+    .line 7375
     :cond_2a
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v10, v12}, Landroid/webkit/WebView;->nativeExtendSelection(II)V
 
-    .line 7369
+    .line 7376
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 7357
+    .line 7364
     :cond_2b
     move-object/from16 v0, p0
 
@@ -11373,7 +11390,7 @@
 
     goto :goto_d
 
-    .line 7359
+    .line 7366
     :cond_2d
     move-object/from16 v0, p0
 
@@ -11392,7 +11409,7 @@
 
     goto :goto_e
 
-    .line 7393
+    .line 7400
     .end local v23           #parent:Landroid/view/ViewParent;
     :cond_2f
     move-object/from16 v0, p0
@@ -11403,7 +11420,7 @@
 
     move-result-object v17
 
-    .line 7395
+    .line 7402
     .local v17, detector:Landroid/view/ScaleGestureDetector;
     move-object/from16 v0, p0
 
@@ -11417,7 +11434,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
 
-    .line 7396
+    .line 7403
     if-eqz v17, :cond_30
 
     invoke-virtual/range {v17 .. v17}, Landroid/view/ScaleGestureDetector;->isInProgress()Z
@@ -11426,7 +11443,7 @@
 
     if-nez v3, :cond_31
 
-    .line 7398
+    .line 7405
     :cond_30
     move-object/from16 v0, p0
 
@@ -11438,14 +11455,14 @@
 
     if-gez v3, :cond_35
 
-    .line 7399
+    .line 7406
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 7400
+    .line 7407
     if-lez v15, :cond_34
 
     const/4 v3, 0x1
@@ -11455,14 +11472,14 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 7401
+    .line 7408
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
 
-    .line 7409
+    .line 7416
     :cond_31
     :goto_10
     const/4 v3, 0x3
@@ -11471,27 +11488,27 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7410
+    .line 7417
     move/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 7411
+    .line 7418
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchY:I
 
-    .line 7412
+    .line 7419
     const/4 v15, 0x0
 
-    .line 7413
+    .line 7420
     const/16 v16, 0x0
 
-    .line 7415
+    .line 7422
     move/from16 v0, p3
 
     int-to-float v3, v0
@@ -11504,30 +11521,30 @@
 
     invoke-direct {v0, v3, v4}, Landroid/webkit/WebView;->startScrollingLayer(FF)V
 
-    .line 7416
+    .line 7423
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->startDrag()V
 
-    .line 7420
+    .line 7427
     .end local v17           #detector:Landroid/view/ScaleGestureDetector;
     :cond_32
     const/16 v18, 0x0
 
-    .line 7421
+    .line 7428
     .local v18, done:Z
     const/16 v22, 0x0
 
-    .line 7422
+    .line 7429
     .local v22, keepScrollBarsVisible:Z
     if-nez v15, :cond_37
 
     if-nez v16, :cond_37
 
-    .line 7423
+    .line 7430
     const/16 v18, 0x1
 
     move/from16 v22, v18
 
-    .line 7474
+    .line 7481
     .end local v22           #keepScrollBarsVisible:Z
     :goto_11
     move-object/from16 v0, p0
@@ -11536,7 +11553,7 @@
 
     invoke-direct {v0, v15, v1}, Landroid/webkit/WebView;->doDrag(II)V
 
-    .line 7477
+    .line 7484
     if-eqz v22, :cond_42
 
     move-object/from16 v0, p0
@@ -11547,7 +11564,7 @@
 
     if-eq v3, v4, :cond_42
 
-    .line 7479
+    .line 7486
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
@@ -11556,17 +11573,17 @@
 
     if-eq v3, v4, :cond_33
 
-    .line 7480
+    .line 7487
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 7481
+    .line 7488
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 7484
+    .line 7491
     :cond_33
     invoke-static {}, Landroid/view/ViewConfiguration;->getScrollDefaultDelay()I
 
@@ -11578,7 +11595,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/webkit/WebView;->awakenScrollBars(IZ)Z
 
-    .line 7487
+    .line 7494
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -11601,14 +11618,14 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 7492
+    .line 7499
     if-nez v18, :cond_41
 
     const/4 v3, 0x1
 
     goto/16 :goto_1
 
-    .line 7400
+    .line 7407
     .end local v18           #done:Z
     .restart local v17       #detector:Landroid/view/ScaleGestureDetector;
     :cond_34
@@ -11616,7 +11633,7 @@
 
     goto :goto_f
 
-    .line 7402
+    .line 7409
     :cond_35
     move-object/from16 v0, p0
 
@@ -11628,14 +11645,14 @@
 
     if-lez v3, :cond_31
 
-    .line 7403
+    .line 7410
     const/4 v3, 0x4
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 7404
+    .line 7411
     if-lez v16, :cond_36
 
     const/4 v3, 0x1
@@ -11645,7 +11662,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 7405
+    .line 7412
     const/high16 v3, 0x4000
 
     move-object/from16 v0, p0
@@ -11654,13 +11671,13 @@
 
     goto/16 :goto_10
 
-    .line 7404
+    .line 7411
     :cond_36
     const/4 v3, 0x0
 
     goto :goto_12
 
-    .line 7425
+    .line 7432
     .end local v17           #detector:Landroid/view/ScaleGestureDetector;
     .restart local v18       #done:Z
     .restart local v22       #keepScrollBarsVisible:Z
@@ -11693,14 +11710,14 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
 
-    .line 7428
+    .line 7435
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
     if-eqz v3, :cond_3b
 
-    .line 7429
+    .line 7436
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
@@ -11709,7 +11726,7 @@
 
     if-ne v3, v4, :cond_38
 
-    .line 7431
+    .line 7438
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -11720,14 +11737,14 @@
 
     if-gez v3, :cond_38
 
-    .line 7432
+    .line 7439
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 7435
+    .line 7442
     :cond_38
     move-object/from16 v0, p0
 
@@ -11737,7 +11754,7 @@
 
     if-ne v3, v4, :cond_39
 
-    .line 7437
+    .line 7444
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -11748,14 +11765,14 @@
 
     if-lez v3, :cond_39
 
-    .line 7438
+    .line 7445
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 7452
+    .line 7459
     :cond_39
     :goto_13
     move-object/from16 v0, p0
@@ -11764,7 +11781,7 @@
 
     if-eqz v3, :cond_3a
 
-    .line 7453
+    .line 7460
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
@@ -11775,10 +11792,10 @@
 
     if-ne v3, v4, :cond_3f
 
-    .line 7454
+    .line 7461
     const/16 v16, 0x0
 
-    .line 7459
+    .line 7466
     :cond_3a
     :goto_14
     move/from16 v0, p3
@@ -11787,14 +11804,14 @@
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 7460
+    .line 7467
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchY:I
 
-    .line 7462
+    .line 7469
     mul-int v3, v15, v15
 
     mul-int v4, v16, v16
@@ -11807,21 +11824,21 @@
 
     if-le v3, v4, :cond_40
 
-    .line 7463
+    .line 7470
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 7464
+    .line 7471
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 7471
+    .line 7478
     :goto_15
     move-wide/from16 v0, v19
 
@@ -11831,7 +11848,7 @@
 
     goto/16 :goto_11
 
-    .line 7442
+    .line 7449
     :cond_3b
     move-object/from16 v0, p0
 
@@ -11843,14 +11860,14 @@
 
     if-gez v3, :cond_3d
 
-    .line 7443
+    .line 7450
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 7444
+    .line 7451
     if-lez v15, :cond_3c
 
     const/4 v3, 0x1
@@ -11860,7 +11877,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 7445
+    .line 7452
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -11879,13 +11896,13 @@
 
     goto :goto_13
 
-    .line 7444
+    .line 7451
     :cond_3c
     const/4 v3, 0x0
 
     goto :goto_16
 
-    .line 7446
+    .line 7453
     :cond_3d
     move-object/from16 v0, p0
 
@@ -11897,14 +11914,14 @@
 
     if-lez v3, :cond_39
 
-    .line 7447
+    .line 7454
     const/4 v3, 0x4
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 7448
+    .line 7455
     if-lez v16, :cond_3e
 
     const/4 v3, 0x1
@@ -11914,7 +11931,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 7449
+    .line 7456
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -11933,19 +11950,19 @@
 
     goto/16 :goto_13
 
-    .line 7448
+    .line 7455
     :cond_3e
     const/4 v3, 0x0
 
     goto :goto_17
 
-    .line 7456
+    .line 7463
     :cond_3f
     const/4 v15, 0x0
 
     goto :goto_14
 
-    .line 7466
+    .line 7473
     :cond_40
     const/4 v3, 0x2
 
@@ -11953,26 +11970,26 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 7467
+    .line 7474
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 7468
+    .line 7475
     const/16 v22, 0x1
 
     goto :goto_15
 
-    .line 7492
+    .line 7499
     .end local v22           #keepScrollBarsVisible:Z
     :cond_41
     const/4 v3, 0x0
 
     goto/16 :goto_1
 
-    .line 7494
+    .line 7501
     :cond_42
     move-object/from16 v0, p0
 
@@ -11984,7 +12001,7 @@
 
     goto/16 :goto_0
 
-    .line 7501
+    .line 7508
     .end local v18           #done:Z
     .end local v21           #firstMove:Z
     :pswitch_2
@@ -11994,7 +12011,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mIsTouchOnScreen:Z
 
-    .line 7503
+    .line 7510
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->isFocused()Z
 
     move-result v3
@@ -12003,7 +12020,7 @@
 
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->requestFocus()Z
 
-    .line 7505
+    .line 7512
     :cond_43
     move-object/from16 v0, p0
 
@@ -12026,12 +12043,12 @@
 
     if-eqz v3, :cond_45
 
-    .line 7506
+    .line 7513
     new-instance v24, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v24 .. v24}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 7507
+    .line 7514
     .restart local v24       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     const/4 v3, 0x1
 
@@ -12041,7 +12058,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 7508
+    .line 7515
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -12058,14 +12075,14 @@
 
     aput v5, v3, v4
 
-    .line 7509
+    .line 7516
     move/from16 v0, p2
 
     move-object/from16 v1, v24
 
     iput v0, v1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 7510
+    .line 7517
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -12074,7 +12091,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 7511
+    .line 7518
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -12087,7 +12104,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7512
+    .line 7519
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -12096,7 +12113,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 7513
+    .line 7520
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -12113,7 +12130,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7514
+    .line 7521
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -12122,7 +12139,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 7515
+    .line 7522
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -12131,7 +12148,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 7516
+    .line 7523
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
@@ -12140,7 +12157,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 7517
+    .line 7524
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -12151,7 +12168,7 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 7518
+    .line 7525
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -12164,7 +12181,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 7519
+    .line 7526
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -12173,7 +12190,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 7520
+    .line 7527
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -12184,7 +12201,7 @@
 
     invoke-virtual {v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 7524
+    .line 7531
     .end local v24           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_45
     move-object/from16 v0, p0
@@ -12225,12 +12242,12 @@
 
     if-ne v3, v4, :cond_46
 
-    .line 7526
+    .line 7533
     const/4 v3, 0x1
 
     goto/16 :goto_1
 
-    .line 7528
+    .line 7535
     :cond_46
     move-wide/from16 v0, v19
 
@@ -12238,14 +12255,14 @@
 
     iput-wide v0, v2, Landroid/webkit/WebView;->mLastTouchUpTime:J
 
-    .line 7529
+    .line 7536
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mSentAutoScrollMessage:Z
 
     if-eqz v3, :cond_47
 
-    .line 7530
+    .line 7537
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -12256,7 +12273,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAutoScrollX:I
 
-    .line 7532
+    .line 7539
     :cond_47
     move-object/from16 v0, p0
 
@@ -12264,7 +12281,7 @@
 
     packed-switch v3, :pswitch_data_1
 
-    .line 7697
+    .line 7704
     :cond_48
     :goto_18
     :pswitch_3
@@ -12272,7 +12289,7 @@
 
     goto/16 :goto_0
 
-    .line 7534
+    .line 7541
     :pswitch_4
     move-object/from16 v0, p0
 
@@ -12282,7 +12299,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7535
+    .line 7542
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -12291,7 +12308,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7536
+    .line 7543
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
 
     move-result v3
@@ -12304,13 +12321,13 @@
 
     if-eqz v3, :cond_4a
 
-    .line 7537
+    .line 7544
     :cond_49
     new-instance v24, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v24 .. v24}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 7538
+    .line 7545
     .restart local v24       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     const/4 v3, 0x1
 
@@ -12320,7 +12337,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 7539
+    .line 7546
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -12337,14 +12354,14 @@
 
     aput v5, v3, v4
 
-    .line 7540
+    .line 7547
     const/16 v3, 0x200
 
     move-object/from16 v0, v24
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 7541
+    .line 7548
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -12353,7 +12370,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 7542
+    .line 7549
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -12366,7 +12383,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7543
+    .line 7550
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -12375,7 +12392,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 7544
+    .line 7551
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -12392,7 +12409,7 @@
 
     aput-object v5, v3, v4
 
-    .line 7545
+    .line 7552
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -12401,7 +12418,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 7546
+    .line 7553
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -12410,7 +12427,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 7547
+    .line 7554
     move-object/from16 v0, v24
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -12427,7 +12444,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 7550
+    .line 7557
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -12440,7 +12457,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 7551
+    .line 7558
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -12449,7 +12466,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 7552
+    .line 7559
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -12462,7 +12479,7 @@
 
     goto/16 :goto_18
 
-    .line 7553
+    .line 7560
     .end local v24           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_4a
     move-object/from16 v0, p0
@@ -12473,7 +12490,7 @@
 
     if-eq v3, v4, :cond_48
 
-    .line 7556
+    .line 7563
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -12502,7 +12519,7 @@
 
     if-ne v3, v4, :cond_4c
 
-    .line 7558
+    .line 7565
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mStartTouchX:I
@@ -12529,7 +12546,7 @@
 
     move-result v11
 
-    .line 7559
+    .line 7566
     .local v11, contentX1:I
     move-object/from16 v0, p0
 
@@ -12557,7 +12574,7 @@
 
     move-result v13
 
-    .line 7561
+    .line 7568
     .local v13, contentY1:I
     move-object/from16 v0, p0
 
@@ -12569,7 +12586,7 @@
 
     invoke-virtual {v3, v11, v13}, Landroid/webkit/ZoomManager$HTCSmartZoom;->doDoubleTap(II)V
 
-    .line 7567
+    .line 7574
     .end local v11           #contentX1:I
     .end local v13           #contentY1:I
     :cond_4b
@@ -12582,7 +12599,7 @@
 
     goto/16 :goto_18
 
-    .line 7565
+    .line 7572
     :cond_4c
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->isWatchLaterWebView()Z
 
@@ -12590,7 +12607,7 @@
 
     if-nez v3, :cond_4b
 
-    .line 7566
+    .line 7573
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -12611,7 +12628,7 @@
 
     goto :goto_19
 
-    .line 7573
+    .line 7580
     :pswitch_5
     move-object/from16 v0, p0
 
@@ -12621,7 +12638,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7574
+    .line 7581
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -12630,21 +12647,21 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7575
+    .line 7582
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
     if-eqz v3, :cond_50
 
-    .line 7576
+    .line 7583
     const-string/jumbo v3, "webview"
 
     const-string v4, "Miss a drag as we are waiting for WebCore\'s response for touch down."
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7580
+    .line 7587
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->howToSelection:I
@@ -12657,7 +12674,7 @@
 
     if-eqz v3, :cond_4d
 
-    .line 7581
+    .line 7588
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -12668,7 +12685,7 @@
 
     goto/16 :goto_18
 
-    .line 7586
+    .line 7593
     :cond_4d
     move-object/from16 v0, p0
 
@@ -12690,18 +12707,18 @@
 
     if-lez v3, :cond_4f
 
-    .line 7602
+    .line 7609
     :cond_4e
     invoke-static {}, Landroid/webkit/WebViewCore;->reducePriority()V
 
-    .line 7605
+    .line 7612
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v3}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 7642
+    .line 7649
     :pswitch_6
     move-object/from16 v0, p0
 
@@ -12711,7 +12728,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7643
+    .line 7650
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -12720,7 +12737,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7646
+    .line 7653
     move-object/from16 v0, p0
 
     iget-wide v3, v0, Landroid/webkit/WebView;->mLastTouchTime:J
@@ -12733,14 +12750,14 @@
 
     if-gtz v3, :cond_57
 
-    .line 7647
+    .line 7654
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v3, :cond_56
 
-    .line 7648
+    .line 7655
     const-string/jumbo v3, "webview"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -12781,7 +12798,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7659
+    .line 7666
     :goto_1a
     const/4 v3, 0x3
 
@@ -12789,10 +12806,10 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 7660
+    .line 7667
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->doFling()V
 
-    .line 7662
+    .line 7669
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->howToSelection:I
@@ -12805,7 +12822,7 @@
 
     if-eqz v3, :cond_48
 
-    .line 7663
+    .line 7670
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -12816,13 +12833,13 @@
 
     goto/16 :goto_18
 
-    .line 7612
+    .line 7619
     :cond_4f
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_18
 
-    .line 7616
+    .line 7623
     :cond_50
     move-object/from16 v0, p0
 
@@ -12830,14 +12847,14 @@
 
     if-eqz v3, :cond_52
 
-    .line 7618
+    .line 7625
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v3, :cond_51
 
-    .line 7619
+    .line 7626
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -12848,7 +12865,7 @@
 
     goto/16 :goto_18
 
-    .line 7623
+    .line 7630
     :cond_51
     move-object/from16 v0, p0
 
@@ -12858,12 +12875,12 @@
 
     if-nez v3, :cond_48
 
-    .line 7624
+    .line 7631
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->selectionDone()V
 
     goto/16 :goto_18
 
-    .line 7630
+    .line 7637
     :cond_52
     move-object/from16 v0, p0
 
@@ -12885,7 +12902,7 @@
 
     if-eqz v3, :cond_55
 
-    .line 7632
+    .line 7639
     :cond_53
     move-object/from16 v0, p0
 
@@ -12925,13 +12942,13 @@
 
     goto :goto_1b
 
-    .line 7636
+    .line 7643
     :cond_55
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->doShortPress()V
 
     goto/16 :goto_18
 
-    .line 7654
+    .line 7661
     :cond_56
     move-object/from16 v0, p0
 
@@ -12943,7 +12960,7 @@
 
     goto/16 :goto_1a
 
-    .line 7668
+    .line 7675
     :cond_57
     move-object/from16 v0, p0
 
@@ -12975,10 +12992,10 @@
 
     if-eqz v3, :cond_58
 
-    .line 7671
+    .line 7678
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 7674
+    .line 7681
     :cond_58
     move-object/from16 v0, p0
 
@@ -12992,7 +13009,7 @@
 
     if-eqz v3, :cond_59
 
-    .line 7675
+    .line 7682
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -13001,7 +13018,7 @@
 
     invoke-virtual {v3, v10, v12, v0}, Landroid/webkit/WebView$QuickSelectAbs;->onTouchEvent(IILandroid/view/MotionEvent;)Z
 
-    .line 7680
+    .line 7687
     :cond_59
     const/4 v3, 0x2
 
@@ -13009,10 +13026,10 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 7681
+    .line 7688
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 7687
+    .line 7694
     :pswitch_7
     const/4 v3, 0x0
 
@@ -13020,20 +13037,20 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mLastVelocity:F
 
-    .line 7689
+    .line 7696
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->fnScrollingEnd()V
 
-    .line 7691
+    .line 7698
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 7692
+    .line 7699
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-nez v3, :cond_48
 
-    .line 7693
+    .line 7700
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -13042,7 +13059,7 @@
 
     goto/16 :goto_18
 
-    .line 7702
+    .line 7709
     :pswitch_8
     const/4 v3, 0x1
 
@@ -13058,7 +13075,7 @@
 
     if-eqz v3, :cond_5a
 
-    .line 7703
+    .line 7710
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -13067,7 +13084,7 @@
 
     invoke-virtual {v3, v10, v12, v0}, Landroid/webkit/WebView$QuickSelectAbs;->onTouchEvent(IILandroid/view/MotionEvent;)Z
 
-    .line 7707
+    .line 7714
     :cond_5a
     move-object/from16 v0, p0
 
@@ -13077,7 +13094,7 @@
 
     if-ne v3, v4, :cond_5b
 
-    .line 7708
+    .line 7715
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -13104,10 +13121,10 @@
 
     invoke-virtual/range {v3 .. v9}, Landroid/widget/OverScroller;->springBack(IIIIII)Z
 
-    .line 7710
+    .line 7717
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 7712
+    .line 7719
     :cond_5b
     const/4 v3, 0x0
 
@@ -13115,12 +13132,12 @@
 
     invoke-direct {v0, v10, v12, v3}, Landroid/webkit/WebView;->cancelWebCoreTouchEvent(IIZ)V
 
-    .line 7713
+    .line 7720
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->cancelTouch()V
 
     goto/16 :goto_0
 
-    .line 7106
+    .line 7113
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -13129,7 +13146,7 @@
         :pswitch_8
     .end packed-switch
 
-    .line 7532
+    .line 7539
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_5
@@ -13152,12 +13169,12 @@
     .parameter "y"
 
     .prologue
-    .line 11746
+    .line 11753
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v17
 
-    .line 11752
+    .line 11759
     .local v17, eventTime:J
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewWidth()I
 
@@ -13171,7 +13188,7 @@
 
     move-result p3
 
-    .line 11753
+    .line 11760
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
     move-result v3
@@ -13184,14 +13201,14 @@
 
     move-result p4
 
-    .line 11755
+    .line 11762
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mLastTouchX:I
 
     sub-int v13, v3, p3
 
-    .line 11756
+    .line 11763
     .local v13, deltaX:I
     move-object/from16 v0, p0
 
@@ -13199,7 +13216,7 @@
 
     sub-int v14, v3, p4
 
-    .line 11757
+    .line 11764
     .local v14, deltaY:I
     move-object/from16 v0, p0
 
@@ -13213,7 +13230,7 @@
 
     move-result v10
 
-    .line 11758
+    .line 11765
     .local v10, contentX:I
     move-object/from16 v0, p0
 
@@ -13227,11 +13244,11 @@
 
     move-result v11
 
-    .line 11760
+    .line 11767
     .local v11, contentY:I
     packed-switch p2, :pswitch_data_0
 
-    .line 12376
+    .line 12383
     :cond_0
     :goto_0
     const/4 v3, 0x1
@@ -13239,39 +13256,39 @@
     :goto_1
     return v3
 
-    .line 11763
+    .line 11770
     :pswitch_0
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->hideSingleTapQuickActions()V
-
-    .line 11766
-    const/4 v3, 0x0
-
-    move-object/from16 v0, p0
-
-    iput v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
-
-    .line 11767
-    const/4 v3, 0x0
-
-    move-object/from16 v0, p0
-
-    iput-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
-
-    .line 11768
-    const/4 v3, 0x0
-
-    move-object/from16 v0, p0
-
-    iput-object v3, v0, Landroid/webkit/WebView;->mInitialHitTestResult:Landroid/webkit/WebView$HitTestResult;
 
     .line 11773
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
-    iput-boolean v3, v0, Landroid/webkit/WebView;->shortTapOnWebView:Z
+    iput v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
 
     .line 11774
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p0
+
+    iput-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
+
+    .line 11775
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p0
+
+    iput-object v3, v0, Landroid/webkit/WebView;->mInitialHitTestResult:Landroid/webkit/WebView$HitTestResult;
+
+    .line 11780
+    const/4 v3, 0x0
+
+    move-object/from16 v0, p0
+
+    iput-boolean v3, v0, Landroid/webkit/WebView;->shortTapOnWebView:Z
+
+    .line 11781
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
@@ -13280,7 +13297,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$AutoScrollerWrapper;->findScrollableView(Landroid/webkit/WebView;)V
 
-    .line 11775
+    .line 11782
     sget v3, Landroid/webkit/WebView;->mOverscrollMode:I
 
     const/4 v4, 0x5
@@ -13293,7 +13310,7 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 11776
+    .line 11783
     :cond_1
     move-object/from16 v0, p0
 
@@ -13312,7 +13329,7 @@
     :goto_2
     sput-boolean v3, Landroid/webkit/WebView;->mTopOverScrollEnabled:Z
 
-    .line 11777
+    .line 11784
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollY:I
@@ -13340,7 +13357,7 @@
     :goto_3
     sput-boolean v3, Landroid/webkit/WebView;->mBottomOverScrollEnabled:Z
 
-    .line 11781
+    .line 11788
     :cond_2
     move-object/from16 v0, p0
 
@@ -13352,35 +13369,35 @@
 
     if-nez v3, :cond_a
 
-    .line 11785
+    .line 11792
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v3}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 11786
+    .line 11793
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 11787
+    .line 11794
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
-    .line 11788
+    .line 11795
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 11857
+    .line 11864
     :cond_3
     :goto_4
     move-object/from16 v0, p0
@@ -13395,7 +13412,7 @@
 
     if-eq v3, v4, :cond_5
 
-    .line 11858
+    .line 11865
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
@@ -13410,12 +13427,12 @@
 
     const/16 v20, 0x1
 
-    .line 11859
+    .line 11866
     .local v20, isMoveable:Z
     :goto_5
     if-eqz v20, :cond_4
 
-    .line 11860
+    .line 11867
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
@@ -13424,7 +13441,7 @@
 
     invoke-virtual {v3, v4}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
 
-    .line 11862
+    .line 11869
     :cond_4
     move-object/from16 v0, p0
 
@@ -13437,7 +13454,7 @@
     :goto_6
     invoke-virtual {v4, v3}, Landroid/webkit/WebView$QuickSelectAbs;->hideQuickActions(Z)V
 
-    .line 11864
+    .line 11871
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollX:I
@@ -13448,7 +13465,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 11865
+    .line 11872
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollY:I
@@ -13459,7 +13476,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mSelectY:I
 
-    .line 11870
+    .line 11877
     .end local v20           #isMoveable:Z
     :cond_5
     move-object/from16 v0, p0
@@ -13484,7 +13501,7 @@
 
     if-ne v3, v4, :cond_1a
 
-    .line 11872
+    .line 11879
     :cond_6
     move-object/from16 v0, p0
 
@@ -13496,7 +13513,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 11874
+    .line 11881
     move-object/from16 v0, p0
 
     iget-object v4, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -13518,7 +13535,7 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 11881
+    .line 11888
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
 
     move-result v3
@@ -13531,7 +13548,7 @@
 
     if-eqz v3, :cond_17
 
-    .line 11882
+    .line 11889
     :cond_7
     const/4 v3, 0x3
 
@@ -13539,7 +13556,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
 
-    .line 11889
+    .line 11896
     :goto_8
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->shouldForwardTouchEvent()Z
 
@@ -13547,12 +13564,12 @@
 
     if-eqz v3, :cond_1a
 
-    .line 11890
+    .line 11897
     new-instance v26, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v26 .. v26}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 11891
+    .line 11898
     .local v26, ted:Landroid/webkit/WebViewCore$TouchEventData;
     move/from16 v0, p2
 
@@ -13560,7 +13577,7 @@
 
     iput v0, v1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 11892
+    .line 11899
     const/4 v3, 0x1
 
     new-array v3, v3, [I
@@ -13569,7 +13586,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 11893
+    .line 11900
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -13586,7 +13603,7 @@
 
     aput v5, v3, v4
 
-    .line 11894
+    .line 11901
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -13595,7 +13612,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 11895
+    .line 11902
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -13608,7 +13625,7 @@
 
     aput-object v5, v3, v4
 
-    .line 11896
+    .line 11903
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -13617,7 +13634,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 11897
+    .line 11904
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -13634,7 +13651,7 @@
 
     aput-object v5, v3, v4
 
-    .line 11898
+    .line 11905
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -13643,7 +13660,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 11899
+    .line 11906
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -13652,7 +13669,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 11900
+    .line 11907
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -13669,7 +13686,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 11902
+    .line 11909
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -13682,7 +13699,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 11903
+    .line 11910
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -13691,7 +13708,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 11904
+    .line 11911
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -13702,21 +13719,21 @@
 
     invoke-virtual {v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 11905
+    .line 11912
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
 
     if-eqz v3, :cond_19
 
-    .line 11907
+    .line 11914
     move/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 11908
+    .line 11915
     move/from16 v0, p4
 
     move-object/from16 v1, p0
@@ -13725,20 +13742,20 @@
 
     goto/16 :goto_0
 
-    .line 11776
+    .line 11783
     .end local v26           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_8
     const/4 v3, 0x0
 
     goto/16 :goto_2
 
-    .line 11777
+    .line 11784
     :cond_9
     const/4 v3, 0x0
 
     goto/16 :goto_3
 
-    .line 11789
+    .line 11796
     :cond_a
     move-object/from16 v0, p0
 
@@ -13752,7 +13769,7 @@
 
     if-eqz v3, :cond_e
 
-    .line 11790
+    .line 11797
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -13761,7 +13778,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 11791
+    .line 11798
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v3
@@ -13772,10 +13789,10 @@
 
     if-eqz v3, :cond_b
 
-    .line 11792
+    .line 11799
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->removeTouchHighlight()V
 
-    .line 11794
+    .line 11801
     :cond_b
     mul-int v3, v13, v13
 
@@ -13789,7 +13806,7 @@
 
     if-ge v3, v4, :cond_c
 
-    .line 11795
+    .line 11802
     const/4 v3, 0x6
 
     move-object/from16 v0, p0
@@ -13798,18 +13815,18 @@
 
     goto/16 :goto_4
 
-    .line 11798
+    .line 11805
     :cond_c
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->doShortPress()V
 
-    .line 11799
+    .line 11806
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 11800
+    .line 11807
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
@@ -13846,7 +13863,7 @@
 
     goto :goto_9
 
-    .line 11806
+    .line 11813
     :cond_e
     const/4 v3, 0x1
 
@@ -13854,7 +13871,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 11807
+    .line 11814
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
@@ -13884,14 +13901,14 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
 
-    .line 11811
+    .line 11818
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v3, :cond_f
 
-    .line 11812
+    .line 11819
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -13900,7 +13917,7 @@
 
     invoke-virtual {v3, v4}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 11815
+    .line 11822
     :cond_f
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -13912,26 +13929,26 @@
 
     if-eqz v3, :cond_11
 
-    .line 11816
+    .line 11823
     new-instance v12, Landroid/webkit/WebViewCore$TouchHighlightData;
 
     invoke-direct {v12}, Landroid/webkit/WebViewCore$TouchHighlightData;-><init>()V
 
-    .line 11817
+    .line 11824
     .local v12, data:Landroid/webkit/WebViewCore$TouchHighlightData;
     iput v10, v12, Landroid/webkit/WebViewCore$TouchHighlightData;->mX:I
 
-    .line 11818
+    .line 11825
     iput v11, v12, Landroid/webkit/WebViewCore$TouchHighlightData;->mY:I
 
-    .line 11819
+    .line 11826
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v3, v12, Landroid/webkit/WebViewCore$TouchHighlightData;->mNativeLayerRect:Landroid/graphics/Rect;
 
-    .line 11820
+    .line 11827
     iget-object v3, v12, Landroid/webkit/WebViewCore$TouchHighlightData;->mNativeLayerRect:Landroid/graphics/Rect;
 
     const/4 v4, 0x0
@@ -13944,7 +13961,7 @@
 
     iput v3, v12, Landroid/webkit/WebViewCore$TouchHighlightData;->mNativeLayer:I
 
-    .line 11822
+    .line 11829
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mNavSlop:I
@@ -13957,21 +13974,21 @@
 
     iput v3, v12, Landroid/webkit/WebViewCore$TouchHighlightData;->mSlop:I
 
-    .line 11823
+    .line 11830
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
 
     invoke-virtual {v3}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 11824
+    .line 11831
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v3, :cond_10
 
-    .line 11825
+    .line 11832
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -13980,7 +13997,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebView;->mTouchHighlightRequested:J
 
-    .line 11826
+    .line 11833
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -13989,7 +14006,7 @@
 
     invoke-virtual {v3, v4, v12}, Landroid/webkit/WebViewCore;->sendMessageAtFrontOfQueue(ILjava/lang/Object;)V
 
-    .line 11830
+    .line 11837
     :cond_10
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -14001,7 +14018,7 @@
 
     if-eqz v3, :cond_11
 
-    .line 11831
+    .line 11838
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollX:I
@@ -14012,7 +14029,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchHighlightX:I
 
-    .line 11832
+    .line 11839
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollY:I
@@ -14023,7 +14040,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchHighlightY:I
 
-    .line 11833
+    .line 11840
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -14038,7 +14055,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 11842
+    .line 11849
     .end local v12           #data:Landroid/webkit/WebViewCore$TouchHighlightData;
     :cond_11
     sget-boolean v3, Landroid/webkit/WebView;->mLogEvent:Z
@@ -14057,7 +14074,7 @@
 
     if-gez v3, :cond_12
 
-    .line 11843
+    .line 11850
     const v3, 0x111d6
 
     const/4 v4, 0x2
@@ -14088,7 +14105,7 @@
 
     invoke-static {v3, v4}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 11846
+    .line 11853
     :cond_12
     move-object/from16 v0, p0
 
@@ -14096,14 +14113,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 11847
+    .line 11854
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
-    .line 11848
+    .line 11855
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v10, v11}, Landroid/webkit/WebView;->nativeStartSelection(II)Z
@@ -14114,38 +14131,38 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSelectionStarted:Z
 
-    .line 11852
+    .line 11859
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_4
 
-    .line 11807
+    .line 11814
     :cond_13
     const/4 v3, 0x0
 
     goto/16 :goto_a
 
-    .line 11858
+    .line 11865
     :cond_14
     const/16 v20, 0x0
 
     goto/16 :goto_5
 
-    .line 11862
+    .line 11869
     .restart local v20       #isMoveable:Z
     :cond_15
     const/4 v3, 0x0
 
     goto/16 :goto_6
 
-    .line 11874
+    .line 11881
     .end local v20           #isMoveable:Z
     :cond_16
     const/16 v3, 0x2bc
 
     goto/16 :goto_7
 
-    .line 11883
+    .line 11890
     :cond_17
     move-object/from16 v0, p0
 
@@ -14159,7 +14176,7 @@
 
     if-eqz v3, :cond_18
 
-    .line 11884
+    .line 11891
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
@@ -14168,7 +14185,7 @@
 
     goto/16 :goto_8
 
-    .line 11886
+    .line 11893
     :cond_18
     const/4 v3, 0x0
 
@@ -14178,7 +14195,7 @@
 
     goto/16 :goto_8
 
-    .line 11911
+    .line 11918
     .restart local v26       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_19
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
@@ -14187,7 +14204,7 @@
 
     if-nez v3, :cond_1a
 
-    .line 11912
+    .line 11919
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -14196,7 +14213,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 11913
+    .line 11920
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -14219,7 +14236,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 11919
+    .line 11926
     .end local v26           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_1a
     move/from16 v0, p3
@@ -14238,11 +14255,11 @@
 
     goto/16 :goto_0
 
-    .line 11923
+    .line 11930
     :pswitch_1
     const/16 v19, 0x0
 
-    .line 11924
+    .line 11931
     .local v19, firstMove:Z
     move-object/from16 v0, p0
 
@@ -14262,7 +14279,7 @@
 
     if-lt v3, v4, :cond_1c
 
-    .line 11926
+    .line 11933
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -14271,7 +14288,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 11927
+    .line 11934
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -14280,17 +14297,17 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 11928
+    .line 11935
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
-    .line 11929
+    .line 11936
     const/16 v19, 0x1
 
-    .line 11930
+    .line 11937
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mTouchMode:I
@@ -14299,14 +14316,14 @@
 
     if-ne v3, v4, :cond_1b
 
-    .line 11931
+    .line 11938
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 11933
+    .line 11940
     :cond_1b
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -14318,10 +14335,10 @@
 
     if-eqz v3, :cond_1c
 
-    .line 11934
+    .line 11941
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->removeTouchHighlight()V
 
-    .line 11938
+    .line 11945
     :cond_1c
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->shouldForwardTouchEvent()Z
 
@@ -14353,13 +14370,13 @@
 
     if-lez v3, :cond_1e
 
-    .line 11940
+    .line 11947
     :cond_1d
     new-instance v26, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v26 .. v26}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 11941
+    .line 11948
     .restart local v26       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     move/from16 v0, p2
 
@@ -14367,7 +14384,7 @@
 
     iput v0, v1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 11942
+    .line 11949
     const/4 v3, 0x1
 
     new-array v3, v3, [I
@@ -14376,7 +14393,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 11943
+    .line 11950
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -14393,7 +14410,7 @@
 
     aput v5, v3, v4
 
-    .line 11944
+    .line 11951
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -14402,7 +14419,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 11945
+    .line 11952
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -14415,7 +14432,7 @@
 
     aput-object v5, v3, v4
 
-    .line 11946
+    .line 11953
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -14424,7 +14441,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 11947
+    .line 11954
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -14441,7 +14458,7 @@
 
     aput-object v5, v3, v4
 
-    .line 11948
+    .line 11955
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -14450,7 +14467,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 11949
+    .line 11956
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -14459,7 +14476,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 11950
+    .line 11957
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
@@ -14468,7 +14485,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 11951
+    .line 11958
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -14479,7 +14496,7 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 11952
+    .line 11959
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -14492,7 +14509,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 11953
+    .line 11960
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -14501,7 +14518,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 11954
+    .line 11961
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -14512,21 +14529,21 @@
 
     invoke-virtual {v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 11955
+    .line 11962
     move-wide/from16 v0, v17
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Landroid/webkit/WebView;->mLastSentTouchTime:J
 
-    .line 11956
+    .line 11963
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
 
     if-nez v3, :cond_0
 
-    .line 11959
+    .line 11966
     if-eqz v19, :cond_1e
 
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
@@ -14535,7 +14552,7 @@
 
     if-nez v3, :cond_1e
 
-    .line 11960
+    .line 11967
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -14558,7 +14575,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 11967
+    .line 11974
     .end local v26           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_1e
     move-object/from16 v0, p0
@@ -14573,7 +14590,7 @@
 
     if-ne v3, v4, :cond_1f
 
-    .line 11971
+    .line 11978
     const/4 v3, 0x2
 
     new-array v0, v3, [I
@@ -14582,7 +14599,7 @@
 
     fill-array-data v22, :array_0
 
-    .line 11972
+    .line 11979
     .local v22, offset:[I
     move-object/from16 v0, p0
 
@@ -14590,7 +14607,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->getLocationOnScreen([I)V
 
-    .line 11973
+    .line 11980
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mAutoScrollerWrapper:Landroid/webkit/WebView$AutoScrollerWrapper;
@@ -14605,7 +14622,7 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/webkit/WebView$AutoScrollerWrapper;->doAutoSCroll(FF)Z
 
-    .line 11974
+    .line 11981
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollX:I
@@ -14616,7 +14633,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 11975
+    .line 11982
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollY:I
@@ -14627,7 +14644,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mSelectY:I
 
-    .line 11977
+    .line 11984
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -14636,7 +14653,7 @@
 
     invoke-virtual {v3, v10, v11, v4}, Landroid/webkit/WebViewCore;->doSelection(IIZ)V
 
-    .line 11978
+    .line 11985
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -14659,7 +14676,7 @@
 
     goto/16 :goto_0
 
-    .line 11983
+    .line 11990
     .end local v22           #offset:[I
     :cond_1f
     move-object/from16 v0, p0
@@ -14678,14 +14695,14 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 11989
+    .line 11996
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v3, :cond_24
 
-    .line 11990
+    .line 11997
     const-string/jumbo v3, "webview"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -14740,7 +14757,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11997
+    .line 12004
     :goto_b
     move-object/from16 v0, p0
 
@@ -14754,23 +14771,23 @@
 
     if-eqz v3, :cond_29
 
-    .line 12001
+    .line 12008
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v23
 
-    .line 12002
+    .line 12009
     .local v23, parent:Landroid/view/ViewParent;
     if-eqz v23, :cond_20
 
-    .line 12003
+    .line 12010
     const/4 v3, 0x1
 
     move-object/from16 v0, v23
 
     invoke-interface {v0, v3}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 12005
+    .line 12012
     :cond_20
     move-object/from16 v0, p0
 
@@ -14787,7 +14804,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAutoScrollX:I
 
-    .line 12007
+    .line 12014
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mMinAutoScrollY:I
@@ -14803,7 +14820,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAutoScrollY:I
 
-    .line 12009
+    .line 12016
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAutoScrollX:I
@@ -14823,14 +14840,14 @@
 
     if-nez v3, :cond_22
 
-    .line 12011
+    .line 12018
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSentAutoScrollMessage:Z
 
-    .line 12012
+    .line 12019
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -14841,24 +14858,24 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 12015
+    .line 12022
     :cond_22
     if-nez v13, :cond_23
 
     if-eqz v14, :cond_0
 
-    .line 12016
+    .line 12023
     :cond_23
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v10, v11}, Landroid/webkit/WebView;->nativeExtendSelection(II)V
 
-    .line 12017
+    .line 12024
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 11995
+    .line 12002
     .end local v23           #parent:Landroid/view/ViewParent;
     :cond_24
     move-object/from16 v0, p0
@@ -14871,7 +14888,7 @@
 
     goto :goto_b
 
-    .line 12005
+    .line 12012
     .restart local v23       #parent:Landroid/view/ViewParent;
     :cond_25
     move-object/from16 v0, p0
@@ -14891,7 +14908,7 @@
 
     goto :goto_c
 
-    .line 12007
+    .line 12014
     :cond_27
     move-object/from16 v0, p0
 
@@ -14910,7 +14927,7 @@
 
     goto :goto_d
 
-    .line 12022
+    .line 12029
     .end local v23           #parent:Landroid/view/ViewParent;
     :cond_29
     move-object/from16 v0, p0
@@ -14929,14 +14946,14 @@
 
     if-eq v3, v4, :cond_2e
 
-    .line 12025
+    .line 12032
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
     if-eqz v3, :cond_0
 
-    .line 12029
+    .line 12036
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
@@ -14953,7 +14970,7 @@
 
     if-ne v3, v4, :cond_2b
 
-    .line 12033
+    .line 12040
     :cond_2a
     move-wide/from16 v0, v17
 
@@ -14963,7 +14980,7 @@
 
     goto/16 :goto_0
 
-    .line 12040
+    .line 12047
     :cond_2b
     move-object/from16 v0, p0
 
@@ -14973,7 +14990,7 @@
 
     move-result-object v15
 
-    .line 12042
+    .line 12049
     .local v15, detector:Landroid/view/ScaleGestureDetector;
     move-object/from16 v0, p0
 
@@ -14985,7 +15002,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
 
-    .line 12043
+    .line 12050
     if-eqz v15, :cond_2c
 
     invoke-virtual {v15}, Landroid/view/ScaleGestureDetector;->isInProgress()Z
@@ -14994,7 +15011,7 @@
 
     if-nez v3, :cond_2d
 
-    .line 12045
+    .line 12052
     :cond_2c
     move-object/from16 v0, p0
 
@@ -15006,14 +15023,14 @@
 
     if-gez v3, :cond_31
 
-    .line 12046
+    .line 12053
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 12047
+    .line 12054
     if-lez v13, :cond_30
 
     const/4 v3, 0x1
@@ -15023,14 +15040,14 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 12048
+    .line 12055
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
 
-    .line 12056
+    .line 12063
     :cond_2d
     :goto_f
     const/4 v3, 0x3
@@ -15039,27 +15056,27 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 12057
+    .line 12064
     move/from16 v0, p3
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 12058
+    .line 12065
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchY:I
 
-    .line 12059
+    .line 12066
     const/4 v13, 0x0
 
-    .line 12060
+    .line 12067
     const/4 v14, 0x0
 
-    .line 12062
+    .line 12069
     move/from16 v0, p3
 
     int-to-float v3, v0
@@ -15072,37 +15089,37 @@
 
     invoke-direct {v0, v3, v4}, Landroid/webkit/WebView;->startScrollingLayer(FF)V
 
-    .line 12063
+    .line 12070
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->startDrag()V
 
-    .line 12067
+    .line 12074
     .end local v15           #detector:Landroid/view/ScaleGestureDetector;
     :cond_2e
     const/16 v16, 0x0
 
-    .line 12068
+    .line 12075
     .local v16, done:Z
     const/16 v21, 0x0
 
-    .line 12069
+    .line 12076
     .local v21, keepScrollBarsVisible:Z
     if-nez v13, :cond_33
 
     if-nez v14, :cond_33
 
-    .line 12070
+    .line 12077
     const/16 v16, 0x1
 
     move/from16 v21, v16
 
-    .line 12121
+    .line 12128
     .end local v21           #keepScrollBarsVisible:Z
     :goto_10
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13, v14}, Landroid/webkit/WebView;->doDrag(II)V
 
-    .line 12124
+    .line 12131
     if-eqz v21, :cond_3e
 
     move-object/from16 v0, p0
@@ -15113,7 +15130,7 @@
 
     if-eq v3, v4, :cond_3e
 
-    .line 12126
+    .line 12133
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
@@ -15122,17 +15139,17 @@
 
     if-eq v3, v4, :cond_2f
 
-    .line 12127
+    .line 12134
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 12128
+    .line 12135
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 12131
+    .line 12138
     :cond_2f
     invoke-static {}, Landroid/view/ViewConfiguration;->getScrollDefaultDelay()I
 
@@ -15144,7 +15161,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/webkit/WebView;->awakenScrollBars(IZ)Z
 
-    .line 12134
+    .line 12141
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -15167,14 +15184,14 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 12139
+    .line 12146
     if-nez v16, :cond_3d
 
     const/4 v3, 0x1
 
     goto/16 :goto_1
 
-    .line 12047
+    .line 12054
     .end local v16           #done:Z
     .restart local v15       #detector:Landroid/view/ScaleGestureDetector;
     :cond_30
@@ -15182,7 +15199,7 @@
 
     goto :goto_e
 
-    .line 12049
+    .line 12056
     :cond_31
     move-object/from16 v0, p0
 
@@ -15194,14 +15211,14 @@
 
     if-lez v3, :cond_2d
 
-    .line 12050
+    .line 12057
     const/4 v3, 0x4
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 12051
+    .line 12058
     if-lez v14, :cond_32
 
     const/4 v3, 0x1
@@ -15211,7 +15228,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 12052
+    .line 12059
     const/high16 v3, 0x4000
 
     move-object/from16 v0, p0
@@ -15220,13 +15237,13 @@
 
     goto/16 :goto_f
 
-    .line 12051
+    .line 12058
     :cond_32
     const/4 v3, 0x0
 
     goto :goto_11
 
-    .line 12072
+    .line 12079
     .end local v15           #detector:Landroid/view/ScaleGestureDetector;
     .restart local v16       #done:Z
     .restart local v21       #keepScrollBarsVisible:Z
@@ -15257,14 +15274,14 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
 
-    .line 12075
+    .line 12082
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
     if-eqz v3, :cond_37
 
-    .line 12076
+    .line 12083
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
@@ -15273,7 +15290,7 @@
 
     if-ne v3, v4, :cond_34
 
-    .line 12078
+    .line 12085
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -15284,14 +15301,14 @@
 
     if-gez v3, :cond_34
 
-    .line 12079
+    .line 12086
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 12082
+    .line 12089
     :cond_34
     move-object/from16 v0, p0
 
@@ -15301,7 +15318,7 @@
 
     if-ne v3, v4, :cond_35
 
-    .line 12084
+    .line 12091
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -15312,14 +15329,14 @@
 
     if-lez v3, :cond_35
 
-    .line 12085
+    .line 12092
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 12099
+    .line 12106
     :cond_35
     :goto_12
     move-object/from16 v0, p0
@@ -15328,7 +15345,7 @@
 
     if-eqz v3, :cond_36
 
-    .line 12100
+    .line 12107
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
@@ -15339,10 +15356,10 @@
 
     if-ne v3, v4, :cond_3b
 
-    .line 12101
+    .line 12108
     const/4 v14, 0x0
 
-    .line 12106
+    .line 12113
     :cond_36
     :goto_13
     move/from16 v0, p3
@@ -15351,14 +15368,14 @@
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 12107
+    .line 12114
     move/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mLastTouchY:I
 
-    .line 12109
+    .line 12116
     mul-int v3, v13, v13
 
     mul-int v4, v14, v14
@@ -15371,21 +15388,21 @@
 
     if-le v3, v4, :cond_3c
 
-    .line 12110
+    .line 12117
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 12111
+    .line 12118
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 12118
+    .line 12125
     :goto_14
     move-wide/from16 v0, v17
 
@@ -15395,7 +15412,7 @@
 
     goto/16 :goto_10
 
-    .line 12089
+    .line 12096
     :cond_37
     move-object/from16 v0, p0
 
@@ -15407,14 +15424,14 @@
 
     if-gez v3, :cond_39
 
-    .line 12090
+    .line 12097
     const/4 v3, 0x2
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 12091
+    .line 12098
     if-lez v13, :cond_38
 
     const/4 v3, 0x1
@@ -15424,7 +15441,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 12092
+    .line 12099
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -15443,13 +15460,13 @@
 
     goto :goto_12
 
-    .line 12091
+    .line 12098
     :cond_38
     const/4 v3, 0x0
 
     goto :goto_15
 
-    .line 12093
+    .line 12100
     :cond_39
     move-object/from16 v0, p0
 
@@ -15461,14 +15478,14 @@
 
     if-lez v3, :cond_35
 
-    .line 12094
+    .line 12101
     const/4 v3, 0x4
 
     move-object/from16 v0, p0
 
     iput v3, v0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 12095
+    .line 12102
     if-lez v14, :cond_3a
 
     const/4 v3, 0x1
@@ -15478,7 +15495,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->mSnapPositive:Z
 
-    .line 12096
+    .line 12103
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mAverageAngle:F
@@ -15497,19 +15514,19 @@
 
     goto/16 :goto_12
 
-    .line 12095
+    .line 12102
     :cond_3a
     const/4 v3, 0x0
 
     goto :goto_16
 
-    .line 12103
+    .line 12110
     :cond_3b
     const/4 v13, 0x0
 
     goto :goto_13
 
-    .line 12113
+    .line 12120
     :cond_3c
     const/4 v3, 0x2
 
@@ -15517,26 +15534,26 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 12114
+    .line 12121
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 12115
+    .line 12122
     const/16 v21, 0x1
 
     goto :goto_14
 
-    .line 12139
+    .line 12146
     .end local v21           #keepScrollBarsVisible:Z
     :cond_3d
     const/4 v3, 0x0
 
     goto/16 :goto_1
 
-    .line 12141
+    .line 12148
     :cond_3e
     move-object/from16 v0, p0
 
@@ -15548,7 +15565,7 @@
 
     goto/16 :goto_0
 
-    .line 12147
+    .line 12154
     .end local v16           #done:Z
     .end local v19           #firstMove:Z
     :pswitch_2
@@ -15558,14 +15575,14 @@
 
     invoke-virtual {v3}, Landroid/webkit/WebView$AutoScrollerWrapper;->stopScroll()V
 
-    .line 12152
+    .line 12159
     const/4 v3, 0x0
 
     sput-boolean v3, Landroid/webkit/WebView;->mBottomOverScrollEnabled:Z
 
     sput-boolean v3, Landroid/webkit/WebView;->mTopOverScrollEnabled:Z
 
-    .line 12155
+    .line 12162
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->isFocused()Z
 
     move-result v3
@@ -15574,7 +15591,7 @@
 
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->requestFocus()Z
 
-    .line 12157
+    .line 12164
     :cond_3f
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->shouldForwardTouchEvent()Z
 
@@ -15582,12 +15599,12 @@
 
     if-eqz v3, :cond_40
 
-    .line 12158
+    .line 12165
     new-instance v26, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v26 .. v26}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 12159
+    .line 12166
     .restart local v26       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     const/4 v3, 0x1
 
@@ -15597,7 +15614,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 12160
+    .line 12167
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -15614,14 +15631,14 @@
 
     aput v5, v3, v4
 
-    .line 12161
+    .line 12168
     move/from16 v0, p2
 
     move-object/from16 v1, v26
 
     iput v0, v1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 12162
+    .line 12169
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -15630,7 +15647,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 12163
+    .line 12170
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -15643,7 +15660,7 @@
 
     aput-object v5, v3, v4
 
-    .line 12164
+    .line 12171
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -15652,7 +15669,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 12165
+    .line 12172
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -15669,7 +15686,7 @@
 
     aput-object v5, v3, v4
 
-    .line 12166
+    .line 12173
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -15678,7 +15695,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 12167
+    .line 12174
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -15687,7 +15704,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 12168
+    .line 12175
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
@@ -15696,7 +15713,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 12169
+    .line 12176
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -15707,7 +15724,7 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 12170
+    .line 12177
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -15720,7 +15737,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 12171
+    .line 12178
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -15729,7 +15746,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 12172
+    .line 12179
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -15740,7 +15757,7 @@
 
     invoke-virtual {v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 12174
+    .line 12181
     .end local v26           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_40
     move-wide/from16 v0, v17
@@ -15749,14 +15766,14 @@
 
     iput-wide v0, v2, Landroid/webkit/WebView;->mLastTouchUpTime:J
 
-    .line 12175
+    .line 12182
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mSentAutoScrollMessage:Z
 
     if-eqz v3, :cond_41
 
-    .line 12176
+    .line 12183
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -15767,7 +15784,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mAutoScrollX:I
 
-    .line 12178
+    .line 12185
     :cond_41
     move-object/from16 v0, p0
 
@@ -15775,7 +15792,7 @@
 
     packed-switch v3, :pswitch_data_1
 
-    .line 12349
+    .line 12356
     :cond_42
     :goto_17
     :pswitch_3
@@ -15783,7 +15800,7 @@
 
     goto/16 :goto_0
 
-    .line 12180
+    .line 12187
     :pswitch_4
     move-object/from16 v0, p0
 
@@ -15793,7 +15810,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 12181
+    .line 12188
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -15802,7 +15819,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 12182
+    .line 12189
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
 
     move-result v3
@@ -15815,13 +15832,13 @@
 
     if-eqz v3, :cond_44
 
-    .line 12183
+    .line 12190
     :cond_43
     new-instance v26, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct/range {v26 .. v26}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 12184
+    .line 12191
     .restart local v26       #ted:Landroid/webkit/WebViewCore$TouchEventData;
     const/4 v3, 0x1
 
@@ -15831,7 +15848,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 12185
+    .line 12192
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
@@ -15848,14 +15865,14 @@
 
     aput v5, v3, v4
 
-    .line 12186
+    .line 12193
     const/16 v3, 0x200
 
     move-object/from16 v0, v26
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 12187
+    .line 12194
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -15864,7 +15881,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 12188
+    .line 12195
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
@@ -15877,7 +15894,7 @@
 
     aput-object v5, v3, v4
 
-    .line 12189
+    .line 12196
     const/4 v3, 0x1
 
     new-array v3, v3, [Landroid/graphics/Point;
@@ -15886,7 +15903,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 12190
+    .line 12197
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -15903,7 +15920,7 @@
 
     aput-object v5, v3, v4
 
-    .line 12191
+    .line 12198
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -15912,7 +15929,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 12192
+    .line 12199
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mDeferTouchProcess:Z
@@ -15921,7 +15938,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 12193
+    .line 12200
     move-object/from16 v0, v26
 
     iget-object v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayerRect:Landroid/graphics/Rect;
@@ -15938,7 +15955,7 @@
 
     iput v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mNativeLayer:I
 
-    .line 12196
+    .line 12203
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -15951,7 +15968,7 @@
 
     iput-wide v3, v0, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 12197
+    .line 12204
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -15960,7 +15977,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 12198
+    .line 12205
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -15973,7 +15990,7 @@
 
     goto/16 :goto_17
 
-    .line 12199
+    .line 12206
     .end local v26           #ted:Landroid/webkit/WebViewCore$TouchEventData;
     :cond_44
     move-object/from16 v0, p0
@@ -15984,7 +16001,7 @@
 
     if-eq v3, v4, :cond_42
 
-    .line 12201
+    .line 12208
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -15995,7 +16012,7 @@
 
     invoke-virtual {v3, v10, v11, v4, v5}, Landroid/webkit/WebViewCore;->doSelection(IIZZ)V
 
-    .line 12205
+    .line 12212
     const/4 v3, 0x7
 
     move-object/from16 v0, p0
@@ -16004,7 +16021,7 @@
 
     goto/16 :goto_17
 
-    .line 12211
+    .line 12218
     :pswitch_5
     move-object/from16 v0, p0
 
@@ -16014,7 +16031,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 12212
+    .line 12219
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -16023,21 +16040,21 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 12213
+    .line 12220
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mConfirmMove:Z
 
     if-eqz v3, :cond_48
 
-    .line 12214
+    .line 12221
     const-string/jumbo v3, "webview"
 
     const-string v4, "Miss a drag as we are waiting for WebCore\'s response for touch down."
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12216
+    .line 12223
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mPreventDefault:I
@@ -16058,18 +16075,18 @@
 
     if-lez v3, :cond_47
 
-    .line 12232
+    .line 12239
     :cond_45
     invoke-static {}, Landroid/webkit/WebViewCore;->reducePriority()V
 
-    .line 12235
+    .line 12242
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v3}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 12276
+    .line 12283
     :pswitch_6
     move-object/from16 v0, p0
 
@@ -16079,7 +16096,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 12277
+    .line 12284
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -16088,7 +16105,7 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 12280
+    .line 12287
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mScrollY:I
@@ -16106,11 +16123,11 @@
 
     move-result v25
 
-    .line 12281
+    .line 12288
     .local v25, springBack:Z
     if-nez v25, :cond_4d
 
-    .line 12320
+    .line 12327
     :cond_46
     :goto_19
     const/4 v3, 0x2
@@ -16119,10 +16136,10 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 12321
+    .line 12328
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 12327
+    .line 12334
     .end local v25           #springBack:Z
     :pswitch_7
     const/4 v3, 0x0
@@ -16131,17 +16148,17 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mLastVelocity:F
 
-    .line 12328
+    .line 12335
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 12329
+    .line 12336
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-nez v3, :cond_42
 
-    .line 12330
+    .line 12337
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -16150,13 +16167,13 @@
 
     goto/16 :goto_17
 
-    .line 12242
+    .line 12249
     :cond_47
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_17
 
-    .line 12246
+    .line 12253
     :cond_48
     move-object/from16 v0, p0
 
@@ -16164,7 +16181,7 @@
 
     if-eqz v3, :cond_49
 
-    .line 12248
+    .line 12255
     move-object/from16 v0, p0
 
     invoke-direct {v0, v10, v11}, Landroid/webkit/WebView;->nativeHitSelection(II)Z
@@ -16173,12 +16190,12 @@
 
     if-nez v3, :cond_42
 
-    .line 12249
+    .line 12256
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->selectionDone()V
 
     goto/16 :goto_17
 
-    .line 12255
+    .line 12262
     :cond_49
     move-object/from16 v0, p0
 
@@ -16206,7 +16223,7 @@
 
     if-eqz v3, :cond_4b
 
-    .line 12261
+    .line 12268
     :cond_4a
     move-object/from16 v0, p0
 
@@ -16222,11 +16239,11 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 12268
+    .line 12275
     :cond_4b
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->doShortPress()V
 
-    .line 12269
+    .line 12276
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
@@ -16235,7 +16252,7 @@
 
     goto/16 :goto_17
 
-    .line 12280
+    .line 12287
     :cond_4c
     move-object/from16 v0, p0
 
@@ -16249,7 +16266,7 @@
 
     goto :goto_18
 
-    .line 12288
+    .line 12295
     .restart local v25       #springBack:Z
     :cond_4d
     move-object/from16 v0, p0
@@ -16264,14 +16281,14 @@
 
     if-gtz v3, :cond_4f
 
-    .line 12289
+    .line 12296
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v3, :cond_4e
 
-    .line 12290
+    .line 12297
     const-string/jumbo v3, "webview"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -16312,7 +16329,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12301
+    .line 12308
     :goto_1a
     const/4 v3, 0x3
 
@@ -16320,12 +16337,12 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 12302
+    .line 12309
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->doFling()V
 
     goto/16 :goto_17
 
-    .line 12296
+    .line 12303
     :cond_4e
     move-object/from16 v0, p0
 
@@ -16337,7 +16354,7 @@
 
     goto :goto_1a
 
-    .line 12305
+    .line 12312
     :cond_4f
     move-object/from16 v0, p0
 
@@ -16369,10 +16386,10 @@
 
     if-eqz v3, :cond_50
 
-    .line 12308
+    .line 12315
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 12312
+    .line 12319
     :cond_50
     move-object/from16 v0, p0
 
@@ -16386,12 +16403,12 @@
 
     if-ne v3, v4, :cond_46
 
-    .line 12313
+    .line 12320
     new-instance v24, Landroid/graphics/Rect;
 
     invoke-direct/range {v24 .. v24}, Landroid/graphics/Rect;-><init>()V
 
-    .line 12314
+    .line 12321
     .local v24, r:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -16401,7 +16418,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/HTCWebCore;->nativeGetVSbound(Landroid/graphics/Rect;)I
 
-    .line 12315
+    .line 12322
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -16414,7 +16431,7 @@
 
     goto/16 :goto_19
 
-    .line 12336
+    .line 12343
     .end local v24           #r:Landroid/graphics/Rect;
     .end local v25           #springBack:Z
     :pswitch_8
@@ -16430,7 +16447,7 @@
 
     if-ne v3, v4, :cond_42
 
-    .line 12337
+    .line 12344
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -16439,7 +16456,7 @@
 
     iput-boolean v4, v3, Landroid/webkit/WebView$QuickSelectAbs;->showMagnifier:Z
 
-    .line 12338
+    .line 12345
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -16448,7 +16465,7 @@
 
     invoke-virtual {v3}, Landroid/webkit/MagnifyView;->dismiss()V
 
-    .line 12342
+    .line 12349
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
@@ -16457,7 +16474,7 @@
 
     invoke-virtual {v3, v4}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
 
-    .line 12343
+    .line 12350
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -16470,7 +16487,7 @@
 
     goto/16 :goto_17
 
-    .line 12353
+    .line 12360
     :pswitch_9
     move-object/from16 v0, p0
 
@@ -16480,7 +16497,7 @@
 
     if-ne v3, v4, :cond_51
 
-    .line 12354
+    .line 12361
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -16507,10 +16524,10 @@
 
     invoke-virtual/range {v3 .. v9}, Landroid/widget/OverScroller;->springBack(IIIIII)Z
 
-    .line 12356
+    .line 12363
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 12360
+    .line 12367
     :cond_51
     move-object/from16 v0, p0
 
@@ -16518,7 +16535,7 @@
 
     invoke-virtual {v3}, Landroid/webkit/WebView$AutoScrollerWrapper;->stopScroll()V
 
-    .line 12361
+    .line 12368
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
@@ -16539,7 +16556,7 @@
 
     if-eq v3, v4, :cond_52
 
-    .line 12363
+    .line 12370
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -16548,7 +16565,7 @@
 
     iput-boolean v4, v3, Landroid/webkit/WebView$QuickSelectAbs;->showMagnifier:Z
 
-    .line 12364
+    .line 12371
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -16557,12 +16574,12 @@
 
     invoke-virtual {v3}, Landroid/webkit/MagnifyView;->dismiss()V
 
-    .line 12365
+    .line 12372
     new-instance v24, Landroid/graphics/Rect;
 
     invoke-direct/range {v24 .. v24}, Landroid/graphics/Rect;-><init>()V
 
-    .line 12366
+    .line 12373
     .restart local v24       #r:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -16572,7 +16589,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/HTCWebCore;->nativeGetVSbound(Landroid/graphics/Rect;)I
 
-    .line 12367
+    .line 12374
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
@@ -16583,7 +16600,7 @@
 
     invoke-virtual {v3, v0, v4}, Landroid/webkit/WebView$QuickSelectAbs;->showQuickActions(Landroid/graphics/Rect;I)V
 
-    .line 12371
+    .line 12378
     .end local v24           #r:Landroid/graphics/Rect;
     :cond_52
     const/4 v3, 0x0
@@ -16592,12 +16609,12 @@
 
     invoke-direct {v0, v10, v11, v3}, Landroid/webkit/WebView;->cancelWebCoreTouchEvent(IIZ)V
 
-    .line 12372
+    .line 12379
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebView;->cancelTouch()V
 
     goto/16 :goto_0
 
-    .line 11760
+    .line 11767
     nop
 
     :pswitch_data_0
@@ -16608,14 +16625,14 @@
         :pswitch_9
     .end packed-switch
 
-    .line 11971
+    .line 11978
     :array_0
     .array-data 0x4
         0x0t 0x0t 0x0t 0x0t
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 12178
+    .line 12185
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_5
@@ -16634,12 +16651,12 @@
     .locals 3
 
     .prologue
-    .line 5700
+    .line 5707
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 5701
+    .line 5708
     .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_1
 
@@ -16663,7 +16680,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 5703
+    .line 5710
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->getWindowToken()Landroid/os/IBinder;
 
@@ -16673,7 +16690,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 5705
+    .line 5712
     :cond_1
     return-void
 .end method
@@ -16684,7 +16701,7 @@
     .parameter "contentY"
 
     .prologue
-    .line 6906
+    .line 6913
     invoke-virtual {p0}, Landroid/webkit/WebView;->isWatchLaterWebView()Z
 
     move-result v0
@@ -16727,25 +16744,25 @@
 
     const/4 v10, 0x7
 
-    .line 2846
+    .line 2850
     iget v8, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v8, :cond_1
 
     move-object v3, v7
 
-    .line 2917
+    .line 2921
     :cond_0
     :goto_0
     return-object v3
 
-    .line 2850
+    .line 2854
     :cond_1
     new-instance v3, Landroid/webkit/WebView$HitTestResult;
 
     invoke-direct {v3, p0}, Landroid/webkit/WebView$HitTestResult;-><init>(Landroid/webkit/WebView;)V
 
-    .line 2853
+    .line 2857
     .local v3, result:Landroid/webkit/WebView$HitTestResult;
     iget v8, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
@@ -16757,7 +16774,7 @@
 
     move-result v1
 
-    .line 2854
+    .line 2858
     .local v1, contentX:I
     iget v8, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
@@ -16769,7 +16786,7 @@
 
     move-result v2
 
-    .line 2856
+    .line 2860
     .local v2, contentY:I
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHasCursorNode()Z
 
@@ -16777,10 +16794,10 @@
 
     if-eqz v8, :cond_b
 
-    .line 2858
+    .line 2862
     const/4 v0, 0x1
 
-    .line 2859
+    .line 2863
     .local v0, checkCursor:Z
     iget-boolean v8, p0, Landroid/webkit/WebView;->triggerByTouch:Z
 
@@ -16792,16 +16809,16 @@
 
     if-nez v8, :cond_2
 
-    .line 2861
+    .line 2865
     const/4 v0, 0x0
 
-    .line 2863
+    .line 2867
     :cond_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 2864
+    .line 2868
     .local v6, url:Ljava/lang/String;
     if-eqz v6, :cond_3
 
@@ -16815,10 +16832,10 @@
 
     if-ne v8, v9, :cond_3
 
-    .line 2865
+    .line 2869
     const/4 v0, 0x1
 
-    .line 2868
+    .line 2872
     :cond_3
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorIsTextInput()Z
 
@@ -16826,13 +16843,13 @@
 
     if-eqz v8, :cond_6
 
-    .line 2869
+    .line 2873
     const/16 v7, 0x9
 
     #calls: Landroid/webkit/WebView$HitTestResult;->setType(I)V
     invoke-static {v3, v7}, Landroid/webkit/WebView$HitTestResult;->access$800(Landroid/webkit/WebView$HitTestResult;I)V
 
-    .line 2903
+    .line 2907
     .end local v0           #checkCursor:Z
     .end local v6           #url:Ljava/lang/String;
     :cond_4
@@ -16841,23 +16858,23 @@
 
     move-result v5
 
-    .line 2904
+    .line 2908
     .local v5, type:I
     if-eqz v5, :cond_5
 
     if-ne v5, v10, :cond_0
 
-    .line 2909
+    .line 2913
     :cond_5
     invoke-direct {p0, v1, v2}, Landroid/webkit/WebView;->nativeImageURI(II)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 2910
+    .line 2914
     .local v4, text:Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 2911
+    .line 2915
     if-nez v5, :cond_c
 
     const/4 v7, 0x5
@@ -16866,13 +16883,13 @@
     #calls: Landroid/webkit/WebView$HitTestResult;->setType(I)V
     invoke-static {v3, v7}, Landroid/webkit/WebView$HitTestResult;->access$800(Landroid/webkit/WebView$HitTestResult;I)V
 
-    .line 2914
+    .line 2918
     #calls: Landroid/webkit/WebView$HitTestResult;->setExtra(Ljava/lang/String;)V
     invoke-static {v3, v4}, Landroid/webkit/WebView$HitTestResult;->access$900(Landroid/webkit/WebView$HitTestResult;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2872
+    .line 2876
     .end local v4           #text:Ljava/lang/String;
     .end local v5           #type:I
     .restart local v0       #checkCursor:Z
@@ -16884,12 +16901,12 @@
 
     move-result-object v4
 
-    .line 2875
+    .line 2879
     .restart local v4       #text:Ljava/lang/String;
     :goto_3
     if-eqz v4, :cond_4
 
-    .line 2876
+    .line 2880
     const-string/jumbo v7, "tel:"
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -16898,13 +16915,13 @@
 
     if-eqz v7, :cond_8
 
-    .line 2877
+    .line 2881
     const/4 v7, 0x2
 
     #calls: Landroid/webkit/WebView$HitTestResult;->setType(I)V
     invoke-static {v3, v7}, Landroid/webkit/WebView$HitTestResult;->access$800(Landroid/webkit/WebView$HitTestResult;I)V
 
-    .line 2878
+    .line 2882
     const-string/jumbo v7, "tel:"
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
@@ -16924,10 +16941,10 @@
     :cond_7
     move-object v4, v7
 
-    .line 2872
+    .line 2876
     goto :goto_3
 
-    .line 2879
+    .line 2883
     .restart local v4       #text:Ljava/lang/String;
     :cond_8
     const-string/jumbo v7, "mailto:"
@@ -16938,13 +16955,13 @@
 
     if-eqz v7, :cond_9
 
-    .line 2880
+    .line 2884
     const/4 v7, 0x4
 
     #calls: Landroid/webkit/WebView$HitTestResult;->setType(I)V
     invoke-static {v3, v7}, Landroid/webkit/WebView$HitTestResult;->access$800(Landroid/webkit/WebView$HitTestResult;I)V
 
-    .line 2881
+    .line 2885
     const-string/jumbo v7, "mailto:"
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
@@ -16960,7 +16977,7 @@
 
     goto :goto_1
 
-    .line 2882
+    .line 2886
     :cond_9
     const-string v7, "geo:0,0?q="
 
@@ -16970,13 +16987,13 @@
 
     if-eqz v7, :cond_a
 
-    .line 2883
+    .line 2887
     const/4 v7, 0x3
 
     #calls: Landroid/webkit/WebView$HitTestResult;->setType(I)V
     invoke-static {v3, v7}, Landroid/webkit/WebView$HitTestResult;->access$800(Landroid/webkit/WebView$HitTestResult;I)V
 
-    .line 2884
+    .line 2888
     const-string v7, "geo:0,0?q="
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
@@ -16996,7 +17013,7 @@
 
     goto :goto_1
 
-    .line 2886
+    .line 2890
     :cond_a
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorIsAnchor()Z
 
@@ -17004,36 +17021,36 @@
 
     if-eqz v7, :cond_4
 
-    .line 2887
+    .line 2891
     #calls: Landroid/webkit/WebView$HitTestResult;->setType(I)V
     invoke-static {v3, v10}, Landroid/webkit/WebView$HitTestResult;->access$800(Landroid/webkit/WebView$HitTestResult;I)V
 
-    .line 2888
+    .line 2892
     #calls: Landroid/webkit/WebView$HitTestResult;->setExtra(Ljava/lang/String;)V
     invoke-static {v3, v4}, Landroid/webkit/WebView$HitTestResult;->access$900(Landroid/webkit/WebView$HitTestResult;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 2892
+    .line 2896
     .end local v0           #checkCursor:Z
     .end local v4           #text:Ljava/lang/String;
     .end local v6           #url:Ljava/lang/String;
     :cond_b
     if-eqz p1, :cond_4
 
-    .line 2900
+    .line 2904
     const-string/jumbo v7, "webview"
 
     const-string v8, "hitTestResult use fallback"
 
     invoke-static {v7, v8}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2901
+    .line 2905
     move-object v3, p1
 
     goto/16 :goto_1
 
-    .line 2911
+    .line 2915
     .restart local v4       #text:Ljava/lang/String;
     .restart local v5       #type:I
     :cond_c
@@ -17046,7 +17063,7 @@
     .locals 1
 
     .prologue
-    .line 2752
+    .line 2756
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     if-eqz v0, :cond_0
@@ -17074,7 +17091,7 @@
     .locals 1
 
     .prologue
-    .line 6929
+    .line 6936
     iget-object v0, p0, Landroid/webkit/WebView;->mFullScreenHolder:Landroid/webkit/PluginFullScreenHolder;
 
     if-eqz v0, :cond_0
@@ -17190,63 +17207,7 @@
 
     iput v4, p0, Landroid/webkit/WebView;->mNavSlop:I
 
-    .line 1423
-    iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
-
-    invoke-virtual {v4, v1}, Landroid/webkit/ZoomManager;->init(F)V
-
     .line 1424
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
-
-    move-result v4
-
-    iput v4, p0, Landroid/webkit/WebView;->mMaximumFling:I
-
-    .line 1427
-    const/high16 v4, 0x3f80
-
-    mul-float v5, v1, v1
-
-    div-float/2addr v4, v5
-
-    iput v4, p0, Landroid/webkit/WebView;->DRAG_LAYER_INVERSE_DENSITY_SQUARED:F
-
-    .line 1429
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledOverscrollDistance()I
-
-    move-result v4
-
-    iput v4, p0, Landroid/webkit/WebView;->mOverscrollDistance:I
-
-    .line 1430
-    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledOverflingDistance()I
-
-    move-result v4
-
-    iput v4, p0, Landroid/webkit/WebView;->mOverflingDistance:I
-
-    .line 1432
-    invoke-super {p0}, Landroid/widget/AbsoluteLayout;->getScrollBarStyle()I
-
-    move-result v4
-
-    invoke-virtual {p0, v4}, Landroid/webkit/WebView;->setScrollBarStyle(I)V
-
-    .line 1435
-    new-instance v4, Ljava/util/Vector;
-
-    const/4 v5, 0x2
-
-    invoke-direct {v4, v5}, Ljava/util/Vector;-><init>(I)V
-
-    iput-object v4, p0, Landroid/webkit/WebView;->mKeysPressed:Ljava/util/Vector;
-
-    .line 1436
-    const/4 v4, 0x0
-
-    iput-object v4, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
-
-    .line 1440
     iget-object v4, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -17261,24 +17222,80 @@
 
     iput-boolean v4, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
-    .line 1441
+    .line 1425
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget-boolean v5, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     invoke-virtual {v4, v5}, Landroid/webkit/ZoomManager;->setIsBrowserApp(Z)V
 
-    .line 1445
+    .line 1427
+    iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
+
+    invoke-virtual {v4, v1}, Landroid/webkit/ZoomManager;->init(F)V
+
+    .line 1428
+    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
+
+    move-result v4
+
+    iput v4, p0, Landroid/webkit/WebView;->mMaximumFling:I
+
+    .line 1431
+    const/high16 v4, 0x3f80
+
+    mul-float v5, v1, v1
+
+    div-float/2addr v4, v5
+
+    iput v4, p0, Landroid/webkit/WebView;->DRAG_LAYER_INVERSE_DENSITY_SQUARED:F
+
+    .line 1433
+    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledOverscrollDistance()I
+
+    move-result v4
+
+    iput v4, p0, Landroid/webkit/WebView;->mOverscrollDistance:I
+
+    .line 1434
+    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledOverflingDistance()I
+
+    move-result v4
+
+    iput v4, p0, Landroid/webkit/WebView;->mOverflingDistance:I
+
+    .line 1436
+    invoke-super {p0}, Landroid/widget/AbsoluteLayout;->getScrollBarStyle()I
+
+    move-result v4
+
+    invoke-virtual {p0, v4}, Landroid/webkit/WebView;->setScrollBarStyle(I)V
+
+    .line 1439
+    new-instance v4, Ljava/util/Vector;
+
+    const/4 v5, 0x2
+
+    invoke-direct {v4, v5}, Ljava/util/Vector;-><init>(I)V
+
+    iput-object v4, p0, Landroid/webkit/WebView;->mKeysPressed:Ljava/util/Vector;
+
+    .line 1440
+    const/4 v4, 0x0
+
+    iput-object v4, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
+
+    .line 1449
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnIsHtcApplication()Z
 
     move-result v4
 
     if-ne v4, v6, :cond_3
 
-    .line 1446
+    .line 1450
     invoke-virtual {p0, v6}, Landroid/webkit/WebView;->setZoomType(I)V
 
-    .line 1450
+    .line 1454
     :goto_1
     iget-object v4, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
@@ -17294,10 +17311,10 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1452
+    .line 1456
     invoke-virtual {p0}, Landroid/webkit/WebView;->InitTabEffectPivot()V
 
-    .line 1454
+    .line 1458
     return-void
 
     .line 1401
@@ -17358,7 +17375,7 @@
     .line 1414
     goto/16 :goto_0
 
-    .line 1448
+    .line 1452
     :cond_3
     invoke-virtual {p0, v7}, Landroid/webkit/WebView;->setZoomType(I)V
 
@@ -17387,16 +17404,16 @@
 
     const/4 v3, 0x1
 
-    .line 4263
+    .line 4267
     iget-object v5, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-nez v5, :cond_0
 
-    .line 4306
+    .line 4310
     :goto_0
     return-void
 
-    .line 4266
+    .line 4270
     :cond_0
     iget-object v5, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
@@ -17404,7 +17421,7 @@
 
     move-result-object v0
 
-    .line 4268
+    .line 4272
     .local v0, accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
 
@@ -17412,12 +17429,12 @@
 
     if-nez v5, :cond_1
 
-    .line 4270
+    .line 4274
     invoke-direct {p0, v4}, Landroid/webkit/WebView;->ensureAccessibilityScriptInjectorInstance(Z)V
 
     goto :goto_0
 
-    .line 4274
+    .line 4278
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -17429,24 +17446,24 @@
 
     if-nez v5, :cond_2
 
-    .line 4276
+    .line 4280
     invoke-direct {p0, v3}, Landroid/webkit/WebView;->ensureAccessibilityScriptInjectorInstance(Z)V
 
     goto :goto_0
 
-    .line 4281
+    .line 4285
     :cond_2
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->getAxsUrlParameterValue(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 4282
+    .line 4286
     .local v1, axsParameterValue:I
     const/4 v5, -0x1
 
     if-ne v1, v5, :cond_5
 
-    .line 4283
+    .line 4287
     iget-object v5, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -17463,20 +17480,20 @@
 
     move v2, v3
 
-    .line 4285
+    .line 4289
     .local v2, onDeviceScriptInjectionEnabled:Z
     :goto_1
     if-eqz v2, :cond_4
 
-    .line 4286
+    .line 4290
     invoke-direct {p0, v4}, Landroid/webkit/WebView;->ensureAccessibilityScriptInjectorInstance(Z)V
 
-    .line 4288
+    .line 4292
     const-string/jumbo v4, "javascript:(function() {    var chooser = document.createElement(\'script\');    chooser.type = \'text/javascript\';    chooser.src = \'https://ssl.gstatic.com/accessibility/javascript/android/AndroidScriptChooser.user.js\';    document.getElementsByTagName(\'head\')[0].appendChild(chooser);  })();"
 
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 4291
+    .line 4295
     iput-boolean v3, p0, Landroid/webkit/WebView;->mAccessibilityScriptInjected:Z
 
     goto :goto_0
@@ -17485,41 +17502,41 @@
     :cond_3
     move v2, v4
 
-    .line 4283
+    .line 4287
     goto :goto_1
 
-    .line 4294
+    .line 4298
     .restart local v2       #onDeviceScriptInjectionEnabled:Z
     :cond_4
     invoke-direct {p0, v3}, Landroid/webkit/WebView;->ensureAccessibilityScriptInjectorInstance(Z)V
 
     goto :goto_0
 
-    .line 4296
+    .line 4300
     .end local v2           #onDeviceScriptInjectionEnabled:Z
     :cond_5
     if-nez v1, :cond_6
 
-    .line 4298
+    .line 4302
     invoke-direct {p0, v3}, Landroid/webkit/WebView;->ensureAccessibilityScriptInjectorInstance(Z)V
 
     goto :goto_0
 
-    .line 4299
+    .line 4303
     :cond_6
     if-ne v1, v3, :cond_7
 
-    .line 4300
+    .line 4304
     invoke-direct {p0, v4}, Landroid/webkit/WebView;->ensureAccessibilityScriptInjectorInstance(Z)V
 
-    .line 4302
+    .line 4306
     const-string/jumbo v3, "javascript:(function() {    var chooser = document.createElement(\'script\');    chooser.type = \'text/javascript\';    chooser.src = \'https://ssl.gstatic.com/accessibility/javascript/android/AndroidScriptChooser.user.js\';    document.getElementsByTagName(\'head\')[0].appendChild(chooser);  })();"
 
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 4304
+    .line 4308
     :cond_7
     const-string/jumbo v3, "webview"
 
@@ -17551,7 +17568,7 @@
     .parameter "r"
 
     .prologue
-    .line 3178
+    .line 3182
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -17562,7 +17579,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Landroid/webkit/WebView;->viewInvalidate(IIII)V
 
-    .line 3179
+    .line 3183
     return-void
 .end method
 
@@ -17571,7 +17588,7 @@
     .parameter "keyCode"
 
     .prologue
-    .line 5981
+    .line 5988
     const/16 v0, 0x17
 
     if-eq p1, v0, :cond_0
@@ -17600,7 +17617,7 @@
     .locals 3
 
     .prologue
-    .line 1516
+    .line 1520
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContentWidth()I
 
     move-result v0
@@ -17662,10 +17679,10 @@
     .parameter "keyCode"
 
     .prologue
-    .line 8228
+    .line 8235
     packed-switch p1, :pswitch_data_0
 
-    .line 8238
+    .line 8245
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "keyCode must be one of {KEYCODE_DPAD_UP, KEYCODE_DPAD_RIGHT, KEYCODE_DPAD_DOWN, KEYCODE_DPAD_LEFT}."
@@ -17674,33 +17691,33 @@
 
     throw v0
 
-    .line 8230
+    .line 8237
     :pswitch_0
     const/4 v0, 0x2
 
-    .line 8236
+    .line 8243
     :goto_0
     return v0
 
-    .line 8232
+    .line 8239
     :pswitch_1
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 8234
+    .line 8241
     :pswitch_2
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 8236
+    .line 8243
     :pswitch_3
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 8228
+    .line 8235
     :pswitch_data_0
     .packed-switch 0x13
         :pswitch_0
@@ -17718,17 +17735,17 @@
     .parameter "metaState"
 
     .prologue
-    .line 11058
+    .line 11065
     if-eqz p4, :cond_0
 
-    .line 11059
+    .line 11066
     const/4 v5, 0x0
 
-    .line 11060
+    .line 11067
     .local v5, keyEventAction:I
     const/16 v12, 0x67
 
-    .line 11061
+    .line 11068
     .local v12, eventHubAction:I
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->keyCodeToSoundsEffect(I)I
 
@@ -17736,7 +17753,7 @@
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->playSoundEffect(I)V
 
-    .line 11067
+    .line 11074
     :goto_0
     new-instance v0, Landroid/view/KeyEvent;
 
@@ -17766,23 +17783,23 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/view/KeyEvent;-><init>(JJIIIIIII)V
 
-    .line 11072
+    .line 11079
     .local v0, event:Landroid/view/KeyEvent;
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v1, v12, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 11073
+    .line 11080
     return-void
 
-    .line 11063
+    .line 11070
     .end local v0           #event:Landroid/view/KeyEvent;
     .end local v5           #keyEventAction:I
     .end local v12           #eventHubAction:I
     :cond_0
     const/4 v5, 0x1
 
-    .line 11064
+    .line 11071
     .restart local v5       #keyEventAction:I
     const/16 v12, 0x68
 
@@ -17797,18 +17814,18 @@
     .parameter "encoding"
 
     .prologue
-    .line 2422
+    .line 2426
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "data:"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 2423
+    .line 2427
     .local v0, dataUrl:Ljava/lang/StringBuilder;
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2424
+    .line 2428
     const-string v1, "base64"
 
     invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -17817,28 +17834,28 @@
 
     if-eqz v1, :cond_0
 
-    .line 2425
+    .line 2429
     const-string v1, ";base64"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2427
+    .line 2431
     :cond_0
     const-string v1, ","
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2428
+    .line 2432
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2429
+    .line 2433
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->loadUrlImpl(Ljava/lang/String;)V
 
-    .line 2430
+    .line 2434
     return-void
 .end method
 
@@ -17847,14 +17864,14 @@
     .parameter "url"
 
     .prologue
-    .line 2362
+    .line 2366
     if-nez p1, :cond_0
 
-    .line 2366
+    .line 2370
     :goto_0
     return-void
 
-    .line 2365
+    .line 2369
     :cond_0
     const/4 v0, 0x0
 
@@ -17880,42 +17897,42 @@
     .end annotation
 
     .prologue
-    .line 2340
+    .line 2344
     .local p2, extraHeaders:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 2341
+    .line 2345
     new-instance v0, Landroid/webkit/WebViewCore$GetUrlData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$GetUrlData;-><init>()V
 
-    .line 2342
+    .line 2346
     .local v0, arg:Landroid/webkit/WebViewCore$GetUrlData;
     iput-object p1, v0, Landroid/webkit/WebViewCore$GetUrlData;->mUrl:Ljava/lang/String;
 
-    .line 2343
+    .line 2347
     iput-object p2, v0, Landroid/webkit/WebViewCore$GetUrlData;->mExtraHeaders:Ljava/util/Map;
 
-    .line 2344
+    .line 2348
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v1, :cond_0
 
-    .line 2345
+    .line 2349
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x64
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 2349
+    .line 2353
     :goto_0
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
-    .line 2350
+    .line 2354
     return-void
 
-    .line 2347
+    .line 2351
     :cond_0
     const-string/jumbo v1, "webview"
 
@@ -18228,36 +18245,36 @@
     .parameter "time"
 
     .prologue
-    .line 11078
+    .line 11085
     iget v8, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v8, :cond_1
 
-    .line 11079
+    .line 11086
     const/4 v1, 0x0
 
-    .line 11133
+    .line 11140
     :cond_0
     :goto_0
     return v1
 
-    .line 11081
+    .line 11088
     :cond_1
     const/4 v8, 0x0
 
     iput-object v8, p0, Landroid/webkit/WebView;->mInitialHitTestResult:Landroid/webkit/WebView$HitTestResult;
 
-    .line 11082
+    .line 11089
     iput-wide p4, p0, Landroid/webkit/WebView;->mLastCursorTime:J
 
-    .line 11083
+    .line 11090
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeGetCursorRingBounds()Landroid/graphics/Rect;
 
     move-result-object v8
 
     iput-object v8, p0, Landroid/webkit/WebView;->mLastCursorBounds:Landroid/graphics/Rect;
 
-    .line 11084
+    .line 11091
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/WebView;->nativeMoveCursor(IIZ)Z
 
     move-result v8
@@ -18266,17 +18283,17 @@
 
     const/4 v1, 0x1
 
-    .line 11091
+    .line 11098
     .local v1, keyHandled:Z
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 11094
+    .line 11101
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeGetCursorRingBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 11095
+    .line 11102
     .local v0, contentCursorRingBounds:Landroid/graphics/Rect;
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -18284,12 +18301,12 @@
 
     if-nez v8, :cond_0
 
-    .line 11096
+    .line 11103
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->contentToViewRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v6
 
-    .line 11098
+    .line 11105
     .local v6, viewCursorRingBounds:Landroid/graphics/Rect;
     iget v8, v6, Landroid/graphics/Rect;->left:I
 
@@ -18301,7 +18318,7 @@
 
     iput v8, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 11099
+    .line 11106
     iget v8, v6, Landroid/graphics/Rect;->top:I
 
     iget v9, v6, Landroid/graphics/Rect;->bottom:I
@@ -18312,26 +18329,26 @@
 
     iput v8, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
-    .line 11100
+    .line 11107
     iget-boolean v8, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
     if-eqz v8, :cond_0
 
-    .line 11103
+    .line 11110
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
-    .line 11104
+    .line 11111
     .local v7, visRect:Landroid/graphics/Rect;
     invoke-direct {p0, v7}, Landroid/webkit/WebView;->calcOurVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 11105
+    .line 11112
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5, v7}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 11106
+    .line 11113
     .local v5, outset:Landroid/graphics/Rect;
     invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
@@ -18339,7 +18356,7 @@
 
     div-int/lit8 v3, v8, 0x2
 
-    .line 11107
+    .line 11114
     .local v3, maxXScroll:I
     invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
@@ -18347,7 +18364,7 @@
 
     div-int/lit8 v4, v8, 0x2
 
-    .line 11108
+    .line 11115
     .local v4, maxYScroll:I
     neg-int v8, v3
 
@@ -18355,14 +18372,14 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 11109
+    .line 11116
     invoke-static {v5, v6}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 11113
+    .line 11120
     iget v8, v6, Landroid/graphics/Rect;->right:I
 
     iget v9, v7, Landroid/graphics/Rect;->right:I
@@ -18373,11 +18390,11 @@
 
     move-result v2
 
-    .line 11115
+    .line 11122
     .local v2, maxH:I
     if-lez v2, :cond_4
 
-    .line 11116
+    .line 11123
     const/4 v8, 0x0
 
     const/4 v9, 0x1
@@ -18386,7 +18403,7 @@
 
     invoke-direct {p0, v2, v8, v9, v10}, Landroid/webkit/WebView;->pinScrollBy(IIZI)Z
 
-    .line 11124
+    .line 11131
     :cond_2
     :goto_2
     iget-object v8, p0, Landroid/webkit/WebView;->mLastCursorBounds:Landroid/graphics/Rect;
@@ -18397,7 +18414,7 @@
 
     if-nez v8, :cond_0
 
-    .line 11125
+    .line 11132
     iget-object v8, p0, Landroid/webkit/WebView;->mLastCursorBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
@@ -18406,12 +18423,12 @@
 
     if-nez v8, :cond_0
 
-    .line 11132
+    .line 11139
     invoke-virtual {p0, v6}, Landroid/webkit/WebView;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
 
     goto/16 :goto_0
 
-    .line 11084
+    .line 11091
     .end local v0           #contentCursorRingBounds:Landroid/graphics/Rect;
     .end local v1           #keyHandled:Z
     .end local v2           #maxH:I
@@ -18425,7 +18442,7 @@
 
     goto :goto_1
 
-    .line 11118
+    .line 11125
     .restart local v0       #contentCursorRingBounds:Landroid/graphics/Rect;
     .restart local v1       #keyHandled:Z
     .restart local v2       #maxH:I
@@ -18447,10 +18464,10 @@
 
     move-result v2
 
-    .line 11120
+    .line 11127
     if-gez v2, :cond_2
 
-    .line 11121
+    .line 11128
     const/4 v8, 0x0
 
     const/4 v9, 0x1
@@ -18466,7 +18483,7 @@
     .locals 1
 
     .prologue
-    .line 5289
+    .line 5296
     iget-boolean v0, p0, Landroid/webkit/WebView;->mInLoading:Z
 
     if-nez v0, :cond_0
@@ -18492,7 +18509,7 @@
     .parameter "box"
 
     .prologue
-    .line 5239
+    .line 5246
     iget v0, p0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
 
     if-eqz v0, :cond_0
@@ -18505,7 +18522,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 5241
+    .line 5248
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iget-object v1, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
@@ -18524,7 +18541,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 5244
+    .line 5251
     :cond_0
     return-void
 .end method
@@ -18537,7 +18554,7 @@
 
     const/4 v1, 0x0
 
-    .line 5325
+    .line 5332
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
@@ -18550,18 +18567,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 5329
+    .line 5336
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebTextView;->setVisibility(I)V
 
-    .line 5332
+    .line 5339
     :cond_0
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-eqz v0, :cond_1
 
-    .line 5334
+    .line 5341
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
@@ -18570,7 +18587,7 @@
 
     if-nez v0, :cond_1
 
-    .line 5335
+    .line 5342
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -18583,14 +18600,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 5338
+    .line 5345
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->resumeFPDoPlay()V
 
-    .line 5339
+    .line 5346
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnResumePlayGifAnimation()V
 
-    .line 5341
+    .line 5348
     return-void
 .end method
 
@@ -18600,7 +18617,7 @@
     .prologue
     const/16 v2, 0x136
 
-    .line 5307
+    .line 5314
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-eqz v0, :cond_0
@@ -18609,20 +18626,20 @@
 
     if-nez v0, :cond_0
 
-    .line 5308
+    .line 5315
     invoke-virtual {p0}, Landroid/webkit/WebView;->pauseFPDoPlay()V
 
-    .line 5309
+    .line 5316
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnPausePlayGifAnimation()V
 
-    .line 5311
+    .line 5318
     invoke-direct {p0}, Landroid/webkit/WebView;->needExtendDoubleTapLongPressTimeout()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5312
+    .line 5319
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
@@ -18631,7 +18648,7 @@
 
     if-nez v0, :cond_0
 
-    .line 5313
+    .line 5320
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -18642,7 +18659,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
-    .line 5318
+    .line 5325
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
@@ -18650,14 +18667,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 5319
+    .line 5326
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebTextView;->setVisibility(I)V
 
-    .line 5321
+    .line 5328
     :cond_1
     return-void
 .end method
@@ -18667,12 +18684,12 @@
     .parameter "url"
 
     .prologue
-    .line 8868
+    .line 8875
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->uiOverrideUrlLoading(Ljava/lang/String;)Z
 
-    .line 8869
+    .line 8876
     return-void
 .end method
 
@@ -18682,12 +18699,12 @@
     .parameter "sequence"
 
     .prologue
-    .line 7721
+    .line 7728
     new-instance v2, Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct {v2}, Landroid/webkit/WebViewCore$TouchEventData;-><init>()V
 
-    .line 7722
+    .line 7729
     .local v2, ted:Landroid/webkit/WebViewCore$TouchEventData;
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -18695,35 +18712,35 @@
 
     iput v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
-    .line 7723
+    .line 7730
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v1
 
-    .line 7724
+    .line 7731
     .local v1, count:I
     new-array v5, v1, [I
 
     iput-object v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
-    .line 7725
+    .line 7732
     new-array v5, v1, [Landroid/graphics/Point;
 
     iput-object v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
-    .line 7726
+    .line 7733
     new-array v5, v1, [Landroid/graphics/Point;
 
     iput-object v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
-    .line 7727
+    .line 7734
     const/4 v0, 0x0
 
     .local v0, c:I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 7728
+    .line 7735
     iget-object v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mIds:[I
 
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
@@ -18732,7 +18749,7 @@
 
     aput v6, v5, v0
 
-    .line 7729
+    .line 7736
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v5
@@ -18747,7 +18764,7 @@
 
     move-result v3
 
-    .line 7730
+    .line 7737
     .local v3, x:I
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -18763,7 +18780,7 @@
 
     move-result v4
 
-    .line 7731
+    .line 7738
     .local v4, y:I
     iget-object v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
@@ -18773,7 +18790,7 @@
 
     aput-object v6, v5, v0
 
-    .line 7732
+    .line 7739
     iget-object v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
     new-instance v6, Landroid/graphics/Point;
@@ -18794,12 +18811,12 @@
 
     aput-object v6, v5, v0
 
-    .line 7727
+    .line 7734
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 7734
+    .line 7741
     .end local v3           #x:I
     .end local v4           #y:I
     :cond_0
@@ -18815,7 +18832,7 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 7736
+    .line 7743
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -18823,7 +18840,7 @@
 
     iput v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mActionIndex:I
 
-    .line 7738
+    .line 7745
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
 
@@ -18831,44 +18848,44 @@
 
     iput v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mMetaState:I
 
-    .line 7739
+    .line 7746
     const/4 v5, 0x1
 
     iput-boolean v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
-    .line 7740
+    .line 7747
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v5
 
     iput-object v5, v2, Landroid/webkit/WebViewCore$TouchEventData;->mMotionEvent:Landroid/view/MotionEvent;
 
-    .line 7741
+    .line 7748
     iput-wide p2, v2, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
 
-    .line 7742
+    .line 7749
     iget-object v5, p0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
 
     invoke-virtual {v5, v2}, Landroid/webkit/WebView$TouchEventQueue;->preQueueTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 7743
+    .line 7750
     iget-object v5, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v6, 0x8d
 
     invoke-virtual {v5, v6, v2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 7744
+    .line 7751
     invoke-virtual {p0}, Landroid/webkit/WebView;->cancelLongPress()V
 
-    .line 7745
+    .line 7752
     iget-object v5, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/4 v6, 0x4
 
     invoke-virtual {v5, v6}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7746
+    .line 7753
     return-void
 .end method
 
@@ -18878,20 +18895,20 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 12474
+    .line 12481
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
     if-ne v0, v1, :cond_0
 
-    .line 12479
+    .line 12486
     :goto_0
     return-void
 
-    .line 12477
+    .line 12484
     :cond_0
     iput-boolean v1, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
-    .line 12478
+    .line 12485
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v0
@@ -18922,33 +18939,33 @@
     .parameter "docMax"
 
     .prologue
-    .line 2984
+    .line 2988
     if-ge p2, p1, :cond_1
 
-    .line 2986
+    .line 2990
     const/4 p0, 0x0
 
-    .line 2995
+    .line 2999
     :cond_0
     :goto_0
     return p0
 
-    .line 2988
+    .line 2992
     :cond_1
     if-gez p0, :cond_2
 
-    .line 2989
+    .line 2993
     const/4 p0, 0x0
 
     goto :goto_0
 
-    .line 2991
+    .line 2995
     :cond_2
     add-int v0, p0, p1
 
     if-le v0, p2, :cond_0
 
-    .line 2992
+    .line 2996
     sub-int p0, p2, p1
 
     goto :goto_0
@@ -18962,7 +18979,7 @@
     .parameter "animationDuration"
 
     .prologue
-    .line 4137
+    .line 4141
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     add-int/2addr v0, p1
@@ -18986,48 +19003,48 @@
     .parameter "animationDuration"
 
     .prologue
-    .line 4147
+    .line 4151
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->pinLocX(I)I
 
     move-result p1
 
-    .line 4148
+    .line 4152
     invoke-virtual {p0, p2}, Landroid/webkit/WebView;->pinLocY(I)I
 
     move-result p2
 
-    .line 4149
+    .line 4153
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     sub-int v3, p1, v0
 
-    .line 4150
+    .line 4154
     .local v3, dx:I
     iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
 
     sub-int v4, p2, v0
 
-    .line 4152
+    .line 4156
     .local v4, dy:I
     or-int v0, v3, v4
 
     if-nez v0, :cond_0
 
-    .line 4153
+    .line 4157
     const/4 v0, 0x0
 
-    .line 4165
+    .line 4169
     :goto_0
     return v0
 
-    .line 4155
+    .line 4159
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->abortAnimation()V
 
-    .line 4156
+    .line 4160
     if-eqz p3, :cond_2
 
-    .line 4158
+    .line 4162
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     iget v1, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -19041,7 +19058,7 @@
     :goto_1
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
 
-    .line 4160
+    .line 4164
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->getDuration()I
@@ -19050,16 +19067,16 @@
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->awakenScrollBars(I)Z
 
-    .line 4161
+    .line 4165
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 4165
+    .line 4169
     :goto_2
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 4158
+    .line 4162
     :cond_1
     invoke-static {v3, v4}, Landroid/webkit/WebView;->computeDuration(II)I
 
@@ -19067,7 +19084,7 @@
 
     goto :goto_1
 
-    .line 4163
+    .line 4167
     :cond_2
     invoke-virtual {p0, p1, p2}, Landroid/webkit/WebView;->scrollTo(II)V
 
@@ -19081,16 +19098,16 @@
     .parameter "updateLayout"
 
     .prologue
-    .line 3193
+    .line 3197
     or-int v0, p1, p2
 
     if-nez v0, :cond_0
 
-    .line 3216
+    .line 3220
     :goto_0
     return-void
 
-    .line 3198
+    .line 3202
     :cond_0
     iget v0, p0, Landroid/webkit/WebView;->mContentWidth:I
 
@@ -19100,19 +19117,19 @@
 
     if-eq v0, p2, :cond_2
 
-    .line 3200
+    .line 3204
     :cond_1
     iput p1, p0, Landroid/webkit/WebView;->mContentWidth:I
 
-    .line 3201
+    .line 3205
     iput p2, p0, Landroid/webkit/WebView;->mContentHeight:I
 
-    .line 3204
+    .line 3208
     iget-boolean v0, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-nez v0, :cond_2
 
-    .line 3206
+    .line 3210
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->pinLocX(I)I
@@ -19127,7 +19144,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/webkit/WebView;->updateScrollCoordinates(II)Z
 
-    .line 3207
+    .line 3211
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->isFinished()Z
@@ -19136,7 +19153,7 @@
 
     if-nez v0, :cond_2
 
-    .line 3210
+    .line 3214
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -19151,7 +19168,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/OverScroller;->setFinalX(I)V
 
-    .line 3211
+    .line 3215
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -19166,7 +19183,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/OverScroller;->setFinalY(I)V
 
-    .line 3215
+    .line 3219
     :cond_2
     invoke-direct {p0, p3}, Landroid/webkit/WebView;->contentSizeChanged(Z)V
 
@@ -19177,27 +19194,27 @@
     .locals 1
 
     .prologue
-    .line 1488
+    .line 1492
     iget-object v0, p0, Landroid/webkit/WebView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     if-eqz v0, :cond_0
 
-    .line 1489
+    .line 1493
     const-string v0, "accessibility"
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->removeJavascriptInterface(Ljava/lang/String;)V
 
-    .line 1490
+    .line 1494
     iget-object v0, p0, Landroid/webkit/WebView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {v0}, Landroid/speech/tts/TextToSpeech;->shutdown()V
 
-    .line 1491
+    .line 1495
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
-    .line 1493
+    .line 1497
     :cond_0
     return-void
 .end method
@@ -19206,26 +19223,26 @@
     .locals 2
 
     .prologue
-    .line 5017
+    .line 5021
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xbb
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 5018
+    .line 5022
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x83
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5019
+    .line 5023
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->setTouchHighlightRects(Ljava/util/ArrayList;)V
 
-    .line 5020
+    .line 5024
     return-void
 .end method
 
@@ -19237,14 +19254,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2143
+    .line 2147
     const-string/jumbo v3, "scrollX"
 
     invoke-virtual {p2, v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 2144
+    .line 2148
     .local v1, sx:I
     const-string/jumbo v3, "scrollY"
 
@@ -19252,34 +19269,34 @@
 
     move-result v2
 
-    .line 2146
+    .line 2150
     .local v2, sy:I
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
-    .line 2147
+    .line 2151
     iput-object p1, p0, Landroid/webkit/WebView;->mHistoryPicture:Landroid/graphics/Picture;
 
-    .line 2149
+    .line 2153
     iput v1, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 2150
+    .line 2154
     iput v2, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 2151
+    .line 2155
     iget-object v3, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v3, p2}, Landroid/webkit/ZoomManager;->restoreZoomState(Landroid/os/Bundle;)V
 
-    .line 2152
+    .line 2156
     iget-object v3, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v3}, Landroid/webkit/ZoomManager;->getScale()F
 
     move-result v0
 
-    .line 2153
+    .line 2157
     .local v0, scale:F
     invoke-virtual {p1}, Landroid/graphics/Picture;->getWidth()I
 
@@ -19295,7 +19312,7 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mHistoryWidth:I
 
-    .line 2154
+    .line 2158
     invoke-virtual {p1}, Landroid/graphics/Picture;->getHeight()I
 
     move-result v3
@@ -19310,10 +19327,10 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mHistoryHeight:I
 
-    .line 2156
+    .line 2160
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2157
+    .line 2161
     return-void
 .end method
 
@@ -19324,24 +19341,24 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 2047
+    .line 2051
     invoke-virtual {p0}, Landroid/webkit/WebView;->copyBackForwardList()Landroid/webkit/WebBackForwardList;
 
     move-result-object v5
 
-    .line 2048
+    .line 2052
     .local v5, list:Landroid/webkit/WebBackForwardList;
     invoke-virtual {v5}, Landroid/webkit/WebBackForwardList;->getCurrentIndex()I
 
     move-result v0
 
-    .line 2049
+    .line 2053
     .local v0, currentIndex:I
     invoke-virtual {v5}, Landroid/webkit/WebBackForwardList;->getSize()I
 
     move-result v9
 
-    .line 2050
+    .line 2054
     .local v9, size:I
     const/4 v11, 0x0
 
@@ -19351,7 +19368,7 @@
 
     move-result v8
 
-    .line 2051
+    .line 2055
     .local v8, savedStart:I
     add-int/lit8 v11, v0, 0x3
 
@@ -19359,14 +19376,14 @@
 
     move-result v6
 
-    .line 2052
+    .line 2056
     .local v6, savedEnd:I
     sub-int/2addr v0, v8
 
-    .line 2054
+    .line 2058
     sub-int v7, v6, v8
 
-    .line 2057
+    .line 2061
     .local v7, savedSize:I
     if-ltz v0, :cond_0
 
@@ -19377,24 +19394,24 @@
     :cond_0
     move-object v5, v10
 
-    .line 2089
+    .line 2093
     .end local v5           #list:Landroid/webkit/WebBackForwardList;
     :goto_0
     return-object v5
 
-    .line 2060
+    .line 2064
     .restart local v5       #list:Landroid/webkit/WebBackForwardList;
     :cond_1
     const-string/jumbo v11, "index"
 
     invoke-virtual {p1, v11, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2064
+    .line 2068
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v9}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 2065
+    .line 2069
     .local v2, history:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     move v3, v8
 
@@ -19402,16 +19419,16 @@
     :goto_1
     if-ge v3, v6, :cond_4
 
-    .line 2066
+    .line 2070
     invoke-virtual {v5, v3}, Landroid/webkit/WebBackForwardList;->getItemAtIndex(I)Landroid/webkit/WebHistoryItem;
 
     move-result-object v4
 
-    .line 2067
+    .line 2071
     .local v4, item:Landroid/webkit/WebHistoryItem;
     if-nez v4, :cond_2
 
-    .line 2070
+    .line 2074
     const-string/jumbo v11, "webview"
 
     const-string/jumbo v12, "saveState: Unexpected null history item."
@@ -19420,34 +19437,34 @@
 
     move-object v5, v10
 
-    .line 2071
+    .line 2075
     goto :goto_0
 
-    .line 2073
+    .line 2077
     :cond_2
     invoke-virtual {v4}, Landroid/webkit/WebHistoryItem;->getFlattenedData()[B
 
     move-result-object v1
 
-    .line 2074
+    .line 2078
     .local v1, data:[B
     if-nez v1, :cond_3
 
     move-object v5, v10
 
-    .line 2078
+    .line 2082
     goto :goto_0
 
-    .line 2080
+    .line 2084
     :cond_3
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2065
+    .line 2069
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 2082
+    .line 2086
     .end local v1           #data:[B
     .end local v4           #item:Landroid/webkit/WebHistoryItem;
     :cond_4
@@ -19455,12 +19472,12 @@
 
     invoke-virtual {p1, v10, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 2083
+    .line 2087
     iget-object v10, p0, Landroid/webkit/WebView;->mCertificate:Landroid/net/http/SslCertificate;
 
     if-eqz v10, :cond_5
 
-    .line 2084
+    .line 2088
     const-string v10, "certificate"
 
     iget-object v11, p0, Landroid/webkit/WebView;->mCertificate:Landroid/net/http/SslCertificate;
@@ -19471,7 +19488,7 @@
 
     invoke-virtual {p1, v10, v11}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 2087
+    .line 2091
     :cond_5
     const-string/jumbo v10, "privateBrowsingEnabled"
 
@@ -19481,7 +19498,7 @@
 
     invoke-virtual {p1, v10, v11}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 2088
+    .line 2092
     iget-object v10, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v10, p1}, Landroid/webkit/ZoomManager;->saveZoomState(Landroid/os/Bundle;)V
@@ -19507,7 +19524,7 @@
     .end annotation
 
     .prologue
-    .line 2520
+    .line 2524
     .local p3, callback:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<Ljava/lang/String;>;"
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -19519,7 +19536,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 2522
+    .line 2526
     return-void
 .end method
 
@@ -19529,7 +19546,7 @@
     .parameter "width"
 
     .prologue
-    .line 8200
+    .line 8207
     const/high16 v2, 0x43c8
 
     div-float v2, p1, v2
@@ -19540,39 +19557,39 @@
 
     float-to-int v1, v2
 
-    .line 8201
+    .line 8208
     .local v1, xMove:I
     move v0, v1
 
-    .line 8202
+    .line 8209
     .local v0, nextXMove:I
     if-lez v1, :cond_1
 
-    .line 8203
+    .line 8210
     iget v2, p0, Landroid/webkit/WebView;->mTrackballXMove:I
 
     if-le v1, v2, :cond_0
 
-    .line 8204
+    .line 8211
     iget v2, p0, Landroid/webkit/WebView;->mTrackballXMove:I
 
     sub-int/2addr v1, v2
 
-    .line 8209
+    .line 8216
     :cond_0
     :goto_0
     iput v0, p0, Landroid/webkit/WebView;->mTrackballXMove:I
 
-    .line 8210
+    .line 8217
     return v1
 
-    .line 8206
+    .line 8213
     :cond_1
     iget v2, p0, Landroid/webkit/WebView;->mTrackballXMove:I
 
     if-ge v1, v2, :cond_0
 
-    .line 8207
+    .line 8214
     iget v2, p0, Landroid/webkit/WebView;->mTrackballXMove:I
 
     sub-int/2addr v1, v2
@@ -19586,7 +19603,7 @@
     .parameter "height"
 
     .prologue
-    .line 8214
+    .line 8221
     const/high16 v2, 0x43c8
 
     div-float v2, p1, v2
@@ -19597,39 +19614,39 @@
 
     float-to-int v1, v2
 
-    .line 8215
+    .line 8222
     .local v1, yMove:I
     move v0, v1
 
-    .line 8216
+    .line 8223
     .local v0, nextYMove:I
     if-lez v1, :cond_1
 
-    .line 8217
+    .line 8224
     iget v2, p0, Landroid/webkit/WebView;->mTrackballYMove:I
 
     if-le v1, v2, :cond_0
 
-    .line 8218
+    .line 8225
     iget v2, p0, Landroid/webkit/WebView;->mTrackballYMove:I
 
     sub-int/2addr v1, v2
 
-    .line 8223
+    .line 8230
     :cond_0
     :goto_0
     iput v0, p0, Landroid/webkit/WebView;->mTrackballYMove:I
 
-    .line 8224
+    .line 8231
     return v1
 
-    .line 8220
+    .line 8227
     :cond_1
     iget v2, p0, Landroid/webkit/WebView;->mTrackballYMove:I
 
     if-ge v1, v2, :cond_0
 
-    .line 8221
+    .line 8228
     iget v2, p0, Landroid/webkit/WebView;->mTrackballYMove:I
 
     sub-int/2addr v1, v2
@@ -19643,7 +19660,7 @@
     .parameter "y"
 
     .prologue
-    .line 4118
+    .line 4122
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -19656,27 +19673,27 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 4126
+    .line 4130
     :goto_0
     return-void
 
-    .line 4121
+    .line 4125
     :cond_0
     iget v0, p0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
 
     invoke-direct {p0, v0, p1, p2}, Landroid/webkit/WebView;->nativeScrollLayer(III)Z
 
-    .line 4122
+    .line 4126
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iput p1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 4123
+    .line 4127
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iput p2, v0, Landroid/graphics/Rect;->top:I
 
-    .line 4124
+    .line 4128
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     iget v1, p0, Landroid/webkit/WebView;->mScrollY:I
@@ -19687,7 +19704,7 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/webkit/WebView;->onScrollChanged(IIII)V
 
-    .line 4125
+    .line 4129
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto :goto_0
@@ -19702,28 +19719,28 @@
     .parameter "y"
 
     .prologue
-    .line 10997
+    .line 11004
     new-instance v0, Landroid/webkit/WebViewCore$TouchUpData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$TouchUpData;-><init>()V
 
-    .line 10998
+    .line 11005
     .local v0, touchUpData:Landroid/webkit/WebViewCore$TouchUpData;
     iput p1, v0, Landroid/webkit/WebViewCore$TouchUpData;->mMoveGeneration:I
 
-    .line 10999
+    .line 11006
     iput p2, v0, Landroid/webkit/WebViewCore$TouchUpData;->mFrame:I
 
-    .line 11000
+    .line 11007
     iput p3, v0, Landroid/webkit/WebViewCore$TouchUpData;->mNode:I
 
-    .line 11001
+    .line 11008
     iput p4, v0, Landroid/webkit/WebViewCore$TouchUpData;->mX:I
 
-    .line 11002
+    .line 11009
     iput p5, v0, Landroid/webkit/WebViewCore$TouchUpData;->mY:I
 
-    .line 11003
+    .line 11010
     iget-object v1, v0, Landroid/webkit/WebViewCore$TouchUpData;->mNativeLayerRect:Landroid/graphics/Rect;
 
     const/4 v2, 0x0
@@ -19734,14 +19751,14 @@
 
     iput v1, v0, Landroid/webkit/WebViewCore$TouchUpData;->mNativeLayer:I
 
-    .line 11005
+    .line 11012
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x8c
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 11006
+    .line 11013
     return-void
 .end method
 
@@ -19753,7 +19770,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 10958
+    .line 10965
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x7f
@@ -19764,7 +19781,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 10960
+    .line 10967
     return-void
 .end method
 
@@ -19776,7 +19793,7 @@
     .parameter "y"
 
     .prologue
-    .line 10964
+    .line 10971
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x87
@@ -19787,7 +19804,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 10966
+    .line 10973
     return-void
 .end method
 
@@ -19799,13 +19816,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 10977
+    .line 10984
     if-eqz p1, :cond_0
 
-    .line 10978
+    .line 10985
     invoke-virtual {p0}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 10980
+    .line 10987
     :cond_0
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -19822,13 +19839,13 @@
 
     invoke-virtual {v2, v3, v0, v1, v4}, Landroid/webkit/WebViewCore;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 10983
+    .line 10990
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 10980
+    .line 10987
     goto :goto_0
 .end method
 
@@ -19841,51 +19858,51 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4171
+    .line 4175
     iget-boolean v2, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-eqz v2, :cond_1
 
-    .line 4195
+    .line 4199
     :cond_0
     :goto_0
     return v1
 
-    .line 4178
+    .line 4182
     :cond_1
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->contentToViewDimension(I)I
 
     move-result p1
 
-    .line 4179
+    .line 4183
     invoke-virtual {p0, p2}, Landroid/webkit/WebView;->contentToViewDimension(I)I
 
     move-result p2
 
-    .line 4180
+    .line 4184
     iget-boolean v2, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
     if-eqz v2, :cond_3
 
-    .line 4182
+    .line 4186
     if-eqz p2, :cond_2
 
-    .line 4183
+    .line 4187
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 4184
+    .line 4188
     .local v0, tempRect:Landroid/graphics/Rect;
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->calcOurVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 4185
+    .line 4189
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 4186
+    .line 4190
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
 
-    .line 4193
+    .line 4197
     .end local v0           #tempRect:Landroid/graphics/Rect;
     :cond_2
     if-nez p2, :cond_0
@@ -19902,7 +19919,7 @@
 
     goto :goto_0
 
-    .line 4195
+    .line 4199
     :cond_3
     invoke-direct {p0, p1, p2, p3, v1}, Landroid/webkit/WebView;->pinScrollBy(IIZI)Z
 
@@ -19921,30 +19938,30 @@
 
     const/4 v2, 0x0
 
-    .line 4365
+    .line 4369
     iget-boolean v4, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-eqz v4, :cond_1
 
-    .line 4414
+    .line 4418
     :cond_0
     :goto_0
     return v2
 
-    .line 4375
+    .line 4379
     :cond_1
     or-int v4, p1, p2
 
     if-nez v4, :cond_2
 
-    .line 4379
+    .line 4383
     const/4 v0, 0x0
 
-    .line 4380
+    .line 4384
     .local v0, vx:I
     const/4 v1, 0x0
 
-    .line 4392
+    .line 4396
     .local v1, vy:I
     :goto_1
     if-nez p1, :cond_4
@@ -19963,7 +19980,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 4395
+    .line 4399
     invoke-virtual {p0}, Landroid/webkit/WebView;->getProgress()I
 
     move-result v4
@@ -19972,19 +19989,19 @@
 
     if-ge v4, v5, :cond_3
 
-    .line 4399
+    .line 4403
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Landroid/webkit/WebView;->mPageThatNeedsToSlideTitleBarOffScreen:Ljava/lang/String;
 
-    .line 4400
+    .line 4404
     iput v1, p0, Landroid/webkit/WebView;->mYDistanceToSlideTitleOffScreen:I
 
     goto :goto_0
 
-    .line 4382
+    .line 4386
     .end local v0           #vx:I
     .end local v1           #vy:I
     :cond_2
@@ -19992,7 +20009,7 @@
 
     move-result v0
 
-    .line 4383
+    .line 4387
     .restart local v0       #vx:I
     invoke-virtual {p0, p2}, Landroid/webkit/WebView;->contentToViewY(I)I
 
@@ -20001,7 +20018,7 @@
     .restart local v1       #vy:I
     goto :goto_1
 
-    .line 4402
+    .line 4406
     :cond_3
     const/16 v4, 0x1f4
 
@@ -20009,11 +20026,11 @@
 
     goto :goto_0
 
-    .line 4408
+    .line 4412
     :cond_4
     invoke-direct {p0, v0, v1, v2, v2}, Landroid/webkit/WebView;->pinScrollTo(IIZI)Z
 
-    .line 4411
+    .line 4415
     iget v4, p0, Landroid/webkit/WebView;->mScrollX:I
 
     if-eq v4, v0, :cond_5
@@ -20030,7 +20047,7 @@
     :cond_6
     move v2, v3
 
-    .line 4412
+    .line 4416
     goto :goto_0
 .end method
 
@@ -20039,10 +20056,10 @@
     .parameter "width"
 
     .prologue
-    .line 14380
+    .line 14611
     sput p0, Landroid/webkit/WebView;->DEFAULT_TEXT_WIDTH:I
 
-    .line 14381
+    .line 14612
     return-void
 .end method
 
@@ -20051,19 +20068,19 @@
     .parameter "isUp"
 
     .prologue
-    .line 3918
+    .line 3922
     iput-boolean p1, p0, Landroid/webkit/WebView;->mFindIsUp:Z
 
-    .line 3919
+    .line 3923
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v0, :cond_0
 
-    .line 3921
+    .line 3925
     :goto_0
     return-void
 
-    .line 3920
+    .line 3924
     :cond_0
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->nativeSetFindIsUp(Z)V
 
@@ -20075,10 +20092,10 @@
     .parameter "bHostFullScreenMode"
 
     .prologue
-    .line 14578
+    .line 14809
     sput-boolean p0, Landroid/webkit/WebView;->m_bHostFullScreenMode:Z
 
-    .line 14579
+    .line 14810
     return-void
 .end method
 
@@ -20087,7 +20104,7 @@
     .parameter "nType"
 
     .prologue
-    .line 14592
+    .line 14823
     return-void
 .end method
 
@@ -20105,7 +20122,7 @@
     .end annotation
 
     .prologue
-    .line 10298
+    .line 10305
     .local p1, rects:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/graphics/Rect;>;"
     iget-object v3, p0, Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
 
@@ -20115,15 +20132,15 @@
 
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->invalidate(Landroid/graphics/Rect;)V
 
-    .line 10299
+    .line 10306
     iget-object v3, p0, Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
 
     invoke-virtual {v3}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 10300
+    .line 10307
     if-eqz p1, :cond_3
 
-    .line 10301
+    .line 10308
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -20142,13 +20159,13 @@
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 10302
+    .line 10309
     .local v1, rect:Landroid/graphics/Rect;
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->contentToViewRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 10307
+    .line 10314
     .local v2, viewRect:Landroid/graphics/Rect;
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
@@ -20174,7 +20191,7 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 10309
+    .line 10316
     :cond_0
     iget-object v3, p0, Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
 
@@ -20182,7 +20199,7 @@
 
     goto :goto_0
 
-    .line 10311
+    .line 10318
     :cond_1
     const-string/jumbo v3, "webview"
 
@@ -20208,7 +20225,7 @@
 
     goto :goto_0
 
-    .line 10315
+    .line 10322
     .end local v1           #rect:Landroid/graphics/Rect;
     .end local v2           #viewRect:Landroid/graphics/Rect;
     :cond_2
@@ -20220,7 +20237,7 @@
 
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->invalidate(Landroid/graphics/Rect;)V
 
-    .line 10317
+    .line 10324
     .end local v0           #i$:Ljava/util/Iterator;
     :cond_3
     return-void
@@ -20237,17 +20254,17 @@
 
     const/4 v1, 0x0
 
-    .line 6352
+    .line 6359
     iget v3, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v3, :cond_1
 
-    .line 6426
+    .line 6433
     :cond_0
     :goto_0
     return v1
 
-    .line 6353
+    .line 6360
     :cond_1
     invoke-direct {p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
 
@@ -20255,7 +20272,7 @@
 
     if-nez v3, :cond_0
 
-    .line 6354
+    .line 6361
     iget-boolean v3, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v3, :cond_2
@@ -20264,13 +20281,13 @@
 
     goto :goto_0
 
-    .line 6356
+    .line 6363
     :cond_2
     iget v3, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v3, :cond_3
 
-    .line 6357
+    .line 6364
     invoke-virtual {p0}, Landroid/webkit/WebView;->getProgress()I
 
     move-result v3
@@ -20279,25 +20296,25 @@
 
     if-lt v3, v4, :cond_0
 
-    .line 6359
+    .line 6366
     iget-object v1, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     invoke-virtual {v1}, Landroid/webkit/WebView$QuickSelectAbs;->setUpSelect()V
 
-    .line 6424
+    .line 6431
     :goto_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->onSelectTextStart()V
 
     move v1, v2
 
-    .line 6426
+    .line 6433
     goto :goto_0
 
-    .line 6363
+    .line 6370
     :cond_3
     invoke-virtual {p0}, Landroid/webkit/WebView;->nativeResetSelection()V
 
-    .line 6364
+    .line 6371
     if-eqz p1, :cond_4
 
     invoke-direct {p0, p2, p3}, Landroid/webkit/WebView;->nativeWordSelection(II)Z
@@ -20306,12 +20323,12 @@
 
     if-nez v3, :cond_4
 
-    .line 6365
+    .line 6372
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
     goto :goto_0
 
-    .line 6368
+    .line 6375
     :cond_4
     new-instance v3, Landroid/webkit/SelectActionModeCallback;
 
@@ -20319,12 +20336,12 @@
 
     iput-object v3, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
-    .line 6369
+    .line 6376
     iget-object v3, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
     invoke-virtual {v3, p0}, Landroid/webkit/SelectActionModeCallback;->setWebView(Landroid/webkit/WebView;)V
 
-    .line 6370
+    .line 6377
     iget-object v3, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
@@ -20333,38 +20350,38 @@
 
     if-nez v3, :cond_5
 
-    .line 6373
+    .line 6380
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
     goto :goto_0
 
-    .line 6376
+    .line 6383
     :cond_5
     iput-boolean v1, p0, Landroid/webkit/WebView;->mExtendSelection:Z
 
-    .line 6377
+    .line 6384
     iput-boolean v2, p0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
     iput-boolean v2, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
-    .line 6383
+    .line 6390
     iget-object v3, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v3}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 6384
+    .line 6391
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHasCursorNode()Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
-    .line 6385
+    .line 6392
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorNodeBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 6386
+    .line 6393
     .local v0, rect:Landroid/graphics/Rect;
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
@@ -20374,7 +20391,7 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 6387
+    .line 6394
     iget v3, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->contentToViewY(I)I
@@ -20383,32 +20400,32 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mSelectY:I
 
-    .line 6395
+    .line 6402
     .end local v0           #rect:Landroid/graphics/Rect;
     :goto_2
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHideCursor()V
 
-    .line 6396
+    .line 6403
     iput v1, p0, Landroid/webkit/WebView;->mMinAutoScrollX:I
 
-    .line 6397
+    .line 6404
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v3
 
     iput v3, p0, Landroid/webkit/WebView;->mMaxAutoScrollX:I
 
-    .line 6398
+    .line 6405
     iput v1, p0, Landroid/webkit/WebView;->mMinAutoScrollY:I
 
-    .line 6399
+    .line 6406
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
     move-result v1
 
     iput v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollY:I
 
-    .line 6400
+    .line 6407
     iget v1, p0, Landroid/webkit/WebView;->mSelectX:I
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->viewToContentX(I)I
@@ -20431,12 +20448,12 @@
 
     iput v1, p0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
 
-    .line 6403
+    .line 6410
     iget v1, p0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
 
     if-eqz v1, :cond_7
 
-    .line 6404
+    .line 6411
     iget-object v1, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
@@ -20447,7 +20464,7 @@
 
     if-eq v1, v3, :cond_6
 
-    .line 6405
+    .line 6412
     iget v1, p0, Landroid/webkit/WebView;->mMinAutoScrollX:I
 
     iget-object v3, p0, Landroid/webkit/WebView;->mScrollingLayerBounds:Landroid/graphics/Rect;
@@ -20464,7 +20481,7 @@
 
     iput v1, p0, Landroid/webkit/WebView;->mMinAutoScrollX:I
 
-    .line 6407
+    .line 6414
     iget v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollX:I
 
     iget-object v3, p0, Landroid/webkit/WebView;->mScrollingLayerBounds:Landroid/graphics/Rect;
@@ -20481,7 +20498,7 @@
 
     iput v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollX:I
 
-    .line 6410
+    .line 6417
     :cond_6
     iget-object v1, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
@@ -20493,7 +20510,7 @@
 
     if-eq v1, v3, :cond_7
 
-    .line 6411
+    .line 6418
     iget v1, p0, Landroid/webkit/WebView;->mMinAutoScrollY:I
 
     iget-object v3, p0, Landroid/webkit/WebView;->mScrollingLayerBounds:Landroid/graphics/Rect;
@@ -20510,7 +20527,7 @@
 
     iput v1, p0, Landroid/webkit/WebView;->mMinAutoScrollY:I
 
-    .line 6413
+    .line 6420
     iget v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollY:I
 
     iget-object v3, p0, Landroid/webkit/WebView;->mScrollingLayerBounds:Landroid/graphics/Rect;
@@ -20527,7 +20544,7 @@
 
     iput v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollY:I
 
-    .line 6417
+    .line 6424
     :cond_7
     iget v1, p0, Landroid/webkit/WebView;->mMinAutoScrollX:I
 
@@ -20535,21 +20552,21 @@
 
     iput v1, p0, Landroid/webkit/WebView;->mMinAutoScrollX:I
 
-    .line 6418
+    .line 6425
     iget v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollX:I
 
     add-int/lit8 v1, v1, -0x5
 
     iput v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollX:I
 
-    .line 6419
+    .line 6426
     iget v1, p0, Landroid/webkit/WebView;->mMinAutoScrollY:I
 
     add-int/lit8 v1, v1, 0x5
 
     iput v1, p0, Landroid/webkit/WebView;->mMinAutoScrollY:I
 
-    .line 6420
+    .line 6427
     iget v1, p0, Landroid/webkit/WebView;->mMaxAutoScrollY:I
 
     add-int/lit8 v1, v1, -0x5
@@ -20558,7 +20575,7 @@
 
     goto/16 :goto_1
 
-    .line 6388
+    .line 6395
     :cond_8
     iget v3, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
@@ -20568,7 +20585,7 @@
 
     if-le v3, v4, :cond_9
 
-    .line 6389
+    .line 6396
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
 
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchX:I
@@ -20577,7 +20594,7 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 6390
+    .line 6397
     iget v3, p0, Landroid/webkit/WebView;->mScrollY:I
 
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchY:I
@@ -20588,7 +20605,7 @@
 
     goto/16 :goto_2
 
-    .line 6392
+    .line 6399
     :cond_9
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
 
@@ -20602,7 +20619,7 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 6393
+    .line 6400
     iget v3, p0, Landroid/webkit/WebView;->mScrollY:I
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
@@ -20806,17 +20823,17 @@
 
     const/4 v1, 0x0
 
-    .line 6920
+    .line 6927
     iget-object v2, p0, Landroid/webkit/WebView;->mFullScreenHolder:Landroid/webkit/PluginFullScreenHolder;
 
     if-eqz v2, :cond_1
 
-    .line 6922
+    .line 6929
     :cond_0
     :goto_0
     return v0
 
-    .line 6921
+    .line 6928
     :cond_1
     iget-boolean v2, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
@@ -20826,7 +20843,7 @@
 
     goto :goto_0
 
-    .line 6922
+    .line 6929
     :cond_2
     iget-boolean v2, p0, Landroid/webkit/WebView;->mForwardTouchEvents:Z
 
@@ -20858,28 +20875,28 @@
     .parameter "cy"
 
     .prologue
-    .line 4420
+    .line 4424
     iget-boolean v2, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-eqz v2, :cond_0
 
-    .line 4428
+    .line 4432
     :goto_0
     return-void
 
-    .line 4425
+    .line 4429
     :cond_0
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->contentToViewX(I)I
 
     move-result v0
 
-    .line 4426
+    .line 4430
     .local v0, vx:I
     invoke-virtual {p0, p2}, Landroid/webkit/WebView;->contentToViewY(I)I
 
     move-result v1
 
-    .line 4427
+    .line 4431
     .local v1, vy:I
     const/4 v2, 0x1
 
@@ -20898,29 +20915,29 @@
 
     const/4 v2, 0x1
 
-    .line 7866
+    .line 7873
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnScrollingBegin()V
 
-    .line 7868
+    .line 7875
     invoke-static {}, Landroid/webkit/WebViewCore;->reducePriority()V
 
-    .line 7870
+    .line 7877
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 7871
+    .line 7878
     invoke-direct {p0, v2}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 7873
+    .line 7880
     iget-boolean v0, p0, Landroid/webkit/WebView;->mDragFromTextInput:Z
 
     if-nez v0, :cond_0
 
-    .line 7874
+    .line 7881
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHideCursor()V
 
-    .line 7877
+    .line 7884
     :cond_0
     iget v0, p0, Landroid/webkit/WebView;->mHorizontalScrollBarMode:I
 
@@ -20930,13 +20947,13 @@
 
     if-eq v0, v2, :cond_2
 
-    .line 7879
+    .line 7886
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->invokeZoomPicker()V
 
-    .line 7884
+    .line 7891
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -20956,7 +20973,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 7885
+    .line 7892
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getSmartZoomInst()Landroid/webkit/ZoomManager$HTCSmartZoom;
@@ -20967,7 +20984,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 7886
+    .line 7893
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getSmartZoomInst()Landroid/webkit/ZoomManager$HTCSmartZoom;
@@ -20976,7 +20993,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
-    .line 7887
+    .line 7894
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getSmartZoomInst()Landroid/webkit/ZoomManager$HTCSmartZoom;
@@ -20985,10 +21002,10 @@
 
     iput-boolean v2, v0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
-    .line 7888
+    .line 7895
     invoke-virtual {p0}, Landroid/webkit/WebView;->resumeTimers()V
 
-    .line 7890
+    .line 7897
     :cond_3
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -21000,7 +21017,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 7891
+    .line 7898
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getSmartZoomInst()Landroid/webkit/ZoomManager$HTCSmartZoom;
@@ -21009,7 +21026,7 @@
 
     iput-boolean v3, v0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mDrawInSchedule:Z
 
-    .line 7892
+    .line 7899
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getSmartZoomInst()Landroid/webkit/ZoomManager$HTCSmartZoom;
@@ -21018,7 +21035,7 @@
 
     iput-boolean v2, v0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
-    .line 7896
+    .line 7903
     :cond_4
     return-void
 .end method
@@ -21027,7 +21044,7 @@
     .locals 2
 
     .prologue
-    .line 2654
+    .line 2658
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
@@ -21036,7 +21053,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setPrivateBrowsingEnabled(Z)V
 
-    .line 2655
+    .line 2659
     return-void
 .end method
 
@@ -21046,7 +21063,7 @@
     .parameter "y"
 
     .prologue
-    .line 6973
+    .line 6980
     float-to-int v2, p1
 
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -21057,7 +21074,7 @@
 
     move-result v0
 
-    .line 6974
+    .line 6981
     .local v0, contentX:I
     float-to-int v2, p2
 
@@ -21069,7 +21086,7 @@
 
     move-result v1
 
-    .line 6975
+    .line 6982
     .local v1, contentY:I
     iget-object v2, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
@@ -21081,17 +21098,17 @@
 
     iput v2, p0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
 
-    .line 6977
+    .line 6984
     iget v2, p0, Landroid/webkit/WebView;->mCurrentScrollingLayerId:I
 
     if-eqz v2, :cond_0
 
-    .line 6978
+    .line 6985
     const/16 v2, 0x9
 
     iput v2, p0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 6980
+    .line 6987
     :cond_0
     return-void
 .end method
@@ -21103,7 +21120,7 @@
     .parameter "eventTime"
 
     .prologue
-    .line 7855
+    .line 7862
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result v0
@@ -21112,7 +21129,7 @@
 
     iput v0, p0, Landroid/webkit/WebView;->mStartTouchX:I
 
-    .line 7856
+    .line 7863
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result v0
@@ -21121,22 +21138,22 @@
 
     iput v0, p0, Landroid/webkit/WebView;->mStartTouchY:I
 
-    .line 7857
+    .line 7864
     iput-wide p3, p0, Landroid/webkit/WebView;->mLastTouchTime:J
 
-    .line 7858
+    .line 7865
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 7859
+    .line 7866
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 7860
+    .line 7867
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x8a
@@ -21149,7 +21166,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 7862
+    .line 7869
     return-void
 .end method
 
@@ -21157,7 +21174,7 @@
     .locals 2
 
     .prologue
-    .line 7957
+    .line 7964
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->isFinished()Z
@@ -21182,48 +21199,48 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 7959
+    .line 7966
     :cond_0
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 7960
+    .line 7967
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 7961
+    .line 7968
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 7967
+    .line 7974
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_2
 
-    .line 7968
+    .line 7975
     iget-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 7969
+    .line 7976
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 7973
+    .line 7980
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
     if-eqz v0, :cond_3
 
-    .line 7974
+    .line 7981
     iget-object v0, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
     invoke-virtual {v0}, Landroid/webkit/OverScrollGlow;->releaseAll()V
 
-    .line 7976
+    .line 7983
     :cond_3
     return-void
 .end method
@@ -21232,16 +21249,16 @@
     .locals 8
 
     .prologue
-    .line 8600
+    .line 8607
     iget v4, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v4, :cond_0
 
-    .line 8612
+    .line 8619
     :goto_0
     return-void
 
-    .line 8603
+    .line 8610
     :cond_0
     iget-object v4, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
@@ -21249,7 +21266,7 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 8605
+    .line 8612
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
     iget v5, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -21260,7 +21277,7 @@
 
     move-result v0
 
-    .line 8606
+    .line 8613
     .local v0, contentX:I
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
@@ -21272,7 +21289,7 @@
 
     move-result v1
 
-    .line 8607
+    .line 8614
     .local v1, contentY:I
     iget v4, p0, Landroid/webkit/WebView;->mNavSlop:I
 
@@ -21280,7 +21297,7 @@
 
     move-result v3
 
-    .line 8608
+    .line 8615
     .local v3, slop:I
     new-instance v2, Landroid/graphics/Rect;
 
@@ -21294,11 +21311,11 @@
 
     invoke-direct {v2, v4, v5, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 8610
+    .line 8617
     .local v2, rect:Landroid/graphics/Rect;
     invoke-direct {p0, v2}, Landroid/webkit/WebView;->nativeSelectBestAt(Landroid/graphics/Rect;)V
 
-    .line 8611
+    .line 8618
     const/4 v4, 0x0
 
     invoke-direct {p0, v4}, Landroid/webkit/WebView;->hitTestResult(Landroid/webkit/WebView$HitTestResult;)Landroid/webkit/WebView$HitTestResult;
@@ -21316,16 +21333,16 @@
     .prologue
     const v13, 0x3be56042
 
-    .line 12649
+    .line 12657
     iget-object v7, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
-    .line 12650
+    .line 12658
     .local v7, context:Landroid/content/Context;
     invoke-static {v7}, Landroid/webkit/WebViewThemeable;->getHighlightColor(Landroid/content/Context;)I
 
     move-result v10
 
-    .line 12651
+    .line 12659
     .local v10, wantedColor:I
     const v0, 0xffffff
 
@@ -21335,28 +21352,28 @@
 
     add-int v5, v0, v11
 
-    .line 12652
+    .line 12660
     .local v5, selectionColor:I
     sput v5, Landroid/webkit/WebView;->HIGHLIGHT_COLOR:I
 
-    .line 12653
+    .line 12661
     invoke-static {v5}, Landroid/graphics/Color;->hue(I)F
 
     move-result v8
 
-    .line 12654
+    .line 12662
     .local v8, hue:F
     invoke-static {v5}, Landroid/graphics/Color;->saturation(I)F
 
     move-result v9
 
-    .line 12655
+    .line 12663
     .local v9, saturation:F
     invoke-static {v5}, Landroid/graphics/Color;->brightness(I)F
 
     move-result v6
 
-    .line 12656
+    .line 12664
     .local v6, brightness:F
     const v0, 0x3c449ba6
 
@@ -21374,7 +21391,7 @@
 
     move-result v1
 
-    .line 12657
+    .line 12665
     .local v1, outer0:I
     const v0, 0x3b03126f
 
@@ -21390,7 +21407,7 @@
 
     move-result v2
 
-    .line 12658
+    .line 12666
     .local v2, outer2:I
     const v0, 0x3bc49ba6
 
@@ -21406,7 +21423,7 @@
 
     move-result v3
 
-    .line 12659
+    .line 12667
     .local v3, inner0:I
     const v0, 0x3b449ba6
 
@@ -21427,24 +21444,24 @@
     .local v4, inner2:I
     move-object v0, p0
 
-    .line 12660
+    .line 12668
     invoke-direct/range {v0 .. v5}, Landroid/webkit/WebView;->nativeSetSelectionColors(IIIII)V
 
-    .line 12661
+    .line 12669
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 12662
+    .line 12670
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v11, 0x20a
 
     invoke-virtual {v0, v11}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 12663
+    .line 12671
     :cond_0
     return-void
 .end method
@@ -21456,7 +21473,7 @@
     .parameter "data"
 
     .prologue
-    .line 10579
+    .line 10586
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v2
@@ -21475,7 +21492,7 @@
 
     if-ne p2, v2, :cond_1
 
-    .line 10582
+    .line 10589
     iget-object v2, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     iget v3, p3, Landroid/webkit/WebViewCore$TextSelectionData;->mStart:I
@@ -21484,12 +21501,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/webkit/WebTextView;->setSelectionFromWebKit(II)V
 
-    .line 10594
+    .line 10601
     :cond_0
     :goto_0
     return-void
 
-    .line 10586
+    .line 10593
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
 
@@ -21511,15 +21528,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 10589
+    .line 10596
     :cond_2
     iget v1, p3, Landroid/webkit/WebViewCore$TextSelectionData;->mStart:I
 
-    .line 10590
+    .line 10597
     .local v1, startIndx:I
     iget v0, p3, Landroid/webkit/WebViewCore$TextSelectionData;->mEnd:I
 
-    .line 10591
+    .line 10598
     .local v0, endIndx:I
     invoke-virtual {p0, p1, v1, v0}, Landroid/webkit/WebView;->updateTextAndSelection(III)V
 
@@ -21530,31 +21547,31 @@
     .locals 8
 
     .prologue
-    .line 5762
+    .line 5769
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 5763
+    .line 5770
     .local v2, visibleRect:Landroid/graphics/Rect;
     invoke-direct {p0, v2}, Landroid/webkit/WebView;->calcOurContentVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 5766
+    .line 5773
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidateNodeBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 5773
+    .line 5780
     .local v0, bounds:Landroid/graphics/Rect;
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->contentToViewRect(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 5774
+    .line 5781
     .local v1, vBox:Landroid/graphics/Rect;
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->offsetByLayerScrollPosition(Landroid/graphics/Rect;)V
 
-    .line 5775
+    .line 5782
     iget-object v3, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     iget v4, v1, Landroid/graphics/Rect;->left:I
@@ -21571,21 +21588,21 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/webkit/WebTextView;->setRect(IIII)V
 
-    .line 5776
+    .line 5783
     invoke-static {v0, v2}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 5777
+    .line 5784
     invoke-virtual {p0}, Landroid/webkit/WebView;->revealSelection()V
 
-    .line 5779
+    .line 5786
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->updateWebTextViewPadding()V
 
-    .line 5780
+    .line 5787
     return-void
 .end method
 
@@ -21595,7 +21612,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 15162
+    .line 15393
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -21604,11 +21621,11 @@
 
     move-result-object v0
 
-    .line 15163
+    .line 15394
     .local v0, packageName:Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 15164
+    .line 15395
     const-string v2, "com.android.browser"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -21625,17 +21642,17 @@
 
     if-eqz v2, :cond_1
 
-    .line 15166
+    .line 15397
     :cond_0
     iput-boolean v1, p0, Landroid/webkit/WebView;->mBrowserCustomizedDefaultScale:Z
 
     iput-boolean v1, p0, Landroid/webkit/WebView;->mHtcCustomizedDefaultScale:Z
 
-    .line 15174
+    .line 15405
     :goto_0
     return v1
 
-    .line 15169
+    .line 15400
     :cond_1
     const-string v2, "com.htc.android"
 
@@ -21645,12 +21662,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 15170
+    .line 15401
     iput-boolean v1, p0, Landroid/webkit/WebView;->mHtcCustomizedDefaultScale:Z
 
     goto :goto_0
 
-    .line 15174
+    .line 15405
     :cond_2
     const/4 v1, 0x0
 
@@ -21665,7 +21682,7 @@
     .parameter "b"
 
     .prologue
-    .line 3149
+    .line 3153
     iget-object v2, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v2}, Landroid/webkit/ZoomManager;->getZoomType()I
@@ -21704,12 +21721,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 3160
+    .line 3164
     :cond_0
     :goto_0
     return-void
 
-    .line 3154
+    .line 3158
     :cond_1
     iget-object v2, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -21717,13 +21734,13 @@
 
     move-result v1
 
-    .line 3155
+    .line 3159
     .local v1, scale:F
     invoke-virtual {p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v0
 
-    .line 3156
+    .line 3160
     .local v0, dy:I
     int-to-float v2, p1
 
@@ -21791,20 +21808,20 @@
     .parameter "b"
 
     .prologue
-    .line 3168
+    .line 3172
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getScale()F
 
     move-result v8
 
-    .line 3169
+    .line 3173
     .local v8, scale:F
     invoke-virtual {p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v7
 
-    .line 3170
+    .line 3174
     .local v7, dy:I
     int-to-float v0, p3
 
@@ -21864,7 +21881,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/webkit/WebView;->postInvalidateDelayed(JIIII)V
 
-    .line 3175
+    .line 3179
     return-void
 .end method
 
@@ -21873,7 +21890,7 @@
     .parameter "x"
 
     .prologue
-    .line 3087
+    .line 3091
     int-to-float v0, p1
 
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -21892,7 +21909,7 @@
     .parameter "y"
 
     .prologue
-    .line 3096
+    .line 3100
     invoke-virtual {p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v0
@@ -21918,12 +21935,12 @@
     .locals 1
 
     .prologue
-    .line 14560
+    .line 14791
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->abortAnimation()V
 
-    .line 14561
+    .line 14792
     return-void
 .end method
 
@@ -21933,7 +21950,7 @@
     .parameter "scale"
 
     .prologue
-    .line 14942
+    .line 15173
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mAnimationZoomOutBitmap:Landroid/graphics/drawable/BitmapDrawable;
@@ -21942,12 +21959,12 @@
 
     if-nez v20, :cond_1
 
-    .line 15022
+    .line 15253
     :cond_0
     :goto_0
     return-void
 
-    .line 14945
+    .line 15176
     :cond_1
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -21965,15 +21982,15 @@
 
     iget v5, v0, Landroid/util/DisplayMetrics;->density:F
 
-    .line 14946
+    .line 15177
     .local v5, density:F
     const/16 v17, 0x0
 
-    .line 14947
+    .line 15178
     .local v17, sx:F
     const/16 v18, 0x0
 
-    .line 14949
+    .line 15180
     .local v18, sy:F
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -21991,7 +22008,7 @@
 
     move-result-object v6
 
-    .line 14950
+    .line 15181
     .local v6, display:Landroid/view/Display;
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -22019,7 +22036,7 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 14951
+    .line 15182
     const/high16 v20, 0x3f80
 
     sub-float v20, p2, v20
@@ -22040,7 +22057,7 @@
 
     mul-float v17, v20, v21
 
-    .line 14952
+    .line 15183
     const/high16 v20, 0x3f80
 
     sub-float v20, p2, v20
@@ -22075,7 +22092,7 @@
 
     add-float v18, v20, v21
 
-    .line 14958
+    .line 15189
     :goto_1
     move-object/from16 v0, p0
 
@@ -22085,7 +22102,7 @@
 
     if-lez v20, :cond_2
 
-    .line 14959
+    .line 15190
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebView;->m_nCurrentTabMinLeft:I
@@ -22114,7 +22131,7 @@
 
     mul-float v17, v17, v20
 
-    .line 14960
+    .line 15191
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebView;->m_nCurrentTabMinTop:I
@@ -22165,7 +22182,7 @@
 
     mul-float v18, v18, v20
 
-    .line 14963
+    .line 15194
     :cond_2
     invoke-static/range {v17 .. v17}, Ljava/lang/Math;->round(F)I
 
@@ -22175,7 +22192,7 @@
 
     neg-int v10, v0
 
-    .line 14964
+    .line 15195
     .local v10, left:I
     invoke-virtual {v6}, Landroid/view/Display;->getWidth()I
 
@@ -22195,7 +22212,7 @@
 
     add-int v15, v10, v20
 
-    .line 14965
+    .line 15196
     .local v15, right:I
     invoke-static/range {v18 .. v18}, Ljava/lang/Math;->round(F)I
 
@@ -22207,7 +22224,7 @@
 
     move/from16 v19, v0
 
-    .line 14966
+    .line 15197
     .local v19, top:I
     invoke-virtual {v6}, Landroid/view/Display;->getHeight()I
 
@@ -22227,7 +22244,7 @@
 
     add-int v4, v19, v20
 
-    .line 14968
+    .line 15199
     .local v4, bottom:I
     sub-int v20, v15, v10
 
@@ -22237,13 +22254,13 @@
 
     if-lez v20, :cond_0
 
-    .line 14972
+    .line 15203
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v16
 
-    .line 14973
+    .line 15204
     .local v16, sc:I
     const/high16 v20, -0x100
 
@@ -22253,7 +22270,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 14975
+    .line 15206
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v20
@@ -22266,7 +22283,7 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 14976
+    .line 15207
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mMatrixValues:[F
@@ -22307,7 +22324,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 14977
+    .line 15208
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mAnimationZoomOutBitmap:Landroid/graphics/drawable/BitmapDrawable;
@@ -22320,7 +22337,7 @@
 
     invoke-virtual {v0, v10, v1, v15, v4}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    .line 14978
+    .line 15209
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mAnimationZoomOutBitmap:Landroid/graphics/drawable/BitmapDrawable;
@@ -22333,15 +22350,15 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 14980
+    .line 15211
     sget-object v20, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
     if-eqz v20, :cond_4
 
-    .line 14984
+    .line 15215
     const/4 v11, 0x0
 
-    .line 14986
+    .line 15217
     .local v11, nOffset:I
     sget-object v20, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
@@ -22373,15 +22390,15 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 14987
+    .line 15218
     :cond_3
     const/4 v13, 0x0
 
-    .line 14988
+    .line 15219
     .local v13, nOrgWidth:I
     const/4 v12, 0x0
 
-    .line 14989
+    .line 15220
     .local v12, nOrgHeight:I
     move-object/from16 v0, p0
 
@@ -22391,7 +22408,7 @@
 
     if-eqz v20, :cond_6
 
-    .line 14990
+    .line 15221
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
@@ -22402,7 +22419,7 @@
 
     move-result v13
 
-    .line 14991
+    .line 15222
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
@@ -22413,7 +22430,7 @@
 
     move-result v12
 
-    .line 14997
+    .line 15228
     :goto_2
     int-to-float v0, v10
 
@@ -22445,7 +22462,7 @@
 
     add-float v8, v20, v21
 
-    .line 14998
+    .line 15229
     .local v8, fBlackAreaLeft_Min:F
     int-to-float v0, v15
 
@@ -22471,7 +22488,7 @@
 
     mul-float v9, v20, v21
 
-    .line 14999
+    .line 15230
     .local v9, fRightOffset:F
     int-to-float v0, v15
 
@@ -22479,13 +22496,13 @@
 
     sub-float v7, v20, v9
 
-    .line 15000
+    .line 15231
     .local v7, fBlackAreaLeft:F
     invoke-static {v7, v8}, Ljava/lang/Math;->max(FF)F
 
     move-result v7
 
-    .line 15002
+    .line 15233
     new-instance v14, Landroid/graphics/Rect;
 
     float-to-int v0, v7
@@ -22504,18 +22521,18 @@
 
     invoke-direct {v14, v0, v1, v15, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 15003
+    .line 15234
     .local v14, rect:Landroid/graphics/Rect;
     invoke-virtual {v14}, Landroid/graphics/Rect;->width()I
 
     move-result v11
 
-    .line 15005
+    .line 15236
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
 
-    .line 15006
+    .line 15237
     .local v3, DrawPaint:Landroid/graphics/Paint;
     sget-object v20, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
@@ -22523,19 +22540,19 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 15007
+    .line 15238
     const/high16 v20, -0x100
 
     move/from16 v0, v20
 
     invoke-virtual {v3, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 15008
+    .line 15239
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14, v3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 15015
+    .line 15246
     .end local v3           #DrawPaint:Landroid/graphics/Paint;
     .end local v7           #fBlackAreaLeft:F
     .end local v8           #fBlackAreaLeft_Min:F
@@ -22553,7 +22570,7 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 15019
+    .line 15250
     .end local v16           #sc:I
     :goto_3
     move-object/from16 v0, p0
@@ -22564,12 +22581,12 @@
 
     if-nez v20, :cond_0
 
-    .line 15020
+    .line 15251
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 14954
+    .line 15185
     .end local v4           #bottom:I
     .end local v10           #left:I
     .end local v15           #right:I
@@ -22595,7 +22612,7 @@
 
     mul-float v17, v20, v21
 
-    .line 14955
+    .line 15186
     const/high16 v20, 0x3f80
 
     sub-float v20, p2, v20
@@ -22632,7 +22649,7 @@
 
     goto/16 :goto_1
 
-    .line 14993
+    .line 15224
     .restart local v4       #bottom:I
     .restart local v10       #left:I
     .restart local v11       #nOffset:I
@@ -22647,7 +22664,7 @@
 
     move-result v13
 
-    .line 14994
+    .line 15225
     invoke-virtual {v6}, Landroid/view/Display;->getWidth()I
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
@@ -22656,7 +22673,7 @@
 
     goto/16 :goto_2
 
-    .line 15016
+    .line 15247
     .end local v11           #nOffset:I
     .end local v12           #nOrgHeight:I
     .end local v13           #nOrgWidth:I
@@ -22675,70 +22692,70 @@
 
     const/4 v2, 0x1
 
-    .line 14893
+    .line 15124
     sget-boolean v0, Landroid/webkit/WebView;->gbIsAnimationZoomOut:Z
 
     if-ne v0, v2, :cond_3
 
-    .line 14896
+    .line 15127
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mTabEffectTimeout:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 14898
+    .line 15129
     const v0, 0x3f181062
 
     iput v0, p0, Landroid/webkit/WebView;->mfTabRatio:F
 
-    .line 14900
+    .line 15131
     iput-object v3, p0, Landroid/webkit/WebView;->mAnimationZoomOutBitmap:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 14901
+    .line 15132
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/webkit/WebView;->gbIsAnimationZoomOut:Z
 
-    .line 14902
+    .line 15133
     iput-boolean v2, p0, Landroid/webkit/WebView;->mbIsAnimationZoomOutFinish:Z
 
-    .line 14903
+    .line 15134
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 14905
+    .line 15136
     iget v0, p0, Landroid/webkit/WebView;->mDefaultZoomInDuration:I
 
     iput v0, p0, Landroid/webkit/WebView;->mZoomInDuration:I
 
-    .line 14912
+    .line 15143
     iget-object v0, p0, Landroid/webkit/WebView;->mAnimZoomOutBitmap_modify:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 14913
+    .line 15144
     iget-object v0, p0, Landroid/webkit/WebView;->mAnimZoomOutBitmap_modify:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 14914
+    .line 15145
     iput-object v3, p0, Landroid/webkit/WebView;->mAnimZoomOutBitmap_modify:Landroid/graphics/Bitmap;
 
-    .line 14917
+    .line 15148
     :cond_0
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 14918
+    .line 15149
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 14920
+    .line 15151
     iget-object v0, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_3
 
-    .line 14921
+    .line 15152
     sget-object v0, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
     if-eqz v0, :cond_1
@@ -22763,17 +22780,17 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 14922
+    .line 15153
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 14923
+    .line 15154
     :cond_2
     iput-object v3, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 14926
+    .line 15157
     :cond_3
     return-void
 .end method
@@ -22791,7 +22808,7 @@
     .end annotation
 
     .prologue
-    .line 11509
+    .line 11516
     iget-object v0, p0, Landroid/webkit/WebView;->ownerActivityContext:Ljava/lang/ref/WeakReference;
 
     return-object v0
@@ -22801,7 +22818,7 @@
     .locals 0
 
     .prologue
-    .line 11523
+    .line 11530
     return-void
 .end method
 
@@ -22819,7 +22836,7 @@
 
     const v6, 0x3eee147b
 
-    .line 14672
+    .line 14903
     sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v4, 0x7b
@@ -22874,7 +22891,7 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 14681
+    .line 14912
     :cond_0
     sget-object v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
 
@@ -22892,49 +22909,49 @@
 
     if-ltz v3, :cond_2
 
-    .line 14682
+    .line 14913
     const v3, 0x3ef851ec
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14683
+    .line 14914
     const v3, 0x3f25a1cb
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14684
+    .line 14915
     sput v6, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14685
+    .line 14916
     const v3, 0x3f449ba6
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
-    .line 14773
+    .line 15004
     :cond_1
     :goto_0
     return-void
 
-    .line 14687
+    .line 14918
     :cond_2
     sput v7, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14688
+    .line 14919
     const v3, 0x3f2a3d71
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14689
+    .line 14920
     sput v6, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14690
+    .line 14921
     const v3, 0x3f4c8b44
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto :goto_0
 
-    .line 14692
+    .line 14923
     :cond_3
     sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -23000,28 +23017,28 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 14703
+    .line 14934
     :cond_4
     sput v7, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14704
+    .line 14935
     const v3, 0x3f2e5604
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14705
+    .line 14936
     const v3, 0x3ef020c5
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14706
+    .line 14937
     const v3, 0x3f4d4fdf
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto :goto_0
 
-    .line 14707
+    .line 14938
     :cond_5
     sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -23053,30 +23070,30 @@
 
     if-ne v3, v4, :cond_7
 
-    .line 14712
+    .line 14943
     :cond_6
     const v3, 0x3f0353f8
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14713
+    .line 14944
     const v3, 0x3f33b646
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14714
+    .line 14945
     const v3, 0x3efbe76d
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14715
+    .line 14946
     const v3, 0x3f4fdf3b
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14716
+    .line 14947
     :cond_7
     sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -23084,19 +23101,19 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 14717
+    .line 14948
     const v3, 0x3ef5c28f
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14718
+    .line 14949
     const v3, 0x3f51eb85
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14719
+    .line 14950
     :cond_8
     sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
@@ -23104,27 +23121,27 @@
 
     if-ne v3, v4, :cond_9
 
-    .line 14720
+    .line 14951
     const v3, 0x3eef1aa0
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14721
+    .line 14952
     const v3, 0x3f24dd2f
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14722
+    .line 14953
     sput v10, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14723
+    .line 14954
     const v3, 0x3f424dd3
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14725
+    .line 14956
     :cond_9
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -23142,19 +23159,19 @@
 
     move-result-object v0
 
-    .line 14726
+    .line 14957
     .local v0, display:Landroid/view/Display;
     invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
 
     move-result v2
 
-    .line 14727
+    .line 14958
     .local v2, nScreenWidth:I
     invoke-virtual {v0}, Landroid/view/Display;->getHeight()I
 
     move-result v1
 
-    .line 14729
+    .line 14960
     .local v1, nScreenHeight:I
     const-string/jumbo v3, "webview"
 
@@ -23178,7 +23195,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14730
+    .line 14961
     const-string/jumbo v3, "webview"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -23201,7 +23218,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14732
+    .line 14963
     const/16 v3, 0x2d0
 
     if-ne v2, v3, :cond_a
@@ -23219,7 +23236,7 @@
 
     if-ne v1, v3, :cond_d
 
-    .line 14733
+    .line 14964
     :cond_b
     sget-object v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
 
@@ -23237,48 +23254,48 @@
 
     if-ltz v3, :cond_c
 
-    .line 14734
+    .line 14965
     const v3, 0x3efdf3b6
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14735
+    .line 14966
     const v3, 0x3f1eb852
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14736
+    .line 14967
     sput v9, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14737
+    .line 14968
     const v3, 0x3f683127
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14739
+    .line 14970
     :cond_c
     const v3, 0x3eef1aa0
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14740
+    .line 14971
     const v3, 0x3f24dd2f
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14741
+    .line 14972
     sput v10, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14742
+    .line 14973
     const v3, 0x3f424dd3
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14744
+    .line 14975
     :cond_d
     const/16 v3, 0x21c
 
@@ -23297,7 +23314,7 @@
 
     if-ne v1, v3, :cond_12
 
-    .line 14745
+    .line 14976
     :cond_f
     sget-object v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
 
@@ -23315,27 +23332,27 @@
 
     if-ltz v3, :cond_10
 
-    .line 14746
+    .line 14977
     const v3, 0x3efdf3b6
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14747
+    .line 14978
     const v3, 0x3f1eb852
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14748
+    .line 14979
     sput v9, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14749
+    .line 14980
     const v3, 0x3f683127
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14750
+    .line 14981
     :cond_10
     sget-object v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Sense_Version:Ljava/lang/String;
 
@@ -23353,46 +23370,46 @@
 
     if-ltz v3, :cond_11
 
-    .line 14751
+    .line 14982
     const v3, 0x3ef851ec
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14752
+    .line 14983
     const v3, 0x3f25a1cb
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14753
+    .line 14984
     sput v6, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14754
+    .line 14985
     const v3, 0x3f449ba6
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14756
+    .line 14987
     :cond_11
     sput v7, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14757
+    .line 14988
     const v3, 0x3f2a3d71
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14758
+    .line 14989
     sput v6, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14759
+    .line 14990
     const v3, 0x3f4c8b44
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14761
+    .line 14992
     :cond_12
     if-ne v2, v8, :cond_13
 
@@ -23407,28 +23424,28 @@
 
     if-ne v1, v8, :cond_15
 
-    .line 14762
+    .line 14993
     :cond_14
     sput v7, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14763
+    .line 14994
     const v3, 0x3f2e5604
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14764
+    .line 14995
     const v3, 0x3ef020c5
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14765
+    .line 14996
     const v3, 0x3f4d4fdf
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
     goto/16 :goto_0
 
-    .line 14766
+    .line 14997
     :cond_15
     const/16 v3, 0x140
 
@@ -23443,23 +23460,23 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 14767
+    .line 14998
     :cond_17
     const v3, 0x3f0353f8
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14768
+    .line 14999
     const v3, 0x3f33b646
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14769
+    .line 15000
     const v3, 0x3efbe76d
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14770
+    .line 15001
     const v3, 0x3f4fdf3b
 
     sput v3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
@@ -23475,19 +23492,19 @@
     .parameter "fly"
 
     .prologue
-    .line 14666
+    .line 14897
     sput p1, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_X:F
 
-    .line 14667
+    .line 14898
     sput p2, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_P_Y:F
 
-    .line 14668
+    .line 14899
     sput p3, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_X:F
 
-    .line 14669
+    .line 14900
     sput p4, Landroid/webkit/WebView;->TAB_EFFECT_PIVOT_L_Y:F
 
-    .line 14670
+    .line 14901
     return-void
 .end method
 
@@ -23497,21 +23514,21 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 14098
+    .line 14329
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 14100
+    .line 14331
     .local v3, url:Ljava/lang/String;
     if-nez v3, :cond_1
 
-    .line 14151
+    .line 14382
     :cond_0
     :goto_0
     return v4
 
-    .line 14104
+    .line 14335
     :cond_1
     const-string/jumbo v5, "http://"
 
@@ -23521,10 +23538,10 @@
 
     if-eqz v5, :cond_4
 
-    .line 14105
+    .line 14336
     const/4 v2, 0x7
 
-    .line 14109
+    .line 14340
     .local v2, start:I
     :goto_1
     const-string v5, "/"
@@ -23533,24 +23550,24 @@
 
     move-result v0
 
-    .line 14110
+    .line 14341
     .local v0, end:I
     const/4 v5, -0x1
 
     if-ne v0, v5, :cond_2
 
-    .line 14111
+    .line 14342
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 14113
+    .line 14344
     :cond_2
     invoke-virtual {v3, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 14115
+    .line 14346
     .local v1, host:Ljava/lang/String;
     const-string/jumbo v5, "yahoo.com"
 
@@ -23568,7 +23585,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 14118
+    .line 14349
     :cond_3
     const-string/jumbo v5, "youtube.com"
 
@@ -23578,7 +23595,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14121
+    .line 14352
     const-string/jumbo v5, "nba.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23587,7 +23604,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14124
+    .line 14355
     const-string/jumbo v5, "msn.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23596,7 +23613,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14127
+    .line 14358
     const-string v5, "bbc.co.uk"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23605,7 +23622,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14130
+    .line 14361
     const-string v5, "cnn.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23614,7 +23631,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14133
+    .line 14364
     const-string v5, "espn.go.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23623,7 +23640,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14136
+    .line 14367
     const-string v5, "engadget.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23632,7 +23649,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14139
+    .line 14370
     const-string/jumbo v5, "wired.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23641,7 +23658,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14142
+    .line 14373
     const-string/jumbo v5, "sina.com.cn"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23650,7 +23667,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14145
+    .line 14376
     const-string/jumbo v5, "mobile01.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23659,7 +23676,7 @@
 
     if-nez v5, :cond_0
 
-    .line 14148
+    .line 14379
     const-string/jumbo v5, "nytimes.com"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -23668,12 +23685,12 @@
 
     if-nez v5, :cond_0
 
-    .line 14151
+    .line 14382
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 14107
+    .line 14338
     .end local v0           #end:I
     .end local v1           #host:Ljava/lang/String;
     .end local v2           #start:I
@@ -23690,21 +23707,21 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 14156
+    .line 14387
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 14158
+    .line 14389
     .local v3, url:Ljava/lang/String;
     if-nez v3, :cond_1
 
-    .line 14176
+    .line 14407
     :cond_0
     :goto_0
     return v4
 
-    .line 14162
+    .line 14393
     :cond_1
     const-string/jumbo v5, "http://"
 
@@ -23714,10 +23731,10 @@
 
     if-eqz v5, :cond_3
 
-    .line 14163
+    .line 14394
     const/4 v2, 0x7
 
-    .line 14167
+    .line 14398
     .local v2, start:I
     :goto_1
     const-string v5, "/"
@@ -23726,24 +23743,24 @@
 
     move-result v0
 
-    .line 14168
+    .line 14399
     .local v0, end:I
     const/4 v5, -0x1
 
     if-ne v0, v5, :cond_2
 
-    .line 14169
+    .line 14400
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 14171
+    .line 14402
     :cond_2
     invoke-virtual {v3, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 14173
+    .line 14404
     .local v1, host:Ljava/lang/String;
     const-string/jumbo v5, "northstream.se"
 
@@ -23753,12 +23770,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 14174
+    .line 14405
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 14165
+    .line 14396
     .end local v0           #end:I
     .end local v1           #host:Ljava/lang/String;
     .end local v2           #start:I
@@ -23773,7 +23790,7 @@
     .locals 1
 
     .prologue
-    .line 12510
+    .line 12517
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
     return v0
@@ -23783,12 +23800,12 @@
     .locals 1
 
     .prologue
-    .line 14352
+    .line 14583
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->RecoveryDefaultZoomLowerBound()V
 
-    .line 14353
+    .line 14584
     return-void
 .end method
 
@@ -23796,12 +23813,12 @@
     .locals 1
 
     .prologue
-    .line 14348
+    .line 14579
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->RecoveryDefaultZoomUpperBound()V
 
-    .line 14349
+    .line 14580
     return-void
 .end method
 
@@ -23810,14 +23827,14 @@
     .parameter "ctx"
 
     .prologue
-    .line 11505
+    .line 11512
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/webkit/WebView;->ownerActivityContext:Ljava/lang/ref/WeakReference;
 
-    .line 11506
+    .line 11513
     return-void
 .end method
 
@@ -23827,50 +23844,50 @@
     .parameter "fOriginalScale"
 
     .prologue
-    .line 14780
+    .line 15011
     sget-boolean v2, Landroid/webkit/WebView;->gbIsAnimationZoomOut:Z
 
     const/4 v7, 0x1
 
     if-ne v2, v7, :cond_1
 
-    .line 14889
+    .line 15120
     :cond_0
     :goto_0
     return-void
 
-    .line 14783
+    .line 15014
     :cond_1
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 14794
+    .line 15025
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->pauseTimers()V
 
-    .line 14796
+    .line 15027
     invoke-static {}, Landroid/webkit/WebViewCore;->reducePriority()V
 
-    .line 14797
+    .line 15028
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v2}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 14802
+    .line 15033
     move/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebView;->mbNeedCallBack:Z
 
-    .line 14803
+    .line 15034
     move/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebView;->mOriginalScale:F
 
-    .line 14804
+    .line 15035
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
@@ -23885,7 +23902,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mIntervalScale:F
 
-    .line 14805
+    .line 15036
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
@@ -23894,19 +23911,19 @@
 
     iput-wide v7, v0, Landroid/webkit/WebView;->mStartTime:J
 
-    .line 14806
+    .line 15037
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Landroid/webkit/WebView;->mbIsAnimationZoomOutFinish:Z
 
-    .line 14807
+    .line 15038
     const/4 v2, 0x1
 
     sput-boolean v2, Landroid/webkit/WebView;->gbIsAnimationZoomOut:Z
 
-    .line 14809
+    .line 15040
     sget-boolean v2, Landroid/webkit/WebView;->m_bHostFullScreenMode:Z
 
     const/4 v7, 0x1
@@ -23920,7 +23937,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->m_nHostStatusbarHeight:I
 
-    .line 14810
+    .line 15041
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v2
@@ -23947,7 +23964,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->m_nVisibleTitleHeight:I
 
-    .line 14811
+    .line 15042
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v2
@@ -23958,7 +23975,7 @@
 
     add-int v11, v2, v7
 
-    .line 14813
+    .line 15044
     .local v11, nOffset:I
     sget-object v2, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
@@ -23984,45 +24001,45 @@
 
     if-nez v2, :cond_2
 
-    .line 14814
+    .line 15045
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Landroid/webkit/WebView;->m_nVisibleTitleHeight:I
 
-    .line 14816
+    .line 15047
     :cond_2
     new-instance v12, Landroid/graphics/Rect;
 
     invoke-direct {v12}, Landroid/graphics/Rect;-><init>()V
 
-    .line 14817
+    .line 15048
     .local v12, rcLocalDraw:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v12}, Landroid/webkit/WebView;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 14819
+    .line 15050
     iget v3, v12, Landroid/graphics/Rect;->left:I
 
-    .line 14820
+    .line 15051
     .local v3, nTabSnapshot_x:I
     iget v4, v12, Landroid/graphics/Rect;->left:I
 
-    .line 14821
+    .line 15052
     .local v4, nTabSnapshot_y:I
     invoke-virtual {v12}, Landroid/graphics/Rect;->width()I
 
     move-result v5
 
-    .line 14822
+    .line 15053
     .local v5, nTabSnapshot_width:I
     invoke-virtual {v12}, Landroid/graphics/Rect;->height()I
 
     move-result v6
 
-    .line 14823
+    .line 15054
     .local v6, nTabSnapshot_height:I
     move-object/from16 v0, p0
 
@@ -24030,15 +24047,15 @@
 
     if-nez v2, :cond_3
 
-    .line 14824
+    .line 15055
     iget v2, v12, Landroid/graphics/Rect;->top:I
 
     if-le v11, v2, :cond_7
 
-    .line 14825
+    .line 15056
     const/4 v4, 0x0
 
-    .line 14829
+    .line 15060
     :goto_2
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->fnGetDefaultDisplayInfo()Landroid/view/Display;
 
@@ -24050,7 +24067,7 @@
 
     add-int/lit8 v5, v2, -0x3
 
-    .line 14830
+    .line 15061
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->fnGetDefaultDisplayInfo()Landroid/view/Display;
 
     move-result-object v2
@@ -24065,7 +24082,7 @@
 
     sub-int v6, v2, v7
 
-    .line 14832
+    .line 15063
     :cond_3
     move-object/from16 v0, p0
 
@@ -24089,7 +24106,7 @@
 
     iput-object v2, v0, Landroid/webkit/WebView;->mAnimationZoomOutBitmap:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 14834
+    .line 15065
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
@@ -24102,28 +24119,28 @@
 
     if-eqz v2, :cond_0
 
-    .line 14837
+    .line 15068
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mAnimZoomOutBitmap_modify:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_4
 
-    .line 14838
+    .line 15069
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mAnimZoomOutBitmap_modify:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 14839
+    .line 15070
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Landroid/webkit/WebView;->mAnimZoomOutBitmap_modify:Landroid/graphics/Bitmap;
 
-    .line 14842
+    .line 15073
     :cond_4
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -24141,7 +24158,7 @@
 
     move-result-object v10
 
-    .line 14843
+    .line 15074
     .local v10, display:Landroid/view/Display;
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -24157,15 +24174,15 @@
 
     iget v9, v2, Landroid/util/DisplayMetrics;->density:F
 
-    .line 14844
+    .line 15075
     .local v9, density:F
     const/4 v13, 0x0
 
-    .line 14845
+    .line 15076
     .local v13, sx:F
     const/4 v14, 0x0
 
-    .line 14846
+    .line 15077
     .local v14, sy:F
     const v2, 0x3f181062
 
@@ -24173,7 +24190,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
 
-    .line 14847
+    .line 15078
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -24192,7 +24209,7 @@
 
     if-ne v2, v7, :cond_8
 
-    .line 14848
+    .line 15079
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
@@ -24213,7 +24230,7 @@
 
     mul-float v13, v2, v7
 
-    .line 14849
+    .line 15080
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
@@ -24242,7 +24259,7 @@
 
     add-float v14, v2, v7
 
-    .line 14855
+    .line 15086
     :goto_3
     invoke-static {v13}, Ljava/lang/Math;->round(F)I
 
@@ -24254,7 +24271,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->m_nCurrentTabMinLeft:I
 
-    .line 14856
+    .line 15087
     invoke-static {v14}, Ljava/lang/Math;->round(F)I
 
     move-result v2
@@ -24265,7 +24282,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->m_nCurrentTabMinTop:I
 
-    .line 14861
+    .line 15092
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->m_nVisibleTitleHeight:I
@@ -24278,7 +24295,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 14862
+    .line 15093
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
@@ -24317,7 +24334,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
 
-    .line 14864
+    .line 15095
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -24336,7 +24353,7 @@
 
     if-ne v2, v7, :cond_9
 
-    .line 14865
+    .line 15096
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
@@ -24357,7 +24374,7 @@
 
     mul-float v13, v2, v7
 
-    .line 14866
+    .line 15097
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
@@ -24386,7 +24403,7 @@
 
     add-float v14, v2, v7
 
-    .line 14872
+    .line 15103
     :goto_4
     invoke-static {v13}, Ljava/lang/Math;->round(F)I
 
@@ -24398,7 +24415,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->m_nCurrentTabMinLeft_modify:I
 
-    .line 14873
+    .line 15104
     invoke-static {v14}, Ljava/lang/Math;->round(F)I
 
     move-result v2
@@ -24409,11 +24426,11 @@
 
     iput v2, v0, Landroid/webkit/WebView;->m_nCurrentTabMinTop_modify:I
 
-    .line 14876
+    .line 15107
     :cond_5
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 14878
+    .line 15109
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -24426,7 +24443,7 @@
 
     invoke-virtual {v2, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 14887
+    .line 15118
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -24437,7 +24454,7 @@
 
     invoke-virtual {v2, v7}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 14888
+    .line 15119
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -24454,7 +24471,7 @@
 
     goto/16 :goto_0
 
-    .line 14809
+    .line 15040
     .end local v3           #nTabSnapshot_x:I
     .end local v4           #nTabSnapshot_y:I
     .end local v5           #nTabSnapshot_width:I
@@ -24482,7 +24499,7 @@
 
     goto/16 :goto_1
 
-    .line 14827
+    .line 15058
     .restart local v3       #nTabSnapshot_x:I
     .restart local v4       #nTabSnapshot_y:I
     .restart local v5       #nTabSnapshot_width:I
@@ -24496,7 +24513,7 @@
 
     goto/16 :goto_2
 
-    .line 14851
+    .line 15082
     .restart local v9       #density:F
     .restart local v10       #display:Landroid/view/Display;
     .restart local v13       #sx:F
@@ -24522,7 +24539,7 @@
 
     mul-float v13, v2, v7
 
-    .line 14852
+    .line 15083
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
@@ -24553,7 +24570,7 @@
 
     goto/16 :goto_3
 
-    .line 14868
+    .line 15099
     :cond_9
     move-object/from16 v0, p0
 
@@ -24575,7 +24592,7 @@
 
     mul-float v13, v2, v7
 
-    .line 14869
+    .line 15100
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mfTabRatio:F
@@ -24613,30 +24630,30 @@
     .parameter "interfaceName"
 
     .prologue
-    .line 4586
+    .line 4590
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4587
+    .line 4591
     if-nez p1, :cond_0
 
-    .line 4594
+    .line 4598
     :goto_0
     return-void
 
-    .line 4590
+    .line 4594
     :cond_0
     new-instance v0, Landroid/webkit/WebViewCore$JSInterfaceData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$JSInterfaceData;-><init>()V
 
-    .line 4591
+    .line 4595
     .local v0, arg:Landroid/webkit/WebViewCore$JSInterfaceData;
     iput-object p1, v0, Landroid/webkit/WebViewCore$JSInterfaceData;->mObject:Ljava/lang/Object;
 
-    .line 4592
+    .line 4596
     iput-object p2, v0, Landroid/webkit/WebViewCore$JSInterfaceData;->mInterfaceName:Ljava/lang/String;
 
-    .line 4593
+    .line 4597
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x8a
@@ -24651,7 +24668,7 @@
     .parameter "zoomDensity"
 
     .prologue
-    .line 1550
+    .line 1554
     iget-object v1, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -24672,11 +24689,11 @@
 
     div-float v0, v1, v2
 
-    .line 1552
+    .line 1556
     .local v0, density:F
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->updateDefaultZoomDensity(F)V
 
-    .line 1553
+    .line 1557
     return-void
 .end method
 
@@ -24685,7 +24702,7 @@
     .parameter "autoFillQueryId"
 
     .prologue
-    .line 11216
+    .line 11223
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xc0
@@ -24694,7 +24711,7 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 11217
+    .line 11224
     return-void
 .end method
 
@@ -24704,21 +24721,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2550
+    .line 2554
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2551
+    .line 2555
     iget-object v2, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v2}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
 
     move-result-object v0
 
-    .line 2552
+    .line 2556
     .local v0, l:Landroid/webkit/WebBackForwardList;
     monitor-enter v0
 
-    .line 2553
+    .line 2557
     :try_start_0
     invoke-virtual {v0}, Landroid/webkit/WebBackForwardList;->getClearPending()Z
 
@@ -24726,10 +24743,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 2554
+    .line 2558
     monitor-exit v0
 
-    .line 2556
+    .line 2560
     :goto_0
     return v1
 
@@ -24747,7 +24764,7 @@
 
     goto :goto_0
 
-    .line 2558
+    .line 2562
     :catchall_0
     move-exception v1
 
@@ -24765,21 +24782,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2600
+    .line 2604
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2601
+    .line 2605
     iget-object v3, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v3}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
 
     move-result-object v0
 
-    .line 2602
+    .line 2606
     .local v0, l:Landroid/webkit/WebBackForwardList;
     monitor-enter v0
 
-    .line 2603
+    .line 2607
     :try_start_0
     invoke-virtual {v0}, Landroid/webkit/WebBackForwardList;->getClearPending()Z
 
@@ -24787,14 +24804,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 2604
+    .line 2608
     monitor-exit v0
 
-    .line 2607
+    .line 2611
     :goto_0
     return v2
 
-    .line 2606
+    .line 2610
     :cond_0
     invoke-virtual {v0}, Landroid/webkit/WebBackForwardList;->getCurrentIndex()I
 
@@ -24802,7 +24819,7 @@
 
     add-int v1, v3, p1
 
-    .line 2607
+    .line 2611
     .local v1, newIndex:I
     if-ltz v1, :cond_1
 
@@ -24819,7 +24836,7 @@
 
     goto :goto_0
 
-    .line 2609
+    .line 2613
     .end local v1           #newIndex:I
     :catchall_0
     move-exception v2
@@ -24837,21 +24854,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2574
+    .line 2578
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2575
+    .line 2579
     iget-object v2, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v2}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
 
     move-result-object v0
 
-    .line 2576
+    .line 2580
     .local v0, l:Landroid/webkit/WebBackForwardList;
     monitor-enter v0
 
-    .line 2577
+    .line 2581
     :try_start_0
     invoke-virtual {v0}, Landroid/webkit/WebBackForwardList;->getClearPending()Z
 
@@ -24859,10 +24876,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 2578
+    .line 2582
     monitor-exit v0
 
-    .line 2580
+    .line 2584
     :goto_0
     return v1
 
@@ -24886,7 +24903,7 @@
 
     goto :goto_0
 
-    .line 2582
+    .line 2586
     :catchall_0
     move-exception v1
 
@@ -24901,10 +24918,10 @@
     .locals 1
 
     .prologue
-    .line 8565
+    .line 8572
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 8566
+    .line 8573
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->canZoomIn()Z
@@ -24918,10 +24935,10 @@
     .locals 1
 
     .prologue
-    .line 8573
+    .line 8580
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 8574
+    .line 8581
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->canZoomOut()Z
@@ -24935,27 +24952,27 @@
     .locals 2
 
     .prologue
-    .line 2741
+    .line 2745
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2742
+    .line 2746
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 2745
+    .line 2749
     :goto_0
     return-object v0
 
-    .line 2743
+    .line 2747
     :cond_0
     new-instance v0, Landroid/graphics/Picture;
 
     invoke-direct {v0}, Landroid/graphics/Picture;-><init>()V
 
-    .line 2744
+    .line 2748
     .local v0, result:Landroid/graphics/Picture;
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->nativeCopyBaseContentToPicture(Landroid/graphics/Picture;)V
 
@@ -24967,30 +24984,30 @@
     .parameter "rect"
 
     .prologue
-    .line 8820
+    .line 8827
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->width()I
 
     move-result v17
 
-    .line 8821
+    .line 8828
     .local v17, rectWidth:I
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->height()I
 
     move-result v12
 
-    .line 8822
+    .line 8829
     .local v12, rectHeight:I
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v20
 
-    .line 8823
+    .line 8830
     .local v20, viewWidth:I
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
     move-result v19
 
-    .line 8824
+    .line 8831
     .local v19, viewHeight:I
     move/from16 v0, v20
 
@@ -25022,7 +25039,7 @@
 
     move-result v18
 
-    .line 8826
+    .line 8833
     .local v18, scale:F
     move-object/from16 v0, p0
 
@@ -25038,7 +25055,7 @@
 
     move-result v18
 
-    .line 8827
+    .line 8834
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -25055,7 +25072,7 @@
 
     if-nez v23, :cond_0
 
-    .line 8828
+    .line 8835
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -25116,11 +25133,11 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/webkit/WebView;->pinScrollTo(IIZI)Z
 
-    .line 8863
+    .line 8870
     :goto_0
     return-void
 
-    .line 8832
+    .line 8839
     :cond_0
     move-object/from16 v0, p0
 
@@ -25132,7 +25149,7 @@
 
     move-result v5
 
-    .line 8833
+    .line 8840
     .local v5, actualScale:F
     move-object/from16 v0, p1
 
@@ -25162,7 +25179,7 @@
 
     sub-float v10, v23, v24
 
-    .line 8834
+    .line 8841
     .local v10, oldScreenX:F
     move-object/from16 v0, p1
 
@@ -25178,7 +25195,7 @@
 
     mul-float v15, v23, v18
 
-    .line 8835
+    .line 8842
     .local v15, rectViewX:F
     move/from16 v0, v17
 
@@ -25188,7 +25205,7 @@
 
     mul-float v14, v23, v18
 
-    .line 8836
+    .line 8843
     .local v14, rectViewWidth:F
     move-object/from16 v0, p0
 
@@ -25204,7 +25221,7 @@
 
     mul-float v7, v23, v18
 
-    .line 8837
+    .line 8844
     .local v7, newMaxWidth:F
     move/from16 v0, v20
 
@@ -25218,16 +25235,16 @@
 
     div-float v8, v23, v24
 
-    .line 8839
+    .line 8846
     .local v8, newScreenX:F
     cmpl-float v23, v8, v15
 
     if-lez v23, :cond_3
 
-    .line 8840
+    .line 8847
     move v8, v15
 
-    .line 8844
+    .line 8851
     :cond_1
     :goto_1
     mul-float v23, v10, v18
@@ -25240,7 +25257,7 @@
 
     div-float v21, v23, v24
 
-    .line 8846
+    .line 8853
     .local v21, zoomCenterX:F
     move-object/from16 v0, p1
 
@@ -25282,7 +25299,7 @@
 
     sub-float v11, v23, v24
 
-    .line 8848
+    .line 8855
     .local v11, oldScreenY:F
     move-object/from16 v0, p1
 
@@ -25310,7 +25327,7 @@
 
     add-float v16, v23, v24
 
-    .line 8849
+    .line 8856
     .local v16, rectViewY:F
     int-to-float v0, v12
 
@@ -25318,7 +25335,7 @@
 
     mul-float v13, v23, v18
 
-    .line 8850
+    .line 8857
     .local v13, rectViewHeight:F
     move-object/from16 v0, p0
 
@@ -25346,7 +25363,7 @@
 
     add-float v6, v23, v24
 
-    .line 8851
+    .line 8858
     .local v6, newMaxHeight:F
     move/from16 v0, v19
 
@@ -25360,16 +25377,16 @@
 
     div-float v9, v23, v24
 
-    .line 8853
+    .line 8860
     .local v9, newScreenY:F
     cmpl-float v23, v9, v16
 
     if-lez v23, :cond_4
 
-    .line 8854
+    .line 8861
     move/from16 v9, v16
 
-    .line 8858
+    .line 8865
     :cond_2
     :goto_2
     mul-float v23, v11, v18
@@ -25382,7 +25399,7 @@
 
     div-float v22, v23, v24
 
-    .line 8860
+    .line 8867
     .local v22, zoomCenterY:F
     move-object/from16 v0, p0
 
@@ -25398,7 +25415,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/ZoomManager;->setZoomCenter(FF)V
 
-    .line 8861
+    .line 8868
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -25417,7 +25434,7 @@
 
     goto/16 :goto_0
 
-    .line 8841
+    .line 8848
     .end local v6           #newMaxHeight:F
     .end local v9           #newScreenY:F
     .end local v11           #oldScreenY:F
@@ -25434,7 +25451,7 @@
 
     if-lez v23, :cond_1
 
-    .line 8842
+    .line 8849
     move/from16 v0, v20
 
     int-to-float v0, v0
@@ -25447,7 +25464,7 @@
 
     goto/16 :goto_1
 
-    .line 8855
+    .line 8862
     .restart local v6       #newMaxHeight:F
     .restart local v9       #newScreenY:F
     .restart local v11       #oldScreenY:F
@@ -25463,7 +25480,7 @@
 
     if-lez v23, :cond_2
 
-    .line 8856
+    .line 8863
     move/from16 v0, v19
 
     int-to-float v0, v0
@@ -25481,7 +25498,7 @@
     .locals 4
 
     .prologue
-    .line 8705
+    .line 8712
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x76
@@ -25496,7 +25513,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 8707
+    .line 8714
     return-void
 .end method
 
@@ -25504,14 +25521,14 @@
     .locals 1
 
     .prologue
-    .line 15227
+    .line 15458
     invoke-virtual {p0}, Landroid/webkit/WebView;->IsHeavyWebSite()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mIsHeavyWebSite:Z
 
-    .line 15228
+    .line 15459
     return-void
 .end method
 
@@ -25520,7 +25537,7 @@
     .parameter "distance"
 
     .prologue
-    .line 12395
+    .line 12402
     const/4 v0, 0x1
 
     return v0
@@ -25533,10 +25550,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3790
+    .line 3794
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3794
+    .line 3798
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v3, 0x6f
@@ -25548,13 +25565,13 @@
     :goto_0
     invoke-virtual {v2, v3, v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 3796
+    .line 3800
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 3794
+    .line 3798
     goto :goto_0
 .end method
 
@@ -25562,24 +25579,24 @@
     .locals 2
 
     .prologue
-    .line 3803
+    .line 3807
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3804
+    .line 3808
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3805
+    .line 3809
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebTextView;->setAdapterCustom(Landroid/webkit/WebTextView$AutoCompleteAdapter;)V
 
-    .line 3807
+    .line 3811
     :cond_0
     return-void
 .end method
@@ -25588,10 +25605,10 @@
     .locals 2
 
     .prologue
-    .line 3813
+    .line 3817
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3814
+    .line 3818
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -25600,14 +25617,14 @@
 
     invoke-virtual {v0}, Landroid/webkit/WebBackForwardList;->setClearPending()V
 
-    .line 3815
+    .line 3819
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x70
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 3816
+    .line 3820
     return-void
 .end method
 
@@ -25615,23 +25632,23 @@
     .locals 1
 
     .prologue
-    .line 4001
+    .line 4005
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4002
+    .line 4006
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v0, :cond_0
 
-    .line 4006
+    .line 4010
     :goto_0
     return-void
 
-    .line 4004
+    .line 4008
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeSetFindIsEmpty()V
 
-    .line 4005
+    .line 4009
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto :goto_0
@@ -25641,17 +25658,17 @@
     .locals 2
 
     .prologue
-    .line 3823
+    .line 3827
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3824
+    .line 3828
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x96
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 3825
+    .line 3829
     return-void
 .end method
 
@@ -25659,23 +25676,23 @@
     .locals 1
 
     .prologue
-    .line 2761
+    .line 2765
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2762
+    .line 2766
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->remove()V
 
-    .line 2767
+    .line 2771
     :goto_0
     return-void
 
-    .line 2765
+    .line 2769
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->hideSoftKeyboard()V
 
@@ -25688,16 +25705,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2724
+    .line 2728
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2725
+    .line 2729
     iput v1, p0, Landroid/webkit/WebView;->mContentWidth:I
 
-    .line 2726
+    .line 2730
     iput v1, p0, Landroid/webkit/WebView;->mContentHeight:I
 
-    .line 2727
+    .line 2731
     const/4 v2, 0x0
 
     move-object v0, p0
@@ -25710,14 +25727,14 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/webkit/WebView;->setBaseLayer(ILandroid/graphics/Region;ZZZ)V
 
-    .line 2728
+    .line 2732
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x86
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 2729
+    .line 2733
     return-void
 .end method
 
@@ -25725,20 +25742,20 @@
     .locals 1
 
     .prologue
-    .line 2252
+    .line 2256
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
-    .line 2253
+    .line 2257
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mLoadedPicture:Landroid/webkit/WebViewCore$DrawData;
 
-    .line 2254
+    .line 2258
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2255
+    .line 2259
     return-void
 .end method
 
@@ -25748,14 +25765,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 14313
+    .line 14544
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xfb
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 14314
+    .line 14545
     return-void
 .end method
 
@@ -25763,7 +25780,7 @@
     .locals 2
 
     .prologue
-    .line 3496
+    .line 3500
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     const/4 v1, 0x0
@@ -25779,38 +25796,38 @@
     .locals 4
 
     .prologue
-    .line 3480
+    .line 3484
     invoke-direct {p0}, Landroid/webkit/WebView;->computeRealHorizontalScrollRange()I
 
     move-result v1
 
-    .line 3483
+    .line 3487
     .local v1, range:I
     iget v2, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 3484
+    .line 3488
     .local v2, scrollX:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->computeMaxScrollX()I
 
     move-result v0
 
-    .line 3485
+    .line 3489
     .local v0, overscrollRight:I
     if-gez v2, :cond_1
 
-    .line 3486
+    .line 3490
     sub-int/2addr v1, v2
 
-    .line 3491
+    .line 3495
     :cond_0
     :goto_0
     return v1
 
-    .line 3487
+    .line 3491
     :cond_1
     if-le v2, v0, :cond_0
 
-    .line 3488
+    .line 3492
     sub-int v3, v2, v0
 
     add-int/2addr v1, v3
@@ -25822,7 +25839,7 @@
     .locals 2
 
     .prologue
-    .line 8337
+    .line 8344
     invoke-direct {p0}, Landroid/webkit/WebView;->computeRealHorizontalScrollRange()I
 
     move-result v0
@@ -25846,7 +25863,7 @@
     .locals 2
 
     .prologue
-    .line 8345
+    .line 8352
     invoke-direct {p0}, Landroid/webkit/WebView;->computeRealVerticalScrollRange()I
 
     move-result v0
@@ -25880,7 +25897,7 @@
 
     const/4 v9, 0x0
 
-    .line 4060
+    .line 4064
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->computeScrollOffset()Z
@@ -25889,14 +25906,14 @@
 
     if-eqz v0, :cond_6
 
-    .line 4061
+    .line 4065
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 4062
+    .line 4066
     .local v3, oldX:I
     iget v4, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 4063
+    .line 4067
     .local v4, oldY:I
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
@@ -25904,7 +25921,7 @@
 
     move-result v10
 
-    .line 4064
+    .line 4068
     .local v10, x:I
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
@@ -25912,11 +25929,11 @@
 
     move-result v11
 
-    .line 4065
+    .line 4069
     .local v11, y:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 4067
+    .line 4071
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->isFinished()Z
@@ -25925,51 +25942,51 @@
 
     if-nez v0, :cond_2
 
-    .line 4068
+    .line 4072
     invoke-virtual {p0}, Landroid/webkit/WebView;->computeMaxScrollX()I
 
     move-result v5
 
-    .line 4069
+    .line 4073
     .local v5, rangeX:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->computeMaxScrollY()I
 
     move-result v6
 
-    .line 4070
+    .line 4074
     .local v6, rangeY:I
     iget v7, p0, Landroid/webkit/WebView;->mOverflingDistance:I
 
-    .line 4073
+    .line 4077
     .local v7, overflingDistance:I
     iget v0, p0, Landroid/webkit/WebView;->mTouchMode:I
 
     if-ne v0, v1, :cond_0
 
-    .line 4074
+    .line 4078
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
-    .line 4075
+    .line 4079
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v4, v0, Landroid/graphics/Rect;->top:I
 
-    .line 4076
+    .line 4080
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v5, v0, Landroid/graphics/Rect;->right:I
 
-    .line 4077
+    .line 4081
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollingLayerRect:Landroid/graphics/Rect;
 
     iget v6, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 4079
+    .line 4083
     const/4 v7, 0x0
 
-    .line 4082
+    .line 4086
     :cond_0
     sub-int v1, v10, v3
 
@@ -25981,12 +25998,12 @@
 
     invoke-virtual/range {v0 .. v9}, Landroid/webkit/WebView;->overScrollBy(IIIIIIIIZ)Z
 
-    .line 4086
+    .line 4090
     iget-object v0, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
     if-eqz v0, :cond_1
 
-    .line 4087
+    .line 4091
     iget-object v0, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
     move v1, v10
@@ -25995,7 +26012,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/webkit/OverScrollGlow;->absorbGlow(IIIIII)V
 
-    .line 4115
+    .line 4119
     .end local v3           #oldX:I
     .end local v4           #oldY:I
     .end local v5           #rangeX:I
@@ -26007,7 +26024,7 @@
     :goto_0
     return-void
 
-    .line 4090
+    .line 4094
     .restart local v3       #oldX:I
     .restart local v4       #oldY:I
     .restart local v10       #x:I
@@ -26017,41 +26034,41 @@
 
     if-eq v0, v1, :cond_5
 
-    .line 4091
+    .line 4095
     iput v10, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 4092
+    .line 4096
     iput v11, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 4097
+    .line 4101
     :goto_1
     invoke-direct {p0}, Landroid/webkit/WebView;->abortAnimation()V
 
-    .line 4099
+    .line 4103
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnScrollingEnd()V
 
-    .line 4101
+    .line 4105
     invoke-direct {p0, v9}, Landroid/webkit/WebView;->nativeSetIsScrolling(Z)V
 
-    .line 4102
+    .line 4106
     iget-boolean v0, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v0, :cond_3
 
-    .line 4103
+    .line 4107
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 4104
+    .line 4108
     iget-boolean v0, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-nez v0, :cond_3
 
-    .line 4105
+    .line 4109
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 4108
+    .line 4112
     :cond_3
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
@@ -26061,19 +26078,19 @@
 
     if-eq v4, v0, :cond_1
 
-    .line 4109
+    .line 4113
     :cond_4
     invoke-virtual {p0}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
     goto :goto_0
 
-    .line 4095
+    .line 4099
     :cond_5
     invoke-direct {p0, v10, v11}, Landroid/webkit/WebView;->scrollLayerTo(II)V
 
     goto :goto_1
 
-    .line 4113
+    .line 4117
     .end local v3           #oldX:I
     .end local v4           #oldY:I
     .end local v10           #x:I
@@ -26088,7 +26105,7 @@
     .locals 1
 
     .prologue
-    .line 3531
+    .line 3535
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeight()I
 
     move-result v0
@@ -26100,7 +26117,7 @@
     .locals 2
 
     .prologue
-    .line 3526
+    .line 3530
     iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getTitleHeight()I
@@ -26122,38 +26139,38 @@
     .locals 4
 
     .prologue
-    .line 3510
+    .line 3514
     invoke-direct {p0}, Landroid/webkit/WebView;->computeRealVerticalScrollRange()I
 
     move-result v1
 
-    .line 3513
+    .line 3517
     .local v1, range:I
     iget v2, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 3514
+    .line 3518
     .local v2, scrollY:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->computeMaxScrollY()I
 
     move-result v0
 
-    .line 3515
+    .line 3519
     .local v0, overscrollBottom:I
     if-gez v2, :cond_1
 
-    .line 3516
+    .line 3520
     sub-int/2addr v1, v2
 
-    .line 3521
+    .line 3525
     :cond_0
     :goto_0
     return v1
 
-    .line 3517
+    .line 3521
     :cond_1
     if-le v2, v0, :cond_0
 
-    .line 3518
+    .line 3522
     sub-int v3, v2, v0
 
     add-int/2addr v1, v3
@@ -26165,7 +26182,7 @@
     .locals 2
 
     .prologue
-    .line 11237
+    .line 11244
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_0
@@ -26174,14 +26191,14 @@
 
     if-nez v0, :cond_0
 
-    .line 11238
+    .line 11245
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xaf
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 11240
+    .line 11247
     :cond_0
     return-void
 .end method
@@ -26191,7 +26208,7 @@
     .parameter "d"
 
     .prologue
-    .line 3106
+    .line 3110
     int-to-float v0, p1
 
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -26214,7 +26231,7 @@
     .parameter "x"
 
     .prologue
-    .line 3114
+    .line 3118
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->contentToViewDimension(I)I
 
     move-result v0
@@ -26227,7 +26244,7 @@
     .parameter "y"
 
     .prologue
-    .line 3122
+    .line 3126
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->contentToViewDimension(I)I
 
     move-result v0
@@ -26245,10 +26262,10 @@
     .locals 1
 
     .prologue
-    .line 3836
+    .line 3840
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3837
+    .line 3841
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -26266,16 +26283,16 @@
     .locals 6
 
     .prologue
-    .line 6508
+    .line 6515
     const/4 v1, 0x0
 
-    .line 6509
+    .line 6516
     .local v1, copiedSomething:Z
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSelection()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 6510
+    .line 6517
     .local v2, selection:Ljava/lang/String;
     if-eqz v2, :cond_0
 
@@ -26283,7 +26300,7 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 6514
+    .line 6521
     iget-object v3, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     const v4, 0x1040383
@@ -26296,10 +26313,10 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 6517
+    .line 6524
     const/4 v1, 0x1
 
-    .line 6518
+    .line 6525
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -26312,7 +26329,7 @@
 
     check-cast v0, Landroid/content/ClipboardManager;
 
-    .line 6520
+    .line 6527
     .local v0, cm:Landroid/content/ClipboardManager;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -26342,12 +26359,12 @@
 
     invoke-virtual {v0, v3}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    .line 6524
+    .line 6531
     .end local v0           #cm:Landroid/content/ClipboardManager;
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 6525
+    .line 6532
     return v1
 .end method
 
@@ -26355,29 +26372,29 @@
     .locals 3
 
     .prologue
-    .line 5618
+    .line 5625
     invoke-virtual {p0}, Landroid/webkit/WebView;->cursorDataNoPosition()Landroid/webkit/WebViewCore$CursorData;
 
     move-result-object v1
 
-    .line 5619
+    .line 5626
     .local v1, result:Landroid/webkit/WebViewCore$CursorData;
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorPosition()Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 5620
+    .line 5627
     .local v0, position:Landroid/graphics/Point;
     iget v2, v0, Landroid/graphics/Point;->x:I
 
     iput v2, v1, Landroid/webkit/WebViewCore$CursorData;->mX:I
 
-    .line 5621
+    .line 5628
     iget v2, v0, Landroid/graphics/Point;->y:I
 
     iput v2, v1, Landroid/webkit/WebViewCore$CursorData;->mY:I
 
-    .line 5622
+    .line 5629
     return-object v1
 .end method
 
@@ -26385,12 +26402,12 @@
     .locals 2
 
     .prologue
-    .line 5626
+    .line 5633
     new-instance v0, Landroid/webkit/WebViewCore$CursorData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$CursorData;-><init>()V
 
-    .line 5627
+    .line 5634
     .local v0, result:Landroid/webkit/WebViewCore$CursorData;
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeMoveGeneration()I
 
@@ -26398,14 +26415,14 @@
 
     iput v1, v0, Landroid/webkit/WebViewCore$CursorData;->mMoveGeneration:I
 
-    .line 5628
+    .line 5635
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorFramePointer()I
 
     move-result v1
 
     iput v1, v0, Landroid/webkit/WebViewCore$CursorData;->mFrame:I
 
-    .line 5629
+    .line 5636
     return-object v0
 .end method
 
@@ -26415,20 +26432,20 @@
     .end annotation
 
     .prologue
-    .line 11168
+    .line 11175
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 11169
+    .line 11176
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeDebugDump()V
 
-    .line 11170
+    .line 11177
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xac
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 11171
+    .line 11178
     return-void
 .end method
 
@@ -26438,19 +26455,19 @@
     .parameter "end"
 
     .prologue
-    .line 5640
+    .line 5647
     iget v1, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
-    .line 5641
+    .line 5648
     new-instance v0, Landroid/webkit/WebViewCore$TextSelectionData;
 
     invoke-direct {v0, p1, p2}, Landroid/webkit/WebViewCore$TextSelectionData;-><init>(II)V
 
-    .line 5643
+    .line 5650
     .local v0, data:Landroid/webkit/WebViewCore$TextSelectionData;
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -26462,7 +26479,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 5645
+    .line 5652
     return-void
 .end method
 
@@ -26470,13 +26487,13 @@
     .locals 0
 
     .prologue
-    .line 1845
+    .line 1849
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1846
+    .line 1850
     invoke-direct {p0}, Landroid/webkit/WebView;->destroyImpl()V
 
-    .line 1847
+    .line 1851
     return-void
 .end method
 
@@ -26484,17 +26501,17 @@
     .locals 1
 
     .prologue
-    .line 14632
+    .line 14863
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     if-eqz v0, :cond_0
 
-    .line 14633
+    .line 14864
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->disableMultiTouch()V
 
-    .line 14634
+    .line 14865
     :cond_0
     return-void
 .end method
@@ -26503,12 +26520,12 @@
     .locals 1
 
     .prologue
-    .line 8546
+    .line 8553
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->dismissZoomPicker()V
 
-    .line 8547
+    .line 8554
     return-void
 .end method
 
@@ -26517,14 +26534,14 @@
     .parameter "event"
 
     .prologue
-    .line 6840
+    .line 6847
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 6864
+    .line 6871
     :goto_0
     :pswitch_0
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
@@ -26541,18 +26558,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 6867
+    .line 6874
     iget-object v1, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v1, p1}, Landroid/webkit/WebTextView;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v1
 
-    .line 6869
+    .line 6876
     :goto_1
     return v1
 
-    .line 6842
+    .line 6849
     :pswitch_1
     iget-object v1, p0, Landroid/webkit/WebView;->mKeysPressed:Ljava/util/Vector;
 
@@ -26568,7 +26585,7 @@
 
     goto :goto_0
 
-    .line 6848
+    .line 6855
     :pswitch_2
     iget-object v1, p0, Landroid/webkit/WebView;->mKeysPressed:Ljava/util/Vector;
 
@@ -26584,18 +26601,18 @@
 
     move-result v0
 
-    .line 6849
+    .line 6856
     .local v0, location:I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 6852
+    .line 6859
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 6856
+    .line 6863
     :cond_0
     iget-object v1, p0, Landroid/webkit/WebView;->mKeysPressed:Ljava/util/Vector;
 
@@ -26603,7 +26620,7 @@
 
     goto :goto_0
 
-    .line 6869
+    .line 6876
     .end local v0           #location:I
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -26612,7 +26629,7 @@
 
     goto :goto_1
 
-    .line 6840
+    .line 6847
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -26626,14 +26643,14 @@
     .parameter "callback"
 
     .prologue
-    .line 4561
+    .line 4565
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xa1
 
     invoke-virtual {v0, v1, p1}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 4562
+    .line 4566
     return-void
 .end method
 
@@ -26642,17 +26659,17 @@
     .parameter "response"
 
     .prologue
-    .line 4041
+    .line 4045
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4042
+    .line 4046
     if-nez p1, :cond_0
 
-    .line 4046
+    .line 4050
     :goto_0
     return-void
 
-    .line 4045
+    .line 4049
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -26672,19 +26689,19 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 4664
+    .line 4668
     iget-object v3, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
     if-ne p2, v3, :cond_1
 
-    .line 4666
+    .line 4670
     iget-object v3, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget-object v3, v3, Landroid/webkit/ZoomManager;->mTranslateOffset:Landroid/graphics/Point;
 
     iget v1, v3, Landroid/graphics/Point;->x:I
 
-    .line 4667
+    .line 4671
     .local v1, tx:I
     iget-object v3, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -26692,7 +26709,7 @@
 
     iget v2, v3, Landroid/graphics/Point;->y:I
 
-    .line 4668
+    .line 4672
     .local v2, ty:I
     iget-object v3, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -26700,7 +26717,7 @@
 
     invoke-virtual {v3, v6, v6}, Landroid/graphics/Point;->set(II)V
 
-    .line 4673
+    .line 4677
     iget-object v3, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
     iget v4, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -26717,16 +26734,16 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->offsetLeftAndRight(I)V
 
-    .line 4674
+    .line 4678
     const/4 v0, 0x0
 
-    .line 4675
+    .line 4679
     .local v0, newTop:I
     iget v3, p0, Landroid/webkit/WebView;->mTitleGravity:I
 
     if-nez v3, :cond_2
 
-    .line 4676
+    .line 4680
     iget v3, p0, Landroid/webkit/WebView;->mScrollY:I
 
     add-int/2addr v3, v2
@@ -26735,7 +26752,7 @@
 
     move-result v0
 
-    .line 4680
+    .line 4684
     :cond_0
     :goto_0
     iget-object v3, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
@@ -26750,12 +26767,12 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBottom(I)V
 
-    .line 4681
+    .line 4685
     iget-object v3, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setTop(I)V
 
-    .line 4683
+    .line 4687
     .end local v0           #newTop:I
     .end local v1           #tx:I
     .end local v2           #ty:I
@@ -26766,7 +26783,7 @@
 
     return v3
 
-    .line 4677
+    .line 4681
     .restart local v0       #newTop:I
     .restart local v1       #tx:I
     .restart local v2       #ty:I
@@ -26777,7 +26794,7 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 4678
+    .line 4682
     iget v3, p0, Landroid/webkit/WebView;->mScrollY:I
 
     add-int v0, v3, v2
@@ -26792,14 +26809,14 @@
     .parameter "drawCursorRing"
 
     .prologue
-    .line 5375
+    .line 5382
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-eqz v2, :cond_1
 
-    .line 5376
+    .line 5383
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -26820,7 +26837,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 5377
+    .line 5384
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mHistoryPicture:Landroid/graphics/Picture;
@@ -26829,12 +26846,12 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Canvas;->drawPicture(Landroid/graphics/Picture;)V
 
-    .line 5506
+    .line 5513
     :cond_0
     :goto_0
     return-void
 
-    .line 5380
+    .line 5387
     :cond_1
     move-object/from16 v0, p0
 
@@ -26842,7 +26859,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 5382
+    .line 5389
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -26851,7 +26868,7 @@
 
     move-result v17
 
-    .line 5383
+    .line 5390
     .local v17, animateZoom:Z
     move-object/from16 v0, p0
 
@@ -26898,7 +26915,7 @@
     :cond_4
     const/16 v16, 0x1
 
-    .line 5388
+    .line 5395
     .local v16, animateScroll:Z
     :goto_1
     move-object/from16 v0, p0
@@ -26909,7 +26926,7 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 5389
+    .line 5396
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mHeldMotionless:I
@@ -26918,7 +26935,7 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 5390
+    .line 5397
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -26927,7 +26944,7 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5391
+    .line 5398
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -26936,14 +26953,14 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5392
+    .line 5399
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 5394
+    .line 5401
     :cond_5
     move-object/from16 v0, p0
 
@@ -26951,7 +26968,7 @@
 
     if-nez v2, :cond_6
 
-    .line 5395
+    .line 5402
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -26970,7 +26987,7 @@
 
     invoke-virtual {v2, v3, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 5397
+    .line 5404
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -26993,24 +27010,24 @@
 
     invoke-virtual {v2, v3, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 5400
+    .line 5407
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Landroid/webkit/WebView;->mHeldMotionless:I
 
-    .line 5403
+    .line 5410
     :cond_6
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v21
 
-    .line 5404
+    .line 5411
     .local v21, saveCount:I
     if-eqz v17, :cond_e
 
-    .line 5405
+    .line 5412
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -27019,12 +27036,12 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/ZoomManager;->animateZoom(Landroid/graphics/Canvas;)V
 
-    .line 5410
+    .line 5417
     :cond_7
     :goto_2
     const/4 v15, 0x0
 
-    .line 5413
+    .line 5420
     .local v15, UIAnimationsRunning:Z
     move-object/from16 v0, p0
 
@@ -27050,10 +27067,10 @@
 
     if-eqz v2, :cond_8
 
-    .line 5415
+    .line 5422
     const/4 v15, 0x1
 
-    .line 5420
+    .line 5427
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -27062,14 +27079,14 @@
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 5421
+    .line 5428
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 5425
+    .line 5432
     :cond_8
     const/4 v8, 0x0
 
-    .line 5426
+    .line 5433
     .local v8, extras:I
     move-object/from16 v0, p0
 
@@ -27077,10 +27094,10 @@
 
     if-eqz v2, :cond_f
 
-    .line 5427
+    .line 5434
     const/4 v8, 0x1
 
-    .line 5450
+    .line 5457
     :cond_9
     :goto_3
     move-object/from16 v0, p0
@@ -27091,14 +27108,14 @@
 
     invoke-direct {v0, v2}, Landroid/webkit/WebView;->calcOurContentVisibleRectF(Landroid/graphics/RectF;)V
 
-    .line 5451
+    .line 5458
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v2
 
     if-eqz v2, :cond_13
 
-    .line 5452
+    .line 5459
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mGLViewportEmpty:Z
@@ -27107,7 +27124,7 @@
 
     const/4 v4, 0x0
 
-    .line 5453
+    .line 5460
     .local v4, glRectViewport:Landroid/graphics/Rect;
     :goto_4
     move-object/from16 v0, p0
@@ -27118,7 +27135,7 @@
 
     const/4 v5, 0x0
 
-    .line 5455
+    .line 5462
     .local v5, viewRectViewport:Landroid/graphics/Rect;
     :goto_5
     move-object/from16 v0, p0
@@ -27142,14 +27159,14 @@
     .local v20, functor:I
     move-object/from16 v2, p1
 
-    .line 5457
+    .line 5464
     check-cast v2, Landroid/view/HardwareCanvas;
 
     move/from16 v0, v20
 
     invoke-virtual {v2, v0}, Landroid/view/HardwareCanvas;->callDrawGLFunction(I)Z
 
-    .line 5458
+    .line 5465
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mHardwareAccelSkia:Z
@@ -27164,7 +27181,7 @@
 
     if-eq v2, v3, :cond_a
 
-    .line 5459
+    .line 5466
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v2
@@ -27177,7 +27194,7 @@
 
     iput-boolean v2, v0, Landroid/webkit/WebView;->mHardwareAccelSkia:Z
 
-    .line 5460
+    .line 5467
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mHardwareAccelSkia:Z
@@ -27186,7 +27203,7 @@
 
     invoke-direct {v0, v2}, Landroid/webkit/WebView;->nativeUseHardwareAccelSkia(Z)V
 
-    .line 5481
+    .line 5488
     .end local v4           #glRectViewport:Landroid/graphics/Rect;
     .end local v5           #viewRectViewport:Landroid/graphics/Rect;
     .end local v20           #functor:I
@@ -27198,31 +27215,31 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 5482
+    .line 5489
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v2, :cond_b
 
-    .line 5484
+    .line 5491
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->howToSelection:I
 
     if-nez v2, :cond_17
 
-    .line 5485
+    .line 5492
     invoke-direct/range {p0 .. p1}, Landroid/webkit/WebView;->drawTextSelectionHandles(Landroid/graphics/Canvas;)V
 
-    .line 5491
+    .line 5498
     :cond_b
     :goto_7
     const/4 v2, 0x3
 
     if-ne v8, v2, :cond_c
 
-    .line 5492
+    .line 5499
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/webkit/WebView;->mTouchMode:I
@@ -27231,14 +27248,14 @@
 
     if-ne v2, v3, :cond_c
 
-    .line 5493
+    .line 5500
     const/4 v2, 0x5
 
     move-object/from16 v0, p0
 
     iput v2, v0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 5496
+    .line 5503
     :cond_c
     move-object/from16 v0, p0
 
@@ -27246,14 +27263,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 5497
+    .line 5504
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Landroid/webkit/WebView;->mFocusSizeChanged:Z
 
-    .line 5502
+    .line 5509
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v2
@@ -27268,7 +27285,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 5503
+    .line 5510
     const/4 v2, 0x2
 
     move-object/from16 v0, p0
@@ -27277,7 +27294,7 @@
 
     goto/16 :goto_0
 
-    .line 5383
+    .line 5390
     .end local v8           #extras:I
     .end local v15           #UIAnimationsRunning:Z
     .end local v16           #animateScroll:Z
@@ -27287,7 +27304,7 @@
 
     goto/16 :goto_1
 
-    .line 5406
+    .line 5413
     .restart local v16       #animateScroll:Z
     .restart local v21       #saveCount:I
     :cond_e
@@ -27297,7 +27314,7 @@
 
     if-nez v2, :cond_7
 
-    .line 5407
+    .line 5414
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -27320,7 +27337,7 @@
 
     goto/16 :goto_2
 
-    .line 5428
+    .line 5435
     .restart local v8       #extras:I
     .restart local v15       #UIAnimationsRunning:Z
     :cond_f
@@ -27330,26 +27347,26 @@
 
     if-eqz v2, :cond_10
 
-    .line 5433
+    .line 5440
     :cond_10
     if-eqz p3, :cond_9
 
-    .line 5434
+    .line 5441
     const/4 v8, 0x3
 
-    .line 5436
+    .line 5443
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->isEditable()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 5437
+    .line 5444
     const/4 v8, 0x0
 
     goto/16 :goto_3
 
-    .line 5452
+    .line 5459
     :cond_11
     move-object/from16 v0, p0
 
@@ -27357,7 +27374,7 @@
 
     goto/16 :goto_4
 
-    .line 5453
+    .line 5460
     .restart local v4       #glRectViewport:Landroid/graphics/Rect;
     :cond_12
     move-object/from16 v0, p0
@@ -27366,12 +27383,12 @@
 
     goto/16 :goto_5
 
-    .line 5464
+    .line 5471
     .end local v4           #glRectViewport:Landroid/graphics/Rect;
     :cond_13
     const/16 v19, 0x0
 
-    .line 5465
+    .line 5472
     .local v19, df:Landroid/graphics/DrawFilter;
     move-object/from16 v0, p0
 
@@ -27385,7 +27402,7 @@
 
     if-eqz v15, :cond_16
 
-    .line 5466
+    .line 5473
     :cond_14
     move-object/from16 v0, p0
 
@@ -27393,7 +27410,7 @@
 
     move-object/from16 v19, v0
 
-    .line 5470
+    .line 5477
     :cond_15
     :goto_8
     move-object/from16 v0, p1
@@ -27402,7 +27419,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 5473
+    .line 5480
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/WebView;->mVisibleContentRect:Landroid/graphics/RectF;
@@ -27421,7 +27438,7 @@
 
     move-result v18
 
-    .line 5475
+    .line 5482
     .local v18, content:I
     const/4 v2, 0x0
 
@@ -27429,7 +27446,7 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 5476
+    .line 5483
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
@@ -27438,7 +27455,7 @@
 
     if-eqz v18, :cond_a
 
-    .line 5477
+    .line 5484
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -27453,12 +27470,12 @@
 
     goto/16 :goto_6
 
-    .line 5467
+    .line 5474
     .end local v18           #content:I
     :cond_16
     if-eqz v16, :cond_15
 
-    .line 5468
+    .line 5475
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mScrollFilter:Landroid/graphics/DrawFilter;
@@ -27467,7 +27484,7 @@
 
     goto :goto_8
 
-    .line 5487
+    .line 5494
     .end local v19           #df:Landroid/graphics/DrawFilter;
     :cond_17
     invoke-direct/range {p0 .. p1}, Landroid/webkit/WebView;->drawQuickSelect(Landroid/graphics/Canvas;)V
@@ -27479,7 +27496,7 @@
     .locals 1
 
     .prologue
-    .line 5591
+    .line 5598
     iget-boolean v0, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     return v0
@@ -27492,12 +27509,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 11181
+    .line 11188
     iget-object v0, p0, Landroid/webkit/WebView;->mVisibleContentRect:Landroid/graphics/RectF;
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->calcOurContentVisibleRectF(Landroid/graphics/RectF;)V
 
-    .line 11182
+    .line 11189
     iget-object v2, p0, Landroid/webkit/WebView;->mVisibleContentRect:Landroid/graphics/RectF;
 
     move-object v0, p0
@@ -27510,7 +27527,7 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/webkit/WebView;->nativeDraw(Landroid/graphics/Canvas;Landroid/graphics/RectF;IIZ)I
 
-    .line 11183
+    .line 11190
     return-void
 .end method
 
@@ -27518,14 +27535,14 @@
     .locals 1
 
     .prologue
-    .line 5906
+    .line 5913
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->nativeDumpDisplayTree(Ljava/lang/String;)V
 
-    .line 5907
+    .line 5914
     return-void
 .end method
 
@@ -27536,7 +27553,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5916
+    .line 5923
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v3, 0xaa
@@ -27548,13 +27565,13 @@
     :goto_0
     invoke-virtual {v2, v3, v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 5917
+    .line 5924
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 5916
+    .line 5923
     goto :goto_0
 .end method
 
@@ -27565,7 +27582,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5926
+    .line 5933
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v3, 0xab
@@ -27577,13 +27594,13 @@
     :goto_0
     invoke-virtual {v2, v3, v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 5927
+    .line 5934
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 5926
+    .line 5933
     goto :goto_0
 .end method
 
@@ -27591,14 +27608,14 @@
     .locals 2
 
     .prologue
-    .line 5957
+    .line 5964
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xad
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 5958
+    .line 5965
     return-void
 .end method
 
@@ -27610,13 +27627,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6436
+    .line 6443
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 6437
+    .line 6444
     invoke-direct {p0, v0, v0, v0}, Landroid/webkit/WebView;->setUpSelect(ZII)Z
 
-    .line 6438
+    .line 6445
     return-void
 .end method
 
@@ -27627,32 +27644,32 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 14595
+    .line 14826
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     if-nez v0, :cond_0
 
-    .line 14604
+    .line 14835
     :goto_0
     return-void
 
-    .line 14596
+    .line 14827
     :cond_0
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-ne v0, v1, :cond_2
 
-    .line 14597
+    .line 14828
     if-ne p1, v1, :cond_1
 
-    .line 14598
+    .line 14829
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0, v1}, Landroid/webkit/ZoomManager;->enableHTCZoomMethod(Z)V
 
     goto :goto_0
 
-    .line 14600
+    .line 14831
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -27660,7 +27677,7 @@
 
     goto :goto_0
 
-    .line 14602
+    .line 14833
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -27673,17 +27690,17 @@
     .locals 1
 
     .prologue
-    .line 14622
+    .line 14853
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     if-eqz v0, :cond_0
 
-    .line 14623
+    .line 14854
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->enableMultiTouch()V
 
-    .line 14625
+    .line 14856
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
 
@@ -27691,12 +27708,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 14626
+    .line 14857
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->forceBreakWord(Z)V
 
-    .line 14628
+    .line 14859
     :cond_1
     return-void
 .end method
@@ -27706,7 +27723,7 @@
     .parameter "enable"
 
     .prologue
-    .line 14588
+    .line 14819
     return-void
 .end method
 
@@ -27717,10 +27734,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 11583
+    .line 11590
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
-    .line 11587
+    .line 11594
     if-eqz p1, :cond_2
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
@@ -27733,17 +27750,17 @@
     :goto_0
     iput v0, p0, Landroid/webkit/WebView;->howToSelection:I
 
-    .line 11602
+    .line 11609
     if-eqz p1, :cond_1
 
-    .line 11603
+    .line 11610
     invoke-virtual {p0}, Landroid/webkit/WebView;->initQuickSelect()V
 
-    .line 11605
+    .line 11612
     :cond_1
     return-void
 
-    .line 11587
+    .line 11594
     :cond_2
     const/4 v0, 0x0
 
@@ -27754,16 +27771,16 @@
     .locals 1
 
     .prologue
-    .line 14582
+    .line 14813
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     if-nez v0, :cond_0
 
-    .line 14584
+    .line 14815
     :goto_0
     return-void
 
-    .line 14583
+    .line 14814
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -27779,21 +27796,21 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 15047
+    .line 15278
     iput-boolean p1, p0, Landroid/webkit/WebView;->m_bEnableTBS:Z
 
-    .line 15048
+    .line 15279
     iput-boolean v1, p0, Landroid/webkit/WebView;->m_bCustomizeEnableTBS:Z
 
-    .line 15049
+    .line 15280
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bHasNewWebView:Z
 
     if-ne v0, v1, :cond_0
 
-    .line 15050
+    .line 15281
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->nativeEnableTBS(Z)V
 
-    .line 15051
+    .line 15282
     :cond_0
     return-void
 .end method
@@ -27803,14 +27820,14 @@
     .parameter "callback"
 
     .prologue
-    .line 4553
+    .line 4557
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xa0
 
     invoke-virtual {v0, v1, p1}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 4554
+    .line 4558
     return-void
 .end method
 
@@ -27823,13 +27840,13 @@
     .end annotation
 
     .prologue
-    .line 4649
+    .line 4653
     :try_start_0
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v0, :cond_0
 
-    .line 4650
+    .line 4654
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/webkit/WebView$8;
@@ -27840,14 +27857,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4658
+    .line 4662
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 4660
+    .line 4664
     return-void
 
-    .line 4658
+    .line 4662
     :catchall_0
     move-exception v0
 
@@ -27863,19 +27880,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3860
+    .line 3864
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3861
+    .line 3865
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v1, :cond_0
 
-    .line 3866
+    .line 3870
     :goto_0
     return v0
 
-    .line 3862
+    .line 3866
     :cond_0
     if-eqz p1, :cond_1
 
@@ -27897,12 +27914,12 @@
 
     move-result v0
 
-    .line 3864
+    .line 3868
     .local v0, result:I
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 3865
+    .line 3869
     iput-object p1, p0, Landroid/webkit/WebView;->mLastFind:Ljava/lang/String;
 
     goto :goto_0
@@ -27912,14 +27929,14 @@
     .locals 1
 
     .prologue
-    .line 3927
+    .line 3931
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v0, :cond_0
 
     const/4 v0, -0x1
 
-    .line 3928
+    .line 3932
     :goto_0
     return v0
 
@@ -27936,19 +27953,19 @@
     .parameter "forward"
 
     .prologue
-    .line 3848
+    .line 3852
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3849
+    .line 3853
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v0, :cond_0
 
-    .line 3851
+    .line 3855
     :goto_0
     return-void
 
-    .line 3850
+    .line 3854
     :cond_0
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->nativeFindNext(Z)V
 
@@ -27963,10 +27980,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 8363
+    .line 8370
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 8364
+    .line 8371
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     iget v1, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -27993,10 +28010,10 @@
 
     invoke-virtual/range {v0 .. v10}, Landroid/widget/OverScroller;->fling(IIIIIIIIII)V
 
-    .line 8366
+    .line 8373
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 8367
+    .line 8374
     return-void
 .end method
 
@@ -28012,7 +28029,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 14474
+    .line 14705
     if-lez p3, :cond_0
 
     if-lez p4, :cond_0
@@ -28035,23 +28052,23 @@
 
     if-eqz v2, :cond_1
 
-    .line 14505
+    .line 14736
     :cond_0
     :goto_0
     return-object v0
 
-    .line 14479
+    .line 14710
     :cond_1
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v2, :cond_0
 
-    .line 14482
+    .line 14713
     sget-object v2, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
     if-eqz v2, :cond_4
 
-    .line 14483
+    .line 14714
     sget-object v2, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
     invoke-interface {v2}, Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;->onGetCurrentTabCacheBitmap()Landroid/graphics/Bitmap;
@@ -28060,7 +28077,7 @@
 
     iput-object v2, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 14486
+    .line 14717
     :goto_1
     iget-object v2, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
@@ -28076,7 +28093,7 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 14488
+    .line 14719
     :cond_2
     add-int v2, p4, p6
 
@@ -28088,23 +28105,23 @@
 
     iput-object v2, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 14489
+    .line 14720
     new-instance v1, Landroid/graphics/Canvas;
 
     iget-object v2, p0, Landroid/webkit/WebView;->mTabEffectCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-direct {v1, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 14490
+    .line 14721
     .local v1, canvas:Landroid/graphics/Canvas;
     const/high16 v2, -0x100
 
     invoke-virtual {v1, v2}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 14491
+    .line 14722
     if-gtz p6, :cond_5
 
-    .line 14492
+    .line 14723
     neg-int v2, p1
 
     int-to-float v2, v2
@@ -28115,14 +28132,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 14495
+    .line 14726
     :goto_2
     invoke-virtual {v1, p5, p5}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 14500
+    .line 14731
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->drawPage(Landroid/graphics/Canvas;)V
 
-    .line 14503
+    .line 14734
     .end local v1           #canvas:Landroid/graphics/Canvas;
     :cond_3
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
@@ -28131,11 +28148,11 @@
 
     invoke-direct {v0, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 14505
+    .line 14736
     .local v0, bd:Landroid/graphics/drawable/BitmapDrawable;
     goto :goto_0
 
-    .line 14485
+    .line 14716
     .end local v0           #bd:Landroid/graphics/drawable/BitmapDrawable;
     :cond_4
     iget-object v2, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
@@ -28144,7 +28161,7 @@
 
     goto :goto_1
 
-    .line 14494
+    .line 14725
     .restart local v1       #canvas:Landroid/graphics/Canvas;
     :cond_5
     neg-int v2, p1
@@ -28163,17 +28180,17 @@
     .parameter "enable"
 
     .prologue
-    .line 11532
+    .line 11539
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     if-eqz v0, :cond_0
 
-    .line 11533
+    .line 11540
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     invoke-virtual {v0, p1}, Landroid/webkit/HTCWebCore;->nativeEnableGifAnimation(Z)V
 
-    .line 11534
+    .line 11541
     :cond_0
     return-void
 .end method
@@ -28182,7 +28199,7 @@
     .locals 3
 
     .prologue
-    .line 11515
+    .line 11522
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -28199,7 +28216,7 @@
 
     move-result-object v0
 
-    .line 11516
+    .line 11523
     .local v0, display:Landroid/view/Display;
     return-object v0
 .end method
@@ -28208,7 +28225,7 @@
     .locals 1
 
     .prologue
-    .line 14332
+    .line 14563
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getMaxZoomScale()F
@@ -28222,7 +28239,7 @@
     .locals 1
 
     .prologue
-    .line 14327
+    .line 14558
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getMinZoomScale()F
@@ -28296,19 +28313,19 @@
     .prologue
     const/16 v2, 0x113
 
-    .line 15072
+    .line 15303
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 15073
+    .line 15304
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v2, v1}, Landroid/webkit/WebViewCore;->sendMessage(II)V
 
-    .line 15074
+    .line 15305
     return-void
 .end method
 
@@ -28318,19 +28335,19 @@
     .prologue
     const/16 v2, 0x113
 
-    .line 15078
+    .line 15309
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 15079
+    .line 15310
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v2, v1}, Landroid/webkit/WebViewCore;->sendMessage(II)V
 
-    .line 15080
+    .line 15311
     return-void
 .end method
 
@@ -28344,31 +28361,31 @@
 
     const/4 v3, 0x0
 
-    .line 14246
+    .line 14477
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x100
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 14248
+    .line 14479
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsLoading:Z
 
     if-nez v0, :cond_0
 
-    .line 14251
+    .line 14482
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     if-eqz v0, :cond_0
 
-    .line 14252
+    .line 14483
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     const-wide/32 v1, 0xa00000
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/HTCWebCore;->nativeSetSkiaFontCacheSize(J)V
 
-    .line 14256
+    .line 14487
     :cond_0
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsLoading:Z
 
@@ -28378,7 +28395,7 @@
 
     if-nez v0, :cond_2
 
-    .line 14261
+    .line 14492
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-eqz v0, :cond_1
@@ -28389,7 +28406,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 14262
+    .line 14493
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v5}, Landroid/os/Handler;->hasMessages(I)Z
@@ -28398,7 +28415,7 @@
 
     if-nez v0, :cond_1
 
-    .line 14263
+    .line 14494
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -28409,17 +28426,17 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
-    .line 14267
+    .line 14498
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->pauseFPDoPlay()V
 
-    .line 14268
+    .line 14499
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnPausePlayGifAnimation()V
 
-    .line 14270
+    .line 14501
     iput-boolean v4, p0, Landroid/webkit/WebView;->m_bIsScrollingPause:Z
 
-    .line 14273
+    .line 14504
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -28431,17 +28448,17 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 14274
+    .line 14505
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     iput-boolean v3, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 14275
+    .line 14506
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     iput v3, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPictureCount:I
 
-    .line 14277
+    .line 14508
     :cond_3
     return-void
 .end method
@@ -28452,24 +28469,24 @@
     .prologue
     const/16 v2, 0x137
 
-    .line 14284
+    .line 14515
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->resetVelocity()V
 
-    .line 14285
+    .line 14516
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsScrollingPause:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 14286
+    .line 14517
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-eqz v0, :cond_0
 
-    .line 14288
+    .line 14519
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
@@ -28478,7 +28495,7 @@
 
     if-nez v0, :cond_0
 
-    .line 14289
+    .line 14520
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -28491,32 +28508,32 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 14292
+    .line 14523
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->resumeFPDoPlay()V
 
-    .line 14293
+    .line 14524
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnResumePlayGifAnimation()V
 
-    .line 14295
+    .line 14526
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->m_bIsScrollingPause:Z
 
-    .line 14299
+    .line 14530
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     if-eqz v0, :cond_2
 
-    .line 14300
+    .line 14531
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     const-wide/16 v1, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/HTCWebCore;->nativeSetSkiaFontCacheSize(J)V
 
-    .line 14304
+    .line 14535
     :cond_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnIsHtcApplication()Z
 
@@ -28524,7 +28541,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 14306
+    .line 14537
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x100
@@ -28535,7 +28552,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/webkit/WebViewCore;->sendMessageDelayed(ILjava/lang/Object;J)V
 
-    .line 14309
+    .line 14540
     :cond_3
     return-void
 .end method
@@ -28544,12 +28561,12 @@
     .locals 1
 
     .prologue
-    .line 14322
+    .line 14553
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 14323
+    .line 14554
     return-void
 .end method
 
@@ -28557,28 +28574,28 @@
     .locals 1
 
     .prologue
-    .line 14450
+    .line 14681
     iget-object v0, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 14451
+    .line 14682
     iget-object v0, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 14452
+    .line 14683
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 14453
+    .line 14684
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 14454
+    .line 14685
     const/4 v0, 0x1
 
-    .line 14456
+    .line 14687
     :goto_0
     return v0
 
@@ -28592,17 +28609,17 @@
     .locals 2
 
     .prologue
-    .line 3779
+    .line 3783
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3780
+    .line 3784
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x91
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 3781
+    .line 3785
     return-void
 .end method
 
@@ -28610,7 +28627,7 @@
     .locals 1
 
     .prologue
-    .line 12645
+    .line 12653
     iget-object v0, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     if-eqz v0, :cond_0
@@ -28632,7 +28649,7 @@
     .locals 1
 
     .prologue
-    .line 11159
+    .line 11166
     iget v0, p0, Landroid/webkit/WebView;->mBackgroundColor:I
 
     return v0
@@ -28642,15 +28659,15 @@
     .locals 1
 
     .prologue
-    .line 5281
+    .line 5288
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v0, :cond_0
 
-    .line 5282
+    .line 5289
     const/4 v0, 0x0
 
-    .line 5284
+    .line 5291
     :goto_0
     return v0
 
@@ -28666,7 +28683,7 @@
     .locals 1
 
     .prologue
-    .line 14417
+    .line 14648
     iget-object v0, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -28676,7 +28693,7 @@
     .locals 3
 
     .prologue
-    .line 14422
+    .line 14653
     iget-object v1, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_0
@@ -28689,14 +28706,14 @@
 
     if-nez v1, :cond_0
 
-    .line 14423
+    .line 14654
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-direct {v0, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 14424
+    .line 14655
     .local v0, canvas:Landroid/graphics/Canvas;
     iget v1, p0, Landroid/webkit/WebView;->mCacheDrawX:F
 
@@ -28708,14 +28725,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 14425
+    .line 14656
     iget v1, p0, Landroid/webkit/WebView;->mCacheDrawScale:F
 
     iget v2, p0, Landroid/webkit/WebView;->mCacheDrawScale:F
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 14430
+    .line 14661
     .end local v0           #canvas:Landroid/graphics/Canvas;
     :cond_0
     iget-object v1, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
@@ -28727,10 +28744,10 @@
     .locals 1
 
     .prologue
-    .line 1738
+    .line 1742
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1739
+    .line 1743
     iget-object v0, p0, Landroid/webkit/WebView;->mCertificate:Landroid/net/http/SslCertificate;
 
     return-object v0
@@ -28740,10 +28757,10 @@
     .locals 1
 
     .prologue
-    .line 3650
+    .line 3654
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3651
+    .line 3655
     iget v0, p0, Landroid/webkit/WebView;->mContentHeight:I
 
     return v0
@@ -28753,7 +28770,7 @@
     .locals 1
 
     .prologue
-    .line 3659
+    .line 3663
     iget v0, p0, Landroid/webkit/WebView;->mContentWidth:I
 
     return v0
@@ -28763,17 +28780,17 @@
     .locals 2
 
     .prologue
-    .line 12515
+    .line 12522
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 12516
+    .line 12523
     iget v0, p0, Landroid/webkit/WebView;->m_nTextWrapWidth_pauseTextReflow:I
 
-    .line 12518
+    .line 12525
     :goto_0
     return v0
 
@@ -28803,7 +28820,7 @@
     .locals 1
 
     .prologue
-    .line 8550
+    .line 8557
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getDefaultScale()F
@@ -28817,10 +28834,10 @@
     .locals 2
 
     .prologue
-    .line 3621
+    .line 3625
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3622
+    .line 3626
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -28831,7 +28848,7 @@
 
     move-result-object v0
 
-    .line 3623
+    .line 3627
     .local v0, h:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_0
 
@@ -28852,10 +28869,10 @@
     .locals 1
 
     .prologue
-    .line 3933
+    .line 3937
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3934
+    .line 3938
     invoke-virtual {p0}, Landroid/webkit/WebView;->findIndex()I
 
     move-result v0
@@ -28867,7 +28884,7 @@
     .locals 1
 
     .prologue
-    .line 5595
+    .line 5602
     iget-object v0, p0, Landroid/webkit/WebView;->mHistoryPicture:Landroid/graphics/Picture;
 
     if-eqz v0, :cond_0
@@ -28891,10 +28908,10 @@
     .locals 1
 
     .prologue
-    .line 2841
+    .line 2845
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2842
+    .line 2846
     iget-object v0, p0, Landroid/webkit/WebView;->mInitialHitTestResult:Landroid/webkit/WebView$HitTestResult;
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->hitTestResult(Landroid/webkit/WebView$HitTestResult;)Landroid/webkit/WebView$HitTestResult;
@@ -28910,10 +28927,10 @@
     .parameter "realm"
 
     .prologue
-    .line 1795
+    .line 1799
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1796
+    .line 1800
     iget-object v0, p0, Landroid/webkit/WebView;->mDatabase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/WebViewDatabase;->getHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
@@ -28927,7 +28944,7 @@
     .locals 1
 
     .prologue
-    .line 14391
+    .line 14622
     iget-boolean v0, p0, Landroid/webkit/WebView;->misCacheDrawBitmap:Z
 
     return v0
@@ -28937,7 +28954,7 @@
     .locals 1
 
     .prologue
-    .line 14568
+    .line 14799
     iget-boolean v0, p0, Landroid/webkit/WebView;->mDrawCursorRing:Z
 
     return v0
@@ -28947,7 +28964,7 @@
     .locals 1
 
     .prologue
-    .line 14193
+    .line 14424
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsLoading:Z
 
     return v0
@@ -28957,10 +28974,10 @@
     .locals 2
 
     .prologue
-    .line 3599
+    .line 3603
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3600
+    .line 3604
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -28971,7 +28988,7 @@
 
     move-result-object v0
 
-    .line 3601
+    .line 3605
     .local v0, h:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_0
 
@@ -28992,7 +29009,7 @@
     .locals 1
 
     .prologue
-    .line 3676
+    .line 3680
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeGetBackgroundColor()I
 
     move-result v0
@@ -29006,14 +29023,14 @@
     .parameter "y"
 
     .prologue
-    .line 8786
+    .line 8793
     iget v1, p0, Landroid/webkit/WebView;->mNavSlop:I
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->viewToContentDimension(I)I
 
     move-result v0
 
-    .line 8787
+    .line 8794
     .local v0, slop:I
     invoke-direct {p0, p1, p2, v0}, Landroid/webkit/WebView;->nativePointInNavCache(III)Z
 
@@ -29027,12 +29044,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 8788
+    .line 8795
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCacheHitNodeBounds()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 8790
+    .line 8797
     :goto_0
     return-object v1
 
@@ -29046,10 +29063,10 @@
     .locals 1
 
     .prologue
-    .line 3642
+    .line 3646
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3643
+    .line 3647
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->getProgress()I
@@ -29064,7 +29081,7 @@
     .parameter "callback"
 
     .prologue
-    .line 15184
+    .line 15415
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x105
@@ -29073,7 +29090,7 @@
 
     invoke-virtual {v0, v1, p1, v2, v3}, Landroid/webkit/WebViewCore;->sendMessageDelayed(ILjava/lang/Object;J)V
 
-    .line 15185
+    .line 15416
     return-void
 .end method
 
@@ -29081,7 +29098,7 @@
     .locals 1
 
     .prologue
-    .line 11569
+    .line 11576
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCQuickSearch:Landroid/webkit/HTCQuickSearch;
 
     return-object v0
@@ -29091,7 +29108,7 @@
     .locals 1
 
     .prologue
-    .line 2789
+    .line 2793
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getReadingLevelScale()F
@@ -29106,15 +29123,15 @@
     .parameter "type"
 
     .prologue
-    .line 12557
+    .line 12564
     iget-object v1, p0, Landroid/webkit/WebView;->mPositionRectLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 12558
+    .line 12565
     sparse-switch p1, :sswitch_data_0
 
-    .line 12568
+    .line 12575
     const/4 v0, 0x0
 
     :try_start_0
@@ -29123,7 +29140,7 @@
     :goto_0
     return-object v0
 
-    .line 12560
+    .line 12567
     :sswitch_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -29135,7 +29152,7 @@
 
     goto :goto_0
 
-    .line 12570
+    .line 12577
     :catchall_0
     move-exception v0
 
@@ -29145,7 +29162,7 @@
 
     throw v0
 
-    .line 12562
+    .line 12569
     :sswitch_1
     :try_start_1
     new-instance v0, Landroid/graphics/Rect;
@@ -29158,7 +29175,7 @@
 
     goto :goto_0
 
-    .line 12564
+    .line 12571
     :sswitch_2
     new-instance v0, Landroid/graphics/Rect;
 
@@ -29170,7 +29187,7 @@
 
     goto :goto_0
 
-    .line 12566
+    .line 12573
     :sswitch_3
     new-instance v0, Landroid/graphics/Rect;
 
@@ -29184,7 +29201,7 @@
 
     goto :goto_0
 
-    .line 12558
+    .line 12565
     :sswitch_data_0
     .sparse-switch
         0x62 -> :sswitch_2
@@ -29198,7 +29215,7 @@
     .locals 1
 
     .prologue
-    .line 12451
+    .line 12458
     const/4 v0, 0x0
 
     return-object v0
@@ -29208,10 +29225,10 @@
     .locals 1
 
     .prologue
-    .line 2774
+    .line 2778
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2775
+    .line 2779
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getScale()F
@@ -29225,7 +29242,7 @@
     .locals 1
 
     .prologue
-    .line 6532
+    .line 6539
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_0
@@ -29238,11 +29255,11 @@
 
     if-nez v0, :cond_1
 
-    .line 6533
+    .line 6540
     :cond_0
     const/4 v0, 0x0
 
-    .line 6535
+    .line 6542
     :goto_0
     return-object v0
 
@@ -29264,25 +29281,25 @@
     .locals 2
 
     .prologue
-    .line 6542
+    .line 6549
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v1, :cond_1
 
     const-string v0, ""
 
-    .line 6545
+    .line 6552
     :cond_0
     :goto_0
     return-object v0
 
-    .line 6544
+    .line 6551
     :cond_1
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeGetSelection()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6545
+    .line 6552
     .local v0, ret:Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -29295,10 +29312,10 @@
     .locals 1
 
     .prologue
-    .line 4616
+    .line 4620
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4617
+    .line 4621
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_0
@@ -29322,7 +29339,7 @@
     .locals 2
 
     .prologue
-    .line 2780
+    .line 2784
     iget-object v1, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -29335,7 +29352,7 @@
 
     iget v0, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 2781
+    .line 2785
     .local v0, density:F
     invoke-virtual {p0}, Landroid/webkit/WebView;->getScale()F
 
@@ -29350,10 +29367,10 @@
     .locals 2
 
     .prologue
-    .line 3610
+    .line 3614
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3611
+    .line 3615
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -29364,7 +29381,7 @@
 
     move-result-object v0
 
-    .line 3612
+    .line 3616
     .local v0, h:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_0
 
@@ -29385,7 +29402,7 @@
     .locals 1
 
     .prologue
-    .line 1683
+    .line 1687
     iget-object v0, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -29409,7 +29426,7 @@
     .locals 2
 
     .prologue
-    .line 3633
+    .line 3637
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -29420,7 +29437,7 @@
 
     move-result-object v0
 
-    .line 3634
+    .line 3638
     .local v0, h:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_0
 
@@ -29441,10 +29458,10 @@
     .locals 2
 
     .prologue
-    .line 3585
+    .line 3589
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3586
+    .line 3590
     iget-object v1, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v1}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -29455,7 +29472,7 @@
 
     move-result-object v0
 
-    .line 3587
+    .line 3591
     .local v0, h:Landroid/webkit/WebHistoryItem;
     if-eqz v0, :cond_0
 
@@ -29476,7 +29493,7 @@
     .locals 2
 
     .prologue
-    .line 1722
+    .line 1726
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
     move-result v0
@@ -29494,12 +29511,12 @@
     .locals 2
 
     .prologue
-    .line 1726
+    .line 1730
     invoke-virtual {p0}, Landroid/webkit/WebView;->getHeight()I
 
     move-result v0
 
-    .line 1727
+    .line 1731
     .local v0, height:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->isHorizontalScrollBarEnabled()Z
 
@@ -29511,14 +29528,14 @@
 
     if-nez v1, :cond_0
 
-    .line 1728
+    .line 1732
     invoke-virtual {p0}, Landroid/webkit/WebView;->getHorizontalScrollbarHeight()I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    .line 1730
+    .line 1734
     :cond_0
     return v0
 .end method
@@ -29527,7 +29544,7 @@
     .locals 1
 
     .prologue
-    .line 11220
+    .line 11227
     iget-object v0, p0, Landroid/webkit/WebView;->mViewManager:Landroid/webkit/ViewManager;
 
     return-object v0
@@ -29537,7 +29554,7 @@
     .locals 3
 
     .prologue
-    .line 1670
+    .line 1674
     invoke-virtual {p0}, Landroid/webkit/WebView;->isVerticalScrollBarEnabled()Z
 
     move-result v0
@@ -29548,13 +29565,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 1671
+    .line 1675
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->getWidth()I
 
     move-result v0
 
-    .line 1673
+    .line 1677
     :goto_0
     return v0
 
@@ -29582,10 +29599,10 @@
     .locals 1
 
     .prologue
-    .line 1692
+    .line 1696
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1693
+    .line 1697
     invoke-direct {p0}, Landroid/webkit/WebView;->getVisibleTitleHeightImpl()I
 
     move-result v0
@@ -29597,7 +29614,7 @@
     .locals 1
 
     .prologue
-    .line 4533
+    .line 4537
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->getWebBackForwardListClient()Landroid/webkit/WebBackForwardListClient;
@@ -29611,7 +29628,7 @@
     .locals 1
 
     .prologue
-    .line 4514
+    .line 4518
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->getWebChromeClient()Landroid/webkit/WebChromeClient;
@@ -29625,7 +29642,7 @@
     .locals 1
 
     .prologue
-    .line 4482
+    .line 4486
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Landroid/webkit/CallbackProxy;->getWebViewClient()Landroid/webkit/WebViewClient;
@@ -29639,7 +29656,7 @@
     .locals 1
 
     .prologue
-    .line 9073
+    .line 9080
     monitor-enter p0
 
     :try_start_0
@@ -29665,10 +29682,10 @@
     .end annotation
 
     .prologue
-    .line 8537
+    .line 8544
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 8538
+    .line 8545
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
@@ -29679,17 +29696,17 @@
 
     if-nez v0, :cond_0
 
-    .line 8539
+    .line 8546
     const-string/jumbo v0, "webview"
 
     const-string v1, "This WebView doesn\'t support zoom."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8540
+    .line 8547
     const/4 v0, 0x0
 
-    .line 8542
+    .line 8549
     :goto_0
     return-object v0
 
@@ -29707,7 +29724,7 @@
     .locals 1
 
     .prologue
-    .line 8558
+    .line 8565
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getZoomOverviewScale()F
@@ -29721,14 +29738,14 @@
     .locals 1
 
     .prologue
-    .line 14616
+    .line 14847
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 14617
+    .line 14848
     :goto_0
     return v0
 
@@ -29746,7 +29763,7 @@
     .locals 1
 
     .prologue
-    .line 14548
+    .line 14779
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     return-object v0
@@ -29756,15 +29773,15 @@
     .locals 1
 
     .prologue
-    .line 2565
+    .line 2569
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2566
+    .line 2570
     const/4 v0, -0x1
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->goBackOrForwardImpl(I)V
 
-    .line 2567
+    .line 2571
     return-void
 .end method
 
@@ -29773,13 +29790,13 @@
     .parameter "steps"
 
     .prologue
-    .line 2620
+    .line 2624
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2621
+    .line 2625
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->goBackOrForwardImpl(I)V
 
-    .line 2622
+    .line 2626
     return-void
 .end method
 
@@ -29787,15 +29804,15 @@
     .locals 1
 
     .prologue
-    .line 2589
+    .line 2593
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2590
+    .line 2594
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->goBackOrForwardImpl(I)V
 
-    .line 2591
+    .line 2595
     return-void
 .end method
 
@@ -29810,78 +29827,78 @@
 
     const/4 v6, 0x0
 
-    .line 7756
+    .line 7763
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v4}, Landroid/webkit/ZoomManager;->getMultiTouchGestureDetector()Landroid/view/ScaleGestureDetector;
 
     move-result-object v1
 
-    .line 7761
+    .line 7768
     .local v1, detector:Landroid/view/ScaleGestureDetector;
     if-nez v1, :cond_1
 
-    .line 7822
+    .line 7829
     :cond_0
     :goto_0
     return-void
 
-    .line 7763
+    .line 7770
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
 
-    .line 7764
+    .line 7771
     .local v2, x:F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
 
-    .line 7766
+    .line 7773
     .local v3, y:F
     iget v4, p0, Landroid/webkit/WebView;->mPreventDefault:I
 
     if-eq v4, v8, :cond_2
 
-    .line 7767
+    .line 7774
     invoke-virtual {v1, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 7769
+    .line 7776
     invoke-virtual {v1}, Landroid/view/ScaleGestureDetector;->isInProgress()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 7773
+    .line 7780
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Landroid/webkit/WebView;->mLastTouchTime:J
 
-    .line 7774
+    .line 7781
     invoke-virtual {v1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
 
     move-result v2
 
-    .line 7775
+    .line 7782
     invoke-virtual {v1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
 
     move-result v3
 
-    .line 7777
+    .line 7784
     invoke-virtual {p0}, Landroid/webkit/WebView;->cancelLongPress()V
 
-    .line 7778
+    .line 7785
     iget-object v4, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/4 v5, 0x4
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7779
+    .line 7786
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v4}, Landroid/webkit/ZoomManager;->supportsPanDuringZoom()Z
@@ -29890,40 +29907,40 @@
 
     if-eqz v4, :cond_0
 
-    .line 7782
+    .line 7789
     iput v8, p0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 7783
+    .line 7790
     iget-object v4, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v4, :cond_2
 
-    .line 7784
+    .line 7791
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v4
 
     iput-object v4, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 7789
+    .line 7796
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 7790
+    .line 7797
     .local v0, action:I
     const/4 v4, 0x5
 
     if-ne v0, v4, :cond_6
 
-    .line 7791
+    .line 7798
     invoke-direct {p0}, Landroid/webkit/WebView;->cancelTouch()V
 
-    .line 7792
+    .line 7799
     const/4 v0, 0x0
 
-    .line 7806
+    .line 7813
     :cond_3
     :goto_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
@@ -29932,7 +29949,7 @@
 
     if-eqz v4, :cond_9
 
-    .line 7808
+    .line 7815
     iget-object v4, p0, Landroid/webkit/WebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
 
     invoke-virtual {v4}, Landroid/webkit/WebViewSelectionMethod;->getMode()Landroid/webkit/WebViewSelectionMethod$SelectionMode;
@@ -29956,12 +29973,12 @@
     :cond_4
     move-object v4, p0
 
-    .line 7810
+    .line 7817
     check-cast v4, Landroid/webkit/EditableWebView;
 
     invoke-virtual {v4}, Landroid/webkit/EditableWebView;->onEndSelect()V
 
-    .line 7818
+    .line 7825
     :cond_5
     :goto_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
@@ -29988,7 +30005,7 @@
 
     goto/16 :goto_0
 
-    .line 7793
+    .line 7800
     :cond_6
     const/4 v4, 0x6
 
@@ -30000,14 +30017,14 @@
 
     if-lt v4, v7, :cond_7
 
-    .line 7795
+    .line 7802
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
     move-result v4
 
     iput v4, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 7796
+    .line 7803
     invoke-static {v3}, Ljava/lang/Math;->round(F)I
 
     move-result v4
@@ -30016,11 +30033,11 @@
 
     goto :goto_1
 
-    .line 7797
+    .line 7804
     :cond_7
     if-ne v0, v7, :cond_3
 
-    .line 7799
+    .line 7806
     cmpg-float v4, v2, v6
 
     if-ltz v4, :cond_0
@@ -30031,7 +30048,7 @@
 
     goto/16 :goto_0
 
-    .line 7811
+    .line 7818
     :cond_8
     iget-object v4, p0, Landroid/webkit/WebView;->mSelection:Landroid/webkit/WebViewSelectionMethod;
 
@@ -30045,14 +30062,14 @@
 
     move-object v4, p0
 
-    .line 7814
+    .line 7821
     check-cast v4, Landroid/webkit/EditableWebView;
 
     invoke-virtual {v4}, Landroid/webkit/EditableWebView;->pauseSelectionUI()V
 
     goto :goto_2
 
-    .line 7821
+    .line 7828
     :cond_9
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
@@ -30071,7 +30088,7 @@
     .locals 0
 
     .prologue
-    .line 15033
+    .line 15264
     return-void
 .end method
 
@@ -30079,7 +30096,7 @@
     .locals 1
 
     .prologue
-    .line 15216
+    .line 15447
     invoke-virtual {p0}, Landroid/webkit/WebView;->computeMaxScrollY()I
 
     move-result v0
@@ -30105,19 +30122,19 @@
     .locals 2
 
     .prologue
-    .line 11612
+    .line 11619
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCQuickSearch:Landroid/webkit/HTCQuickSearch;
 
     if-nez v0, :cond_0
 
-    .line 11613
+    .line 11620
     new-instance v0, Landroid/webkit/HTCQuickSearch;
 
     invoke-direct {v0, p0}, Landroid/webkit/HTCQuickSearch;-><init>(Landroid/webkit/WebView;)V
 
     iput-object v0, p0, Landroid/webkit/WebView;->mHTCQuickSearch:Landroid/webkit/HTCQuickSearch;
 
-    .line 11615
+    .line 11622
     :cond_0
     const/4 v0, 0x1
 
@@ -30129,7 +30146,7 @@
 
     if-nez v0, :cond_1
 
-    .line 11616
+    .line 11623
     new-instance v0, Landroid/webkit/WebView$QuickSelectWV;
 
     const/4 v1, 0x0
@@ -30138,13 +30155,13 @@
 
     iput-object v0, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
-    .line 11619
+    .line 11626
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     invoke-virtual {v0}, Landroid/webkit/WebView$QuickSelectAbs;->init()V
 
-    .line 11620
+    .line 11627
     return-void
 .end method
 
@@ -30155,18 +30172,18 @@
     .parameter "eventTime"
 
     .prologue
-    .line 8641
+    .line 8648
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 8656
+    .line 8663
     :goto_0
     return-void
 
-    .line 8644
+    .line 8651
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
@@ -30190,7 +30207,7 @@
 
     iput v0, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
-    .line 8645
+    .line 8652
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->getTop()I
@@ -30213,10 +30230,10 @@
 
     iput v0, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
-    .line 8646
+    .line 8653
     iput-wide p3, p0, Landroid/webkit/WebView;->mLastTouchTime:J
 
-    .line 8647
+    .line 8654
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller;->isFinished()Z
@@ -30225,26 +30242,26 @@
 
     if-nez v0, :cond_1
 
-    .line 8648
+    .line 8655
     invoke-direct {p0}, Landroid/webkit/WebView;->abortAnimation()V
 
-    .line 8650
+    .line 8657
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnScrollingEnd()V
 
-    .line 8653
+    .line 8660
     :cond_1
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/WebView;->mSnapScrollMode:I
 
-    .line 8654
+    .line 8661
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 8655
+    .line 8662
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/webkit/WebView;->mTouchMode:I
@@ -30257,14 +30274,14 @@
     .parameter "html"
 
     .prologue
-    .line 15187
+    .line 15418
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x106
 
     invoke-virtual {v0, v1, p1}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 15188
+    .line 15419
     return-void
 .end method
 
@@ -30274,7 +30291,7 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 14052
+    .line 14283
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getZoomType()I
@@ -30291,12 +30308,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 14061
+    .line 14292
     :cond_0
     :goto_0
     return-void
 
-    .line 14056
+    .line 14287
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -30354,7 +30371,7 @@
 
     if-nez v0, :cond_0
 
-    .line 14058
+    .line 14289
     :cond_2
     :try_start_0
     invoke-super {p0}, Landroid/widget/AbsoluteLayout;->invalidate()V
@@ -30363,7 +30380,7 @@
 
     goto :goto_0
 
-    .line 14059
+    .line 14290
     :catch_0
     move-exception v0
 
@@ -30374,10 +30391,10 @@
     .locals 2
 
     .prologue
-    .line 2813
+    .line 2817
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2814
+    .line 2818
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
@@ -30388,22 +30405,22 @@
 
     if-nez v0, :cond_0
 
-    .line 2815
+    .line 2819
     const-string/jumbo v0, "webview"
 
     const-string v1, "This WebView doesn\'t support zoom."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2820
+    .line 2824
     :goto_0
     return-void
 
-    .line 2818
+    .line 2822
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
-    .line 2819
+    .line 2823
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->invokeZoomPicker()V
@@ -30417,12 +30434,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 14466
+    .line 14697
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-nez v0, :cond_0
 
-    .line 14470
+    .line 14701
     :cond_0
     return v1
 .end method
@@ -30431,7 +30448,7 @@
     .locals 1
 
     .prologue
-    .line 11723
+    .line 11730
     invoke-virtual {p0}, Landroid/webkit/WebView;->onCheckIsTextEditor()Z
 
     move-result v0
@@ -30445,21 +30462,21 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 14524
+    .line 14755
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 14526
+    .line 14757
     .local v3, url:Ljava/lang/String;
     if-nez v3, :cond_1
 
-    .line 14544
+    .line 14775
     :cond_0
     :goto_0
     return v4
 
-    .line 14530
+    .line 14761
     :cond_1
     const-string/jumbo v5, "http://"
 
@@ -30469,10 +30486,10 @@
 
     if-eqz v5, :cond_4
 
-    .line 14531
+    .line 14762
     const/4 v2, 0x7
 
-    .line 14535
+    .line 14766
     .local v2, start:I
     :goto_1
     const-string v5, "/"
@@ -30481,24 +30498,24 @@
 
     move-result v0
 
-    .line 14536
+    .line 14767
     .local v0, end:I
     const/4 v5, -0x1
 
     if-ne v0, v5, :cond_2
 
-    .line 14537
+    .line 14768
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 14539
+    .line 14770
     :cond_2
     invoke-virtual {v3, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 14541
+    .line 14772
     .local v1, host:Ljava/lang/String;
     const-string v5, "google"
 
@@ -30516,13 +30533,13 @@
 
     if-eqz v5, :cond_0
 
-    .line 14542
+    .line 14773
     :cond_3
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 14533
+    .line 14764
     .end local v0           #end:I
     .end local v1           #host:Ljava/lang/String;
     .end local v2           #start:I
@@ -30537,7 +30554,7 @@
     .locals 1
 
     .prologue
-    .line 14776
+    .line 15007
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     return v0
@@ -30547,7 +30564,7 @@
     .locals 1
 
     .prologue
-    .line 3771
+    .line 3775
     iget-boolean v0, p0, Landroid/webkit/WebView;->mIsPaused:Z
 
     return v0
@@ -30557,10 +30574,10 @@
     .locals 1
 
     .prologue
-    .line 2649
+    .line 2653
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2650
+    .line 2654
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
@@ -30576,7 +30593,7 @@
     .locals 1
 
     .prologue
-    .line 15193
+    .line 15424
     iget-boolean v0, p0, Landroid/webkit/WebView;->mPureZoomMode:Z
 
     return v0
@@ -30587,30 +30604,30 @@
     .parameter "rect"
 
     .prologue
-    .line 8799
+    .line 8806
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
-    .line 8800
+    .line 8807
     .local v1, rectWidth:I
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v0
 
-    .line 8801
+    .line 8808
     .local v0, rectHeight:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v4
 
-    .line 8802
+    .line 8809
     .local v4, viewWidth:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
     move-result v3
 
-    .line 8803
+    .line 8810
     .local v3, viewHeight:I
     int-to-float v5, v4
 
@@ -30628,7 +30645,7 @@
 
     move-result v2
 
-    .line 8804
+    .line 8811
     .local v2, scale:F
     iget-object v5, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -30636,7 +30653,7 @@
 
     move-result v2
 
-    .line 8805
+    .line 8812
     iget-object v5, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v5, v2}, Landroid/webkit/ZoomManager;->willScaleTriggerZoom(F)Z
@@ -30704,7 +30721,7 @@
     .locals 1
 
     .prologue
-    .line 15202
+    .line 15433
     iget-boolean v0, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     return v0
@@ -30714,7 +30731,7 @@
     .locals 1
 
     .prologue
-    .line 15149
+    .line 15380
     iget-boolean v0, p0, Landroid/webkit/WebView;->mIsStopDrawing:Z
 
     return v0
@@ -30724,18 +30741,18 @@
     .locals 3
 
     .prologue
-    .line 6912
+    .line 6919
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 6913
+    .line 6920
     .local v0, c:Landroid/content/Context;
     instance-of v1, v0, Landroid/app/Activity;
 
     if-eqz v1, :cond_0
 
-    .line 6914
+    .line 6921
     const-string v1, "htc.WatchLaterPlayActivity"
 
     check-cast v0, Landroid/app/Activity;
@@ -30749,7 +30766,7 @@
 
     move-result v1
 
-    .line 6916
+    .line 6923
     :goto_0
     return v1
 
@@ -30766,12 +30783,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 10566
+    .line 10573
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v1, :cond_0
 
-    .line 10567
+    .line 10574
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v1}, Landroid/webkit/WebViewCore;->checkBlock()D
@@ -30786,7 +30803,7 @@
 
     const/4 v0, 0x1
 
-    .line 10569
+    .line 10576
     :cond_0
     return v0
 .end method
@@ -30797,12 +30814,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 10548
+    .line 10555
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v1, :cond_0
 
-    .line 10549
+    .line 10556
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v1}, Landroid/webkit/WebViewCore;->checkBlock()D
@@ -30817,7 +30834,7 @@
 
     const/4 v0, 0x1
 
-    .line 10555
+    .line 10562
     :cond_0
     return v0
 .end method
@@ -30826,7 +30843,7 @@
     .locals 1
 
     .prologue
-    .line 11458
+    .line 11465
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v0, :cond_0
@@ -30853,13 +30870,13 @@
     .parameter "encoding"
 
     .prologue
-    .line 2417
+    .line 2421
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2418
+    .line 2422
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/WebView;->loadDataImpl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2419
+    .line 2423
     return-void
 .end method
 
@@ -30872,19 +30889,19 @@
     .parameter "historyUrl"
 
     .prologue
-    .line 2456
+    .line 2460
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2460
+    .line 2464
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-nez v1, :cond_0
 
-    .line 2476
+    .line 2480
     :goto_0
     return-void
 
-    .line 2463
+    .line 2467
     :cond_0
     if-eqz p1, :cond_1
 
@@ -30900,44 +30917,44 @@
 
     if-eqz v1, :cond_1
 
-    .line 2464
+    .line 2468
     invoke-direct {p0, p2, p3, p4}, Landroid/webkit/WebView;->loadDataImpl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2467
+    .line 2471
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 2468
+    .line 2472
     new-instance v0, Landroid/webkit/WebViewCore$BaseUrlData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$BaseUrlData;-><init>()V
 
-    .line 2469
+    .line 2473
     .local v0, arg:Landroid/webkit/WebViewCore$BaseUrlData;
     iput-object p1, v0, Landroid/webkit/WebViewCore$BaseUrlData;->mBaseUrl:Ljava/lang/String;
 
-    .line 2470
+    .line 2474
     iput-object p2, v0, Landroid/webkit/WebViewCore$BaseUrlData;->mData:Ljava/lang/String;
 
-    .line 2471
+    .line 2475
     iput-object p3, v0, Landroid/webkit/WebViewCore$BaseUrlData;->mMimeType:Ljava/lang/String;
 
-    .line 2472
+    .line 2476
     iput-object p4, v0, Landroid/webkit/WebViewCore$BaseUrlData;->mEncoding:Ljava/lang/String;
 
-    .line 2473
+    .line 2477
     iput-object p5, v0, Landroid/webkit/WebViewCore$BaseUrlData;->mHistoryUrl:Ljava/lang/String;
 
-    .line 2474
+    .line 2478
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x8b
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 2475
+    .line 2479
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
     goto :goto_0
@@ -30948,13 +30965,13 @@
     .parameter "url"
 
     .prologue
-    .line 2357
+    .line 2361
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2358
+    .line 2362
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->loadUrlImpl(Ljava/lang/String;)V
 
-    .line 2359
+    .line 2363
     return-void
 .end method
 
@@ -30975,14 +30992,14 @@
     .end annotation
 
     .prologue
-    .line 2335
+    .line 2339
     .local p2, additionalHttpHeaders:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2336
+    .line 2340
     invoke-direct {p0, p1, p2}, Landroid/webkit/WebView;->loadUrlImpl(Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 2337
+    .line 2341
     return-void
 .end method
 
@@ -30993,7 +31010,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2235
+    .line 2239
     :try_start_0
     invoke-static {p1, p0}, Landroid/webkit/ViewStateSerializer;->deserializeViewState(Ljava/io/InputStream;Landroid/webkit/WebView;)Landroid/webkit/WebViewCore$DrawData;
 
@@ -31001,19 +31018,19 @@
 
     iput-object v2, p0, Landroid/webkit/WebView;->mLoadedPicture:Landroid/webkit/WebViewCore$DrawData;
 
-    .line 2236
+    .line 2240
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
-    .line 2237
+    .line 2241
     iget-object v2, p0, Landroid/webkit/WebView;->mLoadedPicture:Landroid/webkit/WebViewCore$DrawData;
 
     const/4 v3, 0x1
 
     invoke-virtual {p0, v2, v3}, Landroid/webkit/WebView;->setNewPicture(Landroid/webkit/WebViewCore$DrawData;Z)V
 
-    .line 2238
+    .line 2242
     iget-object v2, p0, Landroid/webkit/WebView;->mLoadedPicture:Landroid/webkit/WebViewCore$DrawData;
 
     const/4 v3, 0x0
@@ -31022,15 +31039,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2243
+    .line 2247
     :goto_0
     return v1
 
-    .line 2240
+    .line 2244
     :catch_0
     move-exception v0
 
-    .line 2241
+    .line 2245
     .local v0, e:Ljava/io/IOException;
     const-string/jumbo v1, "webview"
 
@@ -31038,7 +31055,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2243
+    .line 2247
     const/4 v1, 0x0
 
     goto :goto_0
@@ -31056,28 +31073,28 @@
 
     const/4 v9, 0x0
 
-    .line 8164
+    .line 8171
     iget v10, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v10, :cond_0
 
-    .line 8197
+    .line 8204
     :goto_0
     return-void
 
-    .line 8166
+    .line 8173
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v6
 
-    .line 8167
+    .line 8174
     .local v6, width:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeight()I
 
     move-result v0
 
-    .line 8168
+    .line 8175
     .local v0, height:I
     iget v10, p0, Landroid/webkit/WebView;->mSelectX:I
 
@@ -31089,7 +31106,7 @@
 
     iput v10, p0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 8169
+    .line 8176
     iget v10, p0, Landroid/webkit/WebView;->mSelectY:I
 
     int-to-float v10, v10
@@ -31100,18 +31117,18 @@
 
     iput v10, p0, Landroid/webkit/WebView;->mSelectY:I
 
-    .line 8170
+    .line 8177
     iget v10, p0, Landroid/webkit/WebView;->mScrollX:I
 
     add-int v1, v6, v10
 
-    .line 8171
+    .line 8178
     .local v1, maxX:I
     iget v10, p0, Landroid/webkit/WebView;->mScrollY:I
 
     add-int v2, v0, v10
 
-    .line 8172
+    .line 8179
     .local v2, maxY:I
     iget v10, p0, Landroid/webkit/WebView;->mScrollX:I
 
@@ -31129,7 +31146,7 @@
 
     iput v10, p0, Landroid/webkit/WebView;->mSelectX:I
 
-    .line 8174
+    .line 8181
     iget v10, p0, Landroid/webkit/WebView;->mScrollY:I
 
     add-int/lit8 v10, v10, -0x10
@@ -31146,7 +31163,7 @@
 
     iput v10, p0, Landroid/webkit/WebView;->mSelectY:I
 
-    .line 8186
+    .line 8193
     iget v10, p0, Landroid/webkit/WebView;->mSelectX:I
 
     invoke-virtual {p0, v10}, Landroid/webkit/WebView;->viewToContentX(I)I
@@ -31161,7 +31178,7 @@
 
     invoke-direct {p0, v10, v11}, Landroid/webkit/WebView;->nativeMoveSelection(II)V
 
-    .line 8187
+    .line 8194
     iget v10, p0, Landroid/webkit/WebView;->mSelectX:I
 
     iget v11, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -31170,7 +31187,7 @@
 
     move v3, v7
 
-    .line 8190
+    .line 8197
     .local v3, scrollX:I
     :goto_1
     iget v10, p0, Landroid/webkit/WebView;->mSelectY:I
@@ -31181,14 +31198,14 @@
 
     move v4, v7
 
-    .line 8193
+    .line 8200
     .local v4, scrollY:I
     :goto_2
     const/4 v7, 0x1
 
     invoke-direct {p0, v3, v4, v7, v9}, Landroid/webkit/WebView;->pinScrollBy(IIZI)Z
 
-    .line 8194
+    .line 8201
     new-instance v5, Landroid/graphics/Rect;
 
     iget v7, p0, Landroid/webkit/WebView;->mSelectX:I
@@ -31205,16 +31222,16 @@
 
     invoke-direct {v5, v7, v8, v9, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 8195
+    .line 8202
     .local v5, select:Landroid/graphics/Rect;
     invoke-virtual {p0, v5}, Landroid/webkit/WebView;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
 
-    .line 8196
+    .line 8203
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto :goto_0
 
-    .line 8187
+    .line 8194
     .end local v3           #scrollX:I
     .end local v4           #scrollY:I
     .end local v5           #select:Landroid/graphics/Rect;
@@ -31234,7 +31251,7 @@
 
     goto :goto_1
 
-    .line 8190
+    .line 8197
     .restart local v3       #scrollX:I
     :cond_3
     iget v7, p0, Landroid/webkit/WebView;->mSelectY:I
@@ -31261,10 +31278,10 @@
     .parameter "animationDuration"
 
     .prologue
-    .line 12447
+    .line 12454
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->pinScrollTo(IIZI)Z
 
-    .line 12448
+    .line 12455
     return-void
 .end method
 
@@ -31276,10 +31293,10 @@
     .parameter "oldt"
 
     .prologue
-    .line 14564
+    .line 14795
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onScrollChanged(IIII)V
 
-    .line 14565
+    .line 14796
     return-void
 .end method
 
@@ -31347,7 +31364,7 @@
     .end annotation
 
     .prologue
-    .line 15040
+    .line 15271
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     if-nez v0, :cond_0
@@ -31374,7 +31391,7 @@
     .locals 1
 
     .prologue
-    .line 15037
+    .line 15268
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     if-nez v0, :cond_0
@@ -31415,40 +31432,40 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 4012
+    .line 4016
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
-    .line 4013
+    .line 4017
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/webkit/WebView;->mCachedOverlappingActionModeHeight:I
 
-    .line 4014
+    .line 4018
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-nez v0, :cond_0
 
-    .line 4023
+    .line 4027
     :goto_0
     return-void
 
-    .line 4017
+    .line 4021
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->clearMatches()V
 
-    .line 4018
+    .line 4022
     invoke-direct {p0, v2}, Landroid/webkit/WebView;->setFindIsUp(Z)V
 
-    .line 4021
+    .line 4025
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     iget v1, p0, Landroid/webkit/WebView;->mScrollY:I
 
     invoke-direct {p0, v0, v1, v2, v2}, Landroid/webkit/WebView;->pinScrollTo(IIZI)Z
 
-    .line 4022
+    .line 4026
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto :goto_0
@@ -31460,10 +31477,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6552
+    .line 6559
     invoke-super {p0}, Landroid/widget/AbsoluteLayout;->onAttachedToWindow()V
 
-    .line 6553
+    .line 6560
     invoke-virtual {p0}, Landroid/webkit/WebView;->hasWindowFocus()Z
 
     move-result v1
@@ -31474,58 +31491,58 @@
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->setActive(Z)V
 
-    .line 6554
+    .line 6561
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 6555
+    .line 6562
     .local v0, treeObserver:Landroid/view/ViewTreeObserver;
     iget-object v1, p0, Landroid/webkit/WebView;->mGlobalLayoutListener:Landroid/webkit/WebView$InnerGlobalLayoutListener;
 
     if-nez v1, :cond_1
 
-    .line 6556
+    .line 6563
     new-instance v1, Landroid/webkit/WebView$InnerGlobalLayoutListener;
 
     invoke-direct {v1, p0, v2}, Landroid/webkit/WebView$InnerGlobalLayoutListener;-><init>(Landroid/webkit/WebView;Landroid/webkit/WebView$1;)V
 
     iput-object v1, p0, Landroid/webkit/WebView;->mGlobalLayoutListener:Landroid/webkit/WebView$InnerGlobalLayoutListener;
 
-    .line 6557
+    .line 6564
     iget-object v1, p0, Landroid/webkit/WebView;->mGlobalLayoutListener:Landroid/webkit/WebView$InnerGlobalLayoutListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 6559
+    .line 6566
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebView;->mScrollChangedListener:Landroid/webkit/WebView$InnerScrollChangedListener;
 
     if-nez v1, :cond_2
 
-    .line 6560
+    .line 6567
     new-instance v1, Landroid/webkit/WebView$InnerScrollChangedListener;
 
     invoke-direct {v1, p0, v2}, Landroid/webkit/WebView$InnerScrollChangedListener;-><init>(Landroid/webkit/WebView;Landroid/webkit/WebView$1;)V
 
     iput-object v1, p0, Landroid/webkit/WebView;->mScrollChangedListener:Landroid/webkit/WebView$InnerScrollChangedListener;
 
-    .line 6561
+    .line 6568
     iget-object v1, p0, Landroid/webkit/WebView;->mScrollChangedListener:Landroid/webkit/WebView$InnerScrollChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
 
-    .line 6564
+    .line 6571
     :cond_2
     invoke-direct {p0}, Landroid/webkit/WebView;->addAccessibilityApisToJavaScript()V
 
-    .line 6566
+    .line 6573
     iget-object v1, p0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
 
     invoke-virtual {v1}, Landroid/webkit/WebView$TouchEventQueue;->reset()V
 
-    .line 6567
+    .line 6574
     return-void
 .end method
 
@@ -31537,7 +31554,7 @@
     .end annotation
 
     .prologue
-    .line 6606
+    .line 6613
     return-void
 .end method
 
@@ -31549,7 +31566,7 @@
     .end annotation
 
     .prologue
-    .line 6613
+    .line 6620
     return-void
 .end method
 
@@ -31558,17 +31575,17 @@
     .parameter "newConfig"
 
     .prologue
-    .line 5159
+    .line 5166
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/webkit/WebView;->mCachedOverlappingActionModeHeight:I
 
-    .line 5161
+    .line 5168
     iget v0, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-nez v0, :cond_0
 
-    .line 5163
+    .line 5170
     iget-boolean v0, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v0, :cond_0
@@ -31579,16 +31596,16 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 5164
+    .line 5171
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
-    .line 5166
+    .line 5173
     :cond_0
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
     iput v0, p0, Landroid/webkit/WebView;->mOrientation:I
 
-    .line 5167
+    .line 5174
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_1
@@ -31597,14 +31614,14 @@
 
     if-nez v0, :cond_1
 
-    .line 5168
+    .line 5175
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x86
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 5170
+    .line 5177
     :cond_1
     return-void
 .end method
@@ -31614,12 +31631,12 @@
     .parameter "outAttrs"
 
     .prologue
-    .line 5661
+    .line 5668
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
 
-    .line 5662
+    .line 5669
     .local v0, connection:Landroid/view/inputmethod/InputConnection;
     iget v1, p1, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
 
@@ -31629,7 +31646,7 @@
 
     iput v1, p1, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
 
-    .line 5663
+    .line 5670
     return-object v0
 .end method
 
@@ -31639,15 +31656,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6571
+    .line 6578
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
-    .line 6572
+    .line 6579
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v1}, Landroid/webkit/ZoomManager;->dismissZoomPicker()V
 
-    .line 6573
+    .line 6580
     invoke-virtual {p0}, Landroid/webkit/WebView;->hasWindowFocus()Z
 
     move-result v1
@@ -31658,48 +31675,48 @@
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->setActive(Z)V
 
-    .line 6575
+    .line 6582
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 6576
+    .line 6583
     .local v0, treeObserver:Landroid/view/ViewTreeObserver;
     iget-object v1, p0, Landroid/webkit/WebView;->mGlobalLayoutListener:Landroid/webkit/WebView$InnerGlobalLayoutListener;
 
     if-eqz v1, :cond_1
 
-    .line 6577
+    .line 6584
     iget-object v1, p0, Landroid/webkit/WebView;->mGlobalLayoutListener:Landroid/webkit/WebView$InnerGlobalLayoutListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 6578
+    .line 6585
     iput-object v2, p0, Landroid/webkit/WebView;->mGlobalLayoutListener:Landroid/webkit/WebView$InnerGlobalLayoutListener;
 
-    .line 6580
+    .line 6587
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebView;->mScrollChangedListener:Landroid/webkit/WebView$InnerScrollChangedListener;
 
     if-eqz v1, :cond_2
 
-    .line 6581
+    .line 6588
     iget-object v1, p0, Landroid/webkit/WebView;->mScrollChangedListener:Landroid/webkit/WebView$InnerScrollChangedListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
 
-    .line 6582
+    .line 6589
     iput-object v2, p0, Landroid/webkit/WebView;->mScrollChangedListener:Landroid/webkit/WebView$InnerScrollChangedListener;
 
-    .line 6585
+    .line 6592
     :cond_2
     invoke-direct {p0}, Landroid/webkit/WebView;->removeAccessibilityApisFromJavaScript()V
 
-    .line 6587
+    .line 6594
     invoke-super {p0}, Landroid/widget/AbsoluteLayout;->onDetachedFromWindow()V
 
-    .line 6588
+    .line 6595
     return-void
 .end method
 
@@ -31708,14 +31725,14 @@
     .parameter "canvas"
 
     .prologue
-    .line 4729
+    .line 4733
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v3, :cond_1
 
-    .line 4730
+    .line 4734
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mBackgroundColor:I
@@ -31724,12 +31741,12 @@
 
     invoke-virtual {v0, v3}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 5014
+    .line 5018
     :cond_0
     :goto_0
     return-void
 
-    .line 4737
+    .line 4741
     :cond_1
     move-object/from16 v0, p0
 
@@ -31749,7 +31766,7 @@
 
     if-nez v3, :cond_2
 
-    .line 4738
+    .line 4742
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mBackgroundColor:I
@@ -31760,7 +31777,7 @@
 
     goto :goto_0
 
-    .line 4742
+    .line 4746
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
@@ -31768,24 +31785,24 @@
 
     if-eqz v3, :cond_4
 
-    .line 4743
+    .line 4747
     sget-boolean v3, Landroid/webkit/WebView;->mIncrementEGLContextHack:Z
 
     if-nez v3, :cond_3
 
-    .line 4744
+    .line 4748
     const/4 v3, 0x1
 
     sput-boolean v3, Landroid/webkit/WebView;->mIncrementEGLContextHack:Z
 
-    .line 4745
+    .line 4749
     invoke-static {}, Ljavax/microedition/khronos/egl/EGLContext;->getEGL()Ljavax/microedition/khronos/egl/EGL;
 
     move-result-object v21
 
     check-cast v21, Ljavax/microedition/khronos/egl/EGL10;
 
-    .line 4746
+    .line 4750
     .local v21, egl:Ljavax/microedition/khronos/egl/EGL10;
     sget-object v3, Ljavax/microedition/khronos/egl/EGL10;->EGL_DEFAULT_DISPLAY:Ljava/lang/Object;
 
@@ -31795,7 +31812,7 @@
 
     move-result-object v22
 
-    .line 4747
+    .line 4751
     .local v22, eglDisplay:Ljavax/microedition/khronos/egl/EGLDisplay;
     const/4 v3, 0x2
 
@@ -31803,7 +31820,7 @@
 
     move-object/from16 v35, v0
 
-    .line 4748
+    .line 4752
     .local v35, version:[I
     move-object/from16 v0, v21
 
@@ -31813,7 +31830,7 @@
 
     invoke-interface {v0, v1, v2}, Ljavax/microedition/khronos/egl/EGL10;->eglInitialize(Ljavax/microedition/khronos/egl/EGLDisplay;[I)Z
 
-    .line 4750
+    .line 4754
     .end local v21           #egl:Ljavax/microedition/khronos/egl/EGL10;
     .end local v22           #eglDisplay:Ljavax/microedition/khronos/egl/EGLDisplay;
     .end local v35           #version:[I
@@ -31824,13 +31841,13 @@
 
     invoke-virtual {v3}, Landroid/webkit/ZoomManager;->setHardwareAccelerated()V
 
-    .line 4753
+    .line 4757
     :cond_4
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v30
 
-    .line 4754
+    .line 4758
     .local v30, saveCount:I
     move-object/from16 v0, p0
 
@@ -31848,10 +31865,10 @@
 
     if-nez v3, :cond_5
 
-    .line 4756
+    .line 4760
     invoke-direct/range {p0 .. p1}, Landroid/webkit/WebView;->drawOverScrollBackground(Landroid/graphics/Canvas;)V
 
-    .line 4758
+    .line 4762
     :cond_5
     move-object/from16 v0, p0
 
@@ -31859,7 +31876,7 @@
 
     if-eqz v3, :cond_6
 
-    .line 4759
+    .line 4763
     const/4 v3, 0x0
 
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getTitleHeight()I
@@ -31872,7 +31889,7 @@
 
     invoke-virtual {v0, v3, v6}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 4764
+    .line 4768
     :cond_6
     move-object/from16 v0, p0
 
@@ -31906,7 +31923,7 @@
 
     if-eqz v3, :cond_7
 
-    .line 4765
+    .line 4769
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -31925,7 +31942,7 @@
 
     if-nez v3, :cond_7
 
-    .line 4766
+    .line 4770
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -31940,7 +31957,7 @@
 
     invoke-virtual {v3, v0}, Landroid/webkit/HTCZoomView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 4767
+    .line 4771
     move-object/from16 v0, p1
 
     move/from16 v1, v30
@@ -31949,7 +31966,7 @@
 
     goto/16 :goto_0
 
-    .line 4773
+    .line 4777
     :cond_7
     sget-boolean v3, Landroid/webkit/WebView;->gbIsAnimationZoomOut:Z
 
@@ -31957,7 +31974,7 @@
 
     if-ne v3, v6, :cond_c
 
-    .line 4774
+    .line 4778
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -31968,11 +31985,11 @@
 
     sub-long v33, v6, v8
 
-    .line 4776
+    .line 4780
     .local v33, timeInterval:J
     const/16 v32, 0x0
 
-    .line 4777
+    .line 4781
     .local v32, scale:F
     move-object/from16 v0, p0
 
@@ -31984,7 +32001,7 @@
 
     if-gtz v3, :cond_a
 
-    .line 4779
+    .line 4783
     move-wide/from16 v0, v33
 
     long-to-float v3, v0
@@ -31997,7 +32014,7 @@
 
     div-float v28, v3, v6
 
-    .line 4780
+    .line 4784
     .local v28, r:F
     move-object/from16 v0, p0
 
@@ -32011,7 +32028,7 @@
 
     add-float v32, v3, v6
 
-    .line 4793
+    .line 4797
     .end local v28           #r:F
     :goto_1
     move-object/from16 v0, p0
@@ -32030,7 +32047,7 @@
 
     if-gez v3, :cond_9
 
-    .line 4794
+    .line 4798
     :cond_8
     move-object/from16 v0, p0
 
@@ -32038,7 +32055,7 @@
 
     move/from16 v32, v0
 
-    .line 4796
+    .line 4800
     :cond_9
     move-object/from16 v0, p0
 
@@ -32048,14 +32065,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/WebView;->AnimationZoomOutDraw(Landroid/graphics/Canvas;F)V
 
-    .line 4797
+    .line 4801
     move-object/from16 v0, p1
 
     move/from16 v1, v30
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 4799
+    .line 4803
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->m_bNeedInvokeTabDialog:Z
@@ -32064,14 +32081,14 @@
 
     if-ne v3, v6, :cond_b
 
-    .line 4800
+    .line 4804
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->m_bNeedInvokeTabDialog:Z
 
-    .line 4801
+    .line 4805
     sget-object v3, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
     move-object/from16 v0, p0
@@ -32084,7 +32101,7 @@
 
     goto/16 :goto_0
 
-    .line 4790
+    .line 4794
     :cond_a
     const/4 v3, 0x1
 
@@ -32094,7 +32111,7 @@
 
     goto :goto_1
 
-    .line 4805
+    .line 4809
     :cond_b
     sget-object v3, Landroid/webkit/WebView;->mTabEffectListener:Landroid/webkit/HTCWebCore$OnWebViewTabEffectListener;
 
@@ -32108,19 +32125,19 @@
 
     if-ne v3, v6, :cond_0
 
-    .line 4806
+    .line 4810
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Landroid/webkit/WebView;->m_bNeedInvokeTabDialog:Z
 
-    .line 4807
+    .line 4811
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 4816
+    .line 4820
     .end local v32           #scale:F
     .end local v33           #timeInterval:J
     :cond_c
@@ -32175,63 +32192,63 @@
     :cond_f
     const/4 v14, 0x1
 
-    .line 4822
+    .line 4826
     .local v14, animateScroll:Z
     :goto_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v23
 
-    .line 4824
+    .line 4828
     .local v23, isHWacc:Z
     const/4 v15, 0x0
 
-    .line 4825
+    .line 4829
     .local v15, cacheDraw:Z
     const/16 v16, 0x0
 
-    .line 4826
+    .line 4830
     .local v16, canvasOld:Landroid/graphics/Canvas;
     if-nez v14, :cond_13
 
     if-nez v23, :cond_13
 
-    .line 4827
+    .line 4831
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Landroid/webkit/WebView;->misCacheDrawBitmap:Z
 
     if-eqz v3, :cond_11
 
-    .line 4828
+    .line 4832
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
     if-nez v3, :cond_11
 
-    .line 4830
+    .line 4834
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v3, :cond_10
 
-    .line 4831
+    .line 4835
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 4832
+    .line 4836
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v3, v0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 4834
+    .line 4838
     :cond_10
     const/4 v3, 0x0
 
@@ -32239,15 +32256,15 @@
 
     iput-object v3, v0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
-    .line 4835
+    .line 4839
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 4838
+    .line 4842
     new-instance v29, Landroid/graphics/Rect;
 
     invoke-direct/range {v29 .. v29}, Landroid/graphics/Rect;-><init>()V
 
-    .line 4839
+    .line 4843
     .local v29, rcDraw:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -32255,7 +32272,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 4840
+    .line 4844
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getHeight()I
 
     move-result v3
@@ -32270,7 +32287,7 @@
 
     iput v3, v0, Landroid/webkit/WebView;->mTitleBarHeight:I
 
-    .line 4842
+    .line 4846
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -32287,19 +32304,19 @@
 
     move-result-object v17
 
-    .line 4843
+    .line 4847
     .local v17, display:Landroid/view/Display;
     invoke-virtual/range {v17 .. v17}, Landroid/view/Display;->getHeight()I
 
     move-result v26
 
-    .line 4844
+    .line 4848
     .local v26, nScreenHeight:I
     invoke-virtual/range {v17 .. v17}, Landroid/view/Display;->getWidth()I
 
     move-result v27
 
-    .line 4848
+    .line 4852
     .local v27, nScreenWidth:I
     :try_start_0
     sget-object v3, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
@@ -32319,7 +32336,7 @@
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 4857
+    .line 4861
     :goto_3
     move-object/from16 v0, p0
 
@@ -32327,7 +32344,7 @@
 
     if-eqz v3, :cond_11
 
-    .line 4858
+    .line 4862
     new-instance v3, Landroid/graphics/Canvas;
 
     move-object/from16 v0, p0
@@ -32340,7 +32357,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
-    .line 4867
+    .line 4871
     .end local v17           #display:Landroid/view/Display;
     .end local v26           #nScreenHeight:I
     .end local v27           #nScreenWidth:I
@@ -32376,26 +32393,26 @@
 
     const/4 v15, 0x1
 
-    .line 4868
+    .line 4872
     :goto_4
     if-eqz v15, :cond_1d
 
-    .line 4869
+    .line 4873
     move-object/from16 v16, p1
 
-    .line 4870
+    .line 4874
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
     move-object/from16 p1, v0
 
-    .line 4883
+    .line 4887
     :cond_12
     :goto_5
     if-eqz v16, :cond_13
 
-    .line 4884
+    .line 4888
     invoke-virtual/range {v16 .. v16}, Landroid/graphics/Canvas;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v3
@@ -32404,7 +32421,7 @@
 
     invoke-virtual {v0, v3}, Landroid/graphics/Canvas;->setMatrix(Landroid/graphics/Matrix;)V
 
-    .line 4885
+    .line 4889
     invoke-virtual/range {v16 .. v16}, Landroid/graphics/Canvas;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v3
@@ -32415,7 +32432,7 @@
 
     invoke-virtual {v3, v6}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 4891
+    .line 4895
     :cond_13
     move-object/from16 v0, p0
 
@@ -32462,14 +32479,14 @@
     :cond_14
     const/16 v18, 0x1
 
-    .line 4896
+    .line 4900
     .local v18, drawJavaRings:Z
     :goto_6
     if-nez v18, :cond_20
 
     const/16 v19, 0x1
 
-    .line 4900
+    .line 4904
     .local v19, drawNativeRings:Z
     :goto_7
     move-object/from16 v0, p0
@@ -32480,10 +32497,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/webkit/WebView;->drawContent(Landroid/graphics/Canvas;Z)V
 
-    .line 4904
+    .line 4908
     const/16 v25, 0x0
 
-    .line 4905
+    .line 4909
     .local v25, nHostStatusbarHeight:I
     move-object/from16 v0, p0
 
@@ -32493,7 +32510,7 @@
 
     if-ne v3, v6, :cond_15
 
-    .line 4906
+    .line 4910
     sget-boolean v3, Landroid/webkit/WebView;->m_bHostFullScreenMode:Z
 
     const/4 v6, 0x1
@@ -32502,7 +32519,7 @@
 
     const/16 v25, 0x0
 
-    .line 4907
+    .line 4911
     :cond_15
     :goto_8
     move-object/from16 v0, p0
@@ -32519,7 +32536,7 @@
 
     if-lez v3, :cond_16
 
-    .line 4908
+    .line 4912
     new-instance v13, Landroid/graphics/Rect;
 
     move-object/from16 v0, p0
@@ -32566,19 +32583,19 @@
 
     invoke-direct {v13, v3, v6, v7, v8}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 4910
+    .line 4914
     .local v13, DrawRect:Landroid/graphics/Rect;
     new-instance v12, Landroid/graphics/Paint;
 
     invoke-direct {v12}, Landroid/graphics/Paint;-><init>()V
 
-    .line 4911
+    .line 4915
     .local v12, DrawPaint:Landroid/graphics/Paint;
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v12, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 4912
+    .line 4916
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -32601,7 +32618,7 @@
 
     if-eqz v3, :cond_22
 
-    .line 4913
+    .line 4917
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -32614,13 +32631,13 @@
 
     invoke-virtual {v12, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 4916
+    .line 4920
     :goto_9
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13, v12}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 4919
+    .line 4923
     .end local v12           #DrawPaint:Landroid/graphics/Paint;
     .end local v13           #DrawRect:Landroid/graphics/Rect;
     :cond_16
@@ -32628,7 +32645,7 @@
 
     if-nez v23, :cond_17
 
-    .line 4923
+    .line 4927
     if-eqz v15, :cond_23
 
     move-object/from16 v0, p0
@@ -32647,15 +32664,15 @@
 
     if-nez v3, :cond_23
 
-    .line 4930
+    .line 4934
     move-object/from16 p1, v16
 
-    .line 4931
+    .line 4935
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v31
 
-    .line 4933
+    .line 4937
     .local v31, sc2:I
     move-object/from16 v0, p0
 
@@ -32681,7 +32698,7 @@
 
     invoke-virtual {v0, v3, v6}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 4934
+    .line 4938
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
@@ -32696,14 +32713,14 @@
 
     invoke-virtual {v0, v3, v6, v7, v8}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 4935
+    .line 4939
     move-object/from16 v0, p1
 
     move/from16 v1, v31
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 4945
+    .line 4949
     .end local v31           #sc2:I
     :cond_17
     :goto_a
@@ -32713,14 +32730,14 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 4950
+    .line 4954
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v3}, Landroid/webkit/WebViewCore;->signalRepaintDone()V
 
-    .line 4952
+    .line 4956
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
@@ -32739,14 +32756,14 @@
 
     if-eqz v3, :cond_18
 
-    .line 4953
+    .line 4957
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 4957
+    .line 4961
     :cond_18
     if-eqz v18, :cond_19
 
-    .line 4958
+    .line 4962
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -32757,7 +32774,7 @@
 
     sub-long v4, v6, v8
 
-    .line 4959
+    .line 4963
     .local v4, delay:J
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
 
@@ -32769,7 +32786,7 @@
 
     if-gez v3, :cond_25
 
-    .line 4960
+    .line 4964
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
@@ -32778,7 +32795,7 @@
 
     move-result-object v28
 
-    .line 4961
+    .line 4965
     .local v28, r:Landroid/graphics/Rect;
     move-object/from16 v0, v28
 
@@ -32800,7 +32817,7 @@
 
     invoke-virtual/range {v3 .. v9}, Landroid/webkit/WebView;->postInvalidateDelayed(JIIII)V
 
-    .line 4975
+    .line 4979
     .end local v4           #delay:J
     .end local v28           #r:Landroid/graphics/Rect;
     :cond_19
@@ -32814,7 +32831,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 4976
+    .line 4980
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mTouchHighlightX:I
@@ -32827,14 +32844,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 4977
+    .line 4981
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchCrossHairColor:Landroid/graphics/Paint;
 
     if-nez v3, :cond_1a
 
-    .line 4978
+    .line 4982
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
@@ -32843,7 +32860,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebView;->mTouchCrossHairColor:Landroid/graphics/Paint;
 
-    .line 4979
+    .line 4983
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchCrossHairColor:Landroid/graphics/Paint;
@@ -32852,7 +32869,7 @@
 
     invoke-virtual {v3, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 4981
+    .line 4985
     :cond_1a
     move-object/from16 v0, p0
 
@@ -32914,7 +32931,7 @@
 
     invoke-virtual/range {v6 .. v11}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 4985
+    .line 4989
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/webkit/WebView;->mTouchHighlightX:I
@@ -32977,7 +32994,7 @@
 
     goto/16 :goto_0
 
-    .line 4816
+    .line 4820
     .end local v14           #animateScroll:Z
     .end local v15           #cacheDraw:Z
     .end local v16           #canvasOld:Landroid/graphics/Canvas;
@@ -32990,7 +33007,7 @@
 
     goto/16 :goto_2
 
-    .line 4849
+    .line 4853
     .restart local v14       #animateScroll:Z
     .restart local v15       #cacheDraw:Z
     .restart local v16       #canvasOld:Landroid/graphics/Canvas;
@@ -33002,7 +33019,7 @@
     :catch_0
     move-exception v20
 
-    .line 4850
+    .line 4854
     .local v20, e:Ljava/lang/OutOfMemoryError;
     const-string/jumbo v3, "webview"
 
@@ -33012,7 +33029,7 @@
 
     invoke-static {v3, v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4851
+    .line 4855
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -33021,12 +33038,12 @@
 
     goto/16 :goto_3
 
-    .line 4852
+    .line 4856
     .end local v20           #e:Ljava/lang/OutOfMemoryError;
     :catch_1
     move-exception v20
 
-    .line 4853
+    .line 4857
     .local v20, e:Ljava/lang/NullPointerException;
     const-string/jumbo v3, "webview"
 
@@ -33036,7 +33053,7 @@
 
     invoke-static {v3, v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4854
+    .line 4858
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -33045,7 +33062,7 @@
 
     goto/16 :goto_3
 
-    .line 4867
+    .line 4871
     .end local v17           #display:Landroid/view/Display;
     .end local v20           #e:Ljava/lang/NullPointerException;
     .end local v26           #nScreenHeight:I
@@ -33056,7 +33073,7 @@
 
     goto/16 :goto_4
 
-    .line 4873
+    .line 4877
     :cond_1d
     move-object/from16 v0, p0
 
@@ -33064,28 +33081,28 @@
 
     if-nez v3, :cond_12
 
-    .line 4875
+    .line 4879
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v3, :cond_1e
 
-    .line 4876
+    .line 4880
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 4877
+    .line 4881
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v3, v0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 4879
+    .line 4883
     :cond_1e
     const/4 v3, 0x0
 
@@ -33095,20 +33112,20 @@
 
     goto/16 :goto_5
 
-    .line 4891
+    .line 4895
     :cond_1f
     const/16 v18, 0x0
 
     goto/16 :goto_6
 
-    .line 4896
+    .line 4900
     .restart local v18       #drawJavaRings:Z
     :cond_20
     const/16 v19, 0x0
 
     goto/16 :goto_7
 
-    .line 4906
+    .line 4910
     .restart local v19       #drawNativeRings:Z
     .restart local v25       #nHostStatusbarHeight:I
     :cond_21
@@ -33128,7 +33145,7 @@
 
     goto/16 :goto_8
 
-    .line 4915
+    .line 4919
     .restart local v12       #DrawPaint:Landroid/graphics/Paint;
     .restart local v13       #DrawRect:Landroid/graphics/Rect;
     :cond_22
@@ -33138,7 +33155,7 @@
 
     goto/16 :goto_9
 
-    .line 4937
+    .line 4941
     .end local v12           #DrawPaint:Landroid/graphics/Paint;
     .end local v13           #DrawRect:Landroid/graphics/Rect;
     :cond_23
@@ -33150,18 +33167,18 @@
 
     if-nez v14, :cond_24
 
-    .line 4938
+    .line 4942
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v3, v0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
-    .line 4940
+    .line 4944
     :cond_24
     const/4 v15, 0x0
 
-    .line 4941
+    .line 4945
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -33170,7 +33187,7 @@
 
     goto/16 :goto_a
 
-    .line 4963
+    .line 4967
     .restart local v4       #delay:J
     :cond_25
     move-object/from16 v0, p0
@@ -33179,7 +33196,7 @@
 
     if-nez v3, :cond_26
 
-    .line 4964
+    .line 4968
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
@@ -33188,7 +33205,7 @@
 
     iput-object v3, v0, Landroid/webkit/WebView;->mTouchHightlightPaint:Landroid/graphics/Paint;
 
-    .line 4965
+    .line 4969
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchHightlightPaint:Landroid/graphics/Paint;
@@ -33197,7 +33214,7 @@
 
     invoke-virtual {v3, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 4967
+    .line 4971
     :cond_26
     new-instance v24, Landroid/graphics/RegionIterator;
 
@@ -33209,13 +33226,13 @@
 
     invoke-direct {v0, v3}, Landroid/graphics/RegionIterator;-><init>(Landroid/graphics/Region;)V
 
-    .line 4968
+    .line 4972
     .local v24, iter:Landroid/graphics/RegionIterator;
     new-instance v28, Landroid/graphics/Rect;
 
     invoke-direct/range {v28 .. v28}, Landroid/graphics/Rect;-><init>()V
 
-    .line 4969
+    .line 4973
     .restart local v28       #r:Landroid/graphics/Rect;
     :goto_b
     move-object/from16 v0, v24
@@ -33228,7 +33245,7 @@
 
     if-eqz v3, :cond_19
 
-    .line 4970
+    .line 4974
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/webkit/WebView;->mTouchHightlightPaint:Landroid/graphics/Paint;
@@ -33252,17 +33269,17 @@
     .parameter "b"
 
     .prologue
-    .line 3539
+    .line 3543
     iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
 
     if-gez v0, :cond_0
 
-    .line 3540
+    .line 3544
     iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
 
     sub-int/2addr p4, v0
 
-    .line 3542
+    .line 3546
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->getVisibleTitleHeightImpl()I
 
@@ -33272,10 +33289,10 @@
 
     invoke-virtual {p2, p3, v0, p5, p6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 3543
+    .line 3547
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3544
+    .line 3548
     return-void
 .end method
 
@@ -33283,7 +33300,7 @@
     .locals 1
 
     .prologue
-    .line 5349
+    .line 5356
     iget-boolean v0, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v0, :cond_0
@@ -33292,16 +33309,16 @@
 
     if-nez v0, :cond_0
 
-    .line 5350
+    .line 5357
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 5352
+    .line 5359
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->onZoomAnimationEnd()V
 
-    .line 5359
+    .line 5366
     return-void
 .end method
 
@@ -33309,17 +33326,17 @@
     .locals 1
 
     .prologue
-    .line 5344
+    .line 5351
     invoke-virtual {p0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 5345
+    .line 5352
     invoke-direct {p0}, Landroid/webkit/WebView;->onZoomAnimationStart()V
 
-    .line 5346
+    .line 5353
     return-void
 .end method
 
@@ -33334,17 +33351,17 @@
 
     const/4 v0, 0x0
 
-    .line 6726
+    .line 6733
     if-eqz p1, :cond_2
 
-    .line 6729
+    .line 6736
     invoke-virtual {p0}, Landroid/webkit/WebView;->hasWindowFocus()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 6730
+    .line 6737
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v2
@@ -33356,32 +33373,32 @@
     :cond_0
     iput-boolean v0, p0, Landroid/webkit/WebView;->mDrawCursorRing:Z
 
-    .line 6731
+    .line 6738
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->setFocusControllerActive(Z)V
 
-    .line 6747
+    .line 6754
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2, p3}, Landroid/widget/AbsoluteLayout;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    .line 6748
+    .line 6755
     return-void
 
-    .line 6740
+    .line 6747
     :cond_2
     iput-boolean v0, p0, Landroid/webkit/WebView;->mDrawCursorRing:Z
 
-    .line 6741
+    .line 6748
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 6742
+    .line 6749
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->setFocusControllerActive(Z)V
 
-    .line 6744
+    .line 6751
     :cond_3
     iget-object v0, p0, Landroid/webkit/WebView;->mKeysPressed:Ljava/util/Vector;
 
@@ -33401,7 +33418,7 @@
 
     const/4 v5, 0x0
 
-    .line 8010
+    .line 8017
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
 
     move-result v4
@@ -33410,14 +33427,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 8011
+    .line 8018
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v4
 
     packed-switch v4, :pswitch_data_0
 
-    .line 8032
+    .line 8039
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->onGenericMotionEvent(Landroid/view/MotionEvent;)Z
 
@@ -33426,7 +33443,7 @@
     :goto_0
     return v4
 
-    .line 8015
+    .line 8022
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
 
@@ -33436,16 +33453,16 @@
 
     if-eqz v4, :cond_2
 
-    .line 8016
+    .line 8023
     const/4 v3, 0x0
 
-    .line 8017
+    .line 8024
     .local v3, vscroll:F
     invoke-virtual {p1, v7}, Landroid/view/MotionEvent;->getAxisValue(I)F
 
     move-result v1
 
-    .line 8022
+    .line 8029
     .local v1, hscroll:F
     :goto_1
     cmpl-float v4, v1, v5
@@ -33456,7 +33473,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 8023
+    .line 8030
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->getVerticalScrollFactor()F
 
@@ -33466,7 +33483,7 @@
 
     float-to-int v2, v4
 
-    .line 8024
+    .line 8031
     .local v2, vdelta:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getHorizontalScrollFactor()F
 
@@ -33476,7 +33493,7 @@
 
     float-to-int v0, v4
 
-    .line 8025
+    .line 8032
     .local v0, hdelta:I
     invoke-direct {p0, v0, v2, v6, v6}, Landroid/webkit/WebView;->pinScrollBy(IIZI)Z
 
@@ -33484,12 +33501,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 8026
+    .line 8033
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 8019
+    .line 8026
     .end local v0           #hdelta:I
     .end local v1           #hscroll:F
     .end local v2           #vdelta:I
@@ -33501,7 +33518,7 @@
 
     neg-float v3, v4
 
-    .line 8020
+    .line 8027
     .restart local v3       #vscroll:F
     const/16 v4, 0xa
 
@@ -33512,7 +33529,7 @@
     .restart local v1       #hscroll:F
     goto :goto_1
 
-    .line 8011
+    .line 8018
     nop
 
     :pswitch_data_0
@@ -33529,7 +33546,7 @@
     .end annotation
 
     .prologue
-    .line 6621
+    .line 6628
     return-void
 .end method
 
@@ -33538,25 +33555,25 @@
     .parameter "event"
 
     .prologue
-    .line 6992
+    .line 6999
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v1, :cond_0
 
-    .line 6993
+    .line 7000
     const/4 v1, 0x0
 
-    .line 6999
+    .line 7006
     :goto_0
     return v1
 
-    .line 6995
+    .line 7002
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->cursorDataNoPosition()Landroid/webkit/WebViewCore$CursorData;
 
     move-result-object v0
 
-    .line 6996
+    .line 7003
     .local v0, data:Landroid/webkit/WebViewCore$CursorData;
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -33574,7 +33591,7 @@
 
     iput v1, v0, Landroid/webkit/WebViewCore$CursorData;->mX:I
 
-    .line 6997
+    .line 7004
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -33591,14 +33608,14 @@
 
     iput v1, v0, Landroid/webkit/WebViewCore$CursorData;->mY:I
 
-    .line 6998
+    .line 7005
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x87
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 6999
+    .line 7006
     const/4 v1, 0x1
 
     goto :goto_0
@@ -33611,27 +33628,27 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1503
+    .line 1507
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 1504
+    .line 1508
     invoke-direct {p0}, Landroid/webkit/WebView;->isScrollableForAccessibility()Z
 
     move-result v4
 
     invoke-virtual {p1, v4}, Landroid/view/accessibility/AccessibilityEvent;->setScrollable(Z)V
 
-    .line 1505
+    .line 1509
     iget v4, p0, Landroid/webkit/WebView;->mScrollX:I
 
     invoke-virtual {p1, v4}, Landroid/view/accessibility/AccessibilityEvent;->setScrollX(I)V
 
-    .line 1506
+    .line 1510
     iget v4, p0, Landroid/webkit/WebView;->mScrollY:I
 
     invoke-virtual {p1, v4}, Landroid/view/accessibility/AccessibilityEvent;->setScrollY(I)V
 
-    .line 1507
+    .line 1511
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContentWidth()I
 
     move-result v4
@@ -33640,7 +33657,7 @@
 
     move-result v3
 
-    .line 1508
+    .line 1512
     .local v3, convertedContentWidth:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getWidth()I
 
@@ -33654,7 +33671,7 @@
 
     sub-int v1, v4, v5
 
-    .line 1509
+    .line 1513
     .local v1, adjustedViewWidth:I
     sub-int v4, v3, v1
 
@@ -33664,7 +33681,7 @@
 
     invoke-virtual {p1, v4}, Landroid/view/accessibility/AccessibilityEvent;->setMaxScrollX(I)V
 
-    .line 1510
+    .line 1514
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContentHeight()I
 
     move-result v4
@@ -33673,7 +33690,7 @@
 
     move-result v2
 
-    .line 1511
+    .line 1515
     .local v2, convertedContentHeight:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getHeight()I
 
@@ -33687,7 +33704,7 @@
 
     sub-int v0, v4, v5
 
-    .line 1512
+    .line 1516
     .local v0, adjustedViewHeight:I
     sub-int v4, v2, v0
 
@@ -33697,7 +33714,7 @@
 
     invoke-virtual {p1, v4}, Landroid/view/accessibility/AccessibilityEvent;->setMaxScrollY(I)V
 
-    .line 1513
+    .line 1517
     return-void
 .end method
 
@@ -33706,17 +33723,17 @@
     .parameter "info"
 
     .prologue
-    .line 1497
+    .line 1501
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 1498
+    .line 1502
     invoke-direct {p0}, Landroid/webkit/WebView;->isScrollableForAccessibility()Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setScrollable(Z)V
 
-    .line 1499
+    .line 1503
     return-void
 .end method
 
@@ -33736,25 +33753,25 @@
 
     const/4 v4, 0x1
 
-    .line 5995
+    .line 6002
     iput-boolean v5, p0, Landroid/webkit/WebView;->triggerByTouch:Z
 
-    .line 5997
+    .line 6004
     iput-boolean v5, p0, Landroid/webkit/WebView;->willSelectWord:Z
 
-    .line 5999
+    .line 6006
     iget-boolean v0, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-eqz v0, :cond_1
 
     move v4, v5
 
-    .line 6199
+    .line 6206
     :cond_0
     :goto_0
     return v4
 
-    .line 6004
+    .line 6011
     :cond_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isCtrlPressed()Z
 
@@ -33764,10 +33781,10 @@
 
     move v4, v5
 
-    .line 6005
+    .line 6012
     goto :goto_0
 
-    .line 6008
+    .line 6015
     :cond_2
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
@@ -33775,10 +33792,10 @@
 
     move v4, v5
 
-    .line 6009
+    .line 6016
     goto :goto_0
 
-    .line 6024
+    .line 6031
     :cond_3
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isSystem()Z
 
@@ -33797,10 +33814,10 @@
     :cond_4
     move v4, v5
 
-    .line 6026
+    .line 6033
     goto :goto_0
 
-    .line 6030
+    .line 6037
     :cond_5
     invoke-direct {p0}, Landroid/webkit/WebView;->accessibilityScriptInjected()Z
 
@@ -33808,7 +33825,7 @@
 
     if-eqz v0, :cond_8
 
-    .line 6031
+    .line 6038
     iget-object v0, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -33821,43 +33838,43 @@
 
     if-eqz v0, :cond_6
 
-    .line 6035
+    .line 6042
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0, v6, p2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 6039
+    .line 6046
     :cond_6
     iput-boolean v5, p0, Landroid/webkit/WebView;->mAccessibilityScriptInjected:Z
 
-    .line 6055
+    .line 6062
     :cond_7
     :goto_1
     const/16 v0, 0x5c
 
     if-ne p1, v0, :cond_b
 
-    .line 6056
+    .line 6063
     invoke-virtual {p2}, Landroid/view/KeyEvent;->hasNoModifiers()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 6057
+    .line 6064
     invoke-virtual {p0, v5}, Landroid/webkit/WebView;->pageUp(Z)Z
 
     goto :goto_0
 
-    .line 6041
+    .line 6048
     :cond_8
     iget-object v0, p0, Landroid/webkit/WebView;->mAccessibilityInjector:Landroid/webkit/AccessibilityInjector;
 
     if-eqz v0, :cond_7
 
-    .line 6042
+    .line 6049
     iget-object v0, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -33870,7 +33887,7 @@
 
     if-eqz v0, :cond_9
 
-    .line 6043
+    .line 6050
     iget-object v0, p0, Landroid/webkit/WebView;->mAccessibilityInjector:Landroid/webkit/AccessibilityInjector;
 
     invoke-virtual {v0, p2}, Landroid/webkit/AccessibilityInjector;->onKeyEvent(Landroid/view/KeyEvent;)Z
@@ -33881,7 +33898,7 @@
 
     goto :goto_0
 
-    .line 6051
+    .line 6058
     :cond_9
     const/4 v0, 0x0
 
@@ -33889,7 +33906,7 @@
 
     goto :goto_1
 
-    .line 6059
+    .line 6066
     :cond_a
     invoke-virtual {p2, v1}, Landroid/view/KeyEvent;->hasModifiers(I)Z
 
@@ -33897,30 +33914,30 @@
 
     if-eqz v0, :cond_b
 
-    .line 6060
+    .line 6067
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->pageUp(Z)Z
 
     goto :goto_0
 
-    .line 6065
+    .line 6072
     :cond_b
     const/16 v0, 0x5d
 
     if-ne p1, v0, :cond_d
 
-    .line 6066
+    .line 6073
     invoke-virtual {p2}, Landroid/view/KeyEvent;->hasNoModifiers()Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 6067
+    .line 6074
     invoke-virtual {p0, v5}, Landroid/webkit/WebView;->pageDown(Z)Z
 
     goto :goto_0
 
-    .line 6069
+    .line 6076
     :cond_c
     invoke-virtual {p2, v1}, Landroid/view/KeyEvent;->hasModifiers(I)Z
 
@@ -33928,12 +33945,12 @@
 
     if-eqz v0, :cond_d
 
-    .line 6070
+    .line 6077
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->pageDown(Z)Z
 
     goto/16 :goto_0
 
-    .line 6075
+    .line 6082
     :cond_d
     const/16 v0, 0x7a
 
@@ -33945,12 +33962,12 @@
 
     if-eqz v0, :cond_e
 
-    .line 6076
+    .line 6083
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->pageUp(Z)Z
 
     goto/16 :goto_0
 
-    .line 6080
+    .line 6087
     :cond_e
     const/16 v0, 0x7b
 
@@ -33962,12 +33979,12 @@
 
     if-eqz v0, :cond_f
 
-    .line 6081
+    .line 6088
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->pageDown(Z)Z
 
     goto/16 :goto_0
 
-    .line 6085
+    .line 6092
     :cond_f
     const/16 v0, 0x13
 
@@ -33977,17 +33994,17 @@
 
     if-gt p1, v0, :cond_19
 
-    .line 6087
+    .line 6094
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 6088
+    .line 6095
     invoke-direct {p0}, Landroid/webkit/WebView;->nativePageShouldHandleShiftAndArrows()Z
 
     move-result v0
 
     if-eqz v0, :cond_10
 
-    .line 6089
+    .line 6096
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide v2
@@ -34004,7 +34021,7 @@
 
     goto/16 :goto_0
 
-    .line 6094
+    .line 6101
     :cond_10
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
 
@@ -34012,14 +34029,14 @@
 
     if-eqz v0, :cond_11
 
-    .line 6096
+    .line 6103
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0, v6, p2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 6102
+    .line 6109
     :cond_11
     invoke-virtual {p2, v1}, Landroid/view/KeyEvent;->hasModifiers(I)Z
 
@@ -34027,30 +34044,30 @@
 
     if-eqz v0, :cond_12
 
-    .line 6103
+    .line 6110
     packed-switch p1, :pswitch_data_0
 
-    .line 6118
+    .line 6125
     :cond_12
     iget-boolean v0, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v0, :cond_17
 
-    .line 6119
+    .line 6126
     const/16 v0, 0x15
 
     if-ne p1, v0, :cond_13
 
     move v10, v11
 
-    .line 6121
+    .line 6128
     .local v10, xRate:I
     :goto_2
     const/16 v0, 0x13
 
     if-ne p1, v0, :cond_15
 
-    .line 6123
+    .line 6130
     .local v11, yRate:I
     :goto_3
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
@@ -34059,7 +34076,7 @@
 
     add-int/lit8 v8, v0, 0x1
 
-    .line 6124
+    .line 6131
     .local v8, multiplier:I
     mul-int v0, v10, v8
 
@@ -34073,7 +34090,7 @@
 
     goto/16 :goto_0
 
-    .line 6105
+    .line 6112
     .end local v8           #multiplier:I
     .end local v10           #xRate:I
     .end local v11           #yRate:I
@@ -34082,17 +34099,17 @@
 
     goto/16 :goto_0
 
-    .line 6108
+    .line 6115
     :pswitch_1
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->pageDown(Z)Z
 
     goto/16 :goto_0
 
-    .line 6111
+    .line 6118
     :pswitch_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->nativeClearCursor()V
 
-    .line 6112
+    .line 6119
     iget v0, p0, Landroid/webkit/WebView;->mScrollY:I
 
     invoke-direct {p0, v5, v0, v4, v5}, Landroid/webkit/WebView;->pinScrollTo(IIZI)Z
@@ -34101,11 +34118,11 @@
 
     goto/16 :goto_0
 
-    .line 6114
+    .line 6121
     :pswitch_3
     invoke-virtual {p0}, Landroid/webkit/WebView;->nativeClearCursor()V
 
-    .line 6115
+    .line 6122
     iget v0, p0, Landroid/webkit/WebView;->mContentWidth:I
 
     iget v1, p0, Landroid/webkit/WebView;->mScrollY:I
@@ -34116,7 +34133,7 @@
 
     goto/16 :goto_0
 
-    .line 6119
+    .line 6126
     :cond_13
     const/16 v0, 0x16
 
@@ -34131,7 +34148,7 @@
 
     goto :goto_2
 
-    .line 6121
+    .line 6128
     .restart local v10       #xRate:I
     :cond_15
     const/16 v0, 0x14
@@ -34147,7 +34164,7 @@
 
     goto :goto_3
 
-    .line 6127
+    .line 6134
     .end local v10           #xRate:I
     :cond_17
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getEventTime()J
@@ -34164,7 +34181,7 @@
 
     if-eqz v0, :cond_18
 
-    .line 6128
+    .line 6135
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->keyCodeToSoundsEffect(I)I
 
     move-result v0
@@ -34176,19 +34193,19 @@
     :cond_18
     move v4, v5
 
-    .line 6132
+    .line 6139
     goto/16 :goto_0
 
-    .line 6135
+    .line 6142
     :cond_19
     const/16 v0, 0x17
 
     if-ne p1, v0, :cond_1d
 
-    .line 6136
+    .line 6143
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 6137
+    .line 6144
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorNodePointer()I
 
     move-result v0
@@ -34204,7 +34221,7 @@
     :cond_1a
     move v9, v4
 
-    .line 6139
+    .line 6146
     .local v9, wantsKeyEvents:Z
     :goto_4
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
@@ -34213,15 +34230,15 @@
 
     if-nez v0, :cond_1b
 
-    .line 6140
+    .line 6147
     iget-boolean v0, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-nez v0, :cond_0
 
-    .line 6143
+    .line 6150
     iput-boolean v4, p0, Landroid/webkit/WebView;->mGotCenterDown:Z
 
-    .line 6144
+    .line 6151
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -34236,10 +34253,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 6146
+    .line 6153
     if-eqz v9, :cond_0
 
-    .line 6149
+    .line 6156
     :cond_1b
     if-nez v9, :cond_1d
 
@@ -34251,10 +34268,10 @@
     :cond_1c
     move v9, v5
 
-    .line 6137
+    .line 6144
     goto :goto_4
 
-    .line 6152
+    .line 6159
     :cond_1d
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -34266,10 +34283,10 @@
 
     if-eqz v0, :cond_1e
 
-    .line 6153
+    .line 6160
     packed-switch p1, :pswitch_data_1
 
-    .line 6171
+    .line 6178
     :cond_1e
     :goto_5
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorIsTextInput()Z
@@ -34278,7 +34295,7 @@
 
     if-eqz v0, :cond_21
 
-    .line 6174
+    .line 6181
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x79
@@ -34293,22 +34310,22 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 6178
+    .line 6185
     invoke-virtual {p0}, Landroid/webkit/WebView;->rebuildWebTextView()V
 
-    .line 6180
+    .line 6187
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_22
 
-    .line 6181
+    .line 6188
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->setDefaultSelection()V
 
-    .line 6182
+    .line 6189
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0, p2}, Landroid/webkit/WebTextView;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -34317,13 +34334,13 @@
 
     goto/16 :goto_0
 
-    .line 6155
+    .line 6162
     :pswitch_4
     invoke-virtual {p0}, Landroid/webkit/WebView;->dumpDisplayTree()V
 
     goto :goto_5
 
-    .line 6159
+    .line 6166
     :pswitch_5
     const/16 v0, 0xc
 
@@ -34336,7 +34353,7 @@
 
     goto :goto_5
 
-    .line 6163
+    .line 6170
     :pswitch_6
     const/16 v0, 0xe
 
@@ -34349,13 +34366,13 @@
 
     goto :goto_5
 
-    .line 6166
+    .line 6173
     :pswitch_7
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeInstrumentReport()V
 
     goto/16 :goto_0
 
-    .line 6184
+    .line 6191
     :cond_21
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHasFocusNode()Z
 
@@ -34363,22 +34380,22 @@
 
     if-eqz v0, :cond_22
 
-    .line 6187
+    .line 6194
     invoke-virtual {p0}, Landroid/webkit/WebView;->rebuildWebTextView()V
 
-    .line 6188
+    .line 6195
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_22
 
-    .line 6189
+    .line 6196
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->setDefaultSelection()V
 
-    .line 6190
+    .line 6197
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0, p2}, Landroid/webkit/WebTextView;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -34387,7 +34404,7 @@
 
     goto/16 :goto_0
 
-    .line 6195
+    .line 6202
     :cond_22
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorWantsKeyEvents()Z
 
@@ -34395,7 +34412,7 @@
 
     if-nez v0, :cond_23
 
-    .line 6197
+    .line 6204
     :cond_23
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -34403,7 +34420,7 @@
 
     goto/16 :goto_0
 
-    .line 6103
+    .line 6110
     :pswitch_data_0
     .packed-switch 0x13
         :pswitch_0
@@ -34412,7 +34429,7 @@
         :pswitch_3
     .end packed-switch
 
-    .line 6153
+    .line 6160
     :pswitch_data_1
     .packed-switch 0xb
         :pswitch_4
@@ -34433,17 +34450,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 5966
+    .line 5973
     iget-boolean v1, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-eqz v1, :cond_1
 
-    .line 5977
+    .line 5984
     :cond_0
     :goto_0
     return v0
 
-    .line 5970
+    .line 5977
     :cond_1
     if-nez p1, :cond_0
 
@@ -34453,21 +34470,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 5972
+    .line 5979
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x67
 
     invoke-virtual {v0, v1, p3}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 5973
+    .line 5980
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x68
 
     invoke-virtual {v0, v1, p3}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 5975
+    .line 5982
     const/4 v0, 0x1
 
     goto :goto_0
@@ -34485,23 +34502,23 @@
 
     const/4 v10, 0x1
 
-    .line 6212
+    .line 6219
     iget-boolean v0, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-eqz v0, :cond_1
 
-    .line 6338
+    .line 6345
     :cond_0
     :goto_0
     return v4
 
-    .line 6216
+    .line 6223
     :cond_1
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v0, :cond_0
 
-    .line 6221
+    .line 6228
     const/4 v0, 0x5
 
     if-ne p1, v0, :cond_2
@@ -34512,12 +34529,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 6222
+    .line 6229
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorText()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 6223
+    .line 6230
     .local v8, text:Ljava/lang/String;
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorIsTextInput()Z
 
@@ -34535,7 +34552,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 6225
+    .line 6232
     new-instance v7, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.DIAL"
@@ -34546,7 +34563,7 @@
 
     invoke-direct {v7, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 6226
+    .line 6233
     .local v7, intent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -34556,10 +34573,10 @@
 
     move v4, v10
 
-    .line 6227
+    .line 6234
     goto :goto_0
 
-    .line 6234
+    .line 6241
     .end local v7           #intent:Landroid/content/Intent;
     .end local v8           #text:Ljava/lang/String;
     :cond_2
@@ -34577,14 +34594,14 @@
 
     if-nez v0, :cond_0
 
-    .line 6240
+    .line 6247
     invoke-direct {p0}, Landroid/webkit/WebView;->accessibilityScriptInjected()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 6241
+    .line 6248
     iget-object v0, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -34597,21 +34614,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 6245
+    .line 6252
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0, v2, p2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
     move v4, v10
 
-    .line 6246
+    .line 6253
     goto :goto_0
 
-    .line 6249
+    .line 6256
     :cond_3
     iput-boolean v4, p0, Landroid/webkit/WebView;->mAccessibilityScriptInjected:Z
 
-    .line 6265
+    .line 6272
     :cond_4
     :goto_1
     const/16 v0, 0x13
@@ -34622,14 +34639,14 @@
 
     if-gt p1, v0, :cond_8
 
-    .line 6267
+    .line 6274
     invoke-direct {p0}, Landroid/webkit/WebView;->nativePageShouldHandleShiftAndArrows()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 6268
+    .line 6275
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide v2
@@ -34646,16 +34663,16 @@
 
     move v4, v10
 
-    .line 6269
+    .line 6276
     goto :goto_0
 
-    .line 6251
+    .line 6258
     :cond_5
     iget-object v0, p0, Landroid/webkit/WebView;->mAccessibilityInjector:Landroid/webkit/AccessibilityInjector;
 
     if-eqz v0, :cond_4
 
-    .line 6252
+    .line 6259
     iget-object v0, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -34668,7 +34685,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 6253
+    .line 6260
     iget-object v0, p0, Landroid/webkit/WebView;->mAccessibilityInjector:Landroid/webkit/AccessibilityInjector;
 
     invoke-virtual {v0, p2}, Landroid/webkit/AccessibilityInjector;->onKeyEvent(Landroid/view/KeyEvent;)Z
@@ -34679,10 +34696,10 @@
 
     move v4, v10
 
-    .line 6257
+    .line 6264
     goto/16 :goto_0
 
-    .line 6261
+    .line 6268
     :cond_6
     const/4 v0, 0x0
 
@@ -34690,7 +34707,7 @@
 
     goto :goto_1
 
-    .line 6273
+    .line 6280
     :cond_7
     invoke-virtual {p0}, Landroid/webkit/WebView;->isEditable()Z
 
@@ -34698,17 +34715,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 6275
+    .line 6282
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0, v2, p2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
     move v4, v10
 
-    .line 6277
+    .line 6284
     goto/16 :goto_0
 
-    .line 6286
+    .line 6293
     :cond_8
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->isEnterActionKey(I)Z
 
@@ -34716,57 +34733,57 @@
 
     if-eqz v0, :cond_e
 
-    .line 6288
+    .line 6295
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x72
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 6289
+    .line 6296
     iput-boolean v4, p0, Landroid/webkit/WebView;->mGotCenterDown:Z
 
-    .line 6291
+    .line 6298
     iget-boolean v0, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v0, :cond_a
 
-    .line 6292
+    .line 6299
     iget-boolean v0, p0, Landroid/webkit/WebView;->mExtendSelection:Z
 
     if-eqz v0, :cond_9
 
-    .line 6293
+    .line 6300
     invoke-virtual {p0}, Landroid/webkit/WebView;->copySelection()Z
 
-    .line 6294
+    .line 6301
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
     :goto_2
     move v4, v10
 
-    .line 6300
+    .line 6307
     goto/16 :goto_0
 
-    .line 6296
+    .line 6303
     :cond_9
     iput-boolean v10, p0, Landroid/webkit/WebView;->mExtendSelection:Z
 
-    .line 6297
+    .line 6304
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeSetExtendSelection()V
 
-    .line 6298
+    .line 6305
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto :goto_2
 
-    .line 6304
+    .line 6311
     :cond_a
     invoke-virtual {p0}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
     move-result-object v9
 
-    .line 6307
+    .line 6314
     .local v9, visibleRect:Landroid/graphics/Rect;
     invoke-direct {p0, v9}, Landroid/webkit/WebView;->nativeCursorIntersects(Landroid/graphics/Rect;)Z
 
@@ -34774,12 +34791,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 6310
+    .line 6317
     invoke-virtual {p0}, Landroid/webkit/WebView;->cursorData()Landroid/webkit/WebViewCore$CursorData;
 
     move-result-object v6
 
-    .line 6311
+    .line 6318
     .local v6, data:Landroid/webkit/WebViewCore$CursorData;
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -34787,30 +34804,30 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 6312
+    .line 6319
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->playSoundEffect(I)V
 
-    .line 6313
+    .line 6320
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorIsTextInput()Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    .line 6314
+    .line 6321
     invoke-virtual {p0}, Landroid/webkit/WebView;->rebuildWebTextView()V
 
-    .line 6315
+    .line 6322
     invoke-virtual {p0}, Landroid/webkit/WebView;->centerKeyPressOnTextField()V
 
-    .line 6316
+    .line 6323
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 6317
+    .line 6324
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->setDefaultSelection()V
@@ -34818,17 +34835,17 @@
     :cond_b
     move v4, v10
 
-    .line 6319
+    .line 6326
     goto/16 :goto_0
 
-    .line 6321
+    .line 6328
     :cond_c
     invoke-virtual {p0}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 6322
+    .line 6329
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeShowCursorTimed()V
 
-    .line 6323
+    .line 6330
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorText()Ljava/lang/String;
@@ -34843,10 +34860,10 @@
 
     move v4, v10
 
-    .line 6324
+    .line 6331
     goto/16 :goto_0
 
-    .line 6326
+    .line 6333
     :cond_d
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeCursorNodePointer()I
 
@@ -34860,7 +34877,7 @@
 
     if-nez v0, :cond_e
 
-    .line 6327
+    .line 6334
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x76
@@ -34875,10 +34892,10 @@
 
     move v4, v10
 
-    .line 6329
+    .line 6336
     goto/16 :goto_0
 
-    .line 6334
+    .line 6341
     .end local v6           #data:Landroid/webkit/WebViewCore$CursorData;
     .end local v9           #visibleRect:Landroid/graphics/Rect;
     :cond_e
@@ -34888,7 +34905,7 @@
 
     if-nez v0, :cond_f
 
-    .line 6336
+    .line 6343
     :cond_f
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -34896,7 +34913,7 @@
 
     move v4, v10
 
-    .line 6338
+    .line 6345
     goto/16 :goto_0
 .end method
 
@@ -34912,41 +34929,41 @@
 
     const/4 v9, 0x0
 
-    .line 8917
+    .line 8924
     invoke-super {p0, p1, p2}, Landroid/widget/AbsoluteLayout;->onMeasure(II)V
 
-    .line 8919
+    .line 8926
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v2
 
-    .line 8920
+    .line 8927
     .local v2, heightMode:I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
 
-    .line 8921
+    .line 8928
     .local v3, heightSize:I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v6
 
-    .line 8922
+    .line 8929
     .local v6, widthMode:I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v7
 
-    .line 8924
+    .line 8931
     .local v7, widthSize:I
     move v4, v3
 
-    .line 8925
+    .line 8932
     .local v4, measuredHeight:I
     move v5, v7
 
-    .line 8928
+    .line 8935
     .local v5, measuredWidth:I
     iget v8, p0, Landroid/webkit/WebView;->mContentHeight:I
 
@@ -34954,7 +34971,7 @@
 
     move-result v0
 
-    .line 8929
+    .line 8936
     .local v0, contentHeight:I
     iget v8, p0, Landroid/webkit/WebView;->mContentWidth:I
 
@@ -34962,93 +34979,93 @@
 
     move-result v1
 
-    .line 8933
+    .line 8940
     .local v1, contentWidth:I
     const/high16 v8, 0x4000
 
     if-eq v2, v8, :cond_2
 
-    .line 8934
+    .line 8941
     iput-boolean v10, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
-    .line 8935
+    .line 8942
     move v4, v0
 
-    .line 8936
+    .line 8943
     const/high16 v8, -0x8000
 
     if-ne v2, v8, :cond_0
 
-    .line 8939
+    .line 8946
     if-le v4, v3, :cond_0
 
-    .line 8940
+    .line 8947
     move v4, v3
 
-    .line 8941
+    .line 8948
     iput-boolean v9, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
-    .line 8942
+    .line 8949
     or-int/2addr v4, v11
 
-    .line 8948
+    .line 8955
     :cond_0
     :goto_0
     iget v8, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v8, :cond_1
 
-    .line 8949
+    .line 8956
     iget-boolean v8, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
     invoke-direct {p0, v8}, Landroid/webkit/WebView;->nativeSetHeightCanMeasure(Z)V
 
-    .line 8952
+    .line 8959
     :cond_1
     if-nez v6, :cond_3
 
-    .line 8953
+    .line 8960
     iput-boolean v10, p0, Landroid/webkit/WebView;->mWidthCanMeasure:Z
 
-    .line 8954
+    .line 8961
     move v5, v1
 
-    .line 8962
+    .line 8969
     :goto_1
     monitor-enter p0
 
-    .line 8963
+    .line 8970
     :try_start_0
     invoke-virtual {p0, v5, v4}, Landroid/webkit/WebView;->setMeasuredDimension(II)V
 
-    .line 8964
+    .line 8971
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8965
+    .line 8972
     return-void
 
-    .line 8946
+    .line 8953
     :cond_2
     iput-boolean v9, p0, Landroid/webkit/WebView;->mHeightCanMeasure:Z
 
     goto :goto_0
 
-    .line 8956
+    .line 8963
     :cond_3
     if-ge v5, v1, :cond_4
 
-    .line 8957
+    .line 8964
     or-int/2addr v5, v11
 
-    .line 8959
+    .line 8966
     :cond_4
     iput-boolean v9, p0, Landroid/webkit/WebView;->mWidthCanMeasure:Z
 
     goto :goto_1
 
-    .line 8964
+    .line 8971
     :catchall_0
     move-exception v8
 
@@ -35070,76 +35087,76 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 3551
+    .line 3555
     iget v0, p0, Landroid/webkit/WebView;->mTouchMode:I
 
     const/16 v1, 0x9
 
     if-ne v0, v1, :cond_1
 
-    .line 3552
+    .line 3556
     invoke-direct {p0, p1, p2}, Landroid/webkit/WebView;->scrollLayerTo(II)V
 
-    .line 3576
+    .line 3580
     :cond_0
     :goto_0
     return-void
 
-    .line 3555
+    .line 3559
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mInOverScrollMode:Z
 
-    .line 3556
+    .line 3560
     invoke-virtual {p0}, Landroid/webkit/WebView;->computeMaxScrollX()I
 
     move-result v5
 
-    .line 3557
+    .line 3561
     .local v5, maxX:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->computeMaxScrollY()I
 
     move-result v6
 
-    .line 3558
+    .line 3562
     .local v6, maxY:I
     if-nez v5, :cond_5
 
-    .line 3560
+    .line 3564
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->pinLocX(I)I
 
     move-result p1
 
-    .line 3564
+    .line 3568
     :cond_2
     :goto_1
     if-ltz p2, :cond_3
 
     if-le p2, v6, :cond_4
 
-    .line 3565
+    .line 3569
     :cond_3
     iput-boolean v2, p0, Landroid/webkit/WebView;->mInOverScrollMode:Z
 
-    .line 3568
+    .line 3572
     :cond_4
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 3569
+    .line 3573
     .local v3, oldX:I
     iget v4, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 3571
+    .line 3575
     .local v4, oldY:I
     invoke-super {p0, p1, p2}, Landroid/widget/AbsoluteLayout;->scrollTo(II)V
 
-    .line 3573
+    .line 3577
     iget-object v0, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
     if-eqz v0, :cond_0
 
-    .line 3574
+    .line 3578
     iget-object v0, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
     iget v1, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -35150,7 +35167,7 @@
 
     goto :goto_0
 
-    .line 3561
+    .line 3565
     .end local v3           #oldX:I
     .end local v4           #oldY:I
     :cond_5
@@ -35158,7 +35175,7 @@
 
     if-le p1, v5, :cond_2
 
-    .line 3562
+    .line 3566
     :cond_6
     iput-boolean v2, p0, Landroid/webkit/WebView;->mInOverScrollMode:Z
 
@@ -35172,15 +35189,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 4228
+    .line 4232
     iput-boolean v3, p0, Landroid/webkit/WebView;->mInLoading:Z
 
-    .line 4230
+    .line 4234
     iget-object v0, p0, Landroid/webkit/WebView;->mPageThatNeedsToSlideTitleBarOffScreen:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 4234
+    .line 4238
     iget-object v0, p0, Landroid/webkit/WebView;->mPageThatNeedsToSlideTitleBarOffScreen:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -35197,7 +35214,7 @@
 
     if-nez v0, :cond_0
 
-    .line 4236
+    .line 4240
     iget v0, p0, Landroid/webkit/WebView;->mYDistanceToSlideTitleOffScreen:I
 
     const/4 v1, 0x1
@@ -35206,22 +35223,22 @@
 
     invoke-direct {p0, v3, v0, v1, v2}, Landroid/webkit/WebView;->pinScrollTo(IIZI)Z
 
-    .line 4239
+    .line 4243
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mPageThatNeedsToSlideTitleBarOffScreen:Ljava/lang/String;
 
-    .line 4241
+    .line 4245
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0, p1}, Landroid/webkit/ZoomManager;->onPageFinished(Ljava/lang/String;)V
 
-    .line 4242
+    .line 4246
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->injectAccessibilityForUrl(Ljava/lang/String;)V
 
-    .line 4243
+    .line 4247
     return-void
 .end method
 
@@ -35230,22 +35247,22 @@
     .parameter "url"
 
     .prologue
-    .line 4208
+    .line 4212
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mInLoading:Z
 
-    .line 4215
+    .line 4219
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->setCertificate(Landroid/net/http/SslCertificate;)V
 
-    .line 4219
+    .line 4223
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mAccessibilityScriptInjected:Z
 
-    .line 4220
+    .line 4224
     return-void
 .end method
 
@@ -35255,54 +35272,54 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 3707
+    .line 3711
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3708
+    .line 3712
     iget-boolean v0, p0, Landroid/webkit/WebView;->mIsPaused:Z
 
     if-nez v0, :cond_2
 
-    .line 3709
+    .line 3713
     iput-boolean v2, p0, Landroid/webkit/WebView;->mIsPaused:Z
 
-    .line 3710
+    .line 3714
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x8f
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 3713
+    .line 3717
     iget-object v0, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
     if-eqz v0, :cond_0
 
-    .line 3714
+    .line 3718
     iget-object v0, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
     invoke-virtual {v0}, Landroid/webkit/HTML5VideoViewProxy;->pauseAndDispatch()V
 
-    .line 3716
+    .line 3720
     :cond_0
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v0, :cond_1
 
-    .line 3717
+    .line 3721
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     invoke-static {v0, v2}, Landroid/webkit/WebView;->nativeSetPauseDrawing(IZ)V
 
-    .line 3720
+    .line 3724
     :cond_1
     invoke-direct {p0}, Landroid/webkit/WebView;->cancelSelectDialog()V
 
-    .line 3727
+    .line 3731
     :goto_0
     return-void
 
-    .line 3724
+    .line 3728
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -35318,26 +35335,26 @@
     .parameter "detector"
 
     .prologue
-    .line 6955
+    .line 6962
     invoke-direct {p0}, Landroid/webkit/WebView;->onZoomAnimationEnd()V
 
-    .line 6960
+    .line 6967
     invoke-virtual {p0}, Landroid/webkit/WebView;->resumeFPDoPlay()V
 
-    .line 6961
+    .line 6968
     invoke-virtual {p0}, Landroid/webkit/WebView;->fnResumePlayGifAnimation()V
 
-    .line 6963
+    .line 6970
     const/16 v0, 0x8
 
     iput v0, p0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 6964
+    .line 6971
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mConfirmMove:Z
 
-    .line 6965
+    .line 6972
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
 
     move-result v0
@@ -35350,7 +35367,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Landroid/webkit/WebView;->startTouch(FFJ)V
 
-    .line 6968
+    .line 6975
     return-void
 .end method
 
@@ -35358,13 +35375,13 @@
     .locals 0
 
     .prologue
-    .line 6950
+    .line 6957
     invoke-direct {p0}, Landroid/webkit/WebView;->cancelTouch()V
 
-    .line 6951
+    .line 6958
     invoke-direct {p0}, Landroid/webkit/WebView;->onZoomAnimationStart()V
 
-    .line 6952
+    .line 6959
     return-void
 .end method
 
@@ -35374,40 +35391,40 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3750
+    .line 3754
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3751
+    .line 3755
     iget-boolean v0, p0, Landroid/webkit/WebView;->mIsPaused:Z
 
     if-eqz v0, :cond_1
 
-    .line 3752
+    .line 3756
     iput-boolean v2, p0, Landroid/webkit/WebView;->mIsPaused:Z
 
-    .line 3753
+    .line 3757
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x90
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 3754
+    .line 3758
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v0, :cond_0
 
-    .line 3755
+    .line 3759
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     invoke-static {v0, v2}, Landroid/webkit/WebView;->nativeSetPauseDrawing(IZ)V
 
-    .line 3763
+    .line 3767
     :cond_0
     :goto_0
     return-void
 
-    .line 3760
+    .line 3764
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -35426,23 +35443,23 @@
     .parameter "resumeMsg"
 
     .prologue
-    .line 1562
+    .line 1566
     const/4 v1, 0x0
 
-    .line 1563
+    .line 1567
     .local v1, rVal:Z
     if-nez p4, :cond_0
 
-    .line 1565
+    .line 1569
     iget-object v3, p0, Landroid/webkit/WebView;->mDatabase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v3, p1, p2, p3}, Landroid/webkit/WebViewDatabase;->setUsernamePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1614
+    .line 1618
     :goto_0
     return v1
 
-    .line 1567
+    .line 1571
     :cond_0
     iget-object v3, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
@@ -35452,7 +35469,7 @@
 
     move-result-object v2
 
-    .line 1569
+    .line 1573
     .local v2, remember:Landroid/os/Message;
     invoke-virtual {v2}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -35462,7 +35479,7 @@
 
     invoke-virtual {v3, v4, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1570
+    .line 1574
     invoke-virtual {v2}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v3
@@ -35471,7 +35488,7 @@
 
     invoke-virtual {v3, v4, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1571
+    .line 1575
     invoke-virtual {v2}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v3
@@ -35480,10 +35497,10 @@
 
     invoke-virtual {v3, v4, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1572
+    .line 1576
     iput-object p4, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1574
+    .line 1578
     iget-object v3, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/4 v4, 0x2
@@ -35492,7 +35509,7 @@
 
     move-result-object v0
 
-    .line 1576
+    .line 1580
     .local v0, neverRemember:Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -35502,7 +35519,7 @@
 
     invoke-virtual {v3, v4, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1577
+    .line 1581
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v3
@@ -35511,7 +35528,7 @@
 
     invoke-virtual {v3, v4, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1578
+    .line 1582
     invoke-virtual {v0}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v3
@@ -35520,10 +35537,10 @@
 
     invoke-virtual {v3, v4, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1579
+    .line 1583
     iput-object p4, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1582
+    .line 1586
     new-instance v3, Lcom/htc/dialog/HtcAlertDialog$Builder;
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
@@ -35584,7 +35601,7 @@
 
     invoke-virtual {v3}, Lcom/htc/dialog/HtcAlertDialog$Builder;->show()Lcom/htc/dialog/HtcAlertDialog;
 
-    .line 1612
+    .line 1616
     const/4 v1, 0x1
 
     goto/16 :goto_0
@@ -35600,23 +35617,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 6826
+    .line 6833
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/AbsoluteLayout;->onScrollChanged(IIII)V
 
-    .line 6827
+    .line 6834
     iget-boolean v1, p0, Landroid/webkit/WebView;->mInOverScrollMode:Z
 
     if-nez v1, :cond_0
 
-    .line 6828
+    .line 6835
     invoke-virtual {p0}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
-    .line 6831
+    .line 6838
     invoke-virtual {p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v0
 
-    .line 6832
+    .line 6839
     .local v0, titleHeight:I
     sub-int v1, v0, p2
 
@@ -35632,10 +35649,10 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 6833
+    .line 6840
     invoke-virtual {p0, v3}, Landroid/webkit/WebView;->sendViewSizeZoom(Z)Z
 
-    .line 6836
+    .line 6843
     .end local v0           #titleHeight:I
     :cond_0
     return-void
@@ -35645,7 +35662,7 @@
     .locals 0
 
     .prologue
-    .line 15213
+    .line 15444
     return-void
 .end method
 
@@ -35653,7 +35670,7 @@
     .locals 0
 
     .prologue
-    .line 15208
+    .line 15439
     return-void
 .end method
 
@@ -35665,7 +35682,7 @@
     .parameter "oh"
 
     .prologue
-    .line 6794
+    .line 6801
     const/4 v1, 0x1
 
     iget v2, p0, Landroid/webkit/WebView;->howToSelection:I
@@ -35680,18 +35697,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 6795
+    .line 6802
     iget-object v1, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     check-cast v1, Landroid/webkit/WebView$QuickSelectWV;
 
     invoke-virtual {v1}, Landroid/webkit/WebView$QuickSelectWV;->pauseSelection()V
 
-    .line 6799
+    .line 6806
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/AbsoluteLayout;->onSizeChanged(IIII)V
 
-    .line 6804
+    .line 6811
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result v1
@@ -35708,22 +35725,22 @@
 
     float-to-int v0, v1
 
-    .line 6805
+    .line 6812
     .local v0, newMaxViewportWidth:I
     sget v1, Landroid/webkit/WebView;->sMaxViewportWidth:I
 
     if-le v0, v1, :cond_1
 
-    .line 6806
+    .line 6813
     sput v0, Landroid/webkit/WebView;->sMaxViewportWidth:I
 
-    .line 6809
+    .line 6816
     :cond_1
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v1, p1, p2, p3, p4}, Landroid/webkit/ZoomManager;->onSizeChanged(IIII)V
 
-    .line 6811
+    .line 6818
     iget-object v1, p0, Landroid/webkit/WebView;->mLoadedPicture:Landroid/webkit/WebViewCore$DrawData;
 
     if-eqz v1, :cond_2
@@ -35732,25 +35749,25 @@
 
     if-nez v1, :cond_2
 
-    .line 6815
+    .line 6822
     iget-object v1, p0, Landroid/webkit/WebView;->mLoadedPicture:Landroid/webkit/WebViewCore$DrawData;
 
     const/4 v2, 0x0
 
     invoke-virtual {p0, v1, v2}, Landroid/webkit/WebView;->setNewPicture(Landroid/webkit/WebViewCore$DrawData;Z)V
 
-    .line 6819
+    .line 6826
     :cond_2
     iget-boolean v1, p0, Landroid/webkit/WebView;->m_bMailClientUsed:Z
 
     if-nez v1, :cond_3
 
-    .line 6820
+    .line 6827
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
-    .line 6822
+    .line 6829
     :cond_3
     return-void
 .end method
@@ -35766,7 +35783,7 @@
 
     const/4 v5, 0x1
 
-    .line 7004
+    .line 7011
     iget v7, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v7, :cond_0
@@ -35786,12 +35803,12 @@
     :cond_0
     move v5, v6
 
-    .line 7073
+    .line 7080
     :cond_1
     :goto_0
     return v5
 
-    .line 7026
+    .line 7033
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -35799,7 +35816,7 @@
 
     if-ne v7, v5, :cond_4
 
-    .line 7027
+    .line 7034
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v7
@@ -35808,7 +35825,7 @@
 
     move-result v3
 
-    .line 7028
+    .line 7035
     .local v3, x:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -35818,19 +35835,19 @@
 
     move-result v4
 
-    .line 7029
+    .line 7036
     .local v4, y:I
     iget v7, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
     sub-int v0, v7, v3
 
-    .line 7030
+    .line 7037
     .local v0, deltaX:I
     iget v7, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
     sub-int v1, v7, v4
 
-    .line 7031
+    .line 7038
     .local v1, deltaY:I
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
@@ -35844,7 +35861,7 @@
 
     if-le v7, v8, :cond_4
 
-    .line 7032
+    .line 7039
     :cond_3
     iget-object v7, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
@@ -35852,7 +35869,7 @@
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7037
+    .line 7044
     .end local v0           #deltaX:I
     .end local v1           #deltaY:I
     .end local v3           #x:I
@@ -35870,7 +35887,7 @@
 
     if-eqz v7, :cond_6
 
-    .line 7038
+    .line 7045
     iget-boolean v7, p0, Landroid/webkit/WebView;->skipMove:Z
 
     if-eqz v7, :cond_5
@@ -35883,16 +35900,16 @@
 
     if-eq v7, v8, :cond_1
 
-    .line 7041
+    .line 7048
     :cond_5
     iput-boolean v6, p0, Landroid/webkit/WebView;->skipMove:Z
 
-    .line 7044
+    .line 7051
     iget-object v2, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     check-cast v2, Landroid/webkit/WebView$QuickSelectWV;
 
-    .line 7045
+    .line 7052
     .local v2, quickSelect:Landroid/webkit/WebView$QuickSelectWV;
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -35900,7 +35917,7 @@
 
     if-le v6, v5, :cond_7
 
-    .line 7046
+    .line 7053
     iget-object v6, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     iget-object v6, v6, Landroid/webkit/WebView$QuickSelectAbs;->mQSMethod:Landroid/webkit/WebViewSelectionMethod;
@@ -35913,17 +35930,17 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 7050
+    .line 7057
     invoke-virtual {v2}, Landroid/webkit/WebView$QuickSelectWV;->pauseSelection()V
 
-    .line 7051
+    .line 7058
     iget-object v6, v2, Landroid/webkit/WebView$QuickSelectWV;->mQSMethod:Landroid/webkit/WebViewSelectionMethod;
 
     sget-object v7, Landroid/webkit/WebViewSelectionMethod$SelectionMode;->EXTENDABLE:Landroid/webkit/WebViewSelectionMethod$SelectionMode;
 
     invoke-virtual {v6, v7}, Landroid/webkit/WebViewSelectionMethod;->setMode(Landroid/webkit/WebViewSelectionMethod$SelectionMode;)Z
 
-    .line 7066
+    .line 7073
     .end local v2           #quickSelect:Landroid/webkit/WebView$QuickSelectWV;
     :cond_6
     :goto_1
@@ -35937,7 +35954,7 @@
 
     if-eqz v6, :cond_8
 
-    .line 7067
+    .line 7074
     iget-object v6, p0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
 
     invoke-virtual {v6}, Landroid/webkit/WebView$TouchEventQueue;->nextTouchSequence()J
@@ -35948,7 +35965,7 @@
 
     goto :goto_0
 
-    .line 7053
+    .line 7060
     .restart local v2       #quickSelect:Landroid/webkit/WebView$QuickSelectWV;
     :cond_7
     iget-boolean v6, p0, Landroid/webkit/WebView;->mSelectingText:Z
@@ -35975,12 +35992,12 @@
 
     if-eqz v6, :cond_6
 
-    .line 7057
+    .line 7064
     invoke-virtual {v2}, Landroid/webkit/WebView$QuickSelectWV;->resumeSelection()V
 
     goto :goto_1
 
-    .line 7069
+    .line 7076
     .end local v2           #quickSelect:Landroid/webkit/WebView$QuickSelectWV;
     :cond_8
     iget-object v6, p0, Landroid/webkit/WebView;->mTouchEventQueue:Landroid/webkit/WebView$TouchEventQueue;
@@ -36003,12 +36020,12 @@
 
     const/4 v2, 0x1
 
-    .line 8081
+    .line 8088
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v0
 
-    .line 8082
+    .line 8089
     .local v0, time:J
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
 
@@ -36018,7 +36035,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 8083
+    .line 8090
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
@@ -36029,7 +36046,7 @@
 
     invoke-virtual {p0, v2}, Landroid/webkit/WebView;->pageDown(Z)Z
 
-    .line 8084
+    .line 8091
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -36041,12 +36058,12 @@
 
     invoke-virtual {p0, v2}, Landroid/webkit/WebView;->pageUp(Z)Z
 
-    .line 8160
+    .line 8167
     :cond_1
     :goto_0
     return v2
 
-    .line 8087
+    .line 8094
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -36054,25 +36071,25 @@
 
     if-nez v4, :cond_6
 
-    .line 8088
+    .line 8095
     iget-boolean v4, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-nez v4, :cond_1
 
-    .line 8091
+    .line 8098
     iput-boolean v2, p0, Landroid/webkit/WebView;->mTrackballDown:Z
 
-    .line 8092
+    .line 8099
     iget v2, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v2, :cond_3
 
     move v2, v3
 
-    .line 8093
+    .line 8100
     goto :goto_0
 
-    .line 8095
+    .line 8102
     :cond_3
     iget-wide v4, p0, Landroid/webkit/WebView;->mLastCursorTime:J
 
@@ -36094,12 +36111,12 @@
 
     if-nez v2, :cond_4
 
-    .line 8097
+    .line 8104
     iget-object v2, p0, Landroid/webkit/WebView;->mLastCursorBounds:Landroid/graphics/Rect;
 
     invoke-direct {p0, v2}, Landroid/webkit/WebView;->nativeSelectBestAt(Landroid/graphics/Rect;)V
 
-    .line 8104
+    .line 8111
     :cond_4
     invoke-virtual {p0}, Landroid/webkit/WebView;->isInTouchMode()Z
 
@@ -36112,10 +36129,10 @@
     :cond_5
     move v2, v3
 
-    .line 8105
+    .line 8112
     goto :goto_0
 
-    .line 8107
+    .line 8114
     :cond_6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -36123,45 +36140,45 @@
 
     if-ne v4, v2, :cond_9
 
-    .line 8109
+    .line 8116
     iget-object v4, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v5, 0x72
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 8110
+    .line 8117
     iput-boolean v3, p0, Landroid/webkit/WebView;->mTrackballDown:Z
 
-    .line 8111
+    .line 8118
     iput-wide v0, p0, Landroid/webkit/WebView;->mTrackballUpTime:J
 
-    .line 8112
+    .line 8119
     iget-boolean v4, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v4, :cond_8
 
-    .line 8113
+    .line 8120
     iget-boolean v3, p0, Landroid/webkit/WebView;->mExtendSelection:Z
 
     if-eqz v3, :cond_7
 
-    .line 8114
+    .line 8121
     invoke-virtual {p0}, Landroid/webkit/WebView;->copySelection()Z
 
-    .line 8115
+    .line 8122
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
     goto :goto_0
 
-    .line 8117
+    .line 8124
     :cond_7
     iput-boolean v2, p0, Landroid/webkit/WebView;->mExtendSelection:Z
 
-    .line 8118
+    .line 8125
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeSetExtendSelection()V
 
-    .line 8119
+    .line 8126
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
     goto :goto_0
@@ -36169,10 +36186,10 @@
     :cond_8
     move v2, v3
 
-    .line 8128
+    .line 8135
     goto :goto_0
 
-    .line 8130
+    .line 8137
     :cond_9
     iget-boolean v4, p0, Landroid/webkit/WebView;->mMapTrackballToArrowKeys:Z
 
@@ -36202,16 +36219,16 @@
     :cond_b
     move v2, v3
 
-    .line 8133
+    .line 8140
     goto :goto_0
 
-    .line 8135
+    .line 8142
     :cond_c
     iget-boolean v4, p0, Landroid/webkit/WebView;->mTrackballDown:Z
 
     if-nez v4, :cond_1
 
-    .line 8139
+    .line 8146
     iget-wide v4, p0, Landroid/webkit/WebView;->mTrackballUpTime:J
 
     sub-long v4, v0, v4
@@ -36220,10 +36237,10 @@
 
     if-ltz v4, :cond_1
 
-    .line 8144
+    .line 8151
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 8145
+    .line 8152
     iget-wide v4, p0, Landroid/webkit/WebView;->mTrackballLastTime:J
 
     sub-long v4, v0, v4
@@ -36232,19 +36249,19 @@
 
     if-lez v4, :cond_d
 
-    .line 8150
+    .line 8157
     iput-wide v0, p0, Landroid/webkit/WebView;->mTrackballFirstTime:J
 
-    .line 8151
+    .line 8158
     iput v3, p0, Landroid/webkit/WebView;->mTrackballYMove:I
 
     iput v3, p0, Landroid/webkit/WebView;->mTrackballXMove:I
 
-    .line 8153
+    .line 8160
     :cond_d
     iput-wide v0, p0, Landroid/webkit/WebView;->mTrackballLastTime:J
 
-    .line 8157
+    .line 8164
     iget v3, p0, Landroid/webkit/WebView;->mTrackballRemainsX:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -36255,7 +36272,7 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mTrackballRemainsX:F
 
-    .line 8158
+    .line 8165
     iget v3, p0, Landroid/webkit/WebView;->mTrackballRemainsY:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
@@ -36266,7 +36283,7 @@
 
     iput v3, p0, Landroid/webkit/WebView;->mTrackballRemainsY:F
 
-    .line 8159
+    .line 8166
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v3
@@ -36282,26 +36299,26 @@
     .parameter "visibility"
 
     .prologue
-    .line 6592
+    .line 6599
     invoke-super {p0, p1, p2}, Landroid/widget/AbsoluteLayout;->onVisibilityChanged(Landroid/view/View;I)V
 
-    .line 6595
+    .line 6602
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     if-eqz v0, :cond_0
 
-    .line 6596
+    .line 6603
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->dismissZoomPicker()V
 
-    .line 6598
+    .line 6605
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->updateDrawingState()V
 
-    .line 6599
+    .line 6606
     return-void
 .end method
 
@@ -36310,48 +36327,48 @@
     .parameter "hasWindowFocus"
 
     .prologue
-    .line 6685
+    .line 6692
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->setActive(Z)V
 
-    .line 6686
+    .line 6693
     if-eqz p1, :cond_1
 
-    .line 6687
+    .line 6694
     invoke-static {p0}, Landroid/webkit/JWebCoreJavaBridge;->setActiveWebView(Landroid/webkit/WebView;)V
 
-    .line 6688
+    .line 6695
     iget-boolean v1, p0, Landroid/webkit/WebView;->mPictureUpdatePausedForFocusChange:Z
 
     if-eqz v1, :cond_0
 
-    .line 6689
+    .line 6696
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v1}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 6690
+    .line 6697
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/webkit/WebView;->mPictureUpdatePausedForFocusChange:Z
 
-    .line 6701
+    .line 6708
     :cond_0
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->onWindowFocusChanged(Z)V
 
-    .line 6702
+    .line 6709
     return-void
 
-    .line 6693
+    .line 6700
     :cond_1
     invoke-static {p0}, Landroid/webkit/JWebCoreJavaBridge;->removeActiveWebView(Landroid/webkit/WebView;)V
 
-    .line 6694
+    .line 6701
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
 
-    .line 6695
+    .line 6702
     .local v0, settings:Landroid/webkit/WebSettings;
     if-eqz v0, :cond_0
 
@@ -36373,12 +36390,12 @@
 
     if-nez v1, :cond_0
 
-    .line 6697
+    .line 6704
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v1}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 6698
+    .line 6705
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/webkit/WebView;->mPictureUpdatePausedForFocusChange:Z
@@ -36391,13 +36408,13 @@
     .parameter "visibility"
 
     .prologue
-    .line 3731
+    .line 3735
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->onWindowVisibilityChanged(I)V
 
-    .line 3732
+    .line 3736
     invoke-virtual {p0}, Landroid/webkit/WebView;->updateDrawingState()V
 
-    .line 3733
+    .line 3737
     return-void
 .end method
 
@@ -36414,7 +36431,7 @@
     .parameter "isTouchEvent"
 
     .prologue
-    .line 12403
+    .line 12410
     sget v9, Landroid/webkit/WebView;->mOverscrollMode:I
 
     const/4 v10, 0x5
@@ -36427,24 +36444,24 @@
 
     if-eq v9, v10, :cond_0
 
-    .line 12404
+    .line 12411
     invoke-super/range {p0 .. p9}, Landroid/widget/AbsoluteLayout;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v9
 
-    .line 12443
+    .line 12450
     :goto_0
     return v9
 
-    .line 12406
+    .line 12413
     :cond_0
     add-int v5, p3, p1
 
-    .line 12407
+    .line 12414
     .local v5, newScrollX:I
     add-int v6, p4, p2
 
-    .line 12408
+    .line 12415
     .local v6, newScrollY:I
     if-gez v6, :cond_1
 
@@ -36461,69 +36478,69 @@
 
     if-nez v9, :cond_7
 
-    .line 12410
+    .line 12417
     :cond_2
     const/16 p8, 0x0
 
-    .line 12415
+    .line 12422
     :cond_3
     :goto_1
     const/16 p7, 0x0
 
-    .line 12418
+    .line 12425
     move/from16 v0, p7
 
     neg-int v4, v0
 
-    .line 12419
+    .line 12426
     .local v4, left:I
     add-int v7, p7, p5
 
-    .line 12420
+    .line 12427
     .local v7, right:I
     move/from16 v0, p8
 
     neg-int v8, v0
 
-    .line 12421
+    .line 12428
     .local v8, top:I
     add-int v1, p8, p6
 
-    .line 12423
+    .line 12430
     .local v1, bottom:I
     const/4 v2, 0x0
 
-    .line 12424
+    .line 12431
     .local v2, clampedX:Z
     if-le v5, v7, :cond_8
 
-    .line 12425
+    .line 12432
     move v5, v7
 
-    .line 12426
+    .line 12433
     const/4 v2, 0x1
 
-    .line 12432
+    .line 12439
     :cond_4
     :goto_2
     const/4 v3, 0x0
 
-    .line 12433
+    .line 12440
     .local v3, clampedY:Z
     if-le v6, v1, :cond_9
 
-    .line 12434
+    .line 12441
     move v6, v1
 
-    .line 12435
+    .line 12442
     const/4 v3, 0x1
 
-    .line 12441
+    .line 12448
     :cond_5
     :goto_3
     invoke-virtual {p0, v5, v6, v2, v3}, Landroid/webkit/WebView;->onOverScrolled(IIZZ)V
 
-    .line 12443
+    .line 12450
     if-nez v2, :cond_6
 
     if-eqz v3, :cond_a
@@ -36533,7 +36550,7 @@
 
     goto :goto_0
 
-    .line 12412
+    .line 12419
     .end local v1           #bottom:I
     .end local v2           #clampedX:Z
     .end local v3           #clampedY:Z
@@ -36547,7 +36564,7 @@
 
     if-ge v6, v0, :cond_3
 
-    .line 12413
+    .line 12420
     const/4 v9, 0x0
 
     sput-boolean v9, Landroid/webkit/WebView;->mBottomOverScrollEnabled:Z
@@ -36556,7 +36573,7 @@
 
     goto :goto_1
 
-    .line 12427
+    .line 12434
     .restart local v1       #bottom:I
     .restart local v2       #clampedX:Z
     .restart local v4       #left:I
@@ -36565,28 +36582,28 @@
     :cond_8
     if-ge v5, v4, :cond_4
 
-    .line 12428
+    .line 12435
     move v5, v4
 
-    .line 12429
+    .line 12436
     const/4 v2, 0x1
 
     goto :goto_2
 
-    .line 12436
+    .line 12443
     .restart local v3       #clampedY:Z
     :cond_9
     if-ge v6, v8, :cond_5
 
-    .line 12437
+    .line 12444
     move v6, v8
 
-    .line 12438
+    .line 12445
     const/4 v3, 0x1
 
     goto :goto_3
 
-    .line 12443
+    .line 12450
     :cond_a
     const/4 v9, 0x0
 
@@ -36597,10 +36614,10 @@
     .locals 1
 
     .prologue
-    .line 1651
+    .line 1655
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1652
+    .line 1656
     iget-boolean v0, p0, Landroid/webkit/WebView;->mOverlayHorizontalScrollbar:Z
 
     return v0
@@ -36610,10 +36627,10 @@
     .locals 1
 
     .prologue
-    .line 1660
+    .line 1664
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1661
+    .line 1665
     iget-boolean v0, p0, Landroid/webkit/WebView;->mOverlayVerticalScrollbar:Z
 
     return v0
@@ -36628,26 +36645,26 @@
 
     const/4 v2, 0x0
 
-    .line 2699
+    .line 2703
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2700
+    .line 2704
     iget v3, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v3, :cond_0
 
-    .line 2715
+    .line 2719
     :goto_0
     return v2
 
-    .line 2703
+    .line 2707
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->nativeClearCursor()V
 
-    .line 2704
+    .line 2708
     if-eqz p1, :cond_1
 
-    .line 2705
+    .line 2709
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
 
     invoke-direct {p0}, Landroid/webkit/WebView;->computeRealVerticalScrollRange()I
@@ -36660,22 +36677,22 @@
 
     goto :goto_0
 
-    .line 2708
+    .line 2712
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->getHeight()I
 
     move-result v0
 
-    .line 2710
+    .line 2714
     .local v0, h:I
     const/16 v3, 0x30
 
     if-le v0, v3, :cond_2
 
-    .line 2711
+    .line 2715
     add-int/lit8 v1, v0, -0x18
 
-    .line 2715
+    .line 2719
     .local v1, y:I
     :goto_1
     iget-object v3, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -36692,7 +36709,7 @@
 
     goto :goto_0
 
-    .line 2713
+    .line 2717
     .end local v1           #y:I
     :cond_2
     div-int/lit8 v1, v0, 0x2
@@ -36700,7 +36717,7 @@
     .restart local v1       #y:I
     goto :goto_1
 
-    .line 2715
+    .line 2719
     :cond_3
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->extendScroll(I)Z
 
@@ -36720,14 +36737,14 @@
 
     const/4 v6, 0x0
 
-    .line 10333
+    .line 10340
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeIsSwapToChangedLayer()Z
 
     move-result v3
 
     if-ne v5, v3, :cond_1
 
-    .line 10335
+    .line 10342
     iget-object v3, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->hasMessages(I)Z
@@ -36736,19 +36753,19 @@
 
     if-eqz v3, :cond_1
 
-    .line 10336
+    .line 10343
     iget-object v3, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 10337
+    .line 10344
     iget v3, p0, Landroid/webkit/WebView;->mPendingScrollX:I
 
     iget v4, p0, Landroid/webkit/WebView;->mPendingScrollY:I
 
     invoke-virtual {p0, v3, v4}, Landroid/webkit/WebView;->scrollTo(II)V
 
-    .line 10341
+    .line 10348
     const/4 v3, 0x2
 
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -36759,14 +36776,14 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 10342
+    .line 10349
     iget-object v3, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget v3, v3, Landroid/webkit/ZoomManager;->mFocusNodeScale:I
 
     if-eqz v3, :cond_1
 
-    .line 10343
+    .line 10350
     iget-object v3, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     iget-object v4, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -36777,7 +36794,7 @@
 
     move-result-object v2
 
-    .line 10345
+    .line 10352
     .local v2, rect:Landroid/graphics/Rect;
     if-eqz v2, :cond_0
 
@@ -36787,7 +36804,7 @@
 
     if-nez v3, :cond_0
 
-    .line 10346
+    .line 10353
     iget v3, v2, Landroid/graphics/Rect;->left:I
 
     int-to-float v3, v3
@@ -36808,7 +36825,7 @@
 
     float-to-int v0, v3
 
-    .line 10347
+    .line 10354
     .local v0, predictX:I
     iget v3, v2, Landroid/graphics/Rect;->top:I
 
@@ -36830,7 +36847,7 @@
 
     float-to-int v1, v3
 
-    .line 10348
+    .line 10355
     .local v1, predictY:I
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->contentToViewX(I)I
 
@@ -36854,7 +36871,7 @@
 
     invoke-virtual {p0, v3, v4}, Landroid/webkit/WebView;->shiftAfterZoom(II)V
 
-    .line 10353
+    .line 10360
     .end local v0           #predictX:I
     .end local v1           #predictY:I
     :cond_0
@@ -36862,7 +36879,7 @@
 
     iput v6, v3, Landroid/webkit/ZoomManager;->mFocusNodeScale:I
 
-    .line 10359
+    .line 10366
     .end local v2           #rect:Landroid/graphics/Rect;
     :cond_1
     return-void
@@ -36873,30 +36890,30 @@
     .parameter "notifyAnimationStarted"
 
     .prologue
-    .line 10322
+    .line 10329
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 10323
+    .line 10330
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->didUpdateWebTextViewDimensions(I)Z
 
-    .line 10325
+    .line 10332
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 10326
+    .line 10333
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xc4
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 10328
+    .line 10335
     :cond_1
     return-void
 .end method
@@ -36910,26 +36927,26 @@
 
     const/4 v2, 0x0
 
-    .line 2672
+    .line 2676
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2673
+    .line 2677
     iget v3, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v3, :cond_0
 
-    .line 2689
+    .line 2693
     :goto_0
     return v2
 
-    .line 2676
+    .line 2680
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->nativeClearCursor()V
 
-    .line 2677
+    .line 2681
     if-eqz p1, :cond_1
 
-    .line 2679
+    .line 2683
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
 
     invoke-direct {p0, v3, v2, v4, v2}, Landroid/webkit/WebView;->pinScrollTo(IIZI)Z
@@ -36938,24 +36955,24 @@
 
     goto :goto_0
 
-    .line 2682
+    .line 2686
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->getHeight()I
 
     move-result v0
 
-    .line 2684
+    .line 2688
     .local v0, h:I
     const/16 v3, 0x30
 
     if-le v0, v3, :cond_2
 
-    .line 2685
+    .line 2689
     neg-int v3, v0
 
     add-int/lit8 v1, v3, 0x18
 
-    .line 2689
+    .line 2693
     .local v1, y:I
     :goto_1
     iget-object v3, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -36972,7 +36989,7 @@
 
     goto :goto_0
 
-    .line 2687
+    .line 2691
     .end local v1           #y:I
     :cond_2
     neg-int v3, v0
@@ -36982,7 +36999,7 @@
     .restart local v1       #y:I
     goto :goto_1
 
-    .line 2689
+    .line 2693
     :cond_3
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->extendScroll(I)Z
 
@@ -36999,36 +37016,36 @@
     .prologue
     const/16 v5, 0x80
 
-    .line 9051
+    .line 9058
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-nez v1, :cond_0
 
-    .line 9067
+    .line 9074
     :goto_0
     return-void
 
-    .line 9054
+    .line 9061
     :cond_0
     new-instance v0, Landroid/webkit/WebViewCore$JSKeyData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$JSKeyData;-><init>()V
 
-    .line 9055
+    .line 9062
     .local v0, arg:Landroid/webkit/WebViewCore$JSKeyData;
     iput-object p2, v0, Landroid/webkit/WebViewCore$JSKeyData;->mEvent:Landroid/view/KeyEvent;
 
-    .line 9056
+    .line 9063
     iput-object p1, v0, Landroid/webkit/WebViewCore$JSKeyData;->mCurrentText:Ljava/lang/String;
 
-    .line 9058
+    .line 9065
     iget v1, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
-    .line 9059
+    .line 9066
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x73
@@ -37039,12 +37056,12 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/webkit/WebViewCore;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 9064
+    .line 9071
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v1, v5}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 9065
+    .line 9072
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->cursorData()Landroid/webkit/WebViewCore$CursorData;
@@ -37066,7 +37083,7 @@
 
     const/4 v1, 0x1
 
-    .line 14214
+    .line 14445
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseAll:Z
 
     if-eq v0, v1, :cond_0
@@ -37075,12 +37092,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 14229
+    .line 14460
     :cond_0
     :goto_0
     return-void
 
-    .line 14217
+    .line 14448
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -37092,31 +37109,31 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 14218
+    .line 14449
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     iput-boolean v2, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 14219
+    .line 14450
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     iput v2, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPictureCount:I
 
-    .line 14222
+    .line 14453
     :cond_2
     iput-boolean v1, p0, Landroid/webkit/WebView;->m_bPauseAll:Z
 
-    .line 14223
+    .line 14454
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0}, Landroid/webkit/WebViewCore;->removeMessages()V
 
-    .line 14225
+    .line 14456
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 14227
+    .line 14458
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
     iget v1, p0, Landroid/webkit/WebView;->mScrollY:I
@@ -37134,16 +37151,16 @@
     .locals 2
 
     .prologue
-    .line 15055
+    .line 15286
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-nez v0, :cond_0
 
-    .line 15059
+    .line 15290
     :goto_0
     return-void
 
-    .line 15057
+    .line 15288
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -37151,7 +37168,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 15058
+    .line 15289
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x101
@@ -37170,30 +37187,30 @@
 
     const/4 v1, 0x1
 
-    .line 12482
+    .line 12489
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
     if-ne v0, v1, :cond_1
 
-    .line 12496
+    .line 12503
     :cond_0
     :goto_0
     return-void
 
-    .line 12485
+    .line 12492
     :cond_1
     iput-boolean v1, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
-    .line 12486
+    .line 12493
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->forceBreakWord(Z)V
 
-    .line 12487
+    .line 12494
     if-lez p1, :cond_2
 
-    .line 12488
+    .line 12495
     iput p1, p0, Landroid/webkit/WebView;->m_nTextWrapWidth_pauseTextReflow:I
 
-    .line 12489
+    .line 12496
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v0
@@ -37216,15 +37233,15 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 12490
+    .line 12497
     iput v2, p0, Landroid/webkit/WebView;->mLastHeightSent:I
 
-    .line 12491
+    .line 12498
     invoke-virtual {p0, v2}, Landroid/webkit/WebView;->sendViewSizeZoom(Z)Z
 
     goto :goto_0
 
-    .line 12494
+    .line 12501
     :cond_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
@@ -37253,17 +37270,17 @@
     .locals 2
 
     .prologue
-    .line 3685
+    .line 3689
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3686
+    .line 3690
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x6d
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 3687
+    .line 3691
     return-void
 .end method
 
@@ -37275,7 +37292,7 @@
 
     const/4 v0, 0x1
 
-    .line 5035
+    .line 5039
     invoke-virtual {p0}, Landroid/webkit/WebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -37291,12 +37308,12 @@
     :cond_0
     move v0, v4
 
-    .line 5128
+    .line 5135
     :cond_1
     :goto_0
     return v0
 
-    .line 5043
+    .line 5047
     :cond_2
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -37304,7 +37321,7 @@
 
     move-result-object v9
 
-    .line 5044
+    .line 5048
     .local v9, detector:Landroid/view/ScaleGestureDetector;
     if-eqz v9, :cond_3
 
@@ -37316,10 +37333,10 @@
 
     move v0, v4
 
-    .line 5045
+    .line 5049
     goto :goto_0
 
-    .line 5048
+    .line 5052
     :cond_3
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
@@ -37331,13 +37348,13 @@
 
     if-eqz v1, :cond_5
 
-    .line 5050
+    .line 5054
     invoke-virtual {p0}, Landroid/webkit/WebView;->centerKeyPressOnTextField()V
 
-    .line 5051
+    .line 5055
     invoke-virtual {p0}, Landroid/webkit/WebView;->rebuildWebTextView()V
 
-    .line 5055
+    .line 5059
     :goto_1
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
@@ -37345,21 +37362,21 @@
 
     if-eqz v1, :cond_6
 
-    .line 5057
+    .line 5061
     iget v0, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v0, :cond_4
 
-    .line 5058
+    .line 5062
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
-    .line 5063
+    .line 5067
     :cond_4
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->ensureLayout()V
 
-    .line 5066
+    .line 5070
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -37368,7 +37385,7 @@
 
     check-cast v14, Landroid/widget/AbsoluteLayout$LayoutParams;
 
-    .line 5068
+    .line 5072
     .local v14, params:Landroid/widget/AbsoluteLayout$LayoutParams;
     iget-wide v0, p0, Landroid/webkit/WebView;->mLastTouchTime:J
 
@@ -37404,13 +37421,13 @@
 
     move-result-object v10
 
-    .line 5072
+    .line 5076
     .local v10, fake:Landroid/view/MotionEvent;
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0, v10}, Landroid/webkit/WebTextView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 5073
+    .line 5077
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0}, Landroid/webkit/WebTextView;->performLongClick()Z
@@ -37419,7 +37436,7 @@
 
     goto :goto_0
 
-    .line 5053
+    .line 5057
     .end local v10           #fake:Landroid/view/MotionEvent;
     .end local v14           #params:Landroid/widget/AbsoluteLayout$LayoutParams;
     :cond_5
@@ -37427,18 +37444,18 @@
 
     goto :goto_1
 
-    .line 5075
+    .line 5079
     :cond_6
     iget-boolean v1, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v1, :cond_8
 
-    .line 5077
+    .line 5081
     iget v1, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v1, :cond_7
 
-    .line 5078
+    .line 5082
     iput v0, p0, Landroid/webkit/WebView;->mTouchMode:I
 
     goto :goto_0
@@ -37446,10 +37463,10 @@
     :cond_7
     move v0, v4
 
-    .line 5082
+    .line 5086
     goto :goto_0
 
-    .line 5086
+    .line 5090
     :cond_8
     iget v1, p0, Landroid/webkit/WebView;->howToSelection:I
 
@@ -37459,12 +37476,12 @@
 
     if-nez v1, :cond_9
 
-    .line 5087
+    .line 5091
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeGetCursorRingBounds()Landroid/graphics/Rect;
 
     move-result-object v8
 
-    .line 5088
+    .line 5092
     .local v8, cursorRing:Landroid/graphics/Rect;
     invoke-virtual {v8}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -37472,14 +37489,14 @@
 
     if-nez v1, :cond_1
 
-    .line 5091
+    .line 5095
     iget-object v1, p0, Landroid/webkit/WebView;->mLastVisibleRectSent:Landroid/graphics/Rect;
 
     invoke-static {v8, v1}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
 
     move-result v12
 
-    .line 5093
+    .line 5097
     .local v12, isCursorRingVisible:Z
     if-eqz v12, :cond_1
 
@@ -37493,7 +37510,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 5097
+    .line 5101
     .end local v8           #cursorRing:Landroid/graphics/Rect;
     .end local v12           #isCursorRingVisible:Z
     :cond_9
@@ -37536,15 +37553,15 @@
     :cond_a
     move v11, v0
 
-    .line 5103
+    .line 5107
     .local v11, forceSelect:Z
     :goto_2
     iput-boolean v0, p0, Landroid/webkit/WebView;->willSelectWord:Z
 
-    .line 5104
+    .line 5108
     iput-boolean v0, p0, Landroid/webkit/WebView;->skipMove:Z
 
-    .line 5110
+    .line 5114
     if-nez v11, :cond_b
 
     invoke-super {p0}, Landroid/widget/AbsoluteLayout;->performLongClick()Z
@@ -37553,23 +37570,29 @@
 
     if-nez v1, :cond_1
 
-    .line 5120
+    .line 5124
     :cond_b
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectText()Z
 
     move-result v13
 
-    .line 5121
+    .line 5125
     .local v13, isSelecting:Z
     if-eqz v13, :cond_c
 
-    .line 5126
-    invoke-virtual {p0, v4}, Landroid/webkit/WebView;->performHapticFeedback(I)Z
+    .line 5130
+    iget v1, p0, Landroid/webkit/WebView;->howToSelection:I
+
+    if-eqz v1, :cond_e
+
+    .line 5131
+    iput-boolean v0, p0, Landroid/webkit/WebView;->needVibrate:Z
 
     :cond_c
+    :goto_3
     move v0, v13
 
-    .line 5128
+    .line 5135
     goto/16 :goto_0
 
     .end local v11           #forceSelect:Z
@@ -37577,8 +37600,16 @@
     :cond_d
     move v11, v4
 
-    .line 5097
+    .line 5101
     goto :goto_2
+
+    .line 5133
+    .restart local v11       #forceSelect:Z
+    .restart local v13       #isSelecting:Z
+    :cond_e
+    invoke-virtual {p0, v4}, Landroid/webkit/WebView;->performHapticFeedback(I)Z
+
+    goto :goto_3
 .end method
 
 .method pinLocX(I)I
@@ -37586,12 +37617,12 @@
     .parameter "x"
 
     .prologue
-    .line 3000
+    .line 3004
     iget-boolean v0, p0, Landroid/webkit/WebView;->mInOverScrollMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 3001
+    .line 3005
     .end local p1
     :goto_0
     return p1
@@ -37618,12 +37649,12 @@
     .parameter "y"
 
     .prologue
-    .line 3006
+    .line 3010
     iget-boolean v0, p0, Landroid/webkit/WebView;->mInOverScrollMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 3007
+    .line 3011
     .end local p1
     :goto_0
     return p1
@@ -37655,7 +37686,7 @@
     .locals 2
 
     .prologue
-    .line 14036
+    .line 14267
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getZoomType()I
@@ -37700,19 +37731,19 @@
 
     if-nez v0, :cond_1
 
-    .line 14038
+    .line 14269
     :cond_0
     :try_start_0
     invoke-super {p0}, Landroid/widget/AbsoluteLayout;->postInvalidate()V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 14041
+    .line 14272
     :cond_1
     :goto_0
     return-void
 
-    .line 14039
+    .line 14270
     :catch_0
     move-exception v0
 
@@ -37725,47 +37756,47 @@
     .parameter "postData"
 
     .prologue
-    .line 2377
+    .line 2381
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2378
+    .line 2382
     invoke-static {p1}, Landroid/webkit/URLUtil;->isNetworkUrl(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2379
+    .line 2383
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 2380
+    .line 2384
     new-instance v0, Landroid/webkit/WebViewCore$PostUrlData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$PostUrlData;-><init>()V
 
-    .line 2381
+    .line 2385
     .local v0, arg:Landroid/webkit/WebViewCore$PostUrlData;
     iput-object p1, v0, Landroid/webkit/WebViewCore$PostUrlData;->mUrl:Ljava/lang/String;
 
-    .line 2382
+    .line 2386
     iput-object p2, v0, Landroid/webkit/WebViewCore$PostUrlData;->mPostData:[B
 
-    .line 2383
+    .line 2387
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x84
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 2384
+    .line 2388
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
-    .line 2388
+    .line 2392
     .end local v0           #arg:Landroid/webkit/WebViewCore$PostUrlData;
     :goto_0
     return-void
 
-    .line 2386
+    .line 2390
     :cond_0
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->loadUrlImpl(Ljava/lang/String;)V
 
@@ -37776,7 +37807,7 @@
     .locals 7
 
     .prologue
-    .line 5714
+    .line 5721
     invoke-virtual {p0}, Landroid/webkit/WebView;->hasFocus()Z
 
     move-result v4
@@ -37795,18 +37826,18 @@
 
     if-nez v4, :cond_1
 
-    .line 5759
+    .line 5766
     :cond_0
     :goto_0
     return-void
 
-    .line 5717
+    .line 5724
     :cond_1
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
 
-    .line 5720
+    .line 5727
     .local v0, alreadyThere:Z
     iget v4, p0, Landroid/webkit/WebView;->mNativeClass:I
 
@@ -37818,24 +37849,24 @@
 
     if-nez v4, :cond_3
 
-    .line 5721
+    .line 5728
     :cond_2
     if-eqz v0, :cond_0
 
-    .line 5722
+    .line 5729
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4}, Landroid/webkit/WebTextView;->remove()V
 
     goto :goto_0
 
-    .line 5728
+    .line 5735
     :cond_3
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     if-nez v4, :cond_4
 
-    .line 5729
+    .line 5736
     new-instance v4, Landroid/webkit/WebTextView;
 
     iget-object v5, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
@@ -37850,38 +37881,38 @@
 
     iput-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
-    .line 5732
+    .line 5739
     const/4 v4, 0x0
 
     iput v4, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
-    .line 5734
+    .line 5741
     :cond_4
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4}, Landroid/webkit/WebTextView;->updateTextSize()V
 
-    .line 5735
+    .line 5742
     invoke-direct {p0}, Landroid/webkit/WebView;->updateWebTextViewPosition()V
 
-    .line 5736
+    .line 5743
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidateText()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 5737
+    .line 5744
     .local v3, text:Ljava/lang/String;
     invoke-virtual {p0}, Landroid/webkit/WebView;->nativeFocusCandidatePointer()I
 
     move-result v2
 
-    .line 5740
+    .line 5747
     .local v2, nodePointer:I
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4, v2}, Landroid/webkit/WebTextView;->setNodePointer(I)V
 
-    .line 5741
+    .line 5748
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidateType()I
@@ -37890,7 +37921,7 @@
 
     invoke-virtual {v4, v5}, Landroid/webkit/WebTextView;->setType(I)V
 
-    .line 5743
+    .line 5750
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidateIsRtlText()Z
@@ -37899,24 +37930,24 @@
 
     invoke-virtual {v4, v5}, Landroid/webkit/WebTextView;->setGravityForRtl(Z)V
 
-    .line 5744
+    .line 5751
     if-nez v3, :cond_5
 
-    .line 5748
+    .line 5755
     const-string v3, ""
 
-    .line 5750
+    .line 5757
     :cond_5
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4, v3}, Landroid/webkit/WebTextView;->setTextAndKeepSelection(Ljava/lang/String;)V
 
-    .line 5751
+    .line 5758
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v1
 
-    .line 5752
+    .line 5759
     .local v1, imm:Landroid/view/inputmethod/InputMethodManager;
     if-eqz v1, :cond_6
 
@@ -37928,17 +37959,17 @@
 
     if-eqz v4, :cond_6
 
-    .line 5753
+    .line 5760
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v1, v4}, Landroid/view/inputmethod/InputMethodManager;->restartInput(Landroid/view/View;)V
 
-    .line 5754
+    .line 5761
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4}, Landroid/webkit/WebTextView;->clearComposingText()V
 
-    .line 5756
+    .line 5763
     :cond_6
     invoke-virtual {p0}, Landroid/webkit/WebView;->isFocused()Z
 
@@ -37946,7 +37977,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 5757
+    .line 5764
     iget-object v4, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v4}, Landroid/webkit/WebTextView;->requestFocus()Z
@@ -37958,12 +37989,12 @@
     .locals 1
 
     .prologue
-    .line 15155
+    .line 15386
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mRemoveBackground:Z
 
-    .line 15156
+    .line 15387
     return-void
 .end method
 
@@ -37974,10 +38005,10 @@
     .end annotation
 
     .prologue
-    .line 4639
+    .line 4643
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4640
+    .line 4644
     return-void
 .end method
 
@@ -37985,10 +38016,10 @@
     .locals 0
 
     .prologue
-    .line 11244
+    .line 11251
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeRegisterPageSwapCallback()V
 
-    .line 11245
+    .line 11252
     return-void
 .end method
 
@@ -37996,23 +38027,23 @@
     .locals 2
 
     .prologue
-    .line 2539
+    .line 2543
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2540
+    .line 2544
     invoke-direct {p0}, Landroid/webkit/WebView;->clearHelpers()V
 
-    .line 2541
+    .line 2545
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 2542
+    .line 2546
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x66
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 2543
+    .line 2547
     return-void
 .end method
 
@@ -38020,12 +38051,12 @@
     .locals 1
 
     .prologue
-    .line 15152
+    .line 15383
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mRemoveBackground:Z
 
-    .line 15153
+    .line 15384
     return-void
 .end method
 
@@ -38034,31 +38065,31 @@
     .parameter "interfaceName"
 
     .prologue
-    .line 4601
+    .line 4605
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4602
+    .line 4606
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v1, :cond_0
 
-    .line 4603
+    .line 4607
     new-instance v0, Landroid/webkit/WebViewCore$JSInterfaceData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$JSInterfaceData;-><init>()V
 
-    .line 4604
+    .line 4608
     .local v0, arg:Landroid/webkit/WebViewCore$JSInterfaceData;
     iput-object p1, v0, Landroid/webkit/WebViewCore$JSInterfaceData;->mInterfaceName:Ljava/lang/String;
 
-    .line 4605
+    .line 4609
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x95
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 4607
+    .line 4611
     .end local v0           #arg:Landroid/webkit/WebViewCore$JSInterfaceData;
     :cond_0
     return-void
@@ -38073,41 +38104,41 @@
     .parameter "newEnd"
 
     .prologue
-    .line 9040
+    .line 9047
     new-instance v0, Landroid/webkit/WebViewCore$ReplaceTextData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$ReplaceTextData;-><init>()V
 
-    .line 9041
+    .line 9048
     .local v0, arg:Landroid/webkit/WebViewCore$ReplaceTextData;
     iput-object p3, v0, Landroid/webkit/WebViewCore$ReplaceTextData;->mReplace:Ljava/lang/String;
 
-    .line 9042
+    .line 9049
     iput p4, v0, Landroid/webkit/WebViewCore$ReplaceTextData;->mNewStart:I
 
-    .line 9043
+    .line 9050
     iput p5, v0, Landroid/webkit/WebViewCore$ReplaceTextData;->mNewEnd:I
 
-    .line 9044
+    .line 9051
     iget v1, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
-    .line 9045
+    .line 9052
     iget v1, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
     iput v1, v0, Landroid/webkit/WebViewCore$ReplaceTextData;->mTextGeneration:I
 
-    .line 9046
+    .line 9053
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0x72
 
     invoke-virtual {v1, v2, p1, p2, v0}, Landroid/webkit/WebViewCore;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 9047
+    .line 9054
     return-void
 .end method
 
@@ -38118,21 +38149,21 @@
     .parameter "immediate"
 
     .prologue
-    .line 8971
+    .line 8978
     move-object/from16 v0, p0
 
     iget v12, v0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v12, :cond_0
 
-    .line 8972
+    .line 8979
     const/4 v12, 0x0
 
-    .line 9035
+    .line 9042
     :goto_0
     return v12
 
-    .line 8976
+    .line 8983
     :cond_0
     move-object/from16 v0, p0
 
@@ -38144,12 +38175,12 @@
 
     if-eqz v12, :cond_1
 
-    .line 8977
+    .line 8984
     const/4 v12, 0x0
 
     goto :goto_0
 
-    .line 8980
+    .line 8987
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getLeft()I
 
@@ -38175,7 +38206,7 @@
 
     invoke-virtual {v0, v12, v13}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 8983
+    .line 8990
     new-instance v1, Landroid/graphics/Rect;
 
     move-object/from16 v0, p0
@@ -38238,13 +38269,13 @@
 
     invoke-direct {v1, v12, v13, v14, v15}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 8989
+    .line 8996
     .local v1, content:Landroid/graphics/Rect;
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 8990
+    .line 8997
     .local v2, contentTemp:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -38252,7 +38283,7 @@
 
     move-result-object v1
 
-    .line 8991
+    .line 8998
     iget v12, v1, Landroid/graphics/Rect;->top:I
 
     if-nez v12, :cond_2
@@ -38261,7 +38292,7 @@
 
     if-nez v12, :cond_2
 
-    .line 8992
+    .line 8999
     const-string v12, "JuLOG"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -38284,10 +38315,10 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8993
+    .line 9000
     move-object v1, v2
 
-    .line 8996
+    .line 9003
     :cond_2
     iget v12, v1, Landroid/graphics/Rect;->top:I
 
@@ -38297,7 +38328,7 @@
 
     move-result v8
 
-    .line 8997
+    .line 9004
     .local v8, screenTop:I
     iget v12, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -38307,15 +38338,15 @@
 
     move-result v5
 
-    .line 8998
+    .line 9005
     .local v5, screenBottom:I
     sub-int v3, v5, v8
 
-    .line 8999
+    .line 9006
     .local v3, height:I
     const/4 v10, 0x0
 
-    .line 9001
+    .line 9008
     .local v10, scrollYDelta:I
     move-object/from16 v0, p2
 
@@ -38323,10 +38354,10 @@
 
     if-le v12, v5, :cond_6
 
-    .line 9002
+    .line 9009
     div-int/lit8 v4, v3, 0x3
 
-    .line 9003
+    .line 9010
     .local v4, oneThirdOfScreenHeight:I
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/Rect;->height()I
 
@@ -38336,14 +38367,14 @@
 
     if-le v12, v13, :cond_5
 
-    .line 9006
+    .line 9013
     move-object/from16 v0, p2
 
     iget v12, v0, Landroid/graphics/Rect;->top:I
 
     sub-int v10, v12, v8
 
-    .line 9016
+    .line 9023
     .end local v4           #oneThirdOfScreenHeight:I
     :cond_3
     :goto_1
@@ -38355,7 +38386,7 @@
 
     move-result v6
 
-    .line 9017
+    .line 9024
     .local v6, screenLeft:I
     iget v12, v1, Landroid/graphics/Rect;->right:I
 
@@ -38365,15 +38396,15 @@
 
     move-result v7
 
-    .line 9018
+    .line 9025
     .local v7, screenRight:I
     sub-int v11, v7, v6
 
-    .line 9019
+    .line 9026
     .local v11, width:I
     const/4 v9, 0x0
 
-    .line 9021
+    .line 9028
     .local v9, scrollXDelta:I
     move-object/from16 v0, p2
 
@@ -38387,14 +38418,14 @@
 
     if-le v12, v6, :cond_8
 
-    .line 9022
+    .line 9029
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/Rect;->width()I
 
     move-result v12
 
     if-le v12, v11, :cond_7
 
-    .line 9023
+    .line 9030
     move-object/from16 v0, p2
 
     iget v12, v0, Landroid/graphics/Rect;->left:I
@@ -38403,14 +38434,14 @@
 
     add-int/2addr v9, v12
 
-    .line 9031
+    .line 9038
     :cond_4
     :goto_2
     or-int v12, v10, v9
 
     if-eqz v12, :cond_a
 
-    .line 9032
+    .line 9039
     if-nez p3, :cond_9
 
     const/4 v12, 0x1
@@ -38426,7 +38457,7 @@
 
     goto/16 :goto_0
 
-    .line 9010
+    .line 9017
     .end local v6           #screenLeft:I
     .end local v7           #screenRight:I
     .end local v9           #scrollXDelta:I
@@ -38443,7 +38474,7 @@
 
     goto :goto_1
 
-    .line 9012
+    .line 9019
     .end local v4           #oneThirdOfScreenHeight:I
     :cond_6
     move-object/from16 v0, p2
@@ -38452,7 +38483,7 @@
 
     if-ge v12, v8, :cond_3
 
-    .line 9013
+    .line 9020
     move-object/from16 v0, p2
 
     iget v12, v0, Landroid/graphics/Rect;->top:I
@@ -38461,7 +38492,7 @@
 
     goto :goto_1
 
-    .line 9025
+    .line 9032
     .restart local v6       #screenLeft:I
     .restart local v7       #screenRight:I
     .restart local v9       #scrollXDelta:I
@@ -38477,7 +38508,7 @@
 
     goto :goto_2
 
-    .line 9027
+    .line 9034
     :cond_8
     move-object/from16 v0, p2
 
@@ -38485,7 +38516,7 @@
 
     if-ge v12, v6, :cond_4
 
-    .line 9028
+    .line 9035
     move-object/from16 v0, p2
 
     iget v12, v0, Landroid/graphics/Rect;->left:I
@@ -38496,13 +38527,13 @@
 
     goto :goto_2
 
-    .line 9032
+    .line 9039
     :cond_9
     const/4 v12, 0x0
 
     goto :goto_3
 
-    .line 9035
+    .line 9042
     :cond_a
     const/4 v12, 0x0
 
@@ -38517,7 +38548,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 8876
+    .line 8883
     iget-boolean v0, p0, Landroid/webkit/WebView;->mFindIsUp:Z
 
     if-eqz v0, :cond_1
@@ -38530,16 +38561,16 @@
 
     const/4 v6, 0x0
 
-    .line 8912
+    .line 8919
     :cond_0
     :goto_0
     return v6
 
-    .line 8878
+    .line 8885
     :cond_1
     const/4 v6, 0x0
 
-    .line 8879
+    .line 8886
     .local v6, result:Z
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
@@ -38547,7 +38578,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 8880
+    .line 8887
     iget-object v0, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/WebTextView;->requestFocus(ILandroid/graphics/Rect;)Z
@@ -38556,13 +38587,13 @@
 
     goto :goto_0
 
-    .line 8883
+    .line 8890
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/widget/AbsoluteLayout;->requestFocus(ILandroid/graphics/Rect;)Z
 
     move-result v6
 
-    .line 8885
+    .line 8892
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_0
@@ -38585,20 +38616,20 @@
 
     if-nez v0, :cond_0
 
-    .line 8890
+    .line 8897
     const/4 v1, 0x0
 
-    .line 8891
+    .line 8898
     .local v1, fakeKeyDirection:I
     sparse-switch p1, :sswitch_data_0
 
     goto :goto_0
 
-    .line 8899
+    .line 8906
     :sswitch_0
     const/16 v1, 0x15
 
-    .line 8907
+    .line 8914
     :goto_1
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
@@ -38610,7 +38641,7 @@
 
     if-nez v0, :cond_0
 
-    .line 8908
+    .line 8915
     const-wide/16 v4, 0x0
 
     move-object v0, p0
@@ -38621,28 +38652,28 @@
 
     goto :goto_0
 
-    .line 8893
+    .line 8900
     :sswitch_1
     const/16 v1, 0x13
 
-    .line 8894
+    .line 8901
     goto :goto_1
 
-    .line 8896
+    .line 8903
     :sswitch_2
     const/16 v1, 0x14
 
-    .line 8897
+    .line 8904
     goto :goto_1
 
-    .line 8902
+    .line 8909
     :sswitch_3
     const/16 v1, 0x16
 
-    .line 8903
+    .line 8910
     goto :goto_1
 
-    .line 8891
+    .line 8898
     nop
 
     :sswitch_data_0
@@ -38659,17 +38690,17 @@
     .parameter "hrefMsg"
 
     .prologue
-    .line 2942
+    .line 2946
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2943
+    .line 2947
     if-nez p1, :cond_0
 
-    .line 2961
+    .line 2965
     :goto_0
     return-void
 
-    .line 2946
+    .line 2950
     :cond_0
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
@@ -38681,7 +38712,7 @@
 
     move-result v0
 
-    .line 2947
+    .line 2951
     .local v0, contentX:I
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
@@ -38693,7 +38724,7 @@
 
     move-result v1
 
-    .line 2948
+    .line 2952
     .local v1, contentY:I
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeHasCursorNode()Z
 
@@ -38701,12 +38732,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 2949
+    .line 2953
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeGetCursorRingBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 2950
+    .line 2954
     .local v2, cursorBounds:Landroid/graphics/Rect;
     invoke-virtual {v2, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
 
@@ -38714,14 +38745,14 @@
 
     if-nez v4, :cond_1
 
-    .line 2951
+    .line 2955
     iget v4, p0, Landroid/webkit/WebView;->mNavSlop:I
 
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->viewToContentDimension(I)I
 
     move-result v3
 
-    .line 2952
+    .line 2956
     .local v3, slop:I
     neg-int v4, v3
 
@@ -38729,24 +38760,24 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 2953
+    .line 2957
     invoke-virtual {v2, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 2954
+    .line 2958
     invoke-virtual {v2}, Landroid/graphics/Rect;->centerX()I
 
     move-result v0
 
-    .line 2955
+    .line 2959
     invoke-virtual {v2}, Landroid/graphics/Rect;->centerY()I
 
     move-result v1
 
-    .line 2959
+    .line 2963
     .end local v2           #cursorBounds:Landroid/graphics/Rect;
     .end local v3           #slop:I
     :cond_1
@@ -38767,7 +38798,7 @@
     .parameter "autoComplete"
 
     .prologue
-    .line 5821
+    .line 5828
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v1}, Landroid/webkit/WebViewCore;->getSettings()Landroid/webkit/WebSettings;
@@ -38780,7 +38811,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5822
+    .line 5829
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/4 v2, 0x6
@@ -38789,11 +38820,11 @@
 
     move-result-object v4
 
-    .line 5823
+    .line 5830
     .local v4, update:Landroid/os/Message;
     iput p2, v4, Landroid/os/Message;->arg1:I
 
-    .line 5824
+    .line 5831
     new-instance v0, Landroid/webkit/WebView$RequestFormData;
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
@@ -38810,17 +38841,17 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/webkit/WebView$RequestFormData;-><init>(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/os/Message;ZZ)V
 
-    .line 5826
+    .line 5833
     .local v0, updater:Landroid/webkit/WebView$RequestFormData;
     new-instance v7, Ljava/lang/Thread;
 
     invoke-direct {v7, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 5827
+    .line 5834
     .local v7, t:Ljava/lang/Thread;
     invoke-virtual {v7}, Ljava/lang/Thread;->start()V
 
-    .line 5829
+    .line 5836
     .end local v0           #updater:Landroid/webkit/WebView$RequestFormData;
     .end local v4           #update:Landroid/os/Message;
     .end local v7           #t:Ljava/lang/Thread;
@@ -38833,19 +38864,19 @@
     .parameter "msg"
 
     .prologue
-    .line 2971
+    .line 2975
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2972
+    .line 2976
     iget v4, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v4, :cond_0
 
-    .line 2980
+    .line 2984
     :goto_0
     return-void
 
-    .line 2973
+    .line 2977
     :cond_0
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
@@ -38857,7 +38888,7 @@
 
     move-result v0
 
-    .line 2974
+    .line 2978
     .local v0, contentX:I
     iget v4, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
@@ -38869,28 +38900,28 @@
 
     move-result v1
 
-    .line 2975
+    .line 2979
     .local v1, contentY:I
     invoke-direct {p0, v0, v1}, Landroid/webkit/WebView;->nativeImageURI(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2976
+    .line 2980
     .local v3, ref:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 2977
+    .line 2981
     .local v2, data:Landroid/os/Bundle;
     const-string/jumbo v4, "url"
 
     invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2978
+    .line 2982
     invoke-virtual {p1, v2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 2979
+    .line 2983
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
@@ -38902,14 +38933,14 @@
     .parameter "nodePointer"
 
     .prologue
-    .line 5838
+    .line 5845
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x61
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 5840
+    .line 5847
     return-void
 .end method
 
@@ -38920,7 +38951,7 @@
     .parameter "selection"
 
     .prologue
-    .line 10952
+    .line 10959
     iget-object v6, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     new-instance v0, Landroid/webkit/WebView$InvokeListBox;
@@ -38939,7 +38970,7 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 10954
+    .line 10961
     return-void
 .end method
 
@@ -38950,7 +38981,7 @@
     .parameter "selectedArray"
 
     .prologue
-    .line 10938
+    .line 10945
     iget-object v6, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     new-instance v0, Landroid/webkit/WebView$InvokeListBox;
@@ -38969,7 +39000,7 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 10940
+    .line 10947
     return-void
 .end method
 
@@ -38977,12 +39008,12 @@
     .locals 1
 
     .prologue
-    .line 14402
+    .line 14633
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
-    .line 14403
+    .line 14634
     return-void
 .end method
 
@@ -38990,12 +39021,12 @@
     .locals 1
 
     .prologue
-    .line 15230
+    .line 15461
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mIsHeavyWebSite:Z
 
-    .line 15231
+    .line 15462
     return-void
 .end method
 
@@ -39003,17 +39034,17 @@
     .locals 1
 
     .prologue
-    .line 11537
+    .line 11544
     iget-object v0, p0, Landroid/webkit/WebView;->mLastGlobalRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 11538
+    .line 11545
     iget-object v0, p0, Landroid/webkit/WebView;->mLastVisibleRectSent:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 11539
+    .line 11546
     return-void
 .end method
 
@@ -39021,12 +39052,12 @@
     .locals 2
 
     .prologue
-    .line 8076
+    .line 8083
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/webkit/WebView;->mTrackballLastTime:J
 
-    .line 8077
+    .line 8084
     return-void
 .end method
 
@@ -39040,20 +39071,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2171
+    .line 2175
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2172
+    .line 2176
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 2206
+    .line 2210
     :cond_0
     :goto_0
     return v3
 
-    .line 2175
+    .line 2179
     :cond_1
     invoke-virtual {p2}, Ljava/io/File;->exists()Z
 
@@ -39061,19 +39092,19 @@
 
     if-eqz v4, :cond_0
 
-    .line 2179
+    .line 2183
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, p2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 2180
+    .line 2184
     .local v2, in:Ljava/io/FileInputStream;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    .line 2181
+    .line 2185
     .local v0, copy:Landroid/os/Bundle;
     new-instance v3, Ljava/lang/Thread;
 
@@ -39087,7 +39118,7 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2206
+    .line 2210
     .end local v0           #copy:Landroid/os/Bundle;
     .end local v2           #in:Ljava/io/FileInputStream;
     :goto_1
@@ -39095,11 +39126,11 @@
 
     goto :goto_0
 
-    .line 2203
+    .line 2207
     :catch_0
     move-exception v1
 
-    .line 2204
+    .line 2208
     .local v1, e:Ljava/io/FileNotFoundException;
     invoke-virtual {v1}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
@@ -39113,23 +39144,23 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 2272
+    .line 2276
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2273
+    .line 2277
     const/4 v6, 0x0
 
-    .line 2274
+    .line 2278
     .local v6, returnList:Landroid/webkit/WebBackForwardList;
     if-nez p1, :cond_0
 
     move-object v8, v6
 
-    .line 2321
+    .line 2325
     :goto_0
     return-object v8
 
-    .line 2277
+    .line 2281
     :cond_0
     const-string/jumbo v9, "index"
 
@@ -39147,7 +39178,7 @@
 
     if-eqz v9, :cond_6
 
-    .line 2278
+    .line 2282
     const-string v9, "certificate"
 
     invoke-virtual {p1, v9}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
@@ -39160,14 +39191,14 @@
 
     iput-object v9, p0, Landroid/webkit/WebView;->mCertificate:Landroid/net/http/SslCertificate;
 
-    .line 2281
+    .line 2285
     iget-object v9, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v9}, Landroid/webkit/CallbackProxy;->getBackForwardList()Landroid/webkit/WebBackForwardList;
 
     move-result-object v5
 
-    .line 2282
+    .line 2286
     .local v5, list:Landroid/webkit/WebBackForwardList;
     const-string/jumbo v9, "index"
 
@@ -39175,11 +39206,11 @@
 
     move-result v3
 
-    .line 2286
+    .line 2290
     .local v3, index:I
     monitor-enter v5
 
-    .line 2287
+    .line 2291
     :try_start_0
     const-string v9, "history"
 
@@ -39189,25 +39220,25 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 2289
+    .line 2293
     .local v1, history:Ljava/util/List;,"Ljava/util/List<[B>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v7
 
-    .line 2292
+    .line 2296
     .local v7, size:I
     if-ltz v3, :cond_1
 
     if-lt v3, v7, :cond_2
 
-    .line 2293
+    .line 2297
     :cond_1
     monitor-exit v5
 
     goto :goto_0
 
-    .line 2309
+    .line 2313
     .end local v1           #history:Ljava/util/List;,"Ljava/util/List<[B>;"
     .end local v7           #size:I
     :catchall_0
@@ -39219,7 +39250,7 @@
 
     throw v8
 
-    .line 2295
+    .line 2299
     .restart local v1       #history:Ljava/util/List;,"Ljava/util/List<[B>;"
     .restart local v7       #size:I
     :cond_2
@@ -39229,7 +39260,7 @@
     :goto_1
     if-ge v2, v7, :cond_4
 
-    .line 2296
+    .line 2300
     const/4 v9, 0x0
 
     :try_start_1
@@ -39239,31 +39270,31 @@
 
     check-cast v0, [B
 
-    .line 2297
+    .line 2301
     .local v0, data:[B
     if-nez v0, :cond_3
 
-    .line 2300
+    .line 2304
     monitor-exit v5
 
     goto :goto_0
 
-    .line 2302
+    .line 2306
     :cond_3
     new-instance v4, Landroid/webkit/WebHistoryItem;
 
     invoke-direct {v4, v0}, Landroid/webkit/WebHistoryItem;-><init>([B)V
 
-    .line 2303
+    .line 2307
     .local v4, item:Landroid/webkit/WebHistoryItem;
     invoke-virtual {v5, v4}, Landroid/webkit/WebBackForwardList;->addHistoryItem(Landroid/webkit/WebHistoryItem;)V
 
-    .line 2295
+    .line 2299
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 2306
+    .line 2310
     .end local v0           #data:[B
     .end local v4           #item:Landroid/webkit/WebHistoryItem;
     :cond_4
@@ -39271,15 +39302,15 @@
 
     move-result-object v6
 
-    .line 2308
+    .line 2312
     invoke-virtual {v6, v3}, Landroid/webkit/WebBackForwardList;->setCurrentIndex(I)V
 
-    .line 2309
+    .line 2313
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2311
+    .line 2315
     const-string/jumbo v8, "privateBrowsingEnabled"
 
     invoke-virtual {p1, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -39288,7 +39319,7 @@
 
     if-eqz v8, :cond_5
 
-    .line 2312
+    .line 2316
     invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v8
@@ -39297,18 +39328,18 @@
 
     invoke-virtual {v8, v9}, Landroid/webkit/WebSettings;->setPrivateBrowsingEnabled(Z)V
 
-    .line 2314
+    .line 2318
     :cond_5
     iget-object v8, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v8, p1}, Landroid/webkit/ZoomManager;->restoreZoomState(Landroid/os/Bundle;)V
 
-    .line 2317
+    .line 2321
     iget-object v8, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v8}, Landroid/webkit/WebViewCore;->removeMessages()V
 
-    .line 2319
+    .line 2323
     iget-object v8, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v9, 0x6c
@@ -39323,7 +39354,7 @@
     :cond_6
     move-object v8, v6
 
-    .line 2321
+    .line 2325
     goto/16 :goto_0
 .end method
 
@@ -39331,22 +39362,22 @@
     .locals 1
 
     .prologue
-    .line 14232
+    .line 14463
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseAll:Z
 
     if-nez v0, :cond_0
 
-    .line 14243
+    .line 14474
     :goto_0
     return-void
 
-    .line 14235
+    .line 14466
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseAll:Z
 
-    .line 14238
+    .line 14469
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
@@ -39358,16 +39389,16 @@
     .locals 2
 
     .prologue
-    .line 15063
+    .line 15294
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-nez v0, :cond_0
 
-    .line 15067
+    .line 15298
     :goto_0
     return-void
 
-    .line 15066
+    .line 15297
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -39384,29 +39415,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 12499
+    .line 12506
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
     if-nez v0, :cond_0
 
-    .line 12507
+    .line 12514
     :goto_0
     return-void
 
-    .line 12502
+    .line 12509
     :cond_0
     iput-boolean v1, p0, Landroid/webkit/WebView;->m_bPauseTextReflowbyCurrentScale:Z
 
-    .line 12503
+    .line 12510
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->forceBreakWord(Z)V
 
-    .line 12504
+    .line 12511
     iput v1, p0, Landroid/webkit/WebView;->m_nTextWrapWidth_pauseTextReflow:I
 
-    .line 12505
+    .line 12512
     iput v1, p0, Landroid/webkit/WebView;->mLastHeightSent:I
 
-    .line 12506
+    .line 12513
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->sendViewSizeZoom(Z)Z
 
     goto :goto_0
@@ -39416,17 +39447,17 @@
     .locals 2
 
     .prologue
-    .line 3694
+    .line 3698
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3695
+    .line 3699
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x6e
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 3696
+    .line 3700
     return-void
 .end method
 
@@ -39434,19 +39465,19 @@
     .locals 2
 
     .prologue
-    .line 5802
+    .line 5809
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_0
 
-    .line 5803
+    .line 5810
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x60
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 5805
+    .line 5812
     :cond_0
     return-void
 .end method
@@ -39458,15 +39489,15 @@
     .parameter "password"
 
     .prologue
-    .line 1766
+    .line 1770
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1767
+    .line 1771
     iget-object v0, p0, Landroid/webkit/WebView;->mDatabase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebViewDatabase;->setUsernamePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1768
+    .line 1772
     return-void
 .end method
 
@@ -39478,29 +39509,29 @@
     .end annotation
 
     .prologue
-    .line 2104
+    .line 2108
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2105
+    .line 2109
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 2106
+    .line 2110
     :cond_0
     const/4 v2, 0x0
 
-    .line 2139
+    .line 2143
     :goto_0
     return v2
 
-    .line 2108
+    .line 2112
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->capturePicture()Landroid/graphics/Picture;
 
     move-result-object v0
 
-    .line 2111
+    .line 2115
     .local v0, p:Landroid/graphics/Picture;
     new-instance v1, Ljava/io/File;
 
@@ -39528,7 +39559,7 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2112
+    .line 2116
     .local v1, temp:Ljava/io/File;
     new-instance v2, Ljava/lang/Thread;
 
@@ -39540,26 +39571,26 @@
 
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 2136
+    .line 2140
     const-string/jumbo v2, "scrollX"
 
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2137
+    .line 2141
     const-string/jumbo v2, "scrollY"
 
     iget v3, p0, Landroid/webkit/WebView;->mScrollY:I
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2138
+    .line 2142
     iget-object v2, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v2, p1}, Landroid/webkit/ZoomManager;->saveZoomState(Landroid/os/Bundle;)V
 
-    .line 2139
+    .line 2143
     const/4 v2, 0x1
 
     goto :goto_0
@@ -39572,50 +39603,50 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1990
+    .line 1994
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1991
+    .line 1995
     if-nez p1, :cond_0
 
     move-object v5, v7
 
-    .line 2039
+    .line 2043
     :goto_0
     return-object v5
 
-    .line 1996
+    .line 2000
     :cond_0
     iget-boolean v8, p0, Landroid/webkit/WebView;->m_bIsBrowserApp:Z
 
     if-eqz v8, :cond_1
 
-    .line 1997
+    .line 2001
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->saveStateHtc(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
 
     move-result-object v5
 
     goto :goto_0
 
-    .line 2002
+    .line 2006
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->copyBackForwardList()Landroid/webkit/WebBackForwardList;
 
     move-result-object v5
 
-    .line 2003
+    .line 2007
     .local v5, list:Landroid/webkit/WebBackForwardList;
     invoke-virtual {v5}, Landroid/webkit/WebBackForwardList;->getCurrentIndex()I
 
     move-result v0
 
-    .line 2004
+    .line 2008
     .local v0, currentIndex:I
     invoke-virtual {v5}, Landroid/webkit/WebBackForwardList;->getSize()I
 
     move-result v6
 
-    .line 2007
+    .line 2011
     .local v6, size:I
     if-ltz v0, :cond_2
 
@@ -39626,21 +39657,21 @@
     :cond_2
     move-object v5, v7
 
-    .line 2008
+    .line 2012
     goto :goto_0
 
-    .line 2010
+    .line 2014
     :cond_3
     const-string/jumbo v8, "index"
 
     invoke-virtual {p1, v8, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2014
+    .line 2018
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v6}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 2015
+    .line 2019
     .local v2, history:Ljava/util/ArrayList;,"Ljava/util/ArrayList<[B>;"
     const/4 v3, 0x0
 
@@ -39648,16 +39679,16 @@
     :goto_1
     if-ge v3, v6, :cond_6
 
-    .line 2016
+    .line 2020
     invoke-virtual {v5, v3}, Landroid/webkit/WebBackForwardList;->getItemAtIndex(I)Landroid/webkit/WebHistoryItem;
 
     move-result-object v4
 
-    .line 2017
+    .line 2021
     .local v4, item:Landroid/webkit/WebHistoryItem;
     if-nez v4, :cond_4
 
-    .line 2020
+    .line 2024
     const-string/jumbo v8, "webview"
 
     const-string/jumbo v9, "saveState: Unexpected null history item."
@@ -39666,34 +39697,34 @@
 
     move-object v5, v7
 
-    .line 2021
+    .line 2025
     goto :goto_0
 
-    .line 2023
+    .line 2027
     :cond_4
     invoke-virtual {v4}, Landroid/webkit/WebHistoryItem;->getFlattenedData()[B
 
     move-result-object v1
 
-    .line 2024
+    .line 2028
     .local v1, data:[B
     if-nez v1, :cond_5
 
     move-object v5, v7
 
-    .line 2028
+    .line 2032
     goto :goto_0
 
-    .line 2030
+    .line 2034
     :cond_5
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2015
+    .line 2019
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 2032
+    .line 2036
     .end local v1           #data:[B
     .end local v4           #item:Landroid/webkit/WebHistoryItem;
     :cond_6
@@ -39701,12 +39732,12 @@
 
     invoke-virtual {p1, v7, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 2033
+    .line 2037
     iget-object v7, p0, Landroid/webkit/WebView;->mCertificate:Landroid/net/http/SslCertificate;
 
     if-eqz v7, :cond_7
 
-    .line 2034
+    .line 2038
     const-string v7, "certificate"
 
     iget-object v8, p0, Landroid/webkit/WebView;->mCertificate:Landroid/net/http/SslCertificate;
@@ -39717,7 +39748,7 @@
 
     invoke-virtual {p1, v7, v8}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 2037
+    .line 2041
     :cond_7
     const-string/jumbo v7, "privateBrowsingEnabled"
 
@@ -39727,7 +39758,7 @@
 
     invoke-virtual {p1, v7, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 2038
+    .line 2042
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v7, p1}, Landroid/webkit/ZoomManager;->saveZoomState(Landroid/os/Bundle;)V
@@ -39740,7 +39771,7 @@
     .parameter "stream"
 
     .prologue
-    .line 2219
+    .line 2223
     :try_start_0
     invoke-static {p1, p0}, Landroid/webkit/ViewStateSerializer;->serializeViewState(Ljava/io/OutputStream;Landroid/webkit/WebView;)Z
     :try_end_0
@@ -39748,15 +39779,15 @@
 
     move-result v1
 
-    .line 2223
+    .line 2227
     :goto_0
     return v1
 
-    .line 2220
+    .line 2224
     :catch_0
     move-exception v0
 
-    .line 2221
+    .line 2225
     .local v0, e:Ljava/io/IOException;
     const-string/jumbo v1, "webview"
 
@@ -39764,7 +39795,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2223
+    .line 2227
     const/4 v1, 0x0
 
     goto :goto_0
@@ -39775,17 +39806,17 @@
     .parameter "filename"
 
     .prologue
-    .line 2484
+    .line 2488
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2485
+    .line 2489
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Landroid/webkit/WebView;->saveWebArchiveImpl(Ljava/lang/String;ZLandroid/webkit/ValueCallback;)V
 
-    .line 2486
+    .line 2490
     return-void
 .end method
 
@@ -39807,14 +39838,14 @@
     .end annotation
 
     .prologue
-    .line 2514
+    .line 2518
     .local p3, callback:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<Ljava/lang/String;>;"
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2515
+    .line 2519
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/WebView;->saveWebArchiveImpl(Ljava/lang/String;ZLandroid/webkit/ValueCallback;)V
 
-    .line 2516
+    .line 2520
     return-void
 .end method
 
@@ -39823,7 +39854,7 @@
     .parameter "xPercent"
 
     .prologue
-    .line 8619
+    .line 8626
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
@@ -39834,12 +39865,12 @@
 
     if-nez v0, :cond_1
 
-    .line 8624
+    .line 8631
     :cond_0
     :goto_0
     return-void
 
-    .line 8622
+    .line 8629
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -39861,7 +39892,7 @@
     .parameter "y"
 
     .prologue
-    .line 8631
+    .line 8638
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v0
@@ -39872,12 +39903,12 @@
 
     if-nez v0, :cond_1
 
-    .line 8635
+    .line 8642
     :cond_0
     :goto_0
     return-void
 
-    .line 8634
+    .line 8641
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -39898,17 +39929,17 @@
     .locals 3
 
     .prologue
-    .line 6446
+    .line 6453
     iget v1, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v1, :cond_1
 
-    .line 6461
+    .line 6468
     :cond_0
     :goto_0
     return-void
 
-    .line 6447
+    .line 6454
     :cond_1
     invoke-direct {p0}, Landroid/webkit/WebView;->inFullScreenMode()Z
 
@@ -39916,17 +39947,17 @@
 
     if-nez v1, :cond_0
 
-    .line 6448
+    .line 6455
     iget-boolean v1, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-nez v1, :cond_2
 
-    .line 6450
+    .line 6457
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeSelectableText()Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 6451
+    .line 6458
     .local v0, select:Landroid/graphics/Point;
     iget v1, v0, Landroid/graphics/Point;->x:I
 
@@ -39938,25 +39969,25 @@
 
     if-eqz v1, :cond_0
 
-    .line 6453
+    .line 6460
     .end local v0           #select:Landroid/graphics/Point;
     :cond_2
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeSelectAll()V
 
-    .line 6454
+    .line 6461
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
-    .line 6455
+    .line 6462
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/webkit/WebView;->mExtendSelection:Z
 
-    .line 6456
+    .line 6463
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 6459
+    .line 6466
     invoke-virtual {p0}, Landroid/webkit/WebView;->onSelectTextStart()V
 
     goto :goto_0
@@ -39966,7 +39997,7 @@
     .locals 4
 
     .prologue
-    .line 5137
+    .line 5144
     iget v2, p0, Landroid/webkit/WebView;->mLastTouchX:I
 
     iget v3, p0, Landroid/webkit/WebView;->mScrollX:I
@@ -39977,7 +40008,7 @@
 
     move-result v0
 
-    .line 5138
+    .line 5145
     .local v0, x:I
     iget v2, p0, Landroid/webkit/WebView;->mLastTouchY:I
 
@@ -39989,7 +40020,7 @@
 
     move-result v1
 
-    .line 5139
+    .line 5146
     .local v1, y:I
     invoke-virtual {p0, v0, v1}, Landroid/webkit/WebView;->selectText(II)Z
 
@@ -40008,32 +40039,32 @@
 
     const/4 v0, 0x0
 
-    .line 5146
+    .line 5153
     invoke-direct {p0, v1, p1, p2}, Landroid/webkit/WebView;->setUpSelect(ZII)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 5152
+    .line 5159
     :goto_0
     return v0
 
-    .line 5149
+    .line 5156
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeSetExtendSelection()V
 
-    .line 5150
+    .line 5157
     iput-boolean v0, p0, Landroid/webkit/WebView;->mDrawSelectionPointer:Z
 
-    .line 5151
+    .line 5158
     const/4 v0, 0x3
 
     iput v0, p0, Landroid/webkit/WebView;->mTouchMode:I
 
     move v0, v1
 
-    .line 5152
+    .line 5159
     goto :goto_0
 .end method
 
@@ -40043,87 +40074,87 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6468
+    .line 6475
     iget v1, p0, Landroid/webkit/WebView;->howToSelection:I
 
     if-eqz v1, :cond_2
 
-    .line 6469
+    .line 6476
     iget-object v1, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     invoke-virtual {v1}, Landroid/webkit/WebView$QuickSelectAbs;->isSelecting()Z
 
     move-result v0
 
-    .line 6470
+    .line 6477
     .local v0, isSelecting:Z
     iget-object v1, p0, Landroid/webkit/WebView;->mQuickSelect:Landroid/webkit/WebView$QuickSelectAbs;
 
     invoke-virtual {v1}, Landroid/webkit/WebView$QuickSelectAbs;->selectionDone()V
 
-    .line 6471
+    .line 6478
     if-eqz v0, :cond_0
 
-    .line 6472
+    .line 6479
     iget-object v1, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
     if-eqz v1, :cond_0
 
-    .line 6473
+    .line 6480
     iget-object v1, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
     invoke-virtual {v1}, Landroid/webkit/SelectActionModeCallback;->finish()V
 
-    .line 6475
+    .line 6482
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 6498
+    .line 6505
     .end local v0           #isSelecting:Z
     :cond_1
     :goto_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->onSelectTextEnd()V
 
-    .line 6500
+    .line 6507
     return-void
 
-    .line 6478
+    .line 6485
     :cond_2
     iget-boolean v1, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
     if-eqz v1, :cond_1
 
-    .line 6479
+    .line 6486
     iput-boolean v2, p0, Landroid/webkit/WebView;->mSelectingText:Z
 
-    .line 6487
+    .line 6494
     iget-object v1, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
     invoke-virtual {v1}, Landroid/webkit/SelectActionModeCallback;->finish()V
 
-    .line 6488
+    .line 6495
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/webkit/WebView;->mSelectCallback:Landroid/webkit/SelectActionModeCallback;
 
-    .line 6489
+    .line 6496
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 6490
+    .line 6497
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v1}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 6491
+    .line 6498
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 6492
+    .line 6499
     iput v2, p0, Landroid/webkit/WebView;->mAutoScrollX:I
 
-    .line 6493
+    .line 6500
     iput v2, p0, Landroid/webkit/WebView;->mAutoScrollY:I
 
-    .line 6494
+    .line 6501
     iput-boolean v2, p0, Landroid/webkit/WebView;->mSentAutoScrollMessage:Z
 
     goto :goto_0
@@ -40135,7 +40166,7 @@
     .prologue
     const/16 v4, 0x6b
 
-    .line 3226
+    .line 3230
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->isPreventingWebkitUpdates()Z
@@ -40146,17 +40177,17 @@
 
     iget-object v0, p0, Landroid/webkit/WebView;->mLastVisibleRectSent:Landroid/graphics/Rect;
 
-    .line 3255
+    .line 3259
     :goto_0
     return-object v0
 
-    .line 3227
+    .line 3231
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mVisibleRect:Landroid/graphics/Rect;
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView;->calcOurContentVisibleRect(Landroid/graphics/Rect;)V
 
-    .line 3230
+    .line 3234
     iget-object v0, p0, Landroid/webkit/WebView;->mVisibleRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mLastVisibleRectSent:Landroid/graphics/Rect;
@@ -40171,12 +40202,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 3231
+    .line 3235
     iget-boolean v0, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v0, :cond_1
 
-    .line 3232
+    .line 3236
     iget-object v0, p0, Landroid/webkit/WebView;->mScrollOffset:Landroid/graphics/Point;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mVisibleRect:Landroid/graphics/Rect;
@@ -40189,12 +40220,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Point;->set(II)V
 
-    .line 3233
+    .line 3237
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 3234
+    .line 3238
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeMoveGeneration()I
@@ -40212,7 +40243,7 @@
 
     invoke-virtual {v1, v4, v2, v0, v3}, Landroid/webkit/WebViewCore;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 3237
+    .line 3241
     :cond_1
     iget-object v0, p0, Landroid/webkit/WebView;->mLastVisibleRectSent:Landroid/graphics/Rect;
 
@@ -40220,14 +40251,14 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 3238
+    .line 3242
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3240
+    .line 3244
     :cond_2
     iget-object v0, p0, Landroid/webkit/WebView;->mGlobalVisibleRect:Landroid/graphics/Rect;
 
@@ -40251,12 +40282,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 3250
+    .line 3254
     iget-boolean v0, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-nez v0, :cond_3
 
-    .line 3251
+    .line 3255
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x74
@@ -40265,7 +40296,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 3253
+    .line 3257
     :cond_3
     iget-object v0, p0, Landroid/webkit/WebView;->mLastGlobalRect:Landroid/graphics/Rect;
 
@@ -40273,13 +40304,13 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 3255
+    .line 3259
     :cond_4
     iget-object v0, p0, Landroid/webkit/WebView;->mVisibleRect:Landroid/graphics/Rect;
 
     goto :goto_0
 
-    .line 3234
+    .line 3238
     :cond_5
     const/4 v0, 0x0
 
@@ -40290,14 +40321,14 @@
     .locals 2
 
     .prologue
-    .line 8778
+    .line 8785
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xc3
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 8779
+    .line 8786
     return-void
 .end method
 
@@ -40312,17 +40343,17 @@
 
     const/4 v9, 0x0
 
-    .line 3340
+    .line 3344
     iget-boolean v7, p0, Landroid/webkit/WebView;->mBlockWebkitViewMessages:Z
 
     if-eqz v7, :cond_1
 
-    .line 3459
+    .line 3463
     :cond_0
     :goto_0
     return v9
 
-    .line 3341
+    .line 3345
     :cond_1
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -40332,12 +40363,12 @@
 
     if-nez v7, :cond_0
 
-    .line 3343
+    .line 3347
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewWidth()I
 
     move-result v6
 
-    .line 3344
+    .line 3348
     .local v6, viewWidth:I
     int-to-float v7, v6
 
@@ -40353,7 +40384,7 @@
 
     move-result v4
 
-    .line 3346
+    .line 3350
     .local v4, newWidth:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
@@ -40365,7 +40396,7 @@
 
     sub-int v5, v7, v10
 
-    .line 3347
+    .line 3351
     .local v5, viewHeight:I
     int-to-float v7, v5
 
@@ -40381,7 +40412,7 @@
 
     move-result v3
 
-    .line 3350
+    .line 3354
     .local v3, newHeight:I
     int-to-float v7, v5
 
@@ -40389,7 +40420,7 @@
 
     div-float v2, v7, v10
 
-    .line 3359
+    .line 3363
     .local v2, heightWidthRatio:F
     iget v7, p0, Landroid/webkit/WebView;->mLastWidthSent:I
 
@@ -40399,13 +40430,13 @@
 
     if-eqz v7, :cond_2
 
-    .line 3360
+    .line 3364
     const/4 v3, 0x0
 
-    .line 3361
+    .line 3365
     const/4 v2, 0x0
 
-    .line 3364
+    .line 3368
     :cond_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->getViewHeight()I
 
@@ -40425,7 +40456,7 @@
 
     move-result v0
 
-    .line 3418
+    .line 3422
     .local v0, actualViewHeight:I
     iget v7, p0, Landroid/webkit/WebView;->mLastWidthSent:I
 
@@ -40441,26 +40472,26 @@
 
     if-eq v0, v7, :cond_0
 
-    .line 3420
+    .line 3424
     :cond_3
     new-instance v1, Landroid/webkit/WebView$ViewSizeData;
 
     invoke-direct {v1}, Landroid/webkit/WebView$ViewSizeData;-><init>()V
 
-    .line 3421
+    .line 3425
     .local v1, data:Landroid/webkit/WebView$ViewSizeData;
     iput v4, v1, Landroid/webkit/WebView$ViewSizeData;->mWidth:I
 
-    .line 3422
+    .line 3426
     iput v3, v1, Landroid/webkit/WebView$ViewSizeData;->mHeight:I
 
-    .line 3423
+    .line 3427
     iput v2, v1, Landroid/webkit/WebView$ViewSizeData;->mHeightWidthRatio:F
 
-    .line 3424
+    .line 3428
     iput v0, v1, Landroid/webkit/WebView$ViewSizeData;->mActualViewHeight:I
 
-    .line 3426
+    .line 3430
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v7}, Landroid/webkit/ZoomManager;->isInZoomOverview()Z
@@ -40469,7 +40500,7 @@
 
     if-eqz v7, :cond_6
 
-    .line 3427
+    .line 3431
     const/16 v7, 0x3e8
 
     invoke-static {v6, v7}, Ljava/lang/Math;->max(II)I
@@ -40478,7 +40509,7 @@
 
     iput v7, v1, Landroid/webkit/WebView$ViewSizeData;->mTextWrapWidth:I
 
-    .line 3431
+    .line 3435
     :goto_1
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -40488,7 +40519,7 @@
 
     iput v7, v1, Landroid/webkit/WebView$ViewSizeData;->mScale:F
 
-    .line 3432
+    .line 3436
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v7}, Landroid/webkit/ZoomManager;->isFixedLengthAnimationInProgress()Z
@@ -40506,7 +40537,7 @@
     :goto_2
     iput-boolean v7, v1, Landroid/webkit/WebView$ViewSizeData;->mIgnoreHeight:Z
 
-    .line 3434
+    .line 3438
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v7}, Landroid/webkit/ZoomManager;->getDocumentAnchorX()I
@@ -40515,7 +40546,7 @@
 
     iput v7, v1, Landroid/webkit/WebView$ViewSizeData;->mAnchorX:I
 
-    .line 3435
+    .line 3439
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v7}, Landroid/webkit/ZoomManager;->getDocumentAnchorY()I
@@ -40524,7 +40555,7 @@
 
     iput v7, v1, Landroid/webkit/WebView$ViewSizeData;->mAnchorY:I
 
-    .line 3437
+    .line 3441
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v7}, Landroid/webkit/ZoomManager;->getZoomType()I
@@ -40533,7 +40564,7 @@
 
     if-eqz v7, :cond_5
 
-    .line 3439
+    .line 3443
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget v7, v7, Landroid/webkit/ZoomManager;->mFocusNodeScaleBegin:I
@@ -40548,13 +40579,13 @@
 
     if-ne v8, v7, :cond_4
 
-    .line 3442
+    .line 3446
     iput-boolean v8, p0, Landroid/webkit/WebView;->mPausedTimerByZoom:Z
 
-    .line 3443
+    .line 3447
     invoke-virtual {p0}, Landroid/webkit/WebView;->pauseTimers()V
 
-    .line 3445
+    .line 3449
     :cond_4
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -40562,42 +40593,42 @@
 
     iput v7, v1, Landroid/webkit/WebView$ViewSizeData;->mFocusNode:I
 
-    .line 3446
+    .line 3450
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iput v9, v7, Landroid/webkit/ZoomManager;->mFocusNodeScaleBegin:I
 
-    .line 3450
+    .line 3454
     :cond_5
     iget-object v7, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v7, v11}, Landroid/webkit/WebViewCore;->removeMessages(I)V
 
-    .line 3452
+    .line 3456
     iget-object v7, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-virtual {v7, v11, v1}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 3453
+    .line 3457
     iput v4, p0, Landroid/webkit/WebView;->mLastWidthSent:I
 
-    .line 3454
+    .line 3458
     iput v3, p0, Landroid/webkit/WebView;->mLastHeightSent:I
 
-    .line 3455
+    .line 3459
     iput v0, p0, Landroid/webkit/WebView;->mLastActualHeightSent:I
 
-    .line 3456
+    .line 3460
     iget-object v7, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v7}, Landroid/webkit/ZoomManager;->clearDocumentAnchor()V
 
     move v9, v8
 
-    .line 3457
+    .line 3461
     goto/16 :goto_0
 
-    .line 3429
+    .line 3433
     :cond_6
     int-to-float v7, v6
 
@@ -40620,7 +40651,7 @@
     :cond_7
     move v7, v9
 
-    .line 3432
+    .line 3436
     goto :goto_2
 .end method
 
@@ -40633,17 +40664,17 @@
 
     const/4 v0, 0x0
 
-    .line 6624
+    .line 6631
     if-eqz p1, :cond_3
 
-    .line 6625
+    .line 6632
     invoke-virtual {p0}, Landroid/webkit/WebView;->hasFocus()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 6628
+    .line 6635
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v2
@@ -40655,34 +40686,34 @@
     :cond_0
     iput-boolean v0, p0, Landroid/webkit/WebView;->mDrawCursorRing:Z
 
-    .line 6629
+    .line 6636
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->setFocusControllerActive(Z)V
 
-    .line 6667
+    .line 6674
     :cond_1
     :goto_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 6668
+    .line 6675
     return-void
 
-    .line 6631
+    .line 6638
     :cond_2
     iput-boolean v0, p0, Landroid/webkit/WebView;->mDrawCursorRing:Z
 
-    .line 6632
+    .line 6639
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 6635
+    .line 6642
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->setFocusControllerActive(Z)V
 
     goto :goto_0
 
-    .line 6642
+    .line 6649
     :cond_3
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -40692,28 +40723,28 @@
 
     if-nez v1, :cond_4
 
-    .line 6650
+    .line 6657
     iput-boolean v0, p0, Landroid/webkit/WebView;->mDrawCursorRing:Z
 
-    .line 6652
+    .line 6659
     :cond_4
     iget-object v1, p0, Landroid/webkit/WebView;->mKeysPressed:Ljava/util/Vector;
 
     invoke-virtual {v1}, Ljava/util/Vector;->clear()V
 
-    .line 6653
+    .line 6660
     iget-object v1, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 6654
+    .line 6661
     const/4 v1, 0x7
 
     iput v1, p0, Landroid/webkit/WebView;->mTouchMode:I
 
-    .line 6665
+    .line 6672
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->setFocusControllerActive(Z)V
 
     goto :goto_0
@@ -40724,17 +40755,17 @@
     .parameter "color"
 
     .prologue
-    .line 11153
+    .line 11160
     iput p1, p0, Landroid/webkit/WebView;->mBackgroundColor:I
 
-    .line 11154
+    .line 11161
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x7e
 
     invoke-virtual {v0, v1, p1}, Landroid/webkit/WebViewCore;->sendMessage(II)V
 
-    .line 11155
+    .line 11162
     return-void
 .end method
 
@@ -40747,34 +40778,34 @@
     .parameter "registerPageSwapCallback"
 
     .prologue
-    .line 5248
+    .line 5255
     iget v5, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-nez v5, :cond_1
 
-    .line 5278
+    .line 5285
     :cond_0
     :goto_0
     return-void
 
-    .line 5252
+    .line 5259
     :cond_1
     new-instance v3, Landroid/graphics/RectF;
 
     invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
 
-    .line 5253
+    .line 5260
     .local v3, visibleRect:Landroid/graphics/RectF;
     invoke-direct {p0, v3}, Landroid/webkit/WebView;->calcOurContentVisibleRectF(Landroid/graphics/RectF;)V
 
-    .line 5258
+    .line 5265
     iget v5, p0, Landroid/webkit/WebView;->mPendingScrollX:I
 
     invoke-direct {p0, v5}, Landroid/webkit/WebView;->viewToContentXf(I)F
 
     move-result v0
 
-    .line 5259
+    .line 5266
     .local v0, aleft:F
     iget v5, p0, Landroid/webkit/WebView;->mPendingScrollY:I
 
@@ -40788,49 +40819,49 @@
 
     move-result v1
 
-    .line 5260
+    .line 5267
     .local v1, atop:F
     invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
 
     move-result v4
 
-    .line 5261
+    .line 5268
     .local v4, width:F
     invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
 
     move-result v2
 
-    .line 5263
+    .line 5270
     .local v2, height:F
     iput v0, v3, Landroid/graphics/RectF;->left:F
 
-    .line 5264
+    .line 5271
     iput v1, v3, Landroid/graphics/RectF;->top:F
 
-    .line 5265
+    .line 5272
     add-float v5, v0, v4
 
     iput v5, v3, Landroid/graphics/RectF;->right:F
 
-    .line 5266
+    .line 5273
     add-float v5, v1, v2
 
     iput v5, v3, Landroid/graphics/RectF;->bottom:F
 
-    .line 5268
+    .line 5275
     iget-boolean v5, p0, Landroid/webkit/WebView;->mHtcContentSizeChanged:Z
 
     invoke-direct {p0, p1, v3, v5}, Landroid/webkit/WebView;->nativeSetupLayerViewport(ILandroid/graphics/RectF;Z)V
 
-    .line 5273
+    .line 5280
     invoke-direct/range {p0 .. p5}, Landroid/webkit/WebView;->nativeSetBaseLayer(ILandroid/graphics/Region;ZZZ)V
 
-    .line 5275
+    .line 5282
     iget-object v5, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
     if-eqz v5, :cond_0
 
-    .line 5276
+    .line 5283
     iget-object v5, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
     invoke-virtual {v5, p1}, Landroid/webkit/HTML5VideoViewProxy;->setBaseLayer(I)V
@@ -40843,7 +40874,7 @@
     .parameter "color"
 
     .prologue
-    .line 14511
+    .line 14742
     return-void
 .end method
 
@@ -40854,12 +40885,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 14437
+    .line 14668
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 14438
+    .line 14669
     .local v3, startTime:J
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -40877,19 +40908,19 @@
 
     move-result-object v0
 
-    .line 14439
+    .line 14670
     .local v0, display:Landroid/view/Display;
     invoke-virtual {v0}, Landroid/view/Display;->getHeight()I
 
     move-result v1
 
-    .line 14440
+    .line 14671
     .local v1, nScreenHeight:I
     invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
 
     move-result v2
 
-    .line 14442
+    .line 14673
     .local v2, nScreenWidth:I
     invoke-static {p1, v7, v7, v2, v1}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
@@ -40897,14 +40928,14 @@
 
     iput-object v5, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
-    .line 14445
+    .line 14676
     iget-object v5, p0, Landroid/webkit/WebView;->mDrawCanvas:Landroid/graphics/Canvas;
 
     iget-object v6, p0, Landroid/webkit/WebView;->mCanvasBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5, v6}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 14446
+    .line 14677
     return-void
 .end method
 
@@ -40913,13 +40944,13 @@
     .parameter "certificate"
 
     .prologue
-    .line 1746
+    .line 1750
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1751
+    .line 1755
     iput-object p1, p0, Landroid/webkit/WebView;->mCertificate:Landroid/net/http/SslCertificate;
 
-    .line 1752
+    .line 1756
     return-void
 .end method
 
@@ -40928,10 +40959,10 @@
     .parameter "nContentHeight"
 
     .prologue
-    .line 3664
+    .line 3668
     iput p1, p0, Landroid/webkit/WebView;->mContentHeight:I
 
-    .line 3665
+    .line 3669
     return-void
 .end method
 
@@ -40940,10 +40971,10 @@
     .parameter "nContentWidth"
 
     .prologue
-    .line 3668
+    .line 3672
     iput p1, p0, Landroid/webkit/WebView;->mContentWidth:I
 
-    .line 3669
+    .line 3673
     return-void
 .end method
 
@@ -40952,15 +40983,15 @@
     .parameter "listener"
 
     .prologue
-    .line 4492
+    .line 4496
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4493
+    .line 4497
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->setDownloadListener(Landroid/webkit/DownloadListener;)V
 
-    .line 4494
+    .line 4498
     return-void
 .end method
 
@@ -40971,31 +41002,31 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3030
+    .line 3034
     iget-object v0, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
     if-ne v0, p1, :cond_0
 
-    .line 3040
+    .line 3044
     :goto_0
     return-void
 
-    .line 3031
+    .line 3035
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 3032
+    .line 3036
     iget-object v0, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->removeView(Landroid/view/View;)V
 
-    .line 3034
+    .line 3038
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 3035
+    .line 3039
     new-instance v0, Landroid/widget/AbsoluteLayout$LayoutParams;
 
     const/4 v1, -0x1
@@ -41006,7 +41037,7 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/webkit/WebView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3039
+    .line 3043
     :cond_2
     iput-object p1, p0, Landroid/webkit/WebView;->mTitleBar:Landroid/view/View;
 
@@ -41020,17 +41051,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6711
+    .line 6718
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-nez v0, :cond_1
 
-    .line 6718
+    .line 6725
     :cond_0
     :goto_0
     return-void
 
-    .line 6712
+    .line 6719
     :cond_1
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
@@ -41043,21 +41074,21 @@
     :goto_1
     invoke-virtual {v2, v3, v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 6714
+    .line 6721
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/webkit/WebView;->mListBoxMessage:Landroid/os/Message;
 
     if-eqz v0, :cond_0
 
-    .line 6715
+    .line 6722
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mListBoxMessage:Landroid/os/Message;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(Landroid/os/Message;)V
 
-    .line 6716
+    .line 6723
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/webkit/WebView;->mListBoxMessage:Landroid/os/Message;
@@ -41067,7 +41098,7 @@
     :cond_2
     move v0, v1
 
-    .line 6712
+    .line 6719
     goto :goto_1
 .end method
 
@@ -41079,12 +41110,12 @@
     .parameter "bottom"
 
     .prologue
-    .line 6777
+    .line 6784
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/AbsoluteLayout;->setFrame(IIII)Z
 
     move-result v0
 
-    .line 6778
+    .line 6785
     .local v0, changed:Z
     if-nez v0, :cond_0
 
@@ -41092,16 +41123,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 6785
+    .line 6792
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->sendViewSizeZoom(Z)Z
 
-    .line 6787
+    .line 6794
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->setGLRectViewport()V
 
-    .line 6788
+    .line 6795
     return v0
 .end method
 
@@ -41111,29 +41142,29 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 6754
+    .line 6761
     iget-object v4, p0, Landroid/webkit/WebView;->mGLRectViewport:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v4}, Landroid/webkit/WebView;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
     move-result v3
 
-    .line 6755
+    .line 6762
     .local v3, visible:Z
     if-eqz v3, :cond_0
 
-    .line 6757
+    .line 6764
     invoke-virtual {p0}, Landroid/webkit/WebView;->getRootView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 6758
+    .line 6765
     .local v0, rootView:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
-    .line 6759
+    .line 6766
     .local v1, rootViewHeight:I
     iget-object v4, p0, Landroid/webkit/WebView;->mViewRectViewport:Landroid/graphics/Rect;
 
@@ -41141,12 +41172,12 @@
 
     invoke-virtual {v4, v6}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 6760
+    .line 6767
     iget-object v4, p0, Landroid/webkit/WebView;->mGLRectViewport:Landroid/graphics/Rect;
 
     iget v2, v4, Landroid/graphics/Rect;->bottom:I
 
-    .line 6761
+    .line 6768
     .local v2, savedWebViewBottom:I
     iget-object v4, p0, Landroid/webkit/WebView;->mGLRectViewport:Landroid/graphics/Rect;
 
@@ -41164,19 +41195,19 @@
 
     iput v6, v4, Landroid/graphics/Rect;->bottom:I
 
-    .line 6762
+    .line 6769
     iget-object v4, p0, Landroid/webkit/WebView;->mGLRectViewport:Landroid/graphics/Rect;
 
     sub-int v6, v1, v2
 
     iput v6, v4, Landroid/graphics/Rect;->top:I
 
-    .line 6763
+    .line 6770
     const/4 v4, 0x0
 
     iput-boolean v4, p0, Landroid/webkit/WebView;->mGLViewportEmpty:Z
 
-    .line 6767
+    .line 6774
     .end local v0           #rootView:Landroid/view/View;
     .end local v1           #rootViewHeight:I
     .end local v2           #savedWebViewBottom:I
@@ -41185,7 +41216,7 @@
 
     invoke-direct {p0, v4}, Landroid/webkit/WebView;->calcOurContentVisibleRectF(Landroid/graphics/RectF;)V
 
-    .line 6768
+    .line 6775
     iget-boolean v4, p0, Landroid/webkit/WebView;->mGLViewportEmpty:Z
 
     if-eqz v4, :cond_1
@@ -41202,10 +41233,10 @@
 
     invoke-direct {p0, v4, v5, v6}, Landroid/webkit/WebView;->nativeUpdateDrawGLFunction(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/RectF;)V
 
-    .line 6770
+    .line 6777
     return-void
 
-    .line 6765
+    .line 6772
     :cond_0
     const/4 v4, 0x1
 
@@ -41213,7 +41244,7 @@
 
     goto :goto_0
 
-    .line 6768
+    .line 6775
     :cond_1
     iget-object v4, p0, Landroid/webkit/WebView;->mGLRectViewport:Landroid/graphics/Rect;
 
@@ -41230,10 +41261,10 @@
     .parameter "proxy"
 
     .prologue
-    .line 11191
+    .line 11198
     iput-object p1, p0, Landroid/webkit/WebView;->mHTML5VideoViewProxy:Landroid/webkit/HTML5VideoViewProxy;
 
-    .line 11192
+    .line 11199
     return-void
 .end method
 
@@ -41242,13 +41273,13 @@
     .parameter "overlay"
 
     .prologue
-    .line 1633
+    .line 1637
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1634
+    .line 1638
     iput-boolean p1, p0, Landroid/webkit/WebView;->mOverlayHorizontalScrollbar:Z
 
-    .line 1635
+    .line 1639
     return-void
 .end method
 
@@ -41260,15 +41291,15 @@
     .parameter "password"
 
     .prologue
-    .line 1781
+    .line 1785
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1782
+    .line 1786
     iget-object v0, p0, Landroid/webkit/WebView;->mDatabase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/webkit/WebViewDatabase;->setHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1783
+    .line 1787
     return-void
 .end method
 
@@ -41277,15 +41308,15 @@
     .parameter "scaleInPercent"
 
     .prologue
-    .line 2803
+    .line 2807
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2804
+    .line 2808
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0, p1}, Landroid/webkit/ZoomManager;->setInitialScaleInPercent(I)V
 
-    .line 2805
+    .line 2809
     return-void
 .end method
 
@@ -41294,10 +41325,10 @@
     .parameter "bSet"
 
     .prologue
-    .line 14387
+    .line 14618
     iput-boolean p1, p0, Landroid/webkit/WebView;->misCacheDrawBitmap:Z
 
-    .line 14388
+    .line 14619
     return-void
 .end method
 
@@ -41310,14 +41341,14 @@
 
     const/4 v2, 0x0
 
-    .line 14066
+    .line 14297
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsLoading:Z
 
     if-nez v0, :cond_0
 
     if-ne p1, v3, :cond_0
 
-    .line 14067
+    .line 14298
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -41328,14 +41359,14 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/ZoomManager;->setTextWrapScale(F)V
 
-    .line 14069
+    .line 14300
     :cond_0
     iput-boolean p1, p0, Landroid/webkit/WebView;->m_bIsLoading:Z
 
-    .line 14070
+    .line 14301
     if-ne p1, v3, :cond_2
 
-    .line 14071
+    .line 14302
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_1
@@ -41346,32 +41377,32 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 14072
+    .line 14303
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     iput-boolean v2, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPicture:Z
 
-    .line 14073
+    .line 14304
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     iput v2, v0, Landroid/webkit/WebViewCore;->m_bPauseDrawContentPictureCount:I
 
-    .line 14095
+    .line 14326
     :cond_1
     :goto_0
     return-void
 
-    .line 14089
+    .line 14320
     :cond_2
     iput-boolean v2, p0, Landroid/webkit/WebView;->m_bNeedRestore:Z
 
-    .line 14090
+    .line 14321
     iput v2, p0, Landroid/webkit/WebView;->m_nRestoreScrollX:I
 
-    .line 14091
+    .line 14322
     iput v2, p0, Landroid/webkit/WebView;->m_nRestoreScrollY:I
 
-    .line 14092
+    .line 14323
     const/high16 v0, 0x3f80
 
     iput v0, p0, Landroid/webkit/WebView;->m_fResotreActualScale:F
@@ -41384,7 +41415,7 @@
     .parameter "bUserScroll"
 
     .prologue
-    .line 14574
+    .line 14805
     return-void
 .end method
 
@@ -41393,17 +41424,17 @@
     .parameter "flags"
 
     .prologue
-    .line 1949
+    .line 1953
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1950
+    .line 1954
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xae
 
     invoke-virtual {v0, v1, p1}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 1951
+    .line 1955
     return-void
 .end method
 
@@ -41412,23 +41443,23 @@
     .parameter "params"
 
     .prologue
-    .line 5024
+    .line 5028
     iget v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     const/4 v1, -0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 5025
+    .line 5029
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mWrapContent:Z
 
-    .line 5027
+    .line 5031
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5028
+    .line 5032
     return-void
 .end method
 
@@ -41437,13 +41468,13 @@
     .parameter "setMap"
 
     .prologue
-    .line 8071
+    .line 8078
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 8072
+    .line 8079
     iput-boolean p1, p0, Landroid/webkit/WebView;->mMapTrackballToArrowKeys:Z
 
-    .line 8073
+    .line 8080
     return-void
 .end method
 
@@ -41457,7 +41488,7 @@
     .parameter "gamma"
 
     .prologue
-    .line 5945
+    .line 5952
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     move v1, p1
@@ -41474,7 +41505,7 @@
 
     invoke-virtual/range {v0 .. v9}, Landroid/webkit/WebViewCore;->setMockDeviceOrientation(ZDZDZD)V
 
-    .line 5947
+    .line 5954
     return-void
 .end method
 
@@ -41483,10 +41514,10 @@
     .parameter "ScrollX"
 
     .prologue
-    .line 14552
+    .line 14783
     iput p1, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 14553
+    .line 14784
     return-void
 .end method
 
@@ -41495,10 +41526,10 @@
     .parameter "ScrollY"
 
     .prologue
-    .line 14556
+    .line 14787
     iput p1, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 14557
+    .line 14788
     return-void
 .end method
 
@@ -41509,10 +41540,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1960
+    .line 1964
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1961
+    .line 1965
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v3, 0x77
@@ -41524,13 +41555,13 @@
     :goto_0
     invoke-virtual {v2, v3, v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 1963
+    .line 1967
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 1961
+    .line 1965
     goto :goto_0
 .end method
 
@@ -41540,33 +41571,33 @@
     .parameter "subtype"
 
     .prologue
-    .line 1970
+    .line 1974
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1971
+    .line 1975
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 1972
+    .line 1976
     .local v0, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string/jumbo v1, "type"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1973
+    .line 1977
     const-string/jumbo v1, "subtype"
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1974
+    .line 1978
     iget-object v1, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0xb7
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 1975
+    .line 1979
     return-void
 .end method
 
@@ -41576,7 +41607,7 @@
     .parameter "updateBaseLayer"
 
     .prologue
-    .line 10371
+    .line 10378
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -41589,7 +41620,7 @@
 
     if-ne v2, v3, :cond_8
 
-    .line 10372
+    .line 10379
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -41620,7 +41651,7 @@
 
     const/4 v11, 0x1
 
-    .line 10373
+    .line 10380
     .local v11, doSmartZoom:Z
     :goto_0
     move-object/from16 v0, p0
@@ -41655,7 +41686,7 @@
 
     const/4 v10, 0x1
 
-    .line 10375
+    .line 10382
     .local v10, doMTZoom:Z
     :goto_1
     move-object/from16 v0, p1
@@ -41666,7 +41697,7 @@
 
     move-result-object v12
 
-    .line 10376
+    .line 10383
     .local v12, invalidRegion:Landroid/graphics/Rect;
     invoke-virtual {v12}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -41678,7 +41709,7 @@
 
     if-eqz v10, :cond_4
 
-    .line 10380
+    .line 10387
     :cond_0
     const-string/jumbo v2, "webview"
 
@@ -41686,7 +41717,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10381
+    .line 10388
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -41699,17 +41730,17 @@
 
     if-nez v2, :cond_1
 
-    .line 10382
+    .line 10389
     const-string/jumbo v2, "webview"
 
     const-string v3, "call contentInvalidateAll"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10383
+    .line 10390
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->contentInvalidateAll()V
 
-    .line 10537
+    .line 10544
     .end local v10           #doMTZoom:Z
     .end local v11           #doSmartZoom:Z
     .end local v12           #invalidRegion:Landroid/graphics/Rect;
@@ -41717,20 +41748,20 @@
     :goto_2
     return-void
 
-    .line 10372
+    .line 10379
     :cond_2
     const/4 v11, 0x0
 
     goto :goto_0
 
-    .line 10373
+    .line 10380
     .restart local v11       #doSmartZoom:Z
     :cond_3
     const/4 v10, 0x0
 
     goto :goto_1
 
-    .line 10388
+    .line 10395
     .restart local v10       #doMTZoom:Z
     .restart local v12       #invalidRegion:Landroid/graphics/Rect;
     :cond_4
@@ -41744,10 +41775,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 10389
+    .line 10396
     const/4 v13, 0x1
 
-    .line 10390
+    .line 10397
     .local v13, isRegionValidForMT:Z
     move-object/from16 v0, p0
 
@@ -41763,7 +41794,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 10391
+    .line 10398
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -41776,7 +41807,7 @@
 
     invoke-virtual {v2}, Landroid/webkit/SelectionUnitInfo;->update()V
 
-    .line 10392
+    .line 10399
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -41793,12 +41824,12 @@
 
     move-result v13
 
-    .line 10399
+    .line 10406
     :cond_5
     :goto_3
     if-nez v13, :cond_7
 
-    .line 10400
+    .line 10407
     const-string/jumbo v2, "webview"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -41845,7 +41876,7 @@
 
     goto :goto_2
 
-    .line 10393
+    .line 10400
     :cond_6
     move-object/from16 v0, p0
 
@@ -41859,7 +41890,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 10394
+    .line 10401
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
@@ -41882,18 +41913,18 @@
 
     move-result-object v8
 
-    .line 10395
+    .line 10402
     .local v8, bound:Landroid/graphics/Rect;
     if-eqz v8, :cond_5
 
-    .line 10396
+    .line 10403
     invoke-static {v12, v8}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
 
     move-result v13
 
     goto :goto_3
 
-    .line 10406
+    .line 10413
     .end local v8           #bound:Landroid/graphics/Rect;
     .end local v13           #isRegionValidForMT:Z
     :cond_7
@@ -41907,7 +41938,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 10407
+    .line 10414
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -41916,10 +41947,10 @@
 
     invoke-virtual {v2, v3}, Landroid/webkit/ZoomManager;->setIsMTing(Z)V
 
-    .line 10408
+    .line 10415
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->postInvalidate()V
 
-    .line 10415
+    .line 10422
     .end local v10           #doMTZoom:Z
     .end local v11           #doSmartZoom:Z
     .end local v12           #invalidRegion:Landroid/graphics/Rect;
@@ -41930,14 +41961,14 @@
 
     if-nez v2, :cond_a
 
-    .line 10416
+    .line 10423
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mDelaySetPicture:Landroid/webkit/WebViewCore$DrawData;
 
     if-eqz v2, :cond_9
 
-    .line 10417
+    .line 10424
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Tried to setNewPicture with a delay picture already set! (memory leak)"
@@ -41946,7 +41977,7 @@
 
     throw v2
 
-    .line 10421
+    .line 10428
     :cond_9
     move-object/from16 v0, p1
 
@@ -41956,7 +41987,7 @@
 
     goto/16 :goto_2
 
-    .line 10424
+    .line 10431
     :cond_a
     move-object/from16 v0, p1
 
@@ -41964,13 +41995,13 @@
 
     move-object/from16 v19, v0
 
-    .line 10425
+    .line 10432
     .local v19, viewState:Landroid/webkit/WebViewCore$ViewState;
     if-eqz v19, :cond_13
 
     const/4 v6, 0x1
 
-    .line 10428
+    .line 10435
     .local v6, isPictureAfterFirstLayout:Z
     :goto_4
     move-object/from16 v0, p0
@@ -41989,14 +42020,14 @@
 
     if-eqz v2, :cond_b
 
-    .line 10429
+    .line 10436
     const/4 v6, 0x0
 
-    .line 10433
+    .line 10440
     :cond_b
     if-eqz p2, :cond_d
 
-    .line 10435
+    .line 10442
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -42015,7 +42046,7 @@
 
     const/4 v7, 0x1
 
-    .line 10439
+    .line 10446
     .local v7, registerPageSwapCallback:Z
     :goto_5
     move-object/from16 v0, p1
@@ -42050,7 +42081,7 @@
 
     iput-boolean v2, v0, Landroid/webkit/WebView;->mHtcContentSizeChanged:Z
 
-    .line 10442
+    .line 10449
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/webkit/WebViewCore$DrawData;->mBaseLayer:I
@@ -42071,7 +42102,7 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/webkit/WebView;->setBaseLayer(ILandroid/graphics/Region;ZZZ)V
 
-    .line 10446
+    .line 10453
     .end local v7           #registerPageSwapCallback:Z
     :cond_d
     move-object/from16 v0, p1
@@ -42080,13 +42111,13 @@
 
     move-object/from16 v18, v0
 
-    .line 10449
+    .line 10456
     .local v18, viewSize:Landroid/graphics/Point;
     move-object/from16 v0, p0
 
     iget v14, v0, Landroid/webkit/WebView;->mContentHeight:I
 
-    .line 10456
+    .line 10463
     .local v14, oldContentHeight:I
     move-object/from16 v0, v18
 
@@ -42110,7 +42141,7 @@
 
     const/16 v17, 0x1
 
-    .line 10459
+    .line 10466
     .local v17, updateLayout:Z
     :goto_7
     move-object/from16 v0, p0
@@ -42159,7 +42190,7 @@
 
     if-eqz v2, :cond_17
 
-    .line 10460
+    .line 10467
     :cond_e
     move-object/from16 v0, p0
 
@@ -42173,7 +42204,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/ZoomManager$HTCSmartZoom;->recordNewContentSize(Landroid/webkit/WebViewCore$DrawData;)V
 
-    .line 10513
+    .line 10520
     :cond_f
     :goto_8
     move-object/from16 v0, p0
@@ -42182,7 +42213,7 @@
 
     if-eqz v2, :cond_10
 
-    .line 10514
+    .line 10521
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPictureListener:Landroid/webkit/WebView$PictureListener;
@@ -42195,7 +42226,7 @@
 
     invoke-interface {v2, v0, v3}, Landroid/webkit/WebView$PictureListener;->onNewPicture(Landroid/webkit/WebView;Landroid/graphics/Picture;)V
 
-    .line 10518
+    .line 10525
     :cond_10
     move-object/from16 v0, p0
 
@@ -42205,7 +42236,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/ZoomManager;->onNewPicture(Landroid/webkit/WebViewCore$DrawData;)V
 
-    .line 10520
+    .line 10527
     move-object/from16 v0, p1
 
     iget-boolean v2, v0, Landroid/webkit/WebViewCore$DrawData;->mFocusSizeChanged:Z
@@ -42218,25 +42249,25 @@
 
     if-eqz v2, :cond_11
 
-    .line 10521
+    .line 10528
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Landroid/webkit/WebView;->mFocusSizeChanged:Z
 
-    .line 10523
+    .line 10530
     :cond_11
     if-eqz v6, :cond_12
 
-    .line 10524
+    .line 10531
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mViewManager:Landroid/webkit/ViewManager;
 
     invoke-virtual {v2}, Landroid/webkit/ViewManager;->postReadyToDrawAll()V
 
-    .line 10528
+    .line 10535
     :cond_12
     move-object/from16 v0, p0
 
@@ -42250,7 +42281,7 @@
 
     if-eqz v2, :cond_1c
 
-    .line 10529
+    .line 10536
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -42259,7 +42290,7 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 10530
+    .line 10537
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -42272,7 +42303,7 @@
 
     goto/16 :goto_2
 
-    .line 10425
+    .line 10432
     .end local v6           #isPictureAfterFirstLayout:Z
     .end local v14           #oldContentHeight:I
     .end local v17           #updateLayout:Z
@@ -42282,21 +42313,21 @@
 
     goto/16 :goto_4
 
-    .line 10435
+    .line 10442
     .restart local v6       #isPictureAfterFirstLayout:Z
     :cond_14
     const/4 v7, 0x0
 
     goto/16 :goto_5
 
-    .line 10439
+    .line 10446
     .restart local v7       #registerPageSwapCallback:Z
     :cond_15
     const/4 v2, 0x0
 
     goto/16 :goto_6
 
-    .line 10456
+    .line 10463
     .end local v7           #registerPageSwapCallback:Z
     .restart local v14       #oldContentHeight:I
     .restart local v18       #viewSize:Landroid/graphics/Point;
@@ -42305,7 +42336,7 @@
 
     goto/16 :goto_7
 
-    .line 10461
+    .line 10468
     .restart local v17       #updateLayout:Z
     :cond_17
     move-object/from16 v0, p0
@@ -42344,7 +42375,7 @@
 
     if-ne v2, v3, :cond_18
 
-    .line 10462
+    .line 10469
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$DrawData;->mContentSize:Landroid/graphics/Point;
@@ -42355,7 +42386,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mContentWidth:I
 
-    .line 10463
+    .line 10470
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$DrawData;->mContentSize:Landroid/graphics/Point;
@@ -42366,7 +42397,7 @@
 
     iput v2, v0, Landroid/webkit/WebView;->mContentHeight:I
 
-    .line 10464
+    .line 10471
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->m_bIsLoading:Z
@@ -42379,7 +42410,7 @@
 
     if-nez v2, :cond_f
 
-    .line 10467
+    .line 10474
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -42412,7 +42443,7 @@
 
     goto/16 :goto_8
 
-    .line 10473
+    .line 10480
     :cond_18
     const/4 v2, 0x0
 
@@ -42420,7 +42451,7 @@
 
     iput-boolean v2, v0, Landroid/webkit/WebView;->mSendScrollEvent:Z
 
-    .line 10474
+    .line 10481
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$DrawData;->mContentSize:Landroid/graphics/Point;
@@ -42439,17 +42470,17 @@
 
     invoke-direct {v0, v2, v3, v1}, Landroid/webkit/WebView;->recordNewContentSize(IIZ)V
 
-    .line 10476
+    .line 10483
     if-eqz v6, :cond_19
 
-    .line 10478
+    .line 10485
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Landroid/webkit/WebView;->mLastWidthSent:I
 
-    .line 10479
+    .line 10486
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -42458,7 +42489,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/ZoomManager;->onFirstLayout(Landroid/webkit/WebViewCore$DrawData;)V
 
-    .line 10480
+    .line 10487
     move-object/from16 v0, v19
 
     iget-boolean v2, v0, Landroid/webkit/WebViewCore$ViewState;->mShouldStartScrolledRight:Z
@@ -42469,7 +42500,7 @@
 
     move-result v15
 
-    .line 10482
+    .line 10489
     .local v15, scrollX:I
     :goto_9
     move-object/from16 v0, v19
@@ -42478,7 +42509,7 @@
 
     move/from16 v16, v0
 
-    .line 10483
+    .line 10490
     .local v16, scrollY:I
     move-object/from16 v0, p0
 
@@ -42486,17 +42517,17 @@
 
     invoke-direct {v0, v15, v1}, Landroid/webkit/WebView;->setContentScrollTo(II)Z
 
-    .line 10484
+    .line 10491
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Landroid/webkit/WebView;->mDrawHistory:Z
 
     if-nez v2, :cond_19
 
-    .line 10489
+    .line 10496
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 10492
+    .line 10499
     .end local v15           #scrollX:I
     .end local v16           #scrollY:I
     :cond_19
@@ -42506,7 +42537,7 @@
 
     iput-boolean v2, v0, Landroid/webkit/WebView;->mSendScrollEvent:Z
 
-    .line 10501
+    .line 10508
     invoke-virtual/range {p0 .. p0}, Landroid/webkit/WebView;->isEditable()Z
 
     move-result v2
@@ -42519,7 +42550,7 @@
 
     if-ge v2, v14, :cond_1b
 
-    .line 10502
+    .line 10509
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/webkit/WebViewCore$DrawData;->mInvalRegion:Landroid/graphics/Region;
@@ -42534,7 +42565,7 @@
 
     move-result-object v9
 
-    .line 10503
+    .line 10510
     .local v9, dirty:Landroid/graphics/Rect;
     iget v2, v9, Landroid/graphics/Rect;->top:I
 
@@ -42550,14 +42581,14 @@
 
     iput v2, v9, Landroid/graphics/Rect;->bottom:I
 
-    .line 10504
+    .line 10511
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v9}, Landroid/webkit/WebView;->invalidate(Landroid/graphics/Rect;)V
 
     goto/16 :goto_8
 
-    .line 10480
+    .line 10487
     .end local v9           #dirty:Landroid/graphics/Rect;
     :cond_1a
     move-object/from16 v0, v19
@@ -42566,7 +42597,7 @@
 
     goto :goto_9
 
-    .line 10509
+    .line 10516
     :cond_1b
     move-object/from16 v0, p1
 
@@ -42582,7 +42613,7 @@
 
     goto/16 :goto_8
 
-    .line 10532
+    .line 10539
     :cond_1c
     move-object/from16 v0, p0
 
@@ -42596,7 +42627,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 10533
+    .line 10540
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -42605,7 +42636,7 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 10534
+    .line 10541
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -42624,17 +42655,17 @@
     .parameter "l"
 
     .prologue
-    .line 6674
+    .line 6681
     if-eqz p1, :cond_0
 
-    .line 6675
+    .line 6682
     invoke-static {p0}, Landroid/webkit/JWebCoreJavaBridge;->setCurrentWebView(Landroid/webkit/WebView;)V
 
-    .line 6677
+    .line 6684
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->setOnCreateContextMenuListener(Landroid/view/View$OnCreateContextMenuListener;)V
 
-    .line 6678
+    .line 6685
     return-void
 .end method
 
@@ -42645,18 +42676,18 @@
     .prologue
     const/4 v3, 0x6
 
-    .line 1523
+    .line 1527
     const/4 v2, 0x5
 
     if-eq p1, v2, :cond_0
 
     if-ne p1, v3, :cond_3
 
-    .line 1524
+    .line 1528
     :cond_0
     sput p1, Landroid/webkit/WebView;->mOverscrollMode:I
 
-    .line 1525
+    .line 1529
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -42671,7 +42702,7 @@
 
     iget v1, v2, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 1526
+    .line 1530
     .local v1, width:I
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -42687,11 +42718,11 @@
 
     iget v0, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 1528
+    .line 1532
     .local v0, height:I
     if-ne p1, v3, :cond_2
 
-    .line 1529
+    .line 1533
     const/high16 v2, 0x3f00
 
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
@@ -42706,39 +42737,39 @@
 
     iput v2, p0, Landroid/webkit/WebView;->mOverscrollDistance:I
 
-    .line 1533
+    .line 1537
     :goto_0
     const/4 p1, 0x2
 
-    .line 1539
+    .line 1543
     .end local v0           #height:I
     .end local v1           #width:I
     :goto_1
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->setOverScrollMode(I)V
 
-    .line 1540
+    .line 1544
     const/4 v2, 0x2
 
     if-eq p1, v2, :cond_4
 
-    .line 1541
+    .line 1545
     iget-object v2, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
     if-nez v2, :cond_1
 
-    .line 1542
+    .line 1546
     new-instance v2, Landroid/webkit/OverScrollGlow;
 
     invoke-direct {v2, p0}, Landroid/webkit/OverScrollGlow;-><init>(Landroid/webkit/WebView;)V
 
     iput-object v2, p0, Landroid/webkit/WebView;->mOverScrollGlow:Landroid/webkit/OverScrollGlow;
 
-    .line 1547
+    .line 1551
     :cond_1
     :goto_2
     return-void
 
-    .line 1532
+    .line 1536
     .restart local v0       #height:I
     .restart local v1       #width:I
     :cond_2
@@ -42758,7 +42789,7 @@
 
     goto :goto_0
 
-    .line 1536
+    .line 1540
     .end local v0           #height:I
     .end local v1           #width:I
     :cond_3
@@ -42766,7 +42797,7 @@
 
     goto :goto_1
 
-    .line 1545
+    .line 1549
     :cond_4
     const/4 v2, 0x0
 
@@ -42782,13 +42813,13 @@
     .end annotation
 
     .prologue
-    .line 4544
+    .line 4548
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4545
+    .line 4549
     iput-object p1, p0, Landroid/webkit/WebView;->mPictureListener:Landroid/webkit/WebView$PictureListener;
 
-    .line 4546
+    .line 4550
     return-void
 .end method
 
@@ -42801,14 +42832,14 @@
 
     const/4 v2, 0x1
 
-    .line 14183
+    .line 14414
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsLoadFinish:Z
 
     if-ne v0, v2, :cond_0
 
     if-eq p1, v3, :cond_0
 
-    .line 14184
+    .line 14415
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -42819,25 +42850,25 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/ZoomManager;->setTextWrapScale(F)V
 
-    .line 14186
+    .line 14417
     :cond_0
     if-ne p1, v3, :cond_2
 
-    .line 14187
+    .line 14418
     iput-boolean v2, p0, Landroid/webkit/WebView;->m_bIsLoadFinish:Z
 
-    .line 14190
+    .line 14421
     :cond_1
     :goto_0
     return-void
 
-    .line 14188
+    .line 14419
     :cond_2
     iget-boolean v0, p0, Landroid/webkit/WebView;->m_bIsLoadFinish:Z
 
     if-ne v0, v2, :cond_1
 
-    .line 14189
+    .line 14420
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->m_bIsLoadFinish:Z
@@ -42850,7 +42881,7 @@
     .parameter "flag"
 
     .prologue
-    .line 11528
+    .line 11535
     return-void
 .end method
 
@@ -42859,10 +42890,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 15190
+    .line 15421
     iput-boolean p1, p0, Landroid/webkit/WebView;->mPureZoomMode:Z
 
-    .line 15191
+    .line 15422
     return-void
 .end method
 
@@ -42871,13 +42902,13 @@
     .parameter "bSet"
 
     .prologue
-    .line 11482
+    .line 11489
     iput-boolean p1, p0, Landroid/webkit/WebView;->m_bsetScaleWithoutCheck:Z
 
-    .line 11483
+    .line 11490
     iput-boolean p1, p0, Landroid/webkit/WebView;->m_bMailClientUsed:Z
 
-    .line 11486
+    .line 11493
     return-void
 .end method
 
@@ -42886,7 +42917,7 @@
     .parameter "style"
 
     .prologue
-    .line 1619
+    .line 1623
     const/high16 v0, 0x100
 
     if-eq p1, v0, :cond_0
@@ -42895,7 +42926,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1621
+    .line 1625
     :cond_0
     const/4 v0, 0x0
 
@@ -42903,14 +42934,14 @@
 
     iput-boolean v0, p0, Landroid/webkit/WebView;->mOverlayHorizontalScrollbar:Z
 
-    .line 1625
+    .line 1629
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/AbsoluteLayout;->setScrollBarStyle(I)V
 
-    .line 1626
+    .line 1630
     return-void
 
-    .line 1623
+    .line 1627
     :cond_1
     const/4 v0, 0x1
 
@@ -42927,19 +42958,19 @@
     .parameter "end"
 
     .prologue
-    .line 5654
+    .line 5661
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-eqz v0, :cond_0
 
-    .line 5655
+    .line 5662
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x71
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/webkit/WebViewCore;->sendMessage(III)V
 
-    .line 5657
+    .line 5664
     :cond_0
     return-void
 .end method
@@ -42949,29 +42980,29 @@
     .parameter "stop"
 
     .prologue
-    .line 15140
+    .line 15371
     iget-boolean v0, p0, Landroid/webkit/WebView;->mIsStopDrawing:Z
 
     if-eqz v0, :cond_1
 
     if-nez p1, :cond_1
 
-    .line 15141
+    .line 15372
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x12f
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 15146
+    .line 15377
     :cond_0
     :goto_0
     iput-boolean p1, p0, Landroid/webkit/WebView;->mIsStopDrawing:Z
 
-    .line 15147
+    .line 15378
     return-void
 
-    .line 15143
+    .line 15374
     :cond_1
     iget-boolean v0, p0, Landroid/webkit/WebView;->mIsStopDrawing:Z
 
@@ -42979,7 +43010,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 15144
+    .line 15375
     iget-object v0, p0, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
 
     const/16 v1, 0x12e
@@ -42994,13 +43025,13 @@
     .parameter "gravity"
 
     .prologue
-    .line 3049
+    .line 3053
     iput p1, p0, Landroid/webkit/WebView;->mTitleGravity:I
 
-    .line 3051
+    .line 3055
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 3052
+    .line 3056
     return-void
 .end method
 
@@ -43009,7 +43040,7 @@
     .parameter "draw"
 
     .prologue
-    .line 14518
+    .line 14749
     return-void
 .end method
 
@@ -43018,10 +43049,10 @@
     .parameter "interval"
 
     .prologue
-    .line 11201
+    .line 11208
     iput p1, p0, Landroid/webkit/WebView;->mCurrentTouchInterval:I
 
-    .line 11202
+    .line 11209
     return-void
 .end method
 
@@ -43030,12 +43061,12 @@
     .parameter "slop"
 
     .prologue
-    .line 14198
+    .line 14429
     mul-int v0, p1, p1
 
     iput v0, p0, Landroid/webkit/WebView;->mTouchSlopSquare:I
 
-    .line 14199
+    .line 14430
     return-void
 .end method
 
@@ -43044,13 +43075,13 @@
     .parameter "overlay"
 
     .prologue
-    .line 1642
+    .line 1646
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 1643
+    .line 1647
     iput-boolean p1, p0, Landroid/webkit/WebView;->mOverlayVerticalScrollbar:Z
 
-    .line 1644
+    .line 1648
     return-void
 .end method
 
@@ -43059,12 +43090,12 @@
     .parameter "client"
 
     .prologue
-    .line 4525
+    .line 4529
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->setWebBackForwardListClient(Landroid/webkit/WebBackForwardListClient;)V
 
-    .line 4526
+    .line 4530
     return-void
 .end method
 
@@ -43073,15 +43104,15 @@
     .parameter "client"
 
     .prologue
-    .line 4503
+    .line 4507
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4504
+    .line 4508
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 4505
+    .line 4509
     return-void
 .end method
 
@@ -43090,10 +43121,10 @@
     .parameter "type"
 
     .prologue
-    .line 11623
+    .line 11630
     iput p1, p0, Landroid/webkit/WebView;->selectionUIType:I
 
-    .line 11624
+    .line 11631
     if-lez p1, :cond_0
 
     const/4 v0, 0x1
@@ -43101,10 +43132,10 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/webkit/WebView;->enableQuickSelection(Z)V
 
-    .line 11625
+    .line 11632
     return-void
 
-    .line 11624
+    .line 11631
     :cond_0
     const/4 v0, 0x0
 
@@ -43116,15 +43147,15 @@
     .parameter "client"
 
     .prologue
-    .line 4471
+    .line 4475
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4472
+    .line 4476
     iget-object v0, p0, Landroid/webkit/WebView;->mCallbackProxy:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0, p1}, Landroid/webkit/CallbackProxy;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 4473
+    .line 4477
     return-void
 .end method
 
@@ -43133,16 +43164,16 @@
     .parameter "willDraw"
 
     .prologue
-    .line 4028
+    .line 4032
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 4029
+    .line 4033
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->setFindIsUp(Z)V
 
-    .line 4030
+    .line 4034
     iput-boolean p1, p0, Landroid/webkit/WebView;->mCustomFindMode:Z
 
-    .line 4031
+    .line 4035
     return-void
 .end method
 
@@ -43151,12 +43182,12 @@
     .parameter "fLower"
 
     .prologue
-    .line 14344
+    .line 14575
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0, p1}, Landroid/webkit/ZoomManager;->setZoomLowerBound(F)V
 
-    .line 14345
+    .line 14576
     return-void
 .end method
 
@@ -43165,16 +43196,16 @@
     .parameter "nType"
 
     .prologue
-    .line 14611
+    .line 14842
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     if-nez v0, :cond_0
 
-    .line 14613
+    .line 14844
     :goto_0
     return-void
 
-    .line 14612
+    .line 14843
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -43188,12 +43219,12 @@
     .parameter "fUpper"
 
     .prologue
-    .line 14340
+    .line 14571
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0, p1}, Landroid/webkit/ZoomManager;->setZoomUpperBound(F)V
 
-    .line 14341
+    .line 14572
     return-void
 .end method
 
@@ -43203,7 +43234,7 @@
     .parameter "y"
 
     .prologue
-    .line 10364
+    .line 10371
     return-void
 .end method
 
@@ -43211,7 +43242,7 @@
     .locals 1
 
     .prologue
-    .line 1458
+    .line 1462
     const/4 v0, 0x1
 
     return v0
@@ -43225,21 +43256,21 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3880
+    .line 3884
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 3881
+    .line 3885
     new-instance v0, Landroid/webkit/FindActionModeCallback;
 
     iget-object v2, p0, Landroid/webkit/WebView;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v2}, Landroid/webkit/FindActionModeCallback;-><init>(Landroid/content/Context;)V
 
-    .line 3882
+    .line 3886
     .local v0, callback:Landroid/webkit/FindActionModeCallback;
     invoke-virtual {v0, p0}, Landroid/webkit/FindActionModeCallback;->setWebView(Landroid/webkit/WebView;)V
 
-    .line 3883
+    .line 3887
     invoke-virtual {p0}, Landroid/webkit/WebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
@@ -43252,68 +43283,68 @@
 
     if-nez v2, :cond_2
 
-    .line 3885
+    .line 3889
     :cond_0
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/webkit/FindActionModeCallback;->setWebView(Landroid/webkit/WebView;)V
 
-    .line 3886
+    .line 3890
     const/4 v1, 0x0
 
-    .line 3905
+    .line 3909
     :cond_1
     :goto_0
     return v1
 
-    .line 3888
+    .line 3892
     :cond_2
     const/4 v2, -0x1
 
     iput v2, p0, Landroid/webkit/WebView;->mCachedOverlappingActionModeHeight:I
 
-    .line 3889
+    .line 3893
     iput-object v0, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
-    .line 3890
+    .line 3894
     invoke-direct {p0, v1}, Landroid/webkit/WebView;->setFindIsUp(Z)V
 
-    .line 3892
+    .line 3896
     if-eqz p2, :cond_5
 
-    .line 3893
+    .line 3897
     iget-object v2, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     invoke-virtual {v2}, Landroid/webkit/FindActionModeCallback;->showSoftInput()V
 
-    .line 3899
+    .line 3903
     :cond_3
     if-nez p1, :cond_4
 
-    .line 3900
+    .line 3904
     iget-object p1, p0, Landroid/webkit/WebView;->mLastFind:Ljava/lang/String;
 
-    .line 3902
+    .line 3906
     :cond_4
     if-eqz p1, :cond_1
 
-    .line 3903
+    .line 3907
     iget-object v2, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     invoke-virtual {v2, p1}, Landroid/webkit/FindActionModeCallback;->setText(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 3894
+    .line 3898
     :cond_5
     if-eqz p1, :cond_3
 
-    .line 3895
+    .line 3899
     iget-object v2, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     invoke-virtual {v2, p1}, Landroid/webkit/FindActionModeCallback;->setText(Ljava/lang/String;)V
 
-    .line 3896
+    .line 3900
     iget-object v2, p0, Landroid/webkit/WebView;->mFindCallback:Landroid/webkit/FindActionModeCallback;
 
     invoke-virtual {v2}, Landroid/webkit/FindActionModeCallback;->findAll()V
@@ -43325,7 +43356,7 @@
     .locals 0
 
     .prologue
-    .line 15243
+    .line 15474
     return-void
 .end method
 
@@ -43333,20 +43364,20 @@
     .locals 2
 
     .prologue
-    .line 2528
+    .line 2532
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 2531
+    .line 2535
     invoke-virtual {p0}, Landroid/webkit/WebView;->switchOutDrawHistory()V
 
-    .line 2532
+    .line 2536
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0x65
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 2533
+    .line 2537
     return-void
 .end method
 
@@ -43354,19 +43385,19 @@
     .locals 2
 
     .prologue
-    .line 4054
+    .line 4058
     iget-object v0, p0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/OverScroller;->forceFinished(Z)V
 
-    .line 4055
+    .line 4059
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/WebView;->mLastVelocity:F
 
-    .line 4056
+    .line 4060
     return-void
 .end method
 
@@ -43374,17 +43405,17 @@
     .locals 4
 
     .prologue
-    .line 5600
+    .line 5607
     iget-object v2, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     if-nez v2, :cond_1
 
-    .line 5615
+    .line 5622
     :cond_0
     :goto_0
     return-void
 
-    .line 5601
+    .line 5608
     :cond_1
     iget-boolean v2, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
@@ -43404,28 +43435,28 @@
 
     if-eqz v2, :cond_0
 
-    .line 5602
+    .line 5609
     :cond_2
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Landroid/webkit/WebView;->mDrawHistory:Z
 
-    .line 5603
+    .line 5610
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/webkit/WebView;->mHistoryPicture:Landroid/graphics/Picture;
 
-    .line 5604
+    .line 5611
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 5605
+    .line 5612
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 5606
+    .line 5613
     .local v0, oldScrollX:I
     iget v1, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 5607
+    .line 5614
     .local v1, oldScrollY:I
     iget v2, p0, Landroid/webkit/WebView;->mScrollX:I
 
@@ -43435,7 +43466,7 @@
 
     iput v2, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 5608
+    .line 5615
     iget v2, p0, Landroid/webkit/WebView;->mScrollY:I
 
     invoke-virtual {p0, v2}, Landroid/webkit/WebView;->pinLocY(I)I
@@ -43444,7 +43475,7 @@
 
     iput v2, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 5609
+    .line 5616
     iget v2, p0, Landroid/webkit/WebView;->mScrollX:I
 
     if-ne v0, v2, :cond_3
@@ -43453,7 +43484,7 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 5610
+    .line 5617
     :cond_3
     iget v2, p0, Landroid/webkit/WebView;->mScrollX:I
 
@@ -43463,7 +43494,7 @@
 
     goto :goto_0
 
-    .line 5612
+    .line 5619
     :cond_4
     invoke-virtual {p0}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
@@ -43477,7 +43508,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 8663
+    .line 8670
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v2
@@ -43486,11 +43517,11 @@
 
     move v0, v1
 
-    .line 8677
+    .line 8684
     :goto_0
     return v0
 
-    .line 8668
+    .line 8675
     :cond_0
     iget v2, p0, Landroid/webkit/WebView;->howToSelection:I
 
@@ -43500,16 +43531,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 8669
+    .line 8676
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
-    .line 8672
+    .line 8679
     :cond_1
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/webkit/WebView;->mDragFromTextInput:Z
 
-    .line 8673
+    .line 8680
     iget-object v2, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     invoke-virtual {v2}, Landroid/webkit/WebTextView;->getLeft()I
@@ -43536,12 +43567,12 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/view/MotionEvent;->offsetLocation(FF)V
 
-    .line 8675
+    .line 8682
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 8676
+    .line 8683
     .local v0, result:Z
     iput-boolean v1, p0, Landroid/webkit/WebView;->mDragFromTextInput:Z
 
@@ -43552,10 +43583,10 @@
     .locals 0
 
     .prologue
-    .line 11266
+    .line 11273
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeTileProfilingClear()V
 
-    .line 11267
+    .line 11274
     return-void
 .end method
 
@@ -43566,7 +43597,7 @@
     .parameter "key"
 
     .prologue
-    .line 11282
+    .line 11289
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/WebView;->nativeTileProfilingGetFloat(IILjava/lang/String;)F
 
     move-result v0
@@ -43581,7 +43612,7 @@
     .parameter "key"
 
     .prologue
-    .line 11278
+    .line 11285
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/WebView;->nativeTileProfilingGetInt(IILjava/lang/String;)I
 
     move-result v0
@@ -43593,7 +43624,7 @@
     .locals 1
 
     .prologue
-    .line 11270
+    .line 11277
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeTileProfilingNumFrames()I
 
     move-result v0
@@ -43606,7 +43637,7 @@
     .parameter "frame"
 
     .prologue
-    .line 11274
+    .line 11281
     invoke-direct {p0, p1}, Landroid/webkit/WebView;->nativeTileProfilingNumTilesInFrame(I)I
 
     move-result v0
@@ -43618,10 +43649,10 @@
     .locals 0
 
     .prologue
-    .line 11253
+    .line 11260
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeTileProfilingStart()V
 
-    .line 11254
+    .line 11261
     return-void
 .end method
 
@@ -43629,7 +43660,7 @@
     .locals 1
 
     .prologue
-    .line 11261
+    .line 11268
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeTileProfilingStop()F
 
     move-result v0
@@ -43642,18 +43673,18 @@
     .parameter "event"
 
     .prologue
-    .line 8686
+    .line 8693
     invoke-direct {p0}, Landroid/webkit/WebView;->inEditingMode()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 8699
+    .line 8706
     :goto_0
     return-void
 
-    .line 8691
+    .line 8698
     :cond_0
     iget v3, p0, Landroid/webkit/WebView;->howToSelection:I
 
@@ -43663,10 +43694,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 8692
+    .line 8699
     invoke-virtual {p0}, Landroid/webkit/WebView;->selectionDone()V
 
-    .line 8695
+    .line 8702
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -43686,7 +43717,7 @@
 
     move-result v1
 
-    .line 8696
+    .line 8703
     .local v1, x:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -43706,7 +43737,7 @@
 
     move-result v2
 
-    .line 8697
+    .line 8704
     .local v2, y:I
     iget v3, p0, Landroid/webkit/WebView;->mNavSlop:I
 
@@ -43714,7 +43745,7 @@
 
     move-result v0
 
-    .line 8698
+    .line 8705
     .local v0, slop:I
     invoke-direct {p0, v1, v2, v0}, Landroid/webkit/WebView;->nativeMotionUp(III)Z
 
@@ -43726,12 +43757,12 @@
     .parameter "updatedText"
 
     .prologue
-    .line 11212
+    .line 11219
     iget v0, p0, Landroid/webkit/WebView;->mTextGeneration:I
 
     invoke-direct {p0, p1, v0}, Landroid/webkit/WebView;->nativeUpdateCachedTextfield(Ljava/lang/String;I)V
 
-    .line 11213
+    .line 11220
     return-void
 .end method
 
@@ -43740,7 +43771,7 @@
     .parameter "pointer"
 
     .prologue
-    .line 12391
+    .line 12398
     return-void
 .end method
 
@@ -43749,7 +43780,7 @@
     .parameter "density"
 
     .prologue
-    .line 1556
+    .line 1560
     const/high16 v0, 0x4180
 
     mul-float/2addr v0, p1
@@ -43758,12 +43789,12 @@
 
     iput v0, p0, Landroid/webkit/WebView;->mNavSlop:I
 
-    .line 1557
+    .line 1561
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0, p1}, Landroid/webkit/ZoomManager;->updateDefaultZoomDensity(F)V
 
-    .line 1558
+    .line 1562
     return-void
 .end method
 
@@ -43772,12 +43803,12 @@
     .parameter "doubleTapZoom"
 
     .prologue
-    .line 3466
+    .line 3470
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0, p1}, Landroid/webkit/ZoomManager;->updateDoubleTapZoom(I)V
 
-    .line 3467
+    .line 3471
     return-void
 .end method
 
@@ -43787,7 +43818,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3736
+    .line 3740
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     if-eqz v0, :cond_0
@@ -43796,12 +43827,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3744
+    .line 3748
     :cond_0
     :goto_0
     return-void
 
-    .line 3737
+    .line 3741
     :cond_1
     invoke-virtual {p0}, Landroid/webkit/WebView;->getWindowVisibility()I
 
@@ -43809,14 +43840,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 3738
+    .line 3742
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     invoke-static {v0, v1}, Landroid/webkit/WebView;->nativeSetPauseDrawing(IZ)V
 
     goto :goto_0
 
-    .line 3739
+    .line 3743
     :cond_2
     invoke-virtual {p0}, Landroid/webkit/WebView;->getVisibility()I
 
@@ -43824,14 +43855,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 3740
+    .line 3744
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
     invoke-static {v0, v1}, Landroid/webkit/WebView;->nativeSetPauseDrawing(IZ)V
 
     goto :goto_0
 
-    .line 3742
+    .line 3746
     :cond_3
     iget v0, p0, Landroid/webkit/WebView;->mNativeClass:I
 
@@ -43912,22 +43943,22 @@
     .locals 4
 
     .prologue
-    .line 12546
+    .line 12553
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     if-nez v0, :cond_0
 
-    .line 12554
+    .line 12561
     :goto_0
     return-void
 
-    .line 12548
+    .line 12555
     :cond_0
     iget-object v1, p0, Landroid/webkit/WebView;->mPositionRectLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 12549
+    .line 12556
     :try_start_0
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
@@ -43937,7 +43968,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/webkit/HTCWebCore;->nativeGetRectOf(Landroid/graphics/Rect;I)V
 
-    .line 12550
+    .line 12557
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     iget-object v2, p0, Landroid/webkit/WebView;->mPositionRectEnd:Landroid/graphics/Rect;
@@ -43946,7 +43977,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/webkit/HTCWebCore;->nativeGetRectOf(Landroid/graphics/Rect;I)V
 
-    .line 12551
+    .line 12558
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     iget-object v2, p0, Landroid/webkit/WebView;->mPositionRectBase:Landroid/graphics/Rect;
@@ -43955,7 +43986,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/webkit/HTCWebCore;->nativeGetRectOf(Landroid/graphics/Rect;I)V
 
-    .line 12552
+    .line 12559
     iget-object v0, p0, Landroid/webkit/WebView;->mHTCWebCore:Landroid/webkit/HTCWebCore;
 
     iget-object v2, p0, Landroid/webkit/WebView;->mPositionRectExtend:Landroid/graphics/Rect;
@@ -43964,7 +43995,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/webkit/HTCWebCore;->nativeGetRectOf(Landroid/graphics/Rect;I)V
 
-    .line 12553
+    .line 12560
     monitor-exit v1
 
     goto :goto_0
@@ -43985,21 +44016,21 @@
     .parameter "y"
 
     .prologue
-    .line 8350
+    .line 8357
     iget v0, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 8351
+    .line 8358
     .local v0, oldX:I
     iget v1, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 8352
+    .line 8359
     .local v1, oldY:I
     iput p1, p0, Landroid/webkit/WebView;->mScrollX:I
 
-    .line 8353
+    .line 8360
     iput p2, p0, Landroid/webkit/WebView;->mScrollY:I
 
-    .line 8354
+    .line 8361
     iget v2, p0, Landroid/webkit/WebView;->mScrollX:I
 
     if-ne v0, v2, :cond_0
@@ -44008,7 +44039,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 8355
+    .line 8362
     :cond_0
     iget v2, p0, Landroid/webkit/WebView;->mScrollX:I
 
@@ -44016,10 +44047,10 @@
 
     invoke-virtual {p0, v2, v3, v0, v1}, Landroid/webkit/WebView;->onScrollChanged(IIII)V
 
-    .line 8356
+    .line 8363
     const/4 v2, 0x1
 
-    .line 8358
+    .line 8365
     :goto_0
     return v2
 
@@ -44036,7 +44067,7 @@
     .parameter "endIndx"
 
     .prologue
-    .line 11737
+    .line 11744
     return-void
 .end method
 
@@ -44044,16 +44075,16 @@
     .locals 6
 
     .prologue
-    .line 5786
+    .line 5793
     invoke-direct {p0}, Landroid/webkit/WebView;->nativeFocusCandidatePaddingRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 5787
+    .line 5794
     .local v0, paddingRect:Landroid/graphics/Rect;
     if-eqz v0, :cond_0
 
-    .line 5790
+    .line 5797
     iget-object v1, p0, Landroid/webkit/WebView;->mWebTextView:Landroid/webkit/WebTextView;
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
@@ -44082,7 +44113,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/webkit/WebTextView;->setPadding(IIII)V
 
-    .line 5796
+    .line 5803
     :cond_0
     return-void
 .end method
@@ -44091,14 +44122,14 @@
     .locals 2
 
     .prologue
-    .line 5935
+    .line 5942
     iget-object v0, p0, Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     const/16 v1, 0xbf
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebViewCore;->sendMessage(I)V
 
-    .line 5936
+    .line 5943
     return-void
 .end method
 
@@ -44106,7 +44137,7 @@
     .locals 2
 
     .prologue
-    .line 11046
+    .line 11053
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->getZoomType()I
@@ -44145,11 +44176,11 @@
 
     if-nez v0, :cond_1
 
-    .line 11048
+    .line 11055
     :cond_0
     invoke-virtual {p0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 11049
+    .line 11056
     :cond_1
     return-void
 .end method
@@ -44159,7 +44190,7 @@
     .parameter "d"
 
     .prologue
-    .line 3061
+    .line 3065
     int-to-float v0, p1
 
     iget-object v1, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -44182,7 +44213,7 @@
     .parameter "x"
 
     .prologue
-    .line 3070
+    .line 3074
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->viewToContentDimension(I)I
 
     move-result v0
@@ -44195,7 +44226,7 @@
     .parameter "y"
 
     .prologue
-    .line 3079
+    .line 3083
     invoke-virtual {p0}, Landroid/webkit/WebView;->getTitleHeight()I
 
     move-result v0
@@ -44213,10 +44244,10 @@
     .locals 1
 
     .prologue
-    .line 8582
+    .line 8589
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 8583
+    .line 8590
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->zoomIn()Z
@@ -44230,10 +44261,10 @@
     .locals 1
 
     .prologue
-    .line 8591
+    .line 8598
     invoke-static {}, Landroid/webkit/WebView;->checkThread()V
 
-    .line 8592
+    .line 8599
     iget-object v0, p0, Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v0}, Landroid/webkit/ZoomManager;->zoomOut()Z

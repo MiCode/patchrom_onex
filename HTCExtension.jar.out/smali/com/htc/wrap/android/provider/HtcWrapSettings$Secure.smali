@@ -182,12 +182,12 @@
     .locals 4
 
     .prologue
-    .line 1546
+    .line 1545
     const/4 v0, 0x0
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->MONITOR_KEYS:Ljava/util/HashSet;
 
-    .line 2279
+    .line 2278
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$Secure;->SETTINGS_TO_BACKUP:[Ljava/lang/String;
 
     const/16 v1, 0x1b
@@ -370,7 +370,7 @@
     .locals 0
 
     .prologue
-    .line 1545
+    .line 1544
     invoke-direct {p0}, Lcom/htc/wrap/android/provider/Settings$Secure;-><init>()V
 
     return-void
@@ -387,23 +387,23 @@
     .end annotation
 
     .prologue
-    .line 1661
+    .line 1660
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1663
+    .line 1662
     .local v0, v:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 1664
+    .line 1663
     new-instance v1, Landroid/provider/Settings$SettingNotFoundException;
 
     invoke-direct {v1, p1}, Landroid/provider/Settings$SettingNotFoundException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 1666
+    .line 1665
     :cond_0
     const-string v1, "0"
 
@@ -431,16 +431,16 @@
     .parameter "defValue"
 
     .prologue
-    .line 1634
+    .line 1633
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1636
+    .line 1635
     .local v0, v:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 1639
+    .line 1638
     .end local p2
     :goto_0
     return p2
@@ -474,14 +474,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2333
+    .line 2332
     const-string v1, "data_roaming_allowed"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2334
+    .line 2333
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -498,14 +498,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2362
+    .line 2361
     const-string v1, "data_roaming_blocked"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2363
+    .line 2362
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -522,14 +522,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2392
+    .line 2391
     const-string v1, "data_roaming_guard_allowed"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2393
+    .line 2392
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -546,14 +546,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2421
+    .line 2420
     const-string v1, "data_roaming_guard_blocked"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2422
+    .line 2421
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -570,14 +570,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2566
+    .line 2565
     const-string v1, "sms_roaming_guard_allowed"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2567
+    .line 2566
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -594,14 +594,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2450
+    .line 2449
     const-string v1, "voice_roaming_allowed"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2451
+    .line 2450
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -618,14 +618,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2479
+    .line 2478
     const-string v1, "voice_roaming_blocked"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2480
+    .line 2479
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -642,14 +642,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2508
+    .line 2507
     const-string v1, "voice_roaming_guard_allowed"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2509
+    .line 2508
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -666,14 +666,14 @@
     .parameter "provider"
 
     .prologue
-    .line 2537
+    .line 2536
     const-string v1, "voice_roaming_guard_blocked"
 
     invoke-static {p0, v1}, Lcom/htc/wrap/android/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2538
+    .line 2537
     .local v0, allowedProviders:Ljava/lang/String;
     const/16 v1, 0x2c
 
@@ -691,7 +691,7 @@
     .parameter "value"
 
     .prologue
-    .line 1686
+    .line 1685
     if-eqz p2, :cond_0
 
     const-string v0, "1"
@@ -716,7 +716,7 @@
     .parameter "value"
 
     .prologue
-    .line 1585
+    .line 1584
     invoke-static {p0, p1, p2}, Lcom/htc/wrap/android/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -731,10 +731,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2347
+    .line 2346
     if-eqz p2, :cond_0
 
-    .line 2348
+    .line 2347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -753,16 +753,16 @@
 
     move-result-object p1
 
-    .line 2352
+    .line 2351
     :goto_0
     const-string v0, "data_roaming_allowed"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2353
+    .line 2352
     return-void
 
-    .line 2350
+    .line 2349
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -792,10 +792,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2376
+    .line 2375
     if-eqz p2, :cond_0
 
-    .line 2377
+    .line 2376
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -814,16 +814,16 @@
 
     move-result-object p1
 
-    .line 2381
+    .line 2380
     :goto_0
     const-string v0, "data_roaming_blocked"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2382
+    .line 2381
     return-void
 
-    .line 2379
+    .line 2378
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -853,10 +853,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2406
+    .line 2405
     if-eqz p2, :cond_0
 
-    .line 2407
+    .line 2406
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -875,16 +875,16 @@
 
     move-result-object p1
 
-    .line 2411
+    .line 2410
     :goto_0
     const-string v0, "data_roaming_guard_allowed"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2412
+    .line 2411
     return-void
 
-    .line 2409
+    .line 2408
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -914,10 +914,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2435
+    .line 2434
     if-eqz p2, :cond_0
 
-    .line 2436
+    .line 2435
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -936,16 +936,16 @@
 
     move-result-object p1
 
-    .line 2440
+    .line 2439
     :goto_0
     const-string v0, "data_roaming_guard_blocked"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2441
+    .line 2440
     return-void
 
-    .line 2438
+    .line 2437
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -975,10 +975,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 1608
+    .line 1607
     invoke-static {p0, p1, p2}, Lcom/htc/wrap/android/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 1610
+    .line 1609
     return-void
 .end method
 
@@ -989,10 +989,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2580
+    .line 2579
     if-eqz p2, :cond_0
 
-    .line 2581
+    .line 2580
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1011,16 +1011,16 @@
 
     move-result-object p1
 
-    .line 2585
+    .line 2584
     :goto_0
     const-string v0, "sms_roaming_guard_allowed"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2586
+    .line 2585
     return-void
 
-    .line 2583
+    .line 2582
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1050,10 +1050,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2464
+    .line 2463
     if-eqz p2, :cond_0
 
-    .line 2465
+    .line 2464
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1072,16 +1072,16 @@
 
     move-result-object p1
 
-    .line 2469
+    .line 2468
     :goto_0
     const-string v0, "voice_roaming_allowed"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2470
+    .line 2469
     return-void
 
-    .line 2467
+    .line 2466
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1111,10 +1111,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2493
+    .line 2492
     if-eqz p2, :cond_0
 
-    .line 2494
+    .line 2493
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1133,16 +1133,16 @@
 
     move-result-object p1
 
-    .line 2498
+    .line 2497
     :goto_0
     const-string v0, "voice_roaming_blocked"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2499
+    .line 2498
     return-void
 
-    .line 2496
+    .line 2495
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1172,10 +1172,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2522
+    .line 2521
     if-eqz p2, :cond_0
 
-    .line 2523
+    .line 2522
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1194,16 +1194,16 @@
 
     move-result-object p1
 
-    .line 2527
+    .line 2526
     :goto_0
     const-string v0, "voice_roaming_guard_allowed"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2528
+    .line 2527
     return-void
 
-    .line 2525
+    .line 2524
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1233,10 +1233,10 @@
     .parameter "enabled"
 
     .prologue
-    .line 2551
+    .line 2550
     if-eqz p2, :cond_0
 
-    .line 2552
+    .line 2551
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1255,16 +1255,16 @@
 
     move-result-object p1
 
-    .line 2556
+    .line 2555
     :goto_0
     const-string v0, "voice_roaming_guard_blocked"
 
     invoke-static {p0, v0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2557
+    .line 2556
     return-void
 
-    .line 2554
+    .line 2553
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

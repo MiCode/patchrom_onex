@@ -257,17 +257,17 @@
 
     const/4 v3, 0x2
 
-    .line 80
+    .line 81
     invoke-direct {p0, p1}, Lcom/android/camera/Settings;-><init>(Landroid/content/Context;)V
 
-    .line 16
+    .line 17
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
 
-    .line 83
+    .line 84
     const-string v0, "Settings.CanAutoFocus"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -282,7 +282,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->canAutoFocus:Lcom/android/camera/property/Property;
 
-    .line 84
+    .line 85
     const-string v0, "Settings.FlashMode"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -295,7 +295,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->flashMode:Lcom/android/camera/property/Property;
 
-    .line 85
+    .line 86
     const-string v0, "Settings.IsAutoEnhanceEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -310,7 +310,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isAutoEnhanceEnabled:Lcom/android/camera/property/Property;
 
-    .line 86
+    .line 87
     const-string v0, "Settings.IsAutoFiveShotsEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -325,7 +325,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isAutoFiveShotsEnabled:Lcom/android/camera/property/Property;
 
-    .line 87
+    .line 88
     const-string v0, "Settings.IsAutoSmileCaptureEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -340,7 +340,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isAutoSmileCaptureEnabled:Lcom/android/camera/property/Property;
 
-    .line 88
+    .line 89
     const-string v0, "Settings.IsContinuousBurstEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -355,7 +355,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isContinuousBurstEnabled:Lcom/android/camera/property/Property;
 
-    .line 89
+    .line 90
     const-string v0, "Settings.IsContinuousBurstLimited"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -370,7 +370,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isContinuousBurstLimited:Lcom/android/camera/property/Property;
 
-    .line 90
+    .line 91
     const-string v0, "Settings.IsContinuousBurstAutoReview"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -385,7 +385,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isContinuousBurstAutoReview:Lcom/android/camera/property/Property;
 
-    .line 91
+    .line 92
     const-string v0, "Settings.IsFaceDetectionEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -400,12 +400,12 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isFaceDetectionEnabled:Lcom/android/camera/property/Property;
 
-    .line 92
+    .line 93
     const-string v0, "Settings.IsGeoTaggingEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
 
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
@@ -415,7 +415,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isGeoTaggingEnabled:Lcom/android/camera/property/Property;
 
-    .line 93
+    .line 94
     const-string v0, "Settings.IsGridVisible"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -430,7 +430,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isGridVisible:Lcom/android/camera/property/Property;
 
-    .line 94
+    .line 95
     const-string v0, "Settings.IsObjectTrackingEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -445,7 +445,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isObjectTrackingEnabled:Lcom/android/camera/property/Property;
 
-    .line 95
+    .line 96
     const-string v0, "Settings.IsShutterSoundEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -460,7 +460,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isShutterSoundEnabled:Lcom/android/camera/property/Property;
 
-    .line 96
+    .line 97
     const-string v0, "Settings.IsSlowMotionEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -475,7 +475,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isSlowMotionEnabled:Lcom/android/camera/property/Property;
 
-    .line 97
+    .line 98
     const-string v0, "Settings.IsStereoRecordingEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -490,7 +490,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isStereoRecordingEnabled:Lcom/android/camera/property/Property;
 
-    .line 98
+    .line 99
     const-string v0, "Settings.IsTapCaptureEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -505,7 +505,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isTapCaptureEnabled:Lcom/android/camera/property/Property;
 
-    .line 99
+    .line 100
     const-string v0, "Settings.IsVideoStabilizationEnabled"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -520,7 +520,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isVideoStabilizationEnabled:Lcom/android/camera/property/Property;
 
-    .line 100
+    .line 101
     const-string v0, "Settings.IsWideRatioPhoto"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -535,7 +535,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->isWideRatioPhoto:Lcom/android/camera/property/Property;
 
-    .line 101
+    .line 102
     const-string v0, "Settings.RecordWithAudio"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -550,7 +550,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->recordWithAudio:Lcom/android/camera/property/Property;
 
-    .line 102
+    .line 103
     const-string v0, "Settings.StorageSlot"
 
     iget-object v1, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
@@ -563,7 +563,7 @@
 
     iput-object v0, p0, Lcom/android/camera/CameraSettings;->storageSlot:Lcom/android/camera/property/Property;
 
-    .line 103
+    .line 104
     return-void
 .end method
 
@@ -578,7 +578,7 @@
 
     const/4 v5, 0x1
 
-    .line 110
+    .line 111
     const/16 v0, 0x14
 
     new-array v12, v0, [Lcom/android/camera/property/PreferenceBinder;
@@ -729,21 +729,15 @@
 
     const/16 v0, 0x9
 
-    new-instance v6, Lcom/android/camera/property/BooleanPreferenceBinder;
+    new-instance v1, Lcom/android/camera/property/GeoTagPreferenceBinder;
 
-    const-string v8, "pref_camera_geo_tagging"
+    iget-object v2, p0, Lcom/android/camera/CameraSettings;->isGeoTaggingEnabled:Lcom/android/camera/property/Property;
 
-    iget-object v9, p0, Lcom/android/camera/CameraSettings;->isGeoTaggingEnabled:Lcom/android/camera/property/Property;
+    iget-object v3, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
 
-    iget-object v10, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
+    invoke-direct {v1, p1, v2, v3, v5}, Lcom/android/camera/property/GeoTagPreferenceBinder;-><init>(Lcom/android/camera/ISettingsOwner;Lcom/android/camera/property/Property;Ljava/lang/Object;Z)V
 
-    move-object v7, p1
-
-    move v11, v13
-
-    invoke-direct/range {v6 .. v11}, Lcom/android/camera/property/BooleanPreferenceBinder;-><init>(Lcom/android/camera/ISettingsOwner;Ljava/lang/String;Lcom/android/camera/property/Property;Ljava/lang/Object;Z)V
-
-    aput-object v6, v12, v0
+    aput-object v1, v12, v0
 
     const/16 v0, 0xa
 
@@ -917,7 +911,7 @@
 
     iput-object v12, p0, Lcom/android/camera/CameraSettings;->m_PreferenceBinders:[Lcom/android/camera/property/PreferenceBinder;
 
-    .line 153
+    .line 154
     return-void
 .end method
 
@@ -925,7 +919,7 @@
     .locals 5
 
     .prologue
-    .line 162
+    .line 163
     iget-object v0, p0, Lcom/android/camera/CameraSettings;->m_PreferenceBinders:[Lcom/android/camera/property/PreferenceBinder;
 
     .local v0, arr$:[Lcom/android/camera/property/PreferenceBinder;
@@ -940,26 +934,26 @@
 
     aget-object v1, v0, v2
 
-    .line 163
+    .line 164
     .local v1, binder:Lcom/android/camera/property/PreferenceBinder;,"Lcom/android/camera/property/PreferenceBinder<**>;"
     invoke-virtual {v1}, Lcom/android/camera/property/PreferenceBinder;->unbind()V
 
-    .line 162
+    .line 163
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 166
+    .line 167
     .end local v1           #binder:Lcom/android/camera/property/PreferenceBinder;,"Lcom/android/camera/property/PreferenceBinder<**>;"
     :cond_0
     iget-object v4, p0, Lcom/android/camera/CameraSettings;->m_PropertyOwnerKey:Ljava/lang/Object;
 
     invoke-static {v4}, Lcom/android/camera/property/Property;->destroyAllProperties(Ljava/lang/Object;)V
 
-    .line 169
+    .line 170
     invoke-super {p0}, Lcom/android/camera/Settings;->release()V
 
-    .line 170
+    .line 171
     return-void
 .end method
 
@@ -967,7 +961,7 @@
     .locals 4
 
     .prologue
-    .line 177
+    .line 178
     iget-object v0, p0, Lcom/android/camera/CameraSettings;->m_PreferenceBinders:[Lcom/android/camera/property/PreferenceBinder;
 
     .local v0, arr$:[Lcom/android/camera/property/PreferenceBinder;
@@ -982,16 +976,16 @@
 
     aget-object v1, v0, v2
 
-    .line 178
+    .line 179
     .local v1, binder:Lcom/android/camera/property/PreferenceBinder;,"Lcom/android/camera/property/PreferenceBinder<**>;"
     invoke-virtual {v1}, Lcom/android/camera/property/PreferenceBinder;->resetToDefaultValue()V
 
-    .line 177
+    .line 178
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 179
+    .line 180
     .end local v1           #binder:Lcom/android/camera/property/PreferenceBinder;,"Lcom/android/camera/property/PreferenceBinder<**>;"
     :cond_0
     return-void

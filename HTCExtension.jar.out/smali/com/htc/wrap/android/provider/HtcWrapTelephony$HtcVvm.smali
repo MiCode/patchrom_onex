@@ -38,17 +38,17 @@
     .locals 1
 
     .prologue
-    .line 1556
+    .line 1560
     sget-object v0, Landroid/provider/Telephony$HtcVvm;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcVvm;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1558
+    .line 1562
     sget-object v0, Landroid/provider/Telephony$HtcVvm;->VVM_ID_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcVvm;->VVM_ID_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1560
+    .line 1564
     sget-object v0, Landroid/provider/Telephony$HtcVvm;->SYNC_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcVvm;->SYNC_CONTENT_URI:Landroid/net/Uri;
@@ -60,7 +60,7 @@
     .locals 0
 
     .prologue
-    .line 1554
+    .line 1558
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

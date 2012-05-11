@@ -749,24 +749,20 @@
 
     if-nez v4, :cond_b
     goto :cond_b
-    .line 571
     const-string v4, "city_id"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 574
     :cond_b
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/internal/telephony/CallerInfo;->cnapName:Ljava/lang/String;
 
-    .line 576
     .local v11, cname:Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 581
     .local v9, FAKE_CNAME:Z
     invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 

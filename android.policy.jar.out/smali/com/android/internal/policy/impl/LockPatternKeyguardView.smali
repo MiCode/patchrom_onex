@@ -256,14 +256,14 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mHotSwapRunnable:Ljava/lang/Runnable;
 
-    .line 2578
+    .line 2587
     new-instance v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$7;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$7;-><init>(Lcom/android/internal/policy/impl/LockPatternKeyguardView;)V
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mFaceLockConnection:Landroid/content/ServiceConnection;
 
-    .line 2664
+    .line 2673
     new-instance v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$8;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$8;-><init>(Lcom/android/internal/policy/impl/LockPatternKeyguardView;)V
@@ -362,14 +362,14 @@
     .prologue
     const/16 v4, 0xd1
 
-    .line 2162
+    .line 2171
     sget-object v0, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
 
-    .line 2163
+    .line 2172
     .local v0, simState:Lcom/android/internal/telephony/IccCard$State;
     sget-object v1, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
 
-    .line 2165
+    .line 2174
     .local v1, uimState:Lcom/android/internal/telephony/IccCard$State;
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -377,28 +377,28 @@
 
     move-result-object v0
 
-    .line 2166
+    .line 2175
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getUimState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v1
 
-    .line 2168
+    .line 2177
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->stuckOnLockScreenBecauseSimMissing()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 2169
+    .line 2178
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
-    .line 2205
+    .line 2214
     :goto_0
     return-object v2
 
-    .line 2173
+    .line 2182
     :cond_0
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -416,13 +416,13 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 2177
+    .line 2186
     :cond_1
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 2180
+    .line 2189
     :cond_2
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -434,12 +434,12 @@
 
     if-lez v2, :cond_3
 
-    .line 2181
+    .line 2190
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 2185
+    .line 2194
     :cond_3
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->isSecure()Z
 
@@ -463,12 +463,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 2186
+    .line 2195
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 2190
+    .line 2199
     :cond_4
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -478,13 +478,13 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 2191
+    .line 2200
     :cond_5
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 2192
+    .line 2201
     :cond_6
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -503,7 +503,7 @@
 
     if-nez v2, :cond_a
 
-    .line 2194
+    .line 2203
     sget-short v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v3, 0x9b
@@ -514,19 +514,19 @@
 
     if-ne v2, v4, :cond_9
 
-    .line 2196
+    .line 2205
     :cond_8
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 2198
+    .line 2207
     :cond_9
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 2200
+    .line 2209
     :cond_a
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -536,13 +536,13 @@
 
     if-ne v1, v2, :cond_c
 
-    .line 2203
+    .line 2212
     :cond_b
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 2205
+    .line 2214
     :cond_c
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
@@ -553,14 +553,14 @@
     .locals 7
 
     .prologue
-    .line 2108
+    .line 2117
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
 
-    .line 2109
+    .line 2118
     .local v2, simState:Lcom/android/internal/telephony/IccCard$State;
     sget-object v3, Lcom/android/internal/telephony/IccCard$State;->READY:Lcom/android/internal/telephony/IccCard$State;
 
-    .line 2111
+    .line 2120
     .local v3, uimState:Lcom/android/internal/telephony/IccCard$State;
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -568,14 +568,14 @@
 
     move-result-object v3
 
-    .line 2112
+    .line 2121
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v4}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState()Lcom/android/internal/telephony/IccCard$State;
 
     move-result-object v2
 
-    .line 2115
+    .line 2124
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v4}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getDeviceLockType()I
@@ -586,15 +586,15 @@
 
     if-lez v4, :cond_0
 
-    .line 2116
+    .line 2125
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Device:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 2157
+    .line 2166
     .local v0, currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :goto_0
     return-object v0
 
-    .line 2117
+    .line 2126
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_0
     invoke-virtual {v2}, Lcom/android/internal/telephony/IccCard$State;->isPinLocked()Z
@@ -609,13 +609,13 @@
 
     if-eqz v4, :cond_1
 
-    .line 2118
+    .line 2127
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->DualPin:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2119
+    .line 2128
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_1
     invoke-virtual {v3}, Lcom/android/internal/telephony/IccCard$State;->isPinLocked()Z
@@ -624,26 +624,26 @@
 
     if-eqz v4, :cond_2
 
-    .line 2120
+    .line 2129
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->UimPin:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2121
+    .line 2130
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_2
     sget-object v4, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
     if-ne v2, v4, :cond_3
 
-    .line 2122
+    .line 2131
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPin:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2123
+    .line 2132
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_3
     sget-object v4, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
@@ -656,26 +656,26 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 2125
+    .line 2134
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPuk:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2126
+    .line 2135
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_4
     sget-object v4, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
     if-ne v2, v4, :cond_5
 
-    .line 2127
+    .line 2136
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->NetworkLock:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2128
+    .line 2137
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_5
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
@@ -686,13 +686,13 @@
 
     if-eqz v4, :cond_6
 
-    .line 2129
+    .line 2138
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Device:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2131
+    .line 2140
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_6
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -701,11 +701,11 @@
 
     move-result v1
 
-    .line 2132
+    .line 2141
     .local v1, mode:I
     sparse-switch v1, :sswitch_data_0
 
-    .line 2154
+    .line 2163
     new-instance v4, Ljava/lang/IllegalStateException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -730,7 +730,7 @@
 
     throw v4
 
-    .line 2138
+    .line 2147
     :sswitch_0
     iget-boolean v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mForgotPattern:Z
 
@@ -744,23 +744,23 @@
 
     if-eqz v4, :cond_8
 
-    .line 2139
+    .line 2148
     :cond_7
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Account:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2141
+    .line 2150
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_8
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Password:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 2143
+    .line 2152
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 2147
+    .line 2156
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :sswitch_1
     iget-boolean v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mForgotPattern:Z
@@ -775,23 +775,23 @@
 
     if-eqz v4, :cond_a
 
-    .line 2148
+    .line 2157
     :cond_9
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Account:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto/16 :goto_0
 
-    .line 2150
+    .line 2159
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_a
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Pattern:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 2152
+    .line 2161
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto/16 :goto_0
 
-    .line 2132
+    .line 2141
     nop
 
     :sswitch_data_0
@@ -813,16 +813,16 @@
 
     const/4 v3, 0x0
 
-    .line 2047
+    .line 2056
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->getUnlockMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     move-result-object v1
 
-    .line 2048
+    .line 2057
     .local v1, unlockMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     const/4 v0, 0x0
 
-    .line 2049
+    .line 2058
     .local v0, secure:Z
     sget-object v4, Lcom/android/internal/policy/impl/LockPatternKeyguardView$9;->$SwitchMap$com$android$internal$policy$impl$LockPatternKeyguardView$UnlockMode:[I
 
@@ -834,7 +834,7 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 2102
+    .line 2111
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -859,7 +859,7 @@
 
     throw v2
 
-    .line 2053
+    .line 2062
     :pswitch_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -887,17 +887,17 @@
 
     move v0, v2
 
-    .line 2104
+    .line 2113
     :goto_0
     return v0
 
     :cond_0
     move v0, v3
 
-    .line 2053
+    .line 2062
     goto :goto_0
 
-    .line 2058
+    .line 2067
     :pswitch_1
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -911,17 +911,17 @@
 
     move v0, v2
 
-    .line 2059
+    .line 2068
     :goto_1
     goto :goto_0
 
     :cond_1
     move v0, v3
 
-    .line 2058
+    .line 2067
     goto :goto_1
 
-    .line 2063
+    .line 2072
     :pswitch_2
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isPhoneFeatureEnabled()Z
 
@@ -935,7 +935,7 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 2065
+    .line 2074
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v4}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState()Lcom/android/internal/telephony/IccCard$State;
@@ -956,7 +956,7 @@
 
     goto :goto_2
 
-    .line 2069
+    .line 2078
     :cond_3
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -970,17 +970,17 @@
 
     move v0, v2
 
-    .line 2071
+    .line 2080
     :goto_3
     goto :goto_0
 
     :cond_4
     move v0, v3
 
-    .line 2069
+    .line 2078
     goto :goto_3
 
-    .line 2074
+    .line 2083
     :pswitch_3
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -994,24 +994,24 @@
 
     move v0, v2
 
-    .line 2075
+    .line 2084
     :goto_4
     goto :goto_0
 
     :cond_5
     move v0, v3
 
-    .line 2074
+    .line 2083
     goto :goto_4
 
-    .line 2078
+    .line 2087
     :pswitch_4
     const/4 v0, 0x1
 
-    .line 2079
+    .line 2088
     goto :goto_0
 
-    .line 2083
+    .line 2092
     :pswitch_5
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -1039,24 +1039,24 @@
 
     move v0, v2
 
-    .line 2086
+    .line 2095
     :goto_5
     goto :goto_0
 
     :cond_6
     move v0, v3
 
-    .line 2083
+    .line 2092
     goto :goto_5
 
-    .line 2089
+    .line 2098
     :pswitch_6
     const/4 v0, 0x1
 
-    .line 2090
+    .line 2099
     goto :goto_0
 
-    .line 2094
+    .line 2103
     :pswitch_7
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -1068,10 +1068,10 @@
 
     move-result v0
 
-    .line 2095
+    .line 2104
     goto :goto_0
 
-    .line 2097
+    .line 2106
     :pswitch_8
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -1099,17 +1099,17 @@
 
     move v0, v2
 
-    .line 2099
+    .line 2108
     :goto_6
     goto/16 :goto_0
 
     :cond_7
     move v0, v3
 
-    .line 2097
+    .line 2106
     goto :goto_6
 
-    .line 2049
+    .line 2058
     nop
 
     :pswitch_data_0
@@ -1832,7 +1832,7 @@
 
     const/4 v4, 0x0
 
-    .line 926
+    .line 932
     iget v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mFailedFaceUnlockAttempts:I
 
     const/16 v6, 0xf
@@ -1841,7 +1841,7 @@
 
     move v2, v3
 
-    .line 928
+    .line 934
     .local v2, tooManyFaceUnlockTries:Z
     :goto_0
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
@@ -1850,7 +1850,7 @@
 
     move-result v1
 
-    .line 929
+    .line 935
     .local v1, failedBackupAttempts:I
     const/4 v5, 0x5
 
@@ -1858,7 +1858,7 @@
 
     move v0, v3
 
-    .line 931
+    .line 937
     .local v0, backupIsTimedOut:Z
     :goto_1
     if-eqz v2, :cond_0
@@ -1885,7 +1885,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 932
+    .line 938
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -1903,22 +1903,22 @@
 
     if-nez v0, :cond_4
 
-    .line 936
+    .line 942
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->bindToFaceLock()V
 
-    .line 939
+    .line 945
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->usingFaceLock()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 940
+    .line 946
     const-wide/16 v3, 0xbb8
 
     invoke-direct {p0, v3, v4}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showFaceLockAreaWithTimeout(J)V
 
-    .line 945
+    .line 951
     :cond_1
     :goto_2
     return-void
@@ -1929,7 +1929,7 @@
     :cond_2
     move v2, v4
 
-    .line 926
+    .line 932
     goto :goto_0
 
     .restart local v1       #failedBackupAttempts:I
@@ -1937,10 +1937,10 @@
     :cond_3
     move v0, v4
 
-    .line 929
+    .line 935
     goto :goto_1
 
-    .line 943
+    .line 949
     .restart local v0       #backupIsTimedOut:Z
     :cond_4
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->hideFaceLockArea()V
@@ -1952,14 +1952,14 @@
     .locals 18
 
     .prologue
-    .line 1576
+    .line 1582
     const-string v2, "TAG"
 
     const-string v3, "createAccountUnlockScreen() ..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1577
+    .line 1583
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -1968,19 +1968,19 @@
 
     move-result-object v16
 
-    .line 1578
+    .line 1584
     .local v16, pm:Landroid/content/pm/PackageManager;
     const-string v12, "com.htc.lockscreen"
 
-    .line 1579
+    .line 1585
     .local v12, packageName:Ljava/lang/String;
     const-string v17, "com.htc.lockscreen.HtcAccountUnlockScreen"
 
-    .line 1580
+    .line 1586
     .local v17, screenClass:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1582
+    .line 1588
     .local v1, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -1993,7 +1993,7 @@
 
     move-result-object v15
 
-    .line 1584
+    .line 1590
     .local v15, pluginContext:Landroid/content/Context;
     const/4 v2, 0x0
 
@@ -2003,7 +2003,7 @@
 
     move-result-object v11
 
-    .line 1585
+    .line 1591
     .local v11, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v2, "TAG"
 
@@ -2027,12 +2027,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1586
+    .line 1592
     invoke-virtual {v15}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v10
 
-    .line 1587
+    .line 1593
     .local v10, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
@@ -2042,7 +2042,7 @@
 
     move-result-object v7
 
-    .line 1590
+    .line 1596
     .local v7, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v2, 0x6
 
@@ -2084,7 +2084,7 @@
 
     aput-object v3, v13, v2
 
-    .line 1592
+    .line 1598
     .local v13, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v13, [Ljava/lang/Class;
 
@@ -2093,7 +2093,7 @@
 
     move-result-object v8
 
-    .line 1593
+    .line 1599
     .local v8, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x6
 
@@ -2143,7 +2143,7 @@
 
     aput-object v15, v14, v2
 
-    .line 1595
+    .line 1601
     .local v14, params:[Ljava/lang/Object;
     invoke-virtual {v8, v14}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2158,7 +2158,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1602
+    .line 1608
     .end local v7           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v8           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v10           #pClassLoader:Ljava/lang/ClassLoader;
@@ -2168,7 +2168,7 @@
     :goto_0
     if-nez v1, :cond_0
 
-    .line 1603
+    .line 1609
     new-instance v1, Lcom/android/internal/policy/impl/AccountUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -2194,16 +2194,16 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/policy/impl/AccountUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Lcom/android/internal/widget/LockPatternUtils;)V
 
-    .line 1610
+    .line 1616
     .restart local v1       #screenPlugin:Landroid/view/View;
     :cond_0
     return-object v1
 
-    .line 1596
+    .line 1602
     :catch_0
     move-exception v9
 
-    .line 1597
+    .line 1603
     .local v9, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "TAG"
 
@@ -2229,12 +2229,12 @@
 
     goto :goto_0
 
-    .line 1598
+    .line 1604
     .end local v9           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v9
 
-    .line 1599
+    .line 1605
     .local v9, ex:Ljava/lang/Exception;
     const-string v2, "TAG"
 
@@ -2269,14 +2269,14 @@
     .locals 16
 
     .prologue
-    .line 1544
+    .line 1550
     const-string v13, "TAG"
 
     const-string v14, "createDeviceUnlockScreen() ..."
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1545
+    .line 1551
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -2285,19 +2285,19 @@
 
     move-result-object v10
 
-    .line 1546
+    .line 1552
     .local v10, pm:Landroid/content/pm/PackageManager;
     const-string v6, "com.htc.cs"
 
-    .line 1547
+    .line 1553
     .local v6, packageName:Ljava/lang/String;
     const-string v11, "com.htc.cs.activity.dashboard.DeviceCSLockedScreen"
 
-    .line 1548
+    .line 1554
     .local v11, screenClass:Ljava/lang/String;
     const/4 v12, 0x0
 
-    .line 1550
+    .line 1556
     .local v12, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -2310,7 +2310,7 @@
 
     move-result-object v9
 
-    .line 1552
+    .line 1558
     .local v9, pluginContext:Landroid/content/Context;
     const/4 v13, 0x0
 
@@ -2318,7 +2318,7 @@
 
     move-result-object v5
 
-    .line 1553
+    .line 1559
     .local v5, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v13, "TAG"
 
@@ -2342,12 +2342,12 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1554
+    .line 1560
     invoke-virtual {v9}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v4
 
-    .line 1555
+    .line 1561
     .local v4, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v13, 0x1
 
@@ -2355,7 +2355,7 @@
 
     move-result-object v1
 
-    .line 1558
+    .line 1564
     .local v1, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v13, 0x5
 
@@ -2391,7 +2391,7 @@
 
     aput-object v14, v7, v13
 
-    .line 1560
+    .line 1566
     .local v7, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v7, [Ljava/lang/Class;
 
@@ -2400,7 +2400,7 @@
 
     move-result-object v2
 
-    .line 1561
+    .line 1567
     .local v2, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v13, 0x5
 
@@ -2442,7 +2442,7 @@
 
     aput-object v9, v8, v13
 
-    .line 1563
+    .line 1569
     .local v8, params:[Ljava/lang/Object;
     invoke-virtual {v2, v8}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2457,7 +2457,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1569
+    .line 1575
     .end local v1           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v2           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v4           #pClassLoader:Ljava/lang/ClassLoader;
@@ -2467,20 +2467,20 @@
     :goto_0
     if-nez v12, :cond_0
 
-    .line 1570
+    .line 1576
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->createDeviceUnlockScreen()Landroid/view/View;
 
     move-result-object v12
 
-    .line 1572
+    .line 1578
     :cond_0
     return-object v12
 
-    .line 1564
+    .line 1570
     :catch_0
     move-exception v3
 
-    .line 1565
+    .line 1571
     .local v3, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v13, "TAG"
 
@@ -2506,12 +2506,12 @@
 
     goto :goto_0
 
-    .line 1566
+    .line 1572
     .end local v3           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v3
 
-    .line 1567
+    .line 1573
     .local v3, ex:Ljava/lang/Exception;
     const-string v13, "TAG"
 
@@ -2546,14 +2546,14 @@
     .locals 17
 
     .prologue
-    .line 1508
+    .line 1514
     const-string v13, "TAG"
 
     const-string v14, "createDeviceUnlockScreen() ..."
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1509
+    .line 1515
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -2562,19 +2562,19 @@
 
     move-result-object v10
 
-    .line 1510
+    .line 1516
     .local v10, pm:Landroid/content/pm/PackageManager;
     const-string v6, "com.htc.lockscreen"
 
-    .line 1511
+    .line 1517
     .local v6, packageName:Ljava/lang/String;
     const-string v11, "com.htc.lockscreen.HtcDeviceUnlockScreen"
 
-    .line 1512
+    .line 1518
     .local v11, screenClass:Ljava/lang/String;
     const/4 v12, 0x0
 
-    .line 1514
+    .line 1520
     .local v12, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -2587,7 +2587,7 @@
 
     move-result-object v9
 
-    .line 1516
+    .line 1522
     .local v9, pluginContext:Landroid/content/Context;
     const/4 v13, 0x0
 
@@ -2595,7 +2595,7 @@
 
     move-result-object v5
 
-    .line 1517
+    .line 1523
     .local v5, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v13, "TAG"
 
@@ -2619,12 +2619,12 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1518
+    .line 1524
     invoke-virtual {v9}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v4
 
-    .line 1519
+    .line 1525
     .local v4, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v13, 0x1
 
@@ -2632,7 +2632,7 @@
 
     move-result-object v1
 
-    .line 1522
+    .line 1528
     .local v1, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v13, 0x5
 
@@ -2668,7 +2668,7 @@
 
     aput-object v14, v7, v13
 
-    .line 1524
+    .line 1530
     .local v7, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v7, [Ljava/lang/Class;
 
@@ -2677,7 +2677,7 @@
 
     move-result-object v2
 
-    .line 1525
+    .line 1531
     .local v2, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v13, 0x5
 
@@ -2719,7 +2719,7 @@
 
     aput-object v9, v8, v13
 
-    .line 1527
+    .line 1533
     .local v8, params:[Ljava/lang/Object;
     invoke-virtual {v2, v8}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2734,7 +2734,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1533
+    .line 1539
     .end local v1           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v2           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v4           #pClassLoader:Ljava/lang/ClassLoader;
@@ -2744,7 +2744,7 @@
     :goto_0
     if-nez v12, :cond_0
 
-    .line 1534
+    .line 1540
     new-instance v12, Lcom/android/internal/policy/impl/DeviceUnlockScreen;
 
     .end local v12           #screenPlugin:Landroid/view/View;
@@ -2768,16 +2768,16 @@
 
     invoke-direct/range {v12 .. v16}, Lcom/android/internal/policy/impl/DeviceUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;)V
 
-    .line 1540
+    .line 1546
     .restart local v12       #screenPlugin:Landroid/view/View;
     :cond_0
     return-object v12
 
-    .line 1528
+    .line 1534
     :catch_0
     move-exception v3
 
-    .line 1529
+    .line 1535
     .local v3, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v13, "TAG"
 
@@ -2803,12 +2803,12 @@
 
     goto :goto_0
 
-    .line 1530
+    .line 1536
     .end local v3           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v3
 
-    .line 1531
+    .line 1537
     .local v3, ex:Ljava/lang/Exception;
     const-string v13, "TAG"
 
@@ -2843,14 +2843,14 @@
     .locals 18
 
     .prologue
-    .line 2210
+    .line 2219
     const-string v2, "LockPatternKeyguardView"
 
     const-string v3, "createDualIccUnlockScreen() ..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2211
+    .line 2220
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -2859,19 +2859,19 @@
 
     move-result-object v16
 
-    .line 2212
+    .line 2221
     .local v16, pm:Landroid/content/pm/PackageManager;
     const-string v12, "com.android.phone"
 
-    .line 2213
+    .line 2222
     .local v12, packageName:Ljava/lang/String;
     const-string v17, "com.android.phone.dualsim.DualIccUnlockScreen"
 
-    .line 2214
+    .line 2223
     .local v17, screenClass:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 2216
+    .line 2225
     .local v1, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -2884,7 +2884,7 @@
 
     move-result-object v15
 
-    .line 2218
+    .line 2227
     .local v15, pluginContext:Landroid/content/Context;
     const/4 v2, 0x0
 
@@ -2894,7 +2894,7 @@
 
     move-result-object v11
 
-    .line 2219
+    .line 2228
     .local v11, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v2, "LockPatternKeyguardView"
 
@@ -2918,12 +2918,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2220
+    .line 2229
     invoke-virtual {v15}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v10
 
-    .line 2221
+    .line 2230
     .local v10, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
@@ -2933,7 +2933,7 @@
 
     move-result-object v7
 
-    .line 2224
+    .line 2233
     .local v7, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v2, 0x6
 
@@ -2975,7 +2975,7 @@
 
     aput-object v3, v13, v2
 
-    .line 2226
+    .line 2235
     .local v13, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v13, [Ljava/lang/Class;
 
@@ -2984,7 +2984,7 @@
 
     move-result-object v8
 
-    .line 2227
+    .line 2236
     .local v8, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x6
 
@@ -3034,7 +3034,7 @@
 
     aput-object v15, v14, v2
 
-    .line 2229
+    .line 2238
     .local v14, params:[Ljava/lang/Object;
     invoke-virtual {v8, v14}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3049,7 +3049,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2236
+    .line 2245
     .end local v7           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v8           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v10           #pClassLoader:Ljava/lang/ClassLoader;
@@ -3059,7 +3059,7 @@
     :goto_0
     if-nez v1, :cond_0
 
-    .line 2237
+    .line 2246
     new-instance v1, Lcom/android/internal/policy/impl/SimUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -3085,16 +3085,16 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/policy/impl/SimUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Lcom/android/internal/widget/LockPatternUtils;)V
 
-    .line 2244
+    .line 2253
     .restart local v1       #screenPlugin:Landroid/view/View;
     :cond_0
     return-object v1
 
-    .line 2230
+    .line 2239
     :catch_0
     move-exception v9
 
-    .line 2231
+    .line 2240
     .local v9, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "LockPatternKeyguardView"
 
@@ -3120,12 +3120,12 @@
 
     goto :goto_0
 
-    .line 2232
+    .line 2241
     .end local v9           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v9
 
-    .line 2233
+    .line 2242
     .local v9, ex:Ljava/lang/Exception;
     const-string v2, "LockPatternKeyguardView"
 
@@ -3161,14 +3161,14 @@
     .parameter "phoneType"
 
     .prologue
-    .line 2289
+    .line 2298
     const-string v2, "LockPatternKeyguardView"
 
     const-string v3, "createHtcIccUnlockScreen() ..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2290
+    .line 2299
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -3177,19 +3177,19 @@
 
     move-result-object v16
 
-    .line 2291
+    .line 2300
     .local v16, pm:Landroid/content/pm/PackageManager;
     const-string v12, "com.android.phone"
 
-    .line 2292
+    .line 2301
     .local v12, packageName:Ljava/lang/String;
     const-string v17, "com.android.phone.dualsim.HtcIccUnlockScreen"
 
-    .line 2293
+    .line 2302
     .local v17, screenClass:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 2295
+    .line 2304
     .local v1, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -3202,7 +3202,7 @@
 
     move-result-object v15
 
-    .line 2297
+    .line 2306
     .local v15, pluginContext:Landroid/content/Context;
     const/4 v2, 0x0
 
@@ -3212,7 +3212,7 @@
 
     move-result-object v11
 
-    .line 2298
+    .line 2307
     .local v11, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v2, "LockPatternKeyguardView"
 
@@ -3236,12 +3236,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2299
+    .line 2308
     invoke-virtual {v15}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v10
 
-    .line 2300
+    .line 2309
     .local v10, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
@@ -3251,7 +3251,7 @@
 
     move-result-object v7
 
-    .line 2303
+    .line 2312
     .local v7, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v2, 0x7
 
@@ -3299,7 +3299,7 @@
 
     aput-object v3, v13, v2
 
-    .line 2305
+    .line 2314
     .local v13, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v13, [Ljava/lang/Class;
 
@@ -3308,7 +3308,7 @@
 
     move-result-object v8
 
-    .line 2306
+    .line 2315
     .local v8, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x7
 
@@ -3366,7 +3366,7 @@
 
     aput-object v3, v14, v2
 
-    .line 2308
+    .line 2317
     .local v14, params:[Ljava/lang/Object;
     invoke-virtual {v8, v14}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3381,7 +3381,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2315
+    .line 2324
     .end local v7           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v8           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v10           #pClassLoader:Ljava/lang/ClassLoader;
@@ -3391,7 +3391,7 @@
     :goto_0
     if-nez v1, :cond_0
 
-    .line 2316
+    .line 2325
     new-instance v1, Lcom/android/internal/policy/impl/SimUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -3417,16 +3417,16 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/policy/impl/SimUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Lcom/android/internal/widget/LockPatternUtils;)V
 
-    .line 2323
+    .line 2332
     .restart local v1       #screenPlugin:Landroid/view/View;
     :cond_0
     return-object v1
 
-    .line 2309
+    .line 2318
     :catch_0
     move-exception v9
 
-    .line 2310
+    .line 2319
     .local v9, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "LockPatternKeyguardView"
 
@@ -3452,12 +3452,12 @@
 
     goto :goto_0
 
-    .line 2311
+    .line 2320
     .end local v9           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v9
 
-    .line 2312
+    .line 2321
     .local v9, ex:Ljava/lang/Exception;
     const-string v2, "LockPatternKeyguardView"
 
@@ -3492,29 +3492,29 @@
     .locals 15
 
     .prologue
-    .line 1403
+    .line 1409
     const-string v12, "TAG"
 
     const-string v13, "createLockScreenPlugin() ..."
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1404
+    .line 1410
     iget-object v12, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v12}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v11
 
-    .line 1405
+    .line 1411
     .local v11, pm:Landroid/content/pm/PackageManager;
     const-string v7, "com.htc.lockscreen"
 
-    .line 1406
+    .line 1412
     .local v7, packageName:Ljava/lang/String;
     const-string v3, "com.htc.lockscreen.HtcLockScreen"
 
-    .line 1408
+    .line 1414
     .local v3, lockScreenClass:Ljava/lang/String;
     :try_start_0
     iget-object v12, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -3525,7 +3525,7 @@
 
     move-result-object v10
 
-    .line 1410
+    .line 1416
     .local v10, pluginContext:Landroid/content/Context;
     const/4 v12, 0x0
 
@@ -3533,7 +3533,7 @@
 
     move-result-object v6
 
-    .line 1411
+    .line 1417
     .local v6, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v12, "TAG"
 
@@ -3557,12 +3557,12 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1412
+    .line 1418
     invoke-virtual {v10}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v5
 
-    .line 1413
+    .line 1419
     .local v5, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v12, 0x1
 
@@ -3570,7 +3570,7 @@
 
     move-result-object v0
 
-    .line 1416
+    .line 1422
     .local v0, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v12, 0x6
 
@@ -3612,7 +3612,7 @@
 
     aput-object v13, v8, v12
 
-    .line 1418
+    .line 1424
     .local v8, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v8, [Ljava/lang/Class;
 
@@ -3621,7 +3621,7 @@
 
     move-result-object v1
 
-    .line 1419
+    .line 1425
     .local v1, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v12, 0x6
 
@@ -3661,7 +3661,7 @@
 
     aput-object v10, v9, v12
 
-    .line 1421
+    .line 1427
     .local v9, params:[Ljava/lang/Object;
     invoke-virtual {v1, v9}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3672,7 +3672,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1428
+    .line 1434
     .end local v0           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v1           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v5           #pClassLoader:Ljava/lang/ClassLoader;
@@ -3682,11 +3682,11 @@
     :goto_0
     return-object v4
 
-    .line 1423
+    .line 1429
     :catch_0
     move-exception v2
 
-    .line 1424
+    .line 1430
     .local v2, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v12, "TAG"
 
@@ -3710,18 +3710,18 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1428
+    .line 1434
     .end local v2           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :goto_1
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1425
+    .line 1431
     :catch_1
     move-exception v2
 
-    .line 1426
+    .line 1432
     .local v2, ex:Ljava/lang/Exception;
     const-string v12, "TAG"
 
@@ -3757,31 +3757,31 @@
     .parameter "phoneType"
 
     .prologue
-    .line 2249
+    .line 2258
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     if-eqz v2, :cond_0
 
-    .line 2250
+    .line 2259
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     check-cast v2, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v2}, Lcom/android/internal/policy/impl/KeyguardScreen;->onPause()V
 
-    .line 2251
+    .line 2260
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     check-cast v2, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v2}, Lcom/android/internal/policy/impl/KeyguardScreen;->cleanUp()V
 
-    .line 2252
+    .line 2261
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->removeView(Landroid/view/View;)V
 
-    .line 2255
+    .line 2264
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->createHtcIccUnlockScreen(I)Landroid/view/View;
 
@@ -3789,26 +3789,26 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
-    .line 2256
+    .line 2265
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2257
+    .line 2266
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->addView(Landroid/view/View;)V
 
-    .line 2260
+    .line 2269
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
-    .line 2261
+    .line 2270
     .local v0, goneScreen:Landroid/view/View;
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
-    .line 2265
+    .line 2274
     .local v1, visibleScreen:Landroid/view/View;
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mWindowController:Lcom/android/internal/policy/impl/KeyguardWindowController;
 
@@ -3822,12 +3822,12 @@
 
     invoke-interface {v3, v2}, Lcom/android/internal/policy/impl/KeyguardWindowController;->setNeedsInput(Z)V
 
-    .line 2267
+    .line 2276
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mScreenOn:Z
 
     if-eqz v2, :cond_2
 
-    .line 2268
+    .line 2277
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -3838,12 +3838,12 @@
 
     move-object v2, v0
 
-    .line 2269
+    .line 2278
     check-cast v2, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v2}, Lcom/android/internal/policy/impl/KeyguardScreen;->onPause()V
 
-    .line 2271
+    .line 2280
     :cond_1
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -3853,37 +3853,37 @@
 
     move-object v2, v1
 
-    .line 2272
+    .line 2281
     check-cast v2, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v2}, Lcom/android/internal/policy/impl/KeyguardScreen;->onResume()V
 
-    .line 2276
+    .line 2285
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 2277
+    .line 2286
     const/16 v2, 0x8
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2279
+    .line 2288
     :cond_3
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2280
+    .line 2289
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->requestLayout()V
 
-    .line 2282
+    .line 2291
     invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 2283
+    .line 2292
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3916,7 +3916,7 @@
 
     throw v2
 
-    .line 2286
+    .line 2295
     :cond_4
     return-void
 .end method
@@ -3925,14 +3925,14 @@
     .locals 18
 
     .prologue
-    .line 1663
+    .line 1669
     const-string v2, "TAG"
 
     const-string v3, "createNetworkUnlockScreenFromPhone() ..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1664
+    .line 1670
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -3941,19 +3941,19 @@
 
     move-result-object v16
 
-    .line 1665
+    .line 1671
     .local v16, pm:Landroid/content/pm/PackageManager;
     const-string v12, "com.android.phone"
 
-    .line 1666
+    .line 1672
     .local v12, packageName:Ljava/lang/String;
     const-string v17, "com.android.phone.NetworkUnlockScreen"
 
-    .line 1667
+    .line 1673
     .local v17, screenClass:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1669
+    .line 1675
     .local v1, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -3966,7 +3966,7 @@
 
     move-result-object v15
 
-    .line 1671
+    .line 1677
     .local v15, pluginContext:Landroid/content/Context;
     const/4 v2, 0x0
 
@@ -3976,7 +3976,7 @@
 
     move-result-object v11
 
-    .line 1672
+    .line 1678
     .local v11, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v2, "TAG"
 
@@ -4000,12 +4000,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1673
+    .line 1679
     invoke-virtual {v15}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v10
 
-    .line 1674
+    .line 1680
     .local v10, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
@@ -4015,7 +4015,7 @@
 
     move-result-object v7
 
-    .line 1677
+    .line 1683
     .local v7, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v2, 0x6
 
@@ -4057,7 +4057,7 @@
 
     aput-object v3, v13, v2
 
-    .line 1680
+    .line 1686
     .local v13, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v13, [Ljava/lang/Class;
 
@@ -4066,7 +4066,7 @@
 
     move-result-object v8
 
-    .line 1681
+    .line 1687
     .local v8, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x6
 
@@ -4116,7 +4116,7 @@
 
     aput-object v15, v14, v2
 
-    .line 1683
+    .line 1689
     .local v14, params:[Ljava/lang/Object;
     invoke-virtual {v8, v14}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -4131,7 +4131,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1690
+    .line 1696
     .end local v7           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v8           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v10           #pClassLoader:Ljava/lang/ClassLoader;
@@ -4141,7 +4141,7 @@
     :goto_0
     if-nez v1, :cond_0
 
-    .line 1691
+    .line 1697
     new-instance v1, Lcom/android/internal/policy/impl/SimUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -4167,16 +4167,16 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/policy/impl/SimUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Lcom/android/internal/widget/LockPatternUtils;)V
 
-    .line 1698
+    .line 1704
     .restart local v1       #screenPlugin:Landroid/view/View;
     :cond_0
     return-object v1
 
-    .line 1684
+    .line 1690
     :catch_0
     move-exception v9
 
-    .line 1685
+    .line 1691
     .local v9, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "TAG"
 
@@ -4202,12 +4202,12 @@
 
     goto :goto_0
 
-    .line 1686
+    .line 1692
     .end local v9           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v9
 
-    .line 1687
+    .line 1693
     .local v9, ex:Ljava/lang/Exception;
     const-string v2, "TAG"
 
@@ -4242,14 +4242,14 @@
     .locals 18
 
     .prologue
-    .line 1433
+    .line 1439
     const-string v2, "TAG"
 
     const-string v3, "createPasswordUnlockScreen() ..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1434
+    .line 1440
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -4258,19 +4258,19 @@
 
     move-result-object v16
 
-    .line 1435
+    .line 1441
     .local v16, pm:Landroid/content/pm/PackageManager;
     const-string v12, "com.htc.lockscreen"
 
-    .line 1436
+    .line 1442
     .local v12, packageName:Ljava/lang/String;
     const-string v17, "com.htc.lockscreen.HtcPasswordUnlockScreen"
 
-    .line 1437
+    .line 1443
     .local v17, screenClass:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1439
+    .line 1445
     .local v1, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -4283,7 +4283,7 @@
 
     move-result-object v15
 
-    .line 1441
+    .line 1447
     .local v15, pluginContext:Landroid/content/Context;
     const/4 v2, 0x0
 
@@ -4293,7 +4293,7 @@
 
     move-result-object v11
 
-    .line 1442
+    .line 1448
     .local v11, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v2, "TAG"
 
@@ -4317,12 +4317,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1443
+    .line 1449
     invoke-virtual {v15}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v10
 
-    .line 1444
+    .line 1450
     .local v10, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
@@ -4332,7 +4332,7 @@
 
     move-result-object v7
 
-    .line 1447
+    .line 1453
     .local v7, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v2, 0x6
 
@@ -4374,7 +4374,7 @@
 
     aput-object v3, v13, v2
 
-    .line 1449
+    .line 1455
     .local v13, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v13, [Ljava/lang/Class;
 
@@ -4383,7 +4383,7 @@
 
     move-result-object v8
 
-    .line 1450
+    .line 1456
     .local v8, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x6
 
@@ -4433,7 +4433,7 @@
 
     aput-object v15, v14, v2
 
-    .line 1452
+    .line 1458
     .local v14, params:[Ljava/lang/Object;
     invoke-virtual {v8, v14}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -4448,7 +4448,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1458
+    .line 1464
     .end local v7           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v8           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v10           #pClassLoader:Ljava/lang/ClassLoader;
@@ -4458,7 +4458,7 @@
     :goto_0
     if-nez v1, :cond_0
 
-    .line 1459
+    .line 1465
     new-instance v1, Lcom/android/internal/policy/impl/PasswordUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -4484,16 +4484,16 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/policy/impl/PasswordUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;)V
 
-    .line 1466
+    .line 1472
     .restart local v1       #screenPlugin:Landroid/view/View;
     :cond_0
     return-object v1
 
-    .line 1453
+    .line 1459
     :catch_0
     move-exception v9
 
-    .line 1454
+    .line 1460
     .local v9, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "TAG"
 
@@ -4519,12 +4519,12 @@
 
     goto :goto_0
 
-    .line 1455
+    .line 1461
     .end local v9           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v9
 
-    .line 1456
+    .line 1462
     .local v9, ex:Ljava/lang/Exception;
     const-string v2, "TAG"
 
@@ -4559,14 +4559,14 @@
     .locals 19
 
     .prologue
-    .line 1470
+    .line 1476
     const-string v2, "TAG"
 
     const-string v3, "createPatternUnlockScreen() ..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1471
+    .line 1477
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -4575,19 +4575,19 @@
 
     move-result-object v17
 
-    .line 1472
+    .line 1478
     .local v17, pm:Landroid/content/pm/PackageManager;
     const-string v13, "com.htc.lockscreen"
 
-    .line 1473
+    .line 1479
     .local v13, packageName:Ljava/lang/String;
     const-string v18, "com.htc.lockscreen.HtcPatternUnlockScreen"
 
-    .line 1474
+    .line 1480
     .local v18, screenClass:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1476
+    .line 1482
     .local v1, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -4600,7 +4600,7 @@
 
     move-result-object v16
 
-    .line 1478
+    .line 1484
     .local v16, pluginContext:Landroid/content/Context;
     const/4 v2, 0x0
 
@@ -4610,7 +4610,7 @@
 
     move-result-object v12
 
-    .line 1479
+    .line 1485
     .local v12, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v2, "TAG"
 
@@ -4634,12 +4634,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1480
+    .line 1486
     invoke-virtual/range {v16 .. v16}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v11
 
-    .line 1481
+    .line 1487
     .local v11, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
@@ -4649,7 +4649,7 @@
 
     move-result-object v8
 
-    .line 1484
+    .line 1490
     .local v8, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v2, 0x7
 
@@ -4697,7 +4697,7 @@
 
     aput-object v3, v14, v2
 
-    .line 1486
+    .line 1492
     .local v14, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v14, [Ljava/lang/Class;
 
@@ -4706,7 +4706,7 @@
 
     move-result-object v9
 
-    .line 1487
+    .line 1493
     .local v9, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x7
 
@@ -4772,7 +4772,7 @@
 
     aput-object v16, v15, v2
 
-    .line 1489
+    .line 1495
     .local v15, params:[Ljava/lang/Object;
     invoke-virtual {v9, v15}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -4787,7 +4787,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1495
+    .line 1501
     .end local v8           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v9           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v11           #pClassLoader:Ljava/lang/ClassLoader;
@@ -4797,7 +4797,7 @@
     :goto_0
     if-nez v1, :cond_0
 
-    .line 1496
+    .line 1502
     new-instance v1, Lcom/android/internal/policy/impl/PatternUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -4831,16 +4831,16 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/internal/policy/impl/PatternUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;I)V
 
-    .line 1504
+    .line 1510
     .restart local v1       #screenPlugin:Landroid/view/View;
     :cond_0
     return-object v1
 
-    .line 1490
+    .line 1496
     :catch_0
     move-exception v10
 
-    .line 1491
+    .line 1497
     .local v10, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "TAG"
 
@@ -4866,12 +4866,12 @@
 
     goto :goto_0
 
-    .line 1492
+    .line 1498
     .end local v10           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v10
 
-    .line 1493
+    .line 1499
     .local v10, ex:Ljava/lang/Exception;
     const-string v2, "TAG"
 
@@ -4907,14 +4907,14 @@
     .parameter "unlockMode"
 
     .prologue
-    .line 1615
+    .line 1621
     const-string v2, "TAG"
 
     const-string v3, "createUnlockScreenFromPhone() ..."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1616
+    .line 1622
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -4923,19 +4923,19 @@
 
     move-result-object v16
 
-    .line 1617
+    .line 1623
     .local v16, pm:Landroid/content/pm/PackageManager;
     const-string v12, "com.android.phone"
 
-    .line 1618
+    .line 1624
     .local v12, packageName:Ljava/lang/String;
     const-string v17, "com.android.phone.SimUnlockScreen"
 
-    .line 1619
+    .line 1625
     .local v17, screenClass:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1621
+    .line 1627
     .local v1, screenPlugin:Landroid/view/View;
     :try_start_0
     move-object/from16 v0, p0
@@ -4948,7 +4948,7 @@
 
     move-result-object v15
 
-    .line 1623
+    .line 1629
     .local v15, pluginContext:Landroid/content/Context;
     const/4 v2, 0x0
 
@@ -4958,7 +4958,7 @@
 
     move-result-object v11
 
-    .line 1624
+    .line 1630
     .local v11, packageInfo:Landroid/content/pm/PackageInfo;
     const-string v2, "TAG"
 
@@ -4982,12 +4982,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1625
+    .line 1631
     invoke-virtual {v15}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v10
 
-    .line 1626
+    .line 1632
     .local v10, pClassLoader:Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
@@ -4997,7 +4997,7 @@
 
     move-result-object v7
 
-    .line 1629
+    .line 1635
     .local v7, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v2, 0x6
 
@@ -5039,7 +5039,7 @@
 
     aput-object v3, v13, v2
 
-    .line 1632
+    .line 1638
     .local v13, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
     check-cast v13, [Ljava/lang/Class;
 
@@ -5048,7 +5048,7 @@
 
     move-result-object v8
 
-    .line 1633
+    .line 1639
     .local v8, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x6
 
@@ -5098,7 +5098,7 @@
 
     aput-object v15, v14, v2
 
-    .line 1635
+    .line 1641
     .local v14, params:[Ljava/lang/Object;
     invoke-virtual {v8, v14}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -5113,7 +5113,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1642
+    .line 1648
     .end local v7           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v8           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v10           #pClassLoader:Ljava/lang/ClassLoader;
@@ -5123,14 +5123,14 @@
     :goto_0
     if-nez v1, :cond_0
 
-    .line 1643
+    .line 1649
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPin:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     move-object/from16 v0, p1
 
     if-ne v0, v2, :cond_1
 
-    .line 1644
+    .line 1650
     new-instance v1, Lcom/android/internal/policy/impl/SimUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -5156,17 +5156,17 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/internal/policy/impl/SimUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;Lcom/android/internal/widget/LockPatternUtils;)V
 
-    .line 1659
+    .line 1665
     .restart local v1       #screenPlugin:Landroid/view/View;
     :cond_0
     :goto_1
     return-object v1
 
-    .line 1636
+    .line 1642
     :catch_0
     move-exception v9
 
-    .line 1637
+    .line 1643
     .local v9, ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v2, "TAG"
 
@@ -5192,12 +5192,12 @@
 
     goto :goto_0
 
-    .line 1638
+    .line 1644
     .end local v9           #ex:Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v9
 
-    .line 1639
+    .line 1645
     .local v9, ex:Ljava/lang/Exception;
     const-string v2, "TAG"
 
@@ -5227,7 +5227,7 @@
 
     goto :goto_0
 
-    .line 1650
+    .line 1656
     .end local v9           #ex:Ljava/lang/Exception;
     :cond_1
     sget-object v2, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPuk:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
@@ -5236,7 +5236,7 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1651
+    .line 1657
     new-instance v1, Lcom/android/internal/policy/impl/SimPukUnlockScreen;
 
     .end local v1           #screenPlugin:Landroid/view/View;
@@ -5272,7 +5272,7 @@
     .prologue
     const/16 v3, 0xd1
 
-    .line 1822
+    .line 1831
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isDualPhoneDevice()Z
@@ -5281,16 +5281,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 1823
+    .line 1832
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->DualgetInitialMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     move-result-object v1
 
-    .line 1884
+    .line 1893
     :goto_0
     return-object v1
 
-    .line 1843
+    .line 1852
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5298,7 +5298,7 @@
 
     move-result-object v0
 
-    .line 1845
+    .line 1854
     .local v0, simState:Lcom/android/internal/telephony/IccCard$State;
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->stuckOnLockScreenBecauseSimMissing()Z
 
@@ -5306,12 +5306,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1846
+    .line 1855
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1850
+    .line 1859
     :cond_1
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
@@ -5329,13 +5329,13 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1854
+    .line 1863
     :cond_2
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1857
+    .line 1866
     :cond_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5347,12 +5347,12 @@
 
     if-lez v1, :cond_4
 
-    .line 1858
+    .line 1867
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1862
+    .line 1871
     :cond_4
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->isSecure()Z
 
@@ -5376,23 +5376,23 @@
 
     if-eqz v1, :cond_5
 
-    .line 1863
+    .line 1872
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1867
+    .line 1876
     :cond_5
     sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
     if-ne v0, v1, :cond_6
 
-    .line 1868
+    .line 1877
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1869
+    .line 1878
     :cond_6
     sget-object v1, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -5406,7 +5406,7 @@
 
     if-nez v1, :cond_9
 
-    .line 1871
+    .line 1880
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     const/16 v2, 0x9b
@@ -5417,30 +5417,30 @@
 
     if-ne v1, v3, :cond_8
 
-    .line 1874
+    .line 1883
     :cond_7
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1876
+    .line 1885
     :cond_8
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1878
+    .line 1887
     :cond_9
     sget-object v1, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
     if-ne v0, v1, :cond_a
 
-    .line 1881
+    .line 1890
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     goto :goto_0
 
-    .line 1884
+    .line 1893
     :cond_a
     sget-object v1, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
@@ -5451,7 +5451,7 @@
     .locals 6
 
     .prologue
-    .line 1894
+    .line 1903
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isDualPhoneDevice()Z
@@ -5460,16 +5460,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 1895
+    .line 1904
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->DualgetUnlockMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     move-result-object v0
 
-    .line 1947
+    .line 1956
     :goto_0
     return-object v0
 
-    .line 1899
+    .line 1908
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5477,7 +5477,7 @@
 
     move-result-object v2
 
-    .line 1902
+    .line 1911
     .local v2, simState:Lcom/android/internal/telephony/IccCard$State;
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5489,26 +5489,26 @@
 
     if-lez v3, :cond_1
 
-    .line 1903
+    .line 1912
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Device:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .local v0, currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1906
+    .line 1915
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_1
     sget-object v3, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
     if-ne v2, v3, :cond_2
 
-    .line 1907
+    .line 1916
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPin:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1908
+    .line 1917
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_2
     sget-object v3, Lcom/android/internal/telephony/IccCard$State;->PUK_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
@@ -5521,26 +5521,26 @@
 
     if-eq v3, v4, :cond_3
 
-    .line 1910
+    .line 1919
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPuk:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1912
+    .line 1921
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_3
     sget-object v3, Lcom/android/internal/telephony/IccCard$State;->NETWORK_LOCKED:Lcom/android/internal/telephony/IccCard$State;
 
     if-ne v2, v3, :cond_4
 
-    .line 1913
+    .line 1922
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->NetworkLock:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1916
+    .line 1925
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_4
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
@@ -5551,13 +5551,13 @@
 
     if-eqz v3, :cond_5
 
-    .line 1917
+    .line 1926
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Device:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1920
+    .line 1929
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_5
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -5566,11 +5566,11 @@
 
     move-result v1
 
-    .line 1921
+    .line 1930
     .local v1, mode:I
     sparse-switch v1, :sswitch_data_0
 
-    .line 1944
+    .line 1953
     new-instance v3, Ljava/lang/IllegalStateException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -5595,7 +5595,7 @@
 
     throw v3
 
-    .line 1927
+    .line 1936
     :sswitch_0
     iget-boolean v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mForgotPattern:Z
 
@@ -5609,23 +5609,23 @@
 
     if-eqz v3, :cond_7
 
-    .line 1928
+    .line 1937
     :cond_6
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Account:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1930
+    .line 1939
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_7
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Password:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 1932
+    .line 1941
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1937
+    .line 1946
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :sswitch_1
     iget-boolean v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mForgotPattern:Z
@@ -5640,23 +5640,23 @@
 
     if-eqz v3, :cond_9
 
-    .line 1938
+    .line 1947
     :cond_8
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Account:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1940
+    .line 1949
     .end local v0           #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_9
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Pattern:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 1942
+    .line 1951
     .restart local v0       #currentMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     goto :goto_0
 
-    .line 1921
+    .line 1930
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_1
@@ -5672,17 +5672,17 @@
     .locals 2
 
     .prologue
-    .line 2526
+    .line 2535
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->removeFaceLockAreaDisplayMessages()V
 
-    .line 2527
+    .line 2536
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2528
+    .line 2537
     return-void
 .end method
 
@@ -5691,14 +5691,14 @@
     .parameter "view"
 
     .prologue
-    .line 2468
+    .line 2477
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->usingFaceLock()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2469
+    .line 2478
     const v0, 0x102029e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5707,24 +5707,24 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mFaceLockAreaView:Landroid/view/View;
 
-    .line 2470
+    .line 2479
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mFaceLockAreaView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 2471
+    .line 2480
     const-string v0, "LockPatternKeyguardView"
 
     const-string v1, "Layout does not have faceLockAreaView and FaceLock is enabled"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2476
+    .line 2485
     :cond_0
     :goto_0
     return-void
 
-    .line 2474
+    .line 2483
     :cond_1
     const/4 v0, 0x0
 
@@ -5738,7 +5738,7 @@
     .parameter "view"
 
     .prologue
-    .line 1806
+    .line 1815
     const v0, 0x102029d
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -5749,16 +5749,16 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
-    .line 1807
+    .line 1816
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
     if-nez v0, :cond_0
 
-    .line 1814
+    .line 1823
     :goto_0
     return-void
 
-    .line 1810
+    .line 1819
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5766,14 +5766,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportClockVisible(Z)V
 
-    .line 1811
+    .line 1820
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/TransportControlView;->setVisibility(I)V
 
-    .line 1812
+    .line 1821
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mWidgetCallback:Lcom/android/internal/widget/LockScreenWidgetCallback;
@@ -5791,7 +5791,7 @@
 
     const/4 v3, 0x0
 
-    .line 1240
+    .line 1246
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isDualPhoneDevice()Z
@@ -5800,26 +5800,26 @@
 
     if-eqz v4, :cond_0
 
-    .line 1241
+    .line 1247
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->DualisSecure()Z
 
     move-result v0
 
-    .line 1292
+    .line 1298
     :goto_0
     return v0
 
-    .line 1244
+    .line 1250
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->getUnlockMode()Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     move-result-object v1
 
-    .line 1245
+    .line 1251
     .local v1, unlockMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     const/4 v0, 0x0
 
-    .line 1246
+    .line 1252
     .local v0, secure:Z
     sget-object v4, Lcom/android/internal/policy/impl/LockPatternKeyguardView$9;->$SwitchMap$com$android$internal$policy$impl$LockPatternKeyguardView$UnlockMode:[I
 
@@ -5831,7 +5831,7 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 1290
+    .line 1296
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5856,7 +5856,7 @@
 
     throw v2
 
-    .line 1250
+    .line 1256
     :pswitch_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -5884,17 +5884,17 @@
 
     move v0, v2
 
-    .line 1253
+    .line 1259
     :goto_1
     goto :goto_0
 
     :cond_1
     move v0, v3
 
-    .line 1250
+    .line 1256
     goto :goto_1
 
-    .line 1255
+    .line 1261
     :pswitch_1
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5908,17 +5908,17 @@
 
     move v0, v2
 
-    .line 1256
+    .line 1262
     :goto_2
     goto :goto_0
 
     :cond_2
     move v0, v3
 
-    .line 1255
+    .line 1261
     goto :goto_2
 
-    .line 1260
+    .line 1266
     :pswitch_2
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->isPhoneFeatureEnabled()Z
 
@@ -5932,7 +5932,7 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 1262
+    .line 1268
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v4}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->getSimState()Lcom/android/internal/telephony/IccCard$State;
@@ -5953,7 +5953,7 @@
 
     goto :goto_3
 
-    .line 1266
+    .line 1272
     :cond_4
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5967,17 +5967,17 @@
 
     move v0, v2
 
-    .line 1268
+    .line 1274
     :goto_4
     goto :goto_0
 
     :cond_5
     move v0, v3
 
-    .line 1266
+    .line 1272
     goto :goto_4
 
-    .line 1271
+    .line 1277
     :pswitch_3
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -5991,24 +5991,24 @@
 
     move v0, v2
 
-    .line 1272
+    .line 1278
     :goto_5
     goto/16 :goto_0
 
     :cond_6
     move v0, v3
 
-    .line 1271
+    .line 1277
     goto :goto_5
 
-    .line 1275
+    .line 1281
     :pswitch_4
     const/4 v0, 0x1
 
-    .line 1276
+    .line 1282
     goto/16 :goto_0
 
-    .line 1280
+    .line 1286
     :pswitch_5
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -6036,24 +6036,24 @@
 
     move v0, v2
 
-    .line 1283
+    .line 1289
     :goto_6
     goto/16 :goto_0
 
     :cond_7
     move v0, v3
 
-    .line 1280
+    .line 1286
     goto :goto_6
 
-    .line 1286
+    .line 1292
     :pswitch_6
     const/4 v0, 0x1
 
-    .line 1287
+    .line 1293
     goto/16 :goto_0
 
-    .line 1246
+    .line 1252
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -6071,7 +6071,7 @@
     .parameter "context"
 
     .prologue
-    .line 864
+    .line 870
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;
 
     invoke-static {p1}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
@@ -6082,11 +6082,11 @@
 
     invoke-direct {v0, p0, v1, v2}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;-><init>(Lcom/android/internal/policy/impl/LockPatternKeyguardView;Landroid/accounts/AccountManager;Lcom/android/internal/policy/impl/LockPatternKeyguardView$1;)V
 
-    .line 865
+    .line 871
     .local v0, accountAnalyzer:Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$AccountAnalyzer;->start()V
 
-    .line 866
+    .line 872
     return-void
 .end method
 
@@ -6094,31 +6094,31 @@
     .locals 2
 
     .prologue
-    .line 1066
+    .line 1072
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 1067
+    .line 1073
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     check-cast v0, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreen;->onPause()V
 
-    .line 1068
+    .line 1074
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     check-cast v0, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreen;->cleanUp()V
 
-    .line 1069
+    .line 1075
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->removeView(Landroid/view/View;)V
 
-    .line 1072
+    .line 1078
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->createLockScreen()Landroid/view/View;
 
@@ -6126,19 +6126,19 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
-    .line 1073
+    .line 1079
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1074
+    .line 1080
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->addView(Landroid/view/View;)V
 
-    .line 1075
+    .line 1081
     return-void
 .end method
 
@@ -6147,31 +6147,31 @@
     .parameter "unlockMode"
 
     .prologue
-    .line 1078
+    .line 1084
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 1079
+    .line 1085
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     check-cast v0, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreen;->onPause()V
 
-    .line 1080
+    .line 1086
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     check-cast v0, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreen;->cleanUp()V
 
-    .line 1081
+    .line 1087
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->removeView(Landroid/view/View;)V
 
-    .line 1084
+    .line 1090
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->createUnlockScreenFor(Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;)Landroid/view/View;
 
@@ -6179,22 +6179,22 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
-    .line 1085
+    .line 1091
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1086
+    .line 1092
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreenMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 1087
+    .line 1093
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->addView(Landroid/view/View;)V
 
-    .line 1088
+    .line 1094
     return-void
 .end method
 
@@ -6202,21 +6202,21 @@
     .locals 2
 
     .prologue
-    .line 2512
+    .line 2521
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2513
+    .line 2522
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2514
+    .line 2523
     return-void
 .end method
 
@@ -6224,24 +6224,24 @@
     .locals 2
 
     .prologue
-    .line 973
+    .line 979
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
     if-eqz v0, :cond_0
 
-    .line 975
+    .line 981
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mSavedState:Landroid/os/Parcelable;
 
     if-eqz v0, :cond_0
 
-    .line 976
+    .line 982
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mSavedState:Landroid/os/Parcelable;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/TransportControlView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 979
+    .line 985
     :cond_0
     return-void
 .end method
@@ -6250,12 +6250,12 @@
     .locals 1
 
     .prologue
-    .line 966
+    .line 972
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
     if-eqz v0, :cond_0
 
-    .line 968
+    .line 974
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/TransportControlView;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -6264,7 +6264,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mSavedState:Landroid/os/Parcelable;
 
-    .line 970
+    .line 976
     :cond_0
     return-void
 .end method
@@ -6273,14 +6273,14 @@
     .locals 8
 
     .prologue
-    .line 2003
+    .line 2012
     const/16 v2, 0x1e
 
-    .line 2004
+    .line 2013
     .local v2, timeoutInSeconds:I
     const/16 v0, 0xf
 
-    .line 2006
+    .line 2015
     .local v0, count:I
     iget-object v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
@@ -6324,13 +6324,13 @@
 
     move-result-object v1
 
-    .line 2008
+    .line 2017
     .local v1, message:Ljava/lang/String;
     const/4 v3, 0x0
 
     invoke-direct {p0, v3, v1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2009
+    .line 2018
     return-void
 .end method
 
@@ -6340,10 +6340,10 @@
     .parameter "remaining"
 
     .prologue
-    .line 2012
+    .line 2021
     const/16 v1, 0x1e
 
-    .line 2013
+    .line 2022
     .local v1, timeoutInSeconds:I
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
@@ -6373,13 +6373,13 @@
 
     move-result-object v0
 
-    .line 2015
+    .line 2024
     .local v0, message:Ljava/lang/String;
     const/4 v2, 0x0
 
     invoke-direct {p0, v2, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2016
+    .line 2025
     return-void
 .end method
 
@@ -6389,7 +6389,7 @@
     .parameter "message"
 
     .prologue
-    .line 1951
+    .line 1960
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -6416,7 +6416,7 @@
 
     move-result-object v0
 
-    .line 1956
+    .line 1965
     .local v0, dialog:Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -6426,10 +6426,10 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setType(I)V
 
-    .line 1957
+    .line 1966
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 1958
+    .line 1967
     return-void
 .end method
 
@@ -6437,17 +6437,17 @@
     .locals 2
 
     .prologue
-    .line 2519
+    .line 2528
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->removeFaceLockAreaDisplayMessages()V
 
-    .line 2520
+    .line 2529
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2521
+    .line 2530
     return-void
 .end method
 
@@ -6456,17 +6456,17 @@
     .parameter "timeoutMillis"
 
     .prologue
-    .line 2532
+    .line 2541
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showFaceLockArea()V
 
-    .line 2533
+    .line 2542
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 2534
+    .line 2543
     return-void
 .end method
 
@@ -6476,14 +6476,14 @@
     .prologue
     const/4 v9, 0x4
 
-    .line 1961
+    .line 1970
     const/16 v3, 0x1e
 
-    .line 1964
+    .line 1973
     .local v3, timeoutInSeconds:I
     const v2, 0x20400e6
 
-    .line 1965
+    .line 1974
     .local v2, resId:I
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreenMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
@@ -6491,10 +6491,10 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 1966
+    .line 1975
     const v2, 0x104030d
 
-    .line 1978
+    .line 1987
     :cond_0
     :goto_0
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -6505,7 +6505,7 @@
 
     move-result-object v4
 
-    .line 1980
+    .line 1989
     .local v4, title:Ljava/lang/String;
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
@@ -6539,7 +6539,7 @@
 
     move-result-object v1
 
-    .line 1984
+    .line 1993
     .local v1, message:Ljava/lang/String;
     new-instance v5, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -6567,7 +6567,7 @@
 
     move-result-object v0
 
-    .line 1991
+    .line 2000
     .local v0, dialog:Lcom/htc/widget/HtcAlertDialog;
     invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->getWindow()Landroid/view/Window;
 
@@ -6577,7 +6577,7 @@
 
     invoke-virtual {v5, v6}, Landroid/view/Window;->setType(I)V
 
-    .line 1992
+    .line 2001
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -6592,21 +6592,21 @@
 
     if-nez v5, :cond_1
 
-    .line 1994
+    .line 2003
     invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
     invoke-virtual {v5, v9, v9}, Landroid/view/Window;->setFlags(II)V
 
-    .line 1998
+    .line 2007
     :cond_1
     invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->show()V
 
-    .line 2000
+    .line 2009
     return-void
 
-    .line 1968
+    .line 1977
     .end local v0           #dialog:Lcom/htc/widget/HtcAlertDialog;
     .end local v1           #message:Ljava/lang/String;
     .end local v4           #title:Ljava/lang/String;
@@ -6619,7 +6619,7 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 1969
+    .line 1978
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v5}, Lcom/android/internal/widget/LockPatternUtils;->getKeyguardStoredPasswordQuality()I
@@ -6630,12 +6630,12 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 1971
+    .line 1980
     const v2, 0x104030f
 
     goto :goto_0
 
-    .line 1973
+    .line 1982
     :cond_3
     const v2, 0x104030e
 
@@ -6647,7 +6647,7 @@
     .parameter "attempts"
 
     .prologue
-    .line 2019
+    .line 2028
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
     const v2, 0x1040312
@@ -6668,13 +6668,13 @@
 
     move-result-object v0
 
-    .line 2021
+    .line 2030
     .local v0, message:Ljava/lang/String;
     const/4 v1, 0x0
 
     invoke-direct {p0, v1, v0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showDialog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2022
+    .line 2031
     return-void
 .end method
 
@@ -6682,7 +6682,7 @@
     .locals 1
 
     .prologue
-    .line 2480
+    .line 2489
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->usingFaceLock()Z
 
     move-result v0
@@ -6693,13 +6693,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 2481
+    .line 2490
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->stopAndUnbindFromFaceLock()V
 
-    .line 2482
+    .line 2491
     const/4 v0, 0x1
 
-    .line 2484
+    .line 2493
     :goto_0
     return v0
 
@@ -6860,7 +6860,7 @@
     .parameter "force"
 
     .prologue
-    .line 1297
+    .line 1303
     sget-object v5, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->UnlockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     if-ne p1, v5, :cond_0
@@ -6871,16 +6871,16 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 1298
+    .line 1304
     const/4 v5, 0x3
 
     invoke-static {v5}, Lcom/htc/and/touch/NativeJniUnlock;->unlock(I)V
 
-    .line 1307
+    .line 1313
     :cond_0
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
-    .line 1310
+    .line 1316
     sget-object v5, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     if-eq p1, v5, :cond_1
@@ -6889,7 +6889,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 1317
+    .line 1323
     :cond_1
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
@@ -6934,22 +6934,22 @@
 
     if-eqz v5, :cond_5
 
-    .line 1329
+    .line 1335
     :cond_4
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->stopFaceLockIfRunning()Z
 
     move-result v2
 
-    .line 1330
+    .line 1336
     .local v2, restartFaceLock:Z
     invoke-direct {p0, v3}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->recreateUnlockScreen(Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;)V
 
-    .line 1331
+    .line 1337
     if-eqz v2, :cond_5
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->activateFaceLockIfAble()V
 
-    .line 1336
+    .line 1342
     .end local v2           #restartFaceLock:Z
     .end local v3           #unlockMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
     :cond_5
@@ -6957,19 +6957,19 @@
 
     if-eqz v5, :cond_6
 
-    .line 1337
+    .line 1343
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     instance-of v5, v5, Lcom/htc/lockscreen/HtcLockScreenCallback;
 
     if-eqz v5, :cond_6
 
-    .line 1338
+    .line 1344
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     check-cast v0, Lcom/htc/lockscreen/HtcLockScreenCallback;
 
-    .line 1339
+    .line 1345
     .local v0, callback:Lcom/htc/lockscreen/HtcLockScreenCallback;
     invoke-interface {v0}, Lcom/htc/lockscreen/HtcLockScreenCallback;->isUseIdleScreen()Z
 
@@ -6977,19 +6977,19 @@
 
     if-eqz v5, :cond_6
 
-    .line 1340
+    .line 1346
     sget-object v5, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
 
     if-ne p1, v5, :cond_a
 
-    .line 1341
+    .line 1347
     iget-object v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mWindowController:Lcom/android/internal/policy/impl/KeyguardWindowController;
 
     const/4 v6, 0x0
 
     invoke-interface {v5, v6}, Lcom/android/internal/policy/impl/KeyguardWindowController;->setWindowAlpha(F)V
 
-    .line 1351
+    .line 1357
     .end local v0           #callback:Lcom/htc/lockscreen/HtcLockScreenCallback;
     :cond_6
     :goto_0
@@ -6999,7 +6999,7 @@
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
-    .line 1352
+    .line 1358
     .local v1, goneScreen:Landroid/view/View;
     :goto_1
     sget-object v5, Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;->LockScreen:Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;
@@ -7008,7 +7008,7 @@
 
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
-    .line 1356
+    .line 1362
     .local v4, visibleScreen:Landroid/view/View;
     :goto_2
     iget-object v6, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mWindowController:Lcom/android/internal/policy/impl/KeyguardWindowController;
@@ -7023,12 +7023,12 @@
 
     invoke-interface {v6, v5}, Lcom/android/internal/policy/impl/KeyguardWindowController;->setNeedsInput(Z)V
 
-    .line 1363
+    .line 1369
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mScreenOn:Z
 
     if-eqz v5, :cond_8
 
-    .line 1364
+    .line 1370
     if-eqz v1, :cond_7
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
@@ -7039,12 +7039,12 @@
 
     move-object v5, v1
 
-    .line 1365
+    .line 1371
     check-cast v5, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v5}, Lcom/android/internal/policy/impl/KeyguardScreen;->onPause()V
 
-    .line 1367
+    .line 1373
     :cond_7
     invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
 
@@ -7054,37 +7054,37 @@
 
     move-object v5, v4
 
-    .line 1368
+    .line 1374
     check-cast v5, Lcom/android/internal/policy/impl/KeyguardScreen;
 
     invoke-interface {v5}, Lcom/android/internal/policy/impl/KeyguardScreen;->onResume()V
 
-    .line 1372
+    .line 1378
     :cond_8
     if-eqz v1, :cond_9
 
-    .line 1373
+    .line 1379
     const/16 v5, 0x8
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1375
+    .line 1381
     :cond_9
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1376
+    .line 1382
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->requestLayout()V
 
-    .line 1378
+    .line 1384
     invoke-virtual {v4}, Landroid/view/View;->requestFocus()Z
 
     move-result v5
 
     if-nez v5, :cond_d
 
-    .line 1379
+    .line 1385
     new-instance v5, Ljava/lang/IllegalStateException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -7117,7 +7117,7 @@
 
     throw v5
 
-    .line 1343
+    .line 1349
     .end local v1           #goneScreen:Landroid/view/View;
     .end local v4           #visibleScreen:Landroid/view/View;
     .restart local v0       #callback:Lcom/htc/lockscreen/HtcLockScreenCallback;
@@ -7130,21 +7130,21 @@
 
     goto :goto_0
 
-    .line 1351
+    .line 1357
     .end local v0           #callback:Lcom/htc/lockscreen/HtcLockScreenCallback;
     :cond_b
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     goto :goto_1
 
-    .line 1352
+    .line 1358
     .restart local v1       #goneScreen:Landroid/view/View;
     :cond_c
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreen:Landroid/view/View;
 
     goto :goto_2
 
-    .line 1382
+    .line 1388
     .restart local v4       #visibleScreen:Landroid/view/View;
     :cond_d
     return-void
@@ -7154,7 +7154,7 @@
     .locals 1
 
     .prologue
-    .line 2462
+    .line 2471
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->usingBiometricWeak()Z
@@ -7190,19 +7190,19 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2539
+    .line 2548
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->usingFaceLock()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2540
+    .line 2549
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mBoundToFaceLockService:Z
 
     if-nez v0, :cond_1
 
-    .line 2542
+    .line 2551
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
@@ -7219,15 +7219,15 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    .line 2546
+    .line 2555
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mBoundToFaceLockService:Z
 
-    .line 2551
+    .line 2560
     :cond_0
     :goto_0
     return-void
 
-    .line 2548
+    .line 2557
     :cond_1
     const-string v0, "LockPatternKeyguardView"
 
@@ -7448,6 +7448,12 @@
     invoke-direct {p0, v3}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->initializeFaceLockAreaView(Landroid/view/View;)V
 
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUnlockScreenMode:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v3, v5, v6}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
     move-object v5, v3
 
@@ -8280,7 +8286,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1233
+    .line 1239
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockScreen:Landroid/view/View;
 
     check-cast v0, Lcom/android/internal/policy/impl/HtcIfIKeyguardScreenCallback;
@@ -8527,7 +8533,7 @@
 
     throw v0
 
-    .line 1222
+    .line 1228
     :catch_0
     move-exception v6
 
@@ -8744,7 +8750,7 @@
 
     goto :goto_0
 
-    .line 2424
+    .line 2433
     :cond_1
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mIsVerifyUnlockOnly:Z
 
@@ -8856,7 +8862,7 @@
     .end annotation
 
     .prologue
-    .line 1011
+    .line 1017
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     return-object v0

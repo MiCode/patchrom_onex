@@ -1313,14 +1313,14 @@ kontam %s"</string>
     <string name="font_alignment">Fonta līdzinājums</string>
     <string name="image">Attēls</string>
     <string name="dongle_noti_ticker">Konstatēta Media Link HD ierīce</string>
-    <string name="dongle_noti_title_multiple_found">HTC Media Link ierīces nav atrastas</string>
+    <string name="dongle_noti_title_multiple_found">Trastas HTC Media Link ierīces</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
     <string name="dongle_noti_text_multiple_found">Piesitiet, lai atlasītu</string>
     <string name="wireless_display_output_tv_title">Media Link HD</string>
     <string name="wireless_display_output_tv_text">"Vai vēlaties to nosūtīt, lai atskaņotu TV?
 
 Atlikušas %1$s sekundes..."</string>
-    <string name="wireless_display_output_tv_checkbox">Nerādīt vēlreiz</string>
+    <string name="wireless_display_output_tv_checkbox">Vairs nerādīt</string>
     <string name="call_forward_unconditional">Pārsūtīt zvanu bez nosacījumiem</string>
     <string name="call_forward_when_busy">Pārsūtīt zvanu, kad aizņemts</string>
     <string name="call_forward_when_unanswered">Pārsūtīt zvanu, kad neatbild</string>

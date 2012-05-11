@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 10046
+    .line 10021
     iput-object p1, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 10048
+    .line 10023
     iget-object v0, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     iget-object v0, v0, Landroid/widget/TextView;->mSelectionManager:Lcom/htc/textselection/HtcTextSelectionManager;
@@ -52,7 +52,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 10049
+    .line 10024
     iget-object v0, p0, Landroid/widget/TextView$4;->this$0:Landroid/widget/TextView;
 
     iget-object v0, v0, Landroid/widget/TextView;->mSelectionManager:Lcom/htc/textselection/HtcTextSelectionManager;
@@ -61,7 +61,7 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/textselection/HtcTextSelectionManager;->dismissQuickAction(Z)V
 
-    .line 10050
+    .line 10025
     :cond_0
     return-void
 .end method

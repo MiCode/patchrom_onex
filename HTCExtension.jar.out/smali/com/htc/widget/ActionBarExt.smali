@@ -1511,13 +1511,9 @@
 .end method
 
 .method public switchContainer()V
-    .locals 6
+    .locals 4
 
     .prologue
-    const/4 v5, 0x0
-
-    const/4 v4, 0x2
-
     .line 401
     iget-object v0, p0, Lcom/htc/widget/ActionBarExt;->actionBarView:Lcom/android/internal/widget/ActionBarView;
 
@@ -1586,18 +1582,8 @@
 
     iput-object v0, p0, Lcom/htc/widget/ActionBarExt;->animationInView:Landroid/view/View;
 
-    .line 428
-    :goto_1
-    iget-object v0, p0, Lcom/htc/widget/ActionBarExt;->animationInView:Landroid/view/View;
-
-    invoke-virtual {v0, v4, v5}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    .line 429
-    iget-object v0, p0, Lcom/htc/widget/ActionBarExt;->animationOutView:Landroid/view/View;
-
-    invoke-virtual {v0, v4, v5}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
     .line 431
+    :goto_1
     iget-object v0, p0, Lcom/htc/widget/ActionBarExt;->animationInView:Landroid/view/View;
 
     iget-object v1, p0, Lcom/htc/widget/ActionBarExt;->animationIn:Landroid/view/animation/AnimationSet;

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5097
+    .line 5101
     iput-object p1, p0, Lcom/android/camera/HTCCamera$18;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 5099
+    .line 5103
     iget-object v0, p0, Lcom/android/camera/HTCCamera$18;->this$0:Lcom/android/camera/HTCCamera;
 
     #getter for: Lcom/android/camera/HTCCamera;->mSettings:Lcom/android/camera/CameraSettings;
@@ -65,7 +65,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 5100
+    .line 5104
     iget-object v0, p0, Lcom/android/camera/HTCCamera$18;->this$0:Lcom/android/camera/HTCCamera;
 
     #getter for: Lcom/android/camera/HTCCamera;->mSettings:Lcom/android/camera/CameraSettings;
@@ -79,11 +79,11 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;)Z
 
-    .line 5103
+    .line 5107
     :goto_0
     return-void
 
-    .line 5102
+    .line 5106
     :cond_0
     iget-object v0, p0, Lcom/android/camera/HTCCamera$18;->this$0:Lcom/android/camera/HTCCamera;
 

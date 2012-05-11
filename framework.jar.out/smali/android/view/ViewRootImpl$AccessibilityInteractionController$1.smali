@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 5039
+    .line 5063
     iput-object p1, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionController$1;->this$1:Landroid/view/ViewRootImpl$AccessibilityInteractionController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 5039
+    .line 5063
     invoke-virtual {p0}, Landroid/view/ViewRootImpl$AccessibilityInteractionController$1;->newInstance()Landroid/view/ViewRootImpl$AccessibilityInteractionController$SomeArgs;
 
     move-result-object v0
@@ -63,7 +63,7 @@
     .locals 2
 
     .prologue
-    .line 5041
+    .line 5065
     new-instance v0, Landroid/view/ViewRootImpl$AccessibilityInteractionController$SomeArgs;
 
     iget-object v1, p0, Landroid/view/ViewRootImpl$AccessibilityInteractionController$1;->this$1:Landroid/view/ViewRootImpl$AccessibilityInteractionController;
@@ -78,7 +78,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5039
+    .line 5063
     check-cast p1, Landroid/view/ViewRootImpl$AccessibilityInteractionController$SomeArgs;
 
     .end local p1
@@ -92,7 +92,7 @@
     .parameter "info"
 
     .prologue
-    .line 5046
+    .line 5070
     return-void
 .end method
 
@@ -101,7 +101,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5039
+    .line 5063
     check-cast p1, Landroid/view/ViewRootImpl$AccessibilityInteractionController$SomeArgs;
 
     .end local p1
@@ -115,10 +115,10 @@
     .parameter "info"
 
     .prologue
-    .line 5049
+    .line 5073
     #calls: Landroid/view/ViewRootImpl$AccessibilityInteractionController$SomeArgs;->clear()V
     invoke-static {p1}, Landroid/view/ViewRootImpl$AccessibilityInteractionController$SomeArgs;->access$700(Landroid/view/ViewRootImpl$AccessibilityInteractionController$SomeArgs;)V
 
-    .line 5050
+    .line 5074
     return-void
 .end method

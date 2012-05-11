@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 334
+    .line 351
     iput-object p1, p0, Lcom/htc/shutdown/AnimationView$1;->this$0:Lcom/htc/shutdown/AnimationView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,19 +39,19 @@
     .parameter "msg"
 
     .prologue
-    .line 336
+    .line 353
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 341
+    .line 358
     :goto_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 342
+    .line 359
     return-void
 
-    .line 338
+    .line 355
     :pswitch_0
     iget-object v0, p0, Lcom/htc/shutdown/AnimationView$1;->this$0:Lcom/htc/shutdown/AnimationView;
 
@@ -60,7 +60,7 @@
 
     goto :goto_0
 
-    .line 336
+    .line 353
     nop
 
     :pswitch_data_0

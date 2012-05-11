@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1933
+    .line 1953
     iput-object p1, p0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1936
+    .line 1956
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1938
+    .line 1958
     .local v1, action:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -68,7 +68,7 @@
 
     move-result-wide v2
 
-    .line 1941
+    .line 1961
     .local v2, idleMillis:J
     move-object/from16 v0, p0
 
@@ -91,7 +91,7 @@
 
     move-result v7
 
-    .line 1944
+    .line 1964
     .local v7, stayAwakeConditions:I
     const-string v13, "android.intent.action.SCREEN_ON"
 
@@ -101,7 +101,7 @@
 
     if-eqz v13, :cond_1
 
-    .line 1945
+    .line 1965
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -109,12 +109,12 @@
     #calls: Lcom/android/server/WifiService;->actionScreenOn()V
     invoke-static {v13}, Lcom/android/server/WifiService;->access$3700(Lcom/android/server/WifiService;)V
 
-    .line 2063
+    .line 2083
     :cond_0
     :goto_0
     return-void
 
-    .line 1946
+    .line 1966
     :cond_1
     const-string v13, "android.intent.action.SCREEN_OFF"
 
@@ -124,7 +124,7 @@
 
     if-eqz v13, :cond_2
 
-    .line 1947
+    .line 1967
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -134,7 +134,7 @@
 
     goto :goto_0
 
-    .line 1948
+    .line 1968
     :cond_2
     const-string v13, "com.android.server.WifiManager.action.DEVICE_IDLE"
 
@@ -144,7 +144,7 @@
 
     if-eqz v13, :cond_3
 
-    .line 1949
+    .line 1969
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -156,7 +156,7 @@
 
     goto :goto_0
 
-    .line 1951
+    .line 1971
     :cond_3
     const-string v13, "com.android.server.WifiManager.action.UPDATE_WIFI_STATE"
 
@@ -166,14 +166,14 @@
 
     if-eqz v13, :cond_4
 
-    .line 1952
+    .line 1972
     const-string v13, "WifiService"
 
     const-string v14, "Got ACTION_UPDATE_WIFI_STATE"
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1953
+    .line 1973
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -183,7 +183,7 @@
 
     goto :goto_0
 
-    .line 1955
+    .line 1975
     :cond_4
     const-string v13, "android.intent.action.BATTERY_CHANGED"
 
@@ -193,7 +193,7 @@
 
     if-eqz v13, :cond_6
 
-    .line 1963
+    .line 1983
     const-string v13, "plugged"
 
     const/4 v14, 0x0
@@ -204,7 +204,7 @@
 
     move-result v5
 
-    .line 1965
+    .line 1985
     .local v5, pluggedType:I
     const-string v13, "WifiService"
 
@@ -228,7 +228,7 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1967
+    .line 1987
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -271,14 +271,14 @@
 
     if-nez v13, :cond_5
 
-    .line 1969
+    .line 1989
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v13
 
     add-long v10, v13, v2
 
-    .line 1971
+    .line 1991
     .local v10, triggerTime:J
     const-string v13, "WifiService"
 
@@ -308,7 +308,7 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1973
+    .line 1993
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -331,7 +331,7 @@
 
     invoke-virtual {v13, v14, v10, v11, v15}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 1975
+    .line 1995
     .end local v10           #triggerTime:J
     :cond_5
     move-object/from16 v0, p0
@@ -343,7 +343,7 @@
 
     goto/16 :goto_0
 
-    .line 1977
+    .line 1997
     .end local v5           #pluggedType:I
     :cond_6
     const-string v13, "android.net.hotspot.ASSOCLIST"
@@ -354,7 +354,7 @@
 
     if-nez v13, :cond_0
 
-    .line 1979
+    .line 1999
     const-string v13, "com.android.server.HotspotManager.action.DEVICE_IDLE"
 
     invoke-virtual {v1, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -363,7 +363,7 @@
 
     if-eqz v13, :cond_7
 
-    .line 1980
+    .line 2000
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -396,7 +396,7 @@
 
     if-nez v13, :cond_0
 
-    .line 1982
+    .line 2002
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -407,10 +407,10 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/WifiService;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)V
 
-    .line 1986
+    .line 2006
     const/4 v12, 0x0
 
-    .line 1988
+    .line 2008
     .local v12, wifiSavedState:I
     :try_start_0
     move-object/from16 v0, p0
@@ -434,13 +434,13 @@
 
     move-result v12
 
-    .line 1991
+    .line 2011
     :goto_1
     const/4 v13, 0x1
 
     if-ne v12, v13, :cond_0
 
-    .line 1992
+    .line 2012
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -449,7 +449,7 @@
 
     invoke-virtual {v13, v14}, Lcom/android/server/WifiService;->setWifiEnabled(Z)Z
 
-    .line 1993
+    .line 2013
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -469,7 +469,7 @@
 
     invoke-static {v13, v14, v15}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1994
+    .line 2014
     const-string v13, "WifiService"
 
     const-string v14, "Restore wifi when hotspot is off"
@@ -478,7 +478,7 @@
 
     goto/16 :goto_0
 
-    .line 1998
+    .line 2018
     .end local v12           #wifiSavedState:I
     :cond_7
     const-string v13, "com.android.server.HotspotManager.action.WIFI_AP_CONN_REQ_TIMEOUT"
@@ -489,14 +489,14 @@
 
     if-eqz v13, :cond_8
 
-    .line 1999
+    .line 2019
     const-string v13, "WifiService"
 
     const-string v14, "Got ACTION_WIFI_AP_CONN_REQ_TIMEOUT"
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2000
+    .line 2020
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -512,7 +512,7 @@
 
     goto/16 :goto_0
 
-    .line 2002
+    .line 2022
     :cond_8
     const-string v13, "android.net.hotspot.connecitonrequest"
 
@@ -522,14 +522,14 @@
 
     if-eqz v13, :cond_9
 
-    .line 2003
+    .line 2023
     const-string v13, "WifiService"
 
     const-string v14, "Got HOTSPOT_CONNECTION_REQUEST"
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2004
+    .line 2024
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -543,7 +543,7 @@
 
     invoke-virtual {v13, v14}, Landroid/net/wifi/WifiStateMachine;->setConnectionReqNotificationVisible(Z)V
 
-    .line 2005
+    .line 2025
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -555,7 +555,7 @@
 
     invoke-virtual {v13}, Landroid/net/wifi/WifiStateMachine;->CancelNotifyWIFIAPreqtimer()V
 
-    .line 2006
+    .line 2026
     const-string v13, "hotspot_block_mac"
 
     move-object/from16 v0, p2
@@ -564,7 +564,7 @@
 
     move-result-object v4
 
-    .line 2007
+    .line 2027
     .local v4, mac:Ljava/lang/String;
     const-string v13, "hotspot_lastest_time_of_request"
 
@@ -576,7 +576,7 @@
 
     move-result-wide v8
 
-    .line 2008
+    .line 2028
     .local v8, time:J
     move-object/from16 v0, p0
 
@@ -591,7 +591,7 @@
 
     goto/16 :goto_0
 
-    .line 2011
+    .line 2031
     .end local v4           #mac:Ljava/lang/String;
     .end local v8           #time:J
     :cond_9
@@ -603,7 +603,7 @@
 
     if-eqz v13, :cond_a
 
-    .line 2012
+    .line 2032
     const-string v13, "android.bluetooth.adapter.extra.CONNECTION_STATE"
 
     const/4 v14, 0x0
@@ -614,7 +614,7 @@
 
     move-result v6
 
-    .line 2014
+    .line 2034
     .local v6, state:I
     move-object/from16 v0, p0
 
@@ -629,7 +629,7 @@
 
     goto/16 :goto_0
 
-    .line 2015
+    .line 2035
     .end local v6           #state:I
     :cond_a
     const-string v13, "com.android.server.HotspotManager.action.DEVICE_IDLE"
@@ -640,7 +640,7 @@
 
     if-eqz v13, :cond_b
 
-    .line 2016
+    .line 2036
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -673,7 +673,7 @@
 
     if-nez v13, :cond_0
 
-    .line 2020
+    .line 2040
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -686,7 +686,7 @@
 
     if-ne v13, v14, :cond_0
 
-    .line 2021
+    .line 2041
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -697,10 +697,10 @@
 
     invoke-virtual {v13, v14, v15}, Lcom/android/server/WifiService;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)V
 
-    .line 2025
+    .line 2045
     const/4 v12, 0x0
 
-    .line 2027
+    .line 2047
     .restart local v12       #wifiSavedState:I
     :try_start_1
     move-object/from16 v0, p0
@@ -724,13 +724,13 @@
 
     move-result v12
 
-    .line 2031
+    .line 2051
     :goto_2
     const/4 v13, 0x1
 
     if-ne v12, v13, :cond_0
 
-    .line 2032
+    .line 2052
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -739,7 +739,7 @@
 
     invoke-virtual {v13, v14}, Lcom/android/server/WifiService;->setWifiEnabled(Z)Z
 
-    .line 2033
+    .line 2053
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -759,7 +759,7 @@
 
     invoke-static {v13, v14, v15}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2034
+    .line 2054
     const-string v13, "WifiService"
 
     const-string v14, "Restore wifi when hotspot is off"
@@ -768,7 +768,7 @@
 
     goto/16 :goto_0
 
-    .line 2059
+    .line 2079
     .end local v12           #wifiSavedState:I
     :cond_b
     const-string v13, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
@@ -779,7 +779,7 @@
 
     if-eqz v13, :cond_0
 
-    .line 2060
+    .line 2080
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -797,7 +797,7 @@
     #setter for: Lcom/android/server/WifiService;->mEmergencyCallbackMode:Z
     invoke-static {v13, v14}, Lcom/android/server/WifiService;->access$4502(Lcom/android/server/WifiService;Z)Z
 
-    .line 2061
+    .line 2081
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/WifiService$12;->this$0:Lcom/android/server/WifiService;
@@ -807,14 +807,14 @@
 
     goto/16 :goto_0
 
-    .line 2029
+    .line 2049
     .restart local v12       #wifiSavedState:I
     :catch_0
     move-exception v13
 
     goto :goto_2
 
-    .line 1989
+    .line 2009
     :catch_1
     move-exception v13
 

@@ -228,7 +228,7 @@
     iput v1, p0, Lcom/htc/textselection/Magnifier;->DENSITY:F
 
     .line 77
-    const v1, 0x2080304
+    const v1, 0x2080305
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

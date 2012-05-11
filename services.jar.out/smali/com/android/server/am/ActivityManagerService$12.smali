@@ -1,189 +1,164 @@
-.class final Lcom/android/server/am/ActivityManagerService$12;
-.super Ljava/lang/Object;
+.class Lcom/android/server/am/ActivityManagerService$12;
+.super Ljava/lang/Thread;
 .source "ActivityManagerService.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/ActivityManagerService;->dumpProcessOomList(Ljava/io/PrintWriter;Lcom/android/server/am/ActivityManagerService;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Z
+    value = Lcom/android/server/am/ActivityManagerService;->logStrictModeViolationToDropBox(Lcom/android/server/am/ProcessRecord;Landroid/os/StrictMode$ViolationInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Landroid/util/Pair",
-        "<",
-        "Lcom/android/server/am/ProcessRecord;",
-        "Ljava/lang/Integer;",
-        ">;>;"
-    }
-.end annotation
+
+# instance fields
+.field final synthetic this$0:Lcom/android/server/am/ActivityManagerService;
+
+.field final synthetic val$dbox:Landroid/os/DropBoxManager;
+
+.field final synthetic val$dropboxTag:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/android/server/am/ActivityManagerService;Ljava/lang/String;Landroid/os/DropBoxManager;Ljava/lang/String;)V
     .locals 0
+    .parameter
+    .parameter "x0"
+    .parameter
+    .parameter
 
     .prologue
-    .line 10156
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    .line 8167
+    iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$12;->val$dbox:Landroid/os/DropBoxManager;
+
+    iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$12;->val$dropboxTag:Ljava/lang/String;
+
+    invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public compare(Landroid/util/Pair;Landroid/util/Pair;)I
-    .locals 4
-    .parameter
-    .parameter
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/util/Pair",
-            "<",
-            "Lcom/android/server/am/ProcessRecord;",
-            "Ljava/lang/Integer;",
-            ">;",
-            "Landroid/util/Pair",
-            "<",
-            "Lcom/android/server/am/ProcessRecord;",
-            "Ljava/lang/Integer;",
-            ">;)I"
-        }
-    .end annotation
+.method public run()V
+    .locals 5
 
     .prologue
-    .local p1, object1:Landroid/util/Pair;,"Landroid/util/Pair<Lcom/android/server/am/ProcessRecord;Ljava/lang/Integer;>;"
-    .local p2, object2:Landroid/util/Pair;,"Landroid/util/Pair<Lcom/android/server/am/ProcessRecord;Ljava/lang/Integer;>;"
-    const/4 v2, 0x1
+    .line 8172
+    const-wide/16 v1, 0x1388
 
-    const/4 v1, -0x1
+    :try_start_0
+    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10160
-    iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v0, Lcom/android/server/am/ProcessRecord;
-
-    iget v3, v0, Lcom/android/server/am/ProcessRecord;->setAdj:I
-
-    iget-object v0, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v0, Lcom/android/server/am/ProcessRecord;
-
-    iget v0, v0, Lcom/android/server/am/ProcessRecord;->setAdj:I
-
-    if-eq v3, v0, :cond_1
-
-    .line 10161
-    iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v0, Lcom/android/server/am/ProcessRecord;
-
-    iget v3, v0, Lcom/android/server/am/ProcessRecord;->setAdj:I
-
-    iget-object v0, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v0, Lcom/android/server/am/ProcessRecord;
-
-    iget v0, v0, Lcom/android/server/am/ProcessRecord;->setAdj:I
-
-    if-le v3, v0, :cond_0
-
-    move v0, v1
-
-    .line 10166
+    .line 8176
     :goto_0
-    return v0
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    :cond_0
-    move v0, v2
+    #getter for: Lcom/android/server/am/ActivityManagerService;->mStrictModeBuffer:Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lcom/android/server/am/ActivityManagerService;->access$1100(Lcom/android/server/am/ActivityManagerService;)Ljava/lang/StringBuilder;
 
-    .line 10161
-    goto :goto_0
+    move-result-object v2
 
-    .line 10163
-    :cond_1
-    iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+    monitor-enter v2
 
-    check-cast v0, Ljava/lang/Integer;
+    .line 8177
+    :try_start_1
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    #getter for: Lcom/android/server/am/ActivityManagerService;->mStrictModeBuffer:Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lcom/android/server/am/ActivityManagerService;->access$1100(Lcom/android/server/am/ActivityManagerService;)Ljava/lang/StringBuilder;
 
-    move-result v3
+    move-result-object v1
 
-    iget-object v0, p2, Landroid/util/Pair;->second:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v0, Ljava/lang/Integer;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    .line 8178
+    .local v0, errorReport:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result v1
 
-    if-eq v3, v0, :cond_3
+    if-nez v1, :cond_0
 
-    .line 10164
-    iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+    .line 8179
+    monitor-exit v2
 
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    iget-object v0, p2, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-le v3, v0, :cond_2
-
+    .line 8185
     :goto_1
-    move v0, v1
+    return-void
 
-    goto :goto_0
+    .line 8181
+    :cond_0
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    :cond_2
-    move v1, v2
+    #getter for: Lcom/android/server/am/ActivityManagerService;->mStrictModeBuffer:Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lcom/android/server/am/ActivityManagerService;->access$1100(Lcom/android/server/am/ActivityManagerService;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    #getter for: Lcom/android/server/am/ActivityManagerService;->mStrictModeBuffer:Ljava/lang/StringBuilder;
+    invoke-static {v4}, Lcom/android/server/am/ActivityManagerService;->access$1100(Lcom/android/server/am/ActivityManagerService;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v4
+
+    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    .line 8182
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    #getter for: Lcom/android/server/am/ActivityManagerService;->mStrictModeBuffer:Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lcom/android/server/am/ActivityManagerService;->access$1100(Lcom/android/server/am/ActivityManagerService;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->trimToSize()V
+
+    .line 8183
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 8184
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->val$dbox:Landroid/os/DropBoxManager;
+
+    iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$12;->val$dropboxTag:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 10166
-    :cond_3
-    const/4 v0, 0x0
+    .line 8183
+    .end local v0           #errorReport:Ljava/lang/String;
+    :catchall_0
+    move-exception v1
+
+    :try_start_2
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+
+    .line 8173
+    :catch_0
+    move-exception v1
 
     goto :goto_0
-.end method
-
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 10156
-    check-cast p1, Landroid/util/Pair;
-
-    .end local p1
-    check-cast p2, Landroid/util/Pair;
-
-    .end local p2
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ActivityManagerService$12;->compare(Landroid/util/Pair;Landroid/util/Pair;)I
-
-    move-result v0
-
-    return v0
 .end method

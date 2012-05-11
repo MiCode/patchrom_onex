@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 11695
+    .line 11705
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$8;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 11697
+    .line 11707
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 11698
+    .line 11708
     .local v0, b:Landroid/os/Bundle;
     const-string v2, "neverShow"
 
@@ -55,7 +55,7 @@
 
     move-result v1
 
-    .line 11699
+    .line 11709
     .local v1, neverShow:Z
     const-string v2, "persist.sys.navtips.nevershow"
 
@@ -65,12 +65,12 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11700
+    .line 11710
     sget-boolean v2, Lcom/android/server/wm/WindowManagerService;->DEBUG_NAV_BAR:Z
 
     if-eqz v2, :cond_0
 
-    .line 11701
+    .line 11711
     const-string v2, "WindowManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -93,7 +93,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11703
+    .line 11713
     :cond_0
     return-void
 .end method

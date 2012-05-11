@@ -101,7 +101,7 @@
 
     const-string v5, "common_progress_empty"
 
-    const v6, 0x2080188
+    const v6, 0x2080189
 
     invoke-static {v4, v5, v6}, Landroid/widget/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 
@@ -125,7 +125,7 @@
 
     const-string v5, "common_progress_full"
 
-    const v6, 0x2080189
+    const v6, 0x208018a
 
     invoke-static {v4, v5, v6}, Landroid/widget/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 
@@ -171,7 +171,7 @@
 
     const-string v2, "common_progress_button"
 
-    const v3, 0x2080187
+    const v3, 0x2080188
 
     invoke-static {v1, v2, v3}, Landroid/widget/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

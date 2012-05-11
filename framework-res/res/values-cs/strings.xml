@@ -1270,13 +1270,13 @@ pro účet %s"</string>
     <string name="sim_puk_contact_customer_care_information">Pro získání kódu PUK se obraťte na oddělení péče o zákazníky</string>
     <string name="permlab_accessCWFolder">Přístup ke složce funkce průvodce přizpůsobení</string>
     <string name="permdesc_accessCWFolder">Umožňuje aplikaci přístup ke složce funkce průvodce přizpůsobení</string>
-    <string name="permlab_accessRecoveryFolder">Přístup na složku pro obnovení</string>
+    <string name="permlab_accessRecoveryFolder">Přístup do složky pro obnovení</string>
     <string name="permdesc_accessRecoveryFolder">Umožňuje aplikaci přístup ke složce pro obnovení</string>
     <string name="permlab_setappname">Dynamika pro změnu názvu aplikace</string>
     <string name="permdesc_setappname">Umožňuje aplikaci dynamicky změnit specifikaci názvu aplikace.</string>
     <string name="text_limitation">Ke sdílení nelze vybrat příliš mnoho slov.</string>
     <string name="sms_roam_guild_dialog_title">Odchozí zpráva</string>
-    <string name="sms_roam_guild_dialog_subject">Využíváte roaming na mezinárodních sítích. Odeslání této zprávy může znamenat další poplatky ze strany vašeho bezdrátového poskytovatele služeb. Chcete:</string>
+    <string name="sms_roam_guild_dialog_subject">Využíváte roaming na mezinárodních sítích. Odeslání této zprávy může znamenat další poplatky ze strany vašeho poskytovatele bezdrátových služeb. Chcete:</string>
     <string name="sms_roam_guild_dialog_radio_auto_send">Automaticky odeslat při národním pokrytí</string>
     <string name="sms_roam_guild_dialog_send_now">Odeslat nyní</string>
     <string name="sms_roam_guild_dialog_send_later">Odeslat později</string>

@@ -1251,7 +1251,7 @@ a(z) %s fiók számára"</string>
     <string name="htc_framework_pm">PM</string>
     <string name="sd_encrypt_notify_title">SD kártya titkosítás szükséges</string>
     <string name="sd_encrypt_notify_text">Kattintson ide az engedélyezéshez</string>
-    <string name="data_encrypt_notify_title">Belső adat titkosítás engedélyezve</string>
+    <string name="data_encrypt_notify_title">Belső adattitkosítás engedélyezve</string>
     <string name="data_encrypt_convert_diag">Dekódolás...</string>
     <string name="disable_notify_title">IT letiltotta ezt:</string>
     <string name="it_notify_text">IT által megkövetelt irányelv</string>
@@ -1272,11 +1272,11 @@ a(z) %s fiók számára"</string>
     <string name="permdesc_accessCWFolder">Lehetővé teszi egy alkalmazás számára a személyre szabás varázsló szolgáltatás mappájának elérését</string>
     <string name="permlab_accessRecoveryFolder">Helyreállítási mappa elérése</string>
     <string name="permdesc_accessRecoveryFolder">Az alkalmazás számára lehetővé teszi a helyreállítási mappa elérését</string>
-    <string name="permlab_setappname">Alkalmazás nevének megváltoztatása dinamikusan</string>
+    <string name="permlab_setappname">Alkalmazás nevének dinamikus változtatása</string>
     <string name="permdesc_setappname">Lehetővé teszi az alkalmazás nevének dinamikus változtatását, megadását.</string>
     <string name="text_limitation">Túl sok szót nem választhat megosztás céljára.</string>
     <string name="sms_roam_guild_dialog_title">Kimenő üzenet</string>
-    <string name="sms_roam_guild_dialog_subject">Ön nemzetközi hálózatokon barangol. Az üzenet elküldéséért a vezeték nélküli szolgáltatója extra költségeket számolhat fel. Szeretné:</string>
+    <string name="sms_roam_guild_dialog_subject">Ön nemzetközi hálózatokon roamingol. Az üzenet elküldéséért a szolgáltatója extra költségeket számolhat fel. Szeretné:</string>
     <string name="sms_roam_guild_dialog_radio_auto_send">Automatikus küldés honországi lefedettség esetén</string>
     <string name="sms_roam_guild_dialog_send_now">Küldés most</string>
     <string name="sms_roam_guild_dialog_send_later">Küldés később</string>
@@ -1313,18 +1313,18 @@ a(z) %s fiók számára"</string>
     <string name="font_alignment">Betűk kiigazítása</string>
     <string name="image">Kép</string>
     <string name="dongle_noti_ticker">Media Link HD eszköz észlelhető</string>
-    <string name="dongle_noti_title_multiple_found">HTC Media Link található</string>
+    <string name="dongle_noti_title_multiple_found">HTC Media Link eszköz található</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
     <string name="dongle_noti_text_multiple_found">Érintse meg a kiválasztáshoz</string>
     <string name="wireless_display_output_tv_title">Media Link HD</string>
-    <string name="wireless_display_output_tv_text">"Elküldi lejátszásra a TV-készüléken?
+    <string name="wireless_display_output_tv_text">"Elküldi lejátszásra a TV-n?
 
 %1$s másodperc maradt..."</string>
     <string name="wireless_display_output_tv_checkbox">Többé ne jelenjen meg</string>
     <string name="call_forward_unconditional">Feltétlen hívástovábbítás</string>
     <string name="call_forward_when_busy">Hívástovábbítás, ha foglalt</string>
     <string name="call_forward_when_unanswered">Hívástovábbítás, ha nem fogadott</string>
-    <string name="call_forward_when_unreachable">Hívástovábbítás, ha nem érhető el</string>
+    <string name="call_forward_when_unreachable">Hívástovábbítás, ha nem elérhető</string>
     <string name="call_forward_all_forward">Minden hívás továbbítása</string>
     <string name="call_forward_all_conditional">Minden feltételes hívás továbbítása</string>
 </resources>

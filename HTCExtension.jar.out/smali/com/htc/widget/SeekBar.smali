@@ -103,7 +103,7 @@
     .prologue
     const/4 v4, 0x0
 
-    const v3, 0x2080189
+    const v3, 0x208018a
 
     const/4 v2, 0x1
 
@@ -192,7 +192,7 @@
 
     move-result-object v0
 
-    const v1, 0x2080188
+    const v1, 0x2080189
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -205,7 +205,7 @@
 
     move-result-object v0
 
-    const v1, 0x20803e1
+    const v1, 0x20803e2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

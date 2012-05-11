@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3916
+    .line 3922
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +42,13 @@
     .parameter "v"
 
     .prologue
-    .line 3918
+    .line 3924
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindow$3;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindow;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->toggle()V
 
-    .line 3919
+    .line 3925
     return-void
 .end method

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3514
+    .line 3562
     iput-object p1, p0, Lcom/android/camera/CameraThread$ErrorCallback;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3514
+    .line 3562
     invoke-direct {p0, p1}, Lcom/android/camera/CameraThread$ErrorCallback;-><init>(Lcom/android/camera/CameraThread;)V
 
     return-void
@@ -57,26 +57,26 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 3518
+    .line 3566
     const-string v0, "CameraThread"
 
     const-string v1, "got ErrorCallback !!!"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3519
+    .line 3567
     const/16 v0, 0x64
 
     if-ne p1, v0, :cond_1
 
-    .line 3520
+    .line 3568
     const-string v0, "CameraThread"
 
     const-string v1, "error = Camera.CAMERA_ERROR_SERVER_DIED"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3534
+    .line 3582
     :goto_0
     const-string v0, "CameraThread"
 
@@ -84,13 +84,13 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3535
+    .line 3583
     iget-object v0, p0, Lcom/android/camera/CameraThread$ErrorCallback;->this$0:Lcom/android/camera/CameraThread;
 
     #setter for: Lcom/android/camera/CameraThread;->mCaptureState:I
     invoke-static {v0, v2}, Lcom/android/camera/CameraThread;->access$1202(Lcom/android/camera/CameraThread;I)I
 
-    .line 3537
+    .line 3585
     iget-object v0, p0, Lcom/android/camera/CameraThread$ErrorCallback;->this$0:Lcom/android/camera/CameraThread;
 
     #getter for: Lcom/android/camera/CameraThread;->mCameraActivity:Lcom/android/camera/HTCCamera;
@@ -100,14 +100,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 3538
+    .line 3586
     const-string v0, "CameraThread"
 
     const-string v1, "got ErrorCallback, Camera app finished"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3539
+    .line 3587
     iget-object v0, p0, Lcom/android/camera/CameraThread$ErrorCallback;->this$0:Lcom/android/camera/CameraThread;
 
     #getter for: Lcom/android/camera/CameraThread;->mCameraActivity:Lcom/android/camera/HTCCamera;
@@ -117,47 +117,47 @@
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->finish()V
 
-    .line 3541
+    .line 3589
     :cond_0
     :goto_1
     return-void
 
-    .line 3521
+    .line 3569
     :cond_1
     const/16 v0, 0x3d0
 
     if-ne p1, v0, :cond_2
 
-    .line 3522
+    .line 3570
     const-string v0, "CameraThread"
 
     const-string v1, "error = HtcWrapCamera.CAMERA_STEREO_PROHIBIT"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3523
+    .line 3571
     iget-object v0, p0, Lcom/android/camera/CameraThread$ErrorCallback;->this$0:Lcom/android/camera/CameraThread;
 
     #setter for: Lcom/android/camera/CameraThread;->mCaptureState:I
     invoke-static {v0, v2}, Lcom/android/camera/CameraThread;->access$1202(Lcom/android/camera/CameraThread;I)I
 
-    .line 3524
+    .line 3572
     iget-object v0, p0, Lcom/android/camera/CameraThread$ErrorCallback;->this$0:Lcom/android/camera/CameraThread;
 
     const/4 v1, 0x0
 
     #setter for: Lcom/android/camera/CameraThread;->mPreviewing:Z
-    invoke-static {v0, v1}, Lcom/android/camera/CameraThread;->access$2702(Lcom/android/camera/CameraThread;Z)Z
+    invoke-static {v0, v1}, Lcom/android/camera/CameraThread;->access$2902(Lcom/android/camera/CameraThread;Z)Z
 
     goto :goto_1
 
-    .line 3528
+    .line 3576
     :cond_2
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_3
 
-    .line 3529
+    .line 3577
     const-string v0, "CameraThread"
 
     const-string v1, "error = Camera.CAMERA_ERROR_UNKNOWN"
@@ -166,7 +166,7 @@
 
     goto :goto_0
 
-    .line 3531
+    .line 3579
     :cond_3
     const-string v0, "CameraThread"
 

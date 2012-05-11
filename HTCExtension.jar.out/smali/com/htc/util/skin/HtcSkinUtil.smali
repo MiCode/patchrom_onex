@@ -1626,7 +1626,7 @@
     if-eqz v7, :cond_4
 
     .line 706
-    const v7, 0x20803e1
+    const v7, 0x20803e2
 
     invoke-static {v6, v7}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -2271,7 +2271,7 @@
     if-nez v8, :cond_3
 
     .line 422
-    const v10, 0x20803e1
+    const v10, 0x20803e2
 
     invoke-static {v9, v10}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -2539,7 +2539,7 @@
     if-nez v10, :cond_2
 
     .line 493
-    const v12, 0x20803e1
+    const v12, 0x20803e2
 
     invoke-static {v11, v12}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

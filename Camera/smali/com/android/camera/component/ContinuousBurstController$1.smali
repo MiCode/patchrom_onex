@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 492
+    .line 510
     iput-object p1, p0, Lcom/android/camera/component/ContinuousBurstController$1;->this$0:Lcom/android/camera/component/ContinuousBurstController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 496
+    .line 514
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/AutoFocusEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$1;->this$0:Lcom/android/camera/component/ContinuousBurstController;
 
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 498
+    .line 516
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$1;->this$0:Lcom/android/camera/component/ContinuousBurstController;
 
     iget-object v1, p0, Lcom/android/camera/component/ContinuousBurstController$1;->this$0:Lcom/android/camera/component/ContinuousBurstController;
@@ -99,7 +99,7 @@
     #calls: Lcom/android/camera/component/ContinuousBurstController;->takeNextPicture(I)V
     invoke-static {v0, v1}, Lcom/android/camera/component/ContinuousBurstController;->access$800(Lcom/android/camera/component/ContinuousBurstController;I)V
 
-    .line 499
+    .line 517
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$1;->this$0:Lcom/android/camera/component/ContinuousBurstController;
 
     const/4 v1, 0x0
@@ -107,7 +107,7 @@
     #setter for: Lcom/android/camera/component/ContinuousBurstController;->m_IsFocusingBeforeCapture:Z
     invoke-static {v0, v1}, Lcom/android/camera/component/ContinuousBurstController;->access$602(Lcom/android/camera/component/ContinuousBurstController;Z)Z
 
-    .line 501
+    .line 519
     :cond_0
     return-void
 .end method
@@ -119,7 +119,7 @@
     .parameter "x2"
 
     .prologue
-    .line 492
+    .line 510
     check-cast p3, Lcom/android/camera/AutoFocusEventArgs;
 
     .end local p3

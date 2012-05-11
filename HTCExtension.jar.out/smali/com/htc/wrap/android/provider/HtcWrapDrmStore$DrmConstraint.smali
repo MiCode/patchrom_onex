@@ -46,42 +46,42 @@
 
     const/4 v7, 0x0
 
-    .line 706
+    .line 688
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 691
+    .line 673
     iput-object v7, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
-    .line 694
+    .line 676
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mNoConstraint:Z
 
-    .line 696
+    .line 678
     const/4 v6, -0x1
 
     iput v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mCount:I
 
-    .line 697
+    .line 679
     iput-object v7, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mStartDate:Ljava/util/Date;
 
-    .line 698
+    .line 680
     iput-object v7, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mEndDate:Ljava/util/Date;
 
-    .line 699
+    .line 681
     const-wide/16 v6, -0x1
 
     iput-wide v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mInterval:J
 
-    .line 707
+    .line 689
     iput-object p1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
-    .line 709
+    .line 691
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     if-eqz v6, :cond_2
 
-    .line 713
+    .line 695
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     invoke-virtual {v6}, Landroid/drm/mobile1/DrmConstraintInfo;->isNoConstraint()Z
@@ -90,7 +90,7 @@
 
     iput-boolean v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mNoConstraint:Z
 
-    .line 715
+    .line 697
     const-string v6, "HtcWrapDrmStore"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -115,7 +115,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
+    .line 701
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     invoke-virtual {v6}, Landroid/drm/mobile1/DrmConstraintInfo;->getCount()I
@@ -124,7 +124,7 @@
 
     iput v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mCount:I
 
-    .line 721
+    .line 703
     const-string v6, "HtcWrapDrmStore"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -149,7 +149,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 724
+    .line 706
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     invoke-virtual {v6}, Landroid/drm/mobile1/DrmConstraintInfo;->getStartDate()Ljava/util/Date;
@@ -158,28 +158,28 @@
 
     iput-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mStartDate:Ljava/util/Date;
 
-    .line 725
+    .line 707
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mStartDate:Ljava/util/Date;
 
     if-eqz v6, :cond_0
 
-    .line 727
+    .line 709
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 728
+    .line 710
     .local v0, calendar:Ljava/util/Calendar;
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mStartDate:Ljava/util/Date;
 
     invoke-virtual {v0, v6}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 729
+    .line 711
     invoke-virtual {v0, v9}, Ljava/util/Calendar;->get(I)I
 
     move-result v5
 
-    .line 730
+    .line 712
     .local v5, year:I
     invoke-virtual {v0, v10}, Ljava/util/Calendar;->get(I)I
 
@@ -187,19 +187,19 @@
 
     add-int/lit8 v4, v6, 0x1
 
-    .line 731
+    .line 713
     .local v4, month:I
     invoke-virtual {v0, v11}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
-    .line 732
+    .line 714
     .local v1, day:I
     invoke-virtual {v0, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
-    .line 733
+    .line 715
     .local v2, hours:I
     const/16 v6, 0xc
 
@@ -207,7 +207,7 @@
 
     move-result v3
 
-    .line 734
+    .line 716
     .local v3, mins:I
     const-string v6, "HtcWrapDrmStore"
 
@@ -271,7 +271,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 738
+    .line 720
     .end local v0           #calendar:Ljava/util/Calendar;
     .end local v1           #day:I
     .end local v2           #hours:I
@@ -287,28 +287,28 @@
 
     iput-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mEndDate:Ljava/util/Date;
 
-    .line 739
+    .line 721
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mEndDate:Ljava/util/Date;
 
     if-eqz v6, :cond_1
 
-    .line 741
+    .line 723
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 742
+    .line 724
     .restart local v0       #calendar:Ljava/util/Calendar;
     iget-object v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mEndDate:Ljava/util/Date;
 
     invoke-virtual {v0, v6}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 743
+    .line 725
     invoke-virtual {v0, v9}, Ljava/util/Calendar;->get(I)I
 
     move-result v5
 
-    .line 744
+    .line 726
     .restart local v5       #year:I
     invoke-virtual {v0, v10}, Ljava/util/Calendar;->get(I)I
 
@@ -316,19 +316,19 @@
 
     add-int/lit8 v4, v6, 0x1
 
-    .line 745
+    .line 727
     .restart local v4       #month:I
     invoke-virtual {v0, v11}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
-    .line 746
+    .line 728
     .restart local v1       #day:I
     invoke-virtual {v0, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
-    .line 747
+    .line 729
     .restart local v2       #hours:I
     const/16 v6, 0xc
 
@@ -336,7 +336,7 @@
 
     move-result v3
 
-    .line 748
+    .line 730
     .restart local v3       #mins:I
     const-string v6, "HtcWrapDrmStore"
 
@@ -400,7 +400,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 752
+    .line 734
     .end local v0           #calendar:Ljava/util/Calendar;
     .end local v1           #day:I
     .end local v2           #hours:I
@@ -416,7 +416,7 @@
 
     iput-wide v6, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mInterval:J
 
-    .line 754
+    .line 736
     const-string v6, "HtcWrapDrmStore"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -441,7 +441,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 757
+    .line 739
     :cond_2
     return-void
 .end method
@@ -452,7 +452,7 @@
     .locals 1
 
     .prologue
-    .line 764
+    .line 746
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     return-object v0
@@ -462,15 +462,15 @@
     .locals 1
 
     .prologue
-    .line 784
+    .line 766
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     if-nez v0, :cond_0
 
-    .line 785
+    .line 767
     const/4 v0, -0x1
 
-    .line 787
+    .line 769
     :goto_0
     return v0
 
@@ -490,17 +490,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 811
+    .line 793
     iget-object v1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     if-nez v1, :cond_1
 
-    .line 818
+    .line 800
     :cond_0
     :goto_0
     return-object v0
 
-    .line 815
+    .line 797
     :cond_1
     iget-object v1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
@@ -510,7 +510,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 818
+    .line 800
     new-instance v0, Ljava/util/Date;
 
     iget-object v1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
@@ -536,15 +536,15 @@
     .locals 2
 
     .prologue
-    .line 827
+    .line 809
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     if-nez v0, :cond_0
 
-    .line 828
+    .line 810
     const-wide/16 v0, -0x1
 
-    .line 830
+    .line 812
     :goto_0
     return-wide v0
 
@@ -564,17 +564,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 795
+    .line 777
     iget-object v1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     if-nez v1, :cond_1
 
-    .line 802
+    .line 784
     :cond_0
     :goto_0
     return-object v0
 
-    .line 799
+    .line 781
     :cond_1
     iget-object v1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
@@ -584,7 +584,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 802
+    .line 784
     new-instance v0, Ljava/util/Date;
 
     iget-object v1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
@@ -610,15 +610,15 @@
     .locals 1
 
     .prologue
-    .line 772
+    .line 754
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mConstraint:Landroid/drm/mobile1/DrmConstraintInfo;
 
     if-nez v0, :cond_0
 
-    .line 773
+    .line 755
     const/4 v0, 0x0
 
-    .line 776
+    .line 758
     :goto_0
     return v0
 
@@ -637,9 +637,9 @@
     .parameter "differential"
 
     .prologue
-    .line 838
+    .line 820
     iput-wide p1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$DrmConstraint;->mDifferential:J
 
-    .line 839
+    .line 821
     return-void
 .end method

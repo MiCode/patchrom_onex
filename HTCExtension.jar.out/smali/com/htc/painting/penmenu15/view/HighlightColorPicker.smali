@@ -348,7 +348,7 @@
 
     const v5, 0x20403bd
 
-    const v6, 0x20802c1
+    const v6, 0x20802c2
 
     move-object v0, p0
 

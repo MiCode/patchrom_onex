@@ -42,32 +42,32 @@
     .parameter "tag"
 
     .prologue
-    .line 1356
+    .line 1355
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1351
+    .line 1350
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mTag:Ljava/lang/String;
 
-    .line 1357
+    .line 1356
     iput-object p6, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mTag:Ljava/lang/String;
 
-    .line 1358
+    .line 1357
     iput-object p3, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mIconReource:Landroid/content/Intent$ShortcutIconResource;
 
-    .line 1359
+    .line 1358
     iput-object p4, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mSelectedIconResource:Landroid/content/Intent$ShortcutIconResource;
 
-    .line 1360
+    .line 1359
     iput-object p5, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mOverylayResource:Landroid/content/Intent$ShortcutIconResource;
 
-    .line 1361
+    .line 1360
     iput-object p2, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mLabelResource:Landroid/content/Intent$ShortcutIconResource;
 
-    .line 1362
+    .line 1361
     return-void
 .end method
 
@@ -82,7 +82,7 @@
     .parameter "x6"
 
     .prologue
-    .line 1349
+    .line 1348
     invoke-direct/range {p0 .. p6}, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;-><init>(Lcom/htc/fragment/widget/CarouselHost;Landroid/content/Intent$ShortcutIconResource;Landroid/content/Intent$ShortcutIconResource;Landroid/content/Intent$ShortcutIconResource;Landroid/content/Intent$ShortcutIconResource;Ljava/lang/String;)V
 
     return-void
@@ -93,7 +93,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1349
+    .line 1348
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mLabelResource:Landroid/content/Intent$ShortcutIconResource;
 
     return-object v0
@@ -104,7 +104,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1349
+    .line 1348
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mIconReource:Landroid/content/Intent$ShortcutIconResource;
 
     return-object v0
@@ -115,7 +115,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1349
+    .line 1348
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mSelectedIconResource:Landroid/content/Intent$ShortcutIconResource;
 
     return-object v0
@@ -126,7 +126,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1349
+    .line 1348
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$LabelAndIconIndicatorStategy;->mOverylayResource:Landroid/content/Intent$ShortcutIconResource;
 
     return-object v0
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 1373
+    .line 1372
     const/4 v0, 0x0
 
     return-object v0
@@ -148,7 +148,7 @@
     .locals 2
 
     .prologue
-    .line 1383
+    .line 1382
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

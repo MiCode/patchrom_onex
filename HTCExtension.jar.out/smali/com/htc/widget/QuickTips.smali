@@ -251,7 +251,7 @@
 
     iget-object v4, p0, Lcom/htc/widget/QuickTips;->resources:Landroid/content/res/Resources;
 
-    const v7, 0x2080309
+    const v7, 0x208030a
 
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -272,7 +272,7 @@
 
     iget-object v4, p0, Lcom/htc/widget/QuickTips;->resources:Landroid/content/res/Resources;
 
-    const v7, 0x208030a
+    const v7, 0x208030b
 
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -293,7 +293,7 @@
 
     iget-object v4, p0, Lcom/htc/widget/QuickTips;->resources:Landroid/content/res/Resources;
 
-    const v7, 0x2080308
+    const v7, 0x2080309
 
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -314,7 +314,7 @@
 
     iget-object v4, p0, Lcom/htc/widget/QuickTips;->resources:Landroid/content/res/Resources;
 
-    const v7, 0x2080305
+    const v7, 0x2080306
 
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -335,7 +335,7 @@
 
     iget-object v4, p0, Lcom/htc/widget/QuickTips;->resources:Landroid/content/res/Resources;
 
-    const v7, 0x2080307
+    const v7, 0x2080308
 
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -356,7 +356,7 @@
 
     iget-object v4, p0, Lcom/htc/widget/QuickTips;->resources:Landroid/content/res/Resources;
 
-    const v7, 0x2080306
+    const v7, 0x2080307
 
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -370,7 +370,7 @@
     :cond_0
     iget-object v4, p0, Lcom/htc/widget/QuickTips;->resources:Landroid/content/res/Resources;
 
-    const v5, 0x208030b
+    const v5, 0x208030c
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

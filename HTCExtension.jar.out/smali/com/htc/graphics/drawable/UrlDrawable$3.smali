@@ -194,8 +194,12 @@
     :cond_1
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$3;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;
 
-    #setter for: Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
-    invoke-static {v1, v0}, Lcom/htc/graphics/drawable/UrlDrawable;->access$202(Lcom/htc/graphics/drawable/UrlDrawable;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    new-instance v2, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v2, v0}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    #setter for: Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+    invoke-static {v1, v2}, Lcom/htc/graphics/drawable/UrlDrawable;->access$202(Lcom/htc/graphics/drawable/UrlDrawable;Ljava/lang/ref/SoftReference;)Ljava/lang/ref/SoftReference;
 
     .line 755
     iget-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable$3;->this$0:Lcom/htc/graphics/drawable/UrlDrawable;

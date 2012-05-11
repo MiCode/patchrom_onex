@@ -15,7 +15,7 @@
 #the value of this static final field might be set in the static constructor
 .field private static final LOGI:Z = false
 
-.field private static final LOGT:Z = false
+.field private static final LOGT:Z = true
 
 #the value of this static final field might be set in the static constructor
 .field private static final LOGV:Z = false
@@ -31,7 +31,7 @@
     .locals 2
 
     .prologue
-    .line 10
+    .line 12
     const-string v0, "CarouselFragment"
 
     const/4 v1, 0x2
@@ -42,7 +42,7 @@
 
     sput-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGV:Z
 
-    .line 11
+    .line 13
     const-string v0, "CarouselFragment"
 
     const/4 v1, 0x3
@@ -53,7 +53,7 @@
 
     sput-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGD:Z
 
-    .line 12
+    .line 14
     const-string v0, "CarouselFragment"
 
     const/4 v1, 0x4
@@ -64,7 +64,7 @@
 
     sput-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGI:Z
 
-    .line 13
+    .line 15
     const-string v0, "CarouselFragment"
 
     const/4 v1, 0x5
@@ -75,7 +75,7 @@
 
     sput-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGW:Z
 
-    .line 14
+    .line 16
     const-string v0, "CarouselFragment"
 
     const/4 v1, 0x6
@@ -93,7 +93,7 @@
     .locals 0
 
     .prologue
-    .line 8
+    .line 10
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -104,7 +104,7 @@
     .parameter "msg"
 
     .prologue
-    .line 23
+    .line 25
     sget-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGD:Z
 
     if-eqz v0, :cond_0
@@ -113,7 +113,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
+    .line 26
     :cond_0
     return-void
 .end method
@@ -124,7 +124,7 @@
     .parameter "msg"
 
     .prologue
-    .line 47
+    .line 49
     return-void
 .end method
 
@@ -134,7 +134,7 @@
     .parameter "str"
 
     .prologue
-    .line 59
+    .line 61
     return-void
 .end method
 
@@ -144,7 +144,7 @@
     .parameter "msg"
 
     .prologue
-    .line 51
+    .line 53
     return-void
 .end method
 
@@ -154,7 +154,7 @@
     .parameter "msg"
 
     .prologue
-    .line 43
+    .line 45
     return-void
 .end method
 
@@ -164,7 +164,7 @@
     .parameter "msg"
 
     .prologue
-    .line 55
+    .line 57
     return-void
 .end method
 
@@ -173,7 +173,7 @@
     .parameter "msg"
 
     .prologue
-    .line 35
+    .line 37
     sget-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGE:Z
 
     if-eqz v0, :cond_0
@@ -182,7 +182,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
+    .line 38
     :cond_0
     return-void
 .end method
@@ -193,7 +193,7 @@
     .parameter "tr"
 
     .prologue
-    .line 38
+    .line 40
     sget-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGE:Z
 
     if-eqz v0, :cond_0
@@ -202,7 +202,7 @@
 
     invoke-static {v0, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 39
+    .line 41
     :cond_0
     return-void
 .end method
@@ -212,7 +212,7 @@
     .parameter "msg"
 
     .prologue
-    .line 27
+    .line 29
     sget-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGI:Z
 
     if-eqz v0, :cond_0
@@ -221,16 +221,18 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
+    .line 30
     :cond_0
     return-void
 .end method
 
-.method public static final stackTrace()V
+.method public static final stackTraceE(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .parameter "tag"
+    .parameter "str"
 
     .prologue
-    .line 64
+    .line 65
     return-void
 .end method
 
@@ -239,7 +241,7 @@
     .parameter "msg"
 
     .prologue
-    .line 19
+    .line 21
     sget-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGV:Z
 
     if-eqz v0, :cond_0
@@ -248,7 +250,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
+    .line 22
     :cond_0
     return-void
 .end method
@@ -258,7 +260,7 @@
     .parameter "msg"
 
     .prologue
-    .line 31
+    .line 33
     sget-boolean v0, Lcom/htc/fragment/widget/CarouselLog;->LOGW:Z
 
     if-eqz v0, :cond_0
@@ -267,7 +269,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
+    .line 34
     :cond_0
     return-void
 .end method

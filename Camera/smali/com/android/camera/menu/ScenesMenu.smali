@@ -41,28 +41,28 @@
     .parameter "attrs"
 
     .prologue
-    .line 88
+    .line 89
     invoke-direct {p0, p1, p2}, Lcom/android/camera/menu/MenuListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 40
+    .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
-    .line 89
+    .line 90
     instance-of v0, p1, Lcom/android/camera/HTCCamera;
 
     if-eqz v0, :cond_0
 
-    .line 91
+    .line 92
     check-cast p1, Lcom/android/camera/HTCCamera;
 
     .end local p1
     iput-object p1, p0, Lcom/android/camera/menu/ScenesMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lcom/android/camera/menu/ScenesMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->getSettings()Lcom/android/camera/CameraSettings;
@@ -71,7 +71,7 @@
 
     iput-object v0, p0, Lcom/android/camera/menu/ScenesMenu;->m_Settings:Lcom/android/camera/Settings;
 
-    .line 93
+    .line 94
     iget-object v0, p0, Lcom/android/camera/menu/ScenesMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->getEffectManager()Lcom/android/camera/effect/EffectManager;
@@ -84,10 +84,10 @@
 
     iput-object v0, p0, Lcom/android/camera/menu/ScenesMenu;->m_SceneList:Lcom/android/camera/effect/EffectList;
 
-    .line 97
+    .line 98
     return-void
 
-    .line 96
+    .line 97
     .restart local p1
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -102,7 +102,7 @@
     .parameter "x0"
 
     .prologue
-    .line 28
+    .line 29
     invoke-static {p0}, Lcom/android/camera/menu/ScenesMenu;->getIconAndText(Lcom/android/camera/effect/EffectBase;)[Ljava/lang/Integer;
 
     move-result-object v0
@@ -115,7 +115,7 @@
     .parameter "x0"
 
     .prologue
-    .line 28
+    .line 29
     iget-object v0, p0, Lcom/android/camera/menu/ScenesMenu;->m_SceneList:Lcom/android/camera/effect/EffectList;
 
     return-object v0
@@ -136,12 +136,12 @@
 
     const/4 v3, 0x0
 
-    .line 105
+    .line 106
     invoke-virtual {p0}, Lcom/android/camera/effect/EffectBase;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 106
+    .line 107
     .local v0, name:Ljava/lang/String;
     const-string v1, "auto"
 
@@ -151,7 +151,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 107
+    .line 108
     new-array v1, v2, [Ljava/lang/Integer;
 
     const-string v2, "com.htc.R.drawable.icon_btn_auto_dark"
@@ -174,11 +174,11 @@
 
     aput-object v2, v1, v4
 
-    .line 132
+    .line 133
     :goto_0
     return-object v1
 
-    .line 108
+    .line 109
     :cond_0
     const-string v1, "portrait"
 
@@ -188,7 +188,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 109
+    .line 110
     new-array v1, v2, [Ljava/lang/Integer;
 
     const-string v2, "com.htc.R.drawable.icon_btn_people_dark"
@@ -213,7 +213,7 @@
 
     goto :goto_0
 
-    .line 110
+    .line 111
     :cond_1
     const-string v1, "landscape"
 
@@ -223,7 +223,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 111
+    .line 112
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f020088
@@ -244,7 +244,7 @@
 
     goto :goto_0
 
-    .line 112
+    .line 113
     :cond_2
     const-string v1, "smartshot"
 
@@ -254,7 +254,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 113
+    .line 114
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f020086
@@ -275,7 +275,7 @@
 
     goto :goto_0
 
-    .line 114
+    .line 115
     :cond_3
     const-string v1, "sports"
 
@@ -285,7 +285,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 115
+    .line 116
     new-array v1, v2, [Ljava/lang/Integer;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -304,7 +304,7 @@
 
     goto :goto_0
 
-    .line 116
+    .line 117
     :cond_4
     const-string v1, "burst"
 
@@ -314,7 +314,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 117
+    .line 118
     new-array v1, v2, [Ljava/lang/Integer;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -333,13 +333,13 @@
 
     goto/16 :goto_0
 
-    .line 118
+    .line 119
     :cond_5
     instance-of v1, p0, Lcom/android/camera/effect/ContinuousBurstScene;
 
     if-eqz v1, :cond_6
 
-    .line 119
+    .line 120
     new-array v1, v2, [Ljava/lang/Integer;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -358,7 +358,7 @@
 
     goto/16 :goto_0
 
-    .line 120
+    .line 121
     :cond_6
     const-string v1, "panorama"
 
@@ -368,7 +368,7 @@
 
     if-eqz v1, :cond_7
 
-    .line 121
+    .line 122
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f02008b
@@ -389,7 +389,7 @@
 
     goto/16 :goto_0
 
-    .line 122
+    .line 123
     :cond_7
     const-string v1, "hdr"
 
@@ -399,7 +399,7 @@
 
     if-eqz v1, :cond_8
 
-    .line 123
+    .line 124
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f020087
@@ -420,7 +420,7 @@
 
     goto/16 :goto_0
 
-    .line 124
+    .line 125
     :cond_8
     const-string v1, "B_whiteboard"
 
@@ -430,7 +430,7 @@
 
     if-eqz v1, :cond_9
 
-    .line 125
+    .line 126
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f02008e
@@ -451,7 +451,7 @@
 
     goto/16 :goto_0
 
-    .line 126
+    .line 127
     :cond_9
     const-string v1, "flowers"
 
@@ -461,7 +461,7 @@
 
     if-eqz v1, :cond_a
 
-    .line 127
+    .line 128
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f02008a
@@ -482,7 +482,7 @@
 
     goto/16 :goto_0
 
-    .line 128
+    .line 129
     :cond_a
     const-string v1, "backlight"
 
@@ -492,7 +492,7 @@
 
     if-eqz v1, :cond_b
 
-    .line 129
+    .line 130
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f020085
@@ -513,7 +513,7 @@
 
     goto/16 :goto_0
 
-    .line 130
+    .line 131
     :cond_b
     const-string v1, "night"
 
@@ -523,7 +523,7 @@
 
     if-eqz v1, :cond_c
 
-    .line 131
+    .line 132
     new-array v1, v2, [Ljava/lang/Integer;
 
     const v2, 0x7f020089
@@ -544,7 +544,7 @@
 
     goto/16 :goto_0
 
-    .line 132
+    .line 133
     :cond_c
     new-array v1, v2, [Ljava/lang/Integer;
 
@@ -559,19 +559,19 @@
     .locals 15
 
     .prologue
-    .line 152
+    .line 163
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 154
+    .line 165
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
     invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->getStartMode()Lcom/android/camera/CameraStartMode;
 
     move-result-object v14
 
-    .line 158
+    .line 169
     .local v14, startMode:Lcom/android/camera/CameraStartMode;
     invoke-static {}, Lcom/android/camera/DisplayDevice;->supportFastFrameRecording()Z
 
@@ -579,7 +579,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 159
+    .line 170
     new-instance v0, Lcom/android/camera/menu/CheckBoxPreferenceMenuItem;
 
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Settings:Lcom/android/camera/Settings;
@@ -596,18 +596,18 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/menu/CheckBoxPreferenceMenuItem;-><init>(Lcom/android/camera/Settings;Ljava/lang/String;IIIZ)V
 
-    .line 166
+    .line 177
     .local v0, menuItem:Lcom/android/camera/menu/MenuItem;
     const v1, 0x7f02008c
 
     invoke-virtual {v0, v1}, Lcom/android/camera/menu/MenuItem;->setIcon(I)V
 
-    .line 167
+    .line 178
     const/16 v1, 0x2d
 
     invoke-virtual {v0, v1}, Lcom/android/camera/menu/MenuItem;->setId(I)V
 
-    .line 169
+    .line 180
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
     invoke-virtual {v1}, Lcom/android/camera/HTCCamera;->getSettings()Lcom/android/camera/CameraSettings;
@@ -628,17 +628,17 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/menu/CheckBoxPreferenceMenuItem;->setChecked(Z)V
 
-    .line 170
+    .line 181
     iget-boolean v1, v14, Lcom/android/camera/CameraStartMode;->supportsVideoMode:Z
 
     invoke-virtual {v0, v1}, Lcom/android/camera/menu/MenuItem;->setEnabled(Z)V
 
-    .line 172
+    .line 183
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 175
+    .line 186
     new-instance v0, Lcom/android/camera/menu/SeparatorMenuItem;
 
     .end local v0           #menuItem:Lcom/android/camera/menu/MenuItem;
@@ -646,13 +646,13 @@
 
     invoke-direct {v0, v1}, Lcom/android/camera/menu/SeparatorMenuItem;-><init>(I)V
 
-    .line 176
+    .line 187
     .restart local v0       #menuItem:Lcom/android/camera/menu/MenuItem;
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 180
+    .line 191
     .end local v0           #menuItem:Lcom/android/camera/menu/MenuItem;
     :cond_0
     const/4 v9, 0x0
@@ -668,14 +668,14 @@
     :goto_0
     if-ge v9, v7, :cond_1
 
-    .line 183
+    .line 194
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_SceneList:Lcom/android/camera/effect/EffectList;
 
     invoke-virtual {v1, v9}, Lcom/android/camera/effect/EffectList;->getEffect(I)Lcom/android/camera/effect/EffectBase;
 
     move-result-object v13
 
-    .line 186
+    .line 197
     .local v13, scene:Lcom/android/camera/effect/EffectBase;
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
@@ -685,19 +685,19 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 180
+    .line 191
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 190
+    .line 201
     .end local v13           #scene:Lcom/android/camera/effect/EffectBase;
     :cond_1
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v1}, Lcom/android/camera/menu/ScenesMenu;->setItems(Ljava/util/List;)V
 
-    .line 193
+    .line 204
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
 
     iget-object v1, v1, Lcom/android/camera/HTCCamera;->cameraType:Lcom/android/camera/property/Property;
@@ -716,12 +716,12 @@
 
     move-result-object v8
 
-    .line 194
+    .line 205
     .local v8, currentScene:Lcom/android/camera/effect/EffectBase;
     :goto_1
     const/4 v10, 0x0
 
-    .line 195
+    .line 206
     .local v10, isSceneFound:Z
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
@@ -734,7 +734,7 @@
     :goto_2
     if-ltz v9, :cond_5
 
-    .line 197
+    .line 208
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -745,13 +745,13 @@
 
     if-nez v1, :cond_3
 
-    .line 195
+    .line 206
     :goto_3
     add-int/lit8 v9, v9, -0x1
 
     goto :goto_2
 
-    .line 193
+    .line 204
     .end local v8           #currentScene:Lcom/android/camera/effect/EffectBase;
     .end local v10           #isSceneFound:Z
     :cond_2
@@ -759,7 +759,7 @@
 
     goto :goto_1
 
-    .line 200
+    .line 211
     .restart local v8       #currentScene:Lcom/android/camera/effect/EffectBase;
     .restart local v10       #isSceneFound:Z
     :cond_3
@@ -771,7 +771,7 @@
 
     check-cast v11, Lcom/android/camera/menu/ScenesMenu$SubItem;
 
-    .line 201
+    .line 212
     .local v11, item:Lcom/android/camera/menu/ScenesMenu$SubItem;
     #getter for: Lcom/android/camera/menu/ScenesMenu$SubItem;->scene:Lcom/android/camera/effect/EffectBase;
     invoke-static {v11}, Lcom/android/camera/menu/ScenesMenu$SubItem;->access$200(Lcom/android/camera/menu/ScenesMenu$SubItem;)Lcom/android/camera/effect/EffectBase;
@@ -780,30 +780,30 @@
 
     if-eq v1, v8, :cond_4
 
-    .line 202
+    .line 213
     const/4 v1, 0x0
 
     invoke-virtual {v11, v1}, Lcom/android/camera/menu/ScenesMenu$SubItem;->setChecked(Z)V
 
     goto :goto_3
 
-    .line 205
+    .line 216
     :cond_4
     const/4 v10, 0x1
 
-    .line 206
+    .line 217
     const/4 v1, 0x1
 
     invoke-virtual {v11, v1}, Lcom/android/camera/menu/ScenesMenu$SubItem;->setChecked(Z)V
 
     goto :goto_3
 
-    .line 210
+    .line 221
     .end local v11           #item:Lcom/android/camera/menu/ScenesMenu$SubItem;
     :cond_5
     if-nez v10, :cond_6
 
-    .line 212
+    .line 223
     invoke-static {}, Lcom/android/camera/DisplayDevice;->supportFastFrameRecording()Z
 
     move-result v1
@@ -812,7 +812,7 @@
 
     const/4 v12, 0x2
 
-    .line 213
+    .line 224
     .local v12, num:I
     :goto_4
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
@@ -828,7 +828,7 @@
 
     move-result-object v8
 
-    .line 214
+    .line 225
     iget-object v1, p0, Lcom/android/camera/menu/ScenesMenu;->m_Items:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -841,12 +841,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/menu/MenuItem;->setChecked(Z)V
 
-    .line 216
+    .line 227
     .end local v12           #num:I
     :cond_6
     return-void
 
-    .line 212
+    .line 223
     :cond_7
     const/4 v12, 0x0
 
@@ -856,35 +856,55 @@
 
 # virtual methods
 .method protected onMenuItemClicked(Lcom/android/camera/menu/MenuItem;II)V
-    .locals 0
+    .locals 2
     .parameter "item"
     .parameter "index"
     .parameter "id"
 
     .prologue
-    .line 142
+    .line 143
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/menu/MenuListView;->onMenuItemClicked(Lcom/android/camera/menu/MenuItem;II)V
 
-    .line 143
+    .line 146
+    packed-switch p3, :pswitch_data_0
+
+    .line 154
+    :goto_0
     return-void
+
+    .line 150
+    :pswitch_0
+    iget-object v0, p0, Lcom/android/camera/menu/ScenesMenu;->m_CameraActivity:Lcom/android/camera/HTCCamera;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/HTCCamera;->restartPreview(I)Z
+
+    goto :goto_0
+
+    .line 146
+    :pswitch_data_0
+    .packed-switch 0x2d
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public updateItemContents()V
     .locals 0
 
     .prologue
-    .line 227
+    .line 238
     invoke-virtual {p0}, Lcom/android/camera/menu/ScenesMenu;->beginUpdate()V
 
-    .line 230
+    .line 241
     invoke-direct {p0}, Lcom/android/camera/menu/ScenesMenu;->updateCameraSceneItem()V
 
-    .line 231
+    .line 242
     invoke-super {p0}, Lcom/android/camera/menu/MenuListView;->updateItemContents()V
 
-    .line 234
+    .line 245
     invoke-virtual {p0}, Lcom/android/camera/menu/ScenesMenu;->endUpdate()V
 
-    .line 235
+    .line 246
     return-void
 .end method

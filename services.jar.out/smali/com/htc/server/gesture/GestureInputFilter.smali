@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x405
+    const v1, 0x4060001
 
     invoke-static {v0, v1}, Lcom/htc/server/gesture/GestureInputFilter;->getLongIntArray(Landroid/content/res/Resources;I)[J
 

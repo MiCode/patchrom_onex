@@ -357,7 +357,7 @@
     invoke-virtual {v2, v6, v7}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
     .line 73
-    const v6, 0x2080247
+    const v6, 0x2080248
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -448,7 +448,7 @@
 
     .line 97
     :cond_0
-    const v6, 0x2080259
+    const v6, 0x208025a
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

@@ -119,22 +119,22 @@
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->mListPopupMinWidth:I
 
     .line 76
-    const v0, 0x20802ec
+    const v0, 0x20802ed
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_CENTER_DARK:I
 
     .line 77
-    const v0, 0x20802e5
+    const v0, 0x20802e6
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_BOTTOM_DARK:I
 
     .line 78
-    const v0, 0x20802eb
+    const v0, 0x20802ec
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_CENTER_BRIGHT:I
 
     .line 79
-    const v0, 0x20802e3
+    const v0, 0x20802e4
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_BOTTOM_BRIGHT:I
 
@@ -267,22 +267,22 @@
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->mListPopupMinWidth:I
 
     .line 76
-    const v0, 0x20802ec
+    const v0, 0x20802ed
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_CENTER_DARK:I
 
     .line 77
-    const v0, 0x20802e5
+    const v0, 0x20802e6
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_BOTTOM_DARK:I
 
     .line 78
-    const v0, 0x20802eb
+    const v0, 0x20802ec
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_CENTER_BRIGHT:I
 
     .line 79
-    const v0, 0x20802e3
+    const v0, 0x20802e4
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_BOTTOM_BRIGHT:I
 
@@ -401,22 +401,22 @@
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->mListPopupMinWidth:I
 
     .line 76
-    const v0, 0x20802ec
+    const v0, 0x20802ed
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_CENTER_DARK:I
 
     .line 77
-    const v0, 0x20802e5
+    const v0, 0x20802e6
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_BOTTOM_DARK:I
 
     .line 78
-    const v0, 0x20802eb
+    const v0, 0x20802ec
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_CENTER_BRIGHT:I
 
     .line 79
-    const v0, 0x20802e3
+    const v0, 0x20802e4
 
     iput v0, p0, Lcom/htc/widget/EditWindowLayout;->BODY_BACKGROUND_BOTTOM_BRIGHT:I
 
@@ -934,9 +934,9 @@
     .parameter "h"
 
     .prologue
-    const v7, 0x20802e9
+    const v7, 0x20802ea
 
-    const v6, 0x20802e4
+    const v6, 0x20802e5
 
     .line 923
     invoke-direct {p0, p1}, Lcom/htc/widget/EditWindowLayout;->isSipOn(I)Z
@@ -958,9 +958,9 @@
     if-eqz v1, :cond_5
 
     .line 926
-    const v4, 0x20802e8
+    const v4, 0x20802e9
 
-    const v5, 0x20802e7
+    const v5, 0x20802e8
 
     invoke-virtual {p0, v1, v3, v4, v5}, Lcom/htc/widget/EditWindowLayout;->adjustViewBackgroundResource(Landroid/view/View;ZII)V
 
@@ -3362,14 +3362,14 @@
     .line 1218
     if-eqz p2, :cond_1
 
-    const v4, 0x20802ec
+    const v4, 0x20802ed
 
     .line 1219
     .local v4, resWithSip:I
     :goto_0
     if-eqz p2, :cond_2
 
-    const v3, 0x20802e5
+    const v3, 0x20802e6
 
     .line 1220
     .local v3, res:I
@@ -3390,14 +3390,14 @@
     .line 1218
     .restart local v1       #editingWindowContent:Landroid/view/ViewGroup;
     :cond_1
-    const v4, 0x20802eb
+    const v4, 0x20802ec
 
     goto :goto_0
 
     .line 1219
     .restart local v4       #resWithSip:I
     :cond_2
-    const v3, 0x20802e3
+    const v3, 0x20802e4
 
     goto :goto_1
 
@@ -3482,7 +3482,7 @@
 
     .line 1177
     :cond_0
-    const v1, 0x20802f3
+    const v1, 0x20802f4
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
@@ -4494,7 +4494,7 @@
     if-nez v1, :cond_0
 
     .line 1187
-    const v1, 0x20802e5
+    const v1, 0x20802e6
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
@@ -4504,7 +4504,7 @@
 
     .line 1189
     :cond_0
-    const v1, 0x20802ec
+    const v1, 0x20802ed
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 

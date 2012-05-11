@@ -35,27 +35,27 @@
     .parameter
 
     .prologue
-    .line 2479
+    .line 2478
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2469
+    .line 2468
     const/16 v1, 0x1f4
 
     iput v1, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mAnimationDuration:I
 
-    .line 2470
+    .line 2469
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mIsRunning:Z
 
-    .line 2480
+    .line 2479
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    .line 2481
+    .line 2480
     .local v0, interpreter:Landroid/view/animation/LinearInterpolator;
     new-instance v1, Landroid/widget/Scroller;
 
@@ -67,7 +67,7 @@
 
     iput-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mScroller:Landroid/widget/Scroller;
 
-    .line 2483
+    .line 2482
     const/4 v1, 0x1
 
     const/16 v2, 0x5dd
@@ -80,7 +80,7 @@
 
     iput-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mDropAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
-    .line 2484
+    .line 2483
     return-void
 .end method
 
@@ -89,14 +89,14 @@
     .parameter "scrollIntoSlots"
 
     .prologue
-    .line 2528
+    .line 2527
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mScroller:Landroid/widget/Scroller;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    .line 2529
+    .line 2528
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     #getter for: Lcom/htc/fragment/widget/CarouselHost;->mDragSource:Lcom/htc/fragment/widget/DragSource;
@@ -106,7 +106,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2530
+    .line 2529
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     #getter for: Lcom/htc/fragment/widget/CarouselHost;->mDragSource:Lcom/htc/fragment/widget/DragSource;
@@ -125,23 +125,23 @@
 
     invoke-interface {v1, v0}, Lcom/htc/fragment/widget/DragSource;->onDropAnimationEnd(Landroid/view/View;)V
 
-    .line 2532
+    .line 2531
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mIsRunning:Z
 
-    .line 2535
+    .line 2534
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mDropAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_1
 
-    .line 2536
+    .line 2535
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mDropAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->stopLogFps()V
 
-    .line 2538
+    .line 2537
     :cond_1
     return-void
 .end method
@@ -150,12 +150,12 @@
     .locals 1
 
     .prologue
-    .line 2488
+    .line 2487
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/CarouselHost;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2489
+    .line 2488
     return-void
 .end method
 
@@ -165,7 +165,7 @@
     .locals 1
 
     .prologue
-    .line 2544
+    .line 2543
     iget-boolean v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mIsRunning:Z
 
     return v0
@@ -177,7 +177,7 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 2551
+    .line 2550
     iget-object v4, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     const/4 v5, 0x0
@@ -185,31 +185,31 @@
     #setter for: Lcom/htc/fragment/widget/CarouselHost;->mShouldStopFling:Z
     invoke-static {v4, v5}, Lcom/htc/fragment/widget/CarouselHost;->access$2002(Lcom/htc/fragment/widget/CarouselHost;Z)Z
 
-    .line 2552
+    .line 2551
     iput-boolean v7, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mIsRunning:Z
 
-    .line 2554
+    .line 2553
     iget-object v1, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mScroller:Landroid/widget/Scroller;
 
-    .line 2555
+    .line 2554
     .local v1, scroller:Landroid/widget/Scroller;
     invoke-virtual {v1}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
     move-result v0
 
-    .line 2556
+    .line 2555
     .local v0, more:Z
     invoke-virtual {v1}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v2
 
-    .line 2557
+    .line 2556
     .local v2, x:I
     invoke-virtual {v1}, Landroid/widget/Scroller;->getCurrY()I
 
     move-result v3
 
-    .line 2559
+    .line 2558
     .local v3, y:I
     iget-object v4, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
@@ -220,7 +220,7 @@
     #calls: Lcom/htc/fragment/widget/CarouselHost;->moveIndicator(FF)V
     invoke-static {v4, v5, v6}, Lcom/htc/fragment/widget/CarouselHost;->access$2100(Lcom/htc/fragment/widget/CarouselHost;FF)V
 
-    .line 2561
+    .line 2560
     if-eqz v0, :cond_0
 
     iget-object v4, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
@@ -232,16 +232,16 @@
 
     if-nez v4, :cond_0
 
-    .line 2562
+    .line 2561
     iget-object v4, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v4, p0}, Lcom/htc/fragment/widget/CarouselHost;->post(Ljava/lang/Runnable;)Z
 
-    .line 2566
+    .line 2565
     :goto_0
     return-void
 
-    .line 2564
+    .line 2563
     :cond_0
     invoke-direct {p0, v7}, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->endFling(Z)V
 
@@ -256,36 +256,36 @@
     .parameter "dest_y"
 
     .prologue
-    .line 2496
+    .line 2495
     if-ne p1, p3, :cond_0
 
     if-ne p2, p4, :cond_0
 
-    .line 2497
+    .line 2496
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->stop(Z)V
 
-    .line 2511
+    .line 2510
     :goto_0
     return-void
 
-    .line 2502
+    .line 2501
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mDropAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     if-eqz v0, :cond_1
 
-    .line 2503
+    .line 2502
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mDropAniMonitor:Lcom/htc/utils/perf/FramerateMonitor;
 
     invoke-virtual {v0}, Lcom/htc/utils/perf/FramerateMonitor;->startLogFps()Z
 
-    .line 2506
+    .line 2505
     :cond_1
     invoke-direct {p0}, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->startCommon()V
 
-    .line 2508
+    .line 2507
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->mScroller:Landroid/widget/Scroller;
 
     sub-int v3, p3, p1
@@ -300,7 +300,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
-    .line 2509
+    .line 2508
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     const/4 v1, 0x1
@@ -308,7 +308,7 @@
     #setter for: Lcom/htc/fragment/widget/CarouselHost;->mShouldThrowEvent:Z
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/CarouselHost;->access$1702(Lcom/htc/fragment/widget/CarouselHost;Z)Z
 
-    .line 2510
+    .line 2509
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/CarouselHost;->post(Ljava/lang/Runnable;)Z
@@ -321,19 +321,19 @@
     .parameter "scrollIntoSlots"
 
     .prologue
-    .line 2518
+    .line 2517
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/CarouselHost;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 2519
+    .line 2518
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->endFling(Z)V
 
-    .line 2520
+    .line 2519
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$DropAnimationRunnable;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-virtual {v0}, Lcom/htc/fragment/widget/CarouselHost;->removeIndicator()V
 
-    .line 2521
+    .line 2520
     return-void
 .end method

@@ -45,27 +45,27 @@
     .parameter "context"
 
     .prologue
-    .line 1929
+    .line 1922
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1925
+    .line 1918
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->carousel:Ljava/lang/ref/WeakReference;
 
-    .line 1930
+    .line 1923
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->setWillNotDraw(Z)V
 
-    .line 1931
+    .line 1924
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->tabs:Ljava/util/Map;
 
-    .line 1932
+    .line 1925
     return-void
 .end method
 
@@ -79,7 +79,7 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 1939
+    .line 1932
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->tabs:Ljava/util/Map;
 
     invoke-virtual {p2}, Landroid/view/View;->getId()I
@@ -96,7 +96,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1940
+    .line 1933
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -125,7 +125,7 @@
 
     throw v0
 
-    .line 1941
+    .line 1934
     :cond_0
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->tabs:Ljava/util/Map;
 
@@ -139,7 +139,7 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1942
+    .line 1935
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {v0, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
@@ -148,7 +148,7 @@
 
     invoke-virtual {p0, p2, v2, v0, v1}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)Z
 
-    .line 1945
+    .line 1938
     return-void
 .end method
 
@@ -160,21 +160,21 @@
     .parameter "preventRequestLayout"
 
     .prologue
-    .line 1970
+    .line 1963
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1971
+    .line 1964
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-ne v0, p0, :cond_0
 
-    .line 1972
+    .line 1965
     const-string v0, "naeco"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -197,17 +197,17 @@
 
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/CarouselLog;->dw(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1973
+    .line 1966
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1974
+    .line 1967
     const/4 v0, 0x1
 
-    .line 1980
+    .line 1973
     :goto_0
     return v0
 
-    .line 1976
+    .line 1969
     :cond_0
     const-string v0, "naeco"
 
@@ -245,7 +245,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/fragment/widget/CarouselLog;->de(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1977
+    .line 1970
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -254,7 +254,7 @@
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 1980
+    .line 1973
     :cond_1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)Z
 
@@ -270,10 +270,10 @@
     .parameter "params"
 
     .prologue
-    .line 1988
+    .line 1981
     invoke-super {p0, p1, p2, p3}, Landroid/widget/FrameLayout;->attachViewToParent(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1989
+    .line 1982
     return-void
 .end method
 
@@ -282,7 +282,7 @@
     .parameter "child"
 
     .prologue
-    .line 1996
+    .line 1989
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -295,13 +295,13 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 1997
+    .line 1990
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->detachViewFromParent(Landroid/view/View;)V
 
-    .line 1998
+    .line 1991
     const/4 v0, 0x1
 
-    .line 2000
+    .line 1993
     :goto_0
     return v0
 
@@ -315,7 +315,7 @@
     .locals 3
 
     .prologue
-    .line 1948
+    .line 1941
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->carousel:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -324,16 +324,16 @@
 
     check-cast v1, Lcom/htc/fragment/widget/CarouselFragment;
 
-    .line 1949
+    .line 1942
     .local v1, result:Lcom/htc/fragment/widget/CarouselFragment;
     if-nez v1, :cond_0
 
-    .line 1950
+    .line 1943
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 1951
+    .line 1944
     .local v0, parent:Landroid/view/ViewParent;
     if-eqz v0, :cond_0
 
@@ -341,12 +341,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 1952
+    .line 1945
     invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 1953
+    .line 1946
     if-eqz v0, :cond_0
 
     instance-of v2, v0, Lcom/htc/fragment/widget/CarouselFragment;
@@ -355,10 +355,10 @@
 
     move-object v1, v0
 
-    .line 1954
+    .line 1947
     check-cast v1, Lcom/htc/fragment/widget/CarouselFragment;
 
-    .line 1957
+    .line 1950
     .end local v0           #parent:Landroid/view/ViewParent;
     :cond_0
     return-object v1
@@ -373,7 +373,7 @@
     .parameter "bottom"
 
     .prologue
-    .line 2029
+    .line 2022
     return-void
 .end method
 
@@ -383,7 +383,7 @@
     .parameter "heightMeasureSpec"
 
     .prologue
-    .line 2020
+    .line 2013
     invoke-virtual {p0}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->getSuggestedMinimumWidth()I
 
     move-result v0
@@ -402,7 +402,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->setMeasuredDimension(II)V
 
-    .line 2022
+    .line 2015
     return-void
 .end method
 
@@ -411,13 +411,13 @@
     .parameter "carousel"
 
     .prologue
-    .line 1935
+    .line 1928
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->carousel:Ljava/lang/ref/WeakReference;
 
-    .line 1936
+    .line 1929
     return-void
 .end method

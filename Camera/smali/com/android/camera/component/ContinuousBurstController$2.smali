@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 504
+    .line 522
     iput-object p1, p0, Lcom/android/camera/component/ContinuousBurstController$2;->this$0:Lcom/android/camera/component/ContinuousBurstController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 508
+    .line 526
     .local p1, event:Lcom/android/camera/event/Event;,"Lcom/android/camera/event/Event<Lcom/android/camera/RequestTakingPictureEventArgs;>;"
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$2;->this$0:Lcom/android/camera/component/ContinuousBurstController;
 
@@ -77,7 +77,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 510
+    .line 528
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$2;->this$0:Lcom/android/camera/component/ContinuousBurstController;
 
     iget-object v1, p0, Lcom/android/camera/component/ContinuousBurstController$2;->this$0:Lcom/android/camera/component/ContinuousBurstController;
@@ -91,10 +91,10 @@
     #calls: Lcom/android/camera/component/ContinuousBurstController;->takePicture(Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
     invoke-static {v0, v1, v2}, Lcom/android/camera/component/ContinuousBurstController;->access$1000(Lcom/android/camera/component/ContinuousBurstController;Lcom/android/camera/CameraThread;Landroid/hardware/Camera;)V
 
-    .line 511
+    .line 529
     invoke-virtual {p3}, Lcom/android/camera/RequestTakingPictureEventArgs;->setHandled()V
 
-    .line 513
+    .line 531
     :cond_0
     return-void
 .end method
@@ -106,7 +106,7 @@
     .parameter "x2"
 
     .prologue
-    .line 504
+    .line 522
     check-cast p3, Lcom/android/camera/RequestTakingPictureEventArgs;
 
     .end local p3

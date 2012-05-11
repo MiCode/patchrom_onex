@@ -1858,7 +1858,7 @@
 
     .line 1259
     .local v1, colors:Landroid/content/res/TypedArray;
-    const v6, 0x2080298
+    const v6, 0x2080299
 
     invoke-direct {p0, v6}, Lcom/htc/painting/penmenu/PenMenu;->getIcon(I)Landroid/graphics/Bitmap;
 
@@ -3010,7 +3010,7 @@
     .line 1044
     iget-object v2, p0, Lcom/htc/painting/penmenu/PenMenu;->mPromptView:Landroid/widget/TextView;
 
-    const v3, 0x20802e2
+    const v3, 0x20802e3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -3578,7 +3578,6 @@
 
     :array_0
     .array-data 0x4
-        0x98t 0x2t 0x8t 0x2t
         0x99t 0x2t 0x8t 0x2t
         0x9at 0x2t 0x8t 0x2t
         0x9bt 0x2t 0x8t 0x2t
@@ -3609,6 +3608,7 @@
         0xb4t 0x2t 0x8t 0x2t
         0xb5t 0x2t 0x8t 0x2t
         0xb6t 0x2t 0x8t 0x2t
+        0xb7t 0x2t 0x8t 0x2t
     .end array-data
 .end method
 

@@ -90,17 +90,17 @@
     .end annotation
 
     .prologue
-    .line 384
+    .line 451
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 385
+    .line 452
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_0
 
-    .line 387
+    .line 454
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onAlbumArtDownloaded(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 389
+    .line 456
     :cond_0
     return-void
 .end method
@@ -117,7 +117,7 @@
     .end annotation
 
     .prologue
-    .line 303
+    .line 350
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -160,17 +160,17 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 306
+    .line 353
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 307
+    .line 354
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_0
 
-    .line 309
+    .line 356
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onError(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 311
+    .line 358
     :cond_0
     return-void
 .end method
@@ -189,7 +189,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 318
+    .line 369
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -232,35 +232,35 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 321
+    .line 372
     const/16 v1, -0x135
 
     if-ne p2, v1, :cond_0
 
-    .line 323
+    .line 374
     const-string v1, "HtcDLNAServiceManager"
 
     const-string v2, "[controllerResponseNotify] setState:1"
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 324
+    .line 375
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-virtual {v1, v4, v4}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 327
+    .line 378
     :cond_0
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 328
+    .line 379
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_1
 
-    .line 330
+    .line 381
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onResponse(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 332
+    .line 383
     :cond_1
     return-void
 .end method
@@ -277,7 +277,7 @@
     .end annotation
 
     .prologue
-    .line 339
+    .line 394
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -320,14 +320,14 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
+    .line 397
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 343
+    .line 398
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_0
 
-    .line 345
+    .line 400
     invoke-static {p2}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v1
@@ -338,7 +338,7 @@
 
     invoke-virtual {v0, v1, v2, p3}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onItemDetailsUpdated(JLcom/htc/dlnainterface/DLNAContentItemDetails;)V
 
-    .line 347
+    .line 402
     :cond_0
     return-void
 .end method
@@ -353,7 +353,7 @@
     .end annotation
 
     .prologue
-    .line 371
+    .line 434
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -400,21 +400,21 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
+    .line 438
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererListener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
 
-    .line 376
+    .line 439
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
     if-eqz v0, :cond_0
 
-    .line 377
+    .line 440
     iget-object v1, p1, Lcom/htc/dlnainterface/DLNARendererData;->rendererID:Ljava/lang/String;
 
     iget-object v2, p1, Lcom/htc/dlnainterface/DLNARendererData;->rendererName:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;->onMirrorRendererConnected(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 378
+    .line 441
     :cond_0
     return-void
 .end method
@@ -431,7 +431,7 @@
     .end annotation
 
     .prologue
-    .line 168
+    .line 196
     const-string v2, "HtcDLNAServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -464,29 +464,29 @@
 
     invoke-static {v2, v3}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
+    .line 199
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v0, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
-    .line 172
+    .line 200
     .local v0, info:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
     iput-wide p4, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
-    .line 173
+    .line 201
     iput-wide p2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mTotal:J
 
-    .line 175
+    .line 203
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 176
+    .line 204
     .local v1, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v1, :cond_0
 
-    .line 178
+    .line 206
     invoke-virtual {v1, v0}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onControllerInfoupdated(Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;)V
 
-    .line 180
+    .line 208
     :cond_0
     return-void
 .end method
@@ -501,7 +501,7 @@
     .end annotation
 
     .prologue
-    .line 83
+    .line 99
     const-string v2, "HtcDLNAServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -548,7 +548,7 @@
 
     invoke-static {v2, v3}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
+    .line 103
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererList:Ljava/util/HashMap;
 
     iget-object v3, p1, Lcom/htc/dlnainterface/DLNARendererData;->rendererID:Ljava/lang/String;
@@ -557,7 +557,7 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
+    .line 105
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Landroid/media/dlnasharedmodule/HtcDLNARendererDiscoverer;
@@ -574,12 +574,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 109
+    .line 125
     :cond_0
     :goto_0
     return-void
 
-    .line 95
+    .line 111
     :cond_1
     iget-object v2, p1, Lcom/htc/dlnainterface/DLNARendererData;->rendererID:Ljava/lang/String;
 
@@ -593,18 +593,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 98
+    .line 114
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererListener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
 
-    .line 99
+    .line 115
     .local v1, listener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 100
+    .line 116
     .local v0, controllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_2
 
-    .line 102
+    .line 118
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
@@ -613,11 +613,11 @@
 
     iput-object v3, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
-    .line 105
+    .line 121
     :cond_2
     if-eqz v1, :cond_0
 
-    .line 107
+    .line 123
     iget-object v2, p1, Lcom/htc/dlnainterface/DLNARendererData;->rendererID:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/htc/dlnainterface/DLNARendererData;->rendererName:Ljava/lang/String;
@@ -637,7 +637,7 @@
     .end annotation
 
     .prologue
-    .line 131
+    .line 155
     const-string v7, "HtcDLNAServiceManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -660,12 +660,12 @@
 
     invoke-static {v7, v8}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 133
+    .line 157
     iget-object v7, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v6, v7, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
-    .line 134
+    .line 158
     .local v6, rendererId:Ljava/lang/String;
     move-object v0, p1
 
@@ -681,7 +681,7 @@
 
     aget-object v5, v0, v2
 
-    .line 136
+    .line 160
     .local v5, renderer:Lcom/htc/dlnainterface/DLNARendererData;
     iget-object v7, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererList:Ljava/util/HashMap;
 
@@ -691,7 +691,7 @@
 
     invoke-virtual {v7, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
+    .line 162
     iget-object v7, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v7, v7, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mRendererDiscoverer:Landroid/media/dlnasharedmodule/HtcDLNARendererDiscoverer;
@@ -708,13 +708,13 @@
 
     if-eqz v7, :cond_1
 
-    .line 161
+    .line 185
     .end local v5           #renderer:Lcom/htc/dlnainterface/DLNARendererData;
     :cond_0
     :goto_1
     return-void
 
-    .line 144
+    .line 168
     .restart local v5       #renderer:Lcom/htc/dlnainterface/DLNARendererData;
     :cond_1
     iget-object v7, v5, Lcom/htc/dlnainterface/DLNARendererData;->rendererID:Ljava/lang/String;
@@ -725,7 +725,7 @@
 
     if-eqz v7, :cond_3
 
-    .line 146
+    .line 170
     const-string v7, "HtcDLNAServiceManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -750,14 +750,14 @@
 
     invoke-static {v7, v8}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
+    .line 171
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 148
+    .line 172
     .local v1, controllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v1, :cond_2
 
-    .line 150
+    .line 174
     iget-object v7, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v7, v7, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
@@ -766,22 +766,22 @@
 
     iput-object v8, v7, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
-    .line 152
+    .line 176
     :cond_2
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererListener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
 
-    .line 153
+    .line 177
     .local v4, listener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
     if-eqz v4, :cond_0
 
-    .line 155
+    .line 179
     iget-object v7, v5, Lcom/htc/dlnainterface/DLNARendererData;->rendererName:Ljava/lang/String;
 
     invoke-virtual {v4, v6, v7}, Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;->onConnected(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 134
+    .line 158
     .end local v1           #controllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     .end local v4           #listener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
     :cond_3
@@ -802,7 +802,7 @@
     .end annotation
 
     .prologue
-    .line 116
+    .line 136
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -845,15 +845,15 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 119
+    .line 139
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 121
+    .line 141
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererListener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
 
-    .line 122
+    .line 142
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;
     if-eqz v0, :cond_0
 
@@ -867,10 +867,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 123
+    .line 143
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/dlnasharedmodule/HtcDLNARendererStatusListener;->onDisconnected(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 124
+    .line 144
     :cond_0
     return-void
 .end method
@@ -886,7 +886,7 @@
     .end annotation
 
     .prologue
-    .line 48
+    .line 52
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -919,10 +919,10 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
+    .line 55
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mServerListener:Landroid/media/dlnasharedmodule/HtcDLNAServerStatusListener;
 
-    .line 52
+    .line 56
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNAServerStatusListener;
     if-eqz v0, :cond_0
 
@@ -936,10 +936,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 53
+    .line 57
     invoke-virtual {v0, p1, p2}, Landroid/media/dlnasharedmodule/HtcDLNAServerStatusListener;->onConnected(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
+    .line 58
     :cond_0
     return-void
 .end method
@@ -954,7 +954,7 @@
     .end annotation
 
     .prologue
-    .line 74
+    .line 86
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -977,7 +977,7 @@
 
     invoke-static {v0, v1}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
+    .line 88
     return-void
 .end method
 
@@ -993,7 +993,7 @@
     .end annotation
 
     .prologue
-    .line 61
+    .line 69
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1036,10 +1036,10 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
+    .line 72
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mServerListener:Landroid/media/dlnasharedmodule/HtcDLNAServerStatusListener;
 
-    .line 65
+    .line 73
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNAServerStatusListener;
     if-eqz v0, :cond_0
 
@@ -1053,10 +1053,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 66
+    .line 74
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/dlnasharedmodule/HtcDLNAServerStatusListener;->onDisconnected(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 67
+    .line 75
     :cond_0
     return-void
 .end method
@@ -1073,14 +1073,27 @@
     .prologue
     const-wide/16 v7, 0x0
 
-    .line 235
+    .line 271
+    iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
+
+    invoke-virtual {v4}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->getFilter()I
+
+    move-result v4
+
+    iget-object v5, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
+
+    const/4 v5, 0x4
+
+    if-eq v4, v5, :cond_0
+
+    .line 272
     const-string v4, "HtcDLNAServiceManager"
 
     const-string v5, "[updateControlItemInfo] setState:102"
 
     invoke-static {v4, v5}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
+    .line 273
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     const/16 v5, 0x66
@@ -1089,57 +1102,58 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 238
+    .line 276
+    :cond_0
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v4, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
-    .line 239
+    .line 277
     .local v2, info:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->contentAlbum:Ljava/lang/String;
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mAlbum:Ljava/lang/String;
 
-    .line 240
+    .line 278
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->contentArtist:Ljava/lang/String;
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mArtist:Ljava/lang/String;
 
-    .line 241
+    .line 279
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->contentTitle:Ljava/lang/String;
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mTitle:Ljava/lang/String;
 
-    .line 242
+    .line 280
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->contentDate:Ljava/lang/String;
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mDate:Ljava/lang/String;
 
-    .line 243
+    .line 281
     iget-wide v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->fDuration:J
 
     cmp-long v4, v4, v7
 
-    if-lez v4, :cond_0
+    if-lez v4, :cond_1
 
-    .line 244
+    .line 282
     iget-wide v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->fDuration:J
 
     iput-wide v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mDuration:J
 
-    .line 246
-    :cond_0
+    .line 284
+    :cond_1
     iget-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_2
 
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v4, v4, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_2
 
-    .line 247
+    .line 285
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererList:Ljava/util/HashMap;
 
     iget-object v5, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -1154,33 +1168,33 @@
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
-    .line 249
-    :cond_1
+    .line 287
+    :cond_2
     iget-wide v0, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->currentIndex:J
 
-    .line 250
+    .line 288
     .local v0, index:J
     iget-wide v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
     cmp-long v4, v4, v0
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
-    .line 252
+    .line 290
     iput-wide v7, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPosition:J
 
-    .line 253
+    .line 291
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     const-wide/16 v5, -0x1
 
     iput-wide v5, v4, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
-    .line 255
-    :cond_2
+    .line 293
+    :cond_3
     iput-wide v0, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
-    .line 256
+    .line 294
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-virtual {v4}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->getPlaylistSize()J
@@ -1189,15 +1203,15 @@
 
     iput-wide v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mTotal:J
 
-    .line 258
+    .line 296
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->downloadStoreAlbumArtPath:Ljava/lang/String;
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
-    .line 259
+    .line 297
     iget-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     iget-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
@@ -1205,16 +1219,16 @@
 
     move-result v4
 
-    if-nez v4, :cond_4
+    if-nez v4, :cond_5
 
-    .line 260
-    :cond_3
+    .line 298
+    :cond_4
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->thumbnailPath:Ljava/lang/String;
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
-    .line 263
-    :cond_4
+    .line 301
+    :cond_5
     iget-object v4, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-virtual {v4}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->getState()I
@@ -1223,12 +1237,12 @@
 
     iput v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPlayState:I
 
-    .line 264
+    .line 302
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->curContentID:Ljava/lang/String;
 
     iput-object v4, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->curContentID:Ljava/lang/String;
 
-    .line 266
+    .line 304
     const-string v4, "HtcDLNAServiceManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1253,7 +1267,7 @@
 
     invoke-static {v4, v5}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 267
+    .line 305
     const-string v4, "HtcDLNAServiceManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1278,22 +1292,47 @@
 
     invoke-static {v4, v5}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 269
+    .line 306
+    const-string v4, "HtcDLNAServiceManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "[HtcDLNAMiddleLayerListener][updateControlItemInfo] curContentID = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    iget-object v6, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->curContentID:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 308
     iget-object v3, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 270
+    .line 309
     .local v3, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
-    .line 272
+    .line 311
     invoke-virtual {v3, v2}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onControllerInfoupdated(Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;)V
 
-    .line 278
+    .line 317
     :goto_0
     return-void
 
-    .line 276
-    :cond_5
+    .line 315
+    :cond_6
     const-string v4, "HtcDLNAServiceManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1331,7 +1370,7 @@
     .end annotation
 
     .prologue
-    .line 285
+    .line 328
     const-string v2, "HtcDLNAServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1364,26 +1403,26 @@
 
     invoke-static {v2, v3}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 288
+    .line 331
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v0, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
-    .line 289
+    .line 332
     .local v0, info:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
     iput-object p4, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
-    .line 291
+    .line 334
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 292
+    .line 335
     .local v1, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v1, :cond_0
 
-    .line 294
+    .line 337
     invoke-virtual {v1, v0}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onControllerInfoupdated(Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;)V
 
-    .line 296
+    .line 339
     :cond_0
     return-void
 .end method
@@ -1400,7 +1439,7 @@
     .prologue
     const-wide/16 v5, 0x0
 
-    .line 191
+    .line 223
     const-string v2, "HtcDLNAServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1425,7 +1464,7 @@
 
     invoke-static {v2, v3}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
+    .line 224
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget v3, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->playState:I
@@ -1434,12 +1473,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
 
-    .line 193
+    .line 225
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v0, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
-    .line 197
+    .line 229
     .local v0, info:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
     iget-wide v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->fDuration:J
 
@@ -1447,43 +1486,43 @@
 
     if-lez v2, :cond_0
 
-    .line 198
+    .line 230
     iget-wide v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->fDuration:J
 
     iput-wide v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mDuration:J
 
-    .line 199
+    .line 231
     :cond_0
     iget-wide v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->currentIndex:J
 
     iput-wide v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
-    .line 200
+    .line 232
     iget-wide v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->position:J
 
     iput-wide v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPosition:J
 
-    .line 201
+    .line 233
     iget-boolean v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->bMute:Z
 
     iput-boolean v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mMute:Z
 
-    .line 202
+    .line 234
     iget-boolean v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->bShuffle:Z
 
     iput-boolean v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mShuffle:Z
 
-    .line 203
+    .line 235
     iget v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->repeatState:I
 
     iput v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRepeat:I
 
-    .line 204
+    .line 236
     iget v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->volumeValue:I
 
     iput v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mVolume:I
 
-    .line 205
+    .line 237
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-virtual {v2}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->getState()I
@@ -1492,26 +1531,26 @@
 
     iput v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPlayState:I
 
-    .line 206
+    .line 238
     iget-wide v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->totalCount:J
 
     iput-wide v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mTotal:J
 
-    .line 208
+    .line 240
     iget-wide v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->position:J
 
     cmp-long v2, v2, v5
 
     if-gtz v2, :cond_1
 
-    .line 209
+    .line 241
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     const-wide/16 v3, -0x1
 
     iput-wide v3, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
-    .line 211
+    .line 243
     :cond_1
     iget-object v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
@@ -1523,7 +1562,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 212
+    .line 244
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererList:Ljava/util/HashMap;
 
     iget-object v3, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -1538,13 +1577,13 @@
 
     iput-object v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
-    .line 214
+    .line 246
     :cond_2
     iget-object v2, p1, Lcom/htc/dlnainterface/DLNAControllerStatus;->curContentID:Ljava/lang/String;
 
     iput-object v2, v0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->curContentID:Ljava/lang/String;
 
-    .line 216
+    .line 248
     const-string v2, "HtcDLNAServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1581,21 +1620,21 @@
 
     invoke-static {v2, v3}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 219
+    .line 251
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 220
+    .line 252
     .local v1, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v1, :cond_3
 
-    .line 222
+    .line 254
     invoke-virtual {v1, v0}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onControllerInfoupdated(Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;)V
 
-    .line 228
+    .line 260
     :goto_0
     return-void
 
-    .line 226
+    .line 258
     :cond_3
     const-string v2, "HtcDLNAServiceManager"
 
@@ -1634,7 +1673,7 @@
     .end annotation
 
     .prologue
-    .line 354
+    .line 413
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1677,28 +1716,28 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 357
+    .line 416
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v1, v1, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     iput-object p4, v1, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
-    .line 359
+    .line 418
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mControllerListener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
 
-    .line 360
+    .line 419
     .local v0, listener:Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;
     if-eqz v0, :cond_0
 
-    .line 362
+    .line 421
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v1, v1, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
 
     invoke-virtual {v0, v1}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;->onControllerInfoupdated(Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;)V
 
-    .line 364
+    .line 423
     :cond_0
     return-void
 .end method

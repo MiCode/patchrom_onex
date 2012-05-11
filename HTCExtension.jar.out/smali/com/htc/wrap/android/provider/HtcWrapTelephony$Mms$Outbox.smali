@@ -26,7 +26,7 @@
     .locals 1
 
     .prologue
-    .line 1298
+    .line 1302
     sget-object v0, Landroid/provider/Telephony$Mms$Outbox;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$Mms$Outbox;->CONTENT_URI:Landroid/net/Uri;
@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 1296
+    .line 1300
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

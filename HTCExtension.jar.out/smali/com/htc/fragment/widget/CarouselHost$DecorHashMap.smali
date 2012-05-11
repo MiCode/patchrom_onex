@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 2886
+    .line 2885
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselHost$DecorHashMap;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
@@ -50,7 +50,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2886
+    .line 2885
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/CarouselHost$DecorHashMap;-><init>(Lcom/htc/fragment/widget/CarouselHost;)V
 
     return-void
@@ -76,24 +76,24 @@
     .end annotation
 
     .prologue
-    .line 2912
+    .line 2911
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 2913
+    .line 2912
     :cond_0
     const/4 v0, 0x0
 
-    .line 2926
+    .line 2925
     :goto_0
     return-object v0
 
-    .line 2915
+    .line 2914
     :cond_1
     const/4 v0, 0x0
 
-    .line 2917
+    .line 2916
     .local v0, prevsValue:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Landroid/view/View;>;"
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselHost$DecorHashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -101,7 +101,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 2918
+    .line 2917
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselHost$DecorHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -109,7 +109,7 @@
     .end local v0           #prevsValue:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Landroid/view/View;>;"
     check-cast v0, Ljava/lang/ref/WeakReference;
 
-    .line 2921
+    .line 2920
     .restart local v0       #prevsValue:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Landroid/view/View;>;"
     :cond_2
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -118,7 +118,7 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/htc/fragment/widget/CarouselHost$DecorHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2924
+    .line 2923
     const-string v1, "Carousel"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -177,14 +177,14 @@
     .parameter "key"
 
     .prologue
-    .line 2895
+    .line 2894
     if-nez p1, :cond_0
 
-    .line 2903
+    .line 2902
     :goto_0
     return-void
 
-    .line 2898
+    .line 2897
     :cond_0
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselHost$DecorHashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -192,10 +192,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2899
+    .line 2898
     invoke-virtual {p0, p1}, Lcom/htc/fragment/widget/CarouselHost$DecorHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2902
+    .line 2901
     :cond_1
     const-string v0, "Carousel"
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3612
+    .line 3575
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SetDnsForwardersErrorState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$ErrorState;-><init>(Lcom/android/server/connectivity/Tethering$TetherMasterSM;)V
@@ -38,19 +38,19 @@
     .locals 2
 
     .prologue
-    .line 3615
+    .line 3578
     const-string v0, "Tethering"
 
     const-string v1, "Error in setDnsForwarders"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3616
+    .line 3579
     const/16 v0, 0xb
 
     invoke-virtual {p0, v0}, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SetDnsForwardersErrorState;->notify(I)V
 
-    .line 3618
+    .line 3581
     :try_start_0
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SetDnsForwardersErrorState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -65,7 +65,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3626
+    .line 3589
     :goto_0
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$SetDnsForwardersErrorState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
@@ -74,10 +74,10 @@
     #calls: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->changeIpForwardSetting(Z)Z
     invoke-static {v0, v1}, Lcom/android/server/connectivity/Tethering$TetherMasterSM;->access$8300(Lcom/android/server/connectivity/Tethering$TetherMasterSM;Z)Z
 
-    .line 3628
+    .line 3591
     return-void
 
-    .line 3619
+    .line 3582
     :catch_0
     move-exception v0
 

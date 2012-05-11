@@ -96,13 +96,15 @@
     :cond_0
     new-instance v2, Ljava/lang/IllegalStateException;
 
-    const-string v3, "Invalid event from daemon (%s)"
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v4, "Invalid event from daemon (%s)"
 
     new-array v0, v0, [Ljava/lang/Object;
 
     aput-object p2, v0, v1
 
-    invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v3, v4, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -230,13 +232,15 @@
     :cond_5
     new-instance v2, Ljava/lang/IllegalStateException;
 
-    const-string v3, "Invalid event from daemon (%s)"
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v4, "Invalid event from daemon (%s)"
 
     new-array v0, v0, [Ljava/lang/Object;
 
     aput-object p2, v0, v1
 
-    invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v3, v4, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -266,13 +270,15 @@
     :cond_6
     new-instance v2, Ljava/lang/IllegalStateException;
 
-    const-string v3, "Invalid event from daemon (%s)"
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v4, "Invalid event from daemon (%s)"
 
     new-array v0, v0, [Ljava/lang/Object;
 
     aput-object p2, v0, v1
 
-    invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v3, v4, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -308,13 +314,15 @@
     :cond_8
     new-instance v2, Ljava/lang/IllegalStateException;
 
-    const-string v3, "Invalid event from daemon (%s)"
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v4, "Invalid event from daemon (%s)"
 
     new-array v0, v0, [Ljava/lang/Object;
 
     aput-object p2, v0, v1
 
-    invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v3, v4, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

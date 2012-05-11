@@ -19,7 +19,7 @@
     .locals 4
 
     .prologue
-    .line 13
+    .line 14
     sget v0, Lcom/android/camera/DisplayDevice;->SCREEN_WIDTH:I
 
     int-to-double v0, v0
@@ -44,17 +44,17 @@
     .parameter "cameraActivity"
 
     .prologue
-    .line 21
+    .line 22
     const-string v0, "vignette"
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera/effect/GpuEffectBase;-><init>(Ljava/lang/String;Lcom/android/camera/HTCCamera;)V
 
-    .line 14
+    .line 15
     sget v0, Lcom/android/camera/effect/VignetteEffect;->DEFAULT_RADIUS:I
 
     iput v0, p0, Lcom/android/camera/effect/VignetteEffect;->m_Radius:I
 
-    .line 22
+    .line 23
     return-void
 .end method
 
@@ -63,7 +63,7 @@
     .parameter "radius"
 
     .prologue
-    .line 62
+    .line 66
     new-instance v0, Lcom/android/camera/effect/GpuEffectParameters;
 
     const-string v1, "GE-param1"
@@ -95,7 +95,7 @@
 
     const/4 v3, 0x0
 
-    .line 43
+    .line 47
     new-instance v7, Lcom/android/camera/effect/GpuEffectInfo;
 
     const-string v8, "4_spotlight"
@@ -132,15 +132,15 @@
 .end method
 
 .method public getAppliedImageSettings()Lcom/android/camera/ImageSettings;
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 30
+    .line 31
     invoke-super {p0}, Lcom/android/camera/effect/GpuEffectBase;->getAppliedImageSettings()Lcom/android/camera/ImageSettings;
 
     move-result-object v0
 
-    .line 31
+    .line 32
     .local v0, imageSettings:Lcom/android/camera/ImageSettings;
     const/4 v1, 0x2
 
@@ -150,7 +150,7 @@
 
     iput-object v1, v0, Lcom/android/camera/ImageSettings;->brightness:Ljava/lang/Integer;
 
-    .line 32
+    .line 33
     const/4 v1, 0x7
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -159,7 +159,28 @@
 
     iput-object v1, v0, Lcom/android/camera/ImageSettings;->contrast:Ljava/lang/Integer;
 
-    .line 33
+    .line 34
+    sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v2, 0x26
+
+    if-ne v1, v2, :cond_0
+
+    .line 35
+    const/4 v1, 0x3
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/camera/ImageSettings;->saturation:Ljava/lang/Integer;
+
+    .line 38
+    :goto_0
+    return-object v0
+
+    .line 37
+    :cond_0
     const/16 v1, 0x8
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -168,15 +189,14 @@
 
     iput-object v1, v0, Lcom/android/camera/ImageSettings;->saturation:Ljava/lang/Integer;
 
-    .line 34
-    return-object v0
+    goto :goto_0
 .end method
 
 .method public getRadius()I
     .locals 1
 
     .prologue
-    .line 54
+    .line 58
     iget v0, p0, Lcom/android/camera/effect/VignetteEffect;->m_Radius:I
 
     return v0
@@ -186,23 +206,23 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 75
     invoke-virtual {p0}, Lcom/android/camera/effect/VignetteEffect;->isApplied()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 72
+    .line 76
     sget v0, Lcom/android/camera/effect/VignetteEffect;->DEFAULT_RADIUS:I
 
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/VignetteEffect;->setRadius(I)V
 
-    .line 75
+    .line 79
     :goto_0
     return-void
 
-    .line 74
+    .line 78
     :cond_0
     sget v0, Lcom/android/camera/effect/VignetteEffect;->DEFAULT_RADIUS:I
 
@@ -216,24 +236,24 @@
     .parameter "radius"
 
     .prologue
-    .line 82
+    .line 86
     iput p1, p0, Lcom/android/camera/effect/VignetteEffect;->m_Radius:I
 
-    .line 83
+    .line 87
     invoke-virtual {p0}, Lcom/android/camera/effect/VignetteEffect;->isApplied()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 84
+    .line 88
     invoke-direct {p0, p1}, Lcom/android/camera/effect/VignetteEffect;->getRadiusParameters(I)Lcom/android/camera/effect/GpuEffectParameters;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/VignetteEffect;->setGpuEffectParameters(Lcom/android/camera/effect/GpuEffectParameters;)Z
 
-    .line 85
+    .line 89
     :cond_0
     return-void
 .end method

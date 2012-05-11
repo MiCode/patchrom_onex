@@ -608,7 +608,7 @@
     iput v0, p0, Lcom/htc/widget/HtcListItem;->mTextureResId:I
 
     .line 259
-    const v0, 0x2080176
+    const v0, 0x2080177
 
     iput v0, p0, Lcom/htc/widget/HtcListItem;->mGradientResId:I
 

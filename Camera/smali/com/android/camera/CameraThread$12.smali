@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/CameraThread;->changeMode(Lcom/android/camera/CameraMode;)V
+    value = Lcom/android/camera/CameraThread;->changeStorageSlot(Lcom/android/camera/io/StorageSlot;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,20 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/CameraThread;
 
-.field final synthetic val$mode:Lcom/android/camera/CameraMode;
+.field final synthetic val$slot:Lcom/android/camera/io/StorageSlot;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/CameraThread;Lcom/android/camera/CameraMode;)V
+.method constructor <init>(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageSlot;)V
     .locals 0
     .parameter
     .parameter
 
     .prologue
-    .line 4822
+    .line 4770
     iput-object p1, p0, Lcom/android/camera/CameraThread$12;->this$0:Lcom/android/camera/CameraThread;
 
-    iput-object p2, p0, Lcom/android/camera/CameraThread$12;->val$mode:Lcom/android/camera/CameraMode;
+    iput-object p2, p0, Lcom/android/camera/CameraThread$12;->val$slot:Lcom/android/camera/io/StorageSlot;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,14 +46,14 @@
     .locals 2
 
     .prologue
-    .line 4825
+    .line 4773
     iget-object v0, p0, Lcom/android/camera/CameraThread$12;->this$0:Lcom/android/camera/CameraThread;
 
-    iget-object v1, p0, Lcom/android/camera/CameraThread$12;->val$mode:Lcom/android/camera/CameraMode;
+    iget-object v1, p0, Lcom/android/camera/CameraThread$12;->val$slot:Lcom/android/camera/io/StorageSlot;
 
-    #calls: Lcom/android/camera/CameraThread;->changeModeInternal(Lcom/android/camera/CameraMode;)V
-    invoke-static {v0, v1}, Lcom/android/camera/CameraThread;->access$4000(Lcom/android/camera/CameraThread;Lcom/android/camera/CameraMode;)V
+    #calls: Lcom/android/camera/CameraThread;->changeStorageSlotInternal(Lcom/android/camera/io/StorageSlot;)V
+    invoke-static {v0, v1}, Lcom/android/camera/CameraThread;->access$4100(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageSlot;)V
 
-    .line 4826
+    .line 4774
     return-void
 .end method

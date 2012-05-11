@@ -31,25 +31,25 @@
     .parameter "provider"
 
     .prologue
-    .line 166
+    .line 164
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 162
+    .line 160
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mValid:Z
 
-    .line 167
+    .line 165
     const-string v0, "LocationHandler"
 
     const-string v1, "new LocationListener"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 168
+    .line 166
     iput-object p1, p0, Lcom/android/camera/LocationHandler$LocationListener;->mProvider:Ljava/lang/String;
 
-    .line 169
+    .line 167
     new-instance v0, Landroid/location/Location;
 
     iget-object v1, p0, Lcom/android/camera/LocationHandler$LocationListener;->mProvider:Ljava/lang/String;
@@ -58,7 +58,7 @@
 
     iput-object v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mLastLocation:Landroid/location/Location;
 
-    .line 170
+    .line 168
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 203
+    .line 201
     iget-boolean v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mValid:Z
 
     if-eqz v0, :cond_0
@@ -88,7 +88,7 @@
     .locals 1
 
     .prologue
-    .line 210
+    .line 208
     iget-boolean v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mValid:Z
 
     return v0
@@ -101,7 +101,7 @@
     .prologue
     const-wide/16 v3, 0x0
 
-    .line 174
+    .line 172
     const-string v0, "LocationHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,7 +136,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 176
+    .line 174
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
@@ -153,17 +153,17 @@
 
     if-nez v0, :cond_0
 
-    .line 182
+    .line 180
     :goto_0
     return-void
 
-    .line 180
+    .line 178
     :cond_0
     iget-object v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mLastLocation:Landroid/location/Location;
 
     invoke-virtual {v0, p1}, Landroid/location/Location;->set(Landroid/location/Location;)V
 
-    .line 181
+    .line 179
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mValid:Z
@@ -176,19 +176,19 @@
     .parameter "provider"
 
     .prologue
-    .line 189
+    .line 187
     const-string v0, "LocationHandler"
 
     const-string v1, "ProviderDisabled"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 190
+    .line 188
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mValid:Z
 
-    .line 191
+    .line 189
     return-void
 .end method
 
@@ -197,14 +197,14 @@
     .parameter "provider"
 
     .prologue
-    .line 185
+    .line 183
     const-string v0, "LocationHandler"
 
     const-string v1, "ProviderEnabled"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 186
+    .line 184
     return-void
 .end method
 
@@ -215,7 +215,7 @@
     .parameter "extras"
 
     .prologue
-    .line 194
+    .line 192
     const-string v0, "LocationHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -238,26 +238,26 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
+    .line 193
     if-nez p2, :cond_1
 
-    .line 196
+    .line 194
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mValid:Z
 
-    .line 200
+    .line 198
     :cond_0
     :goto_0
     return-void
 
-    .line 197
+    .line 195
     :cond_1
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_0
 
-    .line 198
+    .line 196
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/camera/LocationHandler$LocationListener;->mValid:Z

@@ -811,7 +811,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 490
+    .line 497
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.htc.content.intent.action.ORIENTATION_LIGHT"
@@ -840,7 +840,7 @@
 
     move-result-object v0
 
-    .line 494
+    .line 501
     .local v0, intent:Landroid/content/Intent;
     invoke-virtual {p0}, Lcom/android/camera/component/UIRotationManager;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
@@ -848,7 +848,7 @@
 
     invoke-virtual {v1, v0}, Lcom/android/camera/HTCCamera;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 495
+    .line 502
     return-void
 .end method
 
@@ -1249,7 +1249,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->E(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 483
+    .line 490
     :cond_0
     :goto_0
     return-void
@@ -1361,13 +1361,40 @@
     invoke-virtual {v0, p0, v1}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 480
+    invoke-virtual {p0}, Lcom/android/camera/component/UIRotationManager;->getCameraActivity()Lcom/android/camera/HTCCamera;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/camera/HTCCamera;->isActivityPaused:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 482
+    sget-object v0, Lcom/android/camera/rotate/UIRotation;->SCREEN_ROTATION:Lcom/android/camera/rotate/UIRotation;
+
+    invoke-direct {p0, v0}, Lcom/android/camera/component/UIRotationManager;->onRotationChanged(Lcom/android/camera/rotate/UIRotation;)V
+
+    goto :goto_0
+
+    .line 486
+    :cond_5
     iget v0, p0, Lcom/android/camera/component/UIRotationManager;->m_LastDeviceOrientation:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 481
+    .line 487
     iget v0, p0, Lcom/android/camera/component/UIRotationManager;->m_LastDeviceOrientation:I
 
     invoke-static {v0}, Lcom/android/camera/rotate/UIRotation;->fromDeviceOrientation(I)Lcom/android/camera/rotate/UIRotation;
@@ -1376,5 +1403,5 @@
 
     invoke-direct {p0, v0}, Lcom/android/camera/component/UIRotationManager;->onRotationChanged(Lcom/android/camera/rotate/UIRotation;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method

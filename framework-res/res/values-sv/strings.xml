@@ -1294,7 +1294,7 @@ för kontot %s"</string>
     <string name="ext_media_ro_notification_title">SD-kortet är skrivskyddat (inte krypterat)</string>
     <string name="ext_media_ro_notification_message">För skrivbehörighet, formatera för att kryptera SD-kort</string>
     <string name="dock_mode_goto_notification_title">Dockningsläge</string>
-    <string name="dock_mode_goto_notification_message">Markera för att återgå till dockningsläget.</string>
+    <string name="dock_mode_goto_notification_message">Välj för att återgå till dockningsläget.</string>
     <string name="lockscreen_uimsim_unlock_progress_dialog_message">Låser upp UIM/SIM-kort…</string>
     <string name="lockscreen_uim_unlock_progress_dialog_message">Låser upp UIM-kort…</string>
     <string name="lockscreen_uim_puk_locked_message">UIM-kortet är PUK-låst.</string>
@@ -1324,7 +1324,7 @@ för kontot %s"</string>
     <string name="call_forward_unconditional">Vidarekoppling villkorslöst</string>
     <string name="call_forward_when_busy">Vidarekoppling vid upptaget</string>
     <string name="call_forward_when_unanswered">Samtal vidarekopplas vid inget svar</string>
-    <string name="call_forward_when_unreachable">Samtal vidarekopplas vid ingen nås</string>
+    <string name="call_forward_when_unreachable">Samtal vidarekopplas vid ej nåbar</string>
     <string name="call_forward_all_forward">Alla samtal vidarekopplas</string>
     <string name="call_forward_all_conditional">Alla villkorade samtal vidarekopplas</string>
 </resources>

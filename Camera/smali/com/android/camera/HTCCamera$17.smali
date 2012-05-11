@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 5106
+    .line 5110
     iput-object p1, p0, Lcom/android/camera/HTCCamera$17;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,6 @@
     .parameter "which"
 
     .prologue
-    .line 5109
+    .line 5113
     return-void
 .end method

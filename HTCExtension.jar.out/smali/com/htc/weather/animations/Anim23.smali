@@ -81,7 +81,7 @@
     .line 24
     new-instance v0, Lcom/htc/weather/animations/FallingSnowFlake;
 
-    const v2, 0x20803d5
+    const v2, 0x20803d6
 
     const v3, 0x3dcccccd
 

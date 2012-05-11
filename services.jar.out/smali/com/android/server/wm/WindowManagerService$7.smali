@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 11671
+    .line 11681
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$7;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 11673
+    .line 11683
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$7;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     #getter for: Lcom/android/server/wm/WindowManagerService;->mLastNavVisibility:Z
@@ -52,17 +52,17 @@
 
     if-nez v2, :cond_0
 
-    .line 11692
+    .line 11702
     :goto_0
     return-void
 
-    .line 11677
+    .line 11687
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 11678
+    .line 11688
     .local v0, b:Landroid/os/Bundle;
     const-string v2, "SIP_VISIBLE"
 
@@ -70,24 +70,24 @@
 
     move-result v1
 
-    .line 11680
+    .line 11690
     .local v1, sipVisible:Z
     if-eqz v1, :cond_2
 
-    .line 11681
+    .line 11691
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$7;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v2, v2, Lcom/android/server/wm/WindowManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
     invoke-interface {v2, v3}, Landroid/view/WindowManagerPolicy;->setNavigationBarVisibility(Z)V
 
-    .line 11686
+    .line 11696
     :goto_1
     sget-boolean v2, Lcom/android/server/wm/WindowManagerService;->DEBUG_NAV_BAR:Z
 
     if-eqz v2, :cond_1
 
-    .line 11687
+    .line 11697
     const-string v2, "WindowManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -127,7 +127,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11691
+    .line 11701
     :cond_1
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$7;->this$0:Lcom/android/server/wm/WindowManagerService;
 
@@ -135,7 +135,7 @@
 
     goto :goto_0
 
-    .line 11683
+    .line 11693
     :cond_2
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$7;->this$0:Lcom/android/server/wm/WindowManagerService;
 

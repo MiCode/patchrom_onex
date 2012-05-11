@@ -1266,15 +1266,15 @@ para a conta %s"</string>
     <string name="camera_notify_title">TI desactivou a câmara</string>
     <string name="install_notify_title">TI bloqueou instalação:</string>
     <string name="uninstall_notify_title">TI bloqueou desinstalação:</string>
-    <string name="wifi_notify_title">TI Wi-Fi desactivado</string>
-    <string name="sim_puk_contact_customer_care_information">Contacte o Apoio ao Cliente para obter o código PUK</string>
+    <string name="wifi_notify_title">TI Wi-Fi desativado</string>
+    <string name="sim_puk_contact_customer_care_information">Contate o Apoio ao Cliente para obter o código PUK</string>
     <string name="permlab_accessCWFolder">Aceder à pasta da funcionalidade do assistente de personalização</string>
     <string name="permdesc_accessCWFolder">Permite que uma aplicação aceda à pasta da funcionalidade do assistente de personalização</string>
     <string name="permlab_accessRecoveryFolder">Aceder à pasta de recuperação</string>
     <string name="permdesc_accessRecoveryFolder">Permite a uma aplicação aceder a uma pasta de recuperação</string>
     <string name="permlab_setappname">Dinâmico para alterar nome de aplicação</string>
     <string name="permdesc_setappname">Permite a uma aplicação alterar dinamicamente o nome de uma aplicação específica.</string>
-    <string name="text_limitation">Não é possível seleccionar demasiadas palavras para partilhar.</string>
+    <string name="text_limitation">Não é possível selecionar demasiadas palavras para partilhar.</string>
     <string name="sms_roam_guild_dialog_title">Mensagem a enviar</string>
     <string name="sms_roam_guild_dialog_subject">Está em roaming em redes internacionais. Enviar esta mensagem pode resultar em custos adicionais por parte do seu fornecedor sem fios. Deseja:</string>
     <string name="sms_roam_guild_dialog_radio_auto_send">Enviar automaticamente quando com cobertura nacional</string>
@@ -1286,7 +1286,7 @@ para a conta %s"</string>
     <string name="permdesc_changeUsbnetState">Permite que uma aplicação se ligue e desligue de pontos de acesso UsbNet, e altere as redes UsbNet configuradas.</string>
     <string name="permlab_changeUsbnetMulticastState">permitir recepção UsbNet Multicast</string>
     <string name="permdesc_changeUsbnetMulticastState">Permite que uma aplicação receba pacotes não endereçados directamente ao seu dispositivo. Pode ser útil quando desejar procurar serviços disponíveis perto de si. Utiliza mais energia do que o modo não multicast.</string>
-    <string name="hutch_htctethered_notification_title">PocketWifi activo</string>
+    <string name="hutch_htctethered_notification_title">PocketWifi ativo</string>
     <string name="localized_opertator_name_kddi_roaming">Roaming internacional</string>
     <string name="localized_opertator_name_unknown">Rede desconhecida</string>
     <string name="encryption_password_required">Necessária palavra-passe de encriptação</string>
@@ -1294,7 +1294,7 @@ para a conta %s"</string>
     <string name="ext_media_ro_notification_title">Cartão SD só de leitura (não encriptado)</string>
     <string name="ext_media_ro_notification_message">Para acesso de escrita, formatar para encriptar cartão SD</string>
     <string name="dock_mode_goto_notification_title">Modo de Base</string>
-    <string name="dock_mode_goto_notification_message">Seleccione para regressar ao Modo Base.</string>
+    <string name="dock_mode_goto_notification_message">Selecione para regressar ao Modo Base.</string>
     <string name="lockscreen_uimsim_unlock_progress_dialog_message">A desbloquear cartão UIM/SIM…</string>
     <string name="lockscreen_uim_unlock_progress_dialog_message">A desbloquear cartão UIM…</string>
     <string name="lockscreen_uim_puk_locked_message">Cartão UIM bloqueado por PUK.</string>
@@ -1324,7 +1324,7 @@ para a conta %s"</string>
     <string name="call_forward_unconditional">Reencaminhamento de chamadas incondicional</string>
     <string name="call_forward_when_busy">Reencaminhamento de chamadas quando ocupado</string>
     <string name="call_forward_when_unanswered">Reencaminhamento de chamadas quando não atendido</string>
-    <string name="call_forward_when_unreachable">Reencaminhar Chamadas quando Não Contactável</string>
+    <string name="call_forward_when_unreachable">Reencaminhar Chamadas quando Não Contatável</string>
     <string name="call_forward_all_forward">Reencaminhar Todas Chamadas</string>
     <string name="call_forward_all_conditional">Reencaminhar Todas Chamadas Condicionais</string>
 </resources>

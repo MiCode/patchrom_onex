@@ -2724,21 +2724,17 @@
 
     if-eqz v3, :cond_2
 
-    .line 880
     :cond_0
     if-eqz v15, :cond_1
 
-    .line 885
     :try_start_0
     invoke-static {v10}, Landroid/provider/DrmStore;->enforceAccessDrmPermission(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 891
     :goto_1
     const/4 v4, 0x0
 
-    .line 893
     .local v4, pfd:Landroid/os/ParcelFileDescriptor;
     :try_start_1
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2793,7 +2789,6 @@
 
     throw v3
 
-    .line 895
     .end local v11           #e:Ljava/lang/SecurityException;
     :cond_1
 
@@ -2811,7 +2806,6 @@
     :catch_1
     move-exception v3
 
-    .line 902
     .end local v4           #pfd:Landroid/os/ParcelFileDescriptor;
     :cond_2
     :try_start_2
@@ -2993,17 +2987,14 @@
 
     if-eqz v6, :cond_2
 
-    .line 838
     :cond_0
     if-eqz v3, :cond_1
 
-    .line 843
     :try_start_0
     invoke-static {v1}, Landroid/provider/DrmStore;->enforceAccessDrmPermission(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 849
     :goto_1
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3041,7 +3032,6 @@
 
     throw v6
 
-    .line 854
     :cond_1
     invoke-static {v5, v4}, Landroid/media/ExtraRingtoneManager;->getUriForExtraCases(Landroid/net/Uri;I)Landroid/net/Uri;
 
@@ -3049,6 +3039,7 @@
 
     goto :goto_1
 
+    .line 854
     .end local v0           #authority:Ljava/lang/String;
     .end local v1           #context:Landroid/content/Context;
     .end local v2           #e:Ljava/lang/SecurityException;

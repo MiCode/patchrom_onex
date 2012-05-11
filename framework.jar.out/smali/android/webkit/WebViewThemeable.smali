@@ -74,7 +74,7 @@
     .parameter "res"
 
     .prologue
-    const v2, 0x2080301
+    const v2, 0x2080302
 
     .line 39
     const/4 v0, 0x0
@@ -124,7 +124,7 @@
     .parameter "res"
 
     .prologue
-    const v2, 0x2080302
+    const v2, 0x2080303
 
     .line 56
     const/4 v0, 0x0
@@ -174,7 +174,7 @@
     .parameter "res"
 
     .prologue
-    const v2, 0x2080303
+    const v2, 0x2080304
 
     .line 22
     const/4 v0, 0x0

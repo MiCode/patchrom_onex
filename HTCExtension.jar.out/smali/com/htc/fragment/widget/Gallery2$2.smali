@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1579
+    .line 1572
     iput-object p1, p0, Lcom/htc/fragment/widget/Gallery2$2;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 1581
+    .line 1574
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$2;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     #calls: Lcom/htc/fragment/widget/Gallery2;->dispatchUnpress()V
     invoke-static {v0}, Lcom/htc/fragment/widget/Gallery2;->access$200(Lcom/htc/fragment/widget/Gallery2;)V
 
-    .line 1582
+    .line 1575
     return-void
 .end method

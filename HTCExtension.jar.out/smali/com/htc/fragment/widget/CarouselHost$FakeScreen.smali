@@ -25,34 +25,34 @@
     .parameter "context"
 
     .prologue
-    .line 1392
+    .line 1391
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselHost$FakeScreen;->this$0:Lcom/htc/fragment/widget/CarouselHost;
 
-    .line 1393
+    .line 1392
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 1396
+    .line 1395
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$FakeScreen;->mContext:Landroid/content/Context;
 
     const v1, 0x2030052
 
     invoke-virtual {p0, v0, v1}, Lcom/htc/fragment/widget/CarouselHost$FakeScreen;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 1397
+    .line 1396
     iget-object v0, p0, Lcom/htc/fragment/widget/CarouselHost$FakeScreen;->mContext:Landroid/content/Context;
 
     invoke-static {p0, v0}, Lcom/htc/fragment/widget/CarouselSkinUtil;->setDarkShadow(Landroid/widget/TextView;Landroid/content/Context;)V
 
-    .line 1398
-    const v0, 0x2080181
+    .line 1397
+    const v0, 0x2080182
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/CarouselHost$FakeScreen;->setBackgroundResource(I)V
 
-    .line 1399
+    .line 1398
     const/16 v0, 0x11
 
     invoke-virtual {p0, v0}, Lcom/htc/fragment/widget/CarouselHost$FakeScreen;->setGravity(I)V
 
-    .line 1400
+    .line 1399
     return-void
 .end method

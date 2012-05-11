@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1841
+    .line 1877
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1841
+    .line 1877
     invoke-direct {p0, p1}, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;-><init>(Lcom/android/server/location/GpsLocationProvider;)V
 
     return-void
@@ -53,10 +53,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1844
+    .line 1880
     iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 1845
+    .line 1881
     .local v0, message:I
     const-string v1, "GpsLocationProvider"
 
@@ -80,7 +80,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1846
+    .line 1882
     const-string v1, "GpsLocationProvider"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -103,10 +103,10 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1847
+    .line 1883
     packed-switch v0, :pswitch_data_0
 
-    .line 1892
+    .line 1938
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
@@ -118,7 +118,7 @@
 
     monitor-enter v3
 
-    .line 1893
+    .line 1939
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -128,7 +128,7 @@
 
     invoke-static {v1, v2}, Lcom/android/server/location/GpsLocationProvider;->access$2372(Lcom/android/server/location/GpsLocationProvider;I)I
 
-    .line 1894
+    .line 1940
     const/16 v1, 0x8
 
     if-eq v0, v1, :cond_1
@@ -137,13 +137,13 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1895
+    .line 1941
     :cond_1
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-static {v1}, Lcom/android/server/location/GpsLocationProvider;->access$2410(Lcom/android/server/location/GpsLocationProvider;)I
 
-    .line 1897
+    .line 1943
     :cond_2
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -163,7 +163,7 @@
 
     if-nez v1, :cond_3
 
-    .line 1898
+    .line 1944
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -173,16 +173,16 @@
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1900
+    .line 1946
     :cond_3
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1901
+    .line 1947
     return-void
 
-    .line 1849
+    .line 1885
     :pswitch_0
     const-string v1, "GpsLocationProvider"
 
@@ -208,12 +208,12 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1850
+    .line 1886
     iget v1, p1, Landroid/os/Message;->arg1:I
 
     if-ne v1, v2, :cond_4
 
-    .line 1851
+    .line 1887
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->handleEnable()V
@@ -221,7 +221,7 @@
 
     goto :goto_0
 
-    .line 1853
+    .line 1889
     :cond_4
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -230,7 +230,7 @@
 
     goto :goto_0
 
-    .line 1857
+    .line 1893
     :pswitch_1
     const-string v1, "GpsLocationProvider"
 
@@ -238,7 +238,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1858
+    .line 1894
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -258,7 +258,7 @@
 
     goto :goto_1
 
-    .line 1861
+    .line 1897
     :pswitch_2
     const-string v1, "GpsLocationProvider"
 
@@ -266,7 +266,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1862
+    .line 1898
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->handleRequestSingleShot()V
@@ -274,7 +274,7 @@
 
     goto/16 :goto_0
 
-    .line 1865
+    .line 1901
     :pswitch_3
     const-string v1, "GpsLocationProvider"
 
@@ -282,7 +282,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1866
+    .line 1902
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget v4, p1, Landroid/os/Message;->arg1:I
@@ -296,7 +296,7 @@
 
     goto/16 :goto_0
 
-    .line 1869
+    .line 1905
     :pswitch_4
     const-string v1, "GpsLocationProvider"
 
@@ -304,7 +304,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1870
+    .line 1906
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->handleInjectNtpTime()V
@@ -312,7 +312,7 @@
 
     goto/16 :goto_0
 
-    .line 1873
+    .line 1909
     :pswitch_5
     const-string v1, "GpsLocationProvider"
 
@@ -343,7 +343,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1874
+    .line 1910
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mSupportsXtra:Z
@@ -353,7 +353,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1875
+    .line 1911
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->handleDownloadXtraData()V
@@ -361,7 +361,7 @@
 
     goto/16 :goto_0
 
-    .line 1879
+    .line 1915
     :pswitch_6
     const-string v1, "GpsLocationProvider"
 
@@ -369,7 +369,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1880
+    .line 1916
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -381,7 +381,7 @@
 
     goto/16 :goto_0
 
-    .line 1883
+    .line 1919
     :pswitch_7
     const-string v1, "GpsLocationProvider"
 
@@ -389,7 +389,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1884
+    .line 1920
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget v3, p1, Landroid/os/Message;->arg1:I
@@ -399,7 +399,7 @@
 
     goto/16 :goto_0
 
-    .line 1887
+    .line 1923
     :pswitch_8
     const-string v1, "GpsLocationProvider"
 
@@ -407,7 +407,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1888
+    .line 1924
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     iget v3, p1, Landroid/os/Message;->arg1:I
@@ -417,7 +417,39 @@
 
     goto/16 :goto_0
 
-    .line 1900
+    .line 1928
+    :pswitch_9
+    const-string v1, "GpsLocationProvider"
+
+    const-string v3, "[handleMessage] SINGLESHOT_STOP_NAVIGATING"
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1929
+    iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
+
+    #calls: Lcom/android/server/location/GpsLocationProvider;->stopNavigating()V
+    invoke-static {v1}, Lcom/android/server/location/GpsLocationProvider;->access$900(Lcom/android/server/location/GpsLocationProvider;)V
+
+    goto/16 :goto_0
+
+    .line 1932
+    :pswitch_a
+    const-string v1, "GpsLocationProvider"
+
+    const-string v3, "[handleMessage] FRAMEWORK_SCHEDULE_HIBERNATE"
+
+    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1933
+    iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider$ProviderHandler;->this$0:Lcom/android/server/location/GpsLocationProvider;
+
+    #calls: Lcom/android/server/location/GpsLocationProvider;->hibernate()V
+    invoke-static {v1}, Lcom/android/server/location/GpsLocationProvider;->access$400(Lcom/android/server/location/GpsLocationProvider;)V
+
+    goto/16 :goto_0
+
+    .line 1946
     :catchall_0
     move-exception v1
 
@@ -428,7 +460,7 @@
 
     throw v1
 
-    .line 1847
+    .line 1883
     nop
 
     :pswitch_data_0
@@ -442,5 +474,7 @@
         :pswitch_7
         :pswitch_8
         :pswitch_2
+        :pswitch_9
+        :pswitch_a
     .end packed-switch
 .end method

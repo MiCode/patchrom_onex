@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/CameraThread;->cancelAutoFocus()V
+    value = Lcom/android/camera/CameraThread;->autoFocus([Landroid/graphics/RectF;Lcom/android/camera/AutoFocusMode;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,15 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/CameraThread;
 
+.field final synthetic val$e:Lcom/android/camera/AutoFocusEventArgs;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/CameraThread;)V
+.method constructor <init>(Lcom/android/camera/CameraThread;Lcom/android/camera/AutoFocusEventArgs;)V
     .locals 0
+    .parameter
     .parameter
 
     .prologue
-    .line 4952
+    .line 4965
     iput-object p1, p0, Lcom/android/camera/CameraThread$15;->this$0:Lcom/android/camera/CameraThread;
+
+    iput-object p2, p0, Lcom/android/camera/CameraThread$15;->val$e:Lcom/android/camera/AutoFocusEventArgs;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,15 +43,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 4956
+    .line 4969
     iget-object v0, p0, Lcom/android/camera/CameraThread$15;->this$0:Lcom/android/camera/CameraThread;
 
-    #calls: Lcom/android/camera/CameraThread;->cancelAutoFocusInternal()V
-    invoke-static {v0}, Lcom/android/camera/CameraThread;->access$4200(Lcom/android/camera/CameraThread;)V
+    iget-object v1, p0, Lcom/android/camera/CameraThread$15;->val$e:Lcom/android/camera/AutoFocusEventArgs;
 
-    .line 4957
+    #calls: Lcom/android/camera/CameraThread;->autoFocusInternal(Lcom/android/camera/AutoFocusEventArgs;)V
+    invoke-static {v0, v1}, Lcom/android/camera/CameraThread;->access$4300(Lcom/android/camera/CameraThread;Lcom/android/camera/AutoFocusEventArgs;)V
+
+    .line 4970
     return-void
 .end method

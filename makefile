@@ -3,7 +3,7 @@
 #
 
 # The original zip file, MUST be specified by each product
-local-zip-file     := onex_1.26.707.2.zip
+local-zip-file     := onex_1.28.707.10.zip
 
 # The output zip file of MIUI rom, the default is update.zip if not specified
 # local-out-zip-file :=
@@ -69,12 +69,13 @@ local-zip-misc:
 
 	@echo add system config
 	cp other/system_etc/* $(ZIP_DIR)/system/etc/
+	cp other/system_keylayout/* $(ZIP_DIR)/system/usr/keylayout/
 
 	@echo delete redundance files
-	rm $(ZIP_DIR)/system/customize/resource/*.png
+	rm -f $(ZIP_DIR)/system/customize/resource/*.png
 	rm -rf $(ZIP_DIR)/system/media/weather
 	rm -rf $(ZIP_DIR)/system/media/video
-	rm $(ZIP_DIR)/system/bin/su
+	rm -f $(ZIP_DIR)/system/bin/su
 
 local-test:
 #	rm -f $(local-out-zip-file)

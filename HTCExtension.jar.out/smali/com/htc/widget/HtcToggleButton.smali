@@ -432,7 +432,7 @@
 
     .prologue
     .line 137
-    const v8, 0x2080310
+    const v8, 0x2080311
 
     invoke-virtual {p0, v8}, Lcom/htc/widget/HtcToggleButton;->setBackgroundResource(I)V
 
@@ -2001,7 +2001,7 @@
     if-ne p1, v2, :cond_2
 
     .line 695
-    const v2, 0x208030d
+    const v2, 0x208030e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2010,7 +2010,7 @@
     iput-object v2, p0, Lcom/htc/widget/HtcToggleButton;->mToggleOuter:Landroid/graphics/drawable/Drawable;
 
     .line 696
-    const v2, 0x208030e
+    const v2, 0x208030f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2019,7 +2019,7 @@
     iput-object v2, p0, Lcom/htc/widget/HtcToggleButton;->mTogglePress:Landroid/graphics/drawable/Drawable;
 
     .line 697
-    const v2, 0x208030f
+    const v2, 0x2080310
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2145,7 +2145,7 @@
 
     .line 708
     :cond_2
-    const v2, 0x2080313
+    const v2, 0x2080314
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2154,7 +2154,7 @@
     iput-object v2, p0, Lcom/htc/widget/HtcToggleButton;->mToggleOuter:Landroid/graphics/drawable/Drawable;
 
     .line 709
-    const v2, 0x2080314
+    const v2, 0x2080315
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2163,7 +2163,7 @@
     iput-object v2, p0, Lcom/htc/widget/HtcToggleButton;->mTogglePress:Landroid/graphics/drawable/Drawable;
 
     .line 710
-    const v2, 0x2080315
+    const v2, 0x2080316
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

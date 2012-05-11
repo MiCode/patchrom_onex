@@ -1067,9 +1067,9 @@
     <string name="ime_action_go">开始</string>
     <string name="ime_action_search">搜索</string>
     <string name="ime_action_send">发送</string>
-    <string name="ime_action_next">下一步</string>
+    <string name="ime_action_next">下一个</string>
     <string name="ime_action_done">完成</string>
-    <string name="ime_action_previous">上一页</string>
+    <string name="ime_action_previous">上一个</string>
     <string name="ime_action_default">执行</string>
     <string name="dial_number_using">"使用%s拨号
 "</string>
@@ -1289,10 +1289,10 @@
     <string name="sim_puk_contact_customer_care_information">请联系客服中心获得 PUK 代码</string>
     <string name="permlab_accessCWFolder">访问自定义向导功能文件夹</string>
     <string name="permdesc_accessCWFolder">允许应用程序访问自定义向导功能文件夹</string>
-    <string name="permlab_accessRecoveryFolder">访问恢复文件夹</string>
-    <string name="permdesc_accessRecoveryFolder">允许应用程序访问恢复文件夹</string>
+    <string name="permlab_accessRecoveryFolder">访问恢复的文件夹</string>
+    <string name="permdesc_accessRecoveryFolder">允许应用程序访问恢复的文件夹</string>
     <string name="permlab_setappname">动态更改应用程序名称</string>
-    <string name="permdesc_setappname">允许应用程序动态更改指定应用程序名称。</string>
+    <string name="permdesc_setappname">允许应用程序动态更改指定的应用程序名称。</string>
     <string name="text_limitation">无法选择太多的字词来分享。</string>
     <string name="sms_roam_guild_dialog_title">发送信息</string>
     <string name="sms_roam_guild_dialog_subject">您正在国际网络漫游。如果发送此信息，无线服务提供商可能会收取额外费用。是否要：</string>

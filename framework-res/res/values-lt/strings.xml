@@ -1268,8 +1268,8 @@ naudojant %s"</string>
     <string name="uninstall_notify_title">IT blokuotas išdiegimas:</string>
     <string name="wifi_notify_title">IT išjungė Wi-Fi</string>
     <string name="sim_puk_contact_customer_care_information">Susisiekite su klientų aptarnavimo centru, kad gautumėte PUK kodą</string>
-    <string name="permlab_accessCWFolder">Pasiekti individualizavimo vedlio funkcijos aplanką</string>
-    <string name="permdesc_accessCWFolder">Leidžia programai pasiekti individualizavimo vedlio funkcijos aplanką</string>
+    <string name="permlab_accessCWFolder">Pasiekti individualizavimo vediklio funkcijos aplanką</string>
+    <string name="permdesc_accessCWFolder">Leidžia programai pasiekti individualizavimo vediklio funkcijos aplanką</string>
     <string name="permlab_accessRecoveryFolder">Pasiekti atkūrimo aplanką</string>
     <string name="permdesc_accessRecoveryFolder">Leidžia programai pasiekti atkūrimo aplanką</string>
     <string name="permlab_setappname">Dinamiškai pakeisti programos pavadinimą</string>

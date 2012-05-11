@@ -2,7 +2,7 @@
 <resources>
     <bool name="def_dim_screen">true</bool>
     <bool name="def_be_polite">true</bool>
-    <bool name="weather_wallpaper_animation_allowed">true</bool>
+    <bool name="weather_wallpaper_animation_allowed">false</bool>
     <bool name="def_airplane_mode_on">false</bool>
     <bool name="def_auto_time">true</bool>
     <bool name="def_auto_time_zone">true</bool>

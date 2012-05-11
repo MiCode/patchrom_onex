@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2433
+    .line 2442
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$broadcastReceiver;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2433
+    .line 2442
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/LockPatternKeyguardView$broadcastReceiver;-><init>(Lcom/android/internal/policy/impl/LockPatternKeyguardView;)V
 
     return-void
@@ -52,12 +52,12 @@
     .parameter "intent"
 
     .prologue
-    .line 2436
+    .line 2445
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2437
+    .line 2446
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -67,7 +67,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 2438
+    .line 2447
     const-string v2, "ICC_HOT_SWAP_ABSENT"
 
     const-string v3, "ss"
@@ -82,7 +82,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 2440
+    .line 2449
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$broadcastReceiver;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
@@ -94,7 +94,7 @@
 
     move-result-object v1
 
-    .line 2441
+    .line 2450
     .local v1, simState:Lcom/android/internal/telephony/IccCard$State;
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PIN_REQUIRED:Lcom/android/internal/telephony/IccCard$State;
 
@@ -104,7 +104,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 2443
+    .line 2452
     :cond_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$broadcastReceiver;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
@@ -115,7 +115,7 @@
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportSimAbsent()V
 
-    .line 2444
+    .line 2453
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$broadcastReceiver;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->isSecure()Z
@@ -125,14 +125,14 @@
 
     if-nez v2, :cond_2
 
-    .line 2445
+    .line 2454
     const-string v2, "LockPatternKeyguardView"
 
     const-string v3, "Close SIM PIN/PUK UI"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2446
+    .line 2455
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$broadcastReceiver;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->getCallback()Lcom/android/internal/policy/impl/KeyguardViewCallback;
@@ -143,13 +143,13 @@
 
     invoke-interface {v2, v3}, Lcom/android/internal/policy/impl/KeyguardViewCallback;->keyguardDone(Z)V
 
-    .line 2453
+    .line 2462
     .end local v1           #simState:Lcom/android/internal/telephony/IccCard$State;
     :cond_1
     :goto_0
     return-void
 
-    .line 2448
+    .line 2457
     .restart local v1       #simState:Lcom/android/internal/telephony/IccCard$State;
     :cond_2
     iget-object v2, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$broadcastReceiver;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;

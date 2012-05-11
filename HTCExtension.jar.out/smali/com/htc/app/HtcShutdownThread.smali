@@ -776,22 +776,22 @@
     .locals 11
 
     .prologue
-    .line 1232
+    .line 1332
     new-instance v6, Lcom/htc/shutdown/ConfigReader;
 
     invoke-direct {v6}, Lcom/htc/shutdown/ConfigReader;-><init>()V
 
-    .line 1233
+    .line 1333
     .local v6, mReader:Lcom/htc/shutdown/ConfigReader;
     new-instance v5, Lcom/htc/shutdown/ConfigData;
 
     invoke-direct {v5}, Lcom/htc/shutdown/ConfigData;-><init>()V
 
-    .line 1234
+    .line 1334
     .local v5, mData:Lcom/htc/shutdown/ConfigData;
     const/4 v8, 0x0
 
-    .line 1235
+    .line 1335
     .local v8, useAnimation:Z
     const-string v9, "ro.cid"
 
@@ -799,17 +799,17 @@
 
     move-result-object v7
 
-    .line 1239
+    .line 1339
     .local v7, str_cid:Ljava/lang/String;
     const-string v3, "/data/data/cw/animation.xml"
 
-    .line 1240
+    .line 1340
     .local v3, cw_config_path:Ljava/lang/String;
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1241
+    .line 1341
     .local v2, cwConfig:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -817,31 +817,31 @@
 
     if-eqz v9, :cond_0
 
-    .line 1244
+    .line 1344
     invoke-virtual {v6, v3}, Lcom/htc/shutdown/ConfigReader;->parseConfigData(Ljava/lang/String;)V
 
-    .line 1245
+    .line 1345
     invoke-virtual {v6}, Lcom/htc/shutdown/ConfigReader;->getConfigData()Lcom/htc/shutdown/ConfigData;
 
     move-result-object v5
 
-    .line 1247
+    .line 1347
     iget-object v9, v5, Lcom/htc/shutdown/ConfigData;->image:Ljava/lang/String;
 
     if-eqz v9, :cond_0
 
-    .line 1250
+    .line 1350
     const/4 v9, 0x1
 
-    .line 1312
+    .line 1412
     :goto_0
     return v9
 
-    .line 1254
+    .line 1354
     :cond_0
     if-eqz v7, :cond_6
 
-    .line 1258
+    .line 1358
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -866,13 +866,13 @@
 
     move-result-object v1
 
-    .line 1262
+    .line 1362
     .local v1, config_path:Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1263
+    .line 1363
     .local v0, config:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -880,35 +880,35 @@
 
     if-eqz v9, :cond_5
 
-    .line 1264
+    .line 1364
     invoke-virtual {v6, v1}, Lcom/htc/shutdown/ConfigReader;->parseConfigData(Ljava/lang/String;)V
 
-    .line 1265
+    .line 1365
     invoke-virtual {v6}, Lcom/htc/shutdown/ConfigReader;->getConfigData()Lcom/htc/shutdown/ConfigData;
 
     move-result-object v5
 
-    .line 1266
+    .line 1366
     iget-object v9, v5, Lcom/htc/shutdown/ConfigData;->image:Ljava/lang/String;
 
     if-nez v9, :cond_4
 
-    .line 1269
+    .line 1369
     const-string v9, "/system/customize/CID/default.xml"
 
     invoke-virtual {v6, v9}, Lcom/htc/shutdown/ConfigReader;->parseConfigData(Ljava/lang/String;)V
 
-    .line 1270
+    .line 1370
     invoke-virtual {v6}, Lcom/htc/shutdown/ConfigReader;->getConfigData()Lcom/htc/shutdown/ConfigData;
 
     move-result-object v5
 
-    .line 1271
+    .line 1371
     iget-object v9, v5, Lcom/htc/shutdown/ConfigData;->image:Ljava/lang/String;
 
     if-nez v9, :cond_3
 
-    .line 1305
+    .line 1405
     .end local v0           #config:Ljava/io/File;
     .end local v1           #config_path:Ljava/lang/String;
     :cond_1
@@ -917,14 +917,14 @@
 
     if-nez v9, :cond_2
 
-    .line 1306
+    .line 1406
     new-instance v4, Ljava/io/File;
 
     const-string v9, "/system/customize/resource/shutdown.zip"
 
     invoke-direct {v4, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1307
+    .line 1407
     .local v4, defaultFile:Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -932,17 +932,17 @@
 
     if-eqz v9, :cond_2
 
-    .line 1308
+    .line 1408
     const/4 v8, 0x1
 
     .end local v4           #defaultFile:Ljava/io/File;
     :cond_2
     move v9, v8
 
-    .line 1312
+    .line 1412
     goto :goto_0
 
-    .line 1275
+    .line 1375
     .restart local v0       #config:Ljava/io/File;
     .restart local v1       #config_path:Ljava/lang/String;
     :cond_3
@@ -950,34 +950,34 @@
 
     goto :goto_1
 
-    .line 1278
+    .line 1378
     :cond_4
     const/4 v8, 0x1
 
     goto :goto_1
 
-    .line 1283
+    .line 1383
     :cond_5
     const-string v9, "/system/customize/CID/default.xml"
 
     invoke-virtual {v6, v9}, Lcom/htc/shutdown/ConfigReader;->parseConfigData(Ljava/lang/String;)V
 
-    .line 1284
+    .line 1384
     invoke-virtual {v6}, Lcom/htc/shutdown/ConfigReader;->getConfigData()Lcom/htc/shutdown/ConfigData;
 
     move-result-object v5
 
-    .line 1285
+    .line 1385
     iget-object v9, v5, Lcom/htc/shutdown/ConfigData;->image:Ljava/lang/String;
 
     if-eqz v9, :cond_1
 
-    .line 1289
+    .line 1389
     const/4 v8, 0x1
 
     goto :goto_1
 
-    .line 1295
+    .line 1395
     .end local v0           #config:Ljava/io/File;
     .end local v1           #config_path:Ljava/lang/String;
     :cond_6
@@ -985,17 +985,17 @@
 
     invoke-virtual {v6, v9}, Lcom/htc/shutdown/ConfigReader;->parseConfigData(Ljava/lang/String;)V
 
-    .line 1296
+    .line 1396
     invoke-virtual {v6}, Lcom/htc/shutdown/ConfigReader;->getConfigData()Lcom/htc/shutdown/ConfigData;
 
     move-result-object v5
 
-    .line 1297
+    .line 1397
     iget-object v9, v5, Lcom/htc/shutdown/ConfigData;->image:Ljava/lang/String;
 
     if-eqz v9, :cond_1
 
-    .line 1301
+    .line 1401
     const/4 v8, 0x1
 
     goto :goto_1
@@ -1770,7 +1770,7 @@
 .end method
 
 .method public run()V
-    .locals 52
+    .locals 55
 
     .prologue
     .line 606
@@ -1782,7 +1782,7 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1228
+    .line 1328
     :goto_0
     return-void
 
@@ -1801,75 +1801,87 @@
     .local v12, PHONE_TYPE_GSM:I
     const/4 v11, 0x2
 
-    .line 618
+    .line 614
     .local v11, PHONE_TYPE_CDMA:I
-    const/16 v39, 0x0
+    const/4 v13, 0x5
 
     .line 619
-    .local v39, radioOff:Z
-    const/16 v37, 0x0
-
-    .line 620
-    .local v37, radioGsmOff:Z
-    const/16 v35, 0x0
-
-    .line 622
-    .local v35, radioCdmaOff:Z
-    const/16 v47, 0x0
-
-    .line 623
-    .local v47, wifiOff:Z
-    const/16 v45, 0x0
-
-    .line 624
-    .local v45, wifiApOff:Z
-    const/16 v50, 0x0
-
-    .line 626
-    .local v50, wimaxOff:Z
+    .local v13, PHONE_TYPE_SUB_GSM:I
     const/16 v40, 0x0
 
-    .line 628
-    .local v40, radioWasOn:Z
+    .line 620
+    .local v40, radioOff:Z
     const/16 v38, 0x0
 
-    .line 629
-    .local v38, radioGsmWasOn:Z
+    .line 621
+    .local v38, radioGsmOff:Z
     const/16 v36, 0x0
 
-    .line 631
-    .local v36, radioCdmaWasOn:Z
+    .line 622
+    .local v36, radioCdmaOff:Z
+    const/16 v41, 0x0
+
+    .line 624
+    .local v41, radioSubGsmOff:Z
+    const/16 v50, 0x0
+
+    .line 625
+    .local v50, wifiOff:Z
     const/16 v48, 0x0
 
-    .line 632
-    .local v48, wifiWasOn:Z
-    const/16 v46, 0x0
+    .line 626
+    .local v48, wifiApOff:Z
+    const/16 v53, 0x0
 
-    .line 633
-    .local v46, wifiApWasOn:Z
+    .line 628
+    .local v53, wimaxOff:Z
+    const/16 v43, 0x0
+
+    .line 630
+    .local v43, radioWasOn:Z
+    const/16 v39, 0x0
+
+    .line 631
+    .local v39, radioGsmWasOn:Z
+    const/16 v37, 0x0
+
+    .line 632
+    .local v37, radioCdmaWasOn:Z
+    const/16 v42, 0x0
+
+    .line 634
+    .local v42, radioSubGsmWasOn:Z
     const/16 v51, 0x0
 
     .line 635
-    .local v51, wimaxWasOn:Z
+    .local v51, wifiWasOn:Z
+    const/16 v49, 0x0
+
+    .line 636
+    .local v49, wifiApWasOn:Z
+    const/16 v54, 0x0
+
+    .line 638
+    .local v54, wimaxWasOn:Z
     const/4 v2, 0x1
 
     sput-boolean v2, Lcom/htc/app/HtcShutdownThread;->sIsAnimationReady:Z
 
-    .line 637
+    .line 640
     const/4 v2, 0x1
 
     const-string v3, "shutdown"
 
     invoke-static {v2, v3}, Landroid/os/Power;->acquireWakeLock(ILjava/lang/String;)V
 
-    .line 639
+    .line 642
     new-instance v5, Lcom/htc/app/HtcShutdownThread$6;
 
     move-object/from16 v0, p0
 
     invoke-direct {v5, v0}, Lcom/htc/app/HtcShutdownThread$6;-><init>(Lcom/htc/app/HtcShutdownThread;)V
 
-    .line 646
+    .line 649
     .local v5, br:Landroid/content/BroadcastReceiver;
     move-object/from16 v0, p0
 
@@ -1883,21 +1895,21 @@
 
     invoke-static {v2}, Landroid/app/IAlarmManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IAlarmManager;
 
-    move-result-object v13
+    move-result-object v14
 
-    .line 648
-    .local v13, alarm:Landroid/app/IAlarmManager;
+    .line 651
+    .local v14, alarm:Landroid/app/IAlarmManager;
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
-    if-eqz v2, :cond_29
+    if-eqz v2, :cond_2a
 
-    .line 650
+    .line 653
     :try_start_0
-    invoke-interface {v13}, Landroid/app/IAlarmManager;->startHibernate()V
+    invoke-interface {v14}, Landroid/app/IAlarmManager;->startHibernate()V
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_14
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_19
 
-    .line 656
+    .line 659
     :goto_1
     move-object/from16 v0, p0
 
@@ -1923,7 +1935,14 @@
 
     invoke-virtual/range {v2 .. v9}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 667
+    .line 661
+    const-string v2, "sys.shutdown.hibernate.mode"
+
+    const-string v3, "1"
+
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 671
     :goto_2
     const/4 v2, 0x0
 
@@ -1931,24 +1950,24 @@
 
     iput-boolean v2, v0, Lcom/htc/app/HtcShutdownThread;->mActionDone:Z
 
-    .line 668
+    .line 672
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     const-wide/16 v6, 0x2710
 
-    add-long v26, v2, v6
+    add-long v27, v2, v6
 
-    .line 669
-    .local v26, endTime:J
+    .line 673
+    .local v27, endTime:J
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/app/HtcShutdownThread;->mActionDoneSync:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 670
+    .line 674
     :goto_3
     :try_start_1
     move-object/from16 v0, p0
@@ -1957,29 +1976,29 @@
 
     if-nez v2, :cond_1
 
-    .line 671
+    .line 675
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    sub-long v17, v26, v6
+    sub-long v18, v27, v6
 
-    .line 672
-    .local v17, delay:J
+    .line 676
+    .local v18, delay:J
     const-wide/16 v6, 0x0
 
-    cmp-long v2, v17, v6
+    cmp-long v2, v18, v6
 
-    if-gtz v2, :cond_2a
+    if-gtz v2, :cond_2b
 
-    .line 682
-    .end local v17           #delay:J
+    .line 686
+    .end local v18           #delay:J
     :cond_1
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 684
+    .line 688
     const-string v2, "phone"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1988,10 +2007,10 @@
 
     invoke-static {v2}, Lcom/android/internal/telephony/ITelephony$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/telephony/ITelephony;
 
-    move-result-object v33
+    move-result-object v34
 
-    .line 686
-    .local v33, phone:Lcom/android/internal/telephony/ITelephony;
+    .line 690
+    .local v34, phone:Lcom/android/internal/telephony/ITelephony;
     const-string v2, "bluetooth"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -2000,10 +2019,10 @@
 
     invoke-static {v2}, Landroid/bluetooth/IBluetooth$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetooth;
 
-    move-result-object v15
+    move-result-object v16
 
-    .line 689
-    .local v15, bluetooth:Landroid/bluetooth/IBluetooth;
+    .line 693
+    .local v16, bluetooth:Landroid/bluetooth/IBluetooth;
     const-string v2, "mount"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -2012,10 +2031,10 @@
 
     invoke-static {v2}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
-    move-result-object v31
+    move-result-object v32
 
-    .line 693
-    .local v31, mount:Landroid/os/storage/IMountService;
+    .line 697
+    .local v32, mount:Landroid/os/storage/IMountService;
     const-string v2, "wifi"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -2024,10 +2043,10 @@
 
     invoke-static {v2}, Landroid/net/wifi/IWifiManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/wifi/IWifiManager;
 
-    move-result-object v44
+    move-result-object v47
 
-    .line 695
-    .local v44, wifi:Landroid/net/wifi/IWifiManager;
+    .line 699
+    .local v47, wifi:Landroid/net/wifi/IWifiManager;
     const-string v2, "wimax"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -2036,10 +2055,10 @@
 
     invoke-static {v2}, Lcom/htc/net/wimax/IWimaxController$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/net/wimax/IWimaxController;
 
-    move-result-object v49
+    move-result-object v52
 
-    .line 697
-    .local v49, wimax:Lcom/htc/net/wimax/IWimaxController;
+    .line 701
+    .local v52, wimax:Lcom/htc/net/wimax/IWimaxController;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mContext:Landroid/content/Context;
@@ -2056,7 +2075,7 @@
 
     move-result v10
 
-    .line 699
+    .line 703
     .local v10, IsAirplaneMode:I
     move-object/from16 v0, p0
 
@@ -2072,10 +2091,10 @@
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    move-result v43
+    move-result v46
 
-    .line 703
-    .local v43, screenBrightnessMode:I
+    .line 707
+    .local v46, screenBrightnessMode:I
     :try_start_2
     move-object/from16 v0, p0
 
@@ -2091,19 +2110,19 @@
     :try_end_2
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
 
-    move-result v42
+    move-result v45
 
-    .line 709
-    .local v42, screenBrightness:I
+    .line 713
+    .local v45, screenBrightness:I
     :goto_4
-    if-nez v43, :cond_2b
+    if-nez v46, :cond_2c
 
-    .line 710
+    .line 714
     const-string v2, "sys.shutdown.brightness"
 
     new-instance v3, Ljava/lang/Integer;
 
-    move/from16 v0, v42
+    move/from16 v0, v45
 
     invoke-direct {v3, v0}, Ljava/lang/Integer;-><init>(I)V
 
@@ -2113,421 +2132,424 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 717
+    .line 721
     :goto_5
-    if-eqz v15, :cond_2
+    if-eqz v16, :cond_2
 
     :try_start_3
-    invoke-interface {v15}, Landroid/bluetooth/IBluetooth;->getBluetoothState()I
+    invoke-interface/range {v16 .. v16}, Landroid/bluetooth/IBluetooth;->getBluetoothState()I
 
     move-result v2
 
     const/16 v3, 0xa
 
-    if-ne v2, v3, :cond_2c
+    if-ne v2, v3, :cond_2d
 
     :cond_2
-    const/16 v16, 0x1
+    const/16 v17, 0x1
 
-    .line 719
-    .local v16, bluetoothOff:Z
+    .line 723
+    .local v17, bluetoothOff:Z
     :goto_6
-    if-nez v16, :cond_3
+    if-nez v17, :cond_3
 
-    .line 722
+    .line 726
     const/4 v2, 0x0
 
-    invoke-interface {v15, v2}, Landroid/bluetooth/IBluetooth;->disable(Z)Z
+    move-object/from16 v0, v16
+
+    invoke-interface {v0, v2}, Landroid/bluetooth/IBluetooth;->disable(Z)Z
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 731
+    .line 735
     :cond_3
     :goto_7
     invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualPhoneEnable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2f
+    if-eqz v2, :cond_30
 
-    .line 733
-    if-eqz v33, :cond_4
+    .line 737
+    if-eqz v34, :cond_4
 
     :try_start_4
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v12}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
 
     move-result v2
 
-    if-nez v2, :cond_2d
+    if-nez v2, :cond_2e
 
     :cond_4
-    const/16 v37, 0x1
-
-    .line 734
-    :goto_8
-    if-eqz v33, :cond_6
-
-    .line 735
-    if-nez v10, :cond_5
-
-    .line 736
     const/16 v38, 0x1
 
+    .line 738
+    :goto_8
+    if-eqz v34, :cond_6
+
     .line 739
+    if-nez v10, :cond_5
+
+    .line 740
+    const/16 v39, 0x1
+
+    .line 743
     :cond_5
     const/4 v2, 0x0
 
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v2, v12}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 748
+    .line 752
     :cond_6
     :goto_9
-    if-eqz v33, :cond_7
+    if-eqz v34, :cond_7
 
     :try_start_5
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v11}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
 
     move-result v2
 
-    if-nez v2, :cond_2e
+    if-nez v2, :cond_2f
 
     :cond_7
-    const/16 v35, 0x1
-
-    .line 749
-    :goto_a
-    if-eqz v33, :cond_9
-
-    .line 750
-    if-nez v10, :cond_8
-
-    .line 751
     const/16 v36, 0x1
 
+    .line 753
+    :goto_a
+    if-eqz v34, :cond_9
+
     .line 754
+    if-nez v10, :cond_8
+
+    .line 755
+    const/16 v37, 0x1
+
+    .line 758
     :cond_8
     const/4 v2, 0x0
 
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v2, v11}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 781
+    .line 815
     :cond_9
     :goto_b
-    if-eqz v44, :cond_a
+    if-eqz v47, :cond_a
 
     :try_start_6
-    invoke-interface/range {v44 .. v44}, Landroid/net/wifi/IWifiManager;->getWifiEnabledState()I
+    invoke-interface/range {v47 .. v47}, Landroid/net/wifi/IWifiManager;->getWifiEnabledState()I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    if-ne v2, v3, :cond_33
+    if-ne v2, v3, :cond_3c
 
     :cond_a
-    const/16 v47, 0x1
-
-    .line 783
-    :goto_c
-    if-nez v47, :cond_b
-
-    .line 786
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object/from16 v0, v44
-
-    invoke-interface {v0, v2, v3}, Landroid/net/wifi/IWifiManager;->setWifiEnabledPersist(ZZ)Z
-    :try_end_6
-    .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_6
-
-    .line 787
-    const/16 v48, 0x1
-
-    .line 796
-    :cond_b
-    :goto_d
-    sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
-
-    if-eqz v2, :cond_37
-
-    .line 798
-    if-eqz v44, :cond_c
-
-    :try_start_7
-    invoke-interface/range {v44 .. v44}, Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I
-
-    move-result v2
-
-    const/16 v3, 0xb
-
-    if-ne v2, v3, :cond_34
-
-    :cond_c
-    const/16 v45, 0x1
-
-    .line 800
-    :goto_e
-    if-nez v45, :cond_d
-
-    .line 803
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object/from16 v0, v44
-
-    invoke-interface {v0, v2, v3}, Landroid/net/wifi/IWifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)V
-    :try_end_7
-    .catch Landroid/os/RemoteException; {:try_start_7 .. :try_end_7} :catch_7
-
-    .line 804
-    const/16 v46, 0x1
-
-    .line 813
-    :cond_d
-    :goto_f
-    sget-boolean v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->HTC_WIMAX_flag:Z
-
-    if-eqz v2, :cond_36
-
-    .line 815
-    if-eqz v49, :cond_e
-
-    :try_start_8
-    invoke-interface/range {v49 .. v49}, Lcom/htc/net/wimax/IWimaxController;->getWimaxState()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_35
-
-    :cond_e
     const/16 v50, 0x1
 
     .line 817
-    :goto_10
-    if-nez v50, :cond_f
+    :goto_c
+    if-nez v50, :cond_b
 
     .line 820
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    move-object/from16 v0, v49
+    move-object/from16 v0, v47
 
-    invoke-interface {v0, v2, v3}, Lcom/htc/net/wimax/IWimaxController;->setWimaxEnabledPersist(ZZ)Z
-    :try_end_8
-    .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_8
+    invoke-interface {v0, v2, v3}, Landroid/net/wifi/IWifiManager;->setWifiEnabledPersist(ZZ)Z
+    :try_end_6
+    .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_8
 
     .line 821
     const/16 v51, 0x1
 
+    .line 830
+    :cond_b
+    :goto_d
+    sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
+
+    if-eqz v2, :cond_40
+
+    .line 832
+    if-eqz v47, :cond_c
+
+    :try_start_7
+    invoke-interface/range {v47 .. v47}, Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I
+
+    move-result v2
+
+    const/16 v3, 0xb
+
+    if-ne v2, v3, :cond_3d
+
+    :cond_c
+    const/16 v48, 0x1
+
+    .line 834
+    :goto_e
+    if-nez v48, :cond_d
+
+    .line 837
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, v47
+
+    invoke-interface {v0, v2, v3}, Landroid/net/wifi/IWifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)V
+    :try_end_7
+    .catch Landroid/os/RemoteException; {:try_start_7 .. :try_end_7} :catch_9
+
     .line 838
+    const/16 v49, 0x1
+
+    .line 847
+    :cond_d
+    :goto_f
+    sget-boolean v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->HTC_WIMAX_flag:Z
+
+    if-eqz v2, :cond_3f
+
+    .line 849
+    if-eqz v52, :cond_e
+
+    :try_start_8
+    invoke-interface/range {v52 .. v52}, Lcom/htc/net/wimax/IWimaxController;->getWimaxState()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_3e
+
+    :cond_e
+    const/16 v53, 0x1
+
+    .line 851
+    :goto_10
+    if-nez v53, :cond_f
+
+    .line 854
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, v52
+
+    invoke-interface {v0, v2, v3}, Lcom/htc/net/wimax/IWimaxController;->setWimaxEnabledPersist(ZZ)Z
+    :try_end_8
+    .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_a
+
+    .line 855
+    const/16 v54, 0x1
+
+    .line 872
     :cond_f
     :goto_11
-    new-instance v29, Landroid/content/Intent;
+    new-instance v30, Landroid/content/Intent;
 
     const-string v2, "com.htc.fm.servicecommand"
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 839
-    .local v29, fmPauseIntent:Landroid/content/Intent;
+    .line 873
+    .local v30, fmPauseIntent:Landroid/content/Intent;
     const-string v2, "command"
 
     const-string v3, "stop"
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 840
+    .line 874
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mContext:Landroid/content/Context;
 
-    move-object/from16 v0, v29
+    move-object/from16 v0, v30
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 846
-    const/16 v30, 0x0
+    .line 880
+    const/16 v31, 0x0
 
-    .local v30, i:I
+    .local v31, i:I
     :goto_12
     const/16 v2, 0x40
 
-    move/from16 v0, v30
+    move/from16 v0, v31
 
     if-ge v0, v2, :cond_16
 
-    .line 847
-    if-nez v16, :cond_10
+    .line 881
+    if-nez v17, :cond_10
 
-    .line 849
+    .line 883
     :try_start_9
-    invoke-interface {v15}, Landroid/bluetooth/IBluetooth;->getBluetoothState()I
+    invoke-interface/range {v16 .. v16}, Landroid/bluetooth/IBluetooth;->getBluetoothState()I
     :try_end_9
-    .catch Landroid/os/RemoteException; {:try_start_9 .. :try_end_9} :catch_9
+    .catch Landroid/os/RemoteException; {:try_start_9 .. :try_end_9} :catch_b
 
     move-result v2
 
     const/16 v3, 0xa
 
-    if-ne v2, v3, :cond_38
+    if-ne v2, v3, :cond_41
 
-    const/16 v16, 0x1
+    const/16 v17, 0x1
 
-    .line 858
+    .line 892
     :cond_10
     :goto_13
     invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualPhoneEnable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3b
+    if-eqz v2, :cond_44
 
-    .line 859
-    if-nez v37, :cond_11
+    .line 893
+    if-nez v38, :cond_11
 
-    .line 861
+    .line 895
     :try_start_a
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v12}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
     :try_end_a
-    .catch Landroid/os/RemoteException; {:try_start_a .. :try_end_a} :catch_a
+    .catch Landroid/os/RemoteException; {:try_start_a .. :try_end_a} :catch_c
 
     move-result v2
 
-    if-nez v2, :cond_39
+    if-nez v2, :cond_42
 
-    const/16 v37, 0x1
+    const/16 v38, 0x1
 
-    .line 868
+    .line 902
     :cond_11
     :goto_14
-    if-nez v35, :cond_12
+    if-nez v36, :cond_12
 
-    .line 870
+    .line 904
     :try_start_b
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v11}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
     :try_end_b
-    .catch Landroid/os/RemoteException; {:try_start_b .. :try_end_b} :catch_b
+    .catch Landroid/os/RemoteException; {:try_start_b .. :try_end_b} :catch_d
 
     move-result v2
 
-    if-nez v2, :cond_3a
+    if-nez v2, :cond_43
 
-    const/16 v35, 0x1
+    const/16 v36, 0x1
 
-    .line 893
+    .line 946
     :cond_12
     :goto_15
-    if-nez v47, :cond_13
+    if-nez v50, :cond_13
 
-    .line 895
+    .line 948
     :try_start_c
-    invoke-interface/range {v44 .. v44}, Landroid/net/wifi/IWifiManager;->getWifiEnabledState()I
+    invoke-interface/range {v47 .. v47}, Landroid/net/wifi/IWifiManager;->getWifiEnabledState()I
     :try_end_c
-    .catch Landroid/os/RemoteException; {:try_start_c .. :try_end_c} :catch_d
+    .catch Landroid/os/RemoteException; {:try_start_c .. :try_end_c} :catch_11
 
     move-result v2
 
     const/4 v3, 0x1
 
-    if-ne v2, v3, :cond_3d
+    if-ne v2, v3, :cond_4a
 
-    const/16 v47, 0x1
+    const/16 v50, 0x1
 
-    .line 903
+    .line 956
     :cond_13
     :goto_16
-    if-nez v45, :cond_14
+    if-nez v48, :cond_14
 
-    .line 905
+    .line 958
     :try_start_d
-    invoke-interface/range {v44 .. v44}, Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I
+    invoke-interface/range {v47 .. v47}, Landroid/net/wifi/IWifiManager;->getWifiApEnabledState()I
     :try_end_d
-    .catch Landroid/os/RemoteException; {:try_start_d .. :try_end_d} :catch_e
+    .catch Landroid/os/RemoteException; {:try_start_d .. :try_end_d} :catch_12
 
     move-result v2
 
     const/16 v3, 0xb
 
-    if-ne v2, v3, :cond_3e
+    if-ne v2, v3, :cond_4b
 
-    const/16 v45, 0x1
+    const/16 v48, 0x1
 
-    .line 913
+    .line 966
     :cond_14
     :goto_17
-    if-nez v50, :cond_15
+    if-nez v53, :cond_15
 
-    .line 915
+    .line 968
     :try_start_e
-    invoke-interface/range {v49 .. v49}, Lcom/htc/net/wimax/IWimaxController;->getWimaxState()I
+    invoke-interface/range {v52 .. v52}, Lcom/htc/net/wimax/IWimaxController;->getWimaxState()I
     :try_end_e
-    .catch Landroid/os/RemoteException; {:try_start_e .. :try_end_e} :catch_f
+    .catch Landroid/os/RemoteException; {:try_start_e .. :try_end_e} :catch_13
 
     move-result v2
 
     const/4 v3, 0x1
 
-    if-ne v2, v3, :cond_3f
+    if-ne v2, v3, :cond_4c
 
-    const/16 v50, 0x1
+    const/16 v53, 0x1
 
-    .line 923
+    .line 976
     :cond_15
     :goto_18
     invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualPhoneEnable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_40
+    if-eqz v2, :cond_4d
 
-    .line 924
-    if-eqz v37, :cond_41
+    .line 977
+    if-eqz v38, :cond_4e
 
-    if-eqz v35, :cond_41
+    if-eqz v36, :cond_4e
 
-    if-eqz v16, :cond_41
+    if-eqz v17, :cond_4e
 
-    if-eqz v47, :cond_41
+    if-eqz v50, :cond_4e
 
-    if-eqz v45, :cond_41
+    if-eqz v48, :cond_4e
 
-    if-eqz v50, :cond_41
+    if-eqz v53, :cond_4e
 
-    .line 941
+    .line 1000
     :cond_16
+    :goto_19
     invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualPhoneEnable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_42
+    if-eqz v2, :cond_50
 
-    .line 942
+    .line 1001
     const-string v2, "HtcShutdownThread"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2540,7 +2562,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v37
+    move/from16 v0, v38
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2552,7 +2574,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v35
+    move/from16 v0, v36
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2564,7 +2586,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v16
+    move/from16 v0, v17
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2576,7 +2598,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v47
+    move/from16 v0, v50
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2588,7 +2610,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v45
+    move/from16 v0, v48
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2600,7 +2622,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v50
+    move/from16 v0, v53
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2622,98 +2644,105 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 946
-    if-eqz v37, :cond_17
+    .line 1005
+    if-eqz v38, :cond_17
 
-    if-eqz v35, :cond_17
+    if-eqz v36, :cond_17
 
-    if-eqz v16, :cond_17
+    if-eqz v17, :cond_17
 
-    if-eqz v47, :cond_17
+    if-eqz v50, :cond_17
 
-    if-eqz v45, :cond_17
+    if-eqz v48, :cond_17
 
-    if-nez v50, :cond_18
+    if-nez v53, :cond_18
 
-    .line 947
+    .line 1006
     :cond_17
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
     if-eqz v2, :cond_18
 
-    .line 948
+    .line 1007
     const-string v2, "HtcShutdownThread"
 
     const-string v3, "Radio off timed out, shutdown power"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 949
+    .line 1008
     const/4 v2, 0x0
 
     sput-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
-    .line 950
+    .line 1009
     const-string v2, "sys.shutdown.mode"
 
     const-string v3, "normal"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 972
+    .line 1010
+    const-string v2, "sys.shutdown.hibernate.mode"
+
+    const-string v3, "0"
+
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1046
     :cond_18
-    :goto_19
+    :goto_1a
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
     if-nez v2, :cond_1b
 
-    .line 974
-    new-instance v32, Lcom/htc/app/HtcShutdownThread$7;
+    .line 1048
+    new-instance v33, Lcom/htc/app/HtcShutdownThread$7;
 
-    move-object/from16 v0, v32
+    move-object/from16 v0, v33
 
     move-object/from16 v1, p0
 
     invoke-direct {v0, v1}, Lcom/htc/app/HtcShutdownThread$7;-><init>(Lcom/htc/app/HtcShutdownThread;)V
 
-    .line 985
-    .local v32, observer:Landroid/os/storage/IMountShutdownObserver;
+    .line 1059
+    .local v33, observer:Landroid/os/storage/IMountShutdownObserver;
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/app/HtcShutdownThread;->mActionDone:Z
 
-    .line 986
+    .line 1060
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     const-wide/16 v6, 0x4e20
 
-    add-long v24, v2, v6
+    add-long v25, v2, v6
 
-    .line 987
-    .local v24, endShutdownTime:J
+    .line 1061
+    .local v25, endShutdownTime:J
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/htc/app/HtcShutdownThread;->mActionDoneSync:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 989
-    if-eqz v31, :cond_19
+    .line 1063
+    if-eqz v32, :cond_19
 
-    .line 990
+    .line 1064
     :try_start_f
-    invoke-interface/range {v31 .. v32}, Landroid/os/storage/IMountService;->shutdown(Landroid/os/storage/IMountShutdownObserver;)V
+    invoke-interface/range {v32 .. v33}, Landroid/os/storage/IMountService;->shutdown(Landroid/os/storage/IMountShutdownObserver;)V
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_2
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_15
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_1a
 
-    .line 999
+    .line 1073
     :cond_19
-    :goto_1a
+    :goto_1b
     :try_start_10
     move-object/from16 v0, p0
 
@@ -2721,31 +2750,31 @@
 
     if-nez v2, :cond_1a
 
-    .line 1000
+    .line 1074
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    sub-long v17, v24, v6
+    sub-long v18, v25, v6
 
-    .line 1001
-    .restart local v17       #delay:J
+    .line 1075
+    .restart local v18       #delay:J
     const-wide/16 v6, 0x0
 
-    cmp-long v2, v17, v6
+    cmp-long v2, v18, v6
 
-    if-gtz v2, :cond_44
+    if-gtz v2, :cond_54
 
-    .line 1011
-    .end local v17           #delay:J
+    .line 1085
+    .end local v18           #delay:J
     :cond_1a
     monitor-exit v3
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
-    .line 1014
-    .end local v24           #endShutdownTime:J
-    .end local v32           #observer:Landroid/os/storage/IMountShutdownObserver;
+    .line 1088
+    .end local v25           #endShutdownTime:J
+    .end local v33           #observer:Landroid/os/storage/IMountShutdownObserver;
     :cond_1b
     const-string v2, "activity"
 
@@ -2755,90 +2784,90 @@
 
     invoke-static {v2}, Landroid/app/ActivityManagerNative;->asInterface(Landroid/os/IBinder;)Landroid/app/IActivityManager;
 
-    move-result-object v14
+    move-result-object v15
 
-    .line 1020
-    .local v14, am:Landroid/app/IActivityManager;
-    if-eqz v14, :cond_1c
+    .line 1094
+    .local v15, am:Landroid/app/IActivityManager;
+    if-eqz v15, :cond_1c
 
-    .line 1022
+    .line 1096
     :try_start_11
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
-    if-eqz v2, :cond_45
+    if-eqz v2, :cond_55
 
-    .line 1023
-    invoke-interface {v14}, Landroid/app/IActivityManager;->hibernate()V
+    .line 1097
+    invoke-interface {v15}, Landroid/app/IActivityManager;->hibernate()V
     :try_end_11
-    .catch Landroid/os/RemoteException; {:try_start_11 .. :try_end_11} :catch_11
+    .catch Landroid/os/RemoteException; {:try_start_11 .. :try_end_11} :catch_15
 
-    .line 1033
+    .line 1107
     :cond_1c
-    :goto_1b
+    :goto_1c
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     const-wide/16 v6, 0x2710
 
-    add-long v20, v2, v6
+    add-long v21, v2, v6
 
-    .line 1034
-    .local v20, endAnimTime:J
-    :goto_1c
+    .line 1108
+    .local v21, endAnimTime:J
+    :goto_1d
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->sIsAnimationCompleted:Z
 
     const/4 v3, 0x1
 
     if-eq v2, v3, :cond_1d
 
-    .line 1035
+    .line 1109
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    sub-long v17, v20, v2
+    sub-long v18, v21, v2
 
-    .line 1036
-    .restart local v17       #delay:J
+    .line 1110
+    .restart local v18       #delay:J
     const-wide/16 v2, 0x0
 
-    cmp-long v2, v17, v2
+    cmp-long v2, v18, v2
 
-    if-gtz v2, :cond_46
+    if-gtz v2, :cond_56
 
-    .line 1048
-    .end local v17           #delay:J
+    .line 1122
+    .end local v18           #delay:J
     :cond_1d
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mReboot:Z
 
     if-eqz v2, :cond_1e
 
-    .line 1052
+    .line 1126
     :try_start_12
     sget-object v2, Lcom/htc/app/HtcShutdownThread;->mRebootReason:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/os/Power;->reboot(Ljava/lang/String;)V
     :try_end_12
-    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_1f
+    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_25
 
-    .line 1068
+    .line 1142
     :cond_1e
-    :goto_1d
+    :goto_1e
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mCpuWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v2, :cond_1f
 
-    .line 1069
+    .line 1143
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mCpuWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1070
+    .line 1144
     :cond_1f
     move-object/from16 v0, p0
 
@@ -2846,14 +2875,14 @@
 
     if-eqz v2, :cond_20
 
-    .line 1071
+    .line 1145
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mScreenWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1072
+    .line 1146
     :cond_20
     const-string v2, "power"
 
@@ -2863,10 +2892,10 @@
 
     invoke-static {v2}, Landroid/os/IPowerManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPowerManager;
 
-    move-result-object v34
+    move-result-object v35
 
-    .line 1076
-    .local v34, pm:Landroid/os/IPowerManager;
+    .line 1150
+    .local v35, pm:Landroid/os/IPowerManager;
     :try_start_13
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -2876,17 +2905,17 @@
 
     add-long/2addr v2, v6
 
-    move-object/from16 v0, v34
+    move-object/from16 v0, v35
 
     invoke-interface {v0, v2, v3}, Landroid/os/IPowerManager;->goToSleep(J)V
     :try_end_13
-    .catch Landroid/os/RemoteException; {:try_start_13 .. :try_end_13} :catch_1e
+    .catch Landroid/os/RemoteException; {:try_start_13 .. :try_end_13} :catch_24
 
-    .line 1083
-    :goto_1e
+    .line 1157
+    :goto_1f
     invoke-virtual/range {p0 .. p0}, Lcom/htc/app/HtcShutdownThread;->dismissProgressDialog()V
 
-    .line 1085
+    .line 1159
     const-string v2, "sys.shutdown.resume.count"
 
     new-instance v3, Ljava/lang/Integer;
@@ -2905,23 +2934,35 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1090
+    .line 1164
     const/16 v2, 0x2710
 
     invoke-static {v2}, Landroid/os/Power;->shutdownEFSSync_wait(I)V
 
-    .line 1091
+    .line 1165
     invoke-virtual/range {p0 .. p0}, Lcom/htc/app/HtcShutdownThread;->dismissShutdownScreen()V
 
-    .line 1092
+    .line 1166
     invoke-static {}, Landroid/os/Power;->shutdown()V
 
-    .line 1097
+    .line 1171
     const-string v2, "shutdown"
 
     invoke-static {v2}, Landroid/os/Power;->releaseWakeLock(Ljava/lang/String;)V
 
-    .line 1100
+    .line 1172
+    sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
+
+    if-eqz v2, :cond_21
+
+    const-string v2, "sys.shutdown.hibernate.mode"
+
+    const-string v3, "0"
+
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1175
+    :cond_21
     :try_start_14
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -2935,14 +2976,14 @@
 
     const/4 v6, 0x1
 
-    move-object/from16 v0, v34
+    move-object/from16 v0, v35
 
     invoke-interface {v0, v2, v3, v4, v6}, Landroid/os/IPowerManager;->userActivityWithForce(JZZ)V
     :try_end_14
-    .catch Landroid/os/RemoteException; {:try_start_14 .. :try_end_14} :catch_1d
+    .catch Landroid/os/RemoteException; {:try_start_14 .. :try_end_14} :catch_23
 
-    .line 1107
-    :goto_1f
+    .line 1182
+    :goto_20
     const-string v2, "dev.bootreason"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2953,134 +2994,134 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v41
+    move-result v44
 
-    .line 1110
-    .local v41, rtc_alarm:Z
+    .line 1185
+    .local v44, rtc_alarm:Z
     invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualPhoneEnable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_47
+    if-eqz v2, :cond_57
 
-    .line 1112
-    if-eqz v38, :cond_21
+    .line 1187
+    if-eqz v39, :cond_22
 
-    if-nez v41, :cond_21
+    if-nez v44, :cond_22
 
-    .line 1114
+    .line 1189
     const/4 v2, 0x1
 
     :try_start_15
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v2, v12}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
     :try_end_15
-    .catch Landroid/os/RemoteException; {:try_start_15 .. :try_end_15} :catch_16
+    .catch Landroid/os/RemoteException; {:try_start_15 .. :try_end_15} :catch_1b
 
-    .line 1124
-    :cond_21
-    :goto_20
-    if-eqz v36, :cond_22
+    .line 1199
+    :cond_22
+    :goto_21
+    if-eqz v37, :cond_23
 
-    if-nez v41, :cond_22
+    if-nez v44, :cond_23
 
-    .line 1126
+    .line 1201
     const/4 v2, 0x1
 
     :try_start_16
-    move-object/from16 v0, v33
+    move-object/from16 v0, v34
 
     invoke-interface {v0, v2, v11}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
     :try_end_16
-    .catch Landroid/os/RemoteException; {:try_start_16 .. :try_end_16} :catch_17
+    .catch Landroid/os/RemoteException; {:try_start_16 .. :try_end_16} :catch_1c
 
-    .line 1151
-    :cond_22
-    :goto_21
-    if-eqz v48, :cond_23
+    .line 1251
+    :cond_23
+    :goto_22
+    if-eqz v51, :cond_24
 
-    .line 1153
+    .line 1253
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
     :try_start_17
-    move-object/from16 v0, v44
+    move-object/from16 v0, v47
 
     invoke-interface {v0, v2, v3}, Landroid/net/wifi/IWifiManager;->setWifiEnabledPersist(ZZ)Z
     :try_end_17
-    .catch Landroid/os/RemoteException; {:try_start_17 .. :try_end_17} :catch_18
+    .catch Landroid/os/RemoteException; {:try_start_17 .. :try_end_17} :catch_1e
 
-    .line 1163
-    :cond_23
-    :goto_22
-    if-eqz v46, :cond_24
+    .line 1263
+    :cond_24
+    :goto_23
+    if-eqz v49, :cond_25
 
-    .line 1165
+    .line 1265
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     :try_start_18
-    move-object/from16 v0, v44
+    move-object/from16 v0, v47
 
     invoke-interface {v0, v2, v3}, Landroid/net/wifi/IWifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)V
     :try_end_18
-    .catch Landroid/os/RemoteException; {:try_start_18 .. :try_end_18} :catch_19
+    .catch Landroid/os/RemoteException; {:try_start_18 .. :try_end_18} :catch_1f
 
-    .line 1175
-    :cond_24
-    :goto_23
-    if-eqz v51, :cond_25
+    .line 1275
+    :cond_25
+    :goto_24
+    if-eqz v54, :cond_26
 
-    .line 1177
+    .line 1277
     const/4 v2, 0x1
 
     :try_start_19
-    move-object/from16 v0, v49
+    move-object/from16 v0, v52
 
     invoke-interface {v0, v2}, Lcom/htc/net/wimax/IWimaxController;->setWimaxEnabled(Z)Z
     :try_end_19
-    .catch Landroid/os/RemoteException; {:try_start_19 .. :try_end_19} :catch_1a
+    .catch Landroid/os/RemoteException; {:try_start_19 .. :try_end_19} :catch_20
 
-    .line 1187
-    :cond_25
-    :goto_24
+    .line 1287
+    :cond_26
+    :goto_25
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     const-wide/16 v6, 0x2710
 
-    add-long v22, v2, v6
+    add-long v23, v2, v6
 
-    .line 1189
-    .local v22, endRestartTime:J
-    :cond_26
+    .line 1289
+    .local v23, endRestartTime:J
+    :cond_27
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    sub-long v17, v22, v2
+    sub-long v18, v23, v2
 
-    .line 1190
-    .restart local v17       #delay:J
+    .line 1290
+    .restart local v18       #delay:J
     const-wide/16 v2, 0x0
 
-    cmp-long v2, v17, v2
+    cmp-long v2, v18, v2
 
-    if-gtz v2, :cond_48
+    if-gtz v2, :cond_5a
 
-    .line 1205
-    :goto_25
+    .line 1305
+    :goto_26
     const-string v2, "sys.shutdown.nowait"
 
     const-string v3, "0"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1206
+    .line 1306
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mContext:Landroid/content/Context;
@@ -3095,14 +3136,14 @@
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1207
+    .line 1307
     const-string v2, "sys.shutdown.mode"
 
     const-string v3, "normal"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1208
+    .line 1308
     const-string v2, "sys.shutdown.resume.date"
 
     new-instance v3, Ljava/util/Date;
@@ -3115,7 +3156,7 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1209
+    .line 1309
     const-string v2, "sys.shutdown.resume.timestamp"
 
     new-instance v3, Ljava/lang/Long;
@@ -3132,55 +3173,55 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1211
-    if-eqz v14, :cond_27
+    .line 1311
+    if-eqz v15, :cond_28
 
-    .line 1212
-    invoke-interface {v14}, Landroid/app/IActivityManager;->resumeFromHibernate()V
+    .line 1312
+    invoke-interface {v15}, Landroid/app/IActivityManager;->resumeFromHibernate()V
 
-    .line 1215
-    :cond_27
+    .line 1315
+    :cond_28
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
-    if-eqz v2, :cond_28
+    if-eqz v2, :cond_29
 
-    .line 1217
+    .line 1317
     :try_start_1a
-    invoke-interface {v13}, Landroid/app/IAlarmManager;->stopHibernate()V
+    invoke-interface {v14}, Landroid/app/IAlarmManager;->stopHibernate()V
     :try_end_1a
-    .catch Landroid/os/RemoteException; {:try_start_1a .. :try_end_1a} :catch_1b
+    .catch Landroid/os/RemoteException; {:try_start_1a .. :try_end_1a} :catch_21
 
-    .line 1222
-    :cond_28
-    :goto_26
+    .line 1322
+    :cond_29
+    :goto_27
     sget-object v3, Lcom/htc/app/HtcShutdownThread;->sIsStartedGuard:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1223
+    .line 1323
     const/4 v2, 0x0
 
     :try_start_1b
     sput-boolean v2, Lcom/htc/app/HtcShutdownThread;->sIsStarted:Z
 
-    .line 1224
+    .line 1324
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/htc/app/HtcShutdownThread;->mStarted:Z
 
-    .line 1225
+    .line 1325
     const/4 v2, 0x0
 
     sput-object v2, Lcom/htc/app/HtcShutdownThread;->sInstance:Lcom/htc/app/HtcShutdownThread;
 
-    .line 1226
+    .line 1326
     const/4 v2, 0x0
 
     sput-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
-    .line 1227
+    .line 1327
     monitor-exit v3
 
     goto/16 :goto_0
@@ -3194,26 +3235,26 @@
 
     throw v2
 
-    .line 663
+    .line 667
     .end local v10           #IsAirplaneMode:I
-    .end local v14           #am:Landroid/app/IActivityManager;
-    .end local v15           #bluetooth:Landroid/bluetooth/IBluetooth;
-    .end local v16           #bluetoothOff:Z
-    .end local v17           #delay:J
-    .end local v20           #endAnimTime:J
-    .end local v22           #endRestartTime:J
-    .end local v26           #endTime:J
-    .end local v29           #fmPauseIntent:Landroid/content/Intent;
-    .end local v30           #i:I
-    .end local v31           #mount:Landroid/os/storage/IMountService;
-    .end local v33           #phone:Lcom/android/internal/telephony/ITelephony;
-    .end local v34           #pm:Landroid/os/IPowerManager;
-    .end local v41           #rtc_alarm:Z
-    .end local v42           #screenBrightness:I
-    .end local v43           #screenBrightnessMode:I
-    .end local v44           #wifi:Landroid/net/wifi/IWifiManager;
-    .end local v49           #wimax:Lcom/htc/net/wimax/IWimaxController;
-    :cond_29
+    .end local v15           #am:Landroid/app/IActivityManager;
+    .end local v16           #bluetooth:Landroid/bluetooth/IBluetooth;
+    .end local v17           #bluetoothOff:Z
+    .end local v18           #delay:J
+    .end local v21           #endAnimTime:J
+    .end local v23           #endRestartTime:J
+    .end local v27           #endTime:J
+    .end local v30           #fmPauseIntent:Landroid/content/Intent;
+    .end local v31           #i:I
+    .end local v32           #mount:Landroid/os/storage/IMountService;
+    .end local v34           #phone:Lcom/android/internal/telephony/ITelephony;
+    .end local v35           #pm:Landroid/os/IPowerManager;
+    .end local v44           #rtc_alarm:Z
+    .end local v45           #screenBrightness:I
+    .end local v46           #screenBrightnessMode:I
+    .end local v47           #wifi:Landroid/net/wifi/IWifiManager;
+    .end local v52           #wimax:Lcom/htc/net/wimax/IWimaxController;
+    :cond_2a
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mContext:Landroid/content/Context;
@@ -3240,16 +3281,16 @@
 
     goto/16 :goto_2
 
-    .line 678
-    .restart local v17       #delay:J
-    .restart local v26       #endTime:J
-    :cond_2a
+    .line 682
+    .restart local v18       #delay:J
+    .restart local v27       #endTime:J
+    :cond_2b
     :try_start_1c
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mActionDoneSync:Ljava/lang/Object;
 
-    move-wide/from16 v0, v17
+    move-wide/from16 v0, v18
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/Object;->wait(J)V
     :try_end_1c
@@ -3258,14 +3299,14 @@
 
     goto/16 :goto_3
 
-    .line 679
+    .line 683
     :catch_0
     move-exception v2
 
     goto/16 :goto_3
 
-    .line 682
-    .end local v17           #delay:J
+    .line 686
+    .end local v18           #delay:J
     :catchall_1
     move-exception v2
 
@@ -3276,27 +3317,27 @@
 
     throw v2
 
-    .line 705
+    .line 709
     .restart local v10       #IsAirplaneMode:I
-    .restart local v15       #bluetooth:Landroid/bluetooth/IBluetooth;
-    .restart local v31       #mount:Landroid/os/storage/IMountService;
-    .restart local v33       #phone:Lcom/android/internal/telephony/ITelephony;
-    .restart local v43       #screenBrightnessMode:I
-    .restart local v44       #wifi:Landroid/net/wifi/IWifiManager;
-    .restart local v49       #wimax:Lcom/htc/net/wimax/IWimaxController;
+    .restart local v16       #bluetooth:Landroid/bluetooth/IBluetooth;
+    .restart local v32       #mount:Landroid/os/storage/IMountService;
+    .restart local v34       #phone:Lcom/android/internal/telephony/ITelephony;
+    .restart local v46       #screenBrightnessMode:I
+    .restart local v47       #wifi:Landroid/net/wifi/IWifiManager;
+    .restart local v52       #wimax:Lcom/htc/net/wimax/IWimaxController;
     :catch_1
-    move-exception v19
+    move-exception v20
 
-    .line 706
-    .local v19, e:Landroid/provider/Settings$SettingNotFoundException;
-    const/16 v42, 0x0
+    .line 710
+    .local v20, e:Landroid/provider/Settings$SettingNotFoundException;
+    const/16 v45, 0x0
 
-    .restart local v42       #screenBrightness:I
+    .restart local v45       #screenBrightness:I
     goto/16 :goto_4
 
-    .line 713
-    .end local v19           #e:Landroid/provider/Settings$SettingNotFoundException;
-    :cond_2b
+    .line 717
+    .end local v20           #e:Landroid/provider/Settings$SettingNotFoundException;
+    :cond_2c
     const-string v2, "sys.shutdown.brightness"
 
     const-string v3, "0"
@@ -3305,370 +3346,611 @@
 
     goto/16 :goto_5
 
-    .line 717
-    :cond_2c
-    const/16 v16, 0x0
+    .line 721
+    :cond_2d
+    const/16 v17, 0x0
 
     goto/16 :goto_6
 
-    .line 724
+    .line 728
     :catch_2
-    move-exception v28
+    move-exception v29
 
-    .line 727
-    .local v28, ex:Landroid/os/RemoteException;
-    const/16 v16, 0x1
+    .line 731
+    .local v29, ex:Landroid/os/RemoteException;
+    const/16 v17, 0x1
 
-    .restart local v16       #bluetoothOff:Z
+    .restart local v17       #bluetoothOff:Z
     goto/16 :goto_7
 
-    .line 733
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_2d
-    const/16 v37, 0x0
+    .line 737
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_2e
+    const/16 v38, 0x0
 
     goto/16 :goto_8
 
-    .line 741
+    .line 745
     :catch_3
-    move-exception v28
+    move-exception v29
 
-    .line 744
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v37, 0x1
+    .line 748
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v38, 0x1
 
     goto/16 :goto_9
 
-    .line 748
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_2e
-    const/16 v35, 0x0
+    .line 752
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_2f
+    const/16 v36, 0x0
 
     goto/16 :goto_a
 
-    .line 756
-    :catch_4
-    move-exception v28
-
-    .line 759
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v35, 0x1
-
     .line 760
-    goto/16 :goto_b
+    :catch_4
+    move-exception v29
+
+    .line 763
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v36, 0x1
 
     .line 764
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_2f
-    if-eqz v33, :cond_30
-
-    :try_start_1e
-    invoke-interface/range {v33 .. v33}, Lcom/android/internal/telephony/ITelephony;->isRadioOn()Z
-
-    move-result v2
-
-    if-nez v2, :cond_32
-
-    :cond_30
-    const/16 v39, 0x1
+    goto/16 :goto_b
 
     .line 765
-    :goto_27
-    if-eqz v33, :cond_9
-
-    .line 766
-    if-nez v10, :cond_31
-
-    .line 767
-    const/16 v40, 0x1
-
-    .line 770
-    :cond_31
-    const/4 v2, 0x0
-
-    move-object/from16 v0, v33
-
-    invoke-interface {v0, v2}, Lcom/android/internal/telephony/ITelephony;->setRadio(Z)Z
-    :try_end_1e
-    .catch Landroid/os/RemoteException; {:try_start_1e .. :try_end_1e} :catch_5
-
-    goto/16 :goto_b
-
-    .line 772
-    :catch_5
-    move-exception v28
-
-    .line 775
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v39, 0x1
-
-    .line 776
-    invoke-static {}, Landroid/os/Power;->shutdownEFSSync()V
-
-    goto/16 :goto_b
-
-    .line 764
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_32
-    const/16 v39, 0x0
-
-    goto :goto_27
-
-    .line 781
-    :cond_33
-    const/16 v47, 0x0
-
-    goto/16 :goto_c
-
-    .line 790
-    :catch_6
-    move-exception v28
-
-    .line 793
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v47, 0x1
-
-    goto/16 :goto_d
-
-    .line 798
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_34
-    const/16 v45, 0x0
-
-    goto/16 :goto_e
-
-    .line 807
-    :catch_7
-    move-exception v28
-
-    .line 810
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v45, 0x1
-
-    goto/16 :goto_f
-
-    .line 815
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_35
-    const/16 v50, 0x0
-
-    goto/16 :goto_10
-
-    .line 824
-    :catch_8
-    move-exception v28
-
-    .line 827
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v50, 0x1
-
-    .line 828
-    goto/16 :goto_11
-
-    .line 831
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_36
-    const/16 v50, 0x1
-
-    goto/16 :goto_11
-
-    .line 834
-    :cond_37
-    const/16 v45, 0x1
-
-    .line 835
-    const/16 v50, 0x1
-
-    goto/16 :goto_11
-
-    .line 849
-    .restart local v29       #fmPauseIntent:Landroid/content/Intent;
-    .restart local v30       #i:I
-    :cond_38
-    const/16 v16, 0x0
-
-    goto/16 :goto_13
-
-    .line 851
-    :catch_9
-    move-exception v28
-
-    .line 854
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v16, 0x1
-
-    goto/16 :goto_13
-
-    .line 861
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_39
-    const/16 v37, 0x0
-
-    goto/16 :goto_14
-
-    .line 862
-    :catch_a
-    move-exception v28
-
-    .line 865
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v37, 0x1
-
-    goto/16 :goto_14
-
-    .line 870
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_3a
-    const/16 v35, 0x0
-
-    goto/16 :goto_15
-
-    .line 871
-    :catch_b
-    move-exception v28
-
-    .line 874
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v35, 0x1
-
-    .line 875
-    goto/16 :goto_15
-
-    .line 879
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_3b
-    if-nez v39, :cond_12
-
-    .line 881
-    :try_start_1f
-    invoke-interface/range {v33 .. v33}, Lcom/android/internal/telephony/ITelephony;->isRadioOn()Z
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_30
+    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualGSMPhoneEnable()Z
 
     move-result v2
 
-    if-nez v2, :cond_3c
+    if-eqz v2, :cond_38
 
-    const/16 v39, 0x1
+    .line 767
+    if-eqz v34, :cond_31
 
-    .line 882
+    :try_start_1e
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v12}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_36
+
+    :cond_31
+    const/16 v38, 0x1
+
+    .line 768
     :goto_28
-    if-eqz v39, :cond_12
+    if-eqz v34, :cond_33
 
-    .line 883
-    invoke-static {}, Landroid/os/Power;->shutdownEFSSync()V
-    :try_end_1f
-    .catch Landroid/os/RemoteException; {:try_start_1f .. :try_end_1f} :catch_c
+    .line 769
+    if-nez v10, :cond_32
 
-    goto/16 :goto_15
-
-    .line 885
-    :catch_c
-    move-exception v28
-
-    .line 888
-    .restart local v28       #ex:Landroid/os/RemoteException;
+    .line 770
     const/16 v39, 0x1
 
-    .line 889
-    invoke-static {}, Landroid/os/Power;->shutdownEFSSync()V
+    .line 773
+    :cond_32
+    const/4 v2, 0x0
 
-    goto/16 :goto_15
+    move-object/from16 v0, v34
 
-    .line 881
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_3c
-    const/16 v39, 0x0
+    invoke-interface {v0, v2, v12}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
+    :try_end_1e
+    .catch Landroid/os/RemoteException; {:try_start_1e .. :try_end_1e} :catch_6
+
+    .line 782
+    :cond_33
+    :goto_29
+    if-eqz v34, :cond_34
+
+    :try_start_1f
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v13}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_37
+
+    :cond_34
+    const/16 v41, 0x1
+
+    .line 783
+    :goto_2a
+    if-eqz v34, :cond_9
+
+    .line 784
+    if-nez v10, :cond_35
+
+    .line 785
+    const/16 v42, 0x1
+
+    .line 788
+    :cond_35
+    const/4 v2, 0x0
+
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v2, v13}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
+    :try_end_1f
+    .catch Landroid/os/RemoteException; {:try_start_1f .. :try_end_1f} :catch_5
+
+    goto/16 :goto_b
+
+    .line 790
+    :catch_5
+    move-exception v29
+
+    .line 793
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v41, 0x1
+
+    .line 794
+    goto/16 :goto_b
+
+    .line 767
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_36
+    const/16 v38, 0x0
 
     goto :goto_28
 
-    .line 895
-    :cond_3d
-    const/16 v47, 0x0
+    .line 775
+    :catch_6
+    move-exception v29
 
-    goto/16 :goto_16
+    .line 778
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v38, 0x1
 
-    .line 896
-    :catch_d
-    move-exception v28
+    goto :goto_29
 
-    .line 899
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v47, 0x1
+    .line 782
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_37
+    const/16 v41, 0x0
 
-    goto/16 :goto_16
+    goto :goto_2a
 
-    .line 905
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_3e
-    const/16 v45, 0x0
+    .line 798
+    :cond_38
+    if-eqz v34, :cond_39
 
-    goto/16 :goto_17
+    :try_start_20
+    invoke-interface/range {v34 .. v34}, Lcom/android/internal/telephony/ITelephony;->isRadioOn()Z
 
-    .line 906
-    :catch_e
-    move-exception v28
+    move-result v2
 
-    .line 909
-    .restart local v28       #ex:Landroid/os/RemoteException;
-    const/16 v45, 0x1
+    if-nez v2, :cond_3b
 
-    goto/16 :goto_17
+    :cond_39
+    const/16 v40, 0x1
 
-    .line 915
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_3f
+    .line 799
+    :goto_2b
+    if-eqz v34, :cond_9
+
+    .line 800
+    if-nez v10, :cond_3a
+
+    .line 801
+    const/16 v43, 0x1
+
+    .line 804
+    :cond_3a
+    const/4 v2, 0x0
+
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v2}, Lcom/android/internal/telephony/ITelephony;->setRadio(Z)Z
+    :try_end_20
+    .catch Landroid/os/RemoteException; {:try_start_20 .. :try_end_20} :catch_7
+
+    goto/16 :goto_b
+
+    .line 806
+    :catch_7
+    move-exception v29
+
+    .line 809
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v40, 0x1
+
+    .line 810
+    invoke-static {}, Landroid/os/Power;->shutdownEFSSync()V
+
+    goto/16 :goto_b
+
+    .line 798
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_3b
+    const/16 v40, 0x0
+
+    goto :goto_2b
+
+    .line 815
+    :cond_3c
     const/16 v50, 0x0
 
-    goto/16 :goto_18
+    goto/16 :goto_c
 
-    .line 916
-    :catch_f
-    move-exception v28
+    .line 824
+    :catch_8
+    move-exception v29
 
-    .line 919
-    .restart local v28       #ex:Landroid/os/RemoteException;
+    .line 827
+    .restart local v29       #ex:Landroid/os/RemoteException;
     const/16 v50, 0x1
 
+    goto/16 :goto_d
+
+    .line 832
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_3d
+    const/16 v48, 0x0
+
+    goto/16 :goto_e
+
+    .line 841
+    :catch_9
+    move-exception v29
+
+    .line 844
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v48, 0x1
+
+    goto/16 :goto_f
+
+    .line 849
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_3e
+    const/16 v53, 0x0
+
+    goto/16 :goto_10
+
+    .line 858
+    :catch_a
+    move-exception v29
+
+    .line 861
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v53, 0x1
+
+    .line 862
+    goto/16 :goto_11
+
+    .line 865
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_3f
+    const/16 v53, 0x1
+
+    goto/16 :goto_11
+
+    .line 868
+    :cond_40
+    const/16 v48, 0x1
+
+    .line 869
+    const/16 v53, 0x1
+
+    goto/16 :goto_11
+
+    .line 883
+    .restart local v30       #fmPauseIntent:Landroid/content/Intent;
+    .restart local v31       #i:I
+    :cond_41
+    const/16 v17, 0x0
+
+    goto/16 :goto_13
+
+    .line 885
+    :catch_b
+    move-exception v29
+
+    .line 888
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v17, 0x1
+
+    goto/16 :goto_13
+
+    .line 895
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_42
+    const/16 v38, 0x0
+
+    goto/16 :goto_14
+
+    .line 896
+    :catch_c
+    move-exception v29
+
+    .line 899
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v38, 0x1
+
+    goto/16 :goto_14
+
+    .line 904
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_43
+    const/16 v36, 0x0
+
+    goto/16 :goto_15
+
+    .line 905
+    :catch_d
+    move-exception v29
+
+    .line 908
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v36, 0x1
+
+    .line 909
+    goto/16 :goto_15
+
+    .line 911
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_44
+    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualGSMPhoneEnable()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_48
+
+    .line 912
+    if-nez v38, :cond_45
+
+    .line 914
+    :try_start_21
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v12}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
+    :try_end_21
+    .catch Landroid/os/RemoteException; {:try_start_21 .. :try_end_21} :catch_e
+
+    move-result v2
+
+    if-nez v2, :cond_46
+
+    const/16 v38, 0x1
+
+    .line 921
+    :cond_45
+    :goto_2c
+    if-nez v41, :cond_12
+
+    .line 923
+    :try_start_22
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v13}, Lcom/android/internal/telephony/ITelephony;->isRadioOnExt(I)Z
+    :try_end_22
+    .catch Landroid/os/RemoteException; {:try_start_22 .. :try_end_22} :catch_f
+
+    move-result v2
+
+    if-nez v2, :cond_47
+
+    const/16 v41, 0x1
+
+    :goto_2d
+    goto/16 :goto_15
+
+    .line 914
+    :cond_46
+    const/16 v38, 0x0
+
+    goto :goto_2c
+
+    .line 915
+    :catch_e
+    move-exception v29
+
+    .line 918
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v38, 0x1
+
+    goto :goto_2c
+
+    .line 923
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_47
+    const/16 v41, 0x0
+
+    goto :goto_2d
+
+    .line 924
+    :catch_f
+    move-exception v29
+
+    .line 927
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v41, 0x1
+
+    .line 928
+    goto/16 :goto_15
+
+    .line 932
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_48
+    if-nez v40, :cond_12
+
+    .line 934
+    :try_start_23
+    invoke-interface/range {v34 .. v34}, Lcom/android/internal/telephony/ITelephony;->isRadioOn()Z
+
+    move-result v2
+
+    if-nez v2, :cond_49
+
+    const/16 v40, 0x1
+
+    .line 935
+    :goto_2e
+    if-eqz v40, :cond_12
+
+    .line 936
+    invoke-static {}, Landroid/os/Power;->shutdownEFSSync()V
+    :try_end_23
+    .catch Landroid/os/RemoteException; {:try_start_23 .. :try_end_23} :catch_10
+
+    goto/16 :goto_15
+
+    .line 938
+    :catch_10
+    move-exception v29
+
+    .line 941
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v40, 0x1
+
+    .line 942
+    invoke-static {}, Landroid/os/Power;->shutdownEFSSync()V
+
+    goto/16 :goto_15
+
+    .line 934
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_49
+    const/16 v40, 0x0
+
+    goto :goto_2e
+
+    .line 948
+    :cond_4a
+    const/16 v50, 0x0
+
+    goto/16 :goto_16
+
+    .line 949
+    :catch_11
+    move-exception v29
+
+    .line 952
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v50, 0x1
+
+    goto/16 :goto_16
+
+    .line 958
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_4b
+    const/16 v48, 0x0
+
+    goto/16 :goto_17
+
+    .line 959
+    :catch_12
+    move-exception v29
+
+    .line 962
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v48, 0x1
+
+    goto/16 :goto_17
+
+    .line 968
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_4c
+    const/16 v53, 0x0
+
     goto/16 :goto_18
 
-    .line 931
-    .end local v28           #ex:Landroid/os/RemoteException;
-    :cond_40
-    if-eqz v39, :cond_41
+    .line 969
+    :catch_13
+    move-exception v29
 
-    if-eqz v16, :cond_41
+    .line 972
+    .restart local v29       #ex:Landroid/os/RemoteException;
+    const/16 v53, 0x1
 
-    if-eqz v47, :cond_41
+    goto/16 :goto_18
 
-    if-eqz v45, :cond_41
+    .line 982
+    .end local v29           #ex:Landroid/os/RemoteException;
+    :cond_4d
+    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualGSMPhoneEnable()Z
 
-    if-nez v50, :cond_16
+    move-result v2
 
-    .line 937
-    :cond_41
+    if-eqz v2, :cond_4f
+
+    .line 983
+    if-eqz v38, :cond_4e
+
+    if-eqz v41, :cond_4e
+
+    if-eqz v17, :cond_4e
+
+    if-eqz v50, :cond_4e
+
+    if-eqz v48, :cond_4e
+
+    if-nez v53, :cond_16
+
+    .line 996
+    :cond_4e
     const-wide/16 v2, 0x1f4
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 846
-    add-int/lit8 v30, v30, 0x1
+    .line 880
+    add-int/lit8 v31, v31, 0x1
 
     goto/16 :goto_12
 
-    .line 955
-    :cond_42
+    .line 990
+    :cond_4f
+    if-eqz v40, :cond_4e
+
+    if-eqz v17, :cond_4e
+
+    if-eqz v50, :cond_4e
+
+    if-eqz v48, :cond_4e
+
+    if-eqz v53, :cond_4e
+
+    goto/16 :goto_19
+
+    .line 1013
+    :cond_50
+    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualGSMPhoneEnable()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_52
+
+    .line 1014
     const-string v2, "HtcShutdownThread"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "radioOff: "
+    const-string v4, "radioGsmOff: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    move/from16 v0, v39
+    move/from16 v0, v38
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", radioSubGsmOff: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, v41
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3680,7 +3962,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v16
+    move/from16 v0, v17
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3692,7 +3974,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v47
+    move/from16 v0, v50
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3704,7 +3986,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v45
+    move/from16 v0, v48
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3716,7 +3998,7 @@
 
     move-result-object v3
 
-    move/from16 v0, v50
+    move/from16 v0, v53
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3738,170 +4020,356 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 959
-    if-eqz v39, :cond_43
+    .line 1018
+    if-eqz v38, :cond_51
 
-    if-eqz v16, :cond_43
+    if-eqz v41, :cond_51
 
-    if-eqz v47, :cond_43
+    if-eqz v17, :cond_51
 
-    if-eqz v45, :cond_43
+    if-eqz v50, :cond_51
 
-    if-nez v50, :cond_18
+    if-eqz v48, :cond_51
 
-    .line 960
-    :cond_43
+    if-nez v53, :cond_18
+
+    .line 1019
+    :cond_51
     sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
     if-eqz v2, :cond_18
 
-    .line 961
+    .line 1020
     const-string v2, "HtcShutdownThread"
 
     const-string v3, "Radio off timed out, shutdown power"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 962
+    .line 1021
     const/4 v2, 0x0
 
     sput-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
 
-    .line 963
+    .line 1022
     const-string v2, "sys.shutdown.mode"
 
     const-string v3, "normal"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 964
-    if-nez v39, :cond_18
+    .line 1023
+    const-string v2, "sys.shutdown.hibernate.mode"
 
-    .line 966
+    const-string v3, "0"
+
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_1a
+
+    .line 1028
+    :cond_52
+    const-string v2, "HtcShutdownThread"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "radioOff: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, v40
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", bluetoothOff: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, v17
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", wifiOff: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, v50
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", wifiApOff: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, v48
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", wimaxOff: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move/from16 v0, v53
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", IsAirplaneMode="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1032
+    if-eqz v40, :cond_53
+
+    if-eqz v17, :cond_53
+
+    if-eqz v50, :cond_53
+
+    if-eqz v48, :cond_53
+
+    if-nez v53, :cond_18
+
+    .line 1033
+    :cond_53
+    sget-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
+
+    if-eqz v2, :cond_18
+
+    .line 1034
+    const-string v2, "HtcShutdownThread"
+
+    const-string v3, "Radio off timed out, shutdown power"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1035
+    const/4 v2, 0x0
+
+    sput-boolean v2, Lcom/htc/app/HtcShutdownThread;->mHibernate:Z
+
+    .line 1036
+    const-string v2, "sys.shutdown.mode"
+
+    const-string v3, "normal"
+
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1037
+    const-string v2, "sys.shutdown.hibernate.mode"
+
+    const-string v3, "0"
+
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1038
+    if-nez v40, :cond_18
+
+    .line 1040
     invoke-static {}, Landroid/os/Power;->shutdownEFSSync()V
 
-    goto/16 :goto_19
+    goto/16 :goto_1a
 
-    .line 1007
-    .restart local v17       #delay:J
-    .restart local v24       #endShutdownTime:J
-    .restart local v32       #observer:Landroid/os/storage/IMountShutdownObserver;
-    :cond_44
-    :try_start_20
+    .line 1081
+    .restart local v18       #delay:J
+    .restart local v25       #endShutdownTime:J
+    .restart local v33       #observer:Landroid/os/storage/IMountShutdownObserver;
+    :cond_54
+    :try_start_24
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/htc/app/HtcShutdownThread;->mActionDoneSync:Ljava/lang/Object;
 
-    move-wide/from16 v0, v17
+    move-wide/from16 v0, v18
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/Object;->wait(J)V
-    :try_end_20
-    .catchall {:try_start_20 .. :try_end_20} :catchall_2
-    .catch Ljava/lang/InterruptedException; {:try_start_20 .. :try_end_20} :catch_10
+    :try_end_24
+    .catchall {:try_start_24 .. :try_end_24} :catchall_2
+    .catch Ljava/lang/InterruptedException; {:try_start_24 .. :try_end_24} :catch_14
 
-    goto/16 :goto_1a
+    goto/16 :goto_1b
 
-    .line 1008
-    :catch_10
+    .line 1082
+    :catch_14
     move-exception v2
 
-    goto/16 :goto_1a
+    goto/16 :goto_1b
 
-    .line 1011
-    .end local v17           #delay:J
+    .line 1085
+    .end local v18           #delay:J
     :catchall_2
     move-exception v2
 
-    :try_start_21
+    :try_start_25
     monitor-exit v3
-    :try_end_21
-    .catchall {:try_start_21 .. :try_end_21} :catchall_2
+    :try_end_25
+    .catchall {:try_start_25 .. :try_end_25} :catchall_2
 
     throw v2
 
-    .line 1026
-    .end local v24           #endShutdownTime:J
-    .end local v32           #observer:Landroid/os/storage/IMountShutdownObserver;
-    .restart local v14       #am:Landroid/app/IActivityManager;
-    :cond_45
+    .line 1100
+    .end local v25           #endShutdownTime:J
+    .end local v33           #observer:Landroid/os/storage/IMountShutdownObserver;
+    .restart local v15       #am:Landroid/app/IActivityManager;
+    :cond_55
     const/16 v2, 0x2710
 
-    :try_start_22
-    invoke-interface {v14, v2}, Landroid/app/IActivityManager;->shutdown(I)Z
-    :try_end_22
-    .catch Landroid/os/RemoteException; {:try_start_22 .. :try_end_22} :catch_11
+    :try_start_26
+    invoke-interface {v15, v2}, Landroid/app/IActivityManager;->shutdown(I)Z
+    :try_end_26
+    .catch Landroid/os/RemoteException; {:try_start_26 .. :try_end_26} :catch_15
 
-    goto/16 :goto_1b
+    goto/16 :goto_1c
 
-    .line 1027
-    :catch_11
+    .line 1101
+    :catch_15
     move-exception v2
 
-    goto/16 :goto_1b
+    goto/16 :goto_1c
 
-    .line 1042
-    .restart local v17       #delay:J
-    .restart local v20       #endAnimTime:J
-    :cond_46
-    :try_start_23
+    .line 1116
+    .restart local v18       #delay:J
+    .restart local v21       #endAnimTime:J
+    :cond_56
+    :try_start_27
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     const-wide/16 v2, 0x64
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_23
-    .catch Ljava/lang/InterruptedException; {:try_start_23 .. :try_end_23} :catch_12
+    :try_end_27
+    .catch Ljava/lang/InterruptedException; {:try_start_27 .. :try_end_27} :catch_16
 
-    goto/16 :goto_1c
+    goto/16 :goto_1d
 
-    .line 1044
-    :catch_12
+    .line 1118
+    :catch_16
     move-exception v2
 
-    goto/16 :goto_1c
+    goto/16 :goto_1d
 
-    .line 1138
-    .end local v17           #delay:J
-    .restart local v34       #pm:Landroid/os/IPowerManager;
-    .restart local v41       #rtc_alarm:Z
-    :cond_47
-    if-eqz v40, :cond_22
+    .line 1210
+    .end local v18           #delay:J
+    .restart local v35       #pm:Landroid/os/IPowerManager;
+    .restart local v44       #rtc_alarm:Z
+    :cond_57
+    invoke-static {}, Lcom/htc/service/HtcTelephonyManager;->dualGSMPhoneEnable()Z
 
-    if-nez v41, :cond_22
+    move-result v2
 
-    .line 1140
+    if-eqz v2, :cond_59
+
+    .line 1212
+    if-eqz v39, :cond_58
+
+    if-nez v44, :cond_58
+
+    .line 1214
     const/4 v2, 0x1
 
-    :try_start_24
-    move-object/from16 v0, v33
+    :try_start_28
+    move-object/from16 v0, v34
 
-    invoke-interface {v0, v2}, Lcom/android/internal/telephony/ITelephony;->setRadio(Z)Z
-    :try_end_24
-    .catch Landroid/os/RemoteException; {:try_start_24 .. :try_end_24} :catch_13
+    invoke-interface {v0, v2, v12}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
+    :try_end_28
+    .catch Landroid/os/RemoteException; {:try_start_28 .. :try_end_28} :catch_1d
 
-    goto/16 :goto_21
+    .line 1224
+    :cond_58
+    :goto_2f
+    if-eqz v42, :cond_23
 
-    .line 1144
-    :catch_13
+    if-nez v44, :cond_23
+
+    .line 1226
+    const/4 v2, 0x1
+
+    :try_start_29
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v2, v13}, Lcom/android/internal/telephony/ITelephony;->setRadioExt(ZI)Z
+    :try_end_29
+    .catch Landroid/os/RemoteException; {:try_start_29 .. :try_end_29} :catch_17
+
+    goto/16 :goto_22
+
+    .line 1230
+    :catch_17
     move-exception v2
 
-    goto/16 :goto_21
+    goto/16 :goto_22
 
-    .line 1198
-    .restart local v17       #delay:J
-    .restart local v22       #endRestartTime:J
-    :cond_48
-    :try_start_25
+    .line 1238
+    :cond_59
+    if-eqz v43, :cond_23
+
+    if-nez v44, :cond_23
+
+    .line 1240
+    const/4 v2, 0x1
+
+    :try_start_2a
+    move-object/from16 v0, v34
+
+    invoke-interface {v0, v2}, Lcom/android/internal/telephony/ITelephony;->setRadio(Z)Z
+    :try_end_2a
+    .catch Landroid/os/RemoteException; {:try_start_2a .. :try_end_2a} :catch_18
+
+    goto/16 :goto_22
+
+    .line 1244
+    :catch_18
+    move-exception v2
+
+    goto/16 :goto_22
+
+    .line 1298
+    .restart local v18       #delay:J
+    .restart local v23       #endRestartTime:J
+    :cond_5a
+    :try_start_2b
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     const-wide/16 v2, 0x64
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_25
-    .catch Ljava/lang/InterruptedException; {:try_start_25 .. :try_end_25} :catch_1c
+    :try_end_2b
+    .catch Ljava/lang/InterruptedException; {:try_start_2b .. :try_end_2b} :catch_22
 
-    .line 1202
-    :goto_29
+    .line 1302
+    :goto_30
     const-string v2, "init.svc.bootanim"
 
     const-string v3, "stopped"
@@ -3916,123 +4384,129 @@
 
     move-result v2
 
-    if-eqz v2, :cond_26
+    if-eqz v2, :cond_27
 
-    goto/16 :goto_25
+    goto/16 :goto_26
 
-    .line 651
+    .line 654
     .end local v10           #IsAirplaneMode:I
-    .end local v14           #am:Landroid/app/IActivityManager;
-    .end local v15           #bluetooth:Landroid/bluetooth/IBluetooth;
-    .end local v16           #bluetoothOff:Z
-    .end local v17           #delay:J
-    .end local v20           #endAnimTime:J
-    .end local v22           #endRestartTime:J
-    .end local v26           #endTime:J
-    .end local v29           #fmPauseIntent:Landroid/content/Intent;
-    .end local v30           #i:I
-    .end local v31           #mount:Landroid/os/storage/IMountService;
-    .end local v33           #phone:Lcom/android/internal/telephony/ITelephony;
-    .end local v34           #pm:Landroid/os/IPowerManager;
-    .end local v41           #rtc_alarm:Z
-    .end local v42           #screenBrightness:I
-    .end local v43           #screenBrightnessMode:I
-    .end local v44           #wifi:Landroid/net/wifi/IWifiManager;
-    .end local v49           #wimax:Lcom/htc/net/wimax/IWimaxController;
-    :catch_14
+    .end local v15           #am:Landroid/app/IActivityManager;
+    .end local v16           #bluetooth:Landroid/bluetooth/IBluetooth;
+    .end local v17           #bluetoothOff:Z
+    .end local v18           #delay:J
+    .end local v21           #endAnimTime:J
+    .end local v23           #endRestartTime:J
+    .end local v27           #endTime:J
+    .end local v30           #fmPauseIntent:Landroid/content/Intent;
+    .end local v31           #i:I
+    .end local v32           #mount:Landroid/os/storage/IMountService;
+    .end local v34           #phone:Lcom/android/internal/telephony/ITelephony;
+    .end local v35           #pm:Landroid/os/IPowerManager;
+    .end local v44           #rtc_alarm:Z
+    .end local v45           #screenBrightness:I
+    .end local v46           #screenBrightnessMode:I
+    .end local v47           #wifi:Landroid/net/wifi/IWifiManager;
+    .end local v52           #wimax:Lcom/htc/net/wimax/IWimaxController;
+    :catch_19
     move-exception v2
 
     goto/16 :goto_1
 
-    .line 995
+    .line 1069
     .restart local v10       #IsAirplaneMode:I
-    .restart local v15       #bluetooth:Landroid/bluetooth/IBluetooth;
-    .restart local v16       #bluetoothOff:Z
-    .restart local v24       #endShutdownTime:J
-    .restart local v26       #endTime:J
-    .restart local v29       #fmPauseIntent:Landroid/content/Intent;
-    .restart local v30       #i:I
-    .restart local v31       #mount:Landroid/os/storage/IMountService;
-    .restart local v32       #observer:Landroid/os/storage/IMountShutdownObserver;
-    .restart local v33       #phone:Lcom/android/internal/telephony/ITelephony;
-    .restart local v42       #screenBrightness:I
-    .restart local v43       #screenBrightnessMode:I
-    .restart local v44       #wifi:Landroid/net/wifi/IWifiManager;
-    .restart local v49       #wimax:Lcom/htc/net/wimax/IWimaxController;
-    :catch_15
+    .restart local v16       #bluetooth:Landroid/bluetooth/IBluetooth;
+    .restart local v17       #bluetoothOff:Z
+    .restart local v25       #endShutdownTime:J
+    .restart local v27       #endTime:J
+    .restart local v30       #fmPauseIntent:Landroid/content/Intent;
+    .restart local v31       #i:I
+    .restart local v32       #mount:Landroid/os/storage/IMountService;
+    .restart local v33       #observer:Landroid/os/storage/IMountShutdownObserver;
+    .restart local v34       #phone:Lcom/android/internal/telephony/ITelephony;
+    .restart local v45       #screenBrightness:I
+    .restart local v46       #screenBrightnessMode:I
+    .restart local v47       #wifi:Landroid/net/wifi/IWifiManager;
+    .restart local v52       #wimax:Lcom/htc/net/wimax/IWimaxController;
+    :catch_1a
     move-exception v2
 
-    goto/16 :goto_1a
+    goto/16 :goto_1b
 
-    .line 1118
-    .end local v24           #endShutdownTime:J
-    .end local v32           #observer:Landroid/os/storage/IMountShutdownObserver;
-    .restart local v14       #am:Landroid/app/IActivityManager;
-    .restart local v20       #endAnimTime:J
-    .restart local v34       #pm:Landroid/os/IPowerManager;
-    .restart local v41       #rtc_alarm:Z
-    :catch_16
-    move-exception v2
-
-    goto/16 :goto_20
-
-    .line 1130
-    :catch_17
+    .line 1193
+    .end local v25           #endShutdownTime:J
+    .end local v33           #observer:Landroid/os/storage/IMountShutdownObserver;
+    .restart local v15       #am:Landroid/app/IActivityManager;
+    .restart local v21       #endAnimTime:J
+    .restart local v35       #pm:Landroid/os/IPowerManager;
+    .restart local v44       #rtc_alarm:Z
+    :catch_1b
     move-exception v2
 
     goto/16 :goto_21
 
-    .line 1157
-    :catch_18
+    .line 1205
+    :catch_1c
     move-exception v2
 
     goto/16 :goto_22
 
-    .line 1169
-    :catch_19
+    .line 1218
+    :catch_1d
+    move-exception v2
+
+    goto :goto_2f
+
+    .line 1257
+    :catch_1e
     move-exception v2
 
     goto/16 :goto_23
 
-    .line 1181
-    :catch_1a
+    .line 1269
+    :catch_1f
     move-exception v2
 
     goto/16 :goto_24
 
-    .line 1218
-    .restart local v17       #delay:J
-    .restart local v22       #endRestartTime:J
-    :catch_1b
+    .line 1281
+    :catch_20
     move-exception v2
 
-    goto/16 :goto_26
+    goto/16 :goto_25
 
-    .line 1200
-    :catch_1c
+    .line 1318
+    .restart local v18       #delay:J
+    .restart local v23       #endRestartTime:J
+    :catch_21
     move-exception v2
 
-    goto :goto_29
+    goto/16 :goto_27
 
-    .line 1102
-    .end local v17           #delay:J
-    .end local v22           #endRestartTime:J
-    .end local v41           #rtc_alarm:Z
-    :catch_1d
+    .line 1300
+    :catch_22
+    move-exception v2
+
+    goto :goto_30
+
+    .line 1177
+    .end local v18           #delay:J
+    .end local v23           #endRestartTime:J
+    .end local v44           #rtc_alarm:Z
+    :catch_23
+    move-exception v2
+
+    goto/16 :goto_20
+
+    .line 1152
+    :catch_24
     move-exception v2
 
     goto/16 :goto_1f
 
-    .line 1078
-    :catch_1e
+    .line 1127
+    .end local v35           #pm:Landroid/os/IPowerManager;
+    :catch_25
     move-exception v2
 
     goto/16 :goto_1e
-
-    .line 1053
-    .end local v34           #pm:Landroid/os/IPowerManager;
-    :catch_1f
-    move-exception v2
-
-    goto/16 :goto_1d
 .end method

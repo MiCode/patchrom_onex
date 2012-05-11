@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 7516
+    .line 7520
     iput-object p1, p0, Lcom/android/camera/HTCCamera$30;->this$0:Lcom/android/camera/HTCCamera;
 
     iput-object p2, p0, Lcom/android/camera/HTCCamera$30;->val$dismissListener:Landroid/content/DialogInterface$OnDismissListener;
@@ -47,7 +47,7 @@
     .parameter "dialog"
 
     .prologue
-    .line 7520
+    .line 7524
     iget-object v0, p0, Lcom/android/camera/HTCCamera$30;->this$0:Lcom/android/camera/HTCCamera;
 
     #getter for: Lcom/android/camera/HTCCamera;->mDialog:Landroid/app/Dialog;
@@ -57,7 +57,7 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 7522
+    .line 7526
     iget-object v0, p0, Lcom/android/camera/HTCCamera$30;->this$0:Lcom/android/camera/HTCCamera;
 
     const/4 v1, 0x0
@@ -65,7 +65,7 @@
     #setter for: Lcom/android/camera/HTCCamera;->mDialog:Landroid/app/Dialog;
     invoke-static {v0, v1}, Lcom/android/camera/HTCCamera;->access$5002(Lcom/android/camera/HTCCamera;Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 7523
+    .line 7527
     iget-object v0, p0, Lcom/android/camera/HTCCamera$30;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v0, v0, Lcom/android/camera/HTCCamera;->hasDialog:Lcom/android/camera/property/Property;
@@ -85,18 +85,18 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/property/Property;->setValue(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 7525
+    .line 7529
     :cond_0
     iget-object v0, p0, Lcom/android/camera/HTCCamera$30;->val$dismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
     if-eqz v0, :cond_1
 
-    .line 7526
+    .line 7530
     iget-object v0, p0, Lcom/android/camera/HTCCamera$30;->val$dismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
 
-    .line 7527
+    .line 7531
     :cond_1
     return-void
 .end method

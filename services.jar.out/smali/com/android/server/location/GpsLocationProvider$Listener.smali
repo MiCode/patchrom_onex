@@ -32,20 +32,20 @@
     .parameter "listener"
 
     .prologue
-    .line 937
+    .line 946
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$Listener;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 935
+    .line 944
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider$Listener;->mSensors:I
 
-    .line 938
+    .line 947
     iput-object p2, p0, Lcom/android/server/location/GpsLocationProvider$Listener;->mListener:Landroid/location/IGpsStatusListener;
 
-    .line 939
+    .line 948
     return-void
 .end method
 
@@ -55,14 +55,14 @@
     .locals 2
 
     .prologue
-    .line 942
+    .line 951
     const-string v0, "GpsLocationProvider"
 
     const-string v1, "GPS status listener died"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 944
+    .line 953
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$Listener;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #getter for: Lcom/android/server/location/GpsLocationProvider;->mListeners:Ljava/util/ArrayList;
@@ -72,7 +72,7 @@
 
     monitor-enter v1
 
-    .line 945
+    .line 954
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$Listener;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -83,17 +83,17 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 946
+    .line 955
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 947
+    .line 956
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$Listener;->mListener:Landroid/location/IGpsStatusListener;
 
     if-eqz v0, :cond_0
 
-    .line 948
+    .line 957
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$Listener;->mListener:Landroid/location/IGpsStatusListener;
 
     invoke-interface {v0}, Landroid/location/IGpsStatusListener;->asBinder()Landroid/os/IBinder;
@@ -104,11 +104,11 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 950
+    .line 959
     :cond_0
     return-void
 
-    .line 946
+    .line 955
     :catchall_0
     move-exception v0
 

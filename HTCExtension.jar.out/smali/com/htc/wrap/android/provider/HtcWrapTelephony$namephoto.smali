@@ -23,25 +23,6 @@
     .locals 1
 
     .prologue
-    .line 1979
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1980
-    new-instance v0, Landroid/provider/Telephony$namephoto;
-
-    invoke-direct {v0}, Landroid/provider/Telephony$namephoto;-><init>()V
-
-    iput-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
-
-    .line 1981
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/provider/Telephony$namephoto;)V
-    .locals 3
-    .parameter "obj"
-
-    .prologue
     .line 1983
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,34 +34,53 @@
     iput-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     .line 1985
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/provider/Telephony$namephoto;)V
+    .locals 3
+    .parameter "obj"
+
+    .prologue
+    .line 1987
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1988
+    new-instance v0, Landroid/provider/Telephony$namephoto;
+
+    invoke-direct {v0}, Landroid/provider/Telephony$namephoto;-><init>()V
+
+    iput-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
+
+    .line 1989
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-object v1, p1, Landroid/provider/Telephony$namephoto;->mBitmap:Landroid/graphics/Bitmap;
 
     iput-object v1, v0, Landroid/provider/Telephony$namephoto;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 1986
+    .line 1990
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-object v1, p1, Landroid/provider/Telephony$namephoto;->mName:Ljava/lang/String;
 
     iput-object v1, v0, Landroid/provider/Telephony$namephoto;->mName:Ljava/lang/String;
 
-    .line 1987
+    .line 1991
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-wide v1, p1, Landroid/provider/Telephony$namephoto;->mPersonId:J
 
     iput-wide v1, v0, Landroid/provider/Telephony$namephoto;->mPersonId:J
 
-    .line 1988
+    .line 1992
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-boolean v1, p1, Landroid/provider/Telephony$namephoto;->isFromSIM:Z
 
     iput-boolean v1, v0, Landroid/provider/Telephony$namephoto;->isFromSIM:Z
 
-    .line 1989
+    .line 1993
     return-void
 .end method
 
@@ -90,7 +90,7 @@
     .locals 1
 
     .prologue
-    .line 2004
+    .line 2008
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-object v0, v0, Landroid/provider/Telephony$namephoto;->mName:Ljava/lang/String;
@@ -102,7 +102,7 @@
     .locals 2
 
     .prologue
-    .line 2012
+    .line 2016
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-wide v0, v0, Landroid/provider/Telephony$namephoto;->mPersonId:J
@@ -114,7 +114,7 @@
     .locals 1
 
     .prologue
-    .line 1996
+    .line 2000
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-object v0, v0, Landroid/provider/Telephony$namephoto;->mBitmap:Landroid/graphics/Bitmap;
@@ -126,7 +126,7 @@
     .locals 1
 
     .prologue
-    .line 2020
+    .line 2024
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iget-boolean v0, v0, Landroid/provider/Telephony$namephoto;->isFromSIM:Z
@@ -139,12 +139,12 @@
     .parameter "bool"
 
     .prologue
-    .line 2016
+    .line 2020
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iput-boolean p1, v0, Landroid/provider/Telephony$namephoto;->isFromSIM:Z
 
-    .line 2017
+    .line 2021
     return-void
 .end method
 
@@ -153,12 +153,12 @@
     .parameter "name"
 
     .prologue
-    .line 2000
+    .line 2004
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iput-object p1, v0, Landroid/provider/Telephony$namephoto;->mName:Ljava/lang/String;
 
-    .line 2001
+    .line 2005
     return-void
 .end method
 
@@ -167,12 +167,12 @@
     .parameter "id"
 
     .prologue
-    .line 2008
+    .line 2012
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iput-wide p1, v0, Landroid/provider/Telephony$namephoto;->mPersonId:J
 
-    .line 2009
+    .line 2013
     return-void
 .end method
 
@@ -181,11 +181,11 @@
     .parameter "bm"
 
     .prologue
-    .line 1992
+    .line 1996
     iget-object v0, p0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$namephoto;->mObj:Landroid/provider/Telephony$namephoto;
 
     iput-object p1, v0, Landroid/provider/Telephony$namephoto;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 1993
+    .line 1997
     return-void
 .end method

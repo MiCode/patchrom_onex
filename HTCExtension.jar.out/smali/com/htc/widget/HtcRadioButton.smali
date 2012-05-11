@@ -98,9 +98,9 @@
 
     const v2, 0x2080020
 
-    const v4, 0x2080192
+    const v4, 0x2080193
 
-    const v5, 0x2080191
+    const v5, 0x2080192
 
     move-object v0, p0
 
@@ -121,9 +121,9 @@
 
     const v2, 0x2080008
 
-    const v4, 0x2080192
+    const v4, 0x2080193
 
-    const v5, 0x2080191
+    const v5, 0x2080192
 
     move-object v0, p0
 

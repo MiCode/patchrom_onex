@@ -32,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 706
+    .line 714
     new-instance v0, Lorg/codeaurora/Performance;
 
     invoke-direct {v0}, Lorg/codeaurora/Performance;-><init>()V
@@ -46,7 +46,7 @@
     .locals 0
 
     .prologue
-    .line 701
+    .line 709
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,7 +57,7 @@
     .parameter "x0"
 
     .prologue
-    .line 701
+    .line 709
     invoke-direct {p0}, Landroid/webkit/WebViewCore$WebCoreThread;-><init>()V
 
     return-void
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 701
+    .line 709
     sget-object v0, Landroid/webkit/WebViewCore$WebCoreThread;->mPerf:Lorg/codeaurora/Performance;
 
     return-object v0
@@ -79,22 +79,22 @@
     .locals 2
 
     .prologue
-    .line 709
+    .line 717
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 710
+    .line 718
     invoke-static {}, Landroid/webkit/WebViewCore;->access$400()Landroid/os/Handler;
 
     move-result-object v0
 
     invoke-static {v0}, Ljunit/framework/Assert;->assertNull(Ljava/lang/Object;)V
 
-    .line 711
+    .line 719
     const-class v1, Landroid/webkit/WebViewCore;
 
     monitor-enter v1
 
-    .line 712
+    .line 720
     :try_start_0
     new-instance v0, Landroid/webkit/WebViewCore$WebCoreThread$1;
 
@@ -102,23 +102,23 @@
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->access$402(Landroid/os/Handler;)Landroid/os/Handler;
 
-    .line 773
+    .line 781
     const-class v0, Landroid/webkit/WebViewCore;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 774
+    .line 782
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 775
+    .line 783
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 776
+    .line 784
     return-void
 
-    .line 774
+    .line 782
     :catchall_0
     move-exception v0
 

@@ -160,7 +160,7 @@
 
     sput-boolean v0, Lcom/htc/fragment/widget/CarouselFragment;->disableLandscape:Z
 
-    .line 1397
+    .line 1385
     const/high16 v0, 0x4000
 
     sput v0, Lcom/htc/fragment/widget/CarouselFragment;->tabViewId:I
@@ -297,10 +297,10 @@
 
     iput v0, p0, Lcom/htc/fragment/widget/CarouselFragment;->animDuration:I
 
-    .line 1386
+    .line 1378
     iput-object v2, p0, Lcom/htc/fragment/widget/CarouselFragment;->editModeListener:Lcom/htc/fragment/widget/CarouselFragment$EditModeListener;
 
-    .line 1404
+    .line 1392
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -491,12 +491,12 @@
     .locals 2
 
     .prologue
-    .line 1399
+    .line 1387
     invoke-virtual {p0}, Lcom/htc/fragment/widget/CarouselFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 1400
+    .line 1388
     .local v0, activity:Landroid/app/Activity;
     :cond_0
     sget v1, Lcom/htc/fragment/widget/CarouselFragment;->tabViewId:I
@@ -511,7 +511,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1402
+    .line 1390
     sget v1, Lcom/htc/fragment/widget/CarouselFragment;->tabViewId:I
 
     return v1
@@ -2266,29 +2266,29 @@
     .parameter "tag"
 
     .prologue
-    .line 1408
+    .line 1396
     iget-object v3, p0, Lcom/htc/fragment/widget/CarouselFragment;->mLocalFragmentManager:Lcom/htc/fragment/app/LocalFragmentManager;
 
     invoke-virtual {v3, p1}, Lcom/htc/fragment/app/LocalFragmentManager;->getFragment(Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v1
 
-    .line 1409
+    .line 1397
     .local v1, f:Landroid/app/Fragment;
     if-eqz v1, :cond_0
 
-    .line 1410
+    .line 1398
     iget-object v3, p0, Lcom/htc/fragment/widget/CarouselFragment;->mLocalFragmentManager:Lcom/htc/fragment/app/LocalFragmentManager;
 
     invoke-virtual {v3, v1}, Lcom/htc/fragment/app/LocalFragmentManager;->getContainerId(Landroid/app/Fragment;)I
 
     move-result v0
 
-    .line 1411
+    .line 1399
     .local v0, containerId:I
     if-lez v0, :cond_0
 
-    .line 1412
+    .line 1400
     iget-object v3, p0, Lcom/htc/fragment/widget/CarouselFragment;->tabContentViewIds:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2297,12 +2297,12 @@
 
     invoke-interface {v3, p1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1420
+    .line 1408
     .end local v0           #containerId:I
     :goto_0
     return v0
 
-    .line 1416
+    .line 1404
     :cond_0
     iget-object v3, p0, Lcom/htc/fragment/widget/CarouselFragment;->tabContentViewIds:Ljava/util/Map;
 
@@ -2312,11 +2312,11 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 1417
+    .line 1405
     .local v2, id:Ljava/lang/Integer;
     if-nez v2, :cond_1
 
-    .line 1418
+    .line 1406
     iget-object v3, p0, Lcom/htc/fragment/widget/CarouselFragment;->tabContentViewIds:Ljava/util/Map;
 
     invoke-direct {p0}, Lcom/htc/fragment/widget/CarouselFragment;->createTabContentViewId()I
@@ -2329,7 +2329,7 @@
 
     invoke-interface {v3, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1420
+    .line 1408
     :cond_1
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -4641,10 +4641,10 @@
     .parameter "listener"
 
     .prologue
-    .line 1393
+    .line 1381
     iput-object p1, p0, Lcom/htc/fragment/widget/CarouselFragment;->editModeListener:Lcom/htc/fragment/widget/CarouselFragment$EditModeListener;
 
-    .line 1394
+    .line 1382
     return-void
 .end method
 

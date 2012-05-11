@@ -15,6 +15,7 @@
     <MPDP opname="Orange PL" mccmnc="26003" pdps2g="3" pdps3g="3" />
     <MPDP opname="Orange RO" mccmnc="22610" pdps2g="2" pdps3g="1" />
     <MPDP opname="Orange SK" mccmnc="23101" pdps2g="1" pdps3g="1" />
+    <MPDP opname="Orange AT" mccmnc="23205" pdps2g="4" pdps3g="4" />
     <MPDP opname="Telefonica (ES)" mccmnc="21407" pdps2g="2" pdps3g="2" />
     <MPDP opname="O2 UK" mccmnc="23410" pdps2g="2" pdps3g="2" />
     <MPDP opname="O2 DE" mccmnc="26207" pdps2g="1" pdps3g="1" />
@@ -62,6 +63,7 @@
     <MPDP opname="T-Mobile US" mccmnc="310800" pdps2g="3" pdps3g="3" />
     <MPDP opname="Dave Wireless" mccmnc="302320" pdps2g="2" pdps3g="2" />
     <MPDP opname="Rogers (Canada)" mccmnc="302720" pdps2g="3" pdps3g="3" />
+    <MPDP opname="Fido (Canada)" mccmnc="302370" pdps2g="3" pdps3g="3" />
     <MPDP opname="TELUS SP" mccmnc="302220" pdps2g="3" pdps3g="3" />
     <MPDP opname="Vivo (Brazil)" mccmnc="72406" pdps2g="2" pdps3g="2" />
     <MPDP opname="Vivo (Brazil)" mccmnc="72410" pdps2g="2" pdps3g="2" />

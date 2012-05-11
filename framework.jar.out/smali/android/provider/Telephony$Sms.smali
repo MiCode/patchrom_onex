@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 295
+    .line 328
     const-string v0, "content://sms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -56,10 +56,10 @@
     .locals 0
 
     .prologue
-    .line 281
+    .line 314
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 991
+    .line 1262
     return-void
 .end method
 
@@ -75,7 +75,7 @@
     .parameter "deliveryReport"
 
     .prologue
-    .line 319
+    .line 352
     const-wide/16 v8, -0x1
 
     move-object v0, p0
@@ -165,7 +165,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 379
     :cond_1
     const-wide/16 v1, -0x1
 
@@ -173,8 +172,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 380
-    const-string/jumbo v1, "thread_id"
+    const-string v1, "thread_id"
 
     invoke-static {p8, p9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -289,8 +287,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 448
-    .line 427
     :cond_1
     :goto_2
     const-string v0, "error_code"
@@ -301,7 +297,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 429
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -325,28 +320,22 @@
 
     goto :goto_0
 
-    .line 409
     .end local v3           #values:Landroid/content/ContentValues;
     :pswitch_1
     const/4 v6, 0x1
 
-    .line 410
     goto :goto_1
 
-    .line 413
     :pswitch_2
     const/4 v7, 0x1
 
-    .line 414
     goto :goto_1
 
-    .line 424
     .restart local v3       #values:Landroid/content/ContentValues;
     :cond_2
     if-eqz v6, :cond_1
 
-    .line 425
-    const-string/jumbo v0, "read"
+    const-string v0, "read"
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -356,13 +345,14 @@
 
     goto :goto_2
 
+    .line 416
     :cond_3
     move v0, v9
 
-    .line 429
+    .line 622
     goto :goto_3
 
-    .line 403
+    .line 596
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -382,7 +372,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 283
+    .line 316
     sget-object v1, Landroid/provider/Telephony$Sms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v5, "date DESC"
@@ -408,7 +398,7 @@
     .parameter "orderBy"
 
     .prologue
-    .line 288
+    .line 321
     sget-object v1, Landroid/provider/Telephony$Sms;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v4, 0x0

@@ -32,22 +32,22 @@
     .locals 1
 
     .prologue
-    .line 1672
+    .line 1676
     sget-object v0, Landroid/provider/Telephony$HtcThreads;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcThreads;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1678
+    .line 1682
     sget-object v0, Landroid/provider/Telephony$HtcThreads;->CONTACTBASE_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcThreads;->CONTACTBASE_URI:Landroid/net/Uri;
 
-    .line 1680
+    .line 1684
     sget-object v0, Landroid/provider/Telephony$HtcThreads;->THREAD_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcThreads;->THREAD_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1685
+    .line 1689
     sget-object v0, Landroid/provider/Telephony$HtcThreads;->CONTACTBASE_THREAD_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcThreads;->CONTACTBASE_THREAD_URI:Landroid/net/Uri;
@@ -59,7 +59,7 @@
     .locals 0
 
     .prologue
-    .line 1670
+    .line 1674
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -71,7 +71,7 @@
     .parameter "thread_id"
 
     .prologue
-    .line 1688
+    .line 1692
     invoke-static {p0, p1, p2}, Landroid/provider/Telephony$HtcThreads;->getHtcThreadId(Landroid/content/Context;J)J
 
     move-result-wide v0
@@ -86,7 +86,7 @@
     .parameter "create"
 
     .prologue
-    .line 1692
+    .line 1696
     invoke-static {p0, p1, p2}, Landroid/provider/Telephony$HtcThreads;->getHtcThreadId(Landroid/content/Context;Ljava/lang/String;Z)J
 
     move-result-wide v0
@@ -111,7 +111,7 @@
     .end annotation
 
     .prologue
-    .line 1696
+    .line 1700
     .local p1, recipients:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     invoke-static {p0, p1, p2}, Landroid/provider/Telephony$HtcThreads;->getHtcThreadId(Landroid/content/Context;Ljava/util/Set;Z)J
 

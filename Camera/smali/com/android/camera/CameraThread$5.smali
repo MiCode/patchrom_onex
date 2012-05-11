@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 1934
+    .line 1956
     iput-object p1, p0, Lcom/android/camera/CameraThread$5;->this$0:Lcom/android/camera/CameraThread;
 
     iput p2, p0, Lcom/android/camera/CameraThread$5;->val$status:I
@@ -46,13 +46,13 @@
     .locals 2
 
     .prologue
-    .line 1937
+    .line 1959
     iget-object v0, p0, Lcom/android/camera/CameraThread$5;->this$0:Lcom/android/camera/CameraThread;
 
     iget v1, p0, Lcom/android/camera/CameraThread$5;->val$status:I
 
     invoke-virtual {v0, v1}, Lcom/android/camera/CameraThread;->restartPreview(I)V
 
-    .line 1938
+    .line 1960
     return-void
 .end method

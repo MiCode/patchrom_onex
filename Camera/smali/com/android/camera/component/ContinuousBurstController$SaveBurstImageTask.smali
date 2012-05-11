@@ -42,27 +42,27 @@
     .parameter "isLastPicture"
 
     .prologue
-    .line 153
+    .line 169
     invoke-virtual {p1}, Lcom/android/camera/component/ContinuousBurstController;->getCameraThread()Lcom/android/camera/CameraThread;
 
     move-result-object v0
 
     invoke-direct {p0, v0, p3}, Lcom/android/camera/imaging/SaveImageTask;-><init>(Lcom/android/camera/CameraThread;[B)V
 
-    .line 154
+    .line 170
     iput-boolean p4, p0, Lcom/android/camera/imaging/SaveImageTask;->isLastImage:Z
 
-    .line 155
+    .line 171
     iput p2, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->index:I
 
-    .line 156
+    .line 172
     invoke-static {}, Lcom/android/camera/component/ContinuousBurstController;->access$000()Lcom/android/camera/io/DCFInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
-    .line 157
+    .line 173
     #getter for: Lcom/android/camera/component/ContinuousBurstController;->m_OuterDirectoryCounter:Lcom/android/camera/io/FileCounter;
     invoke-static {p1}, Lcom/android/camera/component/ContinuousBurstController;->access$100(Lcom/android/camera/component/ContinuousBurstController;)Lcom/android/camera/io/FileCounter;
 
@@ -70,7 +70,7 @@
 
     iput-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->outerDirectoryCounter:Lcom/android/camera/io/FileCounter;
 
-    .line 158
+    .line 174
     #getter for: Lcom/android/camera/component/ContinuousBurstController;->m_ImageDirectoryCounter:Lcom/android/camera/io/FileCounter;
     invoke-static {p1}, Lcom/android/camera/component/ContinuousBurstController;->access$200(Lcom/android/camera/component/ContinuousBurstController;)Lcom/android/camera/io/FileCounter;
 
@@ -78,14 +78,14 @@
 
     iput-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->imageDirectoryCounter:Lcom/android/camera/io/FileCounter;
 
-    .line 159
+    .line 175
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->m_Controller:Ljava/lang/ref/WeakReference;
 
-    .line 160
+    .line 176
     return-void
 .end method
 
@@ -102,7 +102,7 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 169
+    .line 185
     iget-object v2, p0, Lcom/android/camera/imaging/SaveImageTask;->dcfInfo:Lcom/android/camera/io/DCFInfo;
 
     iget-object v3, p0, Lcom/android/camera/imaging/SaveImageTask;->storageSlot:Lcom/android/camera/io/StorageSlot;
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    .line 177
+    .line 193
     .local v0, dirPath:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -153,13 +153,13 @@
 
     move-result-object v1
 
-    .line 178
+    .line 194
     .local v1, fileName:Ljava/lang/String;
     iget v2, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->index:I
 
     if-ne v2, v7, :cond_0
 
-    .line 179
+    .line 195
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,7 +178,7 @@
 
     move-result-object v1
 
-    .line 180
+    .line 196
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -200,7 +200,7 @@
 
     move-result-object v1
 
-    .line 183
+    .line 199
     new-instance v2, Lcom/android/camera/io/DCFPath;
 
     iget-object v3, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->outerDirectoryCounter:Lcom/android/camera/io/FileCounter;
@@ -222,7 +222,7 @@
 
     const/4 v4, 0x0
 
-    .line 211
+    .line 227
     iget-object v1, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->m_Controller:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -231,20 +231,20 @@
 
     check-cast v0, Lcom/android/camera/component/ContinuousBurstController;
 
-    .line 212
+    .line 228
     .local v0, controller:Lcom/android/camera/component/ContinuousBurstController;
     if-eqz v0, :cond_0
 
-    .line 214
+    .line 230
     #setter for: Lcom/android/camera/component/ContinuousBurstController;->m_HasImageSavingError:Z
     invoke-static {v0, v6}, Lcom/android/camera/component/ContinuousBurstController;->access$302(Lcom/android/camera/component/ContinuousBurstController;Z)Z
 
-    .line 215
+    .line 231
     iget-boolean v1, p0, Lcom/android/camera/imaging/SaveImageTask;->isLastImage:Z
 
     if-eqz v1, :cond_0
 
-    .line 216
+    .line 232
     const/16 v2, 0x2717
 
     iget v1, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->index:I
@@ -265,7 +265,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/component/ContinuousBurstController;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;)Z
 
-    .line 218
+    .line 234
     :cond_0
     return-void
 .end method
@@ -277,7 +277,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 197
+    .line 213
     iget-object v1, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->m_Controller:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -286,15 +286,15 @@
 
     check-cast v0, Lcom/android/camera/component/ContinuousBurstController;
 
-    .line 198
+    .line 214
     .local v0, controller:Lcom/android/camera/component/ContinuousBurstController;
     if-nez v0, :cond_0
 
-    .line 203
+    .line 219
     :goto_0
     return-void
 
-    .line 202
+    .line 218
     :cond_0
     const/16 v1, 0x2719
 
@@ -316,12 +316,12 @@
 
     const/4 v10, 0x0
 
-    .line 226
+    .line 242
     iget-boolean v0, p0, Lcom/android/camera/imaging/SaveImageTask;->isLastImage:Z
 
     if-eqz v0, :cond_3
 
-    .line 228
+    .line 244
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->m_Controller:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -330,7 +330,7 @@
 
     check-cast v7, Lcom/android/camera/component/ContinuousBurstController;
 
-    .line 229
+    .line 245
     .local v7, controller:Lcom/android/camera/component/ContinuousBurstController;
     if-eqz v7, :cond_3
 
@@ -341,10 +341,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 234
+    .line 250
     const/4 v6, 0x0
 
-    .line 235
+    .line 251
     .local v6, bucketID:Ljava/lang/String;
     #getter for: Lcom/android/camera/component/ContinuousBurstController;->m_UI:Lcom/android/camera/component/ContinuousBurstUI;
     invoke-static {v7}, Lcom/android/camera/component/ContinuousBurstController;->access$400(Lcom/android/camera/component/ContinuousBurstController;)Lcom/android/camera/component/ContinuousBurstUI;
@@ -373,14 +373,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 237
+    .line 253
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
     const-string v1, "Query bucketID - start"
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 238
+    .line 254
     #getter for: Lcom/android/camera/component/ContinuousBurstController;->m_UI:Lcom/android/camera/component/ContinuousBurstUI;
     invoke-static {v7}, Lcom/android/camera/component/ContinuousBurstController;->access$400(Lcom/android/camera/component/ContinuousBurstController;)Lcom/android/camera/component/ContinuousBurstUI;
 
@@ -410,7 +410,7 @@
 
     move-result-object v8
 
-    .line 247
+    .line 263
     .local v8, cursorImage:Landroid/database/Cursor;
     if-eqz v8, :cond_0
 
@@ -423,11 +423,11 @@
 
     if-lez v0, :cond_0
 
-    .line 251
+    .line 267
     :try_start_1
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
 
-    .line 252
+    .line 268
     const-string v0, "bucket_id"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -442,15 +442,15 @@
 
     move-result-object v6
 
-    .line 266
+    .line 282
     :cond_0
     :goto_0
     if-eqz v8, :cond_1
 
-    .line 267
+    .line 283
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 269
+    .line 285
     :cond_1
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
 
@@ -474,7 +474,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
+    .line 287
     .end local v8           #cursorImage:Landroid/database/Cursor;
     :cond_2
     const/16 v2, 0x2717
@@ -499,20 +499,20 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/component/ContinuousBurstController;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;)Z
 
-    .line 274
+    .line 290
     .end local v6           #bucketID:Ljava/lang/String;
     .end local v7           #controller:Lcom/android/camera/component/ContinuousBurstController;
     :cond_3
     return-void
 
-    .line 254
+    .line 270
     .restart local v6       #bucketID:Ljava/lang/String;
     .restart local v7       #controller:Lcom/android/camera/component/ContinuousBurstController;
     .restart local v8       #cursorImage:Landroid/database/Cursor;
     :catch_0
     move-exception v9
 
-    .line 256
+    .line 272
     .local v9, ex:Landroid/database/sqlite/SQLiteException;
     :try_start_2
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
@@ -525,24 +525,24 @@
 
     goto :goto_0
 
-    .line 266
+    .line 282
     .end local v9           #ex:Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v0
 
     if-eqz v8, :cond_4
 
-    .line 267
+    .line 283
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     :cond_4
     throw v0
 
-    .line 258
+    .line 274
     :catch_1
     move-exception v9
 
-    .line 260
+    .line 276
     .local v9, ex:Ljava/lang/Exception;
     :try_start_3
     iget-object v0, p0, Lcom/android/camera/imaging/SaveImageTask;->TAG:Ljava/lang/String;
@@ -561,12 +561,12 @@
     .parameter "filePath"
 
     .prologue
-    .line 282
+    .line 298
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 283
+    .line 299
     .local v0, values:Landroid/content/ContentValues;
     iget v1, p0, Lcom/android/camera/component/ContinuousBurstController$SaveBurstImageTask;->index:I
 
@@ -574,7 +574,7 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 284
+    .line 300
     const-string v1, "favorite"
 
     const/16 v2, 0x10
@@ -585,11 +585,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 287
+    .line 303
     :goto_0
     return-object v0
 
-    .line 286
+    .line 302
     :cond_0
     const-string v1, "favorite"
 

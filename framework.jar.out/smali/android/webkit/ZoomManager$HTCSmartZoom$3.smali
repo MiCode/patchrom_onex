@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1883
+    .line 1896
     iput-object p1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,26 +45,26 @@
 
     const/16 v7, -0x14
 
-    .line 1886
+    .line 1899
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iget-boolean v4, v4, Landroid/webkit/ZoomManager$HTCSmartZoom;->detectbyselect:Z
 
     if-nez v4, :cond_0
 
-    .line 1908
+    .line 1921
     :goto_0
     return-void
 
-    .line 1889
+    .line 1902
     :cond_0
     const/4 v1, 0x1
 
-    .line 1891
+    .line 1904
     .local v1, isTxt:Z
     const/4 v0, 0x0
 
-    .line 1892
+    .line 1905
     .local v0, hitSel:Landroid/graphics/Rect;
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
@@ -72,21 +72,21 @@
 
     invoke-virtual {v4}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 1893
+    .line 1906
     const-wide/16 v2, 0x0
 
-    .line 1894
+    .line 1907
     .local v2, time:J
     if-eqz v1, :cond_1
 
-    .line 1895
+    .line 1908
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iget-object v4, v4, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4}, Landroid/webkit/WebView;->nativeResetSelection()V
 
-    .line 1896
+    .line 1909
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iget-object v4, v4, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -101,7 +101,7 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/webkit/WebView;->nativeStartSelection(II)Z
 
-    .line 1897
+    .line 1910
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iget-object v4, v4, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -116,13 +116,13 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/webkit/WebView;->nativeExtendSelection(II)V
 
-    .line 1900
+    .line 1913
     new-instance v0, Landroid/graphics/Rect;
 
     .end local v0           #hitSel:Landroid/graphics/Rect;
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1901
+    .line 1914
     .restart local v0       #hitSel:Landroid/graphics/Rect;
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
@@ -130,10 +130,10 @@
 
     invoke-virtual {v4, v0}, Landroid/webkit/WebView;->nativeGetSelectionEnd(Landroid/graphics/Rect;)V
 
-    .line 1902
+    .line 1915
     invoke-virtual {v0, v7, v7}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 1903
+    .line 1916
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iget v4, v4, Landroid/webkit/ZoomManager$HTCSmartZoom;->myX:I
@@ -148,7 +148,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 1904
+    .line 1917
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 
     iget-object v4, v4, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -171,7 +171,7 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Landroid/webkit/HTCWebCore;->nativeFindTextBound(IILandroid/webkit/SelectionUnitInfo;Z)I
 
-    .line 1907
+    .line 1920
     :cond_1
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;->this$1:Landroid/webkit/ZoomManager$HTCSmartZoom;
 

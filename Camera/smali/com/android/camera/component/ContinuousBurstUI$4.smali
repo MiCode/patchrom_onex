@@ -115,7 +115,7 @@
 
     .line 336
     :cond_1
-    const/16 v3, 0x63
+    sget v3, Lcom/android/camera/component/ContinuousBurstController;->DEFAULT_UNLIMITED_PICTURE_COUNT:I
 
     goto :goto_0
 .end method

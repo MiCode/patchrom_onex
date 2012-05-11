@@ -856,7 +856,11 @@
     .local v1, serviceCallbackNeeded:Z
     :goto_0
     :try_start_1
-    sget-object v4, Landroid/nfc/NfcAdapter;->sService:Landroid/nfc/INfcAdapter;
+    iget-object v3, p0, Landroid/nfc/NfcActivityManager;->mAdapter:Landroid/nfc/NfcAdapter;
+
+    invoke-virtual {v3}, Landroid/nfc/NfcAdapter;->getService()Landroid/nfc/INfcAdapter;
+
+    move-result-object v4
 
     iget-boolean v3, p1, Landroid/nfc/NfcActivityManager$NfcActivityState;->resumed:Z
 

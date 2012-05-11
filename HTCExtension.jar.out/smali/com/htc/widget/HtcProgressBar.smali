@@ -123,7 +123,7 @@
     :goto_0
     if-ne v9, v2, :cond_2
 
-    const v5, 0x20801be
+    const v5, 0x20801bf
 
     :goto_1
     invoke-static {v7, v6, v5}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
@@ -198,7 +198,7 @@
     goto :goto_0
 
     :cond_2
-    const v5, 0x20801bd
+    const v5, 0x20801be
 
     goto :goto_1
 .end method

@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 12564
+    .line 12539
     iput-object p1, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "x1"
 
     .prologue
-    .line 12564
+    .line 12539
     invoke-direct {p0, p1}, Landroid/widget/TextView$InsertionPointCursorController;-><init>(Landroid/widget/TextView;)V
 
     return-void
@@ -54,7 +54,7 @@
     .parameter "x0"
 
     .prologue
-    .line 12564
+    .line 12539
     invoke-direct {p0}, Landroid/widget/TextView$InsertionPointCursorController;->getHandle()Landroid/widget/TextView$InsertionHandleView;
 
     move-result-object v0
@@ -66,7 +66,7 @@
     .locals 3
 
     .prologue
-    .line 12594
+    .line 12569
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
 
     #getter for: Landroid/widget/TextView;->mSelectHandleCenter:Landroid/graphics/drawable/Drawable;
@@ -76,7 +76,7 @@
 
     if-nez v0, :cond_0
 
-    .line 12596
+    .line 12571
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
 
     #getter for: Landroid/widget/TextView;->mTextSelectHandleRes:I
@@ -86,7 +86,7 @@
 
     if-nez v0, :cond_2
 
-    .line 12597
+    .line 12572
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
@@ -109,14 +109,14 @@
     #setter for: Landroid/widget/TextView;->mSelectHandleCenter:Landroid/graphics/drawable/Drawable;
     invoke-static {v0, v1}, Landroid/widget/TextView;->access$7302(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
-    .line 12604
+    .line 12579
     :cond_0
     :goto_0
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
     if-nez v0, :cond_1
 
-    .line 12605
+    .line 12580
     new-instance v0, Landroid/widget/TextView$InsertionHandleView;
 
     iget-object v1, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
@@ -132,13 +132,13 @@
 
     iput-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
-    .line 12607
+    .line 12582
     :cond_1
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
     return-object v0
 
-    .line 12601
+    .line 12576
     :cond_2
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
 
@@ -176,17 +176,17 @@
     .locals 1
 
     .prologue
-    .line 12582
+    .line 12557
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
     if-eqz v0, :cond_0
 
-    .line 12583
+    .line 12558
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
     invoke-virtual {v0}, Landroid/widget/TextView$InsertionHandleView;->hide()V
 
-    .line 12585
+    .line 12560
     :cond_0
     return-void
 .end method
@@ -195,7 +195,7 @@
     .locals 1
 
     .prologue
-    .line 12624
+    .line 12599
     invoke-direct {p0}, Landroid/widget/TextView$InsertionPointCursorController;->getHandle()Landroid/widget/TextView$InsertionHandleView;
 
     move-result-object v0
@@ -211,7 +211,7 @@
     .locals 1
 
     .prologue
-    .line 12628
+    .line 12603
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
     if-eqz v0, :cond_0
@@ -239,18 +239,18 @@
     .locals 2
 
     .prologue
-    .line 12612
+    .line 12587
     iget-object v1, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 12613
+    .line 12588
     .local v0, observer:Landroid/view/ViewTreeObserver;
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnTouchModeChangeListener(Landroid/view/ViewTreeObserver$OnTouchModeChangeListener;)V
 
-    .line 12615
+    .line 12590
     iget-object v1, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
     if-eqz v1, :cond_0
@@ -259,7 +259,7 @@
 
     invoke-virtual {v1}, Landroid/widget/TextView$InsertionHandleView;->onDetached()V
 
-    .line 12616
+    .line 12591
     :cond_0
     return-void
 .end method
@@ -269,13 +269,13 @@
     .parameter "isInTouchMode"
 
     .prologue
-    .line 12588
+    .line 12563
     if-nez p1, :cond_0
 
-    .line 12589
+    .line 12564
     invoke-virtual {p0}, Landroid/widget/TextView$InsertionPointCursorController;->hide()V
 
-    .line 12591
+    .line 12566
     :cond_0
     return-void
 .end method
@@ -285,12 +285,12 @@
     .parameter "touchable"
 
     .prologue
-    .line 12621
+    .line 12596
     iget-object v0, p0, Landroid/widget/TextView$InsertionPointCursorController;->mHandle:Landroid/widget/TextView$InsertionHandleView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView$InsertionHandleView;->setTouchable(Z)V
 
-    .line 12622
+    .line 12597
     return-void
 .end method
 
@@ -298,14 +298,14 @@
     .locals 1
 
     .prologue
-    .line 12568
+    .line 12543
     invoke-direct {p0}, Landroid/widget/TextView$InsertionPointCursorController;->getHandle()Landroid/widget/TextView$InsertionHandleView;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/TextView$InsertionHandleView;->show()V
 
-    .line 12569
+    .line 12544
     return-void
 .end method
 
@@ -313,14 +313,14 @@
     .locals 1
 
     .prologue
-    .line 12572
+    .line 12547
     invoke-direct {p0}, Landroid/widget/TextView$InsertionPointCursorController;->getHandle()Landroid/widget/TextView$InsertionHandleView;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/TextView$InsertionHandleView;->showWithActionPopup()V
 
-    .line 12573
+    .line 12548
     return-void
 .end method
 
@@ -328,14 +328,14 @@
     .locals 1
 
     .prologue
-    .line 12577
+    .line 12552
     invoke-direct {p0}, Landroid/widget/TextView$InsertionPointCursorController;->getHandle()Landroid/widget/TextView$InsertionHandleView;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/TextView$InsertionHandleView;->showWithActionPopupDelay()V
 
-    .line 12578
+    .line 12553
     return-void
 .end method
 
@@ -343,32 +343,32 @@
     .locals 3
 
     .prologue
-    .line 12631
+    .line 12606
     iget-object v1, p0, Landroid/widget/TextView$InsertionPointCursorController;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getSelectionStart()I
 
     move-result v0
 
-    .line 12633
+    .line 12608
     .local v0, offset:I
     if-gez v0, :cond_0
 
-    .line 12635
+    .line 12610
     const-string v1, "TextView"
 
     const-string v2, "Update cursor controller position called with no cursor"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12636
+    .line 12611
     invoke-virtual {p0}, Landroid/widget/TextView$InsertionPointCursorController;->hide()V
 
-    .line 12641
+    .line 12616
     :goto_0
     return-void
 
-    .line 12640
+    .line 12615
     :cond_0
     invoke-direct {p0}, Landroid/widget/TextView$InsertionPointCursorController;->getHandle()Landroid/widget/TextView$InsertionHandleView;
 

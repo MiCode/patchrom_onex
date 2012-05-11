@@ -75,17 +75,17 @@
     .locals 1
 
     .prologue
-    .line 1463
+    .line 1467
     sget-boolean v0, Landroid/provider/Telephony$Carriers;->FLAG_APN_DISPATCH_MODE:Z
 
     sput-boolean v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$Carriers;->FLAG_APN_DISPATCH_MODE:Z
 
-    .line 1467
+    .line 1471
     sget-object v0, Landroid/provider/Telephony$Carriers;->CDMA_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$Carriers;->CDMA_CONTENT_URI:Landroid/net/Uri;
 
-    .line 1481
+    .line 1485
     sget-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
@@ -97,7 +97,7 @@
     .locals 0
 
     .prologue
-    .line 1460
+    .line 1464
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

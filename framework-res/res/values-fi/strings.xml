@@ -1321,7 +1321,7 @@ tilille %s"</string>
 
 %1$s sekuntia jäljellä..."</string>
     <string name="wireless_display_output_tv_checkbox">Älä näytä tätä uudelleen</string>
-    <string name="call_forward_unconditional">Ei-ehdollisen soitonsiirto</string>
+    <string name="call_forward_unconditional">Ei-ehdollinen soitonsiirto</string>
     <string name="call_forward_when_busy">Soitonsiirto, kun varattu</string>
     <string name="call_forward_when_unanswered">Soitonsiirto, kun vastaamaton</string>
     <string name="call_forward_when_unreachable">Soitonsiirto, kun ei tavoitettavissa</string>

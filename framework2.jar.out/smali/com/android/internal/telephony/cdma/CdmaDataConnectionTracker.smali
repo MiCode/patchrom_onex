@@ -17499,22 +17499,17 @@
 
     if-eqz v6, :cond_5
 
-    .line 2175
     iget-boolean v6, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mIsRuimCardUsed:Z
 
     if-eqz v6, :cond_4
 
-    .line 2176
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->updateApnProxyInfo(Lcom/android/internal/telephony/ApnContext;)V
 
-    .line 2177
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->updatePreferredApn(Lcom/android/internal/telephony/ApnContext;)V
 
     invoke-direct {p0}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->notifyFirewallDataSetupComplete()V
-    .line 2178
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->notifyDefaultData(Lcom/android/internal/telephony/ApnContext;)V
 
-    .line 2186
     :goto_2
     const/4 v6, 0x1
 

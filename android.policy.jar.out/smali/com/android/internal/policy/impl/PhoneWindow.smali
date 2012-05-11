@@ -220,7 +220,40 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3865
+    sget-object v0, Lcom/android/internal/policy/impl/PhoneWindow;->sNavigationBarBlackList:Ljava/util/HashMap;
+
+    const-string v1, "com.google.android.youtube"
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 3867
+    sget-object v0, Lcom/android/internal/policy/impl/PhoneWindow;->sNavigationBarBlackList:Ljava/util/HashMap;
+
+    const-string v1, "com.google.android.apps.translate"
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3869
+    sget-object v0, Lcom/android/internal/policy/impl/PhoneWindow;->sNavigationBarBlackList:Ljava/util/HashMap;
+
+    const-string v1, "com.melimots.WordSearch"
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3873
     sput-boolean v4, Lcom/android/internal/policy/impl/PhoneWindow;->mFirstCheck:Z
 
     return-void
@@ -307,10 +340,10 @@
     .line 1577
     iput v4, p0, Lcom/android/internal/policy/impl/PhoneWindow;->fakescreenBackgroundColor:I
 
-    .line 3868
+    .line 3874
     iput-object v5, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 3935
+    .line 3941
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow$4;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindow$4;-><init>(Lcom/android/internal/policy/impl/PhoneWindow;)V
@@ -2922,21 +2955,21 @@
 
     const/4 v12, 0x0
 
-    .line 3870
+    .line 3876
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 3871
+    .line 3877
     .local v1, context:Landroid/content/Context;
     if-nez v1, :cond_1
 
-    .line 3933
+    .line 3939
     :cond_0
     :goto_0
     return-void
 
-    .line 3875
+    .line 3881
     :cond_1
     const-string v9, "persist.sys.navtips.nevershow"
 
@@ -2944,11 +2977,11 @@
 
     move-result v7
 
-    .line 3876
+    .line 3882
     .local v7, noShowMenuTips:Z
     if-nez v7, :cond_0
 
-    .line 3880
+    .line 3886
     const/4 v9, 0x3
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getAttributes()Landroid/view/WindowManager$LayoutParams;
@@ -2959,10 +2992,10 @@
 
     if-eq v9, v10, :cond_0
 
-    .line 3884
+    .line 3890
     if-eqz p1, :cond_0
 
-    .line 3888
+    .line 3894
     sget-object v9, Lcom/android/internal/policy/impl/PhoneWindow;->sNavigationBarBlackList:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -2975,7 +3008,7 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 3889
+    .line 3895
     .local v0, black:Ljava/lang/Boolean;
     if-eqz v0, :cond_2
 
@@ -2985,12 +3018,12 @@
 
     if-ne v13, v9, :cond_2
 
-    .line 3890
+    .line 3896
     sget-boolean v9, Lcom/android/internal/policy/impl/PhoneWindow;->DEBUG_NAV_BAR:Z
 
     if-eqz v9, :cond_0
 
-    .line 3891
+    .line 3897
     const-string v9, "PhoneWindow"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -3025,18 +3058,18 @@
 
     goto :goto_0
 
-    .line 3896
+    .line 3902
     :cond_2
     sget-boolean v9, Lcom/android/internal/policy/impl/PhoneWindow;->mFirstCheck:Z
 
     if-nez v9, :cond_0
 
-    .line 3900
+    .line 3906
     sget-boolean v9, Lcom/android/internal/policy/impl/PhoneWindow;->DEBUG_NAV_BAR:Z
 
     if-eqz v9, :cond_3
 
-    .line 3901
+    .line 3907
     const-string v9, "PhoneWindow"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -3097,7 +3130,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3907
+    .line 3913
     :cond_3
     const-string v9, "layout_inflater"
 
@@ -3107,7 +3140,7 @@
 
     check-cast v4, Landroid/view/LayoutInflater;
 
-    .line 3909
+    .line 3915
     .local v4, inflater:Landroid/view/LayoutInflater;
     const/high16 v9, 0x403
 
@@ -3117,9 +3150,9 @@
 
     move-result-object v2
 
-    .line 3910
+    .line 3916
     .local v2, customView:Landroid/view/View;
-    const/high16 v9, 0x407
+    const/high16 v9, 0x408
 
     invoke-virtual {v2, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3127,14 +3160,14 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    .line 3911
+    .line 3917
     .local v6, message:Landroid/widget/TextView;
     const v9, 0x4040013
 
     invoke-virtual {v6, v9}, Landroid/widget/TextView;->setText(I)V
 
-    .line 3912
-    const v9, 0x4070001
+    .line 3918
+    const v9, 0x4080001
 
     invoke-virtual {v2, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3144,13 +3177,13 @@
 
     iput-object v9, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 3913
+    .line 3919
     iget-object v9, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-virtual {v9, v12}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
 
-    .line 3914
-    const v9, 0x4070002
+    .line 3920
+    const v9, 0x4080002
 
     invoke-virtual {v2, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3158,52 +3191,52 @@
 
     check-cast v8, Landroid/widget/TextView;
 
-    .line 3915
+    .line 3921
     .local v8, remindMe:Landroid/widget/TextView;
     const v9, 0x4040014
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(I)V
 
-    .line 3916
+    .line 3922
     new-instance v9, Lcom/android/internal/policy/impl/PhoneWindow$3;
 
     invoke-direct {v9, p0}, Lcom/android/internal/policy/impl/PhoneWindow$3;-><init>(Lcom/android/internal/policy/impl/PhoneWindow;)V
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 3922
+    .line 3928
     new-instance v3, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v3, v1}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 3923
+    .line 3929
     .local v3, dialogBuilder:Lcom/htc/widget/HtcAlertDialog$Builder;
     invoke-virtual {v3, v12}, Lcom/htc/widget/HtcAlertDialog$Builder;->setIcon(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 3924
+    .line 3930
     const v9, 0x4040012
 
     invoke-virtual {v3, v9}, Lcom/htc/widget/HtcAlertDialog$Builder;->setTitle(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 3925
+    .line 3931
     invoke-virtual {v3, v12}, Lcom/htc/widget/HtcAlertDialog$Builder;->setCancelable(Z)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 3926
+    .line 3932
     invoke-virtual {v3, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setView(Landroid/view/View;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 3927
+    .line 3933
     const v9, 0x2040258
 
     iget-object v10, p0, Lcom/android/internal/policy/impl/PhoneWindow;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v3, v9, v10}, Lcom/htc/widget/HtcAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 3928
+    .line 3934
     invoke-virtual {v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->create()Lcom/htc/widget/HtcAlertDialog;
 
     move-result-object v5
 
-    .line 3929
+    .line 3935
     .local v5, menuDialog:Lcom/htc/widget/HtcAlertDialog;
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindow;->isDestroyed()Z
 
@@ -3211,10 +3244,10 @@
 
     if-nez v9, :cond_4
 
-    .line 3930
+    .line 3936
     invoke-virtual {v5}, Lcom/htc/widget/HtcAlertDialog;->show()V
 
-    .line 3932
+    .line 3938
     :cond_4
     sput-boolean v13, Lcom/android/internal/policy/impl/PhoneWindow;->mFirstCheck:Z
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3555
+    .line 3603
     iput-object p1, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3555
+    .line 3603
     invoke-direct {p0, p1}, Lcom/android/camera/CameraThread$InfoListener;-><init>(Lcom/android/camera/CameraThread;)V
 
     return-void
@@ -66,19 +66,19 @@
 
     const/4 v5, 0x0
 
-    .line 3558
+    .line 3606
     const/16 v2, 0x320
 
     if-ne p2, v2, :cond_3
 
-    .line 3559
+    .line 3607
     const-string v2, "CameraThread"
 
     const-string v3, "*********** MEDIA_RECORDER_INFO_MAX_DURATION_REACHED"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3560
+    .line 3608
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->isRecording:Lcom/android/camera/property/Property;
@@ -95,19 +95,19 @@
 
     if-nez v2, :cond_1
 
-    .line 3561
+    .line 3609
     const-string v2, "CameraThread"
 
     const-string v3, "isRecording = false, do nothing"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3648
+    .line 3696
     :cond_0
     :goto_0
     return-void
 
-    .line 3565
+    .line 3613
     :cond_1
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
@@ -120,11 +120,11 @@
 
     move-result-object v0
 
-    .line 3566
+    .line 3614
     .local v0, limit:Lcom/android/camera/RecordLimitCheck;
     if-nez v0, :cond_2
 
-    .line 3567
+    .line 3615
     const-string v2, "CameraThread"
 
     const-string v3, "mRecordLimitCheck = null, do nothing"
@@ -133,20 +133,20 @@
 
     goto :goto_0
 
-    .line 3571
+    .line 3619
     :cond_2
     invoke-virtual {v0}, Lcom/android/camera/RecordLimitCheck;->setTimeOut_API()V
 
-    .line 3572
+    .line 3620
     invoke-virtual {v0}, Lcom/android/camera/RecordLimitCheck;->getLimitState()I
 
     move-result v1
 
-    .line 3573
+    .line 3621
     .local v1, state:I
     packed-switch v1, :pswitch_data_0
 
-    .line 3589
+    .line 3637
     const-string v2, "CameraThread"
 
     const-string v3, "InfoListener, should not enter this state !!!!!!!!!!!!!!!!"
@@ -155,7 +155,7 @@
 
     goto :goto_0
 
-    .line 3576
+    .line 3624
     :pswitch_0
     const-string v2, "CameraThread"
 
@@ -165,7 +165,7 @@
 
     goto :goto_0
 
-    .line 3579
+    .line 3627
     :pswitch_1
     const-string v2, "CameraThread"
 
@@ -173,7 +173,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3580
+    .line 3628
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mUIHandler:Landroid/os/Handler;
@@ -182,7 +182,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/MessageHandler;->sendEmptyMessage(Landroid/os/Handler;I)V
 
-    .line 3581
+    .line 3629
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mCameraHandler:Lcom/android/camera/CameraThread$MainHandler;
@@ -191,7 +191,7 @@
 
     goto :goto_0
 
-    .line 3584
+    .line 3632
     :pswitch_2
     const-string v2, "CameraThread"
 
@@ -199,7 +199,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3585
+    .line 3633
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mCameraHandler:Lcom/android/camera/CameraThread$MainHandler;
@@ -208,7 +208,7 @@
 
     goto :goto_0
 
-    .line 3593
+    .line 3641
     .end local v0           #limit:Lcom/android/camera/RecordLimitCheck;
     .end local v1           #state:I
     :cond_3
@@ -216,14 +216,14 @@
 
     if-ne p2, v2, :cond_0
 
-    .line 3595
+    .line 3643
     const-string v2, "CameraThread"
 
     const-string v3, "*********** MEDIA_RECORDER_INFO_MAX_FILESIZE_REACHED"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3596
+    .line 3644
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->isRecording:Lcom/android/camera/property/Property;
@@ -240,7 +240,7 @@
 
     if-nez v2, :cond_4
 
-    .line 3597
+    .line 3645
     const-string v2, "CameraThread"
 
     const-string v3, "isRecording = false, do nothing"
@@ -249,7 +249,7 @@
 
     goto :goto_0
 
-    .line 3601
+    .line 3649
     :cond_4
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
@@ -262,11 +262,11 @@
 
     move-result-object v0
 
-    .line 3602
+    .line 3650
     .restart local v0       #limit:Lcom/android/camera/RecordLimitCheck;
     if-nez v0, :cond_5
 
-    .line 3603
+    .line 3651
     const-string v2, "CameraThread"
 
     const-string v3, "mRecordLimitCheck = null, do nothing"
@@ -275,13 +275,13 @@
 
     goto/16 :goto_0
 
-    .line 3607
+    .line 3655
     :cond_5
     invoke-virtual {v0}, Lcom/android/camera/RecordLimitCheck;->getLimitState()I
 
     move-result v1
 
-    .line 3608
+    .line 3656
     .restart local v1       #state:I
     if-eq v1, v4, :cond_6
 
@@ -289,7 +289,7 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 3609
+    .line 3657
     :cond_6
     const-string v2, "CameraThread"
 
@@ -299,19 +299,19 @@
 
     goto/16 :goto_0
 
-    .line 3613
+    .line 3661
     :cond_7
     invoke-virtual {v0, v5}, Lcom/android/camera/RecordLimitCheck;->setFileSizelimit_API(Z)V
 
-    .line 3614
+    .line 3662
     invoke-virtual {v0}, Lcom/android/camera/RecordLimitCheck;->getLimitState()I
 
     move-result v1
 
-    .line 3615
+    .line 3663
     packed-switch v1, :pswitch_data_1
 
-    .line 3644
+    .line 3692
     :pswitch_3
     const-string v2, "CameraThread"
 
@@ -321,7 +321,7 @@
 
     goto/16 :goto_0
 
-    .line 3617
+    .line 3665
     :pswitch_4
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
@@ -333,14 +333,14 @@
 
     invoke-static {v2, v3, v4, v5, v6}, Lcom/android/camera/MessageHandler;->sendObtainMessage(Landroid/os/Handler;IIILjava/lang/Object;)V
 
-    .line 3619
+    .line 3667
     const-string v2, "CameraThread"
 
     const-string v3, "InfoListener, reach FATA32 file \'system file size limitation"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3621
+    .line 3669
     :pswitch_5
     const-string v2, "CameraThread"
 
@@ -348,7 +348,7 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3622
+    .line 3670
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mUIHandler:Landroid/os/Handler;
@@ -357,14 +357,14 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/MessageHandler;->sendEmptyMessage(Landroid/os/Handler;I)V
 
-    .line 3623
+    .line 3671
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mCameraHandler:Lcom/android/camera/CameraThread$MainHandler;
 
     invoke-static {v2, v8}, Lcom/android/camera/MessageHandler;->removeMessages(Landroid/os/Handler;I)V
 
-    .line 3624
+    .line 3672
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mCameraHandler:Lcom/android/camera/CameraThread$MainHandler;
@@ -373,7 +373,7 @@
 
     goto/16 :goto_0
 
-    .line 3627
+    .line 3675
     :pswitch_6
     invoke-virtual {v0}, Lcom/android/camera/RecordLimitCheck;->getUseTimeOut_API()Z
 
@@ -381,7 +381,7 @@
 
     if-nez v2, :cond_8
 
-    .line 3628
+    .line 3676
     const-string v2, "CameraThread"
 
     const-string v3, "InfoListener, ui reach time limit, no api - do nothing"
@@ -390,25 +390,25 @@
 
     goto/16 :goto_0
 
-    .line 3631
+    .line 3679
     :cond_8
     invoke-virtual {v0, v4}, Lcom/android/camera/RecordLimitCheck;->setFileSizelimit_API(Z)V
 
-    .line 3632
+    .line 3680
     const-string v2, "CameraThread"
 
     const-string v3, "Block Capture UI - InfoListener, reach max file size to stop recorder"
 
     invoke-static {v2, v3}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3634
+    .line 3682
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mCameraHandler:Lcom/android/camera/CameraThread$MainHandler;
 
     invoke-static {v2, v8}, Lcom/android/camera/MessageHandler;->removeMessages(Landroid/os/Handler;I)V
 
-    .line 3635
+    .line 3683
     iget-object v2, p0, Lcom/android/camera/CameraThread$InfoListener;->this$0:Lcom/android/camera/CameraThread;
 
     iget-object v2, v2, Lcom/android/camera/CameraThread;->mCameraHandler:Lcom/android/camera/CameraThread$MainHandler;
@@ -417,7 +417,7 @@
 
     goto/16 :goto_0
 
-    .line 3639
+    .line 3687
     :pswitch_7
     const-string v2, "CameraThread"
 
@@ -427,7 +427,7 @@
 
     goto/16 :goto_0
 
-    .line 3573
+    .line 3621
     nop
 
     :pswitch_data_0
@@ -438,7 +438,7 @@
         :pswitch_2
     .end packed-switch
 
-    .line 3615
+    .line 3663
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_5

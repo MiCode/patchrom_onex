@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 272
+    .line 319
     iput-object p1, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "binder"
 
     .prologue
-    .line 279
+    .line 326
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-static {p2}, Lcom/htc/dlnainterface/IDLNAPluginService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -52,7 +52,7 @@
 
     iput-object v3, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 280
+    .line 327
     const-string v2, "HtcDLNAServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -99,14 +99,14 @@
 
     invoke-static {v2, v3}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 281
+    .line 328
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v2, :cond_1
 
-    .line 283
+    .line 330
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     #getter for: Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
@@ -114,19 +114,19 @@
 
     move-result-object v0
 
-    .line 284
+    .line 331
     .local v0, clientListener:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     if-eqz v0, :cond_0
 
-    .line 285
+    .line 332
     invoke-interface {v0}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceDisconnected()V
 
-    .line 303
+    .line 350
     :cond_0
     :goto_0
     return-void
 
-    .line 291
+    .line 338
     .end local v0           #clientListener:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     :cond_1
     :try_start_0
@@ -150,7 +150,7 @@
 
     invoke-interface {v2, v3, v4}, Lcom/htc/dlnainterface/IDLNAPluginService;->registerCallback(ILcom/htc/dlnainterface/IDLNAPluginNotify;)V
 
-    .line 292
+    .line 339
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v2, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -168,7 +168,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 300
+    .line 347
     :goto_1
     iget-object v2, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
@@ -177,21 +177,21 @@
 
     move-result-object v0
 
-    .line 301
+    .line 348
     .restart local v0       #clientListener:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     if-eqz v0, :cond_0
 
-    .line 302
+    .line 349
     invoke-interface {v0}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceConnected()V
 
     goto :goto_0
 
-    .line 294
+    .line 341
     .end local v0           #clientListener:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     :catch_0
     move-exception v1
 
-    .line 297
+    .line 344
     .local v1, ex:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -203,7 +203,7 @@
     .parameter "name"
 
     .prologue
-    .line 309
+    .line 356
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -226,7 +226,7 @@
 
     invoke-static {v1, v2}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 310
+    .line 357
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     #getter for: Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
@@ -234,14 +234,14 @@
 
     move-result-object v0
 
-    .line 311
+    .line 358
     .local v0, clientListener:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     if-eqz v0, :cond_0
 
-    .line 312
+    .line 359
     invoke-interface {v0}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceDisconnected()V
 
-    .line 313
+    .line 360
     :cond_0
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
@@ -249,6 +249,6 @@
 
     iput-object v2, v1, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 314
+    .line 361
     return-void
 .end method

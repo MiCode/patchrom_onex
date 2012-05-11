@@ -521,7 +521,7 @@
     .parameter "ctx"
 
     .prologue
-    const v6, 0x208025c
+    const v6, 0x208025d
 
     .line 139
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -530,7 +530,7 @@
 
     .line 141
     .local v3, res:Landroid/content/res/Resources;
-    const v5, 0x2080247
+    const v5, 0x2080248
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -539,7 +539,7 @@
     sput-object v5, Lcom/htc/textselection/HtcTextSelectionManager;->icon_copy:Landroid/graphics/drawable/Drawable;
 
     .line 142
-    const v5, 0x2080256
+    const v5, 0x2080257
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -548,7 +548,7 @@
     sput-object v5, Lcom/htc/textselection/HtcTextSelectionManager;->icon_paste:Landroid/graphics/drawable/Drawable;
 
     .line 143
-    const v5, 0x2080248
+    const v5, 0x2080249
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -557,7 +557,7 @@
     sput-object v5, Lcom/htc/textselection/HtcTextSelectionManager;->icon_cut:Landroid/graphics/drawable/Drawable;
 
     .line 144
-    const v5, 0x2080259
+    const v5, 0x208025a
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -589,7 +589,7 @@
     sput-object v5, Lcom/htc/textselection/HtcTextSelectionManager;->icon_select_all:Landroid/graphics/drawable/Drawable;
 
     .line 148
-    const v5, 0x2080252
+    const v5, 0x2080253
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1072,7 +1072,7 @@
     .prologue
     const/4 v8, 0x0
 
-    const v7, 0x2080301
+    const v7, 0x2080302
 
     .line 389
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -1259,7 +1259,7 @@
     .prologue
     const/4 v8, 0x0
 
-    const v7, 0x2080302
+    const v7, 0x2080303
 
     .line 417
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;

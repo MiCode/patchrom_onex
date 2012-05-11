@@ -371,19 +371,19 @@
     .locals 1
 
     .prologue
-    .line 2620
+    .line 2619
     const/4 v0, 0x0
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->mNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
-    .line 2621
+    .line 2620
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->mNameValueCacheLock:Ljava/lang/Object;
 
-    .line 2695
+    .line 2694
     const-string v0, "content://settings/gservices"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -399,10 +399,10 @@
     .locals 0
 
     .prologue
-    .line 2602
+    .line 2601
     invoke-direct {p0}, Lcom/htc/wrap/android/provider/HtcWrapSettings$NameValueTable;-><init>()V
 
-    .line 3781
+    .line 3780
     return-void
 .end method
 
@@ -413,12 +413,12 @@
     .parameter "defValue"
 
     .prologue
-    .line 2656
+    .line 2655
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2659
+    .line 2658
     .local v1, valString:Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -429,7 +429,7 @@
 
     move-result v2
 
-    .line 2663
+    .line 2662
     .local v2, value:I
     :goto_0
     return v2
@@ -438,14 +438,14 @@
     :cond_0
     move v2, p2
 
-    .line 2659
+    .line 2658
     goto :goto_0
 
-    .line 2660
+    .line 2659
     :catch_0
     move-exception v0
 
-    .line 2661
+    .line 2660
     .local v0, e:Ljava/lang/NumberFormatException;
     move v2, p2
 
@@ -460,12 +460,12 @@
     .parameter "defValue"
 
     .prologue
-    .line 2672
+    .line 2671
     invoke-static {p0, p1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2675
+    .line 2674
     .local v1, valString:Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -476,7 +476,7 @@
 
     move-result-wide v2
 
-    .line 2679
+    .line 2678
     .local v2, value:J
     :goto_0
     return-wide v2
@@ -485,14 +485,14 @@
     :cond_0
     move-wide v2, p2
 
-    .line 2675
+    .line 2674
     goto :goto_0
 
-    .line 2676
+    .line 2675
     :catch_0
     move-exception v0
 
-    .line 2677
+    .line 2676
     .local v0, e:Ljava/lang/NumberFormatException;
     move-wide v2, p2
 
@@ -506,18 +506,18 @@
     .parameter "name"
 
     .prologue
-    .line 2630
+    .line 2629
     sget-object v1, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->mNameValueCacheLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 2631
+    .line 2630
     :try_start_0
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->mNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
     if-nez v0, :cond_0
 
-    .line 2632
+    .line 2631
     new-instance v0, Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
     const-string v2, "sys.settings_gservices_version"
@@ -530,7 +530,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->mNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
-    .line 2634
+    .line 2633
     :cond_0
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->mNameValueCache:Lcom/htc/wrap/android/provider/Settings$NameValueCache;
 
@@ -542,7 +542,7 @@
 
     return-object v0
 
-    .line 2635
+    .line 2634
     :catchall_0
     move-exception v0
 
@@ -558,7 +558,7 @@
     .parameter "name"
 
     .prologue
-    .line 2689
+    .line 2688
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v0, p0}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->getUriFor(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
@@ -575,7 +575,7 @@
     .parameter "value"
 
     .prologue
-    .line 2647
+    .line 2646
     sget-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {p0, v0, p1, p2}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Gservices;->putString(Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Z

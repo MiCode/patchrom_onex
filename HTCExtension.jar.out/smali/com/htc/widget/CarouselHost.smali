@@ -949,7 +949,7 @@
 
     .line 1319
     .local v1, backgroundPadding:Landroid/graphics/Rect;
-    const v9, 0x208019d
+    const v9, 0x208019e
 
     invoke-virtual {v5, v9}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -957,7 +957,7 @@
 
     .line 1320
     .local v7, tileDrawable:Landroid/graphics/drawable/Drawable;
-    const v9, 0x208019e
+    const v9, 0x208019f
 
     invoke-virtual {v5, v9}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1147,7 +1147,7 @@
     if-nez v4, :cond_6
 
     .line 1360
-    const v9, 0x208019e
+    const v9, 0x208019f
 
     invoke-virtual {v8, v9}, Lcom/htc/widget/CarouselFrameLayout;->setBackgroundResource(I)V
 
@@ -1236,7 +1236,7 @@
 
     const-string v10, "common_subnav_tab_rearrange_removeable"
 
-    const v11, 0x208019c
+    const v11, 0x208019d
 
     invoke-static {v9, v10, v11}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

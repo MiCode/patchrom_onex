@@ -25,20 +25,20 @@
     .locals 1
 
     .prologue
-    .line 865
+    .line 873
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 866
+    .line 874
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/webkit/WebViewCore$AutoFillData;->mQueryId:I
 
-    .line 867
+    .line 875
     const-string v0, ""
 
     iput-object v0, p0, Landroid/webkit/WebViewCore$AutoFillData;->mPreview:Ljava/lang/String;
 
-    .line 868
+    .line 876
     return-void
 .end method
 
@@ -48,16 +48,16 @@
     .parameter "preview"
 
     .prologue
-    .line 870
+    .line 878
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 871
+    .line 879
     iput p1, p0, Landroid/webkit/WebViewCore$AutoFillData;->mQueryId:I
 
-    .line 872
+    .line 880
     iput-object p2, p0, Landroid/webkit/WebViewCore$AutoFillData;->mPreview:Ljava/lang/String;
 
-    .line 873
+    .line 881
     return-void
 .end method
 
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 880
+    .line 888
     iget-object v0, p0, Landroid/webkit/WebViewCore$AutoFillData;->mPreview:Ljava/lang/String;
 
     return-object v0
@@ -77,7 +77,7 @@
     .locals 1
 
     .prologue
-    .line 876
+    .line 884
     iget v0, p0, Landroid/webkit/WebViewCore$AutoFillData;->mQueryId:I
 
     return v0

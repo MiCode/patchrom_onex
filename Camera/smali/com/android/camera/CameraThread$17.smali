@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/CameraThread;->setCaptureRotation(Lcom/android/camera/rotate/UIRotation;)V
+    value = Lcom/android/camera/CameraThread;->setFirstFrameCacheState(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,20 +20,20 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/CameraThread;
 
-.field final synthetic val$rotation:Lcom/android/camera/rotate/UIRotation;
+.field final synthetic val$isEnabled:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/CameraThread;Lcom/android/camera/rotate/UIRotation;)V
+.method constructor <init>(Lcom/android/camera/CameraThread;Z)V
     .locals 0
     .parameter
     .parameter
 
     .prologue
-    .line 5099
+    .line 5119
     iput-object p1, p0, Lcom/android/camera/CameraThread$17;->this$0:Lcom/android/camera/CameraThread;
 
-    iput-object p2, p0, Lcom/android/camera/CameraThread$17;->val$rotation:Lcom/android/camera/rotate/UIRotation;
+    iput-boolean p2, p0, Lcom/android/camera/CameraThread$17;->val$isEnabled:Z
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,14 +46,14 @@
     .locals 2
 
     .prologue
-    .line 5103
+    .line 5123
     iget-object v0, p0, Lcom/android/camera/CameraThread$17;->this$0:Lcom/android/camera/CameraThread;
 
-    iget-object v1, p0, Lcom/android/camera/CameraThread$17;->val$rotation:Lcom/android/camera/rotate/UIRotation;
+    iget-boolean v1, p0, Lcom/android/camera/CameraThread$17;->val$isEnabled:Z
 
-    #calls: Lcom/android/camera/CameraThread;->setCaptureRotationInternal(Lcom/android/camera/rotate/UIRotation;)V
-    invoke-static {v0, v1}, Lcom/android/camera/CameraThread;->access$4400(Lcom/android/camera/CameraThread;Lcom/android/camera/rotate/UIRotation;)V
+    #calls: Lcom/android/camera/CameraThread;->setFirstFrameCacheStateInternal(Z)V
+    invoke-static {v0, v1}, Lcom/android/camera/CameraThread;->access$4500(Lcom/android/camera/CameraThread;Z)V
 
-    .line 5104
+    .line 5124
     return-void
 .end method

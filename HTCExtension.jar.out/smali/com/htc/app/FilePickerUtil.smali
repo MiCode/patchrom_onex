@@ -221,7 +221,7 @@
     sput-object v0, Lcom/htc/app/FilePickerUtil;->ExtStoragePath:Ljava/lang/String;
 
     .line 750
-    const v0, 0x2080210
+    const v0, 0x2080211
 
     sput v0, Lcom/htc/app/FilePickerUtil;->drawableResId_Folder_Icon:I
 
@@ -1863,19 +1863,19 @@
 
     .prologue
     .line 756
-    const v9, 0x20801fa
+    const v9, 0x20801fb
 
     .line 758
     .local v9, drawableResId_MsWord_Icon:I
-    const v7, 0x208020f
+    const v7, 0x2080210
 
     .line 760
     .local v7, drawableResId_MsExcel_Icon:I
-    const v8, 0x2080208
+    const v8, 0x2080209
 
     .line 762
     .local v8, drawableResId_MsPowerPoint_Icon:I
-    const v10, 0x2080207
+    const v10, 0x2080208
 
     .line 764
     .local v10, drawableResId_PDF_Icon:I
@@ -1883,7 +1883,7 @@
 
     .line 766
     .local v11, drawableResId_Photo_Icon:I
-    const v4, 0x20801f5
+    const v4, 0x20801f6
 
     .line 768
     .local v4, drawableResId_Audio_Icon:I
@@ -1891,7 +1891,7 @@
 
     .line 770
     .local v13, drawableResId_Video_Icon:I
-    const v6, 0x2080201
+    const v6, 0x2080202
 
     .line 772
     .local v6, drawableResId_Html_Icon:I
@@ -1899,7 +1899,7 @@
 
     .line 774
     .local v12, drawableResId_TextFile_Icon:I
-    const v5, 0x20801fb
+    const v5, 0x20801fc
 
     .line 777
     .local v5, drawableResId_DrmFile_Icon:I

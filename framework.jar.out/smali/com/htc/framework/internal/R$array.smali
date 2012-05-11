@@ -15,9 +15,11 @@
 
 
 # static fields
-.field public static final htc_config_threeFingersSwipeVibePattern:I = 0x4050000
+.field public static final htc_config_threeFingersSwipeVibePattern:I = 0x4060001
 
-.field public static final htc_config_virtualKeyVibePattern:I = 0x4050001
+.field public static final htc_config_virtualKeyVibePattern:I = 0x4060002
+
+.field public static final localized_opertator_name:I = 0x4060000
 
 
 # direct methods

@@ -29,12 +29,12 @@
     .parameter
 
     .prologue
-    .line 3061
+    .line 3056
     iput-object p1, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3062
+    .line 3057
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
@@ -50,7 +50,7 @@
     .parameter "extra"
 
     .prologue
-    .line 3086
+    .line 3083
     const-string v0, "MediaPlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,30 +83,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3087
+    .line 3084
     iget-object v0, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 3088
-    const/16 v0, -0x12c
-
-    if-ne p1, v0, :cond_1
-
-    .line 3089
-    const-string v0, "MediaPlayer"
-
-    const-string/jumbo v1, "skip invalid render ID error"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3096
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 3093
-    :cond_1
+    .line 3085
     iget-object v0, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
@@ -116,7 +98,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3094
+    .line 3086
     iget-object v0, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
@@ -128,7 +110,17 @@
 
     invoke-interface {v0, v1, p1, p2}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
 
-    goto :goto_0
+    .line 3087
+    iget-object v0, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
+
+    const/4 v1, 0x0
+
+    #calls: Landroid/media/MediaPlayer;->stayAwake(Z)V
+    invoke-static {v0, v1}, Landroid/media/MediaPlayer;->access$400(Landroid/media/MediaPlayer;Z)V
+
+    .line 3090
+    :cond_0
+    return-void
 .end method
 
 .method public onResponse(II)V
@@ -141,7 +133,7 @@
 
     const/4 v3, 0x0
 
-    .line 3100
+    .line 3094
     const-string v1, "MediaPlayer"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -174,16 +166,22 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3101
+    .line 3095
     const/4 v0, 0x0
 
-    .line 3102
+    .line 3096
     .local v0, bDLNAConnected:Z
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v1, :cond_0
 
-    .line 3103
+    .line 3097
+    iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    #setter for: Landroid/media/MediaPlayer;->mDLNAInitDone:Z
+    invoke-static {v1, v2}, Landroid/media/MediaPlayer;->access$1402(Landroid/media/MediaPlayer;Z)Z
+
+    .line 3098
     sparse-switch p1, :sswitch_data_0
 
     .line 3137
@@ -213,25 +211,25 @@
     :goto_0
     return-void
 
-    .line 3105
+    .line 3100
     :sswitch_0
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     #setter for: Landroid/media/MediaPlayer;->mDLNAMode:Z
-    invoke-static {v1, v3}, Landroid/media/MediaPlayer;->access$1402(Landroid/media/MediaPlayer;Z)Z
+    invoke-static {v1, v3}, Landroid/media/MediaPlayer;->access$1502(Landroid/media/MediaPlayer;Z)Z
 
-    .line 3106
+    .line 3101
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    invoke-virtual {v1}, Landroid/media/MediaPlayer;->doStart()V
+    invoke-virtual {v1}, Landroid/media/MediaPlayer;->start()V
 
     goto :goto_0
 
-    .line 3109
+    .line 3104
     :sswitch_1
     packed-switch p2, :pswitch_data_0
 
-    .line 3119
+    .line 3114
     const-string v1, "MediaPlayer"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -254,52 +252,141 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3122
+    .line 3117
     :goto_1
     iget-object v4, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mDLNAMode:Z
-    invoke-static {v1}, Landroid/media/MediaPlayer;->access$1400(Landroid/media/MediaPlayer;)Z
+    invoke-static {v1}, Landroid/media/MediaPlayer;->access$1500(Landroid/media/MediaPlayer;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     move v1, v2
 
     :goto_2
     #setter for: Landroid/media/MediaPlayer;->mDLNAMode:Z
-    invoke-static {v4, v1}, Landroid/media/MediaPlayer;->access$1402(Landroid/media/MediaPlayer;Z)Z
+    invoke-static {v4, v1}, Landroid/media/MediaPlayer;->access$1502(Landroid/media/MediaPlayer;Z)Z
 
-    .line 3124
+    .line 3119
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mDLNAMode:Z
-    invoke-static {v1}, Landroid/media/MediaPlayer;->access$1400(Landroid/media/MediaPlayer;)Z
+    invoke-static {v1}, Landroid/media/MediaPlayer;->access$1500(Landroid/media/MediaPlayer;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    .line 3125
+    .line 3120
     const-string v1, "MediaPlayer"
 
     const-string v2, "Prepare success and content is not audio only, enable DLNA mode; set setWirelessDisplayStatus(false)"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3126
+    .line 3121
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     #calls: Landroid/media/MediaPlayer;->setWirelessDisplayStatus(Z)V
-    invoke-static {v1, v3}, Landroid/media/MediaPlayer;->access$1500(Landroid/media/MediaPlayer;Z)V
+    invoke-static {v1, v3}, Landroid/media/MediaPlayer;->access$1600(Landroid/media/MediaPlayer;Z)V
+
+    .line 3127
+    :goto_3
+    iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    #getter for: Landroid/media/MediaPlayer;->mDLNAMode:Z
+    invoke-static {v1}, Landroid/media/MediaPlayer;->access$1500(Landroid/media/MediaPlayer;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 3128
+    iget-object v1, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
+
+    #getter for: Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    invoke-static {v1}, Landroid/media/MediaPlayer;->access$1100(Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer$OnErrorListener;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 3129
+    iget-object v1, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
+
+    #getter for: Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
+    invoke-static {v1}, Landroid/media/MediaPlayer;->access$1100(Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer$OnErrorListener;
+
+    move-result-object v1
+
+    iget-object v2, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    const/16 v4, -0x1f4
+
+    invoke-interface {v1, v2, v4, v3}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
+
+    goto :goto_0
+
+    .line 3106
+    :pswitch_0
+    const-string v1, "MediaPlayer"
+
+    const-string v4, "DLNA PREPARE SUCCESS"
+
+    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3107
+    const/4 v0, 0x1
+
+    .line 3108
+    goto :goto_1
+
+    .line 3110
+    :pswitch_1
+    const-string v1, "MediaPlayer"
+
+    const-string v4, "DLNA PREPARE FAILED"
+
+    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3111
+    iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    #setter for: Landroid/media/MediaPlayer;->mDLNAMode:Z
+    invoke-static {v1, v3}, Landroid/media/MediaPlayer;->access$1502(Landroid/media/MediaPlayer;Z)Z
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v3
+
+    .line 3117
+    goto :goto_2
+
+    .line 3124
+    :cond_2
+    const-string v1, "MediaPlayer"
+
+    const-string v4, "Prepare failed, do not enable DLNA mode; set setWirelessDisplayStatus(true)"
+
+    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3125
+    iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
+
+    #calls: Landroid/media/MediaPlayer;->setWirelessDisplayStatus(Z)V
+    invoke-static {v1, v2}, Landroid/media/MediaPlayer;->access$1600(Landroid/media/MediaPlayer;Z)V
+
+    goto :goto_3
 
     .line 3132
-    :goto_3
+    :cond_3
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
@@ -307,7 +394,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_4
 
     .line 3133
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
@@ -324,66 +411,14 @@
     invoke-interface {v1, v2, v3}, Landroid/media/MediaPlayer$OnBufferingUpdateListener;->onBufferingUpdate(Landroid/media/MediaPlayer;I)V
 
     .line 3134
-    :cond_1
+    :cond_4
     iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    invoke-virtual {v1}, Landroid/media/MediaPlayer;->doStart()V
+    invoke-virtual {v1}, Landroid/media/MediaPlayer;->start()V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 3111
-    :pswitch_0
-    const-string v1, "MediaPlayer"
-
-    const-string v4, "DLNA PREPARE SUCCESS"
-
-    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3112
-    const/4 v0, 0x1
-
-    .line 3113
-    goto :goto_1
-
-    .line 3115
-    :pswitch_1
-    const-string v1, "MediaPlayer"
-
-    const-string v4, "DLNA PREPARE FAILED"
-
-    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3116
-    iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    #setter for: Landroid/media/MediaPlayer;->mDLNAMode:Z
-    invoke-static {v1, v3}, Landroid/media/MediaPlayer;->access$1402(Landroid/media/MediaPlayer;Z)Z
-
-    goto :goto_1
-
-    :cond_2
-    move v1, v3
-
-    .line 3122
-    goto :goto_2
-
-    .line 3129
-    :cond_3
-    const-string v1, "MediaPlayer"
-
-    const-string v3, "Prepare failed, do not enable DLNA mode; set setWirelessDisplayStatus(true)"
-
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3130
-    iget-object v1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
-
-    #calls: Landroid/media/MediaPlayer;->setWirelessDisplayStatus(Z)V
-    invoke-static {v1, v2}, Landroid/media/MediaPlayer;->access$1500(Landroid/media/MediaPlayer;Z)V
-
-    goto :goto_3
-
-    .line 3103
+    .line 3098
     nop
 
     :sswitch_data_0
@@ -392,7 +427,7 @@
         0x2080 -> :sswitch_1
     .end sparse-switch
 
-    .line 3109
+    .line 3104
     :pswitch_data_0
     .packed-switch 0x2081
         :pswitch_0
@@ -406,7 +441,7 @@
     .parameter "extra"
 
     .prologue
-    .line 3071
+    .line 3066
     const-string v0, "MediaPlayer"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -439,20 +474,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3072
+    .line 3067
     iget-object v0, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 3073
+    .line 3068
     packed-switch p1, :pswitch_data_0
 
-    .line 3082
+    .line 3079
     :cond_0
     :goto_0
     return-void
 
-    .line 3075
+    .line 3070
     :pswitch_0
     iget-object v0, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
@@ -463,7 +498,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3076
+    .line 3071
     iget-object v0, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
@@ -475,9 +510,17 @@
 
     invoke-interface {v0, v1}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
 
+    .line 3072
+    iget-object v0, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
+
+    const/4 v1, 0x0
+
+    #calls: Landroid/media/MediaPlayer;->stayAwake(Z)V
+    invoke-static {v0, v1}, Landroid/media/MediaPlayer;->access$400(Landroid/media/MediaPlayer;Z)V
+
     goto :goto_0
 
-    .line 3073
+    .line 3068
     nop
 
     :pswitch_data_0
@@ -491,9 +534,9 @@
     .parameter "mp"
 
     .prologue
-    .line 3066
+    .line 3061
     iput-object p1, p0, Landroid/media/MediaPlayer$3;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 3067
+    .line 3062
     return-void
 .end method

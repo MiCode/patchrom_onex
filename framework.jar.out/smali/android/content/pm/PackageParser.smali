@@ -14377,7 +14377,6 @@
 
     iput-object v0, v1, Landroid/content/pm/PackageParser$Package;->mPath:Ljava/lang/String;
 
-    .line 2400
     move-object/from16 v0, p0
 
     iget-object v6, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
@@ -14404,12 +14403,10 @@
 
     move-object/from16 v5, v24
 
-    .line 421
     .end local v24           #assmgr:Landroid/content/res/AssetManager;
     .restart local v5       #assmgr:Landroid/content/res/AssetManager;
     goto/16 :goto_2
 
-    .line 425
     .end local v31           #res:Landroid/content/res/Resources;
     .restart local v25       #cookie:I
     .restart local v32       #res:Landroid/content/res/Resources;
@@ -14428,10 +14425,8 @@
     .parameter "onlyCoreApps"
 
     .prologue
-    .line 197
     iput-boolean p1, p0, Landroid/content/pm/PackageParser;->mOnlyCoreApps:Z
 
-    .line 198
     return-void
 .end method
 
@@ -14440,10 +14435,8 @@
     .parameter "procs"
 
     .prologue
-    .line 193
     iput-object p1, p0, Landroid/content/pm/PackageParser;->mSeparateProcesses:[Ljava/lang/String;
 
-    .line 194
     return-void
 .end method
 
@@ -14466,10 +14459,12 @@
 
     const/16 p2, 0x3e7
 
+    .line 713
     :cond_0
     :goto_0
     return p2
 
+    .line 1487
     :cond_1
     const/16 v0, -0x3e8
 

@@ -1001,7 +1001,7 @@
 
     move-result-object v7
 
-    const v8, 0x2080198
+    const v8, 0x2080199
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1014,7 +1014,7 @@
 
     move-result-object v7
 
-    const v8, 0x208017a
+    const v8, 0x208017b
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -22899,7 +22899,7 @@
 
     const-string v4, "list_selector_background_pressed"
 
-    const v5, 0x208026f
+    const v5, 0x2080270
 
     invoke-static {v3, v4, v5}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1603
+    .line 1614
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$HdmiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,12 +44,12 @@
 
     const/4 v7, 0x1
 
-    .line 1607
+    .line 1618
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1608
+    .line 1619
     .local v0, action:Ljava/lang/String;
     const-string v4, "WirelessDisplayService"
 
@@ -73,7 +73,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1610
+    .line 1621
     const-string v4, "android.intent.action.HDMI_AUDIO_PLUG"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -82,14 +82,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 1612
+    .line 1623
     const-string v4, "state"
 
     invoke-virtual {p2, v4, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1613
+    .line 1624
     .local v3, plug:I
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayService$HdmiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
@@ -102,33 +102,33 @@
 
     move-result v1
 
-    .line 1615
+    .line 1626
     .local v1, curMirrState:I
     if-ne v3, v7, :cond_1
 
-    .line 1616
+    .line 1627
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6000()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v4
 
     invoke-virtual {v4, v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 1617
+    .line 1628
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayService$HdmiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-virtual {v4, v8}, Lcom/htc/server/WirelessDisplayService;->setFingerGestureEnable(Z)V
 
-    .line 1618
+    .line 1629
     if-eq v1, v7, :cond_0
 
-    .line 1619
+    .line 1630
     const-string v4, "WirelessDisplayService"
 
     const-string v5, "HdmiReceiver: HDMI is plugged STOP Everything"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1620
+    .line 1631
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v4
@@ -139,7 +139,7 @@
 
     move-result-object v2
 
-    .line 1621
+    .line 1632
     .local v2, msgHdmi:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -147,7 +147,7 @@
 
     invoke-virtual {v4, v2}, Lcom/htc/server/WirelessDisplayService$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1631
+    .line 1642
     .end local v1           #curMirrState:I
     .end local v2           #msgHdmi:Landroid/os/Message;
     .end local v3           #plug:I
@@ -155,34 +155,34 @@
     :goto_0
     return-void
 
-    .line 1623
+    .line 1634
     .restart local v1       #curMirrState:I
     .restart local v3       #plug:I
     :cond_1
     if-nez v3, :cond_2
 
-    .line 1624
+    .line 1635
     const-string v4, "WirelessDisplayService"
 
     const-string v5, "HdmiReceiver: HDMI is un-plugged"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1625
+    .line 1636
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6000()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v4
 
     invoke-virtual {v4, v8}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 1626
+    .line 1637
     iget-object v4, p0, Lcom/htc/server/WirelessDisplayService$HdmiReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-virtual {v4, v7}, Lcom/htc/server/WirelessDisplayService;->setFingerGestureEnable(Z)V
 
     goto :goto_0
 
-    .line 1628
+    .line 1639
     :cond_2
     const-string v4, "WirelessDisplayService"
 

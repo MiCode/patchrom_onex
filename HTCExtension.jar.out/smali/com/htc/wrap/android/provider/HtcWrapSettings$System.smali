@@ -27,7 +27,9 @@
 
 .field public static final BLUETOOTH_DISCOVERABILITY_END_TIMESTAMP:Ljava/lang/String; = "bluetooth_discoverability_end_timestamp"
 
-.field public static final BLUETOOTH_FTP_SETTINGS:Ljava/lang/String; = "bt_svcst_bluetooth_ftp"
+.field public static final BLUETOOTH_FTP_SETTINGS:Ljava/lang/String; = "bt_ftp_enable"
+
+.field public static final BLUETOOTH_MAP_SETTINGS:Ljava/lang/String; = "bt_map_enable"
 
 .field public static final BLUETOOTH_NAME:Ljava/lang/String; = "bluetooth_name"
 
@@ -594,7 +596,7 @@
     :goto_0
     sput v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$System;->WIFI_SLEEP_POLICY_DEFAULT:I
 
-    .line 586
+    .line 587
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->VOLUME_SETTINGS:[Ljava/lang/String;
 
     new-array v3, v1, [Ljava/lang/String;
@@ -614,7 +616,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$System;->VOLUME_SETTINGS:[Ljava/lang/String;
 
-    .line 615
+    .line 616
     const-string v0, "cal_notification"
 
     invoke-static {v0}, Lcom/htc/wrap/android/provider/HtcWrapSettings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -623,7 +625,7 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$System;->DEFAULT_CALENDAR_NOTIFICATION_URI:Landroid/net/Uri;
 
-    .line 633
+    .line 634
     const-string v0, "msg_notification"
 
     invoke-static {v0}, Lcom/htc/wrap/android/provider/HtcWrapSettings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -632,10 +634,10 @@
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapSettings$System;->DEFAULT_MSG_NOTIFICATION_URI:Landroid/net/Uri;
 
-    .line 1386
+    .line 1387
     sget-object v0, Lcom/htc/wrap/android/provider/Settings$System;->SETTINGS_TO_BACKUP:[Ljava/lang/String;
 
-    const/16 v3, 0x39
+    const/16 v3, 0x37
 
     new-array v3, v3, [Ljava/lang/String;
 
@@ -647,13 +649,13 @@
 
     aput-object v2, v3, v5
 
-    const-string v2, "bluetooth_name"
+    const-string v2, "bt_ftp_enable"
 
     aput-object v2, v3, v1
 
     const/4 v1, 0x3
 
-    const-string v2, "bt_svcst_bluetooth_ftp"
+    const-string v2, "bt_map_enable"
 
     aput-object v2, v3, v1
 
@@ -783,189 +785,177 @@
 
     const/16 v1, 0x19
 
-    const-string v2, "ringtone"
+    const-string v2, "silent_mode"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x1a
 
-    const-string v2, "alarm_alert"
+    const-string v2, "FOTA_periodic_checkin"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x1b
 
-    const-string v2, "silent_mode"
+    const-string v2, "roaming_ringtone_on"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x1c
 
-    const-string v2, "FOTA_periodic_checkin"
+    const-string v2, "sd_card_notifications"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x1d
 
-    const-string v2, "roaming_ringtone_on"
+    const-string v2, "psaver_enable"
 
     aput-object v2, v3, v1
 
-    const-string v1, "sd_card_notifications"
+    const-string v1, "psaver_schedule"
 
     aput-object v1, v3, v7
 
     const/16 v1, 0x1f
 
-    const-string v2, "psaver_enable"
+    const-string v2, "htc_application_automatic_startup"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x20
 
-    const-string v2, "psaver_schedule"
+    const-string v2, "htc_application_notification"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x21
 
-    const-string v2, "htc_application_automatic_startup"
+    const-string v2, "htc_wireless_sleep_mode_enabled"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x22
 
-    const-string v2, "htc_application_notification"
+    const-string v2, "htc_wireless_sleep_start_time"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x23
 
-    const-string v2, "htc_wireless_sleep_mode_enabled"
+    const-string v2, "htc_wireless_sleep_end_time"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x24
 
-    const-string v2, "htc_wireless_sleep_start_time"
+    const-string v2, "charm_message_notification"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x25
 
-    const-string v2, "htc_wireless_sleep_end_time"
+    const-string v2, "charm_phone_notification"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x26
 
-    const-string v2, "charm_message_notification"
+    const-string v2, "charm_voice_mail_notification"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x27
 
-    const-string v2, "charm_phone_notification"
+    const-string v2, "charm_message_received_notification"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x28
 
-    const-string v2, "charm_voice_mail_notification"
+    const-string v2, "charm_indicator_supported"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x29
 
-    const-string v2, "charm_message_received_notification"
+    const-string v2, "htcspeak_default_lang"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x2a
 
-    const-string v2, "charm_indicator_supported"
+    const-string v2, "enable_power_efficiency"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x2b
 
-    const-string v2, "htcspeak_default_lang"
+    const-string v2, "set_powermode"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x2c
 
-    const-string v2, "enable_power_efficiency"
+    const-string v2, "powersaver_enable"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x2d
 
-    const-string v2, "set_powermode"
+    const-string v2, "haptic_feedback_theme"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x2e
 
-    const-string v2, "powersaver_enable"
+    const-string v2, "haptic_ringtone_id"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x2f
 
-    const-string v2, "haptic_feedback_theme"
+    const-string v2, "haptic_ringtone_name"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x30
 
-    const-string v2, "haptic_ringtone_id"
+    const-string v2, "haptic_notifytone_id"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x31
 
-    const-string v2, "haptic_ringtone_name"
+    const-string v2, "haptic_notifytone_name"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x32
 
-    const-string v2, "haptic_notifytone_id"
+    const-string v2, "htc_app_storage_loc_backup"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x33
 
-    const-string v2, "haptic_notifytone_name"
+    const-string v2, "htc_gestures_enabled"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x34
 
-    const-string v2, "htc_app_storage_loc_backup"
+    const-string v2, "htc_animation_enabled"
 
     aput-object v2, v3, v1
 
     const/16 v1, 0x35
 
-    const-string v2, "htc_gestures_enabled"
-
-    aput-object v2, v3, v1
-
-    const/16 v1, 0x36
-
-    const-string v2, "htc_animation_enabled"
-
-    aput-object v2, v3, v1
-
-    const/16 v1, 0x37
-
     const-string v2, "htc_window_animation_scale"
 
     aput-object v2, v3, v1
 
-    const/16 v1, 0x38
+    const/16 v1, 0x36
 
     const-string v2, "htc_transition_animation_scale"
 

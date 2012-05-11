@@ -33,7 +33,7 @@
 
 .field public static final isFaceDetectionEnabled:Z = true
 
-.field public static final isGeoTaggingEnabled:Z = false
+.field public static final isGeoTaggingEnabled:Z = true
 
 .field public static final isGridVisible:Z = false
 
@@ -61,12 +61,12 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 45
     sget-object v0, Lcom/android/camera/FlashMode;->Auto:Lcom/android/camera/FlashMode;
 
     sput-object v0, Lcom/android/camera/CameraSettings$DefaultValues;->flashMode:Lcom/android/camera/FlashMode;
 
-    .line 67
+    .line 68
     invoke-static {}, Lcom/android/camera/io/StorageSlot;->hasInternalMemorySlot()Z
 
     move-result v0
@@ -81,18 +81,18 @@
 
     if-nez v0, :cond_0
 
-    .line 68
+    .line 69
     invoke-static {}, Lcom/android/camera/io/StorageSlot;->getFirstInternalMemorySlot()Lcom/android/camera/io/StorageSlot;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/CameraSettings$DefaultValues;->storageSlot:Lcom/android/camera/io/StorageSlot;
 
-    .line 71
+    .line 72
     :goto_0
     return-void
 
-    .line 70
+    .line 71
     :cond_0
     sget-object v0, Lcom/android/camera/io/StorageSlot;->STORAGE_CARD:Lcom/android/camera/io/StorageSlot;
 
@@ -105,7 +105,7 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 42
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

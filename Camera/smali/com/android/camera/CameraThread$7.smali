@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/CameraThread;->checkStorageState(Z)V
+    value = Lcom/android/camera/CameraThread;->forceStopVideoRecording()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,20 +20,15 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/camera/CameraThread;
 
-.field final synthetic val$checkSize:Z
-
 
 # direct methods
-.method constructor <init>(Lcom/android/camera/CameraThread;Z)V
+.method constructor <init>(Lcom/android/camera/CameraThread;)V
     .locals 0
-    .parameter
     .parameter
 
     .prologue
-    .line 3811
+    .line 2015
     iput-object p1, p0, Lcom/android/camera/CameraThread$7;->this$0:Lcom/android/camera/CameraThread;
-
-    iput-boolean p2, p0, Lcom/android/camera/CameraThread$7;->val$checkSize:Z
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,25 +38,47 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 2
 
     .prologue
-    .line 3814
+    .line 2019
+    const-string v0, "CameraThread"
+
+    const-string v1, "[NV] forceStopVideoRecording()"
+
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2020
     iget-object v0, p0, Lcom/android/camera/CameraThread$7;->this$0:Lcom/android/camera/CameraThread;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Lcom/android/camera/CameraThread;->isRecording:Lcom/android/camera/property/Property;
 
-    iget-boolean v2, p0, Lcom/android/camera/CameraThread$7;->val$checkSize:Z
+    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/android/camera/CameraThread$7;->this$0:Lcom/android/camera/CameraThread;
+    move-result-object v0
 
-    invoke-virtual {v3}, Lcom/android/camera/CameraThread;->getPendingFileSize()J
+    check-cast v0, Ljava/lang/Boolean;
 
-    move-result-wide v3
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    #calls: Lcom/android/camera/CameraThread;->checkStorageStateInternal(Lcom/android/camera/io/StorageState;ZJ)V
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/android/camera/CameraThread;->access$000(Lcom/android/camera/CameraThread;Lcom/android/camera/io/StorageState;ZJ)V
+    move-result v0
 
-    .line 3815
+    if-eqz v0, :cond_0
+
+    .line 2022
+    const-string v0, "CameraThread"
+
+    const-string v1, "[NV] forceStopVideoRecording() - Stop recording directly"
+
+    invoke-static {v0, v1}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2023
+    iget-object v0, p0, Lcom/android/camera/CameraThread$7;->this$0:Lcom/android/camera/CameraThread;
+
+    #calls: Lcom/android/camera/CameraThread;->stopVideoRecording()V
+    invoke-static {v0}, Lcom/android/camera/CameraThread;->access$2800(Lcom/android/camera/CameraThread;)V
+
+    .line 2025
+    :cond_0
     return-void
 .end method

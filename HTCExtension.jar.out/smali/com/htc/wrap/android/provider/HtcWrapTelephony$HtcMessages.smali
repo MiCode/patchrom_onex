@@ -30,12 +30,12 @@
     .locals 1
 
     .prologue
-    .line 1615
+    .line 1619
     sget-object v0, Landroid/provider/Telephony$HtcMessages;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcMessages;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1620
+    .line 1624
     sget-object v0, Landroid/provider/Telephony$HtcMessages;->DEFAULT_SORT_ORDER:Ljava/lang/String;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$HtcMessages;->DEFAULT_SORT_ORDER:Ljava/lang/String;
@@ -47,7 +47,7 @@
     .locals 0
 
     .prologue
-    .line 1611
+    .line 1615
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 470
+    .line 530
     iput-object p1, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-direct {p0}, Landroid/media/dlnasharedmodule/HtcDLNARendererDiscoverListener;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "rendererName"
 
     .prologue
-    .line 475
+    .line 535
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,7 +73,7 @@
 
     invoke-static {v0, v1}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 476
+    .line 536
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     const/16 v1, 0x4e20
@@ -83,7 +83,7 @@
     #calls: Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->sendResponseMsg(Ljava/lang/String;ILjava/lang/String;)I
     invoke-static {v0, p1, v1, v2}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->access$300(Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;Ljava/lang/String;ILjava/lang/String;)I
 
-    .line 477
+    .line 537
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v1, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
@@ -94,7 +94,7 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->setRenderer(Ljava/lang/String;Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
 
-    .line 478
+    .line 538
     return-void
 .end method
 
@@ -102,14 +102,14 @@
     .locals 3
 
     .prologue
-    .line 484
+    .line 544
     const-string v0, "HtcDLNAServiceManager"
 
     const-string v1, "[setRendererAsDefaultRenderer][onTimeout]"
 
     invoke-static {v0, v1}, Landroid/media/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 485
+    .line 545
     iget-object v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;
 
     const/16 v1, -0x4000
@@ -119,6 +119,6 @@
     #calls: Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->sendErrorMsg(ILjava/lang/String;)I
     invoke-static {v0, v1, v2}, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;->access$400(Landroid/media/dlnasharedmodule/HtcDLNAServiceManager;ILjava/lang/String;)I
 
-    .line 486
+    .line 546
     return-void
 .end method

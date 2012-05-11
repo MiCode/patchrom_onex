@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 6000
+    .line 6004
     iput-object p1, p0, Lcom/android/camera/HTCCamera$21$1;->this$1:Lcom/android/camera/HTCCamera$21;
 
     iput-object p2, p0, Lcom/android/camera/HTCCamera$21$1;->val$property:Lcom/android/camera/property/Property;
@@ -51,7 +51,7 @@
     .locals 3
 
     .prologue
-    .line 6003
+    .line 6007
     iget-object v0, p0, Lcom/android/camera/HTCCamera$21$1;->this$1:Lcom/android/camera/HTCCamera$21;
 
     iget-object v0, v0, Lcom/android/camera/HTCCamera$21;->this$0:Lcom/android/camera/HTCCamera;
@@ -63,6 +63,6 @@
     #calls: Lcom/android/camera/HTCCamera;->onCameraThreadPropertyChanged(Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
     invoke-static {v0, v1, v2}, Lcom/android/camera/HTCCamera;->access$4200(Lcom/android/camera/HTCCamera;Lcom/android/camera/property/Property;Lcom/android/camera/property/PropertyChangedEventArgs;)V
 
-    .line 6004
+    .line 6008
     return-void
 .end method

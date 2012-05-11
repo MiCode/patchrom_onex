@@ -1223,7 +1223,7 @@ til kontoen %s"</string>
     <string name="permlab_fm_receiver">få adgang til FM-modtager</string>
     <string name="permdesc_fm_receiver">Sætter et program i stand til at få adgang til FM-modtagerfunktioner.</string>
     <string name="permlab_fm_transmitter">få adgang til FM-sender</string>
-    <string name="permdesc_fm_transmitter">Sætter et program i stand til at få adgang til FM-senderfunktioner.</string>
+    <string name="permdesc_fm_transmitter">Tillader at applikationen får adgang til FM-senderfunktioner.</string>
     <string name="permlab_obex">få adgang til OBEX-tjeneste</string>
     <string name="permdesc_obex">Sætter et program i stand til at få adgang til Obex-servicefunktioner.</string>
     <string name="permlab_bluetooth_printer">få adgang til bluetooth-printere</string>

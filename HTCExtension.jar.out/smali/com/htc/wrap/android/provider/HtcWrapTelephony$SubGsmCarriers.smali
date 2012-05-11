@@ -23,7 +23,7 @@
     .locals 1
 
     .prologue
-    .line 1536
+    .line 1540
     const-string v0, "content://subgsmapn/carriers"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -39,7 +39,7 @@
     .locals 0
 
     .prologue
-    .line 1532
+    .line 1536
     invoke-direct {p0}, Lcom/htc/wrap/android/provider/HtcWrapTelephony$Carriers;-><init>()V
 
     return-void

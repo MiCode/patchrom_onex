@@ -1277,9 +1277,9 @@ za račun %s"</string>
     <string name="text_limitation">Previše odabranih riječi za dijeljenje.</string>
     <string name="sms_roam_guild_dialog_title">Odlazna poruka</string>
     <string name="sms_roam_guild_dialog_subject">Koristite roaming u međunarodnim mrežama. Slanje ove poruke možda ćete morati nadoplatiti vašem pružatelju usluge bežičnog pristupa. Želite li:</string>
-    <string name="sms_roam_guild_dialog_radio_auto_send">Automatsko slanje u nacionalnoj mreži</string>
-    <string name="sms_roam_guild_dialog_send_now">Pošalji odmah</string>
-    <string name="sms_roam_guild_dialog_send_later">Pošalji kasnije</string>
+    <string name="sms_roam_guild_dialog_radio_auto_send">Automatski poslati kada budem u domaćoj mreži</string>
+    <string name="sms_roam_guild_dialog_send_now">Poslati odmah</string>
+    <string name="sms_roam_guild_dialog_send_later">Poslati kasnije</string>
     <string name="permlab_accessUsbnetState">vidi stanje UsbNet-a</string>
     <string name="permdesc_accessUsbnetState">Omogućuje aplikaciji gledanje informacija o stanju UsbNet-a.</string>
     <string name="permlab_changeUsbnetState">promijeni stanje UsbNet-a</string>

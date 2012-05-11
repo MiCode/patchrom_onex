@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:sharedUserId="android.uid.system" android:versionCode="15" android:versionName="4.0.3-eng..20120319.165846" android:sharedUserLabel="@string/android_system_label" package="android" coreApp="true"
+<manifest android:sharedUserId="android.uid.system" android:versionCode="15" android:versionName="4.0.3-eng..20120417.205029" android:sharedUserLabel="@string/android_system_label" package="android" coreApp="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
     <eat-comment />
@@ -302,7 +302,7 @@
     <uses-permission android:name="android.permission.VZW_HUX" />
     <uses-permission android:name="com.android.providers.htcmessage.permission.LBS" />
     <application android:label="@string/android_system_label" android:icon="@drawable/ic_launcher_android" android:allowClearUserData="false" android:hasCode="false" android:persistent="true" android:process="system" android:backupAgent="com.android.server.SystemBackupAgent" android:killAfterRestore="false">
-        <activity android:theme="@style/Theme.Holo.Dialog.Alert" android:name="com.android.internal.app.ChooserActivity" android:multiprocess="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
+        <activity android:theme="@style/Theme.Holo.Dialog.Alert" android:name="com.android.internal.app.ChooserActivity" android:process=":ui" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.intent.action.CHOOSER" />
                 <category android:name="android.intent.category.DEFAULT" />

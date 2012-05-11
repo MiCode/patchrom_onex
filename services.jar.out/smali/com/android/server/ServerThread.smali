@@ -573,24 +573,20 @@
     :goto_7
     invoke-static {v4, v3}, Landroid/content/ContentService;->main(Landroid/content/Context;Z)Landroid/content/IContentService;
 
-    .line 231
     const-string v3, "SystemServer"
 
     const-string v9, "System Content Providers"
 
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->installSystemProviders()V
 
-    .line 234
     const-string v3, "SystemServer"
 
     const-string v9, "Lights Service"
 
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     new-instance v68, Lcom/android/server/MiuiLightsService;
 
     move-object/from16 v0, v68

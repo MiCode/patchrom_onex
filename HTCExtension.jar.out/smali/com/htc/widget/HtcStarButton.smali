@@ -139,13 +139,13 @@
 
     .line 45
     :cond_0
-    const v1, 0x2080194
+    const v1, 0x2080195
 
-    const v2, 0x2080195
+    const v2, 0x2080196
 
-    const v4, 0x2080196
+    const v4, 0x2080197
 
-    const v5, 0x2080193
+    const v5, 0x2080194
 
     move-object v0, p0
 

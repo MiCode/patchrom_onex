@@ -52,46 +52,46 @@
 
     const/4 v0, 0x0
 
-    .line 1490
+    .line 1503
     iput-object p1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1480
+    .line 1493
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
-    .line 1481
+    .line 1494
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mDrawInSchedule:Z
 
-    .line 1482
+    .line 1495
     iput v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
-    .line 1483
+    .line 1496
     iput-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mOverlapView:Landroid/webkit/HTCZoomView;
 
-    .line 1484
+    .line 1497
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mSendViewSizeZoom:Z
 
-    .line 1485
+    .line 1498
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
-    .line 1486
+    .line 1499
     iput-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
-    .line 1488
+    .line 1501
     iput-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
-    .line 1501
+    .line 1514
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->detectbyselect:Z
 
-    .line 1883
+    .line 1896
     new-instance v0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;
 
     invoke-direct {v0, p0}, Landroid/webkit/ZoomManager$HTCSmartZoom$3;-><init>(Landroid/webkit/ZoomManager$HTCSmartZoom;)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->detectNodeBySelection:Ljava/lang/Runnable;
 
-    .line 1492
+    .line 1505
     return-void
 .end method
 
@@ -105,49 +105,49 @@
 
     const/4 v0, 0x0
 
-    .line 1494
+    .line 1507
     iput-object p1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1480
+    .line 1493
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
-    .line 1481
+    .line 1494
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mDrawInSchedule:Z
 
-    .line 1482
+    .line 1495
     iput v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
-    .line 1483
+    .line 1496
     iput-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mOverlapView:Landroid/webkit/HTCZoomView;
 
-    .line 1484
+    .line 1497
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mSendViewSizeZoom:Z
 
-    .line 1485
+    .line 1498
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
-    .line 1486
+    .line 1499
     iput-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
-    .line 1488
+    .line 1501
     iput-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
-    .line 1501
+    .line 1514
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->detectbyselect:Z
 
-    .line 1883
+    .line 1896
     new-instance v0, Landroid/webkit/ZoomManager$HTCSmartZoom$3;
 
     invoke-direct {v0, p0}, Landroid/webkit/ZoomManager$HTCSmartZoom$3;-><init>(Landroid/webkit/ZoomManager$HTCSmartZoom;)V
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->detectNodeBySelection:Ljava/lang/Runnable;
 
-    .line 1495
+    .line 1508
     iput-object p2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
-    .line 1496
+    .line 1509
     new-instance v0, Landroid/webkit/SelectionUnitInfo;
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -156,7 +156,7 @@
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
-    .line 1497
+    .line 1510
     new-instance v0, Landroid/webkit/HTCZoomView;
 
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -165,7 +165,7 @@
 
     iput-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mOverlapView:Landroid/webkit/HTCZoomView;
 
-    .line 1498
+    .line 1511
     return-void
 .end method
 
@@ -173,7 +173,7 @@
     .locals 2
 
     .prologue
-    .line 1670
+    .line 1683
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v1, 0x28
@@ -204,11 +204,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1675
+    .line 1688
     :cond_0
     const/4 v0, 0x1
 
-    .line 1676
+    .line 1689
     :goto_0
     return v0
 
@@ -224,22 +224,22 @@
     .parameter "scale"
 
     .prologue
-    .line 1862
+    .line 1875
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->clearTextEntry()V
 
-    .line 1864
+    .line 1877
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
-    .line 1865
+    .line 1878
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->pauseTimers()V
 
-    .line 1866
+    .line 1879
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -248,7 +248,7 @@
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->pauseUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 1869
+    .line 1882
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget-object v0, v0, Landroid/webkit/SelectionUnitInfo;->bound:Landroid/graphics/Rect;
@@ -259,7 +259,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1870
+    .line 1883
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget-object v0, v0, Landroid/webkit/SelectionUnitInfo;->boxNodeBound:Landroid/graphics/Rect;
@@ -286,7 +286,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1879
+    .line 1892
     :cond_0
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mOverlapView:Landroid/webkit/HTCZoomView;
 
@@ -299,10 +299,10 @@
 
     invoke-virtual {v0, p1, v1, p2}, Landroid/webkit/HTCZoomView;->StartAnimationZoom(Landroid/graphics/Rect;FF)V
 
-    .line 1880
+    .line 1893
     invoke-direct {p0, p1, p2}, Landroid/webkit/ZoomManager$HTCSmartZoom;->setNewZoomScale(Landroid/graphics/Rect;F)V
 
-    .line 1881
+    .line 1894
     return-void
 .end method
 
@@ -315,14 +315,14 @@
 
     const/4 v6, 0x0
 
-    .line 1850
+    .line 1863
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getViewHeight()I
 
     move-result v0
 
-    .line 1852
+    .line 1865
     .local v0, viewHeight:I
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -350,7 +350,7 @@
 
     if-gt v1, v0, :cond_1
 
-    .line 1853
+    .line 1866
     :cond_0
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -390,11 +390,11 @@
 
     invoke-virtual {v1, v2, v3, v7, v6}, Landroid/webkit/WebView;->myScrollTo(IIZI)V
 
-    .line 1858
+    .line 1871
     :goto_0
     return-void
 
-    .line 1856
+    .line 1869
     :cond_1
     iget-object v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -430,14 +430,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1753
+    .line 1766
     if-nez p1, :cond_0
 
-    .line 1804
+    .line 1817
     :goto_0
     return-void
 
-    .line 1756
+    .line 1769
     :cond_0
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -446,10 +446,10 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomScale:F
     invoke-static {v3, v4}, Landroid/webkit/ZoomManager;->access$2602(Landroid/webkit/ZoomManager;F)F
 
-    .line 1757
+    .line 1770
     iput p1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
-    .line 1772
+    .line 1785
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v3}, Landroid/webkit/WebView;->getViewWidth()I
@@ -477,7 +477,7 @@
 
     invoke-static {v3}, Landroid/webkit/WebView;->setDefaultTextWidth(I)V
 
-    .line 1773
+    .line 1786
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v3}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -492,11 +492,11 @@
 
     move-result-object v1
 
-    .line 1774
+    .line 1787
     .local v1, nodeRect:Landroid/graphics/Rect;
     if-nez v1, :cond_1
 
-    .line 1775
+    .line 1788
     const-string/jumbo v3, "webviewZoom"
 
     const-string/jumbo v4, "nodeRect is null"
@@ -505,13 +505,13 @@
 
     goto :goto_0
 
-    .line 1779
+    .line 1792
     :cond_1
     invoke-direct {p0, v1}, Landroid/webkit/ZoomManager$HTCSmartZoom;->getZoomWidth(Landroid/graphics/Rect;)I
 
     move-result v0
 
-    .line 1784
+    .line 1797
     .local v0, ZoomWidth:I
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -525,13 +525,13 @@
 
     div-float v2, v3, v4
 
-    .line 1785
+    .line 1798
     .local v2, scale:F
     invoke-direct {p0, v2}, Landroid/webkit/ZoomManager$HTCSmartZoom;->checkScale(F)F
 
     move-result v2
 
-    .line 1787
+    .line 1800
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -543,14 +543,14 @@
 
     if-nez v3, :cond_2
 
-    .line 1788
+    .line 1801
     const-string/jumbo v3, "webviewZoom"
 
     const-string v4, "align for same scale"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1789
+    .line 1802
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v3}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -563,12 +563,12 @@
 
     move-result-object v1
 
-    .line 1790
+    .line 1803
     invoke-direct {p0, v1}, Landroid/webkit/ZoomManager$HTCSmartZoom;->ScrollToAlign(Landroid/graphics/Rect;)V
 
     goto :goto_0
 
-    .line 1802
+    .line 1815
     :cond_2
     invoke-direct {p0, v1, v2}, Landroid/webkit/ZoomManager$HTCSmartZoom;->ScaleToFit(Landroid/graphics/Rect;F)V
 
@@ -583,7 +583,7 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1682
+    .line 1695
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->getViewWidth()I
@@ -611,29 +611,29 @@
 
     invoke-static {v5}, Landroid/webkit/WebView;->setDefaultTextWidth(I)V
 
-    .line 1683
+    .line 1696
     invoke-static {}, Landroid/webkit/WebView;->getDefaultTextWidth()I
 
     move-result v0
 
-    .line 1684
+    .line 1697
     .local v0, NodeWidth:I
     div-int/lit8 v2, v0, 0x2
 
-    .line 1686
+    .line 1699
     .local v2, halfWidth:I
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 1687
+    .line 1700
     .local v3, nodeRect:Landroid/graphics/Rect;
     if-ge p1, v2, :cond_0
 
-    .line 1688
+    .line 1701
     iput v7, v3, Landroid/graphics/Rect;->left:I
 
-    .line 1692
+    .line 1705
     :goto_0
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -647,7 +647,7 @@
 
     if-ge v5, v6, :cond_1
 
-    .line 1693
+    .line 1706
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->getContentWidth()I
@@ -656,14 +656,14 @@
 
     iput v5, v3, Landroid/graphics/Rect;->right:I
 
-    .line 1697
+    .line 1710
     :goto_1
     if-ge p2, v2, :cond_2
 
-    .line 1698
+    .line 1711
     iput v7, v3, Landroid/graphics/Rect;->top:I
 
-    .line 1702
+    .line 1715
     :goto_2
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -677,7 +677,7 @@
 
     if-ge v5, v6, :cond_3
 
-    .line 1703
+    .line 1716
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->getContentHeight()I
@@ -686,11 +686,11 @@
 
     iput v5, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 1707
+    .line 1720
     :goto_3
     iput v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
-    .line 1708
+    .line 1721
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     const/4 v6, 0x0
@@ -698,14 +698,14 @@
     #setter for: Landroid/webkit/ZoomManager;->mZoomScale:F
     invoke-static {v5, v6}, Landroid/webkit/ZoomManager;->access$2602(Landroid/webkit/ZoomManager;F)F
 
-    .line 1721
+    .line 1734
     invoke-direct {p0}, Landroid/webkit/ZoomManager$HTCSmartZoom;->IsTablet()Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    .line 1722
+    .line 1735
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -724,18 +724,18 @@
 
     if-gtz v5, :cond_4
 
-    .line 1723
+    .line 1736
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v5, v7}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1724
+    .line 1737
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
-    .line 1742
+    .line 1755
     .local v1, ZoomWidth:I
     :goto_4
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -750,13 +750,13 @@
 
     div-float v4, v5, v6
 
-    .line 1743
+    .line 1756
     .local v4, scale:F
     invoke-direct {p0, v4}, Landroid/webkit/ZoomManager$HTCSmartZoom;->checkScale(F)F
 
     move-result v4
 
-    .line 1745
+    .line 1758
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -768,14 +768,14 @@
 
     if-nez v5, :cond_7
 
-    .line 1746
+    .line 1759
     invoke-direct {p0, v3}, Landroid/webkit/ZoomManager$HTCSmartZoom;->ScrollToAlign(Landroid/graphics/Rect;)V
 
-    .line 1750
+    .line 1763
     :goto_5
     return-void
 
-    .line 1690
+    .line 1703
     .end local v1           #ZoomWidth:I
     .end local v4           #scale:F
     :cond_0
@@ -785,7 +785,7 @@
 
     goto :goto_0
 
-    .line 1695
+    .line 1708
     :cond_1
     iget v5, v3, Landroid/graphics/Rect;->left:I
 
@@ -795,7 +795,7 @@
 
     goto :goto_1
 
-    .line 1700
+    .line 1713
     :cond_2
     sub-int v5, p2, v2
 
@@ -803,7 +803,7 @@
 
     goto :goto_2
 
-    .line 1705
+    .line 1718
     :cond_3
     iget v5, v3, Landroid/graphics/Rect;->top:I
 
@@ -813,14 +813,14 @@
 
     goto :goto_3
 
-    .line 1726
+    .line 1739
     :cond_4
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v5, v7}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1727
+    .line 1740
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mDefaultScale:F
@@ -845,7 +845,7 @@
     .restart local v1       #ZoomWidth:I
     goto :goto_4
 
-    .line 1731
+    .line 1744
     .end local v1           #ZoomWidth:I
     :cond_5
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
@@ -857,13 +857,13 @@
 
     if-eqz v5, :cond_6
 
-    .line 1732
+    .line 1745
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v5, v7}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1733
+    .line 1746
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -871,7 +871,7 @@
     .restart local v1       #ZoomWidth:I
     goto :goto_4
 
-    .line 1735
+    .line 1748
     .end local v1           #ZoomWidth:I
     :cond_6
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
@@ -881,7 +881,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v5, v6}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1736
+    .line 1749
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->getViewWidth()I
@@ -902,7 +902,7 @@
     .restart local v1       #ZoomWidth:I
     goto :goto_4
 
-    .line 1748
+    .line 1761
     .restart local v4       #scale:F
     :cond_7
     invoke-direct {p0, v3, v4}, Landroid/webkit/ZoomManager$HTCSmartZoom;->ScaleToFit(Landroid/graphics/Rect;F)V
@@ -916,7 +916,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1479
+    .line 1492
     invoke-direct {p0, p1}, Landroid/webkit/ZoomManager$HTCSmartZoom;->SmartTouchUp(I)V
 
     return-void
@@ -929,7 +929,7 @@
     .parameter "x2"
 
     .prologue
-    .line 1479
+    .line 1492
     invoke-direct {p0, p1, p2}, Landroid/webkit/ZoomManager$HTCSmartZoom;->SmartTouchUp(II)V
 
     return-void
@@ -944,12 +944,12 @@
 
     const/4 v9, 0x0
 
-    .line 1989
+    .line 2002
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v10}, Landroid/webkit/WebView;->AbortScrollerAnimation()V
 
-    .line 1990
+    .line 2003
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v10}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -960,7 +960,7 @@
 
     move-result-object v4
 
-    .line 1992
+    .line 2005
     .local v4, nodeRect:Landroid/graphics/Rect;
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -968,7 +968,7 @@
 
     move-result v5
 
-    .line 1993
+    .line 2006
     .local v5, oldX:I
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -976,7 +976,7 @@
 
     move-result v6
 
-    .line 1997
+    .line 2010
     .local v6, oldY:I
     if-eqz v4, :cond_0
 
@@ -1007,7 +1007,7 @@
 
     if-nez v10, :cond_2
 
-    .line 1998
+    .line 2011
     :cond_0
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1019,19 +1019,19 @@
 
     if-nez v10, :cond_2
 
-    .line 1999
+    .line 2012
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     invoke-virtual {v10}, Landroid/webkit/SelectionUnitInfo;->update()V
 
-    .line 2000
+    .line 2013
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget-object v10, v10, Landroid/webkit/SelectionUnitInfo;->bound:Landroid/graphics/Rect;
 
     iget v2, v10, Landroid/graphics/Rect;->left:I
 
-    .line 2001
+    .line 2014
     .local v2, newLeft:I
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1039,17 +1039,17 @@
 
     iget v3, v10, Landroid/graphics/Rect;->right:I
 
-    .line 2002
+    .line 2015
     .local v3, newRight:I
     if-nez v4, :cond_1
 
-    .line 2003
+    .line 2016
     new-instance v4, Landroid/graphics/Rect;
 
     .end local v4           #nodeRect:Landroid/graphics/Rect;
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    .line 2006
+    .line 2019
     .restart local v4       #nodeRect:Landroid/graphics/Rect;
     :cond_1
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -1064,7 +1064,7 @@
 
     move-result v7
 
-    .line 2009
+    .line 2022
     .local v7, textWrapWidth:I
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1076,7 +1076,7 @@
 
     if-le v10, v7, :cond_7
 
-    .line 2010
+    .line 2023
     .local v0, adjustWidth:Z
     :goto_0
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
@@ -1105,7 +1105,7 @@
 
     sub-int v2, v10, v11
 
-    .line 2012
+    .line 2025
     :goto_1
     if-eqz v0, :cond_9
 
@@ -1113,7 +1113,7 @@
     :goto_2
     add-int v3, v2, v7
 
-    .line 2014
+    .line 2027
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget-object v10, v10, Landroid/webkit/SelectionUnitInfo;->bound:Landroid/graphics/Rect;
@@ -1128,23 +1128,23 @@
 
     invoke-virtual {v4, v2, v10, v3, v11}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2020
+    .line 2033
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     invoke-virtual {v10}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 2024
+    .line 2037
     .end local v0           #adjustWidth:Z
     .end local v2           #newLeft:I
     .end local v3           #newRight:I
     :cond_2
     const/4 v1, 0x0
 
-    .line 2025
+    .line 2038
     .local v1, nX:I
     if-eqz v4, :cond_d
 
-    .line 2027
+    .line 2040
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
@@ -1186,7 +1186,7 @@
 
     if-gt v10, v11, :cond_b
 
-    .line 2029
+    .line 2042
     :cond_3
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1214,12 +1214,12 @@
 
     move-result v1
 
-    .line 2030
+    .line 2043
     if-gez v1, :cond_4
 
     const/4 v1, 0x0
 
-    .line 2032
+    .line 2045
     :cond_4
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1241,7 +1241,7 @@
 
     sub-int v8, v10, v11
 
-    .line 2033
+    .line 2046
     .local v8, y:I
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1251,21 +1251,21 @@
 
     if-ge v8, v10, :cond_a
 
-    .line 2034
+    .line 2047
     const/4 v8, 0x0
 
-    .line 2038
+    .line 2051
     :goto_3
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v10, v1}, Landroid/webkit/WebView;->setMyScrollX(I)V
 
-    .line 2039
+    .line 2052
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v10, v8}, Landroid/webkit/WebView;->setMyScrollY(I)V
 
-    .line 2059
+    .line 2072
     .end local v8           #y:I
     :goto_4
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -1284,7 +1284,7 @@
 
     if-eq v6, v10, :cond_6
 
-    .line 2060
+    .line 2073
     :cond_5
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1302,35 +1302,35 @@
 
     invoke-virtual {v10, v11, v12, v5, v6}, Landroid/webkit/WebView;->myonScrollChanged(IIII)V
 
-    .line 2063
+    .line 2076
     :cond_6
     iput v9, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
-    .line 2065
+    .line 2078
     iget-object v9, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iget-object v9, v9, Landroid/webkit/WebView;->mLastVisibleRectSent:Landroid/graphics/Rect;
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 2066
+    .line 2079
     iget-object v9, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iget-object v9, v9, Landroid/webkit/WebView;->mLastGlobalRect:Landroid/graphics/Rect;
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 2067
+    .line 2080
     iget-object v9, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v9}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
-    .line 2070
+    .line 2083
     iget-object v9, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v9}, Landroid/webkit/WebView;->contentInvalidateAll()V
 
-    .line 2072
+    .line 2085
     return-void
 
     .end local v1           #nX:I
@@ -1340,10 +1340,10 @@
     :cond_7
     move v0, v9
 
-    .line 2009
+    .line 2022
     goto/16 :goto_0
 
-    .line 2010
+    .line 2023
     .restart local v0       #adjustWidth:Z
     :cond_8
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
@@ -1354,7 +1354,7 @@
 
     goto/16 :goto_1
 
-    .line 2012
+    .line 2025
     :cond_9
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1366,7 +1366,7 @@
 
     goto/16 :goto_2
 
-    .line 2036
+    .line 2049
     .end local v0           #adjustWidth:Z
     .end local v2           #newLeft:I
     .end local v3           #newRight:I
@@ -1382,7 +1382,7 @@
 
     goto :goto_3
 
-    .line 2042
+    .line 2055
     .end local v8           #y:I
     :cond_b
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -1407,12 +1407,12 @@
 
     move-result v1
 
-    .line 2043
+    .line 2056
     if-gez v1, :cond_c
 
     const/4 v1, 0x0
 
-    .line 2046
+    .line 2059
     :cond_c
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1438,20 +1438,20 @@
 
     move-result v8
 
-    .line 2048
+    .line 2061
     .restart local v8       #y:I
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v10, v1}, Landroid/webkit/WebView;->setMyScrollX(I)V
 
-    .line 2049
+    .line 2062
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v10, v8}, Landroid/webkit/WebView;->setMyScrollY(I)V
 
     goto/16 :goto_4
 
-    .line 2052
+    .line 2065
     .end local v8           #y:I
     :cond_d
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -1468,14 +1468,14 @@
 
     if-ge v10, v11, :cond_e
 
-    .line 2053
+    .line 2066
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v10, v9}, Landroid/webkit/WebView;->setMyScrollY(I)V
 
     goto/16 :goto_4
 
-    .line 2055
+    .line 2068
     :cond_e
     iget-object v10, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1505,12 +1505,12 @@
 
     const/4 v6, 0x0
 
-    .line 2076
+    .line 2089
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v7}, Landroid/webkit/WebView;->AbortScrollerAnimation()V
 
-    .line 2077
+    .line 2090
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v7}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -1521,7 +1521,7 @@
 
     move-result-object v4
 
-    .line 2079
+    .line 2092
     .local v4, nodeRect:Landroid/graphics/Rect;
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1533,19 +1533,19 @@
 
     if-nez v7, :cond_1
 
-    .line 2080
+    .line 2093
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     invoke-virtual {v7}, Landroid/webkit/SelectionUnitInfo;->update()V
 
-    .line 2081
+    .line 2094
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget-object v7, v7, Landroid/webkit/SelectionUnitInfo;->bound:Landroid/graphics/Rect;
 
     iget v2, v7, Landroid/graphics/Rect;->left:I
 
-    .line 2082
+    .line 2095
     .local v2, newLeft:I
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1553,17 +1553,17 @@
 
     iget v3, v7, Landroid/graphics/Rect;->right:I
 
-    .line 2083
+    .line 2096
     .local v3, newRight:I
     if-nez v4, :cond_0
 
-    .line 2084
+    .line 2097
     new-instance v4, Landroid/graphics/Rect;
 
     .end local v4           #nodeRect:Landroid/graphics/Rect;
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    .line 2087
+    .line 2100
     .restart local v4       #nodeRect:Landroid/graphics/Rect;
     :cond_0
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -1578,7 +1578,7 @@
 
     move-result v5
 
-    .line 2088
+    .line 2101
     .local v5, textWrapWidth:I
     iget-object v7, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1590,7 +1590,7 @@
 
     if-le v7, v5, :cond_4
 
-    .line 2089
+    .line 2102
     .local v0, adjustWidth:Z
     :goto_0
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
@@ -1619,7 +1619,7 @@
 
     sub-int v2, v6, v7
 
-    .line 2091
+    .line 2104
     :goto_1
     if-eqz v0, :cond_6
 
@@ -1627,7 +1627,7 @@
     :goto_2
     add-int v3, v2, v5
 
-    .line 2093
+    .line 2106
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget-object v6, v6, Landroid/webkit/SelectionUnitInfo;->bound:Landroid/graphics/Rect;
@@ -1642,22 +1642,22 @@
 
     invoke-virtual {v4, v2, v6, v3, v7}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 2098
+    .line 2111
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     invoke-virtual {v6}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 2101
+    .line 2114
     .end local v0           #adjustWidth:Z
     .end local v2           #newLeft:I
     .end local v3           #newRight:I
     :cond_1
     if-eqz v4, :cond_3
 
-    .line 2102
+    .line 2115
     const/4 v1, 0x0
 
-    .line 2103
+    .line 2116
     .local v1, nX:I
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1681,18 +1681,18 @@
 
     move-result v1
 
-    .line 2104
+    .line 2117
     if-gez v1, :cond_2
 
     const/4 v1, 0x0
 
-    .line 2105
+    .line 2118
     :cond_2
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v6, v1}, Landroid/webkit/WebView;->setMyScrollX(I)V
 
-    .line 2109
+    .line 2122
     .end local v1           #nX:I
     :cond_3
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -1701,19 +1701,19 @@
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 2110
+    .line 2123
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iget-object v6, v6, Landroid/webkit/WebView;->mLastGlobalRect:Landroid/graphics/Rect;
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 2111
+    .line 2124
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v6}, Landroid/webkit/WebView;->sendOurVisibleRect()Landroid/graphics/Rect;
 
-    .line 2112
+    .line 2125
     return-void
 
     .restart local v2       #newLeft:I
@@ -1722,10 +1722,10 @@
     :cond_4
     move v0, v6
 
-    .line 2088
+    .line 2101
     goto :goto_0
 
-    .line 2089
+    .line 2102
     .restart local v0       #adjustWidth:Z
     :cond_5
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
@@ -1736,7 +1736,7 @@
 
     goto :goto_1
 
-    .line 2091
+    .line 2104
     :cond_6
     iget-object v6, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
@@ -1760,7 +1760,7 @@
 
     const/high16 v6, 0x42c8
 
-    .line 1622
+    .line 1635
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mMinZoomScale:F
@@ -1772,7 +1772,7 @@
 
     if-gez v5, :cond_0
 
-    .line 1623
+    .line 1636
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mMinZoomScale:F
@@ -1780,7 +1780,7 @@
 
     move-result p1
 
-    .line 1626
+    .line 1639
     :cond_0
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -1793,7 +1793,7 @@
 
     if-lez v5, :cond_1
 
-    .line 1627
+    .line 1640
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mMaxZoomScale:F
@@ -1801,7 +1801,7 @@
 
     move-result p1
 
-    .line 1631
+    .line 1644
     :cond_1
     invoke-direct {p0}, Landroid/webkit/ZoomManager$HTCSmartZoom;->IsTablet()Z
 
@@ -1809,7 +1809,7 @@
 
     if-eqz v5, :cond_7
 
-    .line 1632
+    .line 1645
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mDefaultScale:F
@@ -1821,7 +1821,7 @@
 
     if-lez v5, :cond_4
 
-    .line 1633
+    .line 1646
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mDefaultScale:F
@@ -1837,16 +1837,16 @@
 
     div-float v2, v3, v6
 
-    .line 1634
+    .line 1647
     .local v2, minScale:F
     cmpg-float v3, p1, v2
 
     if-gez v3, :cond_2
 
-    .line 1635
+    .line 1648
     move p1, v2
 
-    .line 1637
+    .line 1650
     :cond_2
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -1863,27 +1863,27 @@
 
     div-float v1, v3, v6
 
-    .line 1638
+    .line 1651
     .local v1, maxScale:F
     cmpl-float v3, p1, v1
 
     if-lez v3, :cond_3
 
-    .line 1639
+    .line 1652
     move p1, v1
 
-    .line 1666
+    .line 1679
     .end local v1           #maxScale:F
     .end local v2           #minScale:F
     :cond_3
     :goto_0
     return p1
 
-    .line 1641
+    .line 1654
     :cond_4
     const/4 v0, 0x0
 
-    .line 1642
+    .line 1655
     .local v0, bMobileSite:Z
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -1893,7 +1893,7 @@
 
     if-eqz v5, :cond_5
 
-    .line 1643
+    .line 1656
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -1908,12 +1908,12 @@
 
     move v0, v3
 
-    .line 1644
+    .line 1657
     :cond_5
     :goto_1
     if-ne v0, v3, :cond_3
 
-    .line 1645
+    .line 1658
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mMinZoomScale:F
@@ -1926,10 +1926,10 @@
     :cond_6
     move v0, v4
 
-    .line 1643
+    .line 1656
     goto :goto_1
 
-    .line 1649
+    .line 1662
     .end local v0           #bMobileSite:Z
     :cond_7
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
@@ -1941,7 +1941,7 @@
 
     if-nez v5, :cond_9
 
-    .line 1650
+    .line 1663
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mDefaultScale:F
@@ -1957,16 +1957,16 @@
 
     div-float v2, v3, v6
 
-    .line 1651
+    .line 1664
     .restart local v2       #minScale:F
     cmpg-float v3, p1, v2
 
     if-gez v3, :cond_8
 
-    .line 1652
+    .line 1665
     move p1, v2
 
-    .line 1654
+    .line 1667
     :cond_8
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -1983,24 +1983,24 @@
 
     div-float v1, v3, v6
 
-    .line 1655
+    .line 1668
     .restart local v1       #maxScale:F
     cmpl-float v3, p1, v1
 
     if-lez v3, :cond_3
 
-    .line 1656
+    .line 1669
     move p1, v1
 
     goto :goto_0
 
-    .line 1658
+    .line 1671
     .end local v1           #maxScale:F
     .end local v2           #minScale:F
     :cond_9
     const/4 v0, 0x0
 
-    .line 1659
+    .line 1672
     .restart local v0       #bMobileSite:Z
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2010,7 +2010,7 @@
 
     if-eqz v5, :cond_a
 
-    .line 1660
+    .line 1673
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -2025,12 +2025,12 @@
 
     move v0, v3
 
-    .line 1661
+    .line 1674
     :cond_a
     :goto_2
     if-ne v0, v3, :cond_3
 
-    .line 1662
+    .line 1675
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mMinZoomScale:F
@@ -2043,7 +2043,7 @@
     :cond_b
     move v0, v4
 
-    .line 1660
+    .line 1673
     goto :goto_2
 .end method
 
@@ -2056,14 +2056,14 @@
 
     const/high16 v2, 0x3f80
 
-    .line 1811
+    .line 1824
     invoke-direct {p0}, Landroid/webkit/ZoomManager$HTCSmartZoom;->IsTablet()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 1812
+    .line 1825
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -2082,13 +2082,13 @@
 
     if-gtz v3, :cond_5
 
-    .line 1813
+    .line 1826
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v3, v5}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1814
+    .line 1827
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v3}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -2103,7 +2103,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 1815
+    .line 1828
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -2112,7 +2112,7 @@
 
     move v0, v2
 
-    .line 1816
+    .line 1829
     .local v0, ratioX:F
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
@@ -2123,14 +2123,14 @@
 
     move v1, v2
 
-    .line 1817
+    .line 1830
     .local v1, ratioY:F
     :goto_1
     cmpl-float v2, v0, v1
 
     if-lez v2, :cond_2
 
-    .line 1818
+    .line 1831
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getViewWidth()I
@@ -2145,13 +2145,13 @@
 
     move-result v2
 
-    .line 1843
+    .line 1856
     .end local v0           #ratioX:F
     .end local v1           #ratioY:F
     :goto_2
     return v2
 
-    .line 1815
+    .line 1828
     :cond_0
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2169,7 +2169,7 @@
 
     goto :goto_0
 
-    .line 1816
+    .line 1829
     .restart local v0       #ratioX:F
     :cond_1
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -2188,7 +2188,7 @@
 
     goto :goto_1
 
-    .line 1820
+    .line 1833
     .restart local v1       #ratioY:F
     :cond_2
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -2197,7 +2197,7 @@
 
     goto :goto_2
 
-    .line 1822
+    .line 1835
     .end local v0           #ratioX:F
     .end local v1           #ratioY:F
     :cond_3
@@ -2224,14 +2224,14 @@
 
     goto :goto_2
 
-    .line 1825
+    .line 1838
     :cond_5
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v2, v5}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1826
+    .line 1839
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mDefaultScale:F
@@ -2255,7 +2255,7 @@
 
     goto :goto_2
 
-    .line 1830
+    .line 1843
     :cond_6
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -2266,13 +2266,13 @@
 
     if-eqz v3, :cond_c
 
-    .line 1831
+    .line 1844
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v3, v5}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1832
+    .line 1845
     iget-object v3, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v3}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -2287,7 +2287,7 @@
 
     if-eqz v3, :cond_a
 
-    .line 1833
+    .line 1846
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -2296,7 +2296,7 @@
 
     move v0, v2
 
-    .line 1834
+    .line 1847
     .restart local v0       #ratioX:F
     :goto_3
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
@@ -2307,14 +2307,14 @@
 
     move v1, v2
 
-    .line 1835
+    .line 1848
     .restart local v1       #ratioY:F
     :goto_4
     cmpl-float v2, v0, v1
 
     if-lez v2, :cond_9
 
-    .line 1836
+    .line 1849
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getViewWidth()I
@@ -2331,7 +2331,7 @@
 
     goto/16 :goto_2
 
-    .line 1833
+    .line 1846
     .end local v0           #ratioX:F
     .end local v1           #ratioY:F
     :cond_7
@@ -2351,7 +2351,7 @@
 
     goto :goto_3
 
-    .line 1834
+    .line 1847
     .restart local v0       #ratioX:F
     :cond_8
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
@@ -2370,7 +2370,7 @@
 
     goto :goto_4
 
-    .line 1838
+    .line 1851
     .restart local v1       #ratioY:F
     :cond_9
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -2379,7 +2379,7 @@
 
     goto/16 :goto_2
 
-    .line 1840
+    .line 1853
     .end local v0           #ratioX:F
     .end local v1           #ratioY:F
     :cond_a
@@ -2406,7 +2406,7 @@
 
     goto/16 :goto_2
 
-    .line 1842
+    .line 1855
     :cond_c
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -2415,7 +2415,7 @@
     #setter for: Landroid/webkit/ZoomManager;->mInZoomOverview:Z
     invoke-static {v2, v3}, Landroid/webkit/ZoomManager;->access$2502(Landroid/webkit/ZoomManager;Z)Z
 
-    .line 1843
+    .line 1856
     iget-object v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->getViewWidth()I
@@ -2444,7 +2444,7 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1938
+    .line 1951
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mActualScale:F
@@ -2456,7 +2456,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 1939
+    .line 1952
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #getter for: Landroid/webkit/ZoomManager;->mCallbackProxy:Landroid/webkit/CallbackProxy;
@@ -2473,25 +2473,25 @@
 
     invoke-virtual {v4, v5, p2}, Landroid/webkit/CallbackProxy;->onScaleChanged(FF)V
 
-    .line 1942
+    .line 1955
     :cond_0
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mTextWrapScale:F
     invoke-static {v4, p2}, Landroid/webkit/ZoomManager;->access$1802(Landroid/webkit/ZoomManager;F)F
 
-    .line 1944
+    .line 1957
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iput v7, v4, Landroid/webkit/WebView;->mLastHeightSent:I
 
-    .line 1946
+    .line 1959
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     #setter for: Landroid/webkit/ZoomManager;->mActualScale:F
     invoke-static {v4, p2}, Landroid/webkit/ZoomManager;->access$302(Landroid/webkit/ZoomManager;F)F
 
-    .line 1947
+    .line 1960
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     const/high16 v5, 0x3f80
@@ -2501,24 +2501,24 @@
     #setter for: Landroid/webkit/ZoomManager;->mInvActualScale:F
     invoke-static {v4, v5}, Landroid/webkit/ZoomManager;->access$2902(Landroid/webkit/ZoomManager;F)F
 
-    .line 1950
+    .line 1963
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iget-object v4, v4, Landroid/webkit/WebView;->mViewManager:Landroid/webkit/ViewManager;
 
     invoke-virtual {v4}, Landroid/webkit/ViewManager;->scaleAll()V
 
-    .line 1953
+    .line 1966
     if-eqz p1, :cond_2
 
-    .line 1954
+    .line 1967
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4}, Landroid/webkit/WebView;->getViewHeightWithTitle()I
 
     move-result v0
 
-    .line 1955
+    .line 1968
     .local v0, viewHeight:I
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2526,7 +2526,7 @@
 
     move-result v1
 
-    .line 1958
+    .line 1971
     .local v1, viewWidth:I
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -2551,7 +2551,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 1961
+    .line 1974
     :cond_1
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2573,7 +2573,7 @@
 
     move-result v2
 
-    .line 1963
+    .line 1976
     .local v2, x:I
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2589,7 +2589,7 @@
 
     sub-int v3, v4, v5
 
-    .line 1964
+    .line 1977
     .local v3, y:I
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2599,21 +2599,21 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 1965
+    .line 1978
     const/4 v3, 0x0
 
-    .line 1970
+    .line 1983
     :goto_0
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4, v2}, Landroid/webkit/WebView;->setMyScrollX(I)V
 
-    .line 1971
+    .line 1984
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4, v3}, Landroid/webkit/WebView;->setMyScrollY(I)V
 
-    .line 1982
+    .line 1995
     :goto_1
     const-string/jumbo v4, "webviewZoom"
 
@@ -2659,7 +2659,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1984
+    .line 1997
     .end local v0           #viewHeight:I
     .end local v1           #viewWidth:I
     .end local v2           #x:I
@@ -2669,15 +2669,15 @@
 
     iput-boolean v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mSendViewSizeZoom:Z
 
-    .line 1985
+    .line 1998
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4, v7}, Landroid/webkit/WebView;->sendViewSizeZoom(Z)Z
 
-    .line 1986
+    .line 1999
     return-void
 
-    .line 1967
+    .line 1980
     .restart local v0       #viewHeight:I
     .restart local v1       #viewWidth:I
     .restart local v2       #x:I
@@ -2691,7 +2691,7 @@
 
     goto :goto_0
 
-    .line 1974
+    .line 1987
     .end local v2           #x:I
     .end local v3           #y:I
     :cond_4
@@ -2717,7 +2717,7 @@
 
     move-result v2
 
-    .line 1975
+    .line 1988
     .restart local v2       #x:I
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2743,13 +2743,13 @@
 
     move-result v3
 
-    .line 1977
+    .line 1990
     .restart local v3       #y:I
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4, v2}, Landroid/webkit/WebView;->setMyScrollX(I)V
 
-    .line 1978
+    .line 1991
     iget-object v4, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v4, v3}, Landroid/webkit/WebView;->setMyScrollY(I)V
@@ -2765,19 +2765,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2116
+    .line 2129
     iput v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
-    .line 2117
+    .line 2130
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
-    .line 2118
+    .line 2131
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mDrawInSchedule:Z
 
-    .line 2119
+    .line 2132
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
-    .line 2120
+    .line 2133
     return-void
 .end method
 
@@ -2787,31 +2787,31 @@
     .parameter "y"
 
     .prologue
-    .line 1505
+    .line 1518
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v4
 
-    .line 1506
+    .line 1519
     .local v4, settings:Landroid/webkit/WebSettings;
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Landroid/webkit/WebSettings;->setDoubleTapToastCount(I)V
 
-    .line 1564
+    .line 1577
     iput p1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->myX:I
 
-    .line 1565
+    .line 1578
     iput p2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->myY:I
 
-    .line 1568
+    .line 1581
     iget-boolean v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
     if-nez v5, :cond_2
 
-    .line 1569
+    .line 1582
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -2820,7 +2820,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 1570
+    .line 1583
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -2831,7 +2831,7 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/webkit/HTCWebCore;->nativeSetSkiaFontCacheSize(J)V
 
-    .line 1573
+    .line 1586
     :cond_0
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2843,13 +2843,13 @@
 
     move-result v0
 
-    .line 1574
+    .line 1587
     .local v0, HitNode:I
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     invoke-virtual {v5}, Landroid/webkit/SelectionUnitInfo;->reset()V
 
-    .line 1575
+    .line 1588
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v5}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -2862,33 +2862,33 @@
 
     if-nez v5, :cond_1
 
-    .line 1576
+    .line 1589
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->detectbyselect:Z
 
-    .line 1578
+    .line 1591
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->detectNodeBySelection:Ljava/lang/Runnable;
 
     invoke-interface {v5}, Ljava/lang/Runnable;->run()V
 
-    .line 1580
+    .line 1593
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget v5, v5, Landroid/webkit/SelectionUnitInfo;->node:I
 
     if-eqz v5, :cond_1
 
-    .line 1581
+    .line 1594
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->tmpInfo:Landroid/webkit/SelectionUnitInfo;
 
     iget v0, v5, Landroid/webkit/SelectionUnitInfo;->node:I
 
-    .line 1584
+    .line 1597
     :cond_1
     move v1, v0
 
-    .line 1585
+    .line 1598
     .local v1, HitNodeTmp:I
     if-eqz v0, :cond_3
 
@@ -2908,7 +2908,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 1586
+    .line 1599
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iget-object v5, v5, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -2919,7 +2919,7 @@
 
     invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1615
+    .line 1628
     :goto_0
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
@@ -2929,28 +2929,28 @@
 
     if-eqz v5, :cond_2
 
-    .line 1616
+    .line 1629
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->this$0:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v5}, Landroid/webkit/ZoomManager;->dismissZoomPicker()V
 
-    .line 1619
+    .line 1632
     .end local v0           #HitNode:I
     .end local v1           #HitNodeTmp:I
     :cond_2
     return-void
 
-    .line 1592
+    .line 1605
     .restart local v0       #HitNode:I
     .restart local v1       #HitNodeTmp:I
     :cond_3
     move v2, p1
 
-    .line 1593
+    .line 1606
     .local v2, nX:I
     move v3, p2
 
-    .line 1594
+    .line 1607
     .local v3, nY:I
     iget-object v5, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -2971,17 +2971,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1915
+    .line 1928
     iget-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
     if-eqz v0, :cond_0
 
-    .line 1916
+    .line 1929
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mDrawInSchedule:Z
 
-    .line 1917
+    .line 1930
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -2990,10 +2990,10 @@
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 1918
+    .line 1931
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mInScaleToFit:Z
 
-    .line 1922
+    .line 1935
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getIsLoading()Z
@@ -3002,18 +3002,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 1923
+    .line 1936
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mDrawInSchedule:Z
 
-    .line 1924
+    .line 1937
     iput-boolean v1, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
-    .line 1925
+    .line 1938
     iget v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
     invoke-direct {p0, v0}, Landroid/webkit/ZoomManager$HTCSmartZoom;->alignToCenter(I)V
 
-    .line 1926
+    .line 1939
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getWebViewCore()Landroid/webkit/WebViewCore;
@@ -3046,17 +3046,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/WebViewCore;->updateRestoreScroll(II)V
 
-    .line 1932
+    .line 1945
     :goto_0
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->resumeTimers()V
 
-    .line 1934
+    .line 1947
     :cond_0
     return-void
 
-    .line 1929
+    .line 1942
     :cond_1
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
@@ -3072,7 +3072,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2123
+    .line 2136
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iget-object v1, p1, Landroid/webkit/WebViewCore$DrawData;->mContentSize:Landroid/graphics/Point;
@@ -3081,7 +3081,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setContentWidth(I)V
 
-    .line 2124
+    .line 2137
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     iget-object v1, p1, Landroid/webkit/WebViewCore$DrawData;->mContentSize:Landroid/graphics/Point;
@@ -3090,34 +3090,34 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setContentHeight(I)V
 
-    .line 2126
+    .line 2139
     iget-boolean v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
     if-eqz v0, :cond_1
 
-    .line 2127
+    .line 2140
     iget v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 
     invoke-direct {p0, v0}, Landroid/webkit/ZoomManager$HTCSmartZoom;->alignToLeft(I)V
 
-    .line 2130
+    .line 2143
     :goto_0
     iput-boolean v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mDrawInSchedule:Z
 
-    .line 2131
+    .line 2144
     iput-boolean v2, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mAlignAfterDrag:Z
 
-    .line 2134
+    .line 2147
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->nativeClearCursor()V
 
-    .line 2135
+    .line 2148
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 2137
+    .line 2150
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -3126,7 +3126,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2138
+    .line 2151
     iget-object v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->gethTCWebCoreInst()Landroid/webkit/HTCWebCore;
@@ -3137,11 +3137,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/HTCWebCore;->nativeSetSkiaFontCacheSize(J)V
 
-    .line 2139
+    .line 2152
     :cond_0
     return-void
 
-    .line 2129
+    .line 2142
     :cond_1
     iget v0, p0, Landroid/webkit/ZoomManager$HTCSmartZoom;->mScaleFitNode:I
 

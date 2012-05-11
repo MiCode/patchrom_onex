@@ -397,7 +397,7 @@
     <string name="permlab_bindVpnService">An einen VPN-Dienst binden</string>
     <string name="permdesc_bindVpnService">Ermöglicht dem Halter, sich an die Oberfläche eines VPN-Dienstes auf oberster Ebene zu binden. Sollte nie für normale Apps benötigt werden.</string>
     <string name="permlab_bindWallpaper">An ein Hintergrundbild binden</string>
-    <string name="permdesc_bindWallpaper">Ermöglicht dem Halter, sich an die oberste Ebene des Interfaces eines Hintergrundes zu binden. Sollte nie für normale Anwendungen benötigt werden.</string>
+    <string name="permdesc_bindWallpaper">Ermöglicht dem Halter, sich an die oberste Ebene des Interfaces eines Hintergrundbildes zu binden. Sollte nie für normale Anwendungen benötigt werden.</string>
     <string name="permlab_bindRemoteViews">An einen Widget-Dienst binden</string>
     <string name="permdesc_bindRemoteViews">Ermöglicht dem Halter, sich an die Oberfläche eines Widget-Dienstes auf oberster Ebene zu binden. Sollte nie für normale Anwendungen benötigt werden.</string>
     <string name="permlab_bindDeviceAdmin">Interaktion mit einem Geräteadministrator</string>
@@ -1068,7 +1068,7 @@ für Konto %s"</string>
     <string name="input_method_binding_label">Eingabemethode</string>
     <string name="sync_binding_label">Synchronisieren</string>
     <string name="accessibility_binding_label">Eingabehilfen</string>
-    <string name="wallpaper_binding_label">Hintergrund</string>
+    <string name="wallpaper_binding_label">Hintergrundbild</string>
     <string name="chooser_wallpaper">Hintergrundbild ändern</string>
     <string name="alternate_eri_file">/data/eri.xml</string>
     <string name="vpn_title">VPN ist aktiviert.</string>

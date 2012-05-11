@@ -1784,7 +1784,7 @@
 
     const-string v3, "common_rearrange_frame"
 
-    const v4, 0x2080197
+    const v4, 0x2080198
 
     invoke-static {v2, v3, v4}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

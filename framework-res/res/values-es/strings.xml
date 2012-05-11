@@ -186,8 +186,8 @@
     <string name="invalidPuk">Escribe un código PUK de ocho caracteres o más.</string>
     <string name="needPuk">La tarjeta SIM está bloqueada con el código PUK. Introduce el código PUK para desbloquearla.</string>
     <string name="needPuk2">Introduce el código PUK2 para desbloquear la tarjeta SIM.</string>
-    <string name="ClipMmi">ID de emisor de llamada entrante</string>
-    <string name="ClirMmi">ID de emisor de llamada saliente</string>
+    <string name="ClipMmi">Identidad del emisor de llamada entrante</string>
+    <string name="ClirMmi">Identidad del emisor de llamada saliente</string>
     <string name="CfMmi">Desvío de llamada</string>
     <string name="CwMmi">Llamada en espera</string>
     <string name="BaMmi">Bloqueo de llamada</string>
@@ -204,7 +204,7 @@
     <string name="CLIRDefaultOffNextCallOn">La opción de identificación de emisor no está restringida por defecto. Siguiente llamada: Restringida</string>
     <string name="CLIRDefaultOffNextCallOff">La opción de identificación de emisor no está restringida por defecto. Siguiente llamada: No Restringida</string>
     <string name="serviceNotProvisioned">Servicio no disponible</string>
-    <string name="CLIRPermanent">El ID de emisor no se puede modificar.</string>
+    <string name="CLIRPermanent">La identidad del emisor no se puede modificar.</string>
     <string name="RestrictedChangedTitle">Acceso restringido modificado</string>
     <string name="RestrictedOnData">El servicio de datos está bloqueado.</string>
     <string name="RestrictedOnEmergency">El servicio de emergencia está bloqueado.</string>
@@ -284,8 +284,8 @@
     <string name="global_action_silent_mode_on_status">Sonido desactivado</string>
     <string name="global_action_silent_mode_off_status">Sonido activado</string>
     <string name="global_actions_toggle_airplane_mode">Modo avión</string>
-    <string name="global_actions_airplane_mode_on_status">Modo avión ACTIVADO</string>
-    <string name="global_actions_airplane_mode_off_status">Modo avión DESACTIVADO</string>
+    <string name="global_actions_airplane_mode_on_status">Modo avión activado</string>
+    <string name="global_actions_airplane_mode_off_status">Modo avión desactivado</string>
     <string name="safeMode">Modo seguro</string>
     <string name="android_system_label">Sistema Android</string>
     <string name="permgrouplab_costMoney">Servicios por los que tienes que pagar</string>
@@ -1266,7 +1266,7 @@ para la cuenta %s"</string>
     <string name="camera_notify_title">Cámara desactivada por TI</string>
     <string name="install_notify_title">Instalación bloqueada por TI:</string>
     <string name="uninstall_notify_title">Desinstalación bloqueada por TI:</string>
-    <string name="wifi_notify_title">TI ha deshabilitado Wi-Fi</string>
+    <string name="wifi_notify_title">TI ha desactivado Wi-Fi</string>
     <string name="sim_puk_contact_customer_care_information">Por favor, contactar con Atención al cliente para obtener el código PUK</string>
     <string name="permlab_accessCWFolder">Acceso a carpeta del asistente de personalización</string>
     <string name="permdesc_accessCWFolder">Permite a una aplicación acceder a la carpeta del asistente de personalización</string>
@@ -1276,7 +1276,7 @@ para la cuenta %s"</string>
     <string name="permdesc_setappname">Permite a una aplicación cambiar de forma dinámica su nombre específico.</string>
     <string name="text_limitation">No se pueden seleccionar tantas palabras para compartir.</string>
     <string name="sms_roam_guild_dialog_title">Mensaje saliente</string>
-    <string name="sms_roam_guild_dialog_subject">Estás en itinerancia en redes internacionales. El envío de este mensaje puede generar gastos adicionales por parte de tu proveedor inalámbrico. ¿Qué deseas hacer?</string>
+    <string name="sms_roam_guild_dialog_subject">Estás en itinerancia en redes internacionales. El envío de este mensaje puede generar gastos adicionales por parte de tu proveedor de red. ¿Qué quieres hacer?</string>
     <string name="sms_roam_guild_dialog_radio_auto_send">Enviar automáticamente con cobertura nacional</string>
     <string name="sms_roam_guild_dialog_send_now">Enviar ahora</string>
     <string name="sms_roam_guild_dialog_send_later">Enviar más tarde</string>

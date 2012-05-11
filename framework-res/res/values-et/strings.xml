@@ -899,7 +899,7 @@ Valige OK, et jätkata või Tühista, et jääda praegusele lehele."</string>
     <string name="capital_off">VÄLJAS</string>
     <string name="whichApplication">Vii toiming lõpule, kasutades:</string>
     <string name="alwaysUse">Kasutatakse vaikimisi selle toimingu jaoks.</string>
-    <string name="clearDefaultHintMsg">Tühista vaikeseade Home Settings > Rakendused.</string>
+    <string name="clearDefaultHintMsg">Tühistage vaikeseaded menüüs Avaekraani seaded > Rakendused.</string>
     <string name="chooseActivity">Vali toiming</string>
     <string name="chooseUsbActivity">Vali rakendus USB-seadmele</string>
     <string name="noApplications">Ükski rakendus ei suuda teostada seda toimingut.</string>
@@ -1264,7 +1264,7 @@ kontole %s"</string>
     <string name="camera_notify_title">IT inaktiveeris kaamera</string>
     <string name="install_notify_title">IT blokeeris installimise:</string>
     <string name="uninstall_notify_title">IT blokeeris desinstallimise:</string>
-    <string name="wifi_notify_title">IT inaktiveeris Wi-Fi</string>
+    <string name="wifi_notify_title">IT inaktiveeris WiFi</string>
     <string name="sim_puk_contact_customer_care_information">PUK-koodi saamiseks võtke ühendust klienditeeninduskeskusega</string>
     <string name="permlab_accessCWFolder">Juurdepääs kohandamisviisardi funktsiooni kausta</string>
     <string name="permdesc_accessCWFolder">Lubab rakendusel juurdepääsu kohandamisviisardi funktsiooni kausta</string>
@@ -1310,19 +1310,19 @@ kontole %s"</string>
     <string name="font_settings">Fondi seaded</string>
     <string name="font_alignment">Fondi joondus</string>
     <string name="image">Pilt</string>
-    <string name="dongle_noti_ticker">Konstatēta Media Link HD ierīce</string>
+    <string name="dongle_noti_ticker">Media Link HD seade on tuvastatud</string>
     <string name="dongle_noti_title_multiple_found">Leiti HTC Media Linki seadmed</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
-    <string name="dongle_noti_text_multiple_found">Piesitiet, lai atlasītu</string>
+    <string name="dongle_noti_text_multiple_found">Valimiseks toksake</string>
     <string name="wireless_display_output_tv_title">Media Link HD</string>
-    <string name="wireless_display_output_tv_text">"Vai vēlaties to nosūtīt, lai atskaņotu TV?
+    <string name="wireless_display_output_tv_text">"Kas soovite saata selle teleris esitamiseks?
 
-Atlikušas %1$s sekundes..."</string>
+Jäänud on %1$s sekundit..."</string>
     <string name="wireless_display_output_tv_checkbox">Ära näita enam</string>
     <string name="call_forward_unconditional">Tingimusteta kõnesuunamine</string>
     <string name="call_forward_when_busy">Kõnede suunamine, kui olen hõivatud</string>
     <string name="call_forward_when_unanswered">Kõnede suunamine, kui ei vasta</string>
     <string name="call_forward_when_unreachable">Kõnede suunamine, kui olen kättesaamatu</string>
     <string name="call_forward_all_forward">Kõigi kõnede suunamine</string>
-    <string name="call_forward_all_conditional">Kõigi tingimuslike kõnede suunamine</string>
+    <string name="call_forward_all_conditional">Kõigi tingimustele vastavate kõnede suunamine</string>
 </resources>

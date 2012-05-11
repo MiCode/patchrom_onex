@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3261
+    .line 3271
     iput-object p1, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +41,10 @@
     .locals 2
 
     .prologue
-    .line 3266
+    .line 3276
     monitor-enter p0
 
-    .line 3267
+    .line 3277
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -53,19 +53,19 @@
     #setter for: Lcom/android/server/PowerManagerService;->mIsUserActivityScreenDelay:Z
     invoke-static {v0, v1}, Lcom/android/server/PowerManagerService;->access$6202(Lcom/android/server/PowerManagerService;Z)Z
 
-    .line 3268
+    .line 3278
     iget-object v0, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
     #calls: Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
     invoke-static {v0}, Lcom/android/server/PowerManagerService;->access$1500(Lcom/android/server/PowerManagerService;)V
 
-    .line 3269
+    .line 3279
     monitor-exit p0
 
-    .line 3270
+    .line 3280
     return-void
 
-    .line 3269
+    .line 3279
     :catchall_0
     move-exception v0
 

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final wifi_direct_input_style_default:I = 0x4060000
+.field public static final wifi_direct_input_style_default:I = 0x4070000
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1577
+    .line 2793
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

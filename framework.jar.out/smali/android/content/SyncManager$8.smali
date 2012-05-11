@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 1348
+    .line 1346
     iput-object p1, p0, Landroid/content/SyncManager$8;->this$0:Landroid/content/SyncManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
     .parameter "rhs"
 
     .prologue
-    .line 1352
+    .line 1350
     iget v1, p2, Landroid/content/SyncManager$AuthoritySyncStats;->times:I
 
     iget v2, p1, Landroid/content/SyncManager$AuthoritySyncStats;->times:I
@@ -62,11 +62,11 @@
 
     move-result v0
 
-    .line 1353
+    .line 1351
     .local v0, compare:I
     if-nez v0, :cond_0
 
-    .line 1354
+    .line 1352
     iget-wide v1, p2, Landroid/content/SyncManager$AuthoritySyncStats;->elapsedTime:J
 
     iget-wide v3, p1, Landroid/content/SyncManager$AuthoritySyncStats;->elapsedTime:J
@@ -75,7 +75,7 @@
 
     move-result v0
 
-    .line 1356
+    .line 1354
     :cond_0
     return v0
 .end method
@@ -86,7 +86,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1348
+    .line 1346
     check-cast p1, Landroid/content/SyncManager$AuthoritySyncStats;
 
     .end local p1

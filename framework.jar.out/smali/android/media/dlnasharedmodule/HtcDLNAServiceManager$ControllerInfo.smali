@@ -59,16 +59,16 @@
     .prologue
     const-wide/16 v0, -0x1
 
-    .line 164
+    .line 183
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 174
+    .line 193
     iput-wide v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
-    .line 175
+    .line 194
     iput-wide v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mTotal:J
 
-    .line 181
+    .line 200
     const/4 v0, 0x7
 
     iput v0, p0, Landroid/media/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPlayState:I

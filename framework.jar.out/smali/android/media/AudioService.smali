@@ -9177,12 +9177,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 954
     iget-object v1, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
     invoke-virtual {v1, p1, p4}, Lmiui/view/VolumePanel;->postVolumeChanged(II)V
 
-    .line 955
     const-string v1, "AudioService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -11411,11 +11409,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 769
     :cond_1
     and-int/lit8 p3, p3, -0x5
 
-    .line 772
     :cond_2
     invoke-direct {p0, p3, p1}, Landroid/media/AudioService;->adjustDirection(II)I
 
@@ -11423,10 +11419,8 @@
 
     invoke-virtual {p0, v0, p1, p3}, Landroid/media/AudioService;->adjustStreamVolume(III)V
 
-    .line 773
     return-void
 
-    .line 762
     .end local v0           #streamType:I
     :cond_3
     invoke-direct {p0, p2}, Landroid/media/AudioService;->getActiveStreamType(I)I
@@ -16258,7 +16252,6 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
 
-    .line 1896
     return-void
 .end method
 

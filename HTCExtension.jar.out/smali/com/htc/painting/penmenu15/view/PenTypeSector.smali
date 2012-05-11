@@ -469,7 +469,7 @@
 
     const v5, 0x20403b7
 
-    const v6, 0x20802bb
+    const v6, 0x20802bc
 
     move-object v0, p0
 
@@ -533,7 +533,7 @@
 
     const v5, 0x20403b8
 
-    const v6, 0x20802bc
+    const v6, 0x20802bd
 
     move-object v0, p0
 

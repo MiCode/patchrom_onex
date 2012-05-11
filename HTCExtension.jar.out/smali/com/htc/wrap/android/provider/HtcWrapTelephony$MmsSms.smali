@@ -43,32 +43,32 @@
     .locals 1
 
     .prologue
-    .line 1431
+    .line 1435
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_V2_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$MmsSms;->CONTENT_V2_URI:Landroid/net/Uri;
 
-    .line 1434
+    .line 1438
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_CONVERSATIONS_V2_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$MmsSms;->CONTENT_CONVERSATIONS_V2_URI:Landroid/net/Uri;
 
-    .line 1437
+    .line 1441
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_UNDELIVERED_V2_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$MmsSms;->CONTENT_UNDELIVERED_V2_URI:Landroid/net/Uri;
 
-    .line 1440
+    .line 1444
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_DRAFT_LIST_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$MmsSms;->CONTENT_DRAFT_LIST_URI:Landroid/net/Uri;
 
-    .line 1444
+    .line 1448
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_SEARCH_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$MmsSms;->CONTENT_SEARCH_URI:Landroid/net/Uri;
 
-    .line 1448
+    .line 1452
     sget-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_CONVERSATION_BY_ADDRESS_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$MmsSms;->CONTENT_CONVERSATION_BY_ADDRESS_URI:Landroid/net/Uri;
@@ -80,9 +80,9 @@
     .locals 0
 
     .prologue
-    .line 1430
+    .line 1434
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1455
+    .line 1459
     return-void
 .end method

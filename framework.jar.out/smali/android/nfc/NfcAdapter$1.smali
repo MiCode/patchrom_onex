@@ -1,19 +1,25 @@
 .class Landroid/nfc/NfcAdapter$1;
-.super Ljava/lang/Object;
+.super Landroid/nfc/NfcAdapter$CallNfcMethod;
 .source "NfcAdapter.java"
-
-# interfaces
-.implements Landroid/app/OnActivityPausedListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroid/nfc/NfcAdapter;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/nfc/NfcAdapter;->getAdapterState()I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/nfc/NfcAdapter$CallNfcMethod",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
 .end annotation
 
 
@@ -23,32 +29,58 @@
 
 # direct methods
 .method constructor <init>(Landroid/nfc/NfcAdapter;)V
-    .locals 0
+    .locals 1
     .parameter
 
     .prologue
-    .line 895
+    .line 546
     iput-object p1, p0, Landroid/nfc/NfcAdapter$1;->this$0:Landroid/nfc/NfcAdapter;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/nfc/NfcAdapter$CallNfcMethod;-><init>(Landroid/nfc/NfcAdapter;Landroid/nfc/NfcAdapter$1;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onPaused(Landroid/app/Activity;)V
-    .locals 2
-    .parameter "activity"
+.method protected callMethod()Ljava/lang/Integer;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 
     .prologue
-    .line 898
-    iget-object v0, p0, Landroid/nfc/NfcAdapter$1;->this$0:Landroid/nfc/NfcAdapter;
+    .line 549
+    sget-object v0, Landroid/nfc/NfcAdapter;->sService:Landroid/nfc/INfcAdapter;
 
-    const/4 v1, 0x1
+    invoke-interface {v0}, Landroid/nfc/INfcAdapter;->getState()I
 
-    invoke-virtual {v0, p1, v1}, Landroid/nfc/NfcAdapter;->disableForegroundDispatchInternal(Landroid/app/Activity;Z)V
+    move-result v0
 
-    .line 899
-    return-void
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected bridge synthetic callMethod()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 546
+    invoke-virtual {p0}, Landroid/nfc/NfcAdapter$1;->callMethod()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
 .end method

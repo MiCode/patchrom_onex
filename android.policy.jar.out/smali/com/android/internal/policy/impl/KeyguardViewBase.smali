@@ -99,12 +99,12 @@
 
     const/4 v5, 0x1
 
-    .line 226
+    .line 236
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v2
 
-    .line 227
+    .line 237
     .local v2, keyCode:I
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -112,10 +112,10 @@
 
     if-nez v4, :cond_7
 
-    .line 228
+    .line 238
     sparse-switch v2, :sswitch_data_0
 
-    .line 323
+    .line 333
     :cond_0
     :goto_0
     const/4 v5, 0x0
@@ -124,13 +124,13 @@
     :goto_1
     return v5
 
-    .line 234
+    .line 244
     :sswitch_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-nez v4, :cond_2
 
-    .line 235
+    .line 245
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -145,7 +145,7 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 238
+    .line 248
     :cond_2
     iget-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -159,7 +159,7 @@
 
     if-nez v4, :cond_1
 
-    .line 251
+    .line 261
     :cond_3
     :sswitch_1
     new-instance v0, Landroid/content/Intent;
@@ -168,13 +168,13 @@
 
     invoke-direct {v0, v4, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 252
+    .line 262
     .local v0, intent:Landroid/content/Intent;
     const-string v4, "android.intent.extra.KEY_EVENT"
 
     invoke-virtual {v0, v4, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 253
+    .line 263
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -183,18 +183,18 @@
 
     goto :goto_1
 
-    .line 261
+    .line 271
     .end local v0           #intent:Landroid/content/Intent;
     :sswitch_2
     monitor-enter p0
 
-    .line 262
+    .line 272
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v4, :cond_4
 
-    .line 263
+    .line 273
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -209,16 +209,16 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 266
+    .line 276
     :cond_4
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 268
+    .line 278
     const/4 v1, 0x0
 
-    .line 271
+    .line 281
     .local v1, isMusicActive:Z
     iget-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mAudioManager:Landroid/media/AudioManager;
 
@@ -228,7 +228,7 @@
 
     if-eqz v4, :cond_5
 
-    .line 273
+    .line 283
     iget-object v6, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v7, 0x3
@@ -242,10 +242,10 @@
     :goto_2
     invoke-virtual {v6, v7, v4, v5}, Landroid/media/AudioManager;->adjustStreamVolume(III)V
 
-    .line 283
+    .line 293
     const/4 v1, 0x1
 
-    .line 289
+    .line 299
     :cond_5
     iget-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mCallback:Lcom/android/internal/policy/impl/KeyguardViewCallback;
 
@@ -259,25 +259,25 @@
 
     if-eqz v4, :cond_1
 
-    .line 290
+    .line 300
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "com.htc.lockscreen.volumekey"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 291
+    .line 301
     .local v3, volumeIntent:Landroid/content/Intent;
     const-string v4, "isMusicActive"
 
     invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 292
+    .line 302
     const-string v4, "keyCode"
 
     invoke-virtual {v3, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 293
+    .line 303
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -286,7 +286,7 @@
 
     goto :goto_1
 
-    .line 266
+    .line 276
     .end local v1           #isMusicActive:Z
     .end local v3           #volumeIntent:Landroid/content/Intent;
     :catchall_0
@@ -299,14 +299,14 @@
 
     throw v4
 
-    .line 273
+    .line 283
     .restart local v1       #isMusicActive:Z
     :cond_6
     const/4 v4, -0x1
 
     goto :goto_2
 
-    .line 302
+    .line 312
     .end local v1           #isMusicActive:Z
     :cond_7
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
@@ -315,12 +315,12 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 303
+    .line 313
     sparse-switch v2, :sswitch_data_1
 
     goto/16 :goto_0
 
-    .line 316
+    .line 326
     :sswitch_3
     new-instance v0, Landroid/content/Intent;
 
@@ -328,13 +328,13 @@
 
     invoke-direct {v0, v4, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 317
+    .line 327
     .restart local v0       #intent:Landroid/content/Intent;
     const-string v4, "android.intent.extra.KEY_EVENT"
 
     invoke-virtual {v0, v4, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 318
+    .line 328
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -343,7 +343,7 @@
 
     goto/16 :goto_1
 
-    .line 228
+    .line 238
     :sswitch_data_0
     .sparse-switch
         0x18 -> :sswitch_2
@@ -362,7 +362,7 @@
         0xa4 -> :sswitch_2
     .end sparse-switch
 
-    .line 303
+    .line 313
     :sswitch_data_1
     .sparse-switch
         0x4f -> :sswitch_3
@@ -386,32 +386,42 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 204
+    .line 206
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 224
+    :cond_0
+    :goto_0
+    :pswitch_0
+    return v0
+
+    .line 211
+    :cond_1
+    iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mCallback:Lcom/android/internal/policy/impl/KeyguardViewCallback;
+
+    invoke-interface {v1}, Lcom/android/internal/policy/impl/KeyguardViewCallback;->isScreenOn()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 214
-    :goto_0
-    :pswitch_0
-    return v0
-
-    .line 207
-    :cond_0
+    .line 217
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 214
+    .line 224
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 207
+    .line 217
     nop
 
     :pswitch_data_0
@@ -490,12 +500,12 @@
     .line 188
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mPokeWait:Z
 
-    .line 189
+    .line 190
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mCallback:Lcom/android/internal/policy/impl/KeyguardViewCallback;
 
     invoke-interface {v2}, Lcom/android/internal/policy/impl/KeyguardViewCallback;->pokeWakelock()V
 
-    .line 197
+    .line 199
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     :goto_0
@@ -505,11 +515,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 200
+    .line 202
     :goto_1
     return v1
 
-    .line 192
+    .line 194
     :cond_1
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewBase;->mCallback:Lcom/android/internal/policy/impl/KeyguardViewCallback;
 
@@ -517,7 +527,7 @@
 
     goto :goto_0
 
-    .line 200
+    .line 202
     :cond_2
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
@@ -531,15 +541,15 @@
     .parameter "visibility"
 
     .prologue
-    .line 328
+    .line 338
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchSystemUiVisibilityChanged(I)V
 
-    .line 329
+    .line 339
     const/high16 v0, 0x40
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewBase;->setSystemUiVisibility(I)V
 
-    .line 330
+    .line 340
     return-void
 .end method
 

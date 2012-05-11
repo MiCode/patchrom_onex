@@ -301,7 +301,7 @@
 
     const-string v1, "common_photo_frame_mask"
 
-    const v2, 0x208017d
+    const v2, 0x208017e
 
     invoke-static {p1, v1, v2}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

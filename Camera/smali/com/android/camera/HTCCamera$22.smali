@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 6020
+    .line 6024
     iput-object p1, p0, Lcom/android/camera/HTCCamera$22;->this$0:Lcom/android/camera/HTCCamera;
 
     iput-object p2, p0, Lcom/android/camera/HTCCamera$22;->val$previewSize:Lcom/android/camera/imaging/Size;
@@ -46,7 +46,7 @@
     .locals 2
 
     .prologue
-    .line 6024
+    .line 6028
     iget-object v0, p0, Lcom/android/camera/HTCCamera$22;->this$0:Lcom/android/camera/HTCCamera;
 
     iget-object v1, p0, Lcom/android/camera/HTCCamera$22;->val$previewSize:Lcom/android/camera/imaging/Size;
@@ -54,6 +54,6 @@
     #calls: Lcom/android/camera/HTCCamera;->onPreviewSizeChanged(Lcom/android/camera/imaging/Size;)V
     invoke-static {v0, v1}, Lcom/android/camera/HTCCamera;->access$4300(Lcom/android/camera/HTCCamera;Lcom/android/camera/imaging/Size;)V
 
-    .line 6025
+    .line 6029
     return-void
 .end method

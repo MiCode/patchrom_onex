@@ -69,7 +69,7 @@
 
     iget-object v1, v1, Lcom/htc/weather/animations/WeatherAnimationData;->mContext:Landroid/content/Context;
 
-    const v2, 0x20803a1
+    const v2, 0x20803a2
 
     invoke-static {v1, v2}, Lcom/htc/weather/AnimImages;->getResBitmap(Landroid/content/Context;I)Landroid/graphics/Bitmap;
 

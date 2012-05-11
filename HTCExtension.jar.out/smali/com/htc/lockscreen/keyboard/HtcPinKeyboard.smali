@@ -864,7 +864,7 @@
 
     .line 200
     .local v3, rim:Lcom/htc/widget/HtcRimImageButton;
-    const v5, 0x20801c7
+    const v5, 0x20801c8
 
     invoke-virtual {v3, v5}, Lcom/htc/widget/HtcRimImageButton;->setIconResource(I)V
 

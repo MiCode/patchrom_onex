@@ -49,7 +49,7 @@
     .locals 2
 
     .prologue
-    .line 1939
+    .line 2291
     const-string v0, "content://mms"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -58,7 +58,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 1941
+    .line 2293
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "report-request"
@@ -69,7 +69,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_REQUEST_URI:Landroid/net/Uri;
 
-    .line 1944
+    .line 2296
     sget-object v0, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "report-status"
@@ -80,7 +80,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->REPORT_STATUS_URI:Landroid/net/Uri;
 
-    .line 1957
+    .line 2309
     const-string v0, "\\s*(\"[^\"]*\"|[^<>\"]+)\\s*<([^<>]+)>\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -89,7 +89,7 @@
 
     sput-object v0, Landroid/provider/Telephony$Mms;->NAME_ADDR_EMAIL_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 1965
+    .line 2317
     const-string v0, "\\s*\"([^\"]*)\"\\s*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -105,10 +105,8 @@
     .locals 0
 
     .prologue
-    .line 1935
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2309
     return-void
 .end method
 
@@ -117,14 +115,14 @@
     .parameter "address"
 
     .prologue
-    .line 1998
+    .line 2350
     sget-object v1, Landroid/provider/Telephony$Mms;->NAME_ADDR_EMAIL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 2000
+    .line 2352
     .local v0, match:Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -132,14 +130,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 2001
+    .line 2353
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2003
+    .line 2355
     .end local p0
     :cond_0
     return-object p0
@@ -338,6 +336,6 @@
     :cond_0
     move-object v5, p3
 
-    .line 2096
+    .line 2448
     goto :goto_0
 .end method

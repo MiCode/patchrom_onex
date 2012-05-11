@@ -1319,7 +1319,7 @@
     <string name="dongle_noti_ticker">ตรวจพบอุปกรณ์ Media Link HD</string>
     <string name="dongle_noti_title_multiple_found">ไม่พบอุปกรณ์ HTC Media Link</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
-    <string name="dongle_noti_text_multiple_found">แะเพื่อเลือก</string>
+    <string name="dongle_noti_text_multiple_found">แตะเพื่อเลือก</string>
     <string name="wireless_display_output_tv_title">Media Link HD</string>
     <string name="wireless_display_output_tv_text">"คุณต้องการส่งสิ่งนี้เพื่อเล่นบนทีวีหรือไม่?
 

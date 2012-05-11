@@ -1,11 +1,11 @@
 .class Lcom/android/server/am/ActivityManagerService$7;
-.super Lcom/android/server/am/ActivityManagerService$ForegroundToken;
+.super Landroid/content/BroadcastReceiver;
 .source "ActivityManagerService.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/ActivityManagerService;->setProcessForeground(Landroid/os/IBinder;IZ)V
+    value = Lcom/android/server/am/ActivityManagerService;->enableOobeOopProtection()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,32 +17,66 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/am/ActivityManagerService;
 
+.field final synthetic val$firstBootTempNoKillTimeout:Ljava/lang/Runnable;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/ActivityManagerService;)V
+.method constructor <init>(Lcom/android/server/am/ActivityManagerService;Ljava/lang/Runnable;)V
     .locals 0
+    .parameter
     .parameter
 
     .prologue
-    .line 4868
+    .line 4446
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$7;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-direct {p0, p1}, Lcom/android/server/am/ActivityManagerService$ForegroundToken;-><init>(Lcom/android/server/am/ActivityManagerService;)V
+    iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$7;->val$firstBootTempNoKillTimeout:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public binderDied()V
-    .locals 1
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
+    .parameter "context"
+    .parameter "intent"
 
     .prologue
-    .line 4870
+    .line 4449
+    const-string v0, "ActivityManager"
+
+    const-string v1, "SETUP_WIZARD_FINISHED, enable oop"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4450
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$7;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-virtual {v0, p0}, Lcom/android/server/am/ActivityManagerService;->foregroundTokenDied(Lcom/android/server/am/ActivityManagerService$ForegroundToken;)V
+    iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mHandler:Landroid/os/Handler;
 
-    .line 4871
+    iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$7;->val$firstBootTempNoKillTimeout:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 4451
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$7;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    #getter for: Lcom/android/server/am/ActivityManagerService;->mAllowKillingBackground:Z
+    invoke-static {v0}, Lcom/android/server/am/ActivityManagerService;->access$900(Lcom/android/server/am/ActivityManagerService;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 4452
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$7;->val$firstBootTempNoKillTimeout:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    .line 4454
+    :cond_0
     return-void
 .end method

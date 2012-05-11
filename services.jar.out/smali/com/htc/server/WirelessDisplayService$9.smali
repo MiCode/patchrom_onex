@@ -1,14 +1,11 @@
 .class Lcom/htc/server/WirelessDisplayService$9;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "WirelessDisplayService.java"
-
-# interfaces
-.implements Landroid/content/ServiceConnection;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/htc/server/WirelessDisplayService;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/htc/server/WirelessDisplayService;-><init>(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,59 +24,126 @@
     .parameter
 
     .prologue
-    .line 1835
+    .line 1791
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$9;->this$0:Lcom/htc/server/WirelessDisplayService;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 2
-    .parameter "name"
-    .parameter "service"
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
+    .parameter "context"
+    .parameter "intent"
 
     .prologue
-    .line 1837
-    const-string v0, "WirelessDisplayService"
+    .line 1794
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    const-string v1, "Connected to WHDMI WfdService."
+    move-result-object v2
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "Direction"
 
-    .line 1838
-    iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$9;->this$0:Lcom/htc/server/WirelessDisplayService;
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
-    #setter for: Lcom/htc/server/WirelessDisplayService;->mAutoConfigService:Landroid/os/IBinder;
-    invoke-static {v0, p2}, Lcom/htc/server/WirelessDisplayService;->access$1902(Lcom/htc/server/WirelessDisplayService;Landroid/os/IBinder;)Landroid/os/IBinder;
+    move-result v1
 
-    .line 1839
-    return-void
-.end method
+    .line 1795
+    .local v1, direction:I
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-.method public onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 2
-    .parameter "name"
+    move-result-object v2
 
-    .prologue
-    .line 1842
-    const-string v0, "WirelessDisplayService"
+    const-string v3, "AbsoluteDirection"
 
-    const-string v1, "Disconnected to WHDMI WfdService."
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v0
 
-    .line 1843
-    iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$9;->this$0:Lcom/htc/server/WirelessDisplayService;
+    .line 1796
+    .local v0, absoluteDirection:I
+    const-string v2, "WirelessDisplayService"
 
-    const/4 v1, 0x0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    #setter for: Lcom/htc/server/WirelessDisplayService;->mAutoConfigService:Landroid/os/IBinder;
-    invoke-static {v0, v1}, Lcom/htc/server/WirelessDisplayService;->access$1902(Lcom/htc/server/WirelessDisplayService;Landroid/os/IBinder;)Landroid/os/IBinder;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1844
+    const-string v4, "Receive com.htc.action.MULTIPLE_FINGER_SWIPE_EVENT, Direction value="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", absoluteDirection value = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", finger_gesture_enabled : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6200()Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1799
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6200()Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 1800
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+
+    move-result-object v2
+
+    invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
+
+    move-result-object v3
+
+    const/16 v4, 0x71
+
+    invoke-virtual {v3, v4, v0, v1}, Lcom/htc/server/WirelessDisplayService$H;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/htc/server/WirelessDisplayService$H;->sendMessage(Landroid/os/Message;)Z
+
+    .line 1802
+    :cond_0
     return-void
 .end method

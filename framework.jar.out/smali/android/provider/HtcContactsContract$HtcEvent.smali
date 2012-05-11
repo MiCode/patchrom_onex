@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    const-string v1, "htc_events"
+    const-string/jumbo v1, "htc_events"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 

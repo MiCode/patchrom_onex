@@ -120,7 +120,7 @@
 
     const-string v3, "common_titlebar_4round"
 
-    const v4, 0x20803e1
+    const v4, 0x20803e2
 
     invoke-static {v2, v3, v4}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

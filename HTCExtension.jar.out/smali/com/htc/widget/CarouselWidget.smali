@@ -1072,7 +1072,7 @@
 
     const/4 v3, -0x1
 
-    const v4, 0x208019b
+    const v4, 0x208019c
 
     const-string v5, "common_subnav_tab_rearrange"
 

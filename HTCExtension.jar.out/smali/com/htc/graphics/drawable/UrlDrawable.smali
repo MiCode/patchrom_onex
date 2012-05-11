@@ -135,7 +135,16 @@
 
 
 # instance fields
-.field private mBitmap:Landroid/graphics/Bitmap;
+.field private mBitmap:Ljava/lang/ref/SoftReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/SoftReference",
+            "<",
+            "Landroid/graphics/Bitmap;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field protected mContext:Landroid/content/Context;
 
@@ -685,14 +694,14 @@
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/htc/graphics/drawable/UrlDrawable;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+.method static synthetic access$202(Lcom/htc/graphics/drawable/UrlDrawable;Ljava/lang/ref/SoftReference;)Ljava/lang/ref/SoftReference;
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
     .line 80
-    iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
 
     return-object p1
 .end method
@@ -2760,24 +2769,29 @@
     .prologue
     const/4 v11, 0x1
 
-    const/4 v10, 0x0
+    const/high16 v10, 0x4000
 
-    const/high16 v9, 0x4000
+    const/4 v9, 0x0
+
+    const/4 v4, 0x0
 
     const/4 v8, 0x0
 
-    const/4 v7, 0x0
-
     .line 1668
-    iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+
+    if-nez v3, :cond_5
+
+    move-object v0, v4
 
     .line 1670
     .local v0, bitmap:Landroid/graphics/Bitmap;
+    :goto_0
     invoke-static {v0}, Lcom/htc/graphics/drawable/UrlDrawable;->isValidBitmap(Landroid/graphics/Bitmap;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
@@ -2803,7 +2817,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_8
 
     .line 1674
     :cond_0
@@ -2814,38 +2828,38 @@
     .line 1675
     const-string v3, "UrlDrawable"
 
-    const-string v4, "[%d][%s] Draw real avatar"
+    const-string v5, "[%d][%s] Draw real avatar"
 
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
-    new-array v5, v5, [Ljava/lang/Object;
+    new-array v6, v6, [Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v6
+    move-result v7
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    iget-object v6, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mUrl:Ljava/lang/String;
+    iget-object v7, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mUrl:Ljava/lang/String;
 
-    aput-object v6, v5, v11
+    aput-object v7, v6, v11
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v5, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1678
     :cond_1
-    iput-boolean v7, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mNeverDrawn:Z
+    iput-boolean v8, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mNeverDrawn:Z
 
     .line 1679
-    invoke-virtual {p1, v0, v8, v8, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v0, v9, v9, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     .line 1680
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -2875,64 +2889,40 @@
 
     and-int/lit8 v3, v3, 0x10
 
-    if-lez v3, :cond_5
+    if-lez v3, :cond_6
 
     .line 1684
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+    iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, v5, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v4
+    move-result v5
 
-    sub-int/2addr v3, v4
+    sub-int/2addr v3, v5
 
     int-to-float v2, v3
 
     .line 1690
     :cond_2
-    :goto_0
+    :goto_1
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
     and-int/lit8 v3, v3, 0x2
 
-    if-lez v3, :cond_6
+    if-lez v3, :cond_7
 
     .line 1691
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
-
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
-
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v4
-
-    sub-int/2addr v3, v4
-
-    int-to-float v1, v3
-
-    .line 1697
-    :cond_3
-    :goto_1
-    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
-
-    .line 1698
-    iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
-
-    iget-object v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
-
-    new-instance v4, Landroid/graphics/Rect;
 
     iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
@@ -2942,19 +2932,43 @@
 
     move-result v5
 
+    sub-int/2addr v3, v5
+
+    int-to-float v1, v3
+
+    .line 1697
+    :cond_3
+    :goto_2
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
+
+    .line 1698
+    iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+
+    iget-object v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+
+    new-instance v5, Landroid/graphics/Rect;
+
     iget-object v6, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget-object v6, v6, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v6
 
-    invoke-direct {v4, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+    iget-object v7, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    sget-object v5, Lcom/htc/graphics/drawable/UrlDrawable;->sPaint:Landroid/graphics/Paint;
+    iget-object v7, v7, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p1, v3, v10, v4, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    invoke-virtual {v7}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v7
+
+    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    sget-object v6, Lcom/htc/graphics/drawable/UrlDrawable;->sPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v3, v4, v5, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     .line 1701
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
@@ -2963,13 +2977,29 @@
     .end local v1           #transX:F
     .end local v2           #transY:F
     :cond_4
-    :goto_2
+    :goto_3
     return-void
 
+    .line 1668
+    .end local v0           #bitmap:Landroid/graphics/Bitmap;
+    :cond_5
+    iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+
+    invoke-virtual {v3}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/graphics/Bitmap;
+
+    move-object v0, v3
+
+    goto/16 :goto_0
+
     .line 1686
+    .restart local v0       #bitmap:Landroid/graphics/Bitmap;
     .restart local v1       #transX:F
     .restart local v2       #transY:F
-    :cond_5
+    :cond_6
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
@@ -2983,24 +3013,24 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+    iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, v5, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v4
+    move-result v5
 
-    sub-int/2addr v3, v4
+    sub-int/2addr v3, v5
 
     int-to-float v3, v3
 
-    div-float v2, v3, v9
+    div-float v2, v3, v10
 
-    goto :goto_0
+    goto :goto_1
 
     .line 1693
-    :cond_6
+    :cond_7
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
@@ -3014,29 +3044,29 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+    iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, v5, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v4
+    move-result v5
 
-    sub-int/2addr v3, v4
+    sub-int/2addr v3, v5
 
     int-to-float v3, v3
 
-    div-float v1, v3, v9
+    div-float v1, v3, v10
 
-    goto :goto_1
+    goto :goto_2
 
     .line 1703
     .end local v1           #transX:F
     .end local v2           #transY:F
-    :cond_7
+    :cond_8
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_e
 
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
@@ -3046,49 +3076,49 @@
 
     move-result v3
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_e
 
     .line 1704
     sget-boolean v3, Lcom/htc/graphics/drawable/UrlDrawable;->DEBUG_LOG_ENABLED:Z
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     .line 1705
     const-string v3, "UrlDrawable"
 
-    const-string v4, "[%d][%s] Draw default avatar"
+    const-string v5, "[%d][%s] Draw default avatar"
 
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
-    new-array v5, v5, [Ljava/lang/Object;
+    new-array v6, v6, [Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v6
+    move-result v7
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    aput-object v6, v5, v7
+    aput-object v7, v6, v8
 
-    iget-object v6, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mUrl:Ljava/lang/String;
+    iget-object v7, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mUrl:Ljava/lang/String;
 
-    aput-object v6, v5, v11
+    aput-object v7, v6, v11
 
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v5, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1708
-    :cond_8
+    :cond_9
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget-object v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->defaultBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p1, v3, v8, v8, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v3, v9, v9, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     .line 1709
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3118,7 +3148,7 @@
 
     and-int/lit8 v3, v3, 0x10
 
-    if-lez v3, :cond_b
+    if-lez v3, :cond_c
 
     .line 1713
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3129,28 +3159,28 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+    iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, v5, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v4
+    move-result v5
 
-    sub-int/2addr v3, v4
+    sub-int/2addr v3, v5
 
     int-to-float v2, v3
 
     .line 1719
-    :cond_9
-    :goto_3
+    :cond_a
+    :goto_4
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
     and-int/lit8 v3, v3, 0x2
 
-    if-lez v3, :cond_c
+    if-lez v3, :cond_d
 
     .line 1720
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3161,30 +3191,6 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
-
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v4
-
-    sub-int/2addr v3, v4
-
-    int-to-float v1, v3
-
-    .line 1726
-    :cond_a
-    :goto_4
-    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
-
-    .line 1727
-    iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
-
-    iget-object v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
-
-    new-instance v4, Landroid/graphics/Rect;
-
     iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget-object v5, v5, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
@@ -3193,34 +3199,58 @@
 
     move-result v5
 
+    sub-int/2addr v3, v5
+
+    int-to-float v1, v3
+
+    .line 1726
+    :cond_b
+    :goto_5
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
+
+    .line 1727
+    iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+
+    iget-object v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+
+    new-instance v5, Landroid/graphics/Rect;
+
     iget-object v6, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget-object v6, v6, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v6
 
-    invoke-direct {v4, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
+    iget-object v7, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    sget-object v5, Lcom/htc/graphics/drawable/UrlDrawable;->sPaint:Landroid/graphics/Paint;
+    iget-object v7, v7, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p1, v3, v10, v4, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    invoke-virtual {v7}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v7
+
+    invoke-direct {v5, v8, v8, v6, v7}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    sget-object v6, Lcom/htc/graphics/drawable/UrlDrawable;->sPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v3, v4, v5, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     .line 1730
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     .line 1715
-    :cond_b
+    :cond_c
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
     and-int/lit8 v3, v3, 0x20
 
-    if-lez v3, :cond_9
+    if-lez v3, :cond_a
 
     .line 1716
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3231,31 +3261,31 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+    iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, v5, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v4
+    move-result v5
 
-    sub-int/2addr v3, v4
+    sub-int/2addr v3, v5
 
     int-to-float v3, v3
 
-    div-float v2, v3, v9
+    div-float v2, v3, v10
 
-    goto :goto_3
+    goto :goto_4
 
     .line 1722
-    :cond_c
+    :cond_d
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
     iget v3, v3, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayPos:I
 
     and-int/lit8 v3, v3, 0x4
 
-    if-lez v3, :cond_a
+    if-lez v3, :cond_b
 
     .line 1723
     iget-object v3, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3266,26 +3296,26 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
+    iget-object v5, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    iget-object v4, v4, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, v5, Lcom/htc/graphics/drawable/UrlDrawable$Options;->overlayBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v4
+    move-result v5
 
-    sub-int/2addr v3, v4
+    sub-int/2addr v3, v5
 
     int-to-float v3, v3
 
-    div-float v1, v3, v9
+    div-float v1, v3, v10
 
-    goto :goto_4
+    goto :goto_5
 
     .line 1733
     .end local v1           #transX:F
     .end local v2           #transY:F
-    :cond_d
+    :cond_e
     const-string v3, "UrlDrawable"
 
     const-string v4, "[%d][%s] Nothing can be drawn"
@@ -3302,7 +3332,7 @@
 
     move-result-object v6
 
-    aput-object v6, v5, v7
+    aput-object v6, v5, v8
 
     iget-object v6, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mUrl:Ljava/lang/String;
 
@@ -3314,7 +3344,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 .end method
 
 .method public getAvatarOptions()Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3332,9 +3362,25 @@
 
     .prologue
     .line 1868
-    iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
 
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
     return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Bitmap;
+
+    goto :goto_0
 .end method
 
 .method public getBitmapFromDiskCache()Landroid/graphics/Bitmap;
@@ -3573,13 +3619,18 @@
 
     .prologue
     .line 1793
-    iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+
+    if-nez v2, :cond_1
+
+    const/4 v0, 0x0
 
     .line 1795
     .local v0, bitmap:Landroid/graphics/Bitmap;
+    :goto_0
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
@@ -3589,7 +3640,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     .line 1796
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3600,29 +3651,45 @@
 
     .line 1811
     :cond_0
-    :goto_0
+    :goto_1
     return v1
 
-    .line 1797
+    .line 1793
+    .end local v0           #bitmap:Landroid/graphics/Bitmap;
     :cond_1
+    iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+
+    invoke-virtual {v2}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/Bitmap;
+
+    move-object v0, v2
+
+    goto :goto_0
+
+    .line 1797
+    .restart local v0       #bitmap:Landroid/graphics/Bitmap;
+    :cond_2
     invoke-static {v0}, Lcom/htc/graphics/drawable/UrlDrawable;->isValidBitmap(Landroid/graphics/Bitmap;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     .line 1798
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    goto :goto_0
+    goto :goto_1
 
     .line 1799
-    :cond_2
+    :cond_3
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     .line 1800
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3631,7 +3698,7 @@
 
     .line 1802
     .local v1, height:I
-    if-gtz v1, :cond_3
+    if-gtz v1, :cond_4
 
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
@@ -3641,7 +3708,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     .line 1803
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3653,20 +3720,20 @@
     move-result v1
 
     .line 1806
-    :cond_3
+    :cond_4
     if-gtz v1, :cond_0
 
     .line 1807
     const/16 v1, 0x17
 
-    goto :goto_0
+    goto :goto_1
 
     .line 1811
     .end local v1           #height:I
-    :cond_4
+    :cond_5
     const/16 v1, 0x17
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public getIntrinsicWidth()I
@@ -3674,13 +3741,18 @@
 
     .prologue
     .line 1820
-    iget-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+
+    if-nez v2, :cond_1
+
+    const/4 v0, 0x0
 
     .line 1822
     .local v0, bitmap:Landroid/graphics/Bitmap;
+    :goto_0
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
@@ -3690,7 +3762,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     .line 1823
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3701,29 +3773,45 @@
 
     .line 1838
     :cond_0
-    :goto_0
+    :goto_1
     return v1
 
-    .line 1824
+    .line 1820
+    .end local v0           #bitmap:Landroid/graphics/Bitmap;
     :cond_1
+    iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
+
+    invoke-virtual {v2}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/Bitmap;
+
+    move-object v0, v2
+
+    goto :goto_0
+
+    .line 1824
+    .restart local v0       #bitmap:Landroid/graphics/Bitmap;
+    :cond_2
     invoke-static {v0}, Lcom/htc/graphics/drawable/UrlDrawable;->isValidBitmap(Landroid/graphics/Bitmap;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     .line 1825
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    goto :goto_0
+    goto :goto_1
 
     .line 1826
-    :cond_2
+    :cond_3
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     .line 1827
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3732,7 +3820,7 @@
 
     .line 1829
     .local v1, width:I
-    if-gtz v1, :cond_3
+    if-gtz v1, :cond_4
 
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
 
@@ -3742,7 +3830,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     .line 1830
     iget-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mOptions:Lcom/htc/graphics/drawable/UrlDrawable$Options;
@@ -3754,20 +3842,20 @@
     move-result v1
 
     .line 1833
-    :cond_3
+    :cond_4
     if-gtz v1, :cond_0
 
     .line 1834
     const/16 v1, 0x17
 
-    goto :goto_0
+    goto :goto_1
 
     .line 1838
     .end local v1           #width:I
-    :cond_4
+    :cond_5
     const/16 v1, 0x17
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public getListPos()I
@@ -4231,7 +4319,7 @@
 
     .line 980
     :cond_0
-    iput-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
 
     .line 981
     const/4 v0, 0x1
@@ -4541,7 +4629,11 @@
     .line 1036
     .end local v1           #e:Ljava/lang/Exception;
     :cond_2
-    iput-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    new-instance v2, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v2, v0}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v2, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
 
     goto :goto_1
 .end method
@@ -5113,7 +5205,11 @@
     .line 1149
     .restart local v0       #bitmap:Landroid/graphics/Bitmap;
     :cond_a
-    iput-object v0, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, v0}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Lcom/htc/graphics/drawable/UrlDrawable;->mBitmap:Ljava/lang/ref/SoftReference;
 
     goto/16 :goto_1
 

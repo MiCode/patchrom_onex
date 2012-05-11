@@ -508,19 +508,21 @@
 .end method
 
 .method private linkToController()Z
-    .locals 3
+    .locals 7
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v6, 0x1
+
+    const/4 v4, 0x0
 
     .line 428
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_Controller:Lcom/android/camera/component/ContinuousBurstController;
 
     if-eqz v0, :cond_0
 
-    .line 431
+    .line 436
     :goto_0
-    return v1
+    return v6
 
     .line 430
     :cond_0
@@ -532,9 +534,9 @@
 
     move-result-object v0
 
-    const-string v2, "Continuous Burst Controller"
+    const-string v1, "Continuous Burst Controller"
 
-    invoke-virtual {v0, v2}, Lcom/android/camera/component/CameraThreadComponentManager;->getComponent(Ljava/lang/String;)Lcom/android/camera/component/Component;
+    invoke-virtual {v0, v1}, Lcom/android/camera/component/CameraThreadComponentManager;->getComponent(Ljava/lang/String;)Lcom/android/camera/component/Component;
 
     move-result-object v0
 
@@ -542,20 +544,59 @@
 
     iput-object v0, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_Controller:Lcom/android/camera/component/ContinuousBurstController;
 
-    .line 431
+    .line 433
     iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_Controller:Lcom/android/camera/component/ContinuousBurstController;
 
     if-eqz v0, :cond_1
 
-    move v0, v1
+    .line 434
+    iget-object v1, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_Controller:Lcom/android/camera/component/ContinuousBurstController;
+
+    const/16 v2, 0x2715
+
+    invoke-virtual {p0}, Lcom/android/camera/component/ContinuousBurstUI;->getSettings()Lcom/android/camera/CameraSettings;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/android/camera/CameraSettings;->isContinuousBurstLimited:Lcom/android/camera/property/Property;
+
+    invoke-virtual {v0}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/16 v3, 0x14
 
     :goto_1
-    move v1, v0
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/component/ContinuousBurstUI;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;)Z
+
+    .line 436
+    :cond_1
+    iget-object v0, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_Controller:Lcom/android/camera/component/ContinuousBurstController;
+
+    if-eqz v0, :cond_2
+
+    move v4, v6
+
+    :cond_2
+    move v6, v4
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    .line 434
+    :cond_3
+    sget v3, Lcom/android/camera/component/ContinuousBurstController;->DEFAULT_UNLIMITED_PICTURE_COUNT:I
 
     goto :goto_1
 .end method
@@ -564,7 +605,7 @@
     .locals 4
 
     .prologue
-    .line 440
+    .line 445
     iget-object v1, p0, Lcom/android/camera/component/ContinuousBurstUI;->isEntered:Lcom/android/camera/property/Property;
 
     invoke-virtual {v1}, Lcom/android/camera/property/Property;->getValue()Ljava/lang/Object;
@@ -579,18 +620,18 @@
 
     if-nez v1, :cond_0
 
-    .line 442
+    .line 447
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     const-string v2, "onCaptureButtonLongPressed() - Not entered"
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 475
+    .line 480
     :goto_0
     return-void
 
-    .line 445
+    .line 450
     :cond_0
     iget v1, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_State:I
 
@@ -598,7 +639,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 447
+    .line 452
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -625,7 +666,7 @@
 
     goto :goto_0
 
-    .line 452
+    .line 457
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/component/ContinuousBurstUI;->linkToController()Z
 
@@ -633,7 +674,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 455
+    .line 460
     sget-object v2, Lcom/android/camera/component/ContinuousBurstUI$7;->$SwitchMap$com$android$camera$AutoDetectedScene:[I
 
     invoke-virtual {p0}, Lcom/android/camera/component/ContinuousBurstUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
@@ -656,7 +697,7 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 467
+    .line 472
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -691,11 +732,11 @@
 
     goto :goto_0
 
-    .line 458
+    .line 463
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 470
+    .line 475
     .local v0, burstMode:I
     :goto_1
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -720,30 +761,30 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/LOG;->W(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 471
+    .line 476
     invoke-direct {p0, v0}, Lcom/android/camera/component/ContinuousBurstUI;->updateBurstMode(I)V
 
     goto :goto_0
 
-    .line 461
+    .line 466
     .end local v0           #burstMode:I
     :pswitch_1
     const/4 v0, 0x2
 
-    .line 462
+    .line 467
     .restart local v0       #burstMode:I
     goto :goto_1
 
-    .line 464
+    .line 469
     .end local v0           #burstMode:I
     :pswitch_2
     const/4 v0, 0x3
 
-    .line 465
+    .line 470
     .restart local v0       #burstMode:I
     goto :goto_1
 
-    .line 474
+    .line 479
     .end local v0           #burstMode:I
     :cond_2
     iget-object v1, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
@@ -754,7 +795,7 @@
 
     goto/16 :goto_0
 
-    .line 455
+    .line 460
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -770,44 +811,44 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 483
+    .line 488
     if-le p1, v1, :cond_0
 
-    .line 486
+    .line 491
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_State:I
 
-    .line 489
+    .line 494
     invoke-virtual {p0}, Lcom/android/camera/component/ContinuousBurstUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->disableActionScreen()V
 
-    .line 492
+    .line 497
     const v0, 0x7f0a004e
 
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/component/ContinuousBurstUI;->showProcessingDialog(ZI)V
 
-    .line 493
+    .line 498
     invoke-virtual {p0}, Lcom/android/camera/component/ContinuousBurstUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->notifyProcessingTakenPictures()V
 
-    .line 500
+    .line 505
     :goto_0
     return-void
 
-    .line 497
+    .line 502
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_State:I
 
-    .line 498
+    .line 503
     invoke-virtual {p0}, Lcom/android/camera/component/ContinuousBurstUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
@@ -826,23 +867,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 507
+    .line 512
     const/4 v2, 0x1
 
     if-le p1, v2, :cond_1
 
-    .line 510
+    .line 515
     iput v3, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_State:I
 
-    .line 513
+    .line 518
     invoke-virtual {p0, v3}, Lcom/android/camera/component/ContinuousBurstUI;->showProcessingDialog(Z)V
 
-    .line 515
+    .line 520
     new-instance v1, Lcom/android/camera/MediaInfo;
 
     invoke-direct {v1}, Lcom/android/camera/MediaInfo;-><init>()V
 
-    .line 516
+    .line 521
     .local v1, mediaInfo:Lcom/android/camera/MediaInfo;
     sget-object v2, Lcom/android/camera/io/FileFormat;->Jpeg:Lcom/android/camera/io/FileFormat;
 
@@ -850,15 +891,15 @@
 
     iput-object v2, v1, Lcom/android/camera/MediaInfo;->mimeType:Ljava/lang/String;
 
-    .line 517
+    .line 522
     iput-object p3, v1, Lcom/android/camera/MediaInfo;->filePath:Lcom/android/camera/io/Path;
 
-    .line 520
+    .line 525
     invoke-virtual {p0}, Lcom/android/camera/component/ContinuousBurstUI;->getCameraActivity()Lcom/android/camera/HTCCamera;
 
     move-result-object v0
 
-    .line 521
+    .line 526
     .local v0, cameraActivity:Lcom/android/camera/HTCCamera;
     iget-object v2, v0, Lcom/android/camera/HTCCamera;->isActivityPausing:Lcom/android/camera/property/Property;
 
@@ -912,19 +953,19 @@
 
     if-eqz v2, :cond_0
 
-    .line 526
+    .line 531
     const-string v2, "com.htc.album.action.VIEW_CONTINUOUS_SHOT_FROM_CAMERA"
 
     invoke-virtual {v0, v2, p2, v1}, Lcom/android/camera/HTCCamera;->startAlbum(Ljava/lang/String;Ljava/lang/String;Lcom/android/camera/MediaInfo;)Z
 
-    .line 530
+    .line 535
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->completeTakingPicture()V
 
-    .line 533
+    .line 538
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->enableActionScreen()V
 
-    .line 535
+    .line 540
     .end local v0           #cameraActivity:Lcom/android/camera/HTCCamera;
     .end local v1           #mediaInfo:Lcom/android/camera/MediaInfo;
     :cond_1
@@ -936,17 +977,17 @@
     .parameter "mode"
 
     .prologue
-    .line 542
+    .line 547
     iput p1, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_BurstMode:I
 
-    .line 543
+    .line 548
     invoke-direct {p0}, Lcom/android/camera/component/ContinuousBurstUI;->linkToController()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 544
+    .line 549
     iget-object v1, p0, Lcom/android/camera/component/ContinuousBurstUI;->m_Controller:Lcom/android/camera/component/ContinuousBurstController;
 
     const/16 v2, 0x2714
@@ -963,11 +1004,11 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/camera/component/ContinuousBurstUI;->sendMessage(Lcom/android/camera/component/Component;IIILjava/lang/Object;Z)Z
 
-    .line 547
+    .line 552
     :goto_0
     return-void
 
-    .line 546
+    .line 551
     :cond_0
     iget-object v0, p0, Lcom/android/camera/ThreadDependencyObject;->TAG:Ljava/lang/String;
 

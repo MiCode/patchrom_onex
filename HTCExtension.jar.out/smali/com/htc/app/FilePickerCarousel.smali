@@ -58,7 +58,7 @@
     .prologue
     const/4 v12, 0x1
 
-    const v11, 0x208026a
+    const v11, 0x208026b
 
     const v10, 0x20800ea
 

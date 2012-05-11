@@ -269,13 +269,13 @@
     <string name="turn_off_radio">Отключить беспроводную связь</string>
     <string name="screen_lock">Заблокировать экран</string>
     <string name="power_off">Отключить питание</string>
-    <string name="silent_mode_silent">Звонок откл.</string>
-    <string name="silent_mode_vibrate">Звонок: вибровызов</string>
+    <string name="silent_mode_silent">Звонок выкл.</string>
+    <string name="silent_mode_vibrate">Вибровызов</string>
     <string name="silent_mode_ring">Звонок вкл.</string>
     <string name="shutdown_progress">Идет выключение…</string>
     <string name="shutdown_confirm">Телефон будет выключен.</string>
     <string name="shutdown_confirm_question">Завершить работу?</string>
-    <string name="recent_tasks_title">Последние</string>
+    <string name="recent_tasks_title">Недавние</string>
     <string name="no_recent_tasks">Приложения не запускались</string>
     <string name="global_actions">Параметры телефона</string>
     <string name="global_action_lock">Заблокировать экран</string>
@@ -426,10 +426,10 @@
     <string name="permdesc_movePackage">Позволяет приложению перемещать ресурсы приложения с внутренних на внешние носители и наоборот.</string>
     <string name="permlab_readLogs">считывать конфиденциальные данные журнала</string>
     <string name="permdesc_readLogs">Позволяет приложению считывать информацию из различных журналов системы. Приложение может получать сведения о работе пользователя с телефоном, которые могут содержать личную или конфиденциальную информацию.</string>
-    <string name="permlab_anyCodecForPlayback">использовать для воспроизведения любой медиадекодер</string>
-    <string name="permdesc_anyCodecForPlayback">Разрешает приложению использовать любой установленный медиадекодер для расшифровки содержимого для воспроизведения.</string>
-    <string name="permlab_readWriteOmaDrm">Доступ к папке данных oma DRM</string>
-    <string name="permdesc_readWriteOmaDrm">Разрешает приложению читать или записывать данные в папку OMA DRM.</string>
+    <string name="permlab_anyCodecForPlayback">Использовать любой декодер для воспроизведения</string>
+    <string name="permdesc_anyCodecForPlayback">Разрешает приложению использовать для воспроизведения любой доступный в системе декодер.</string>
+    <string name="permlab_readWriteOmaDrm">Доступ к папке OMA DRM</string>
+    <string name="permdesc_readWriteOmaDrm">Разрешает приложение чтение и запись в папке OMA DRM.</string>
     <string name="permlab_diagnostic">Доступ к чтению и записи ресурсов, принадлежащих группе diag</string>
     <string name="permdesc_diagnostic">Разрешает приложению считывать и записывать в любой ресурс, принадлежащий группе diag, например файлы в /dev. Это может влиять на стабильность и безопасность системы. Следует использовать ТОЛЬКО при диагностике оборудования производителем или оператором.</string>
     <string name="permlab_changeComponentState">Возможность включать и выключать компоненты приложений</string>
@@ -570,10 +570,10 @@
     <string name="permdesc_changeWifiState">Разрешает приложению подключаться и отключаться от точек доступа Wi-Fi и вносить изменения в настроенные сети Wi-Fi.</string>
     <string name="permlab_changeWifiMulticastState">разрешить прием многоадресных рассылок по Wi-Fi</string>
     <string name="permdesc_changeWifiMulticastState">Разрешает приложению принимать пакеты, не адресованные именно вашему устройству. Это может быть полезно для поиска услуг, доступных в данном месте. В этом случае энергопотребление увеличивается по сравнению с режимом не многоадресной рассылки.</string>
-    <string name="permlab_accessWimaxState">показывать состояние WiMAX</string>
-    <string name="permdesc_accessWimaxState">Разрешает приложению получать информацию о состоянии WiMAX.</string>
-    <string name="permlab_changeWimaxState">изменить состояние WiMAX</string>
-    <string name="permdesc_changeWimaxState">Разрешает приложение подключаться и отключаться от сети WiMAX.</string>
+    <string name="permlab_accessWimaxState">Просмотр статуса WiMAX</string>
+    <string name="permdesc_accessWimaxState">Разрешить приложению получать информацию о статусе WiMAX.</string>
+    <string name="permlab_changeWimaxState">Изменять состояние WiMAX</string>
+    <string name="permdesc_changeWimaxState">Разрешить приложение управлять подключением к сети WiMAX.</string>
     <string name="permlab_bluetoothAdmin">Доступ к управлению Bluetooth</string>
     <string name="permdesc_bluetoothAdmin">Разрешает приложению настраивать локальный телефон с Bluetooth, а также обнаруживать удаленные устройства и соединяться с ними.</string>
     <string name="permlab_bluetooth">Возможность создавать Bluetooth-подключения</string>
@@ -739,7 +739,7 @@
     <string name="lockscreen_sim_puk_locked_instructions">См. руководство пользователя или свяжитесь со службой поддержки.</string>
     <string name="lockscreen_sim_locked_message">SIM-карта блокирована</string>
     <string name="lockscreen_sim_unlock_progress_dialog_message">Разблокировка SIM-карты...</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Вы неправильно воспроизвели комбинацию разблокировки %d раз. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message" formatted="false">"Вы неправильно воспроизвели комбинацию разблокировки %d раз.
 
 Повторите попытку через %d сек."</string>
     <string name="lockscreen_too_many_failed_password_attempts_dialog_message" formatted="false">"Количество неудачных попыток ввода пароля: %d.
@@ -750,7 +750,7 @@
 Повторите попытку через %d с."</string>
     <string name="lockscreen_failed_attempts_almost_glogin" formatted="false">"Вы неверно воспроизвели комбинацию разблокировки %d раз(а). После %d неудачных попыток(ки) придется разблокировать телефон с помощью входа Google.
 
- Повторите попытку через %d сек."</string>
+Повторите попытку через %d сек."</string>
     <string name="lockscreen_failed_attempts_almost_at_wipe" formatted="false">Не удалось разблокировать телефон (число попыток: %d). Осталось попыток: %d. После этого будут восстановлены настройки по умолчанию, что приведет к удалению всех пользовательских данных.</string>
     <string name="lockscreen_failed_attempts_now_wiping">Не удалось разблокировать телефон (число попыток: %d). Будут восстановлены настройки по умолчанию.</string>
     <string name="lockscreen_too_many_failed_attempts_countdown">Повторите попытку через %d сек.</string>
@@ -897,8 +897,8 @@
     <string name="low_internal_storage_view_title">Недостаточно места</string>
     <string name="low_internal_storage_view_text">В памяти телефона осталось мало места.</string>
     <string name="loading">Загрузка...</string>
-    <string name="capital_on">Включено</string>
-    <string name="capital_off">Выключено</string>
+    <string name="capital_on">Включить</string>
+    <string name="capital_off">Выключить</string>
     <string name="whichApplication">Выполнить действие с помощью</string>
     <string name="alwaysUse">Использовать для этого действия по умолчанию.</string>
     <string name="clearDefaultHintMsg">К значениям по умолчанию можно сбросить в разделе «Настройки» > «Приложения».</string>
@@ -962,7 +962,7 @@
     <string name="ringtone_silent">Тишина</string>
     <string name="ringtone_picker_title">Мелодии звонка</string>
     <string name="ringtone_unknown">Неизвестная мелодия звонка</string>
-    <string name="wifi_available_sign_in">Вход в сеть Wi-Fi</string>
+    <string name="wifi_available_sign_in">Регистрация в Wi-Fi сети</string>
     <string name="wifi_available_sign_in_detailed">%1$s</string>
     <string name="wifi_watchdog_network_disabled">Не удалось подключиться к сети Wi-Fi</string>
     <string name="wifi_watchdog_network_disabled_detailed">" – плохое интернет-соединение."</string>
@@ -1160,7 +1160,7 @@
     <string name="description_target_camera">Камера</string>
     <string name="description_target_silent">Без звука</string>
     <string name="description_target_soundon">Включить звук</string>
-    <string name="description_target_unlock_tablet">Чиркните для разблокировки.</string>
+    <string name="description_target_unlock_tablet">Разблокировать.</string>
     <string name="keyboard_headset_required_to_hear_password">Подключите гарнитуру, чтобы услышать пароль.</string>
     <string name="keyboard_password_character_no_headset">Точка</string>
     <string name="action_bar_home_description">Перейти на главную</string>
@@ -1204,7 +1204,7 @@
     <string name="status_bar_device_locked">Устройство заблокировано.</string>
     <string name="list_delimeter">", "</string>
     <string name="sending">Отправка...</string>
-    <string name="launchBrowserDefault">Запустить браузер?</string>
+    <string name="launchBrowserDefault">Запустить Браузер?</string>
     <string name="SetupCallDefault">Принять вызов?</string>
     <string name="permgrouplab_4G">4G</string>
     <string name="permgroupdesc_4G">Доступ к 4G</string>
@@ -1220,14 +1220,14 @@
     <string name="permdesc_initiate4GScanDataServiceDisruptive">Разрешает приложению запускать 4G-сканирование и прерывать услугу передачи данных.</string>
     <string name="permlab_access4GRadioDisable">отключить доступ к 4G-радио</string>
     <string name="permdesc_access4GRadioDisable">Разрешает приложению блокировать доступ к 4G-радио.</string>
-    <string name="permlab_fm_receiver">доступ к FM-приемнику</string>
-    <string name="permdesc_fm_receiver">Разрешает приложению доступ к функциям FM-приемника.</string>
+    <string name="permlab_fm_receiver">доступ к FM-приёмнику</string>
+    <string name="permdesc_fm_receiver">Разрешет приложению доступ к функциям управления FM-приёмником</string>
     <string name="permlab_fm_transmitter">доступ к FM-передатчику</string>
     <string name="permdesc_fm_transmitter">Разрешает приложению доступ к функциям FM-передатчика.</string>
-    <string name="permlab_obex">доступ к службе OBEX</string>
-    <string name="permdesc_obex">Разрешает приложению доступ к функциям службы OBEX.</string>
+    <string name="permlab_obex">доступ к сервису OBEX</string>
+    <string name="permdesc_obex">Разрешает приложению доступ к функциям сервиса OBEX.</string>
     <string name="permlab_bluetooth_printer">доступ к принтерам Bluetooth</string>
-    <string name="permdesc_bluetooth_printer">Разрешает приложению доступ к функциям службы принтеров Bluetooth.</string>
+    <string name="permdesc_bluetooth_printer">Разрешает приложению доступ к Bluetooth принтерам.</string>
     <string name="permlab_fmAdmin">FM-администрирование</string>
     <string name="permdesc_fmAdmin">Разрешает приложению использовать программу FM-радио.</string>
     <string name="permlab_fm">установить подключения FMRX</string>
@@ -1315,16 +1315,16 @@
     <string name="dongle_noti_ticker">Обнаружено устройство Media Link HD</string>
     <string name="dongle_noti_title_multiple_found">Обнаружено устройство HTC Media Link</string>
     <string name="dongle_noti_title_media_link">HTC Media Link HD</string>
-    <string name="dongle_noti_text_multiple_found">Нажмите, чтобы выбрать</string>
+    <string name="dongle_noti_text_multiple_found">Выбрать</string>
     <string name="wireless_display_output_tv_title">Media Link HD</string>
-    <string name="wireless_display_output_tv_text">"Отправить для воспроизведения через телевизор?
+    <string name="wireless_display_output_tv_text">"Воспроизвести через телевизор?
 
 Осталось %1$s секунд..."</string>
     <string name="wireless_display_output_tv_checkbox">Больше не показывать</string>
-    <string name="call_forward_unconditional">Безусловная переадресация вызовов</string>
-    <string name="call_forward_when_busy">Переадресация вызовов, если занято</string>
-    <string name="call_forward_when_unanswered">Переадресация вызовов при отсутствии ответа</string>
-    <string name="call_forward_when_unreachable">Переадресация вызовов, если недоступен</string>
+    <string name="call_forward_unconditional">Безусловная переадресация всех вызовов</string>
+    <string name="call_forward_when_busy">Переадресация, если занят</string>
+    <string name="call_forward_when_unanswered">Переадресация при неответе</string>
+    <string name="call_forward_when_unreachable">Переадресация, если недоступен</string>
     <string name="call_forward_all_forward">Переадресация всех вызовов</string>
     <string name="call_forward_all_conditional">Условная переадресация всех вызовов</string>
 </resources>

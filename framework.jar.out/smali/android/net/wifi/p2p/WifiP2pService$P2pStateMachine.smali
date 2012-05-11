@@ -1800,7 +1800,7 @@
 
     .line 1264
     .local v3, textEntryView:Landroid/view/View;
-    const v5, 0x4070003
+    const v5, 0x4080003
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1964,7 +1964,7 @@
 
     .line 1360
     .local v3, textEntryView:Landroid/view/View;
-    const v4, 0x4070003
+    const v4, 0x4080003
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2109,7 +2109,7 @@
 
     .line 1308
     .local v3, textEntryView:Landroid/view/View;
-    const v4, 0x4070003
+    const v4, 0x4080003
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2246,7 +2246,7 @@
 
     .line 1334
     .local v3, textEntryView:Landroid/view/View;
-    const v4, 0x4070003
+    const v4, 0x4080003
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

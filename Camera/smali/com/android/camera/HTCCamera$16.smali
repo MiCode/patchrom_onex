@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4876
+    .line 4880
     iput-object p1, p0, Lcom/android/camera/HTCCamera$16;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,18 +42,18 @@
     .parameter "v"
 
     .prologue
-    .line 4878
+    .line 4882
     const-string v0, "HTCCamera"
 
     const-string v1, "onClick: activate "
 
     invoke-static {v0, v1}, Lcom/android/camera/LOG;->V(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4879
+    .line 4883
     iget-object v0, p0, Lcom/android/camera/HTCCamera$16;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-virtual {v0}, Lcom/android/camera/HTCCamera;->activate()V
 
-    .line 4880
+    .line 4884
     return-void
 .end method

@@ -287,7 +287,7 @@
 
     move-result-object v0
 
-    const v3, 0x20802c5
+    const v3, 0x20802c6
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -319,11 +319,11 @@
 
     .line 82
     :cond_0
-    const v0, 0x20802c4
+    const v0, 0x20802c5
 
-    const v3, 0x20802c6
+    const v3, 0x20802c7
 
-    const v4, 0x20802c7
+    const v4, 0x20802c8
 
     invoke-virtual {p0, v0, v3, v4}, Lcom/htc/painting/penmenu15/view/CurrentPenView;->setButtonBackgroundResource(III)V
 
@@ -332,7 +332,7 @@
 
     move-result-object v0
 
-    const v3, 0x20802cc
+    const v3, 0x20802cd
 
     invoke-static {v0, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -467,7 +467,7 @@
 
     move-result-object v0
 
-    const v1, 0x20802cc
+    const v1, 0x20802cd
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

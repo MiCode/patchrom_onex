@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 5314
+    .line 5296
     iput-object p1, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$2;->val$rights:Landroid/drm/mobile1/DrmRights;
 
     iput-object p2, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$2;->val$content:Landroid/drm/mobile1/DrmRawContent;
@@ -53,19 +53,19 @@
     .parameter "whichButton"
 
     .prologue
-    .line 5316
+    .line 5298
     iget-object v3, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$2;->val$rights:Landroid/drm/mobile1/DrmRights;
 
     if-nez v3, :cond_0
 
-    .line 5317
+    .line 5299
     iget-object v3, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$2;->val$content:Landroid/drm/mobile1/DrmRawContent;
 
     invoke-virtual {v3}, Landroid/drm/mobile1/DrmRawContent;->getRightsAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 5319
+    .line 5301
     .local v1, rightsIssuer:Ljava/lang/String;
     const-string v3, "HtcWrapDrmStore"
 
@@ -89,16 +89,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5321
+    .line 5303
     if-nez v1, :cond_1
 
-    .line 5332
+    .line 5314
     .end local v1           #rightsIssuer:Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 5324
+    .line 5306
     .restart local v1       #rightsIssuer:Ljava/lang/String;
     :cond_1
     const-string v3, "\\"
@@ -109,29 +109,29 @@
 
     move-result-object v1
 
-    .line 5326
+    .line 5308
     new-instance v0, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.VIEW"
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5327
+    .line 5309
     .local v0, intent:Landroid/content/Intent;
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 5328
+    .line 5310
     .local v2, righturi:Landroid/net/Uri;
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 5329
+    .line 5311
     const/high16 v3, 0x1000
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 5330
+    .line 5312
     iget-object v3, p0, Lcom/htc/wrap/android/provider/HtcWrapDrmStore$2;->val$context:Landroid/content/Context;
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V

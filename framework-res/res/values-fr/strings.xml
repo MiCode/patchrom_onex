@@ -781,7 +781,7 @@ Accédez à la page "<b>google.com/accounts/recovery</b></string>
     <string name="factorytest_not_system">"L'action FACTORY_TEST est uniquement prise en charge pour les paquets de données installés dans in/system/app."</string>
     <string name="factorytest_no_action">"Impossible de trouver un paquet proposant l'action FACTORY_TEST."</string>
     <string name="factorytest_reboot">Redémarrer</string>
-    <string name="js_dialog_title">La page \"%s\" affirme :</string>
+    <string name="js_dialog_title">Message du site \"%s\":</string>
     <string name="js_dialog_title_default">JavaScript</string>
     <string name="js_dialog_before_unload">"Vous souhaitez quitter cette page ?
 
@@ -1209,7 +1209,7 @@ pour le compte %s"</string>
     <string name="permgrouplab_4G">4G</string>
     <string name="permgroupdesc_4G">Accéder à 4G</string>
     <string name="permlab_changeWimaxMulticastState">autoriser la réception de données en WiMAX multidiffusion</string>
-    <string name="permdesc_changeWimaxMulticastState">Autorise une application à recevoir des paquets qui ne sont pas directement adressés à votre mobile. Cela peut être utile pour la recherche de services disponibles à proximité. Consomme plus que le mode non multidiffusion.</string>
+    <string name="permdesc_changeWimaxMulticastState">"Autoriser une application à recevoir des informations non-accessibles directement à votre mobile. Cette option peut être utile lors de recherche de services offerts aux alentours. Elle utilise plus d'énergie que le mode non-multicast."</string>
     <string name="permlab_access4GState">"afficher l'état 4G"</string>
     <string name="permdesc_access4GState">"Permet à une application d'afficher des informations concernant l'état du WiMAX."</string>
     <string name="permlab_change4GState">"Changer l'état 4G"</string>

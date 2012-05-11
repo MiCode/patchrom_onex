@@ -1535,7 +1535,7 @@
 
     const-string v3, "common_subnav_selector_tab"
 
-    const v4, 0x208019a
+    const v4, 0x208019b
 
     invoke-static {p1, v3, v4}, Lcom/htc/util/skin/HtcSkinUtil;->getDrawableResIdentifier(Landroid/content/Context;Ljava/lang/String;I)I
 

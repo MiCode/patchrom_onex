@@ -70,6 +70,7 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
+    .line 243
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "icc"
@@ -78,6 +79,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 244
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "icc"
@@ -86,6 +88,7 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 245
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     const-string v1, "icc"
@@ -116,13 +119,13 @@
     .parameter "pin2"
 
     .prologue
-    .line 893
+    .line 901
     const/4 v7, 0x0
 
-    .line 901
+    .line 909
     .local v7, success:Z
     :try_start_0
-    const-string/jumbo v1, "simphonebook"
+    const-string v1, "simphonebook"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -132,11 +135,11 @@
 
     move-result-object v0
 
-    .line 903
+    .line 911
     .local v0, iccIpb:Lcom/android/internal/telephony/IIccPhoneBook;
     if-eqz v0, :cond_0
 
-    .line 904
+    .line 912
     const-string v2, ""
 
     const-string v3, ""
@@ -156,19 +159,19 @@
 
     move-result v7
 
-    .line 913
+    .line 921
     .end local v0           #iccIpb:Lcom/android/internal/telephony/IIccPhoneBook;
     :cond_0
     :goto_0
     return v7
 
-    .line 909
+    .line 917
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 907
+    .line 915
     :catch_1
     move-exception v1
 
@@ -184,13 +187,13 @@
     .parameter "pin2"
 
     .prologue
-    .line 946
+    .line 954
     const/4 v7, 0x0
 
-    .line 949
+    .line 957
     .local v7, success:Z
     :try_start_0
-    const-string/jumbo v1, "simphonebook"
+    const-string v1, "simphonebook"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -200,11 +203,11 @@
 
     move-result-object v0
 
-    .line 951
+    .line 959
     .local v0, iccIpb:Lcom/android/internal/telephony/IIccPhoneBook;
     if-eqz v0, :cond_0
 
-    .line 952
+    .line 960
     const-string v4, ""
 
     const-string v5, ""
@@ -224,19 +227,19 @@
 
     move-result v7
 
-    .line 961
+    .line 969
     .end local v0           #iccIpb:Lcom/android/internal/telephony/IIccPhoneBook;
     :cond_0
     :goto_0
     return v7
 
-    .line 957
+    .line 965
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 955
+    .line 963
     :catch_1
     move-exception v1
 
@@ -408,7 +411,7 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 435
+    .line 443
     goto :goto_0
 
     .end local v3           #email:Ljava/lang/String;
@@ -1037,7 +1040,7 @@
     .parameter "msg"
 
     .prologue
-    .line 1140
+    .line 1148
     const-string v0, "IccProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1060,7 +1063,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1141
+    .line 1149
     return-void
 .end method
 
@@ -1082,7 +1085,7 @@
     .parameter "sort"
 
     .prologue
-    .line 399
+    .line 407
     sget-object v0, Lcom/android/internal/telephony/IccProvider;->URL_MATCHER:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -1091,7 +1094,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 406
+    .line 414
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1144,7 +1147,6 @@
 
     goto :goto_0
 
-    .line 467
     nop
 
     :pswitch_data_0
@@ -1199,7 +1201,6 @@
 
     throw v0
 
-    .line 341
     :pswitch_0
     const/16 v1, 0x6f3a
 
@@ -1218,6 +1219,7 @@
 
     move-result-object v3
 
+    .line 462
     .local v3, number:Ljava/lang/String;
     const/4 v7, 0x0
 
@@ -1285,7 +1287,7 @@
 
     goto :goto_1
 
-    .line 314
+    .line 475
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

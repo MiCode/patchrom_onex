@@ -72,7 +72,7 @@
     </string-array>
     <string-array name="select_font_alignment_items">
         <item>Levo</item>
-        <item>Poravnaj</item>
+        <item>Obostrano</item>
         <item>Desno</item>
     </string-array>
 </resources>

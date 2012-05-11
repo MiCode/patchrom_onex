@@ -292,7 +292,7 @@
 
     .line 257
     .local v2, res:Landroid/content/res/Resources;
-    const v5, 0x20803e1
+    const v5, 0x20803e2
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

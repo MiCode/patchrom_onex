@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 738
+    .line 739
     iput-object p1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,14 +44,14 @@
 
     const/4 v4, 0x2
 
-    .line 741
+    .line 742
     const-string v1, "WifiService"
 
     const-string v2, "Quickboot - Intent received: ACTION_QUICKBOOT_POWEROFF"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 742
+    .line 743
     iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     const/4 v2, 0x0
@@ -59,7 +59,7 @@
     #setter for: Lcom/android/server/WifiService;->mEnablingWifiInterrupted:Z
     invoke-static {v1, v2}, Lcom/android/server/WifiService;->access$2502(Lcom/android/server/WifiService;Z)Z
 
-    .line 743
+    .line 744
     iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mWifiStateMachine:Landroid/net/wifi/WifiStateMachine;
@@ -73,17 +73,17 @@
 
     if-ne v1, v4, :cond_1
 
-    .line 744
+    .line 745
     const-string v1, "WifiService"
 
     const-string v2, "Quickboot - Wifi is still starting up"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 745
+    .line 746
     const/16 v0, 0xf
 
-    .line 746
+    .line 747
     .local v0, waitSecond:I
     :goto_0
     iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
@@ -101,7 +101,7 @@
 
     if-lez v0, :cond_0
 
-    .line 747
+    .line 748
     const-string v1, "WifiService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -130,7 +130,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 749
+    .line 750
     const-wide/16 v1, 0x3e8
 
     :try_start_0
@@ -138,13 +138,13 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 752
+    .line 753
     :goto_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 755
+    .line 756
     :cond_0
     iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
@@ -159,20 +159,20 @@
 
     if-ne v1, v4, :cond_2
 
-    .line 756
+    .line 757
     iget-object v1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mEnablingWifiInterrupted:Z
     invoke-static {v1, v5}, Lcom/android/server/WifiService;->access$2502(Lcom/android/server/WifiService;Z)Z
 
-    .line 757
+    .line 758
     const-string v1, "WifiService"
 
     const-string v2, "Quickboot - Power-off interrupt wifi starting up"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 764
+    .line 765
     .end local v0           #waitSecond:I
     :cond_1
     :goto_2
@@ -181,10 +181,10 @@
     #setter for: Lcom/android/server/WifiService;->mQuickBootPowerOffIntentReceived:Z
     invoke-static {v1, v5}, Lcom/android/server/WifiService;->access$2602(Lcom/android/server/WifiService;Z)Z
 
-    .line 765
+    .line 766
     return-void
 
-    .line 760
+    .line 761
     .restart local v0       #waitSecond:I
     :cond_2
     const-string v1, "WifiService"
@@ -195,7 +195,7 @@
 
     goto :goto_2
 
-    .line 750
+    .line 751
     :catch_0
     move-exception v1
 

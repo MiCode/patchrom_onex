@@ -184,7 +184,7 @@
     .prologue
     const/4 v6, 0x0
 
-    const v5, 0x20803e1
+    const v5, 0x20803e2
 
     const v4, 0x2020038
 

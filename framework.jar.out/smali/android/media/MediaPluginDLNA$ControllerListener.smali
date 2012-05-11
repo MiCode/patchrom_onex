@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 143
+    .line 132
     iput-object p1, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-direct {p0}, Landroid/media/dlnasharedmodule/HtcDLNAControllerStatusListener;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 143
+    .line 132
     invoke-direct {p0, p1}, Landroid/media/MediaPluginDLNA$ControllerListener;-><init>(Landroid/media/MediaPluginDLNA;)V
 
     return-void
@@ -51,7 +51,7 @@
     .parameter "ctlInfo"
 
     .prologue
-    .line 199
+    .line 188
     return-void
 .end method
 
@@ -62,7 +62,7 @@
     .parameter "errorReason"
 
     .prologue
-    .line 203
+    .line 192
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -105,10 +105,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
+    .line 193
     if-lez p2, :cond_0
 
-    .line 205
+    .line 194
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mOnEventListener:Landroid/media/MediaPlugin$OnEventListener;
@@ -120,7 +120,7 @@
 
     invoke-interface {v0, p2, v1}, Landroid/media/MediaPlugin$OnEventListener;->onError(II)V
 
-    .line 206
+    .line 195
     :cond_0
     return-void
 .end method
@@ -134,10 +134,10 @@
 
     const/4 v3, 0x0
 
-    .line 146
+    .line 135
     sparse-switch p1, :sswitch_data_0
 
-    .line 191
+    .line 180
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -160,7 +160,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
+    .line 183
     :goto_0
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
@@ -178,10 +178,10 @@
 
     invoke-interface {v0, v1, v3}, Landroid/media/MediaPlugin$OnEventListener;->onStateChanged(II)V
 
-    .line 195
+    .line 184
     return-void
 
-    .line 148
+    .line 137
     :sswitch_0
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
@@ -190,18 +190,18 @@
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 149
+    .line 138
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mSeeking:Z
     invoke-static {v0, v3}, Landroid/media/MediaPluginDLNA;->access$802(Landroid/media/MediaPluginDLNA;Z)Z
 
-    .line 150
+    .line 139
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-virtual {v0}, Landroid/media/MediaPluginDLNA;->unlockCommand()V
 
-    .line 151
+    .line 140
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_PLAYING"
@@ -210,7 +210,7 @@
 
     goto :goto_0
 
-    .line 154
+    .line 143
     :sswitch_1
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
@@ -219,12 +219,12 @@
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 155
+    .line 144
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-virtual {v0}, Landroid/media/MediaPluginDLNA;->unlockCommand()V
 
-    .line 156
+    .line 145
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_STOPPED"
@@ -233,7 +233,7 @@
 
     goto :goto_0
 
-    .line 159
+    .line 148
     :sswitch_2
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
@@ -242,12 +242,12 @@
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 160
+    .line 149
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-virtual {v0}, Landroid/media/MediaPluginDLNA;->unlockCommand()V
 
-    .line 161
+    .line 150
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_PAUSED"
@@ -256,20 +256,20 @@
 
     goto :goto_0
 
-    .line 164
+    .line 153
     :sswitch_3
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 165
+    .line 154
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mSeeking:Z
     invoke-static {v0, v3}, Landroid/media/MediaPluginDLNA;->access$802(Landroid/media/MediaPluginDLNA;Z)Z
 
-    .line 166
+    .line 155
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_TRANSITIONING"
@@ -278,20 +278,20 @@
 
     goto :goto_0
 
-    .line 169
+    .line 158
     :sswitch_4
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 170
+    .line 159
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mSeeking:Z
     invoke-static {v0, v3}, Landroid/media/MediaPluginDLNA;->access$802(Landroid/media/MediaPluginDLNA;Z)Z
 
-    .line 171
+    .line 160
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_BUFFERING"
@@ -300,14 +300,14 @@
 
     goto :goto_0
 
-    .line 174
+    .line 163
     :sswitch_5
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 175
+    .line 164
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_SENDING_CONTENT"
@@ -316,7 +316,7 @@
 
     goto/16 :goto_0
 
-    .line 178
+    .line 167
     :sswitch_6
     const-string v0, "[MediaPluginDLNA]"
 
@@ -326,7 +326,7 @@
 
     goto/16 :goto_0
 
-    .line 181
+    .line 170
     :sswitch_7
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
@@ -335,12 +335,12 @@
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 182
+    .line 171
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-virtual {v0}, Landroid/media/MediaPluginDLNA;->unlockCommand()V
 
-    .line 183
+    .line 172
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_UNKNOWN"
@@ -349,7 +349,7 @@
 
     goto/16 :goto_0
 
-    .line 186
+    .line 175
     :sswitch_8
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
@@ -358,12 +358,12 @@
     #setter for: Landroid/media/MediaPluginDLNA;->mState:I
     invoke-static {v0, v1}, Landroid/media/MediaPluginDLNA;->access$702(Landroid/media/MediaPluginDLNA;I)I
 
-    .line 187
+    .line 176
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     invoke-virtual {v0}, Landroid/media/MediaPluginDLNA;->unlockCommand()V
 
-    .line 188
+    .line 177
     const-string v0, "[MediaPluginDLNA]"
 
     const-string/jumbo v1, "onPlayStateChanged::STATE_AUTOPLAYWANTSHOWSTOP"
@@ -372,7 +372,7 @@
 
     goto/16 :goto_0
 
-    .line 146
+    .line 135
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -394,7 +394,7 @@
     .parameter "responseReason"
 
     .prologue
-    .line 210
+    .line 199
     const-string v0, "[MediaPluginDLNA]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -437,7 +437,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
+    .line 200
     iget-object v0, p0, Landroid/media/MediaPluginDLNA$ControllerListener;->this$0:Landroid/media/MediaPluginDLNA;
 
     #getter for: Landroid/media/MediaPluginDLNA;->mOnEventListener:Landroid/media/MediaPlugin$OnEventListener;
@@ -449,6 +449,6 @@
 
     invoke-interface {v0, p2, v1}, Landroid/media/MediaPlugin$OnEventListener;->onResponse(II)V
 
-    .line 212
+    .line 201
     return-void
 .end method

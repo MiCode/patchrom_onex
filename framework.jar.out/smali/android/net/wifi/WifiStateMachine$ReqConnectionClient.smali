@@ -30,18 +30,18 @@
     .parameter "time"
 
     .prologue
-    .line 256
+    .line 255
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$ReqConnectionClient;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 257
+    .line 256
     iput-object p2, p0, Landroid/net/wifi/WifiStateMachine$ReqConnectionClient;->macAddress:Ljava/lang/String;
 
-    .line 258
+    .line 257
     iput-wide p3, p0, Landroid/net/wifi/WifiStateMachine$ReqConnectionClient;->lastestReqTime:J
 
-    .line 259
+    .line 258
     return-void
 .end method
 
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 262
+    .line 261
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$ReqConnectionClient;->macAddress:Ljava/lang/String;
 
     return-object v0
@@ -61,7 +61,7 @@
     .locals 2
 
     .prologue
-    .line 266
+    .line 265
     iget-wide v0, p0, Landroid/net/wifi/WifiStateMachine$ReqConnectionClient;->lastestReqTime:J
 
     return-wide v0
@@ -72,10 +72,10 @@
     .parameter "time"
 
     .prologue
-    .line 274
+    .line 273
     iput-wide p1, p0, Landroid/net/wifi/WifiStateMachine$ReqConnectionClient;->lastestReqTime:J
 
-    .line 275
+    .line 274
     return-void
 .end method
 
@@ -84,9 +84,9 @@
     .parameter "mac"
 
     .prologue
-    .line 270
+    .line 269
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$ReqConnectionClient;->macAddress:Ljava/lang/String;
 
-    .line 271
+    .line 270
     return-void
 .end method

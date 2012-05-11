@@ -2969,6 +2969,12 @@
 
     if-eqz v1, :cond_c
 
+    invoke-static {}, Landroid/app/ActivityManagerNative;->isSystemReady()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
     .line 808
     move-object/from16 v0, p0
 
@@ -3895,13 +3901,10 @@
 
     if-nez v5, :cond_3
 
-    .line 414
-    invoke-direct {p0}, Lcom/android/server/BatteryService;->noteHadNoPowerShutdown()V
-
-    .line 418
+    .line 417
     const/4 v0, 0x0
 
-    .line 420
+    .line 419
     .local v0, bFastboot:Z
     :try_start_0
     iget-object v5, p0, Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
@@ -3924,9 +3927,12 @@
 
     move v0, v3
 
-    .line 426
+    .line 425
     :goto_1
     if-eqz v0, :cond_0
+
+    .line 426
+    invoke-direct {p0}, Lcom/android/server/BatteryService;->noteHadNoPowerShutdown()V
 
     .line 427
     sget-object v3, Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
@@ -3980,20 +3986,20 @@
     :cond_2
     move v0, v4
 
-    .line 420
+    .line 419
     goto :goto_1
 
-    .line 422
+    .line 421
     :catch_0
     move-exception v1
 
-    .line 423
+    .line 422
     .local v1, e:Ljava/lang/Exception;
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 434
+    .line 433
     .end local v0           #bFastboot:Z
     .end local v1           #e:Ljava/lang/Exception;
     :cond_3
@@ -4007,7 +4013,7 @@
 
     if-le v3, v5, :cond_0
 
-    .line 436
+    .line 434
     iput-boolean v4, p0, Lcom/android/server/BatteryService;->mHadNoPowerShutdown:Z
 
     goto :goto_0

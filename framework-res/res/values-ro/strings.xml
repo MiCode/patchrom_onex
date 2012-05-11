@@ -1266,7 +1266,7 @@ pentru contul %s"</string>
     <string name="camera_notify_title">Aparat foto dezactivat de TI</string>
     <string name="install_notify_title">Instalare blocată de TI:</string>
     <string name="uninstall_notify_title">Dezinstalare blocată de TI:</string>
-    <string name="wifi_notify_title">Wi-Fi dezactivat de TI</string>
+    <string name="wifi_notify_title">Wi-Fi dezactivat de IT</string>
     <string name="sim_puk_contact_customer_care_information">Contactaţi Serviciul clienţi pentru a obţine codul PUK</string>
     <string name="permlab_accessCWFolder">Accesare folder cu funcţii al expertului de personalizare</string>
     <string name="permdesc_accessCWFolder">Permite unei aplicaţii să acceseze folderul cu funcţii al expertului de personalizare</string>

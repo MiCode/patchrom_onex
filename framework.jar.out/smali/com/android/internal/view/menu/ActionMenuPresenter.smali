@@ -1416,15 +1416,12 @@
 
     const/4 v8, 0x0
 
-    .line 92
     invoke-super {p0, p1, p2}, Lcom/android/internal/view/menu/BaseMenuPresenter;->initForMenu(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;)V
 
-    .line 94
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 96
     .local v1, res:Landroid/content/res/Resources;
     iget-boolean v7, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mReserveOverflowSet:Z
 
@@ -1693,26 +1690,22 @@
 
     iput v7, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mMinCellSize:I
 
-    .line 183
     iput-object v12, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mScrapActionButtonView:Landroid/view/View;
 
-    .line 184
     return-void
 
 
-    .line 137
     .restart local v2       #resource:I
     .restart local v6       #width:I
     :cond_7
     const-string v7, "HTCActionBar"
 
-    const-string/jumbo v9, "icon_btn_menu_dark not found"
+    const-string v9, "icon_btn_menu_dark not found"
 
     invoke-static {v7, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 153
     :cond_8
     const-string v7, "HTCActionBar"
 

@@ -976,7 +976,7 @@
     .line 160
     iget-object v2, p0, Lcom/htc/widget/HtcMultiSeekBarDialog;->mRoot:Landroid/view/ViewGroup;
 
-    const v3, 0x20802ee
+    const v3, 0x20802ef
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 

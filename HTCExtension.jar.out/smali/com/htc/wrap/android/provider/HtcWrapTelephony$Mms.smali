@@ -55,8 +55,21 @@
     .line 1243
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1407
+    .line 1411
     return-void
+.end method
+
+.method public static extractAddrSpec(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .parameter "address"
+
+    .prologue
+    .line 1248
+    invoke-static {p0}, Landroid/provider/Telephony$Mms;->extractAddrSpec(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public static getDisplayAddress(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
@@ -65,7 +78,7 @@
     .parameter "address"
 
     .prologue
-    .line 1256
+    .line 1260
     invoke-static {p0, p1}, Landroid/provider/Telephony$Mms;->getDisplayAddress(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -78,7 +91,7 @@
     .parameter "address"
 
     .prologue
-    .line 1266
+    .line 1270
     invoke-static {p0}, Landroid/provider/Telephony$Mms;->isEmailAddress(Ljava/lang/String;)Z
 
     move-result v0

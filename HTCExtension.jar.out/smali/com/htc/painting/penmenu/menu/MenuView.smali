@@ -352,7 +352,7 @@
 
     move-result-object v25
 
-    const v26, 0x20802b8
+    const v26, 0x20802b9
 
     invoke-virtual/range {v25 .. v26}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

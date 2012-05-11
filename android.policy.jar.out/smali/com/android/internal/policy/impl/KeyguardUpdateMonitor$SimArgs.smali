@@ -424,7 +424,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 278
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->PUK_PERM_BLOCKED:Lcom/android/internal/telephony/IccCard$State;
     invoke-static {v3}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$SimArgs;->getIccCardState(Ljava/lang/String;)Lcom/android/internal/telephony/IccCard$State;
 
@@ -433,7 +432,6 @@
     .restart local v2       #state:Lcom/android/internal/telephony/IccCard$State;
     goto/16 :goto_1
 
-    .line 280
     .end local v2           #state:Lcom/android/internal/telephony/IccCard$State;
     :cond_e
     sget-object v2, Lcom/android/internal/telephony/IccCard$State;->ICC_FAIL:Lcom/android/internal/telephony/IccCard$State;

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2353
+    .line 2357
     iput-object p1, p0, Lcom/android/camera/HTCCamera$11;->this$0:Lcom/android/camera/HTCCamera;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 2356
+    .line 2360
     iget-object v0, p0, Lcom/android/camera/HTCCamera$11;->this$0:Lcom/android/camera/HTCCamera;
 
     #calls: Lcom/android/camera/HTCCamera;->doOnDestory()V
     invoke-static {v0}, Lcom/android/camera/HTCCamera;->access$3500(Lcom/android/camera/HTCCamera;)V
 
-    .line 2357
+    .line 2361
     return-void
 .end method

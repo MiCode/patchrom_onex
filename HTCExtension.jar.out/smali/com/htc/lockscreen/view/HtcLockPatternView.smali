@@ -79,7 +79,7 @@
 
     .line 33
     .local v0, a:Landroid/content/res/TypedArray;
-    const v7, 0x208027a
+    const v7, 0x208027b
 
     invoke-virtual {v0, v8, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -89,7 +89,7 @@
     .local v2, btnResId:I
     const/4 v7, 0x1
 
-    const v8, 0x208027b
+    const v8, 0x208027c
 
     invoke-virtual {v0, v7, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -99,7 +99,7 @@
     .local v1, btnPressResId:I
     const/4 v7, 0x2
 
-    const v8, 0x2080278
+    const v8, 0x2080279
 
     invoke-virtual {v0, v7, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -109,7 +109,7 @@
     .local v3, circleDefId:I
     const/4 v7, 0x3
 
-    const v8, 0x2080279
+    const v8, 0x208027a
 
     invoke-virtual {v0, v7, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -119,7 +119,7 @@
     .local v4, circleGreenId:I
     const/4 v7, 0x4
 
-    const v8, 0x208027c
+    const v8, 0x208027d
 
     invoke-virtual {v0, v7, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -162,7 +162,7 @@
     iput-object v7, p0, Lcom/htc/lockscreen/view/HtcLockPatternView;->mBitmapCircleRed:Landroid/graphics/Bitmap;
 
     .line 44
-    const v7, 0x2080271
+    const v7, 0x2080272
 
     invoke-direct {p0, v7}, Lcom/htc/lockscreen/view/HtcLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 
@@ -171,7 +171,7 @@
     iput-object v7, p0, Lcom/htc/lockscreen/view/HtcLockPatternView;->mBitmapArrowGreenUp:Landroid/graphics/Bitmap;
 
     .line 45
-    const v7, 0x2080272
+    const v7, 0x2080273
 
     invoke-direct {p0, v7}, Lcom/htc/lockscreen/view/HtcLockPatternView;->getBitmapFor(I)Landroid/graphics/Bitmap;
 

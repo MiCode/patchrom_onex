@@ -30993,32 +30993,26 @@
 
     if-nez v10, :cond_6
 
-    .line 2973
     invoke-virtual {v5, v1}, Landroid/content/pm/ParceledListSlice;->append(Landroid/os/Parcelable;)Z
 
     move-result v10
 
     if-eqz v10, :cond_6
 
-    .line 2978
     .end local v1           #ai:Landroid/content/pm/ApplicationInfo;
     .end local v8           #packageName:Ljava/lang/String;
     :goto_4
     if-ne v2, v0, :cond_4
 
-    .line 2979
     const/4 v10, 0x1
 
     invoke-virtual {v5, v10}, Landroid/content/pm/ParceledListSlice;->setLastSlice(Z)V
 
-    .line 2981
     :cond_4
     monitor-exit v11
 
-    .line 2983
     return-object v5
 
-    .line 2966
     .restart local v1       #ai:Landroid/content/pm/ApplicationInfo;
     .restart local v8       #packageName:Ljava/lang/String;
     :cond_5

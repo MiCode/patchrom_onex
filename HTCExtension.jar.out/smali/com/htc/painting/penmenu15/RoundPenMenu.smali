@@ -1235,7 +1235,7 @@
     invoke-static {v2, v3}, Lcom/htc/painting/penmenu15/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 156
-    const v2, 0x20802df
+    const v2, 0x20802e0
 
     invoke-virtual {p0, v2}, Lcom/htc/painting/penmenu15/RoundPenMenu;->setBackgroundResource(I)V
 

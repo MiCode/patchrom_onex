@@ -35,12 +35,12 @@
     .parameter
 
     .prologue
-    .line 2046
+    .line 2039
     iput-object p1, p0, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2047
+    .line 2040
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -56,16 +56,16 @@
     .locals 8
 
     .prologue
-    .line 2071
+    .line 2064
     iget-object v2, p0, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->mScrapHeap:Landroid/util/SparseArray;
 
-    .line 2072
+    .line 2065
     .local v2, scrapHeap:Landroid/util/SparseArray;,"Landroid/util/SparseArray<Landroid/view/View;>;"
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
-    .line 2073
+    .line 2066
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -73,25 +73,25 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 2074
+    .line 2067
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/view/View;
 
-    .line 2075
+    .line 2068
     .local v3, view:Landroid/view/View;
     if-eqz v3, :cond_0
 
-    .line 2077
+    .line 2070
     invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v4
 
     if-nez v4, :cond_0
 
-    .line 2080
+    .line 2073
     iget-object v4, p0, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     iget-object v4, v4, Lcom/htc/fragment/widget/Gallery2;->mHook:Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;
@@ -106,18 +106,18 @@
 
     invoke-virtual {v4, v3, v5, v6, v7}, Lcom/htc/fragment/widget/Gallery2$HookFrameLayout;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;Z)Z
 
-    .line 2073
+    .line 2066
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2089
+    .line 2082
     .end local v3           #view:Landroid/view/View;
     :cond_1
     invoke-virtual {v2}, Landroid/util/SparseArray;->clear()V
 
-    .line 2091
+    .line 2084
     return-void
 .end method
 
@@ -126,7 +126,7 @@
     .parameter "position"
 
     .prologue
-    .line 2058
+    .line 2051
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->mScrapHeap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -135,16 +135,16 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 2059
+    .line 2052
     .local v0, result:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 2061
+    .line 2054
     iget-object v1, p0, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->mScrapHeap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 2066
+    .line 2059
     :cond_0
     return-object v0
 .end method
@@ -155,11 +155,11 @@
     .parameter "v"
 
     .prologue
-    .line 2050
+    .line 2043
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$RecycleBin;->mScrapHeap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2054
+    .line 2047
     return-void
 .end method

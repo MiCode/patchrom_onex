@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 7367
+    .line 7371
     invoke-static {}, Lcom/android/camera/AutoDetectedScene;->values()[Lcom/android/camera/AutoDetectedScene;
 
     move-result-object v0
@@ -99,7 +99,7 @@
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1e
 
-    .line 7055
+    .line 7059
     :goto_2
     invoke-static {}, Lcom/android/camera/io/StorageState;->values()[Lcom/android/camera/io/StorageState;
 
@@ -206,7 +206,7 @@
     :try_end_8
     .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_18
 
-    .line 6955
+    .line 6959
     :goto_8
     invoke-static {}, Lcom/android/camera/RecordingFailedReason;->values()[Lcom/android/camera/RecordingFailedReason;
 
@@ -249,7 +249,7 @@
     :try_end_a
     .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_16
 
-    .line 6900
+    .line 6904
     :goto_a
     invoke-static {}, Lcom/android/camera/TakingPictureFailedReason;->values()[Lcom/android/camera/TakingPictureFailedReason;
 
@@ -308,7 +308,7 @@
     :try_end_d
     .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_13
 
-    .line 6277
+    .line 6281
     :goto_d
     invoke-static {}, Lcom/android/camera/UIState;->values()[Lcom/android/camera/UIState;
 
@@ -351,7 +351,7 @@
     :try_end_f
     .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_11
 
-    .line 2725
+    .line 2729
     :goto_f
     invoke-static {}, Lcom/android/camera/CameraStartMode;->values()[Lcom/android/camera/CameraStartMode;
 
@@ -394,7 +394,7 @@
     :try_end_11
     .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_f
 
-    .line 2525
+    .line 2529
     :goto_11
     invoke-static {}, Lcom/android/camera/Global$REQUEST_CODE;->values()[Lcom/android/camera/Global$REQUEST_CODE;
 
@@ -743,7 +743,7 @@
 
     goto/16 :goto_15
 
-    .line 2525
+    .line 2529
     :catch_c
     move-exception v0
 
@@ -759,7 +759,7 @@
 
     goto/16 :goto_12
 
-    .line 2725
+    .line 2729
     :catch_f
     move-exception v0
 
@@ -770,7 +770,7 @@
 
     goto/16 :goto_10
 
-    .line 6277
+    .line 6281
     :catch_11
     move-exception v0
 
@@ -781,7 +781,7 @@
 
     goto/16 :goto_e
 
-    .line 6900
+    .line 6904
     :catch_13
     move-exception v0
 
@@ -797,7 +797,7 @@
 
     goto/16 :goto_b
 
-    .line 6955
+    .line 6959
     :catch_16
     move-exception v0
 
@@ -808,7 +808,7 @@
 
     goto/16 :goto_9
 
-    .line 7055
+    .line 7059
     :catch_18
     move-exception v0
 
@@ -839,7 +839,7 @@
 
     goto/16 :goto_3
 
-    .line 7367
+    .line 7371
     :catch_1e
     move-exception v0
 

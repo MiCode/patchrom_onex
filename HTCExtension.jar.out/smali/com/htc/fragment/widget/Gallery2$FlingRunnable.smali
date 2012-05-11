@@ -31,12 +31,12 @@
     .parameter
 
     .prologue
-    .line 1753
+    .line 1746
     iput-object p1, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1754
+    .line 1747
     new-instance v0, Landroid/widget/Scroller;
 
     invoke-virtual {p1}, Lcom/htc/fragment/widget/Gallery2;->getContext()Landroid/content/Context;
@@ -47,7 +47,7 @@
 
     iput-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
-    .line 1755
+    .line 1748
     return-void
 .end method
 
@@ -56,7 +56,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1738
+    .line 1731
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
     return-object v0
@@ -67,14 +67,14 @@
     .parameter "scrollIntoSlots"
 
     .prologue
-    .line 1806
+    .line 1799
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/Scroller;->forceFinished(Z)V
 
-    .line 1808
+    .line 1801
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
@@ -82,7 +82,7 @@
     #calls: Lcom/htc/fragment/widget/Gallery2;->scrollIntoSlots()V
     invoke-static {v0}, Lcom/htc/fragment/widget/Gallery2;->access$400(Lcom/htc/fragment/widget/Gallery2;)V
 
-    .line 1809
+    .line 1802
     :cond_0
     return-void
 .end method
@@ -91,12 +91,12 @@
     .locals 1
 
     .prologue
-    .line 1759
+    .line 1752
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/Gallery2;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1760
+    .line 1753
     return-void
 .end method
 
@@ -108,21 +108,21 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 1817
+    .line 1810
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     iget v5, v5, Lcom/htc/fragment/widget/AdapterView;->mItemCount:I
 
     if-nez v5, :cond_0
 
-    .line 1818
+    .line 1811
     invoke-direct {p0, v7}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->endFling(Z)V
 
-    .line 1856
+    .line 1849
     :goto_0
     return-void
 
-    .line 1822
+    .line 1815
     :cond_0
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
@@ -131,32 +131,32 @@
     #setter for: Lcom/htc/fragment/widget/Gallery2;->mShouldStopFling:Z
     invoke-static {v5, v6}, Lcom/htc/fragment/widget/Gallery2;->access$502(Lcom/htc/fragment/widget/Gallery2;Z)Z
 
-    .line 1824
+    .line 1817
     iget-object v3, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
-    .line 1825
+    .line 1818
     .local v3, scroller:Landroid/widget/Scroller;
     invoke-virtual {v3}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
     move-result v1
 
-    .line 1826
+    .line 1819
     .local v1, more:Z
     invoke-virtual {v3}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v4
 
-    .line 1830
+    .line 1823
     .local v4, x:I
     iget v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mLastFlingX:I
 
     sub-int v0, v5, v4
 
-    .line 1833
+    .line 1826
     .local v0, delta:I
     if-lez v0, :cond_1
 
-    .line 1835
+    .line 1828
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     iget-object v6, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
@@ -166,7 +166,7 @@
     #setter for: Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
     invoke-static {v5, v6}, Lcom/htc/fragment/widget/Gallery2;->access$602(Lcom/htc/fragment/widget/Gallery2;I)I
 
-    .line 1838
+    .line 1831
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v5}, Lcom/htc/fragment/widget/Gallery2;->getWidth()I
@@ -197,13 +197,13 @@
 
     move-result v0
 
-    .line 1848
+    .line 1841
     :goto_1
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v5, v0}, Lcom/htc/fragment/widget/Gallery2;->trackMotionScroll(I)V
 
-    .line 1850
+    .line 1843
     if-eqz v1, :cond_2
 
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
@@ -215,17 +215,17 @@
 
     if-nez v5, :cond_2
 
-    .line 1851
+    .line 1844
     iput v4, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mLastFlingX:I
 
-    .line 1852
+    .line 1845
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v5, p0}, Lcom/htc/fragment/widget/Gallery2;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 1841
+    .line 1834
     :cond_1
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
@@ -235,7 +235,7 @@
 
     add-int/lit8 v2, v5, -0x1
 
-    .line 1842
+    .line 1835
     .local v2, offsetToLast:I
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
@@ -248,7 +248,7 @@
     #setter for: Lcom/htc/fragment/widget/Gallery2;->mDownTouchPosition:I
     invoke-static {v5, v6}, Lcom/htc/fragment/widget/Gallery2;->access$602(Lcom/htc/fragment/widget/Gallery2;I)I
 
-    .line 1845
+    .line 1838
     iget-object v5, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v5}, Lcom/htc/fragment/widget/Gallery2;->getWidth()I
@@ -283,7 +283,7 @@
 
     goto :goto_1
 
-    .line 1854
+    .line 1847
     .end local v2           #offsetToLast:I
     :cond_2
     invoke-direct {p0, v7}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->endFling(Z)V
@@ -298,21 +298,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1783
+    .line 1776
     if-nez p1, :cond_0
 
-    .line 1790
+    .line 1783
     :goto_0
     return-void
 
-    .line 1785
+    .line 1778
     :cond_0
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->startCommon()V
 
-    .line 1787
+    .line 1780
     iput v1, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mLastFlingX:I
 
-    .line 1788
+    .line 1781
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
     neg-int v3, p1
@@ -330,7 +330,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
-    .line 1789
+    .line 1782
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/Gallery2;->post(Ljava/lang/Runnable;)Z
@@ -347,28 +347,28 @@
 
     const/4 v2, 0x0
 
-    .line 1767
+    .line 1760
     if-nez p1, :cond_0
 
-    .line 1776
+    .line 1769
     :goto_0
     return-void
 
-    .line 1769
+    .line 1762
     :cond_0
     invoke-direct {p0}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->startCommon()V
 
-    .line 1771
+    .line 1764
     if-gez p1, :cond_1
 
     move v1, v6
 
-    .line 1772
+    .line 1765
     .local v1, initialX:I
     :goto_1
     iput v1, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mLastFlingX:I
 
-    .line 1773
+    .line 1766
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->mScroller:Landroid/widget/Scroller;
 
     move v3, p1
@@ -383,7 +383,7 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/widget/Scroller;->fling(IIIIIIII)V
 
-    .line 1775
+    .line 1768
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/Gallery2;->post(Ljava/lang/Runnable;)Z
@@ -394,7 +394,7 @@
     :cond_1
     move v1, v2
 
-    .line 1771
+    .line 1764
     goto :goto_1
 .end method
 
@@ -403,14 +403,14 @@
     .parameter "scrollIntoSlots"
 
     .prologue
-    .line 1797
+    .line 1790
     iget-object v0, p0, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->this$0:Lcom/htc/fragment/widget/Gallery2;
 
     invoke-virtual {v0, p0}, Lcom/htc/fragment/widget/Gallery2;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 1798
+    .line 1791
     invoke-direct {p0, p1}, Lcom/htc/fragment/widget/Gallery2$FlingRunnable;->endFling(Z)V
 
-    .line 1799
+    .line 1792
     return-void
 .end method

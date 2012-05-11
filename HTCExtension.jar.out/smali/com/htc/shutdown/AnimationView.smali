@@ -65,10 +65,10 @@
     .line 45
     iput v3, p0, Lcom/htc/shutdown/AnimationView;->nFramesDrawn:I
 
-    .line 284
+    .line 301
     iput-object v4, p0, Lcom/htc/shutdown/AnimationView;->mAnimationListener:Lcom/htc/shutdown/AnimationView$OnAnimationListener;
 
-    .line 334
+    .line 351
     new-instance v3, Lcom/htc/shutdown/AnimationView$1;
 
     invoke-direct {v3, p0}, Lcom/htc/shutdown/AnimationView$1;-><init>(Lcom/htc/shutdown/AnimationView;)V
@@ -181,10 +181,10 @@
     .prologue
     const/16 v6, 0x3e8
 
-    .line 240
+    .line 257
     sub-long v0, p3, p1
 
-    .line 245
+    .line 262
     .local v0, cost:J
     iget v4, p0, Lcom/htc/shutdown/AnimationView;->mFPS:I
 
@@ -194,11 +194,11 @@
 
     sub-int v2, v4, v5
 
-    .line 247
+    .line 264
     .local v2, delay:I
     if-lez v2, :cond_0
 
-    .line 250
+    .line 267
     int-to-long v4, v2
 
     :try_start_0
@@ -206,32 +206,32 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 260
+    .line 277
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide p3
 
-    .line 261
+    .line 278
     sub-long v0, p3, p1
 
-    .line 263
+    .line 280
     long-to-int v4, v0
 
     div-int v3, v6, v4
 
-    .line 266
+    .line 283
     .local v3, fps:I
     return-void
 
-    .line 256
+    .line 273
     .end local v3           #fps:I
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 251
+    .line 268
     :catch_0
     move-exception v4
 
@@ -244,14 +244,14 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 296
+    .line 313
     const-wide/16 v4, 0x0
 
-    .line 297
+    .line 314
     .local v4, mStartTime:J
     const/4 v1, 0x0
 
-    .line 302
+    .line 319
     .local v1, is:Ljava/io/InputStream;
     iget v6, p0, Lcom/htc/shutdown/AnimationView;->nFramesDrawn:I
 
@@ -261,18 +261,18 @@
 
     if-eqz v6, :cond_0
 
-    .line 303
+    .line 320
     iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->mAnimationListener:Lcom/htc/shutdown/AnimationView$OnAnimationListener;
 
     invoke-interface {v6}, Lcom/htc/shutdown/AnimationView$OnAnimationListener;->onAnimationReady()V
 
-    .line 306
+    .line 323
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
-    .line 309
+    .line 326
     iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->zipLandFile:Ljava/util/zip/ZipFile;
 
     if-eqz v6, :cond_1
@@ -293,30 +293,30 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 310
+    .line 327
     invoke-direct {p0}, Lcom/htc/shutdown/AnimationView;->readNextTextureLand()Ljava/io/BufferedInputStream;
 
     move-result-object v1
 
-    .line 314
+    .line 331
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 315
+    .line 332
     iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->nowBitmap:Landroid/graphics/Bitmap;
 
     iput-object v6, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
 
-    .line 316
+    .line 333
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 317
+    .line 334
     .local v0, bitopts:Landroid/graphics/BitmapFactory$Options;
     iput-boolean v8, v0, Landroid/graphics/BitmapFactory$Options;->inNativeAlloc:Z
 
-    .line 318
+    .line 335
     const/4 v6, 0x0
 
     invoke-static {v1, v6, v0}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
@@ -325,30 +325,30 @@
 
     iput-object v6, p0, Lcom/htc/shutdown/AnimationView;->nowBitmap:Landroid/graphics/Bitmap;
 
-    .line 320
+    .line 337
     :try_start_0
     invoke-virtual {v1}, Ljava/io/BufferedInputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 329
+    .line 346
     .end local v0           #bitopts:Landroid/graphics/BitmapFactory$Options;
     :goto_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 330
+    .line 347
     .local v2, mEndTime:J
     invoke-direct {p0, v4, v5, v2, v3}, Lcom/htc/shutdown/AnimationView;->controlFPS(JJ)V
 
-    .line 331
+    .line 348
     invoke-virtual {p0}, Lcom/htc/shutdown/AnimationView;->invalidate()V
 
-    .line 332
+    .line 349
     return-void
 
-    .line 312
+    .line 329
     .end local v2           #mEndTime:J
     :cond_1
     invoke-direct {p0}, Lcom/htc/shutdown/AnimationView;->readNextTexture()Ljava/io/BufferedInputStream;
@@ -357,7 +357,7 @@
 
     goto :goto_0
 
-    .line 326
+    .line 343
     :cond_2
     iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->mAnimationListener:Lcom/htc/shutdown/AnimationView$OnAnimationListener;
 
@@ -365,7 +365,7 @@
 
     goto :goto_1
 
-    .line 321
+    .line 338
     .restart local v0       #bitopts:Landroid/graphics/BitmapFactory$Options;
     :catch_0
     move-exception v6
@@ -379,18 +379,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 167
+    .line 184
     :try_start_0
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->zipFile:Ljava/util/zip/ZipFile;
 
     if-nez v4, :cond_1
 
-    .line 197
+    .line 214
     :cond_0
     :goto_0
     return-object v3
 
-    .line 173
+    .line 190
     :cond_1
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->zipFile:Ljava/util/zip/ZipFile;
 
@@ -398,11 +398,11 @@
 
     move-result-object v1
 
-    .line 175
+    .line 192
     .local v1, entry_list:Ljava/util/Enumeration;
     const/4 v2, 0x0
 
-    .line 176
+    .line 193
     .local v2, isNext:Z
     :cond_2
     :goto_1
@@ -412,14 +412,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 178
+    .line 195
     invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/zip/ZipEntry;
 
-    .line 180
+    .line 197
     .local v0, entry:Ljava/util/zip/ZipEntry;
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->curname:Ljava/lang/String;
 
@@ -434,14 +434,14 @@
 
     if-nez v4, :cond_4
 
-    .line 181
+    .line 198
     invoke-virtual {v0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, p0, Lcom/htc/shutdown/AnimationView;->curname:Ljava/lang/String;
 
-    .line 182
+    .line 199
     new-instance v4, Ljava/io/BufferedInputStream;
 
     iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->zipFile:Ljava/util/zip/ZipFile;
@@ -458,7 +458,7 @@
 
     goto :goto_0
 
-    .line 186
+    .line 203
     :cond_4
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->curname:Ljava/lang/String;
 
@@ -478,12 +478,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 187
+    .line 204
     const/4 v2, 0x1
 
     goto :goto_1
 
-    .line 192
+    .line 209
     .end local v0           #entry:Ljava/util/zip/ZipEntry;
     .end local v1           #entry_list:Ljava/util/Enumeration;
     .end local v2           #isNext:Z
@@ -499,18 +499,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 203
+    .line 220
     :try_start_0
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->zipLandFile:Ljava/util/zip/ZipFile;
 
     if-nez v4, :cond_1
 
-    .line 233
+    .line 250
     :cond_0
     :goto_0
     return-object v3
 
-    .line 209
+    .line 226
     :cond_1
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->zipLandFile:Ljava/util/zip/ZipFile;
 
@@ -518,11 +518,11 @@
 
     move-result-object v1
 
-    .line 211
+    .line 228
     .local v1, entry_list:Ljava/util/Enumeration;
     const/4 v2, 0x0
 
-    .line 212
+    .line 229
     .local v2, isNext:Z
     :cond_2
     :goto_1
@@ -532,14 +532,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 214
+    .line 231
     invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/zip/ZipEntry;
 
-    .line 216
+    .line 233
     .local v0, entry:Ljava/util/zip/ZipEntry;
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->curname:Ljava/lang/String;
 
@@ -554,14 +554,14 @@
 
     if-nez v4, :cond_4
 
-    .line 217
+    .line 234
     invoke-virtual {v0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, p0, Lcom/htc/shutdown/AnimationView;->curname:Ljava/lang/String;
 
-    .line 218
+    .line 235
     new-instance v4, Ljava/io/BufferedInputStream;
 
     iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->zipLandFile:Ljava/util/zip/ZipFile;
@@ -578,7 +578,7 @@
 
     goto :goto_0
 
-    .line 222
+    .line 239
     :cond_4
     iget-object v4, p0, Lcom/htc/shutdown/AnimationView;->curname:Ljava/lang/String;
 
@@ -598,12 +598,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 223
+    .line 240
     const/4 v2, 0x1
 
     goto :goto_1
 
-    .line 228
+    .line 245
     .end local v0           #entry:Ljava/util/zip/ZipEntry;
     .end local v1           #entry_list:Ljava/util/Enumeration;
     .end local v2           #isNext:Z
@@ -632,45 +632,49 @@
     .parameter "canvas"
 
     .prologue
-    const/4 v5, 0x1
+    const/16 v5, -0x5a
+
+    const/16 v1, -0x10e
 
     const/4 v10, 0x0
+
+    const/4 v6, 0x1
 
     const/4 v9, 0x0
 
     .line 124
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->nowBitmap:Landroid/graphics/Bitmap;
+    iget-object v7, p0, Lcom/htc/shutdown/AnimationView;->nowBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v6, :cond_5
+    if-eqz v7, :cond_5
 
     .line 134
     :try_start_0
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object v6
+    move-result-object v7
 
-    iget v6, v6, Landroid/content/res/Configuration;->orientation:I
+    iget v7, v7, Landroid/content/res/Configuration;->orientation:I
 
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
-    if-ne v6, v7, :cond_3
+    if-ne v7, v8, :cond_3
 
-    move v0, v5
+    move v0, v6
 
     .line 136
     .local v0, bLand:Z
     :goto_0
-    sget-short v6, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+    sget-short v7, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
-    const/16 v7, 0x10
+    const/16 v8, 0x10
 
-    if-ne v6, v7, :cond_0
+    if-ne v7, v8, :cond_0
 
     .line 137
     const/4 v0, 0x0
@@ -680,52 +684,50 @@
     if-eqz v0, :cond_1
 
     .line 141
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->mDisplay:Landroid/view/Display;
+    iget-object v7, p0, Lcom/htc/shutdown/AnimationView;->mDisplay:Landroid/view/Display;
 
-    invoke-virtual {v6}, Landroid/view/Display;->getRotation()I
+    invoke-virtual {v7}, Landroid/view/Display;->getRotation()I
 
     move-result v3
 
     .line 142
     .local v3, rotation:I
-    const/4 v6, 0x3
+    const/4 v7, 0x3
 
-    if-ne v3, v6, :cond_4
-
-    const/16 v1, -0x10e
+    if-ne v3, v7, :cond_4
 
     .line 143
     .local v1, degree:I
     :goto_1
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v6
+    move-result-object v5
 
-    iget v4, v6, Landroid/util/DisplayMetrics;->widthPixels:I
+    iget v4, v5, Landroid/util/DisplayMetrics;->widthPixels:I
 
     .line 144
     .local v4, w:I
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v6
+    move-result-object v5
 
-    iget v2, v6, Landroid/util/DisplayMetrics;->heightPixels:I
+    iget v2, v5, Landroid/util/DisplayMetrics;->heightPixels:I
 
     .line 145
     .local v2, h:I
-    int-to-float v6, v1
+    int-to-float v5, v1
 
     div-int/lit8 v7, v4, 0x2
 
@@ -735,14 +737,14 @@
 
     int-to-float v8, v8
 
-    invoke-virtual {p1, v6, v7, v8}, Landroid/graphics/Canvas;->rotate(FFF)V
+    invoke-virtual {p1, v5, v7, v8}, Landroid/graphics/Canvas;->rotate(FFF)V
 
     .line 146
-    sub-int v6, v4, v2
+    sub-int v5, v4, v2
 
-    div-int/lit8 v6, v6, 0x2
+    div-int/lit8 v5, v5, 0x2
 
-    int-to-float v6, v6
+    int-to-float v5, v5
 
     sub-int v7, v4, v2
 
@@ -752,9 +754,9 @@
 
     int-to-float v7, v7
 
-    invoke-virtual {p1, v6, v7}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {p1, v5, v7}, Landroid/graphics/Canvas;->translate(FF)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 150
     .end local v0           #bLand:Z
@@ -764,48 +766,48 @@
     .end local v4           #w:I
     :cond_1
     :goto_2
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->nowBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->nowBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p1, v6, v9, v9, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v5, v9, v9, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     .line 151
-    iget v6, p0, Lcom/htc/shutdown/AnimationView;->nFramesDrawn:I
+    iget v5, p0, Lcom/htc/shutdown/AnimationView;->nFramesDrawn:I
 
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v5, v5, 0x1
 
-    iput v6, p0, Lcom/htc/shutdown/AnimationView;->nFramesDrawn:I
+    iput v5, p0, Lcom/htc/shutdown/AnimationView;->nFramesDrawn:I
 
     .line 153
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v6, :cond_2
+    if-eqz v5, :cond_2
 
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
 
     iget-object v7, p0, Lcom/htc/shutdown/AnimationView;->nowBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v6, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v5
 
-    if-nez v6, :cond_2
+    if-nez v5, :cond_2
 
     .line 154
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 155
     iput-object v10, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
 
-    .line 161
+    .line 178
     :cond_2
     :goto_3
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->myHandler:Landroid/os/Handler;
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->myHandler:Landroid/os/Handler;
 
-    invoke-virtual {v6, v5}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-virtual {v5, v6}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 162
+    .line 179
     return-void
 
     .line 134
@@ -814,33 +816,173 @@
 
     goto :goto_0
 
-    .line 142
     .restart local v0       #bLand:Z
     .restart local v3       #rotation:I
     :cond_4
-    const/16 v1, -0x5a
+    move v1, v5
 
+    .line 142
     goto :goto_1
 
-    .line 158
+    .line 159
     .end local v0           #bLand:Z
     .end local v3           #rotation:I
     :cond_5
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
+    :try_start_1
+    iget-object v7, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
 
-    if-eqz v6, :cond_2
+    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iget-object v6, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
+    move-result-object v7
 
-    invoke-virtual {p1, v6, v9, v9, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v8, 0x2
+
+    if-ne v7, v8, :cond_8
+
+    move v0, v6
+
+    .line 161
+    .restart local v0       #bLand:Z
+    :goto_4
+    sget-short v7, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v8, 0x10
+
+    if-ne v7, v8, :cond_6
+
+    .line 162
+    const/4 v0, 0x0
+
+    .line 165
+    :cond_6
+    if-eqz v0, :cond_7
+
+    .line 166
+    iget-object v7, p0, Lcom/htc/shutdown/AnimationView;->mDisplay:Landroid/view/Display;
+
+    invoke-virtual {v7}, Landroid/view/Display;->getRotation()I
+
+    move-result v3
+
+    .line 167
+    .restart local v3       #rotation:I
+    const/4 v7, 0x3
+
+    if-ne v3, v7, :cond_9
+
+    .line 168
+    .restart local v1       #degree:I
+    :goto_5
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v4, v5, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    .line 169
+    .restart local v4       #w:I
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v2, v5, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    .line 170
+    .restart local v2       #h:I
+    int-to-float v5, v1
+
+    div-int/lit8 v7, v4, 0x2
+
+    int-to-float v7, v7
+
+    div-int/lit8 v8, v2, 0x2
+
+    int-to-float v8, v8
+
+    invoke-virtual {p1, v5, v7, v8}, Landroid/graphics/Canvas;->rotate(FFF)V
+
+    .line 171
+    sub-int v5, v4, v2
+
+    div-int/lit8 v5, v5, 0x2
+
+    int-to-float v5, v5
+
+    sub-int v7, v4, v2
+
+    neg-int v7, v7
+
+    div-int/lit8 v7, v7, 0x2
+
+    int-to-float v7, v7
+
+    invoke-virtual {p1, v5, v7}, Landroid/graphics/Canvas;->translate(FF)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 175
+    .end local v0           #bLand:Z
+    .end local v1           #degree:I
+    .end local v2           #h:I
+    .end local v3           #rotation:I
+    .end local v4           #w:I
+    :cond_7
+    :goto_6
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
+
+    if-eqz v5, :cond_2
+
+    iget-object v5, p0, Lcom/htc/shutdown/AnimationView;->lastBitmap:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1, v5, v9, v9, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     goto :goto_3
 
-    .line 148
-    :catch_0
-    move-exception v6
+    .line 159
+    :cond_8
+    const/4 v0, 0x0
 
-    goto :goto_2
+    goto :goto_4
+
+    .restart local v0       #bLand:Z
+    .restart local v3       #rotation:I
+    :cond_9
+    move v1, v5
+
+    .line 167
+    goto :goto_5
+
+    .line 173
+    .end local v0           #bLand:Z
+    .end local v3           #rotation:I
+    :catch_0
+    move-exception v5
+
+    goto :goto_6
+
+    .line 148
+    :catch_1
+    move-exception v5
+
+    goto/16 :goto_2
 .end method
 
 .method public setOnAnimationListener(Lcom/htc/shutdown/AnimationView$OnAnimationListener;)V
@@ -848,9 +990,9 @@
     .parameter "listener"
 
     .prologue
-    .line 292
+    .line 309
     iput-object p1, p0, Lcom/htc/shutdown/AnimationView;->mAnimationListener:Lcom/htc/shutdown/AnimationView$OnAnimationListener;
 
-    .line 293
+    .line 310
     return-void
 .end method

@@ -23,7 +23,7 @@
     .locals 1
 
     .prologue
-    .line 1527
+    .line 1531
     sget-object v0, Landroid/provider/Telephony$GsmCarriers;->CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcom/htc/wrap/android/provider/HtcWrapTelephony$GsmCarriers;->CONTENT_URI:Landroid/net/Uri;
@@ -35,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 1522
+    .line 1526
     invoke-direct {p0}, Lcom/htc/wrap/android/provider/HtcWrapTelephony$Carriers;-><init>()V
 
     return-void
