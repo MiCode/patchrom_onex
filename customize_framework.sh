@@ -15,7 +15,8 @@ if [ $2 = "out/framework" ];then
 	mkdir -p "out/ZIP/system/framework"
 	cp -r "framework2.jar.out" "out/framework2.jar.out" 
 	mv "out/framework/smali/miui" "out/framework2.jar.out/smali"
-	mv "out/framework/smali/android/widget" "out/framework2.jar.out/smali"
+	mkdir -p "out/framework2.jar.out/smali/android"
+	mv "out/framework/smali/android/widget" "out/framework2.jar.out/smali/android"
 
 	for file in `find "$1/smali/com/android/internal/telephony" -name "*.smali"`
 	do
