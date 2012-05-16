@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>低音增强</item>
+        <item>中音增强（人声）</item>
+        <item>高音增强</item>
+        <item>音量</item>
+        <item>现场</item>
+        <item>舞曲（节拍）</item>
+        <item>暖调</item>
+        <item>清晰（响亮）</item>
+        <item>宽广</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>无效果</item>
+        <item>杜比移动娱乐体验技术</item>
+        <item>SRS 增强</item>
+        <item>均衡器（仅适用于耳机）</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>新发行</item>
+        <item>最热门的 100 个专辑</item>
+        <item>最热门的 100 首歌曲</item>
+        <item>频道</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>另类音乐</item>
+        <item>舞曲和浩室音乐</item>
+        <item>电子音乐</item>
+        <item>爵士</item>
+        <item>流行</item>
+        <item>R&amp;amp;B</item>
+        <item>说唱</item>
+        <item>摇滚</item>
+    </string-array>
+</resources>

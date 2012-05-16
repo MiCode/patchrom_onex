@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bas-booster</item>
+        <item>Mid-booster (vokal)</item>
+        <item>Diskant-booster</item>
+        <item>Lydstyrke</item>
+        <item>Live</item>
+        <item>Dans (beat)</item>
+        <item>Varme</item>
+        <item>Klarhed</item>
+        <item>Bred</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Ingen effekter</item>
+        <item>Dolby Mobile</item>
+        <item>SRS-forbedring</item>
+        <item>Equalizer (kun hovedtelefoner)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nye udgivelser</item>
+        <item>100 mest populære album</item>
+        <item>100 mest populære sange</item>
+        <item>Kanaler</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternativ</item>
+        <item>Dance &amp;amp; House</item>
+        <item>Elektronisk</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

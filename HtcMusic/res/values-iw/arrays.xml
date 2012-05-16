@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bass booster</item>
+        <item>Mid booster (Vocal)</item>
+        <item>Treble booster</item>
+        <item>קולניות</item>
+        <item>Live</item>
+        <item>Dance (Beat)</item>
+        <item>Warmth</item>
+        <item>Sweetener (Air)</item>
+        <item>רחב</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>ללא אפקטים</item>
+        <item>דולבי נייד</item>
+        <item>שיפור SRS</item>
+        <item>אקולייזר (אוזניות בלבד)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>שוחררו לאחרונה</item>
+        <item>100 האלבומים הנפוצים ביותר</item>
+        <item>100 השירים הנפוצים ביותר</item>
+        <item>ערוצים</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>אלטרנטיבי</item>
+        <item>דאנס והאוס</item>
+        <item>אלקטרונית</item>
+        <item>"ג'אז"</item>
+        <item>פופ</item>
+        <item>R&amp;amp;B</item>
+        <item>ראפ</item>
+        <item>רוק</item>
+    </string-array>
+</resources>

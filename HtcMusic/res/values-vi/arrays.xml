@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Tăng tiếng Bass</item>
+        <item>Tăng tiếng Mid (tiếng hát)</item>
+        <item>Tăng Treble</item>
+        <item>Âm thanh lớn</item>
+        <item>Sống động</item>
+        <item>Nhạc Dance (tiếng đập)</item>
+        <item>Tiếng Ấm</item>
+        <item>Ngọt ngào (Không khí)</item>
+        <item>Rộng</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Không dùng hiệu ứng</item>
+        <item>Dolby Mobile</item>
+        <item>Tăng cường SRS</item>
+        <item>Bộ lọc (với tai nghe)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Bản phát hành mới</item>
+        <item>100 album hàng đầu</item>
+        <item>100 bài hát hàng đầu</item>
+        <item>Kênh</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Thể loại Alternative</item>
+        <item>Thể loại Dance &amp;amp; House</item>
+        <item>Thể loại Electronica</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

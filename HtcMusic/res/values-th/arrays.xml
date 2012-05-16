@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>เพิ่มเสียงทุ้ม</item>
+        <item>เพิ่มเสียงกลาง (เสียงร้อง)</item>
+        <item>เพิ่มเสียงแหลม</item>
+        <item>ความดัง</item>
+        <item>ถ่ายทอดสด</item>
+        <item>แดนซ์ (บีท)</item>
+        <item>อบอุ่น</item>
+        <item>หวาน (เบา)</item>
+        <item>กว้าง</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>ไม่มีเอฟเฟ็กต์</item>
+        <item>ดอล์บี้โมบาย</item>
+        <item>เพิ่มเสียงเซอร์ราวด์</item>
+        <item>อีควอไลเซอร์ (หูฟังเท่านั้น)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>ออกใหม่</item>
+        <item>อัลบั้ม 100 อันดับยอดนิยม</item>
+        <item>เพลง 100 อันดับยอดนิยม</item>
+        <item>แชนแนล</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>อัลเทอร์เนทีฟ</item>
+        <item>แดนซ์และเฮาส์</item>
+        <item>อิเล็กทรอนิกส์</item>
+        <item>แจ็ส</item>
+        <item>ป็อป</item>
+        <item>R&amp;amp;B</item>
+        <item>แร็พ</item>
+        <item>ร็อค</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bosinis stiprintuvas</item>
+        <item>Vidutinių tonų stiprintuvas (vokalas)</item>
+        <item>Aukštų tonų stiprintuvas</item>
+        <item>Garsumas</item>
+        <item>Nuolat atnaujinama</item>
+        <item>Šokis (Beat)</item>
+        <item>Šiluma</item>
+        <item>Saldiklis (oro)</item>
+        <item>Platus</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Jokių efektų</item>
+        <item>Dolby Mobile</item>
+        <item>SRS išplėtimas</item>
+        <item>Ekvalaizeris (tik ausinės)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nauji leidimai</item>
+        <item>100 populiariausių albumų</item>
+        <item>100 populiariausių dainų</item>
+        <item>Kanalai</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatyvioji muzika</item>
+        <item>Šokių ir hauzo muzika</item>
+        <item>Elektroninė muzika</item>
+        <item>Džiazas</item>
+        <item>Pop muzika</item>
+        <item>R&amp;amp;B</item>
+        <item>Repas</item>
+        <item>Rokas</item>
+    </string-array>
+</resources>

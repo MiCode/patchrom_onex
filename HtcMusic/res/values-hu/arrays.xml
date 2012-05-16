@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Mély hangok kiemelése</item>
+        <item>Középtartomány kiemelése (vokál)</item>
+        <item>Magas hangok kiemelése</item>
+        <item>Hangerő</item>
+        <item>Live</item>
+        <item>Dance (beat)</item>
+        <item>Warmth</item>
+        <item>Sweetener (Air)</item>
+        <item>Wide</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Nincs hatás</item>
+        <item>Dolby Mobile</item>
+        <item>SRS bővítés</item>
+        <item>Hangszínszabályzó (csak fejhallgatókkal)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Új kiadványok</item>
+        <item>Top 100 album</item>
+        <item>Top 100 zeneszám</item>
+        <item>Csatornák</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatív</item>
+        <item>Dance és House</item>
+        <item>Elektronikus</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>تقویت کننده بم</item>
+        <item>تقویت کننده میان دامنه (آواز)</item>
+        <item>تقویت کننده زیر</item>
+        <item>بلندی صدا</item>
+        <item>زنده</item>
+        <item>رقص (ضرب)</item>
+        <item>گرمی</item>
+        <item>ملایم کننده (هوا)</item>
+        <item>عریض</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>بدون جلوه</item>
+        <item>Dolby Mobile</item>
+        <item>بهبود SRS</item>
+        <item>اکولایزر (فقط هدفون)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>انتشارهای جديد</item>
+        <item>100 آلبوم برتر</item>
+        <item>100 ترانه برتر</item>
+        <item>كانال ها</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>آلترناتیو</item>
+        <item>رقص و هاوس</item>
+        <item>الکترونیک</item>
+        <item>جز</item>
+        <item>پاپ</item>
+        <item>R&amp;amp;B</item>
+        <item>رپ</item>
+        <item>راک</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bassokorostus</item>
+        <item>Keskialueen tehostin (Vocal)</item>
+        <item>Diskanttikorostus</item>
+        <item>Loudness</item>
+        <item>Live</item>
+        <item>Tanssi (rytmi)</item>
+        <item>Lämpö</item>
+        <item>Selkeytys (kirkas)</item>
+        <item>Wide</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Ei tehosteita</item>
+        <item>Dolby Mobile</item>
+        <item>SRS-tehoste</item>
+        <item>Taajuuskorjain (vain kuulokkeet)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Uudet julkaisut</item>
+        <item>Top 100 albumit</item>
+        <item>Top 100 kappaleet</item>
+        <item>Kanavat</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Vaihtoehtoinen</item>
+        <item>Dance &amp;amp; House</item>
+        <item>Electronica</item>
+        <item>Jatsi</item>
+        <item>Pop</item>
+        <item>Rytmi ja blues</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

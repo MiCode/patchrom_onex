@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bass booster</item>
+        <item>Mid-boost (vocaal)</item>
+        <item>Hoge tonen booster</item>
+        <item>Loudness</item>
+        <item>Live</item>
+        <item>Dance (beat)</item>
+        <item>Warmte</item>
+        <item>Zuiver (sprankelend)</item>
+        <item>Breed</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Geen effecten</item>
+        <item>Dolby Mobile</item>
+        <item>SRS-verbetering</item>
+        <item>Equalizer (alleen koptelefoon)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nieuwe uitgaves</item>
+        <item>Top 100 albums</item>
+        <item>Top 100 nummers</item>
+        <item>Kanalen</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatief</item>
+        <item>Dance &amp;amp; house</item>
+        <item>Elektronisch</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

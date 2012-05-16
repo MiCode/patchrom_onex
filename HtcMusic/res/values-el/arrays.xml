@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Ενίσχυση μπάσων</item>
+        <item>Ενίσχυση μεσαίων (Φωνητική)</item>
+        <item>Ενίσχυση για τα πρίμα</item>
+        <item>Ακουστότητα</item>
+        <item>Live</item>
+        <item>Χορευτική (μπιτ)</item>
+        <item>Ζεστασιά</item>
+        <item>Διαύγεια (Λαμπρότητα)</item>
+        <item>Ευρύ</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Κανένα εφέ</item>
+        <item>Dolby Mobile</item>
+        <item>Βελτίωση SRS</item>
+        <item>Ισοσταθμιστής (μόνο ακουστικά)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Νέες εκδόσεις</item>
+        <item>Κορυφαία 100 άλμπουμ</item>
+        <item>Κορυφαία 100 τραγούδια</item>
+        <item>Κανάλια</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Εναλλακτική</item>
+        <item>Χορευτική &amp;amp; Χάουζ</item>
+        <item>Ηλεκτρονική</item>
+        <item>Τζαζ</item>
+        <item>Ποπ</item>
+        <item>R&amp;amp;B</item>
+        <item>Ραπ</item>
+        <item>Ροκ</item>
+    </string-array>
+</resources>

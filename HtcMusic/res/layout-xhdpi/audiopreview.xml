@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/audio_preview" android:paddingLeft="@com.htc:dimen/margin_xs" android:paddingRight="@com.htc:dimen/margin_xs" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/topPanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/topPanelText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:layout_marginRight="@com.htc:dimen/margin_m" android:text="@string/nowplaying_title" android:singleLine="true" style="@com.htc:style/darklist_primary_m" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/centerPanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/album_block" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:padding="@com.htc:dimen/margin_m" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/albumart" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <ImageView android:id="@id/albumCoverView" android:background="@drawable/music_detail_song_cover" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/centerRight" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/leading_2" android:layout_marginRight="@com.htc:dimen/margin_l" android:layout_toRightOf="@id/album_block">
+            <TextView android:ellipsize="end" android:id="@id/line1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@com.htc:style/list_primary_m" />
+            <TextView android:ellipsize="end" android:id="@id/line2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45.0px" android:singleLine="true" style="@com.htc:style/list_secondary_m" />
+            <com.htc.widget.HtcSeekBar android:id="@id/dummy_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0px" android:layout_below="@id/line2"
+              xmlns:seekbar="http://schemas.android.com/apk/res/com.htc" />
+            <TextView android:id="@id/currenttime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/dummy_progress" style="@com.htc:style/list_secondary_xxs" />
+            <TextView android:id="@id/totaltime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/dummy_progress" android:layout_alignParentRight="true" style="@com.htc:style/list_secondary_xxs" />
+        </RelativeLayout>
+        <com.htc.widget.HtcSeekBar android:id="@id/progress" android:paddingLeft="19.0px" android:paddingRight="19.0px" android:layout_width="428.0px" android:layout_height="60.0px" android:layout_marginLeft="217.0px" android:layout_marginTop="105.0px"
+          xmlns:seekbar="http://schemas.android.com/apk/res/com.htc" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/buttonPanel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.htc.widget.HtcRimImageButton android:id="@id/playpause" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@com.htc:drawable/icon_btn_pause_dark" android:layout_centerHorizontal="true" android:onClick="playPauseClicked" htc:backgroundMode="dark" />
+    </LinearLayout>
+</LinearLayout>

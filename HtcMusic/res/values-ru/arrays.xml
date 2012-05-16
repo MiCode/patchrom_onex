@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Усиление низких частот</item>
+        <item>Усиление средних частот (вокал)</item>
+        <item>Усиление высоких частот</item>
+        <item>Громкий</item>
+        <item>Живой звук</item>
+        <item>Ритмичный танец</item>
+        <item>«Тёплый» звук</item>
+        <item>«Ароматный воздух»</item>
+        <item>Открытое пространство</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Без эффектов</item>
+        <item>Dolby Mobile</item>
+        <item>Улучшение SRS</item>
+        <item>Эквалайзер (только наушники)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Новые выпуски</item>
+        <item>100 самых популярных альбомов</item>
+        <item>100 самых популярных композиций</item>
+        <item>Каналы</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Альтернативная музыка</item>
+        <item>Хаус</item>
+        <item>Электронная музыка</item>
+        <item>Джаз</item>
+        <item>Поп</item>
+        <item>Ритм-энд-блюз</item>
+        <item>Рэп</item>
+        <item>Рок</item>
+    </string-array>
+</resources>

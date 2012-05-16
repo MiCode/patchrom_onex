@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bas güçlendirici</item>
+        <item>Mid güçlendirici (Vokal)</item>
+        <item>Tiz güçlendirici</item>
+        <item>Ses yüksekliği</item>
+        <item>Canlı</item>
+        <item>Dans (Ritim)</item>
+        <item>Sıcaklık</item>
+        <item>Tatlandırıcı (Hava)</item>
+        <item>Geniş</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Efekt yok</item>
+        <item>Dolby Mobile</item>
+        <item>SRS geliştirmesi</item>
+        <item>Ekolayzer (yalnızca kulaklık)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Yeni sürümler</item>
+        <item>En iyi 100 albüm</item>
+        <item>En iyi 100 şarkı</item>
+        <item>Kanallar</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatif</item>
+        <item>Dans ve House</item>
+        <item>Electronica</item>
+        <item>Caz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

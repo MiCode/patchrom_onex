@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Amplificare joase</item>
+        <item>Amplificare medii (vocal)</item>
+        <item>Amplificare înalte</item>
+        <item>Intensitate sonoră</item>
+        <item>Live</item>
+        <item>Dance (ritm)</item>
+        <item>Entuziasm</item>
+        <item>Îndulcitor (aer)</item>
+        <item>Extins</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Niciun efect</item>
+        <item>Dolby Mobile</item>
+        <item>Îmbunătăţire SRS</item>
+        <item>Egalizator (numai cu căşti)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Lansări noi</item>
+        <item>Top 100 albume</item>
+        <item>Top 100 melodii</item>
+        <item>Canale</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternativ</item>
+        <item>Dance şi House</item>
+        <item>Electronică</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Підсилювач низьких частот</item>
+        <item>Посилювач середніх частот (вокал)</item>
+        <item>Підсилювач високих частот</item>
+        <item>Гучність</item>
+        <item>Живе звучання</item>
+        <item>Танцювальна</item>
+        <item>"Пом'якшення звуку"</item>
+        <item>Покращення звуку</item>
+        <item>Широке звучання</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Без ефектів</item>
+        <item>Dolby Mobile</item>
+        <item>Розширення SRS</item>
+        <item>Еквалайзер (тільки навушники)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Нові випуски</item>
+        <item>Найпопулярніші 100 альбомів</item>
+        <item>Найпопулярніші 100 пісень</item>
+        <item>Канали</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Альтернативна музика</item>
+        <item>Данс-н-хаус</item>
+        <item>Електронна музика</item>
+        <item>Джаз</item>
+        <item>Поп</item>
+        <item>R&amp;amp;B</item>
+        <item>Реп</item>
+        <item>Рок</item>
+    </string-array>
+</resources>

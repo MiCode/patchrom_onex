@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Усилване на ниските честоти</item>
+        <item>Усилване на средните честоти (вокал)</item>
+        <item>Усилване на високите честоти</item>
+        <item>Сила на звука</item>
+        <item>На живо</item>
+        <item>Денс (Ритъм)</item>
+        <item>Топлота</item>
+        <item>Благозвучно</item>
+        <item>Широта</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Без ефекти</item>
+        <item>Dolby Mobile</item>
+        <item>SRS enhancement</item>
+        <item>Еквилайзер (само за слушалките)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Нови издания</item>
+        <item>100-те най-желани албума</item>
+        <item>100-те най-желани песни</item>
+        <item>Канали</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Алтернатива</item>
+        <item>Денс и хаус</item>
+        <item>Електроника</item>
+        <item>Джаз</item>
+        <item>Поп</item>
+        <item>Ритъм и блус</item>
+        <item>Рап</item>
+        <item>Рок</item>
+    </string-array>
+</resources>

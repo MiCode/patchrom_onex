@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Amplificateur basse</item>
+        <item>Amplificateur moyen (voix)</item>
+        <item>Amplificateur aigu</item>
+        <item>Force du bruit</item>
+        <item>Live</item>
+        <item>Dance (rythmée)</item>
+        <item>Soul</item>
+        <item>Soft (air)</item>
+        <item>Large</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Aucun effet</item>
+        <item>Dolby Mobile</item>
+        <item>Amélioration SRS</item>
+        <item>Égalisateur (casque seulement)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nouvelles sorties</item>
+        <item>100 meilleurs albums</item>
+        <item>100 meilleures chansons</item>
+        <item>Canaux</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatif</item>
+        <item>Dance et House</item>
+        <item>Électronique</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

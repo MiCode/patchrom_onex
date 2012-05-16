@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>低音ブースター</item>
+        <item>中音ブースター(ボーカル)</item>
+        <item>高音ブースター</item>
+        <item>音量</item>
+        <item>Live</item>
+        <item>ダンス (リズム)</item>
+        <item>暖かさ</item>
+        <item>明瞭さ (煌き)</item>
+        <item>ワイド</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>効果なし</item>
+        <item>ドルビーモバイル</item>
+        <item>SRS エンハンス</item>
+        <item>イコライザー (ヘッドフォンのみ)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>新しいリリース</item>
+        <item>トップ 100 アルバム</item>
+        <item>トップ 100 曲</item>
+        <item>チャンネル</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>オルタナティヴ</item>
+        <item>ダンス &amp;amp; ハウス</item>
+        <item>エレクトロニカ</item>
+        <item>ジャズ</item>
+        <item>ポップ</item>
+        <item>R&amp;amp;B</item>
+        <item>ラップ</item>
+        <item>ロック</item>
+    </string-array>
+</resources>

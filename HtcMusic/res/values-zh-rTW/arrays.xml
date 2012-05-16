@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>重低音強化器</item>
+        <item>中音加強 (人聲)</item>
+        <item>高音強化器</item>
+        <item>音量</item>
+        <item>現場</item>
+        <item>舞曲 (節奏)</item>
+        <item>溫暖</item>
+        <item>清晰 (響亮)</item>
+        <item>寬廣</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>無特效</item>
+        <item>杜比移動娛樂體驗技術</item>
+        <item>SRS 音效強化</item>
+        <item>等化器 (僅限使用耳機)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>新發行</item>
+        <item>100 大熱門專輯</item>
+        <item>100 大熱門歌曲</item>
+        <item>頻道</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>另類</item>
+        <item>舞曲和浩室</item>
+        <item>電音</item>
+        <item>爵士</item>
+        <item>熱門</item>
+        <item>節奏藍調</item>
+        <item>饒舌</item>
+        <item>搖滾</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bassi võimendi</item>
+        <item>Keskmine võimendi (vokaal)</item>
+        <item>Kõrgete helide võimendi</item>
+        <item>Valjus</item>
+        <item>Reaalajas</item>
+        <item>Tants (rütm)</item>
+        <item>Soojus</item>
+        <item>Magustaja (õhk)</item>
+        <item>Lai</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Efekte pole</item>
+        <item>Dolby Mobile</item>
+        <item>SRS-i täiustamine</item>
+        <item>Ekvalaiser (ainult kõrvaklapid)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Uued publikatsioonid</item>
+        <item>100 populaarsemat albumit</item>
+        <item>100 populaarsemat laulu</item>
+        <item>Kanalid</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatiivne</item>
+        <item>Dance &amp;amp; House</item>
+        <item>Elektrooniline</item>
+        <item>Džäss</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Räpp</item>
+        <item>Rokk</item>
+    </string-array>
+</resources>

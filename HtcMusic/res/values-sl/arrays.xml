@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Ojačevalnik basov</item>
+        <item>Ojačevalnik srednjih tonov (vokali)</item>
+        <item>Ojačevalnik visokih tonov</item>
+        <item>Glasnost</item>
+        <item>V živo</item>
+        <item>Ples (Ritem)</item>
+        <item>Toplota</item>
+        <item>Sladko (Zrak)</item>
+        <item>Široko</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Brez učinkov</item>
+        <item>Dolby Mobile</item>
+        <item>Izboljševanje SRS</item>
+        <item>Ojačevalnik (le za uporabo s slušalkami)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nove izdaje</item>
+        <item>100 najbolj priljubljenih albumov</item>
+        <item>100 najbolj priljubljenih pesmi</item>
+        <item>Kanali</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternativna glasba</item>
+        <item>Dance in house</item>
+        <item>Elektronska glasba</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Bassförstärkning</item>
+        <item>Medelhög förstärkning (sång)</item>
+        <item>Diskantförstärkning</item>
+        <item>Loudness</item>
+        <item>Live</item>
+        <item>Dans (takt)</item>
+        <item>Värme</item>
+        <item>Dämpare (briljans)</item>
+        <item>Vid</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Inga effekter</item>
+        <item>Dolby Mobile</item>
+        <item>SRS-förbättring</item>
+        <item>Equalizer (endast för hörlurar)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nyutgivna titlar</item>
+        <item>Topp 100-album</item>
+        <item>Topp 100-låtar</item>
+        <item>Kanaler</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternativ</item>
+        <item>Dans &amp;amp; House</item>
+        <item>Electronica</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Amplificador Graves</item>
+        <item>Amplificador de médios (Vozes)</item>
+        <item>Amplificador Agudos</item>
+        <item>Sonoridade</item>
+        <item>Ao vivo</item>
+        <item>Dança (Batida)</item>
+        <item>Calor</item>
+        <item>Adocicado (ar)</item>
+        <item>Panorâmico</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Sem efeitos</item>
+        <item>Dolby Móvel</item>
+        <item>Melhoria SRS</item>
+        <item>Equalizador (apenas com auscultadores)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Novos lançamentos</item>
+        <item>100 álbuns principais</item>
+        <item>100 músicas principais</item>
+        <item>Canais</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternativa</item>
+        <item>Dança e House</item>
+        <item>Electrónica</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

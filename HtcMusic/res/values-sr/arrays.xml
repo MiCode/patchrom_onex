@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Pojačivač basa</item>
+        <item>Srednji pojačivač (glas)</item>
+        <item>Pojačivač visokotonaca</item>
+        <item>Jačina zvuka</item>
+        <item>Uživo</item>
+        <item>Dens (Bit)</item>
+        <item>Toplota</item>
+        <item>Zaslađivač (vazduh)</item>
+        <item>Širok</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>No effect</item>
+        <item>Dolby Mobile</item>
+        <item>SRS optimizacija</item>
+        <item>Ekvilajzer (samo za slušalice)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nova izdanja</item>
+        <item>100 hit albuma</item>
+        <item>100 hit pesama</item>
+        <item>Kanali</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternativa</item>
+        <item>Dens &amp;amp; Haus</item>
+        <item>Elektronika</item>
+        <item>Džez</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rep</item>
+        <item>Rok</item>
+    </string-array>
+</resources>

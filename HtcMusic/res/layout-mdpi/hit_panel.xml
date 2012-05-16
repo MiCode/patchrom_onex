@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/hint_layout_land" android:paddingBottom="50.0px" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="left" android:id="@id/hint_toast_library" android:paddingLeft="35.0px" android:paddingTop="20.0px" android:layout_width="165.0dip" android:layout_height="wrap_content" style="@com.htc:style/title_primary_xs" />
+    <TextView android:layout_gravity="right" android:id="@id/hint_toast_playlisy" android:paddingLeft="35.0px" android:paddingTop="20.0px" android:layout_width="165.0dip" android:layout_height="wrap_content" style="@com.htc:style/title_primary_xs" />
+</FrameLayout>

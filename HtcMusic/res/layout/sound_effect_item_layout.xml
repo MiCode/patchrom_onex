@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@com.htc:dimen/htc_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:gravity="center_vertical" android:id="@id/sound_effect_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@com.htc:dimen/margin_m" />
+        <CheckedTextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:layout_marginRight="@com.htc:dimen/margin_m" android:checkMark="?android:listChoiceIndicatorSingle" android:minHeight="@com.htc:dimen/htc_list_item_height" android:layout_weight="1.0" style="@com.htc:style/list_primary_m" />
+    </LinearLayout>
+    <com.htc.widget.HtcRimButton android:gravity="center" android:id="@id/btn1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:layout_marginTop="@com.htc:dimen/leading" android:layout_marginRight="@com.htc:dimen/margin_m" android:layout_marginBottom="@com.htc:dimen/margin_s" htc:backgroundMode="light" style="@com.htc:style/button_primary_m" />
+</LinearLayout>

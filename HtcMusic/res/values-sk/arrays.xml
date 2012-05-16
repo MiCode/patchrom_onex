@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Zvýraznenie basov</item>
+        <item>Mid zosilnenie (vokály)</item>
+        <item>Zosilnené výšky</item>
+        <item>Hlasitý</item>
+        <item>Live</item>
+        <item>Dance (Beat)</item>
+        <item>Teplo</item>
+        <item>Sladidlo (Air)</item>
+        <item>Široký</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Žiadne efekty</item>
+        <item>Dolby Mobile</item>
+        <item>SRS vylepšenie</item>
+        <item>Ekvalizér (len slúchadlá)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nové vydania</item>
+        <item>Najlepších 100 albumov</item>
+        <item>Najlepších 100 skladieb</item>
+        <item>Kanály</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatívny štýl</item>
+        <item>Dance &amp;amp; House</item>
+        <item>Elektronická</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>

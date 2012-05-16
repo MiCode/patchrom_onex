@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Basu pastiprinātājs</item>
+        <item>Vidējs pastiprinātājs (vokāls)</item>
+        <item>Diskanta pastiprinātājs</item>
+        <item>Skaļums</item>
+        <item>Tiešā</item>
+        <item>Deju mūzika (ritmiska)</item>
+        <item>Sirsnīga mūzika</item>
+        <item>Liriska mūzika (viegla)</item>
+        <item>Plašs</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Bez efektiem</item>
+        <item>Dolby Mobile</item>
+        <item>SRS uzlabošana</item>
+        <item>Ekvalaizers (tikai austiņas)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Jauni izlaidumi</item>
+        <item>100 topa albumi</item>
+        <item>100 topa dziesmas</item>
+        <item>Kanāli</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternatīvs</item>
+        <item>Dance &amp;amp; House</item>
+        <item>Elektronika</item>
+        <item>Džezs</item>
+        <item>Pops</item>
+        <item>R&amp;amp;B</item>
+        <item>Reps</item>
+        <item>Roks</item>
+    </string-array>
+</resources>

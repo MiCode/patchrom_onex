@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eq_style_sense40">
+        <item>Pojačivač basa</item>
+        <item>Pojačivač srednjih tonova (Vokal)</item>
+        <item>Pojačivač visokih tonova</item>
+        <item>Glasnoća</item>
+        <item>Uživo</item>
+        <item>Plesna (Ritam)</item>
+        <item>Toplina</item>
+        <item>Slatkasto (Zrak)</item>
+        <item>Široko</item>
+    </string-array>
+    <array name="sound_effect_style">
+        <item>Nema efekata</item>
+        <item>Dolby Mobile</item>
+        <item>SRS poboljšanje</item>
+        <item>Ekvalizor (samo slušalice)</item>
+        <item>@com.htc:string/nn_beats_audio</item>
+    </array>
+    <string-array name="onlineMusicBrowseBy">
+        <item>Nova izdanja</item>
+        <item>Najpopularnijih 100 albuma</item>
+        <item>Najpopularnijih 100 melodija</item>
+        <item>Kanali</item>
+    </string-array>
+    <string-array name="online_genres">
+        <item>Alternativa</item>
+        <item>Plesna i House</item>
+        <item>Elektronička</item>
+        <item>Jazz</item>
+        <item>Pop</item>
+        <item>R&amp;amp;B</item>
+        <item>Rap</item>
+        <item>Rock</item>
+    </string-array>
+</resources>
