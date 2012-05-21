@@ -5360,6 +5360,10 @@
 
     if-eqz v1, :cond_5
 
+    iget-boolean v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mShowLockBeforeUnlock:Z
+
+    if-eqz v1, :cond_8
+
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->getCallback()Lcom/android/internal/policy/impl/KeyguardViewCallback;
 
     move-result-object v1
@@ -8125,6 +8129,12 @@
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->restoreWidgetState()V
 
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->activateFaceLockIfAble()V
+
+
+    :cond_0
     return-void
 
     :catchall_0
