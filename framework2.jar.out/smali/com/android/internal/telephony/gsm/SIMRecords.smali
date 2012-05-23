@@ -246,6 +246,8 @@
 
 .field private mValidSPN:Z
 
+.field mUsimServiceTable:Lcom/android/internal/telephony/gsm/UsimServiceTable;
+
 .field mVmConfig:Lcom/android/internal/telephony/gsm/VoiceMailConstants;
 
 .field private mloadCompleted:Z
@@ -10391,6 +10393,18 @@
 
     .line 2044
     .restart local v12       #ar:Landroid/os/AsyncResult;
+    iget-object v3, v12, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+
+    check-cast v3, [B
+
+    move-object v0, v3
+
+    check-cast v0, [B
+
+    move-object v11, v0
+
+
+    .restart local v11       #data:[B
     iget-object v3, v12, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v3, :cond_2
@@ -10403,6 +10417,41 @@
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/android/internal/telephony/gsm/SIMRecords;->handleSmses(Ljava/util/ArrayList;)V
+
+    new-instance v2, Lcom/android/internal/telephony/gsm/UsimServiceTable;
+
+    invoke-direct {v2, v11}, Lcom/android/internal/telephony/gsm/UsimServiceTable;-><init>([B)V
+
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/android/internal/telephony/gsm/SIMRecords;->mUsimServiceTable:Lcom/android/internal/telephony/gsm/UsimServiceTable;
+
+    .line 973
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "SST: "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/internal/telephony/gsm/SIMRecords;->mUsimServiceTable:Lcom/android/internal/telephony/gsm/UsimServiceTable;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2}, Lcom/android/internal/telephony/gsm/SIMRecords;->log(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -16068,4 +16117,14 @@
     const/16 v0, 0xa
 
     goto :goto_4
+.end method
+
+.method public getUsimServiceTable()Lcom/android/internal/telephony/gsm/UsimServiceTable;
+    .locals 1
+
+    .prologue
+    .line 254
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mUsimServiceTable:Lcom/android/internal/telephony/gsm/UsimServiceTable;
+
+    return-object v0
 .end method

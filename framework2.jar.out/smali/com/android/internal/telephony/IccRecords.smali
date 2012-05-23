@@ -317,6 +317,16 @@
     return-object v0
 .end method
 
+.method public getUsimServiceTable()Lcom/android/internal/telephony/gsm/UsimServiceTable;
+    .locals 1
+
+    .prologue
+    .line 368
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public getVoiceCallForwardingFlag()Z
     .locals 1
 

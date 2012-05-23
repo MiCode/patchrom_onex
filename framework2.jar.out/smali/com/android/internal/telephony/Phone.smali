@@ -926,6 +926,9 @@
 .method public abstract getVoiceCallForwardingStatus()Z
 .end method
 
+.method public abstract getUsimServiceTable()Lcom/android/internal/telephony/gsm/UsimServiceTable;
+.end method
+
 .method public abstract getVoiceMailAlphaTag()Ljava/lang/String;
 .end method
 
