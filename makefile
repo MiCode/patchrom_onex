@@ -66,6 +66,7 @@ local-zip-misc:
 
 	@echo add system app
 	cp other/system_app/* $(ZIP_DIR)/system/app/
+	cp other/NvCPLSvc.apk $(ZIP_DIR)/system/bin/
 
 	@echo add system config
 	cp other/system_etc/* $(ZIP_DIR)/system/etc/
