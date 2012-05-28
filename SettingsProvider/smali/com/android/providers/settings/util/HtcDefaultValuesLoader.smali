@@ -534,7 +534,7 @@
 
     .prologue
     .line 656
-    const-string v0, "1"
+    const-string v0, "0"
 
     return-object v0
 .end method
