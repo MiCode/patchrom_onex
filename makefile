@@ -46,13 +46,6 @@ local-zip-misc:
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 
-	@echo update default theme icons
-	mv $(ZIP_DIR)/system/media/theme/default/icons $(TMP_DIR)/icons.zip
-	$(UNZIP) $(TMP_DIR)/icons.zip -d $(TMP_DIR)/default_theme_icons
-	cp other/default_theme_icons/* $(TMP_DIR)/default_theme_icons
-	$(ZIP) -j $(ZIP_DIR)/system/media/theme/default/icons.zip $(TMP_DIR)/default_theme_icons/*
-	mv $(ZIP_DIR)/system/media/theme/default/icons.zip $(ZIP_DIR)/system/media/theme/default/icons
-
 	@echo CID default xml
 	cp other/default.xml $(ZIP_DIR)/system/customize/CID/default.xml
 
