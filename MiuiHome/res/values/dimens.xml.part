@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_width">67.5dip</dimen>
+    <dimen name="config_icon_height">67.5dip</dimen>
+    <dimen name="workspace_padding_side">12.0dip</dimen>
+    <dimen name="workspace_margin_bottom">80.0dip</dimen>
+    <dimen name="icon_title_padding_bottom">0.0dip</dimen>
+    <dimen name="hotseats_padding_side">10.0dip</dimen>
+    <dimen name="user_folder_cell_width">90.0dip</dimen>
+    <dimen name="user_folder_cell_height">95.0dip</dimen>
+    <dimen name="workspace_icon_text_size">13.0sp</dimen>
+</resources>
