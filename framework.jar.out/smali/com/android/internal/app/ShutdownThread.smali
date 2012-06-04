@@ -163,7 +163,7 @@
 
     .line 178
     .local v1, pd:Landroid/app/ProgressDialog;
-    const v2, 0x30c0191
+    const v2, 0x60c0191
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    const v2, 0x30c01aa
+    const v2, 0x60c01aa
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1474,13 +1474,13 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x30c018c
+    const v0, 0x60c018c
 
     :goto_0
     return v0
 
     :cond_0
-    const v0, 0x30c0191
+    const v0, 0x60c0191
 
     goto :goto_0
 .end method
@@ -1509,7 +1509,7 @@
     move-result-object v3
 
     .local v3, layoutInflater:Landroid/view/LayoutInflater;
-    const v6, 0x303002e
+    const v6, 0x603002e
 
     const/4 v7, 0x0
 
@@ -1518,7 +1518,7 @@
     move-result-object v5
 
     .local v5, view:Landroid/view/View;
-    const v6, 0x30b0021
+    const v6, 0x60b0021
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1527,7 +1527,7 @@
     check-cast v4, Landroid/widget/TextView;
 
     .local v4, msgText:Landroid/widget/TextView;
-    const v6, 0x30b0022
+    const v6, 0x60b0022
 
     invoke-virtual {v5, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1540,7 +1540,7 @@
 
     if-eqz v6, :cond_0
 
-    const v6, 0x30c0001
+    const v6, 0x60c0001
 
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -1574,7 +1574,7 @@
 
     .end local v0           #animationDrawable:Landroid/graphics/drawable/AnimationDrawable;
     :cond_0
-    const v6, 0x30c01aa
+    const v6, 0x60c01aa
 
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setText(I)V
 
