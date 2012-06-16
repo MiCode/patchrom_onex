@@ -4,7 +4,7 @@
     <string name="airplane_mode_toggleable_radios">bluetooth,wifi,nfc</string>
     <string name="att_airplane_mode_toggleable_radios">bluetooth,wifi</string>
     <string name="chs_airplane_mode_toggleable_radios" />
-    <string name="def_location_providers_allowed">gps</string>
+    <string name="def_location_providers_allowed">gps,network</string>
     <string name="def_dsa_server_url">https://dsa.spcsdns.net:443/dsa/</string>
     <string name="def_dsa_proxy_url">144.226.247.31:80</string>
     <string name="def_backup_transport">com.google.android.backup/.BackupTransportService</string>

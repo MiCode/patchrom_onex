@@ -8,7 +8,7 @@
     <integer name="def_lockscreen_sounds_enabled">0</integer>
     <integer name="def_user_rotation">0</integer>
     <integer name="def_download_manager_max_bytes_over_mobile">-1</integer>
-    <integer name="def_download_manager_recommended_max_bytes_over_mobile">-1</integer>
+    <integer name="def_download_manager_recommended_max_bytes_over_mobile">1048576</integer>
     <integer name="def_secure_data_roaming_guard">0</integer>
     <integer name="def_select_resolution_type">0</integer>
     <integer name="def_inactivity_time">300</integer>
