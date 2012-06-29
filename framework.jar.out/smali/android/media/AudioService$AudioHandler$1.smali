@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3357
+    .line 3369
     iput-object p1, p0, Landroid/media/AudioService$AudioHandler$1;->this$1:Landroid/media/AudioService$AudioHandler;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "mp"
 
     .prologue
-    .line 3359
+    .line 3371
     iget-object v0, p0, Landroid/media/AudioService$AudioHandler$1;->this$1:Landroid/media/AudioService$AudioHandler;
 
     #calls: Landroid/media/AudioService$AudioHandler;->cleanupPlayer(Landroid/media/MediaPlayer;)V
     invoke-static {v0, p1}, Landroid/media/AudioService$AudioHandler;->access$5700(Landroid/media/AudioService$AudioHandler;Landroid/media/MediaPlayer;)V
 
-    .line 3360
+    .line 3372
     return-void
 .end method

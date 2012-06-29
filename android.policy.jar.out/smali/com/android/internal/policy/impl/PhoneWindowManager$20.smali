@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4356
+    .line 4361
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$20;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 4358
+    .line 4363
     const-string v1, "com.htc.MIRROR_DISPLAY_STATE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -55,25 +55,25 @@
 
     if-eqz v1, :cond_0
 
-    .line 4359
+    .line 4364
     const-string v1, "mirror_display_state"
 
     invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 4361
+    .line 4366
     .local v0, mirrorstatus:I
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_1
 
-    .line 4362
+    .line 4367
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$20;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v3, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mMirrorMode:Z
 
-    .line 4368
+    .line 4373
     .end local v0           #mirrorstatus:I
     :cond_0
     :goto_0
@@ -81,20 +81,20 @@
 
     invoke-virtual {v1, v3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->updateRotation(Z)V
 
-    .line 4369
+    .line 4374
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$20;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->updateOrientationListenerLp()V
 
-    .line 4370
+    .line 4375
     return-void
 
-    .line 4363
+    .line 4368
     .restart local v0       #mirrorstatus:I
     :cond_1
     if-ne v0, v3, :cond_0
 
-    .line 4364
+    .line 4369
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$20;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v2, 0x0

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1740
+    .line 1762
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$6;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/16 v4, 0xb
 
-    .line 1743
+    .line 1765
     iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$6;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -59,7 +59,7 @@
 
     move-result v0
 
-    .line 1744
+    .line 1766
     .local v0, state:I
     const-string v1, "WirelessDisplayService"
 
@@ -101,7 +101,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1745
+    .line 1767
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6100()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v1
@@ -119,7 +119,7 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 1746
+    .line 1768
     iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$6;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -129,7 +129,7 @@
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->reconnect()Z
 
-    .line 1747
+    .line 1769
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$6100()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v1
@@ -138,7 +138,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 1749
+    .line 1771
     :cond_0
     return-void
 .end method

@@ -533,7 +533,6 @@
     .locals 1
 
     .prologue
-    .line 656
     const-string v0, "0"
 
     return-object v0
@@ -543,10 +542,8 @@
     .locals 2
 
     .prologue
-    .line 372
     const v0, 0x7f040028
 
-    .line 374
     .local v0, resId:I
     const v1, 0x7f040028
 
@@ -561,7 +558,7 @@
     .locals 1
 
     .prologue
-    .line 625
+    .line 656
     const-string v0, "1"
 
     return-object v0
@@ -571,7 +568,6 @@
     .locals 1
 
     .prologue
-    .line 646
     const-string v0, "1"
 
     return-object v0
@@ -581,10 +577,8 @@
     .locals 2
 
     .prologue
-    .line 386
     const/4 v0, 0x1
 
-    .line 388
     .local v0, defaultValue:Z
     const/4 v1, 0x1
 
@@ -599,7 +593,8 @@
     .locals 1
 
     .prologue
-    .line 614
+    .line 625
+    .line 646
     const-string v0, "1"
 
     return-object v0
@@ -609,7 +604,6 @@
     .locals 1
 
     .prologue
-    .line 686
     const-string v0, "1.0"
 
     return-object v0
@@ -619,7 +613,6 @@
     .locals 1
 
     .prologue
-    .line 676
     const-string v0, "1.0"
 
     return-object v0
@@ -629,10 +622,8 @@
     .locals 2
 
     .prologue
-    .line 233
     const/16 v0, 0x168
 
-    .line 234
     .local v0, defaultValue:I
     const/16 v1, 0x168
 
@@ -647,10 +638,10 @@
     .locals 2
 
     .prologue
-    .line 209
+    .line 386
     const/4 v0, 0x1
 
-    .line 210
+    .line 388
     .local v0, defaultValue:Z
     const/4 v1, 0x1
 

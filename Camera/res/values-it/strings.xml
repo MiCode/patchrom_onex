@@ -100,7 +100,7 @@
     <string name="face_detection">Rilevamento volto</string>
     <string name="shutter_sound">Suono otturatore</string>
     <string name="video_stabilization">Stabilizzazione video</string>
-    <string name="image_adjustment">Regolazione immagime</string>
+    <string name="image_adjustment">Regolazione immagine</string>
     <string name="metering_mode">Modalità Telemetro</string>
     <string name="flicker_adjustment">Regolazione sfarfallio</string>
     <string name="iso">ISO</string>
@@ -122,7 +122,7 @@
     <string name="settings_camera_type">Fotocamera</string>
     <string name="settings_camera_type_main">Principale</string>
     <string name="settings_camera_type_front">Frontale</string>
-    <string name="settings_image_adjustments">Regolazione immagime</string>
+    <string name="settings_image_adjustments">Regolazione immagine</string>
     <string name="settings_white_balance">Bilanciamento del bianco</string>
     <string name="settings_review_duration">Anteprima dopo cattura</string>
     <string name="settings_video_resolution">Qualità video</string>

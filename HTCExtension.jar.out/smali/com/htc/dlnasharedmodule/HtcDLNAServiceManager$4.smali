@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 530
+    .line 534
     iput-object p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-direct {p0}, Lcom/htc/dlnasharedmodule/HtcDLNARendererDiscoverListener;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "rendererName"
 
     .prologue
-    .line 535
+    .line 539
     const-string v0, "HtcDLNAServiceManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,7 +73,7 @@
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
+    .line 540
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     const/16 v1, 0x4e20
@@ -83,7 +83,7 @@
     #calls: Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->sendResponseMsg(Ljava/lang/String;ILjava/lang/String;)I
     invoke-static {v0, p1, v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->access$300(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;Ljava/lang/String;ILjava/lang/String;)I
 
-    .line 537
+    .line 541
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
@@ -94,7 +94,7 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setRenderer(Ljava/lang/String;Lcom/htc/dlnainterface/DLNAStatusBarData;)Z
 
-    .line 538
+    .line 542
     return-void
 .end method
 
@@ -102,14 +102,14 @@
     .locals 3
 
     .prologue
-    .line 544
+    .line 548
     const-string v0, "HtcDLNAServiceManager"
 
     const-string v1, "[setRendererAsDefaultRenderer][onTimeout]"
 
     invoke-static {v0, v1}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 545
+    .line 549
     iget-object v0, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$4;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     const/16 v1, -0x4000
@@ -119,6 +119,6 @@
     #calls: Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->sendErrorMsg(ILjava/lang/String;)I
     invoke-static {v0, v1, v2}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->access$400(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;ILjava/lang/String;)I
 
-    .line 546
+    .line 550
     return-void
 .end method

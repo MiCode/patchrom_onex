@@ -24,13 +24,13 @@
     .parameter "activityManagerService"
 
     .prologue
-    .line 1623
+    .line 1627
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 1624
+    .line 1628
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 1625
+    .line 1629
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .parameter "args"
 
     .prologue
-    .line 1629
+    .line 1633
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     const-string v1, "android.permission.DUMP"
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1631
+    .line 1635
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,11 +105,11 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1642
+    .line 1646
     :goto_0
     return-void
 
-    .line 1637
+    .line 1641
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
@@ -117,7 +117,7 @@
 
     monitor-enter v1
 
-    .line 1638
+    .line 1642
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
@@ -129,7 +129,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1639
+    .line 1643
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$CpuBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mProcessStats:Lcom/android/internal/os/ProcessStats;
@@ -144,7 +144,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1641
+    .line 1645
     monitor-exit v1
 
     goto :goto_0

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4432
+    .line 4442
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +41,14 @@
     .locals 2
 
     .prologue
-    .line 4435
+    .line 4445
     const-string v0, "ActivityManager"
 
     const-string v1, "Start to apply OOP"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4436
+    .line 4446
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     #getter for: Lcom/android/server/am/ActivityManagerService;->mFirstBootSetupEndReceiver:Landroid/content/BroadcastReceiver;
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 4437
+    .line 4447
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
@@ -72,7 +72,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 4438
+    .line 4448
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     const/4 v1, 0x0
@@ -80,7 +80,7 @@
     #setter for: Lcom/android/server/am/ActivityManagerService;->mFirstBootSetupEndReceiver:Landroid/content/BroadcastReceiver;
     invoke-static {v0, v1}, Lcom/android/server/am/ActivityManagerService;->access$802(Lcom/android/server/am/ActivityManagerService;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
 
-    .line 4440
+    .line 4450
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$6;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -89,6 +89,6 @@
     #setter for: Lcom/android/server/am/ActivityManagerService;->mAllowKillingBackground:Z
     invoke-static {v0, v1}, Lcom/android/server/am/ActivityManagerService;->access$902(Lcom/android/server/am/ActivityManagerService;Z)Z
 
-    .line 4441
+    .line 4451
     return-void
 .end method

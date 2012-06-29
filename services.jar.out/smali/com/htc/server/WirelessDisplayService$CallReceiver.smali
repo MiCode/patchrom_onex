@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1477
+    .line 1499
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,27 +40,27 @@
     .parameter "intent"
 
     .prologue
-    .line 1483
+    .line 1505
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 1485
+    .line 1507
     .local v1, bundle:Landroid/os/Bundle;
     if-nez v1, :cond_1
 
-    .line 1611
+    .line 1633
     :cond_0
     :goto_0
     return-void
 
-    .line 1488
+    .line 1510
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1489
+    .line 1511
     .local v0, action:Ljava/lang/String;
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
@@ -73,7 +73,7 @@
 
     move-result v3
 
-    .line 1490
+    .line 1512
     .local v3, curState:I
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
@@ -86,7 +86,7 @@
 
     move-result v2
 
-    .line 1492
+    .line 1514
     .local v2, condState:I
     const-string v9, "WirelessDisplayService"
 
@@ -110,7 +110,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1494
+    .line 1516
     const-string v9, "android.intent.action.PHONE_STATE"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -119,14 +119,14 @@
 
     if-eqz v9, :cond_13
 
-    .line 1495
+    .line 1517
     const-string v9, "state"
 
     invoke-virtual {v1, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1497
+    .line 1519
     .local v8, state:Ljava/lang/String;
     const-string v9, "WirelessDisplayService"
 
@@ -170,7 +170,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1499
+    .line 1521
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->callOnGoing:Z
@@ -200,7 +200,7 @@
 
     if-ne v3, v9, :cond_7
 
-    .line 1504
+    .line 1526
     :cond_2
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
@@ -209,14 +209,14 @@
     #setter for: Lcom/htc/server/WirelessDisplayService;->callOnGoing:Z
     invoke-static {v9, v10}, Lcom/htc/server/WirelessDisplayService;->access$5402(Lcom/htc/server/WirelessDisplayService;Z)Z
 
-    .line 1505
+    .line 1527
     const-string v9, "incoming_number"
 
     invoke-virtual {v1, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1506
+    .line 1528
     .local v7, phonenumber:Ljava/lang/String;
     const-string v9, "WirelessDisplayService"
 
@@ -240,12 +240,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1507
+    .line 1529
     const/4 v9, 0x3
 
     if-ne v3, v9, :cond_3
 
-    .line 1509
+    .line 1531
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v9
@@ -260,7 +260,7 @@
 
     move-result-object v4
 
-    .line 1510
+    .line 1532
     .local v4, msg1:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -268,7 +268,7 @@
 
     invoke-virtual {v9, v4}, Lcom/htc/server/WirelessDisplayService$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1511
+    .line 1533
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -280,7 +280,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1512
+    .line 1534
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:2"
@@ -289,19 +289,19 @@
 
     goto/16 :goto_0
 
-    .line 1513
+    .line 1535
     .end local v4           #msg1:Landroid/os/Message;
     :cond_3
     const/4 v9, 0x4
 
     if-ne v3, v9, :cond_5
 
-    .line 1515
+    .line 1537
     const/4 v9, 0x1
 
     if-ne v2, v9, :cond_4
 
-    .line 1516
+    .line 1538
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -313,7 +313,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1517
+    .line 1539
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:3"
@@ -322,13 +322,13 @@
 
     goto/16 :goto_0
 
-    .line 1518
+    .line 1540
     :cond_4
     const/4 v9, 0x5
 
     if-ne v2, v9, :cond_0
 
-    .line 1519
+    .line 1541
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -340,7 +340,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1520
+    .line 1542
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:7"
@@ -349,18 +349,18 @@
 
     goto/16 :goto_0
 
-    .line 1522
+    .line 1544
     :cond_5
     const/4 v9, 0x7
 
     if-ne v3, v9, :cond_0
 
-    .line 1524
+    .line 1546
     const/4 v9, 0x4
 
     if-ne v2, v9, :cond_6
 
-    .line 1525
+    .line 1547
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -372,7 +372,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1526
+    .line 1548
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:6"
@@ -381,13 +381,13 @@
 
     goto/16 :goto_0
 
-    .line 1527
+    .line 1549
     :cond_6
     const/4 v9, 0x5
 
     if-ne v2, v9, :cond_0
 
-    .line 1528
+    .line 1550
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -399,7 +399,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1529
+    .line 1551
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:7"
@@ -408,7 +408,7 @@
 
     goto/16 :goto_0
 
-    .line 1533
+    .line 1555
     .end local v7           #phonenumber:Ljava/lang/String;
     :cond_7
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
@@ -428,24 +428,24 @@
 
     if-eqz v9, :cond_12
 
-    .line 1536
+    .line 1558
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :EXTRA_STATE_IDLE"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1537
+    .line 1559
     const/16 v9, 0x9
 
     if-ne v3, v9, :cond_c
 
-    .line 1538
+    .line 1560
     const/4 v9, 0x2
 
     if-ne v2, v9, :cond_9
 
-    .line 1540
+    .line 1562
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v9
@@ -460,7 +460,7 @@
 
     move-result-object v5
 
-    .line 1541
+    .line 1563
     .local v5, msg2:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -470,7 +470,7 @@
 
     invoke-virtual {v9, v5, v10, v11}, Lcom/htc/server/WirelessDisplayService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1542
+    .line 1564
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -482,14 +482,14 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1543
+    .line 1565
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :mAppCallScreen:0"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1583
+    .line 1605
     .end local v5           #msg2:Landroid/os/Message;
     :cond_8
     :goto_1
@@ -502,13 +502,13 @@
 
     goto/16 :goto_0
 
-    .line 1544
+    .line 1566
     :cond_9
     const/4 v9, 0x3
 
     if-ne v2, v9, :cond_a
 
-    .line 1545
+    .line 1567
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -520,7 +520,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1546
+    .line 1568
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:1"
@@ -529,13 +529,13 @@
 
     goto :goto_1
 
-    .line 1547
+    .line 1569
     :cond_a
     const/4 v9, 0x7
 
     if-ne v2, v9, :cond_b
 
-    .line 1548
+    .line 1570
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -547,7 +547,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1549
+    .line 1571
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:5"
@@ -556,13 +556,13 @@
 
     goto :goto_1
 
-    .line 1550
+    .line 1572
     :cond_b
     const/4 v9, 0x6
 
     if-ne v2, v9, :cond_8
 
-    .line 1551
+    .line 1573
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -574,7 +574,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1552
+    .line 1574
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:4"
@@ -583,18 +583,18 @@
 
     goto :goto_1
 
-    .line 1554
+    .line 1576
     :cond_c
     const/4 v9, 0x4
 
     if-ne v3, v9, :cond_f
 
-    .line 1555
+    .line 1577
     const/4 v9, 0x2
 
     if-ne v2, v9, :cond_d
 
-    .line 1556
+    .line 1578
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v9
@@ -609,7 +609,7 @@
 
     move-result-object v5
 
-    .line 1557
+    .line 1579
     .restart local v5       #msg2:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -619,7 +619,7 @@
 
     invoke-virtual {v9, v5, v10, v11}, Lcom/htc/server/WirelessDisplayService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1558
+    .line 1580
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -631,7 +631,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1559
+    .line 1581
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :mAppCallScreen:0"
@@ -640,14 +640,14 @@
 
     goto :goto_1
 
-    .line 1560
+    .line 1582
     .end local v5           #msg2:Landroid/os/Message;
     :cond_d
     const/4 v9, 0x7
 
     if-ne v2, v9, :cond_e
 
-    .line 1561
+    .line 1583
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -659,7 +659,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1562
+    .line 1584
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :mAppCallScreen:5"
@@ -668,13 +668,13 @@
 
     goto/16 :goto_1
 
-    .line 1563
+    .line 1585
     :cond_e
     const/4 v9, 0x3
 
     if-ne v2, v9, :cond_8
 
-    .line 1564
+    .line 1586
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -686,7 +686,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1565
+    .line 1587
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :mAppCallScreen:1"
@@ -695,18 +695,18 @@
 
     goto/16 :goto_1
 
-    .line 1567
+    .line 1589
     :cond_f
     const/4 v9, 0x7
 
     if-ne v3, v9, :cond_8
 
-    .line 1568
+    .line 1590
     const/4 v9, 0x2
 
     if-ne v2, v9, :cond_10
 
-    .line 1569
+    .line 1591
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v9
@@ -721,7 +721,7 @@
 
     move-result-object v5
 
-    .line 1570
+    .line 1592
     .restart local v5       #msg2:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -731,7 +731,7 @@
 
     invoke-virtual {v9, v5, v10, v11}, Lcom/htc/server/WirelessDisplayService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1571
+    .line 1593
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -743,13 +743,13 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1572
+    .line 1594
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #calls: Lcom/htc/server/WirelessDisplayService;->fallBackFromAppPause()V
     invoke-static {v9}, Lcom/htc/server/WirelessDisplayService;->access$5600(Lcom/htc/server/WirelessDisplayService;)V
 
-    .line 1573
+    .line 1595
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :mAppCallScreen:0"
@@ -758,14 +758,14 @@
 
     goto/16 :goto_1
 
-    .line 1574
+    .line 1596
     .end local v5           #msg2:Landroid/os/Message;
     :cond_10
     const/4 v9, 0x7
 
     if-ne v2, v9, :cond_11
 
-    .line 1575
+    .line 1597
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -777,7 +777,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1576
+    .line 1598
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :mAppCallScreen:5"
@@ -786,13 +786,13 @@
 
     goto/16 :goto_1
 
-    .line 1577
+    .line 1599
     :cond_11
     const/4 v9, 0x6
 
     if-ne v2, v9, :cond_8
 
-    .line 1578
+    .line 1600
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -804,7 +804,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1579
+    .line 1601
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :mAppCallScreen:4"
@@ -813,7 +813,7 @@
 
     goto/16 :goto_1
 
-    .line 1584
+    .line 1606
     :cond_12
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
@@ -832,14 +832,14 @@
 
     if-eqz v9, :cond_0
 
-    .line 1585
+    .line 1607
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver :EXTRA_STATE_OFFHOOK"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1586
+    .line 1608
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     const/4 v10, 0x1
@@ -849,7 +849,7 @@
 
     goto/16 :goto_0
 
-    .line 1588
+    .line 1610
     .end local v8           #state:Ljava/lang/String;
     :cond_13
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
@@ -877,7 +877,7 @@
 
     if-ne v3, v9, :cond_0
 
-    .line 1591
+    .line 1613
     :cond_14
     const-string v9, "WirelessDisplayService"
 
@@ -885,14 +885,14 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1592
+    .line 1614
     const-string v9, "android.intent.extra.PHONE_NUMBER"
 
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1593
+    .line 1615
     .restart local v7       #phonenumber:Ljava/lang/String;
     const-string v9, "WirelessDisplayService"
 
@@ -916,7 +916,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1594
+    .line 1616
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     const/4 v10, 0x1
@@ -924,12 +924,12 @@
     #setter for: Lcom/htc/server/WirelessDisplayService;->callOnGoing:Z
     invoke-static {v9, v10}, Lcom/htc/server/WirelessDisplayService;->access$5402(Lcom/htc/server/WirelessDisplayService;Z)Z
 
-    .line 1596
+    .line 1618
     const/4 v9, 0x3
 
     if-ne v3, v9, :cond_15
 
-    .line 1597
+    .line 1619
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v9
@@ -944,7 +944,7 @@
 
     move-result-object v6
 
-    .line 1598
+    .line 1620
     .local v6, msg3:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -952,7 +952,7 @@
 
     invoke-virtual {v9, v6}, Lcom/htc/server/WirelessDisplayService$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1599
+    .line 1621
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -964,7 +964,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1600
+    .line 1622
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:2"
@@ -973,19 +973,19 @@
 
     goto/16 :goto_0
 
-    .line 1601
+    .line 1623
     .end local v6           #msg3:Landroid/os/Message;
     :cond_15
     const/4 v9, 0x7
 
     if-ne v3, v9, :cond_0
 
-    .line 1602
+    .line 1624
     const/4 v9, 0x4
 
     if-ne v2, v9, :cond_16
 
-    .line 1603
+    .line 1625
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -997,7 +997,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1604
+    .line 1626
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:6"
@@ -1006,13 +1006,13 @@
 
     goto/16 :goto_0
 
-    .line 1605
+    .line 1627
     :cond_16
     const/4 v9, 0x5
 
     if-ne v2, v9, :cond_0
 
-    .line 1606
+    .line 1628
     iget-object v9, p0, Lcom/htc/server/WirelessDisplayService$CallReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mAppCallScreen:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -1024,7 +1024,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 1607
+    .line 1629
     const-string v9, "WirelessDisplayService"
 
     const-string v10, "IncomingCallReceiver: mAppCallScreen:7: Should not be here"

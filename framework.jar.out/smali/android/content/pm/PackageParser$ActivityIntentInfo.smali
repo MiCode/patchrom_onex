@@ -24,13 +24,13 @@
     .parameter "_activity"
 
     .prologue
-    .line 3639
+    .line 3673
     invoke-direct {p0}, Landroid/content/pm/PackageParser$IntentInfo;-><init>()V
 
-    .line 3640
+    .line 3674
     iput-object p1, p0, Landroid/content/pm/PackageParser$ActivityIntentInfo;->activity:Landroid/content/pm/PackageParser$Activity;
 
-    .line 3641
+    .line 3675
     return-void
 .end method
 
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 3644
+    .line 3678
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

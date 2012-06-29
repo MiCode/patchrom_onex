@@ -1062,7 +1062,7 @@
 .end method
 
 .method public updateControlItemInfo(Lcom/htc/dlnainterface/DLNAControlItemData;)V
-    .locals 9
+    .locals 8
     .parameter "itemData"
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1071,39 +1071,9 @@
     .end annotation
 
     .prologue
-    const-wide/16 v7, 0x0
-
-    .line 271
-    iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
-
-    invoke-virtual {v4}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getFilter()I
-
-    move-result v4
-
-    iget-object v5, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
-
-    const/4 v5, 0x4
-
-    if-eq v4, v5, :cond_0
-
-    .line 272
-    const-string v4, "HtcDLNAServiceManager"
-
-    const-string v5, "[updateControlItemInfo] setState:102"
-
-    invoke-static {v4, v5}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 273
-    iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
-
-    const/16 v5, 0x66
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v4, v5, v6}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->setState(IZ)V
+    const-wide/16 v6, 0x0
 
     .line 276
-    :cond_0
     iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v4, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mControllerInfo:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;
@@ -1132,9 +1102,9 @@
     .line 281
     iget-wide v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->fDuration:J
 
-    cmp-long v4, v4, v7
+    cmp-long v4, v4, v6
 
-    if-lez v4, :cond_1
+    if-ltz v4, :cond_0
 
     .line 282
     iget-wide v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->fDuration:J
@@ -1142,16 +1112,16 @@
     iput-wide v4, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mDuration:J
 
     .line 284
-    :cond_1
+    :cond_0
     iget-object v4, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
-    if-nez v4, :cond_2
+    if-nez v4, :cond_1
 
     iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v4, v4, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mRendererId:Ljava/lang/String;
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_1
 
     .line 285
     iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mRendererList:Ljava/util/HashMap;
@@ -1169,7 +1139,7 @@
     iput-object v4, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mRendererName:Ljava/lang/String;
 
     .line 287
-    :cond_2
+    :cond_1
     iget-wide v0, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->currentIndex:J
 
     .line 288
@@ -1178,10 +1148,10 @@
 
     cmp-long v4, v4, v0
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_2
 
     .line 290
-    iput-wide v7, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPosition:J
+    iput-wide v6, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mPosition:J
 
     .line 291
     iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
@@ -1191,7 +1161,7 @@
     iput-wide v5, v4, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mClientSeekTo:J
 
     .line 293
-    :cond_3
+    :cond_2
     iput-wide v0, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mIndex:J
 
     .line 294
@@ -1211,7 +1181,7 @@
     .line 297
     iget-object v4, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_3
 
     iget-object v4, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
@@ -1219,16 +1189,16 @@
 
     move-result v4
 
-    if-nez v4, :cond_5
+    if-nez v4, :cond_4
 
     .line 298
-    :cond_4
+    :cond_3
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->thumbnailPath:Ljava/lang/String;
 
     iput-object v4, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mThumbnailPath:Ljava/lang/String;
 
     .line 301
-    :cond_5
+    :cond_4
     iget-object v4, p0, Lcom/htc/dlnasharedmodule/HtcDLNAMiddleLayerListener;->mManager:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-virtual {v4}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->getState()I
@@ -1241,6 +1211,31 @@
     iget-object v4, p1, Lcom/htc/dlnainterface/DLNAControlItemData;->curContentID:Ljava/lang/String;
 
     iput-object v4, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->curContentID:Ljava/lang/String;
+
+    .line 303
+    const-string v4, "HtcDLNAServiceManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "[HtcDLNAMiddleLayerListener][updateControlItemInfo] Duration = "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    iget-wide v6, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;->mDuration:J
+
+    invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 304
     const-string v4, "HtcDLNAServiceManager"
@@ -1322,7 +1317,7 @@
 
     .line 309
     .local v3, listener:Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_5
 
     .line 311
     invoke-virtual {v3, v2}, Lcom/htc/dlnasharedmodule/HtcDLNAControllerStatusListener;->onControllerInfoupdated(Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$ControllerInfo;)V
@@ -1332,7 +1327,7 @@
     return-void
 
     .line 315
-    :cond_6
+    :cond_5
     const-string v4, "HtcDLNAServiceManager"
 
     new-instance v5, Ljava/lang/StringBuilder;

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1713
+    .line 1735
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$4;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,21 +44,21 @@
 
     const/4 v2, 0x0
 
-    .line 1716
+    .line 1738
     const-string v0, "WirelessDisplayService"
 
     const-string v1, "Receive Configuration Tool notifies User started Dongle FW upgrade"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1718
+    .line 1740
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Lcom/htc/server/WirelessDisplayService$H;->removeMessages(I)V
 
-    .line 1719
+    .line 1741
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v0
@@ -75,6 +75,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/htc/server/WirelessDisplayService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1720
+    .line 1742
     return-void
 .end method

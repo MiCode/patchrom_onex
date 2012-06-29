@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1403
+    .line 1446
     iput-object p1, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1403
+    .line 1446
     invoke-direct {p0, p1}, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;-><init>(Landroid/widget/ActivityChooserModel;)V
 
     return-void
@@ -52,30 +52,30 @@
     .parameter "uid"
 
     .prologue
-    .line 1407
+    .line 1450
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #getter for: Landroid/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$800(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1100(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1408
+    .line 1451
     :try_start_0
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #calls: Landroid/widget/ActivityChooserModel;->loadActivitiesLocked()V
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1500(Landroid/widget/ActivityChooserModel;)V
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1600(Landroid/widget/ActivityChooserModel;)V
 
-    .line 1409
+    .line 1452
     monitor-exit v1
 
-    .line 1410
+    .line 1453
     return-void
 
-    .line 1409
+    .line 1452
     :catchall_0
     move-exception v0
 
@@ -92,30 +92,30 @@
     .parameter "reason"
 
     .prologue
-    .line 1414
+    .line 1457
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #getter for: Landroid/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$800(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1100(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1415
+    .line 1458
     :try_start_0
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #calls: Landroid/widget/ActivityChooserModel;->loadActivitiesLocked()V
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1500(Landroid/widget/ActivityChooserModel;)V
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1600(Landroid/widget/ActivityChooserModel;)V
 
-    .line 1416
+    .line 1459
     monitor-exit v1
 
-    .line 1417
+    .line 1460
     return-void
 
-    .line 1416
+    .line 1459
     :catchall_0
     move-exception v0
 
@@ -132,36 +132,36 @@
     .parameter "reason"
 
     .prologue
-    .line 1429
+    .line 1472
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #getter for: Landroid/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$800(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1100(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1430
+    .line 1473
     :try_start_0
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #calls: Landroid/widget/ActivityChooserModel;->pruneHistoricalRecordsForPackageLocked(Ljava/lang/String;)V
-    invoke-static {v0, p1}, Landroid/widget/ActivityChooserModel;->access$1600(Landroid/widget/ActivityChooserModel;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroid/widget/ActivityChooserModel;->access$1700(Landroid/widget/ActivityChooserModel;Ljava/lang/String;)V
 
-    .line 1431
+    .line 1474
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #calls: Landroid/widget/ActivityChooserModel;->loadActivitiesLocked()V
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1500(Landroid/widget/ActivityChooserModel;)V
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1600(Landroid/widget/ActivityChooserModel;)V
 
-    .line 1432
+    .line 1475
     monitor-exit v1
 
-    .line 1433
+    .line 1476
     return-void
 
-    .line 1432
+    .line 1475
     :catchall_0
     move-exception v0
 
@@ -178,36 +178,36 @@
     .parameter "uid"
 
     .prologue
-    .line 1421
+    .line 1464
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #getter for: Landroid/widget/ActivityChooserModel;->mInstanceLock:Ljava/lang/Object;
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$800(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1100(Landroid/widget/ActivityChooserModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1422
+    .line 1465
     :try_start_0
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #calls: Landroid/widget/ActivityChooserModel;->pruneHistoricalRecordsForPackageLocked(Ljava/lang/String;)V
-    invoke-static {v0, p1}, Landroid/widget/ActivityChooserModel;->access$1600(Landroid/widget/ActivityChooserModel;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroid/widget/ActivityChooserModel;->access$1700(Landroid/widget/ActivityChooserModel;Ljava/lang/String;)V
 
-    .line 1423
+    .line 1466
     iget-object v0, p0, Landroid/widget/ActivityChooserModel$DataModelPackageMonitor;->this$0:Landroid/widget/ActivityChooserModel;
 
     #calls: Landroid/widget/ActivityChooserModel;->loadActivitiesLocked()V
-    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1500(Landroid/widget/ActivityChooserModel;)V
+    invoke-static {v0}, Landroid/widget/ActivityChooserModel;->access$1600(Landroid/widget/ActivityChooserModel;)V
 
-    .line 1424
+    .line 1467
     monitor-exit v1
 
-    .line 1425
+    .line 1468
     return-void
 
-    .line 1424
+    .line 1467
     :catchall_0
     move-exception v0
 

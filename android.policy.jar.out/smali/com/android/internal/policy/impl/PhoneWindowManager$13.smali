@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3370
+    .line 3375
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$13;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$13;->val$topNeedsPenButtonF:Z
@@ -46,31 +46,31 @@
     .locals 3
 
     .prologue
-    .line 3372
+    .line 3377
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 3373
+    .line 3378
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "android.intent.action.PEN_SHOW_SWBUTTON"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 3374
+    .line 3379
     const-string v1, "show"
 
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$13;->val$topNeedsPenButtonF:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3375
+    .line 3380
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$13;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 3376
+    .line 3381
     return-void
 .end method

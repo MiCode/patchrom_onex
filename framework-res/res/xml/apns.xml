@@ -98,10 +98,10 @@
     <apn carrier="Simyo MMS" apn="mms.be" user="mms" password="mms" mmsc="http://mmsc.be" mmsproxy="217.72.235.1" mmsport="8080" mcc="206" mnc="20" authtype="1" operator="Simyo" type="mms" />
     <apn carrier="Mobistar" apn="mworld.be" mcc="206" mnc="10" authtype="1" type="default,hipri" />
     <apn carrier="Mobistar MMS" apn="mms.be" mmsc="http://mmsc.mobistar.be" mmsproxy="212.65.63.143" mmsport="8080" mcc="206" mnc="10" authtype="1" type="mms" />
-    <apn carrier="TELENET Internet" apn="telenetwap.be" mcc="206" mnc="05" authtype="1" type="default,hipri" />
-    <apn carrier="TELENET MMS" apn="mms.be" mmsc="http://mmsc.mobistar.be" mmsproxy="212.65.63.143" mmsport="8080" mcc="206" mnc="05" authtype="1" type="mms" />
-    <apn carrier="TELENET Internet" apn="telenetwap.be" mcc="206" mnc="01" authtype="1" operator="Telenet Roaming Int." type="default,hipri" />
-    <apn carrier="TELENET MMS" apn="mms.be" mmsc="http://mmsc.mobistar.be" mmsproxy="212.65.63.143" mmsport="8080" mcc="206" mnc="01" authtype="1" operator="Telenet Roaming Int." type="mms" />
+    <apn carrier="TELENET Internet" apn="telenetwap.be" mcc="206" mnc="05" authtype="0" type="default,hipri" />
+    <apn carrier="TELENET MMS" apn="mms.be" mmsc="http://mmsc.telenet.be" mmsproxy="195.130.149.100" mmsport="80" mcc="206" mnc="05" authtype="0" type="mms" />
+    <apn carrier="TELENET Internet" apn="telenetwap.be" mcc="206" mnc="01" authtype="0" operator="Telenet Roaming Int." type="default,hipri" />
+    <apn carrier="TELENET MMS" apn="mms.be" mmsc="http://mmsc.telenet.be" mmsproxy="195.130.149.100" mmsport="80" mcc="206" mnc="01" authtype="0" operator="Telenet Roaming Int." type="mms" />
     <apn carrier="Tesco WAP" apn="tescomobile.liffeytelecom.com" proxy="10.1.11.19" port="8080" mcc="206" mnc="01" authtype="1" operator="Tesco Mobile" type="default,hipri" />
     <apn carrier="Tesco MMS GPRS" apn="tescomobile.liffeytelecom.com" mmsc="http://mmc1/servlets/mms" mmsproxy="10.1.11.19" mmsport="8080" mcc="206" mnc="01" authtype="1" operator="Tesco Mobile" type="mms" />
     <apn carrier="Px Internet" apn="internet.proximus.be" mcc="206" mnc="01" authtype="0" operator="Proximus" type="default,hipri" />
@@ -183,6 +183,8 @@
     <apn carrier="NRJWEB" apn="fnetnrj" mcc="208" mnc="10" operator="NRJ Mobile(SFR)" type="default,hipri" />
     <apn carrier="NRJMMS" apn="mmsnrj" mmsc="http://mmsnrj" mmsproxy="10.143.156.5" mmsport="8080" mmsprotocol="2.0" mcc="208" mnc="10" operator="NRJ Mobile(SFR)" type="mms" />
     <apn carrier="Internet NRJ" apn="internetnrj" mcc="208" mnc="10" operator="NRJ Mobile(SFR)" type="dun" />
+    <apn carrier="NRJWEB" apn="fnetnrj" mcc="208" mnc="26" type="default,hipri,dun" />
+    <apn carrier="NRJMMS" apn="mmsnrj" mmsc="http://mmsnrj" mmsproxy="10.143.156.5" mmsport="8080" mmsprotocol="2.0" mcc="208" mnc="26" type="mms" />
     <apn carrier="Internet Neuf" apn="internetneuf" mcc="208" mnc="10" operator="Neuf Cegetel" type="default,hipri" />
     <apn carrier="MMS Neuf" apn="mmsneuf" mmsc="http://mmsneuf" mmsproxy="10.143.156.1" mmsport="9201" mmsprotocol="1.2" mcc="208" mnc="10" operator="Neuf Cegetel" type="mms" />
     <apn carrier="WAP Neuf" apn="wapneuf" proxy="192.168.21.1" port="9201" mcc="208" mnc="10" operator="Neuf Cegetel" type="default,hipri" />
@@ -218,8 +220,8 @@
     <apn carrier="Simplicime WAP" apn="wapdebitel" proxy="192.168.21.3" port="8080" mcc="208" mnc="10" operator="Simplicime" type="default,hipri" />
     <apn carrier="wap12" apn="wap12" proxy="192.168.21.15" port="8080" mcc="208" mnc="10" operator="LTI telecom" type="default,hipri" />
     <apn carrier="mms12" apn="mms12" mmsc="http://mms12" mmsproxy="10.143.156.15" mmsport="8080" mmsprotocol="2.0" mcc="208" mnc="10" operator="LTI telecom" type="mms" />
-    <apn carrier="Free Internet" apn="free" mcc="208" mnc="15" type="default,hipri" />
-    <apn carrier="Free MMS" apn="mmsfree" mmsc="http://mms.free.fr" mmsproxy="10.0.0.10" mmsport="8080" mcc="208" mnc="15" type="mms" />
+    <apn carrier="Free" apn="free" mcc="208" mnc="15" type="default,hipri" />
+    <apn carrier="Free MMS" apn="mmsfree" mmsc="http://mms.free.fr" mcc="208" mnc="15" type="mms" />
     <apn carrier="Auchan WAP" apn="wap65" proxy="192.168.21.8" port="8080" mcc="208" mnc="11" operator="Auchan" type="default,hipri" />
     <apn carrier="MMS Auchan" apn="mms65" mmsc="http://mms65" mmsproxy="10.143.156.8" mmsport="8080" mmsprotocol="2.0" mcc="208" mnc="11" operator="Auchan" type="mms" />
     <apn carrier="Coriolis MMS" apn="mmscoriolis" mmsc="http://mmscoriolis" mmsproxy="10.143.156.6" mmsport="8080" mmsprotocol="2.0" mcc="208" mnc="11" operator="Coriolis" type="mms" />
@@ -365,7 +367,6 @@
     <apn carrier="Tele2 Internet" apn="internet.tele2.hr" mcc="219" mnc="02" authtype="0" type="default,hipri" />
     <apn carrier="Tele2 MMS" apn="mms.tele2.hr" mmsc="http://mmsc.tele2.hr" mmsproxy="193.12.40.66" mmsport="8080" mcc="219" mnc="02" authtype="0" type="mms" />
     <apn carrier="web’n’walk" apn="web.htgprs" mcc="219" mnc="01" authtype="1" type="default,hipri" />
-    <apn carrier="TM HR WAP" apn="www.htgprs.hr" proxy="10.12.0.3" port="8080" mcc="219" mnc="01" authtype="1" type="default,hipri" />
     <apn carrier="TM HR MMS" apn="mms.htgprs" mmsc="http://mms.t-mobile.hr/servlets/mms" mmsproxy="10.12.0.4" mmsport="8080" mcc="219" mnc="01" authtype="1" type="mms" />
     <apn carrier="Mobtel Internet" apn="internet" user="mobtel" password="gprs" mcc="220" mnc="01" operator="Mobtel" type="default,hipri" />
     <apn carrier="Mobtel WAP" apn="internet" proxy="217.65.192.33" port="8080" user="mobtel" password="gprs" mcc="220" mnc="01" operator="Mobtel" type="default,hipri" />
@@ -460,7 +461,7 @@
     <apn carrier="MMS" apn="mms" user="mms" password="mms" mmsc="http://mms" mmsproxy="10.11.10.111" mmsport="80" mmsprotocol="2.0" mcc="230" mnc="03" authtype="0" type="mms" />
     <apn carrier="O2 Internet" apn="o2internet" mcc="231" mnc="06" type="default,hipri" />
     <apn carrier="O2 MMS" apn="o2mms" mmsc="http://mms.o2world.sk:8002" mmsproxy="10.97.1.11" mmsport="8080" mcc="231" mnc="06" type="mms" />
-    <apn carrier="Orange WAP" apn="orangewap" proxy="213.151.208.156" port="8799" user="wap" password="wap" mcc="231" mnc="01" type="default,hipri" />
+    <apn carrier="Orange WAP" apn="orangewap" proxy="213.151.208.156" port="8799" user="wap" password="wap" mcc="231" mnc="01" authtype="1" type="default,hipri" />
     <apn carrier="Orange Internet" apn="internet" mcc="231" mnc="01" authtype="1" type="default,hipri" />
     <apn carrier="Orange MMS" apn="mms" user="wap" password="wap" mmsc="http://imms.orange.sk" mmsproxy="213.151.208.145" mmsport="8799" mmsprotocol="2.0" mcc="231" mnc="01" type="mms" />
     <apn carrier="T-Mobile MMS" apn="mms" user="mms" password="mms" mmsc="http://mms" mmsproxy="192.168.1.1" mmsport="8080" mcc="231" mnc="02" type="mms" />
@@ -482,17 +483,14 @@
     <apn carrier="MMS" apn="internet.tele2.at" mmsc="https://mmsc.tele2.at" mmsproxy="193.12.40.59" mmsport="8080" mmsprotocol="2.0" mcc="232" mnc="01" operator="Champion" type="mms" />
     <apn carrier="MMS" apn="free.A1.net" user="ppp@A1plus.at" password="ppp" mmsc="http://mmsc.A1.net" mmsproxy="194.48.124.85" mmsport="8001" mmsprotocol="2.0" mcc="232" mnc="01" operator="Red Bull MOBILE" type="mms" />
     <apn carrier="WAP" apn="A1.net" proxy="194.48.124.85" port="8001" user="ppp@A1plus.at" password="ppp" mcc="232" mnc="01" operator="Red Bull MOBILE" type="default,hipri" />
-    <apn carrier="giffgaff MMS" apn="giffgaff.com" user="giffgaff" password="password" mmsc="http://mmsc.mediamessaging.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="02" operator="giffgaff" type="mms" />
-    <apn carrier="giffgaff GPRS" apn="giffgaff.com" proxy="193.113.200.195" port="8080" user="giffgaff" password="password" mcc="234" mnc="02" operator="giffgaff" type="default,hipri" />
+    <apn carrier="giffgaff" apn="giffgaff.com" user="giffgaff" password="password" mmsc="http://mmsc.mediamessaging.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="02" operator="giffgaff" type="*" />
     <apn carrier="Tesco MMS" apn="prepay.tesco-mobile.com" user="tescowap" password="password" mmsc="http://mmsc.mms.o2.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="02" operator="Tesco Mobile" type="mms" />
     <apn carrier="Tesco Mobile" apn="prepay.tesco-mobile.com" proxy="193.113.200.195" port="8080" user="tescowap" password="password" mcc="234" mnc="02" operator="Tesco Mobile" type="default,hipri" />
     <apn carrier="Cable&amp;Wireless Worldwide" apn="cww-mobile" mcc="234" mnc="07" type="default,hipri" />
-    <apn carrier="giffgaff MMS" apn="giffgaff.com" user="giffgaff" password="password" mmsc="http://mmsc.mediamessaging.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="10" operator="giffgaff" type="mms" />
-    <apn carrier="giffgaff GPRS" apn="giffgaff.com" proxy="193.113.200.195" port="8080" user="giffgaff" password="password" mcc="234" mnc="10" operator="giffgaff" type="default,hipri" />
+    <apn carrier="giffgaff" apn="giffgaff.com" user="giffgaff" password="password" mmsc="http://mmsc.mediamessaging.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="10" operator="giffgaff" type="*" />
     <apn carrier="Tesco WAP GPRS" apn="prepay.tesco-mobile.com" proxy="193.113.200.195" port="8080" user="tescowap" password="password" mcc="234" mnc="10" operator="Tesco Mobile" type="default,hipri" />
     <apn carrier="Tesco MMS" apn="prepay.tesco-mobile.com" user="tescowap" password="password" mmsc="http://mmsc.mms.o2.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mcc="234" mnc="10" operator="Tesco Mobile" type="mms" />
-    <apn carrier="giffgaff MMS" apn="giffgaff.com" user="giffgaff" password="password" mmsc="http://mmsc.mediamessaging.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="11" operator="giffgaff" type="mms" />
-    <apn carrier="giffgaff GPRS" apn="giffgaff.com" proxy="193.113.200.195" port="8080" user="giffgaff" password="password" mcc="234" mnc="11" operator="giffgaff" type="default,hipri" />
+    <apn carrier="giffgaff" apn="giffgaff.com" user="giffgaff" password="password" mmsc="http://mmsc.mediamessaging.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="11" operator="giffgaff" type="*" />
     <apn carrier="Tesco MMS" apn="prepay.tesco-mobile.com" user="tescowap" password="password" mmsc="http://mmsc.mms.o2.co.uk:8002" mmsproxy="193.113.200.195" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="11" operator="Tesco Mobile" type="mms" />
     <apn carrier="Tesco Mobile" apn="prepay.tesco-mobile.com" proxy="193.113.200.195" port="8080" user="tescowap" password="password" mcc="234" mnc="11" operator="Tesco Mobile" type="default,hipri" />
     <apn carrier="Lebara WAP" apn="uk.lebara.mobi" proxy="212.183.137.12" port="8799" user="wap" mcc="234" mnc="15" operator="Lebara" type="default,hipri" />
@@ -504,7 +502,7 @@
     <apn carrier="Yes Telecom Internet" apn="data.uk" mcc="234" mnc="15" operator="Yes Telecom" type="default,hipri" />
     <apn carrier="Yes Telecom WAP" apn="data.uk" proxy="149.254.201.132" port="8080" mcc="234" mnc="15" operator="Yes Telecom" type="default,hipri" />
     <apn carrier="Yes Telecom MMS" apn="data.uk" mmsc="http://mmsc.t-mobile.co.uk:8002" mmsproxy="149.254.201.135" mmsport="8080" mmsprotocol="2.0" mcc="234" mnc="15" operator="Yes Telecom" type="mms" />
-    <apn carrier="Orange Internet" apn="orangeinternet" mcc="234" mnc="33" authtype="2" type="default,hipri" state="readonly" />
+    <apn carrier="Orange Internet" apn="orangeinternet" mcc="234" mnc="33" authtype="0" type="default,hipri" state="readonly" />
     <apn carrier="Orange MMS" apn="orangemms" mmsc="http://mms.orange.co.uk/" mmsproxy="192.168.224.10" mmsport="8080" mcc="234" mnc="33" authtype="0" type="mms" state="readonly" />
     <apn carrier="Consumer Broadband" apn="consumerbroadband" mcc="234" mnc="33" authtype="0" type="dun" state="readonly" />
     <apn carrier="3" apn="three.co.uk" mmsc="http://mms.um.three.co.uk:10021/mmsc" mmsproxy="mms.three.co.uk" mmsport="8799" mcc="234" mnc="20" type="*" />
@@ -555,7 +553,7 @@
     <apn carrier="3" apn="data.tre.dk" mmsc="http://mms.3.dk/" mmsproxy="mmsproxy.3.dk" mmsport="8799" mcc="238" mnc="06" operator="3" type="*" />
     <apn carrier="TDC" apn="internet" mcc="238" mnc="01" operator="TDC DK" type="default,hipri" />
     <apn carrier="TDC MMS" apn="mms" mmsc="http://mmsc.tdc.dk:8002" mmsproxy="194.182.251.15" mmsport="8080" mcc="238" mnc="01" operator="TDC DK" type="mms" />
-    <apn carrier="Telmore WAP" apn="wap" proxy="194.182.251.15" port="8080" mcc="238" mnc="01" operator="Telmore" type="default,hipri" />
+    <apn carrier="Telmore Internet" apn="internet" mcc="238" mnc="01" operator="Telmore" type="default,hipri" />
     <apn carrier="Telmore MMS" apn="mms" mmsc="http://192.168.241.114:8002" mmsproxy="194.182.251.15" mmsport="8080" mcc="238" mnc="01" operator="Telmore" type="mms" />
     <apn carrier="Telenor Internet" apn="internet" mcc="238" mnc="02" authtype="2" operator="Telenor" type="default,hipri" />
     <apn carrier="Telenor MMS" apn="telenor" mmsc="http://mms.telenor.dk" mmsproxy="212.88.64.8" mmsport="8080" mcc="238" mnc="02" authtype="2" operator="Telenor" type="mms" />
@@ -2584,14 +2582,8 @@
     <apn carrier="du mms" apn="du" mmsc="http://mms.du.ae" mmsproxy="10.19.18.4" mmsport="8080" mcc="424" mnc="03" type="mms" />
     <apn carrier="Cellcom Internet" apn="sphone" mcc="425" mnc="02" authtype="1" type="default,hipri" />
     <apn carrier="Cellcom MMS" apn="mms" mmsc="http://mms.cellcom.co.il" mmsproxy="vwapm2.ain.co.il" mmsport="8080" mcc="425" mnc="02" authtype="1" type="mms" />
-    <apn carrier="Internet 3G" apn="uinternet" mcc="425" mnc="01" operator="Orange(3G)" type="default,hipri" />
-    <apn carrier="3G Portal" apn="uwap.orange.co.il" proxy="192.118.11.56" port="8080" user="orange" password="mobile54" mmsc="http://192.168.220.15/servlets/mms" mmsproxy="192.118.11.55" mmsport="9201" mmsprotocol="1.2" mcc="425" mnc="01" operator="Orange(3G)" type="mms" />
-    <apn carrier="Internet Services" apn="internet" mcc="425" mnc="01" operator="Orange(2G)" type="default,hipri" />
-    <apn carrier="Orange Services" apn="wap.orange.co.il" proxy="192.118.11.55" port="8080" user="orange" password="mobile54" mmsc="http://192.168.220.15/servlets/mms" mmsproxy="192.118.11.55" mmsport="9201" mmsprotocol="1.2" mcc="425" mnc="01" operator="Orange(2G)" type="mms" />
-    <apn carrier="Internet 3G" apn="uinternet" mcc="425" mnc="10" operator="Orange(3G)" type="default,hipri" />
-    <apn carrier="3G Portal" apn="uwap.orange.co.il" proxy="192.118.11.56" port="8080" user="orange" password="mobile54" mmsc="http://192.168.220.15/servlets/mms" mmsproxy="192.118.11.55" mmsport="9201" mmsprotocol="1.2" mcc="425" mnc="10" operator="Orange(3G)" type="mms" />
-    <apn carrier="Internet Services" apn="internet" mcc="425" mnc="10" operator="Orange(3G)" type="default,hipri" />
-    <apn carrier="Orange Services" apn="wap.orange.co.il" proxy="192.118.11.55" port="8080" user="orange" password="mobile54" mmsc="http://192.168.220.15/servlets/mms" mmsproxy="192.118.11.55" mmsport="9201" mmsprotocol="1.2" mcc="425" mnc="10" operator="Orange(2G)" type="mms" />
+    <apn carrier="3G Portal" apn="uwap.orange.co.il" mmsc="http://192.168.220.15/servlets/mms" mcc="425" mnc="01" authtype="2" type="default,hipri,mms" />
+    <apn carrier="DUN" apn="modem.orange.net.il" mcc="425" mnc="01" type="dun" />
     <apn carrier="Sphone pelephone" apn="sphone.pelephone.net.il" user="pcl@3g" password="pcl" mcc="425" mnc="03" type="default,hipri" />
     <apn carrier="Multimedia Pelephone" apn="mms.pelephone.net.il" user="pcl@3g" password="pcl" mmsc="http://mmsu.pelephone.net.il" mmsproxy="10.170.252.104" mmsport="9093" mmsprotocol="2.0" mcc="425" mnc="03" type="mms" />
     <apn carrier="Jawwal Internet" apn="internet" mcc="425" mnc="05" type="default,hipri" />
@@ -2845,9 +2837,9 @@
     <apn carrier="SOUL MMS" apn="mms" mmsc="http://mmsc.optus.com.au:8002/" mmsproxy="61.88.190.10" mmsport="8070" mmsprotocol="2.0" mcc="505" mnc="90" operator="Soul" type="mms" />
     <apn carrier="Telstra Internet" apn="telstra.iph" mcc="505" mnc="01" operator="Telstra" type="default,hipri" />
     <apn carrier="Telstra MMS" apn="telstra.mms" mmsc="http://mmsc.telstra.com:8002" mmsproxy="10.1.1.180" mmsport="80" mcc="505" mnc="01" operator="Telstra" type="mms" />
-    <apn carrier="VF Live" apn="live.vodafone.com" mmsc="http://pxt.vodafone.net.au/pxtsend" mmsproxy="10.202.2.60" mmsport="8080" mcc="505" mnc="03" type="*" state="readonly" gid1="" />
-    <apn carrier="Crazy Internet" apn="purtona.wap" mmsc="http://purtona.mms/mmssend" mmsproxy="10.202.2.20" mmsport="8080" mcc="505" mnc="03" type="default,hipri,mms" state="readonly" gid1="04" />
-    <apn carrier="Crazy Broadband" apn="purtona.net" mcc="505" mnc="03" type="dun" state="readonly" gid1="04" />
+    <apn carrier="VF Live" apn="live.vodafone.com" mmsc="http://pxt.vodafone.net.au/pxtsend" mmsproxy="10.202.2.60" mmsport="8080" mcc="505" mnc="03" operator="VF" type="*" state="readonly" />
+    <apn carrier="Crazy Internet" apn="purtona.wap" mmsc="http://purtona.mms/mmssend" mmsproxy="10.202.2.20" mmsport="8080" mcc="505" mnc="03" operator="Crazy John's" type="default,hipri,mms" state="readonly" />
+    <apn carrier="Crazy Broadband" apn="purtona.net" mcc="505" mnc="03" operator="Crazy John's" type="dun" state="readonly" />
     <apn carrier="AAPT GPRS" apn="vfinternet.au" mcc="505" mnc="03" operator="AAPT" type="default,hipri" />
     <apn carrier="AAPT MMS" apn="live.vodafone.com" mmsc="http://pxt.vodafone.net.au/pxtsend" mmsproxy="10.202.2.60" mmsport="8080" mmsprotocol="2.0" mcc="505" mnc="03" operator="AAPT" type="mms" />
     <apn carrier="AAPT WAP GPRS" apn="live.vodafone.com" proxy="10.202.2.60" port="8080" mcc="505" mnc="03" operator="AAPT" type="default,hipri" />
@@ -2913,6 +2905,9 @@
     <apn carrier="AXISinternet" apn="AXIS" user="axis" password="123456" mcc="510" mnc="08" type="default,hipri" />
     <apn carrier="AXISwap" apn="AXIS" proxy="10.8.3.8" port="8080" user="axis" password="123456" mcc="510" mnc="08" type="httpproxy" />
     <apn carrier="AXISmms" apn="AXISmms" user="axis" password="123456" mmsc="http://mmsc.AXIS" mmsproxy="10.8.3.8" mmsport="8080" mcc="510" mnc="08" type="mms" />
+    <apn carrier="SmartFren" apn="SmartFren" mmsc="http://10.17.93.103:8080" mmsproxy="10.17.27.250" mmsport="8080" mcc="510" mnc="09" authtype="3" type="*" />
+    <apn carrier="SmartFren" apn="SmartFren" mmsc="http://10.17.93.103:8080" mmsproxy="10.17.27.250" mmsport="8080" mcc="510" mnc="28" authtype="3" type="*" />
+    <apn carrier="ESIA" apn="ESIA" proxy="10.177.7.7" port="8088" user="esia" password="esia" mcc="510" mnc="99" authtype="3" type="default,hipri" />
     <apn carrier="3 GPRS" apn="3gprs" user="3gprs" password="3gprs" mcc="510" mnc="89" type="default,hipri" />
     <apn carrier="3 MMS" apn="3mms" user="3mms" password="3mms" mmsc="http://mms.three.co.id" mmsproxy="10.4.0.10" mmsport="3218" mmsprotocol="1.2" mcc="510" mnc="89" type="mms" />
     <apn carrier="myGlobe Internet" apn="internet.globe.com.ph" mcc="515" mnc="02" type="default,hipri" />

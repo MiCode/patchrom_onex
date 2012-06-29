@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4098
+    .line 4103
     iput-object p1, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,30 +38,6 @@
 
 # virtual methods
 .method public handleKey(Landroid/view/KeyEvent;Landroid/view/InputQueue$FinishedCallback;)V
-    .locals 2
-    .parameter "event"
-    .parameter "finishedCallback"
-
-    .prologue
-    .line 4100
-    iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
-
-    #calls: Landroid/view/ViewRootImpl;->startInputEvent(Landroid/view/InputQueue$FinishedCallback;)V
-    invoke-static {v0, p2}, Landroid/view/ViewRootImpl;->access$100(Landroid/view/ViewRootImpl;Landroid/view/InputQueue$FinishedCallback;)V
-
-    .line 4101
-    iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
-
-    const/4 v1, 0x1
-
-    #calls: Landroid/view/ViewRootImpl;->dispatchKey(Landroid/view/KeyEvent;Z)V
-    invoke-static {v0, p1, v1}, Landroid/view/ViewRootImpl;->access$200(Landroid/view/ViewRootImpl;Landroid/view/KeyEvent;Z)V
-
-    .line 4102
-    return-void
-.end method
-
-.method public handleMotion(Landroid/view/MotionEvent;Landroid/view/InputQueue$FinishedCallback;)V
     .locals 2
     .parameter "event"
     .parameter "finishedCallback"
@@ -78,9 +54,33 @@
 
     const/4 v1, 0x1
 
+    #calls: Landroid/view/ViewRootImpl;->dispatchKey(Landroid/view/KeyEvent;Z)V
+    invoke-static {v0, p1, v1}, Landroid/view/ViewRootImpl;->access$200(Landroid/view/ViewRootImpl;Landroid/view/KeyEvent;Z)V
+
+    .line 4107
+    return-void
+.end method
+
+.method public handleMotion(Landroid/view/MotionEvent;Landroid/view/InputQueue$FinishedCallback;)V
+    .locals 2
+    .parameter "event"
+    .parameter "finishedCallback"
+
+    .prologue
+    .line 4110
+    iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
+
+    #calls: Landroid/view/ViewRootImpl;->startInputEvent(Landroid/view/InputQueue$FinishedCallback;)V
+    invoke-static {v0, p2}, Landroid/view/ViewRootImpl;->access$100(Landroid/view/ViewRootImpl;Landroid/view/InputQueue$FinishedCallback;)V
+
+    .line 4111
+    iget-object v0, p0, Landroid/view/ViewRootImpl$2;->this$0:Landroid/view/ViewRootImpl;
+
+    const/4 v1, 0x1
+
     #calls: Landroid/view/ViewRootImpl;->dispatchMotion(Landroid/view/MotionEvent;Z)V
     invoke-static {v0, p1, v1}, Landroid/view/ViewRootImpl;->access$300(Landroid/view/ViewRootImpl;Landroid/view/MotionEvent;Z)V
 
-    .line 4107
+    .line 4112
     return-void
 .end method

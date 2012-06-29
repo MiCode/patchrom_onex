@@ -52,36 +52,36 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 366
+    .line 367
     iput-object p1, p0, Landroid/widget/TextView$InputMethodState;->this$0:Landroid/widget/TextView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 367
+    .line 368
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/widget/TextView$InputMethodState;->mCursorRectInWindow:Landroid/graphics/Rect;
 
-    .line 368
+    .line 369
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Landroid/widget/TextView$InputMethodState;->mTmpRectF:Landroid/graphics/RectF;
 
-    .line 369
+    .line 370
     new-array v0, v1, [F
 
     iput-object v0, p0, Landroid/widget/TextView$InputMethodState;->mTmpOffset:[F
 
-    .line 370
+    .line 371
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/widget/TextView$InputMethodState;->mOnScreenOffset:[I
 
-    .line 372
+    .line 373
     new-instance v0, Landroid/view/inputmethod/ExtractedText;
 
     invoke-direct {v0}, Landroid/view/inputmethod/ExtractedText;-><init>()V

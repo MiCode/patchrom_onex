@@ -48,7 +48,7 @@
     .parameter
 
     .prologue
-    .line 8355
+    .line 8365
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$13;->val$report:Ljava/lang/String;
@@ -78,25 +78,25 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 8358
+    .line 8368
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->val$report:Ljava/lang/String;
 
     if-eqz v8, :cond_0
 
-    .line 8359
+    .line 8369
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->val$sb:Ljava/lang/StringBuilder;
 
     iget-object v9, p0, Lcom/android/server/am/ActivityManagerService$13;->val$report:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8361
+    .line 8371
     :cond_0
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->val$logFile:Ljava/io/File;
 
     if-eqz v8, :cond_1
 
-    .line 8363
+    .line 8373
     :try_start_0
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->val$sb:Ljava/lang/StringBuilder;
 
@@ -114,7 +114,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 8368
+    .line 8378
     :cond_1
     :goto_0
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->val$crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
@@ -127,7 +127,7 @@
 
     if-eqz v8, :cond_2
 
-    .line 8369
+    .line 8379
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->val$sb:Ljava/lang/StringBuilder;
 
     iget-object v9, p0, Lcom/android/server/am/ActivityManagerService$13;->val$crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
@@ -136,7 +136,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8372
+    .line 8382
     :cond_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -158,7 +158,7 @@
 
     move-result-object v7
 
-    .line 8373
+    .line 8383
     .local v7, setting:Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -172,21 +172,21 @@
 
     move-result v4
 
-    .line 8374
+    .line 8384
     .local v4, lines:I
     if-lez v4, :cond_3
 
-    .line 8375
+    .line 8385
     iget-object v8, p0, Lcom/android/server/am/ActivityManagerService$13;->val$sb:Ljava/lang/StringBuilder;
 
     const-string v9, "\n"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8378
+    .line 8388
     const/4 v2, 0x0
 
-    .line 8380
+    .line 8390
     .local v2, input:Ljava/io/InputStreamReader;
     :try_start_1
     new-instance v8, Ljava/lang/ProcessBuilder;
@@ -278,7 +278,7 @@
 
     move-result-object v5
 
-    .line 8384
+    .line 8394
     .local v5, logcat:Ljava/lang/Process;
     :try_start_2
     invoke-virtual {v5}, Ljava/lang/Process;->getOutputStream()Ljava/io/OutputStream;
@@ -290,7 +290,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_6
 
-    .line 8385
+    .line 8395
     :goto_1
     :try_start_3
     invoke-virtual {v5}, Ljava/lang/Process;->getErrorStream()Ljava/io/InputStream;
@@ -302,7 +302,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_5
 
-    .line 8386
+    .line 8396
     :goto_2
     :try_start_4
     new-instance v3, Ljava/io/InputStreamReader;
@@ -316,7 +316,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 8389
+    .line 8399
     .end local v2           #input:Ljava/io/InputStreamReader;
     .local v3, input:Ljava/io/InputStreamReader;
     const/16 v8, 0x2000
@@ -324,7 +324,7 @@
     :try_start_5
     new-array v0, v8, [C
 
-    .line 8390
+    .line 8400
     .local v0, buf:[C
     :goto_3
     invoke-virtual {v3, v0}, Ljava/io/InputStreamReader;->read([C)I
@@ -345,7 +345,7 @@
 
     goto :goto_3
 
-    .line 8391
+    .line 8401
     .end local v0           #buf:[C
     .end local v6           #num:I
     :catch_0
@@ -353,7 +353,7 @@
 
     move-object v2, v3
 
-    .line 8392
+    .line 8402
     .end local v3           #input:Ljava/io/InputStreamReader;
     .end local v5           #logcat:Ljava/lang/Process;
     .local v1, e:Ljava/io/IOException;
@@ -368,7 +368,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 8394
+    .line 8404
     if-eqz v2, :cond_3
 
     :try_start_7
@@ -376,7 +376,7 @@
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
 
-    .line 8398
+    .line 8408
     .end local v1           #e:Ljava/io/IOException;
     .end local v2           #input:Ljava/io/InputStreamReader;
     :cond_3
@@ -395,16 +395,16 @@
 
     invoke-virtual {v8, v9, v10, v11}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 8399
+    .line 8409
     return-void
 
-    .line 8364
+    .line 8374
     .end local v4           #lines:I
     .end local v7           #setting:Ljava/lang/String;
     :catch_1
     move-exception v1
 
-    .line 8365
+    .line 8375
     .restart local v1       #e:Ljava/io/IOException;
     const-string v8, "ActivityManager"
 
@@ -432,7 +432,7 @@
 
     goto/16 :goto_0
 
-    .line 8394
+    .line 8404
     .end local v1           #e:Ljava/io/IOException;
     .restart local v2       #input:Ljava/io/InputStreamReader;
     .restart local v4       #lines:I
@@ -488,21 +488,21 @@
     .restart local v2       #input:Ljava/io/InputStreamReader;
     goto :goto_6
 
-    .line 8391
+    .line 8401
     .end local v5           #logcat:Ljava/lang/Process;
     :catch_4
     move-exception v1
 
     goto :goto_4
 
-    .line 8385
+    .line 8395
     .restart local v5       #logcat:Ljava/lang/Process;
     :catch_5
     move-exception v8
 
     goto :goto_2
 
-    .line 8384
+    .line 8394
     :catch_6
     move-exception v8
 

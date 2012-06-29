@@ -214,6 +214,8 @@
 
 .field static final TRANSACTION_showKeyguardWithAnimation:I = 0x59
 
+.field static final TRANSACTION_showMessageHandleViolation:I = 0x6b
+
 .field static final TRANSACTION_showStrictModeViolation:I = 0x44
 
 .field static final TRANSACTION_startAppFreezingScreen:I = 0x21
@@ -328,7 +330,7 @@
     .line 44
     sparse-switch p1, :sswitch_data_0
 
-    .line 1197
+    .line 1206
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -4589,9 +4591,44 @@
 
     goto/16 :goto_0
 
-    .line 44
-    nop
+    .line 1198
+    :sswitch_6b
+    const-string v1, "android.view.IWindowManager"
 
+    move-object/from16 v0, p2
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 1200
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    if-eqz v1, :cond_3a
+
+    const/4 v2, 0x1
+
+    .line 1201
+    .local v2, _arg0:Z
+    :goto_3b
+    invoke-virtual {p0, v2}, Landroid/view/IWindowManager$Stub;->showMessageHandleViolation(Z)V
+
+    .line 1202
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 1203
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 1200
+    .end local v2           #_arg0:Z
+    :cond_3a
+    const/4 v2, 0x0
+
+    goto :goto_3b
+
+    .line 44
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -4700,6 +4737,7 @@
         0x68 -> :sswitch_68
         0x69 -> :sswitch_69
         0x6a -> :sswitch_6a
+        0x6b -> :sswitch_6b
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

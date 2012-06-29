@@ -58,6 +58,8 @@
 
 .field static final TRANSACTION_isBluetoothScoOn:I = 0x1a
 
+.field static final TRANSACTION_isDongleConnected:I = 0x37
+
 .field static final TRANSACTION_isFMActive:I = 0x34
 
 .field static final TRANSACTION_isSpeakerphoneOn:I = 0x18
@@ -228,7 +230,7 @@
     .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 604
+    .line 612
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v8
@@ -1860,6 +1862,32 @@
 
     goto/16 :goto_0
 
+    .line 605
+    .end local v1           #_arg0:I
+    :sswitch_37
+    const-string v0, "android.media.IAudioService"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 606
+    invoke-virtual {p0}, Landroid/media/IAudioService$Stub;->isDongleConnected()Z
+
+    move-result v7
+
+    .line 607
+    .local v7, _result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 608
+    if-eqz v7, :cond_17
+
+    move v2, v8
+
+    :cond_17
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
     .line 41
     :sswitch_data_0
     .sparse-switch
@@ -1917,6 +1945,7 @@
         0x34 -> :sswitch_34
         0x35 -> :sswitch_35
         0x36 -> :sswitch_36
+        0x37 -> :sswitch_37
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

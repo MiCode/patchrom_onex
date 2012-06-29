@@ -5976,7 +5976,7 @@
 
     goto :goto_2
 
-    .line 2226
+    .line 2235
     .end local v4           #i$:Ljava/util/Iterator;
     .end local v7           #s:Ljava/lang/String;
     :cond_16
@@ -5988,12 +5988,12 @@
 
     if-lez v9, :cond_0
 
-    .line 2227
+    .line 2236
     const-string v9, "    grantedPermissions:"
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2228
+    .line 2237
     iget-object v9, v6, Lcom/android/server/pm/GrantedPermissions;->grantedPermissions:Ljava/util/HashSet;
 
     invoke-virtual {v9}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -6014,7 +6014,7 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 2229
+    .line 2238
     .restart local v7       #s:Ljava/lang/String;
     const-string v9, "      "
 
@@ -6024,14 +6024,14 @@
 
     goto :goto_3
 
-    .line 2234
+    .line 2243
     .end local v4           #i$:Ljava/util/Iterator;
     .end local v6           #ps:Lcom/android/server/pm/PackageSetting;
     .end local v7           #s:Ljava/lang/String;
     :cond_17
     const/4 v5, 0x0
 
-    .line 2235
+    .line 2244
     iget-object v9, p0, Lcom/android/server/pm/Settings;->mRenamedPackages:Ljava/util/HashMap;
 
     invoke-virtual {v9}, Ljava/util/HashMap;->size()I
@@ -6040,7 +6040,7 @@
 
     if-lez v9, :cond_1c
 
-    .line 2236
+    .line 2245
     iget-object v9, p0, Lcom/android/server/pm/Settings;->mRenamedPackages:Ljava/util/HashMap;
 
     invoke-virtual {v9}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -6066,7 +6066,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 2237
+    .line 2246
     .local v1, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p2, :cond_19
 
@@ -6090,38 +6090,38 @@
 
     if-eqz v9, :cond_18
 
-    .line 2241
+    .line 2250
     :cond_19
     if-nez v5, :cond_1b
 
-    .line 2242
+    .line 2251
     invoke-virtual {p3}, Lcom/android/server/pm/PackageManagerService$DumpState;->onTitlePrinted()Z
 
     move-result v9
 
     if-eqz v9, :cond_1a
 
-    .line 2243
+    .line 2252
     const-string v9, " "
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2244
+    .line 2253
     :cond_1a
     const-string v9, "Renamed packages:"
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2245
+    .line 2254
     const/4 v5, 0x1
 
-    .line 2247
+    .line 2256
     :cond_1b
     const-string v9, "  "
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2248
+    .line 2257
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v9
@@ -6130,12 +6130,12 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2249
+    .line 2258
     const-string v9, " -> "
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2250
+    .line 2259
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v9
@@ -6146,13 +6146,13 @@
 
     goto :goto_4
 
-    .line 2254
+    .line 2263
     .end local v1           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v3           #i$:Ljava/util/Iterator;
     :cond_1c
     const/4 v5, 0x0
 
-    .line 2255
+    .line 2264
     iget-object v9, p0, Lcom/android/server/pm/Settings;->mDisabledSysPackages:Ljava/util/HashMap;
 
     invoke-virtual {v9}, Ljava/util/HashMap;->size()I
@@ -6161,7 +6161,7 @@
 
     if-lez v9, :cond_23
 
-    .line 2256
+    .line 2265
     iget-object v9, p0, Lcom/android/server/pm/Settings;->mDisabledSysPackages:Ljava/util/HashMap;
 
     invoke-virtual {v9}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -6187,7 +6187,7 @@
 
     check-cast v6, Lcom/android/server/pm/PackageSetting;
 
-    .line 2257
+    .line 2266
     .restart local v6       #ps:Lcom/android/server/pm/PackageSetting;
     if-eqz p2, :cond_1e
 
@@ -6207,38 +6207,38 @@
 
     if-eqz v9, :cond_1d
 
-    .line 2261
+    .line 2270
     :cond_1e
     if-nez v5, :cond_20
 
-    .line 2262
+    .line 2271
     invoke-virtual {p3}, Lcom/android/server/pm/PackageManagerService$DumpState;->onTitlePrinted()Z
 
     move-result v9
 
     if-eqz v9, :cond_1f
 
-    .line 2263
+    .line 2272
     const-string v9, " "
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2264
+    .line 2273
     :cond_1f
     const-string v9, "Hidden system packages:"
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2265
+    .line 2274
     const/4 v5, 0x1
 
-    .line 2267
+    .line 2276
     :cond_20
     const-string v9, "  Package ["
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2268
+    .line 2277
     iget-object v9, v6, Lcom/android/server/pm/PackageSettingBase;->realName:Ljava/lang/String;
 
     if-eqz v9, :cond_22
@@ -6248,12 +6248,12 @@
     :goto_6
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2269
+    .line 2278
     const-string v9, "] ("
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2270
+    .line 2279
     invoke-static {v6}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v9
@@ -6264,76 +6264,76 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2271
+    .line 2280
     const-string v9, "):"
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2272
+    .line 2281
     iget-object v9, v6, Lcom/android/server/pm/PackageSettingBase;->realName:Ljava/lang/String;
 
     if-eqz v9, :cond_21
 
-    .line 2273
+    .line 2282
     const-string v9, "    compat name="
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2274
+    .line 2283
     iget-object v9, v6, Lcom/android/server/pm/PackageSettingBase;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2276
+    .line 2285
     :cond_21
     const-string v9, "    userId="
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2277
+    .line 2286
     iget v9, v6, Lcom/android/server/pm/PackageSetting;->userId:I
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 2278
+    .line 2287
     const-string v9, "    sharedUser="
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2279
+    .line 2288
     iget-object v9, v6, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 2280
+    .line 2289
     const-string v9, "    codePath="
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2281
+    .line 2290
     iget-object v9, v6, Lcom/android/server/pm/PackageSettingBase;->codePathString:Ljava/lang/String;
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2282
+    .line 2291
     const-string v9, "    resourcePath="
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2283
+    .line 2292
     iget-object v9, v6, Lcom/android/server/pm/PackageSettingBase;->resourcePathString:Ljava/lang/String;
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto/16 :goto_5
 
-    .line 2268
+    .line 2277
     :cond_22
     iget-object v9, v6, Lcom/android/server/pm/PackageSettingBase;->name:Ljava/lang/String;
 
     goto :goto_6
 
-    .line 2286
+    .line 2295
     .end local v3           #i$:Ljava/util/Iterator;
     .end local v6           #ps:Lcom/android/server/pm/PackageSetting;
     :cond_23
@@ -6347,10 +6347,10 @@
     .parameter "dumpState"
 
     .prologue
-    .line 2289
+    .line 2298
     const/4 v2, 0x0
 
-    .line 2290
+    .line 2299
     .local v2, printedSomething:Z
     iget-object v3, p0, Lcom/android/server/pm/Settings;->mPermissions:Ljava/util/HashMap;
 
@@ -6377,7 +6377,7 @@
 
     check-cast v1, Lcom/android/server/pm/BasePermission;
 
-    .line 2291
+    .line 2300
     .local v1, p:Lcom/android/server/pm/BasePermission;
     if-eqz p2, :cond_1
 
@@ -6389,32 +6389,32 @@
 
     if-eqz v3, :cond_0
 
-    .line 2294
+    .line 2303
     :cond_1
     if-nez v2, :cond_3
 
-    .line 2295
+    .line 2304
     invoke-virtual {p3}, Lcom/android/server/pm/PackageManagerService$DumpState;->onTitlePrinted()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 2296
+    .line 2305
     const-string v3, " "
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2297
+    .line 2306
     :cond_2
     const-string v3, "Permissions:"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2298
+    .line 2307
     const/4 v2, 0x1
 
-    .line 2300
+    .line 2309
     :cond_3
     const-string v3, "  Permission ["
 
@@ -6428,7 +6428,7 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2301
+    .line 2310
     invoke-static {v1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v3
@@ -6439,12 +6439,12 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2302
+    .line 2311
     const-string v3, "):"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2303
+    .line 2312
     const-string v3, "    sourcePackage="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6453,7 +6453,7 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2304
+    .line 2313
     const-string v3, "    uid="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6462,7 +6462,7 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 2305
+    .line 2314
     const-string v3, " gids="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6475,7 +6475,7 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2306
+    .line 2315
     const-string v3, " type="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6484,7 +6484,7 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 2307
+    .line 2316
     const-string v3, " prot="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6493,12 +6493,12 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 2308
+    .line 2317
     iget-object v3, v1, Lcom/android/server/pm/BasePermission;->packageSetting:Lcom/android/server/pm/PackageSettingBase;
 
     if-eqz v3, :cond_4
 
-    .line 2309
+    .line 2318
     const-string v3, "    packageSetting="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6507,13 +6507,13 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 2311
+    .line 2320
     :cond_4
     iget-object v3, v1, Lcom/android/server/pm/BasePermission;->perm:Landroid/content/pm/PackageParser$Permission;
 
     if-eqz v3, :cond_0
 
-    .line 2312
+    .line 2321
     const-string v3, "    perm="
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -6524,7 +6524,7 @@
 
     goto/16 :goto_0
 
-    .line 2315
+    .line 2324
     .end local v1           #p:Lcom/android/server/pm/BasePermission;
     :cond_5
     return-void
@@ -6536,12 +6536,12 @@
     .parameter "dumpState"
 
     .prologue
-    .line 2347
+    .line 2356
     const-string v0, "Settings parse messages:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2348
+    .line 2357
     iget-object v0, p0, Lcom/android/server/pm/Settings;->mReadMessages:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -6550,7 +6550,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2349
+    .line 2358
     return-void
 .end method
 
@@ -6561,10 +6561,10 @@
     .parameter "dumpState"
 
     .prologue
-    .line 2318
+    .line 2327
     const/4 v2, 0x0
 
-    .line 2319
+    .line 2328
     .local v2, printedSomething:Z
     iget-object v5, p0, Lcom/android/server/pm/Settings;->mSharedUsers:Ljava/util/HashMap;
 
@@ -6589,7 +6589,7 @@
 
     check-cast v4, Lcom/android/server/pm/SharedUserSetting;
 
-    .line 2320
+    .line 2329
     .local v4, su:Lcom/android/server/pm/SharedUserSetting;
     if-eqz p2, :cond_1
 
@@ -6599,48 +6599,48 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 2323
+    .line 2332
     :cond_1
     if-nez v2, :cond_3
 
-    .line 2324
+    .line 2333
     invoke-virtual {p3}, Lcom/android/server/pm/PackageManagerService$DumpState;->onTitlePrinted()Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 2325
+    .line 2334
     const-string v5, " "
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2326
+    .line 2335
     :cond_2
     const-string v5, "Shared users:"
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2327
+    .line 2336
     const/4 v2, 0x1
 
-    .line 2329
+    .line 2338
     :cond_3
     const-string v5, "  SharedUser ["
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2330
+    .line 2339
     iget-object v5, v4, Lcom/android/server/pm/SharedUserSetting;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2331
+    .line 2340
     const-string v5, "] ("
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2332
+    .line 2341
     invoke-static {v4}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v5
@@ -6651,27 +6651,27 @@
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2333
+    .line 2342
     const-string v5, "):"
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2334
+    .line 2343
     const-string v5, "    userId="
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2335
+    .line 2344
     iget v5, v4, Lcom/android/server/pm/SharedUserSetting;->userId:I
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 2336
+    .line 2345
     const-string v5, " gids="
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2337
+    .line 2346
     iget-object v5, v4, Lcom/android/server/pm/GrantedPermissions;->gids:[I
 
     invoke-static {v5}, Lcom/android/server/pm/PackageManagerService;->arrayToString([I)Ljava/lang/String;
@@ -6680,12 +6680,12 @@
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2338
+    .line 2347
     const-string v5, "    grantedPermissions:"
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2339
+    .line 2348
     iget-object v5, v4, Lcom/android/server/pm/GrantedPermissions;->grantedPermissions:Ljava/util/HashSet;
 
     invoke-virtual {v5}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -6706,18 +6706,18 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 2340
+    .line 2349
     .local v3, s:Ljava/lang/String;
     const-string v5, "      "
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2341
+    .line 2350
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2344
+    .line 2353
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v3           #s:Ljava/lang/String;
     .end local v4           #su:Lcom/android/server/pm/SharedUserSetting;

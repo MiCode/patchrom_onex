@@ -143,6 +143,14 @@
     .end annotation
 .end method
 
+.method public abstract isDongleConnected()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract isFMActive()Z
     .annotation system Ldalvik/annotation/Throws;
         value = {

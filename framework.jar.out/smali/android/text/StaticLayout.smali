@@ -94,16 +94,14 @@
     .locals 2
 
     .prologue
+    const/16 v1, 0x19
+
     .line 43
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
-
-    const/16 v1, 0x19
 
     if-eq v0, v1, :cond_0
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
-
-    const/16 v1, 0x38
 
     if-ne v0, v1, :cond_1
 

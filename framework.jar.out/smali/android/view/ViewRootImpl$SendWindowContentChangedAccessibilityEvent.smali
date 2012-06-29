@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 5390
+    .line 5395
     iput-object p1, p0, Landroid/view/ViewRootImpl$SendWindowContentChangedAccessibilityEvent;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "x1"
 
     .prologue
-    .line 5390
+    .line 5395
     invoke-direct {p0, p1}, Landroid/view/ViewRootImpl$SendWindowContentChangedAccessibilityEvent;-><init>(Landroid/view/ViewRootImpl;)V
 
     return-void
@@ -55,14 +55,14 @@
     .locals 2
 
     .prologue
-    .line 5394
+    .line 5399
     iget-object v0, p0, Landroid/view/ViewRootImpl$SendWindowContentChangedAccessibilityEvent;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 5395
+    .line 5400
     iget-object v0, p0, Landroid/view/ViewRootImpl$SendWindowContentChangedAccessibilityEvent;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
@@ -71,12 +71,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
-    .line 5396
+    .line 5401
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/view/ViewRootImpl$SendWindowContentChangedAccessibilityEvent;->mIsPending:Z
 
-    .line 5398
+    .line 5403
     :cond_0
     return-void
 .end method

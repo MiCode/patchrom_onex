@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 4676
+    .line 4696
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,13 +34,13 @@
     .locals 1
 
     .prologue
-    .line 4678
+    .line 4698
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ldalvik/system/VMRuntime;->enableGc()V
 
-    .line 4679
+    .line 4699
     return-void
 .end method

@@ -30,20 +30,20 @@
     .parameter "cb"
 
     .prologue
-    .line 2182
+    .line 2194
     iput-object p1, p0, Landroid/media/AudioService$BeatsDeathHandler;->this$0:Landroid/media/AudioService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2180
+    .line 2192
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/AudioService$BeatsDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 2183
+    .line 2195
     iput-object p2, p0, Landroid/media/AudioService$BeatsDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 2184
+    .line 2196
     return-void
 .end method
 
@@ -57,7 +57,7 @@
 
     const/4 v5, 0x0
 
-    .line 2188
+    .line 2200
     const-wide/16 v2, 0x1f4
 
     :try_start_0
@@ -65,7 +65,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2193
+    .line 2205
     :goto_0
     const-string v2, "AudioService"
 
@@ -95,26 +95,26 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2194
+    .line 2206
     invoke-static {v6, v5}, Landroid/media/AudioSystem;->isStreamActive(II)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 2195
+    .line 2207
     const-string v2, "AudioService"
 
     const-string v3, "beats setting trigger in binderDied"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2196
+    .line 2208
     iget-object v2, p0, Landroid/media/AudioService$BeatsDeathHandler;->this$0:Landroid/media/AudioService;
 
     invoke-virtual {v2, v5}, Landroid/media/AudioService;->triggerBeatsLogo(Z)V
 
-    .line 2199
+    .line 2211
     :cond_0
     iget-object v2, p0, Landroid/media/AudioService$BeatsDeathHandler;->this$0:Landroid/media/AudioService;
 
@@ -127,32 +127,32 @@
 
     move-result v1
 
-    .line 2200
+    .line 2212
     .local v1, index:I
     if-gez v1, :cond_1
 
-    .line 2201
+    .line 2213
     const-string v2, "AudioService"
 
     const-string/jumbo v3, "unregistered Beats Media Client died"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2207
+    .line 2219
     :goto_1
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/media/AudioService$BeatsDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 2208
+    .line 2220
     return-void
 
-    .line 2189
+    .line 2201
     .end local v1           #index:I
     :catch_0
     move-exception v0
 
-    .line 2190
+    .line 2202
     .local v0, e:Ljava/lang/InterruptedException;
     const-string v2, "AudioService"
 
@@ -162,7 +162,7 @@
 
     goto :goto_0
 
-    .line 2203
+    .line 2215
     .end local v0           #e:Ljava/lang/InterruptedException;
     .restart local v1       #index:I
     :cond_1
@@ -175,7 +175,7 @@
 
     invoke-virtual {v2, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2204
+    .line 2216
     const-string v2, "AudioService"
 
     const-string v3, "Remove dead Beats Media Client binder"
@@ -189,38 +189,38 @@
     .locals 2
 
     .prologue
-    .line 2211
+    .line 2223
     const-string v0, "AudioService"
 
     const-string v1, "Release Beats binder"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2212
+    .line 2224
     iget-object v0, p0, Landroid/media/AudioService$BeatsDeathHandler;->mCb:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 2213
+    .line 2225
     const-string v0, "AudioService"
 
     const-string v1, "Release Beats binder success"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2214
+    .line 2226
     iget-object v0, p0, Landroid/media/AudioService$BeatsDeathHandler;->mCb:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 2215
+    .line 2227
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/AudioService$BeatsDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 2217
+    .line 2229
     :cond_0
     return-void
 .end method

@@ -38,7 +38,7 @@
     <string name="forbidden_camera">"Доступ до камери заборонено адміністратором. Для отримання допомоги зв'яжіться з працівниками відділу ІТ."</string>
     <string name="on_screen_btn_effects">Ефекти</string>
     <string name="on_screen_btn_enhance_photo">Покращити</string>
-    <string name="on_screen_btn_trim_video">Обітнути</string>
+    <string name="on_screen_btn_trim_video">Обрізати</string>
     <string name="on_capital">@com.htc:string/st_on</string>
     <string name="time_2_seconds">2 секунди</string>
     <string name="time_3_seconds">3 секунди</string>
@@ -233,8 +233,8 @@
     <string name="mms_recording_limit_size">Максимальний розмір запису для MMS становить %s.</string>
     <string name="action_screen_confirm_delete_message">Справді видалити %ss?</string>
     <string name="action_screen_confirm_delete_message_burst">Справді видалити зняті фото?</string>
-    <string name="action_screen_share_image">Вислати це зображення через</string>
-    <string name="action_screen_share_video">Вислати це відео через</string>
+    <string name="action_screen_share_image">Відправити це зображення через</string>
+    <string name="action_screen_share_video">Відправити це відео через</string>
     <string name="hint_drag_effect_bar">Перетягніть смужку для регулювання ефекту.</string>
     <string name="hint_auto_capture_no_face">Для запуску таймера натисніть кнопку захоплення.</string>
     <string name="hint_auto_capture_one_face">Для зйомки фото розмістіть обличчя в рамці.</string>
@@ -243,7 +243,7 @@
     <string name="text_title_location_disable">Джерела координатних даних вимкнено</string>
     <string name="text_message_location_disable">Для роботи цієї програми потрібен доступ до розташування. Для отримання поточного розташування увімкніть бездротову мережу або супутник GPS у налаштуваннях.</string>
     <string name="txt_query_switch_storage_title">Задайте місце збереження</string>
-    <string name="txt_query_switch_to_phone_storage">"Перемкнутися на пам'ять телефону?"</string>
+    <string name="txt_query_switch_to_phone_storage">"Переключитися на пам'ять телефону?"</string>
     <string name="txt_query_switch_to_sdcard">"Переключитися на карту пам'яті?"</string>
     <string name="txt_switch_to_phone_storage">"Карта пам'яті заповнена або недоступна. Зберігання переключено на пам'ять телефону."</string>
     <string name="txt_switch_to_sdcard">"Пам'ять телефону заповнена або недоступна. Зберігання переключено на карту пам'яті."</string>

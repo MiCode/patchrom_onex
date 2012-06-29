@@ -35,24 +35,24 @@
     .parameter "allowBootMsgs"
 
     .prologue
-    .line 791
+    .line 795
     const-string v0, "WindowManager"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 792
+    .line 796
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$WMThread;->mContext:Landroid/content/Context;
 
-    .line 793
+    .line 797
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$WMThread;->mPM:Lcom/android/server/PowerManagerService;
 
-    .line 794
+    .line 798
     iput-boolean p3, p0, Lcom/android/server/wm/WindowManagerService$WMThread;->mHaveInputMethods:Z
 
-    .line 795
+    .line 799
     iput-boolean p4, p0, Lcom/android/server/wm/WindowManagerService$WMThread;->mAllowBootMessages:Z
 
-    .line 796
+    .line 800
     return-void
 .end method
 
@@ -62,10 +62,10 @@
     .locals 6
 
     .prologue
-    .line 799
+    .line 803
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 800
+    .line 804
     new-instance v0, Lcom/android/server/wm/WindowManagerService;
 
     iget-object v1, p0, Lcom/android/server/wm/WindowManagerService$WMThread;->mContext:Landroid/content/Context;
@@ -80,54 +80,54 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/wm/WindowManagerService;-><init>(Landroid/content/Context;Lcom/android/server/PowerManagerService;ZZLcom/android/server/wm/WindowManagerService$1;)V
 
-    .line 802
+    .line 806
     .local v0, s:Lcom/android/server/wm/WindowManagerService;
     const/4 v1, -0x4
 
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 804
+    .line 808
     const/4 v1, 0x0
 
     invoke-static {v1}, Landroid/os/Process;->setCanSelfBackground(Z)V
 
-    .line 806
+    .line 810
     monitor-enter p0
 
-    .line 807
+    .line 811
     :try_start_0
     iput-object v0, p0, Lcom/android/server/wm/WindowManagerService$WMThread;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 808
+    .line 812
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 809
+    .line 813
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 812
+    .line 816
     invoke-static {}, Landroid/os/StrictMode;->conditionallyEnableDebugLogging()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 813
+    .line 817
     const-string v1, "WindowManager"
 
     const-string v2, "Enabled StrictMode logging for WMThread\'s Looper"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 816
+    .line 820
     :cond_0
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 817
+    .line 821
     return-void
 
-    .line 809
+    .line 813
     :catchall_0
     move-exception v1
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1278
+    .line 1277
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$4;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,23 +44,23 @@
 
     const/4 v3, 0x1
 
-    .line 1281
+    .line 1280
     sget-boolean v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->HTC_WIFI_OFFLOAD_flag:Z
 
     if-nez v1, :cond_1
 
-    .line 1302
+    .line 1301
     :cond_0
     :goto_0
     return-void
 
-    .line 1284
+    .line 1283
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1286
+    .line 1285
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.htc.net.wimax.WIMAX_ENABLED_CHANGED"
 
@@ -70,14 +70,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 1287
+    .line 1286
     const-string v1, "WifiStateMachine"
 
     const-string v2, "get intent wimax enabled changed action"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1288
+    .line 1287
     const-string v1, "curWimaxEnabledState"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -86,14 +86,14 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 1290
+    .line 1289
     const-string v1, "WifiStateMachine"
 
     const-string v2, "Wimax Disabled"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1291
+    .line 1290
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$4;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     const/4 v2, 0x0
@@ -101,7 +101,7 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->WimaxStatus:Z
     invoke-static {v1, v2}, Landroid/net/wifi/WifiStateMachine;->access$202(Landroid/net/wifi/WifiStateMachine;Z)Z
 
-    .line 1292
+    .line 1291
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$4;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$4;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -115,7 +115,7 @@
 
     goto :goto_0
 
-    .line 1294
+    .line 1293
     :cond_2
     const-string v1, "curWimaxEnabledState"
 
@@ -127,20 +127,20 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1296
+    .line 1295
     const-string v1, "WifiStateMachine"
 
     const-string v2, "Wimax Enabled"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1297
+    .line 1296
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$4;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #setter for: Landroid/net/wifi/WifiStateMachine;->WimaxStatus:Z
     invoke-static {v1, v3}, Landroid/net/wifi/WifiStateMachine;->access$202(Landroid/net/wifi/WifiStateMachine;Z)Z
 
-    .line 1298
+    .line 1297
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$4;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$4;->this$0:Landroid/net/wifi/WifiStateMachine;

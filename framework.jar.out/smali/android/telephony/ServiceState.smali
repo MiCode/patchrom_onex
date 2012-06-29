@@ -826,7 +826,7 @@
     iput v0, p0, Landroid/telephony/ServiceState;->mCdmaEriIconMode:I
 
     .line 694
-    const-string v0, "htcCdmaRadioPowerSaveMode"
+    const-string/jumbo v0, "htcCdmaRadioPowerSaveMode"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -1434,7 +1434,7 @@
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 727
-    const-string v0, "htcCdmaRadioPowerSaveMode"
+    const-string/jumbo v0, "htcCdmaRadioPowerSaveMode"
 
     iget-boolean v1, p0, Landroid/telephony/ServiceState;->mHtcCdmaRadioPowerSaveMode:Z
 

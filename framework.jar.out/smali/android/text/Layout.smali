@@ -82,22 +82,20 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x2
+    const/16 v3, 0x19
 
-    const/4 v2, -0x1
+    const/4 v2, 0x2
+
+    const/4 v1, -0x1
 
     .line 49
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
 
-    const/16 v1, 0x19
-
-    if-eq v0, v1, :cond_0
+    if-eq v0, v3, :cond_0
 
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
 
-    const/16 v1, 0x38
-
-    if-ne v0, v1, :cond_1
+    if-ne v0, v3, :cond_1
 
     :cond_0
     const/4 v0, 0x1
@@ -157,7 +155,7 @@
     .line 2333
     new-instance v0, Landroid/text/Layout$Directions;
 
-    new-array v1, v3, [I
+    new-array v1, v2, [I
 
     fill-array-data v1, :array_0
 
@@ -168,7 +166,7 @@
     .line 2335
     new-instance v0, Landroid/text/Layout$Directions;
 
-    new-array v1, v3, [I
+    new-array v1, v2, [I
 
     fill-array-data v1, :array_1
 
@@ -186,10 +184,10 @@
 
     .line 64
     :cond_2
-    sput v2, Landroid/text/Layout;->MIN_EMOJI:I
+    sput v1, Landroid/text/Layout;->MIN_EMOJI:I
 
     .line 65
-    sput v2, Landroid/text/Layout;->MAX_EMOJI:I
+    sput v1, Landroid/text/Layout;->MAX_EMOJI:I
 
     goto :goto_1
 

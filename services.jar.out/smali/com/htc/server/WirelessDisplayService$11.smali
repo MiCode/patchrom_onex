@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 2018
+    .line 2040
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$11;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0, p2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
@@ -39,15 +39,15 @@
     .locals 1
 
     .prologue
-    .line 2021
+    .line 2043
     invoke-super {p0}, Landroid/os/HandlerThread;->onLooperPrepared()V
 
-    .line 2022
+    .line 2044
     iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$11;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #calls: Lcom/htc/server/WirelessDisplayService;->initInThread()V
     invoke-static {v0}, Lcom/htc/server/WirelessDisplayService;->access$6700(Lcom/htc/server/WirelessDisplayService;)V
 
-    .line 2023
+    .line 2045
     return-void
 .end method

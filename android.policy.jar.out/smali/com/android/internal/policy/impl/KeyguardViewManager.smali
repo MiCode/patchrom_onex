@@ -1279,11 +1279,9 @@
 
     const/4 v0, 0x1
 
-    .line 290
     :goto_0
     return v0
 
-    .line 342
     :cond_0
     sget-object v0, Lcom/android/internal/policy/impl/KeyguardViewManager;->TAG:Ljava/lang/String;
 
@@ -1291,7 +1289,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1340,9 +1337,11 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
+    .line 290
     :goto_0
     return-void
 
+    .line 342
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewManager;->mWindowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 

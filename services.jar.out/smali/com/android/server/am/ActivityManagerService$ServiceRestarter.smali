@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 11279
+    .line 11289
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "x1"
 
     .prologue
-    .line 11279
+    .line 11289
     invoke-direct {p0, p1}, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;-><init>(Lcom/android/server/am/ActivityManagerService;)V
 
     return-void
@@ -55,19 +55,19 @@
     .locals 6
 
     .prologue
-    .line 11291
+    .line 11301
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-boolean v0, v0, Lcom/android/server/am/ActivityManagerService;->mDuringHibernate:Z
 
     if-eqz v0, :cond_1
 
-    .line 11292
+    .line 11302
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;->mService:Lcom/android/server/am/ServiceRecord;
 
     if-eqz v0, :cond_0
 
-    .line 11295
+    .line 11305
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mHandler:Landroid/os/Handler;
@@ -86,18 +86,18 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    .line 11307
+    .line 11317
     :cond_0
     :goto_0
     return-void
 
-    .line 11298
+    .line 11308
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 11303
+    .line 11313
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/am/ActivityManagerService;->performServiceRestartLocked(Lcom/android/server/am/ServiceRecord;)V
 
-    .line 11304
+    .line 11314
     monitor-exit v1
 
     goto :goto_0
@@ -125,9 +125,9 @@
     .parameter "service"
 
     .prologue
-    .line 11283
+    .line 11293
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ServiceRestarter;->mService:Lcom/android/server/am/ServiceRecord;
 
-    .line 11284
+    .line 11294
     return-void
 .end method

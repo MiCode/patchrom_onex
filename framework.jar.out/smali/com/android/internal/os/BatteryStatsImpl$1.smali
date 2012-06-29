@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 4980
+    .line 4992
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsImpl$1;->this$0:Lcom/android/internal/os/BatteryStatsImpl;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -39,16 +39,16 @@
     .locals 1
 
     .prologue
-    .line 4983
+    .line 4995
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 4984
+    .line 4996
     iget-object v0, p0, Lcom/android/internal/os/BatteryStatsImpl$1;->this$0:Lcom/android/internal/os/BatteryStatsImpl;
 
     invoke-virtual {v0}, Lcom/android/internal/os/BatteryStatsImpl;->commitPendingDataToDisk()V
 
-    .line 4985
+    .line 4997
     return-void
 .end method

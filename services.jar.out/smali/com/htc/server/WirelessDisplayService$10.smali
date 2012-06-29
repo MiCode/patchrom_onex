@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1859
+    .line 1881
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$10;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,20 +43,20 @@
     .parameter "service"
 
     .prologue
-    .line 1861
+    .line 1883
     const-string v0, "WirelessDisplayService"
 
     const-string v1, "Connected to WHDMI WfdService."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1862
+    .line 1884
     iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$10;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #setter for: Lcom/htc/server/WirelessDisplayService;->mAutoConfigService:Landroid/os/IBinder;
     invoke-static {v0, p2}, Lcom/htc/server/WirelessDisplayService;->access$1902(Lcom/htc/server/WirelessDisplayService;Landroid/os/IBinder;)Landroid/os/IBinder;
 
-    .line 1863
+    .line 1885
     return-void
 .end method
 
@@ -65,14 +65,14 @@
     .parameter "name"
 
     .prologue
-    .line 1866
+    .line 1888
     const-string v0, "WirelessDisplayService"
 
     const-string v1, "Disconnected to WHDMI WfdService."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1867
+    .line 1889
     iget-object v0, p0, Lcom/htc/server/WirelessDisplayService$10;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     const/4 v1, 0x0
@@ -80,6 +80,6 @@
     #setter for: Lcom/htc/server/WirelessDisplayService;->mAutoConfigService:Landroid/os/IBinder;
     invoke-static {v0, v1}, Lcom/htc/server/WirelessDisplayService;->access$1902(Lcom/htc/server/WirelessDisplayService;Landroid/os/IBinder;)Landroid/os/IBinder;
 
-    .line 1868
+    .line 1890
     return-void
 .end method

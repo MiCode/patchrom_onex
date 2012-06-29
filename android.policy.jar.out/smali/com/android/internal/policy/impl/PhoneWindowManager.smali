@@ -783,7 +783,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->WINDOW_TYPES_WHERE_HOME_DOESNT_WORK:[I
 
-    .line 4436
+    .line 4441
     sget-short v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     const/16 v3, 0x28
@@ -1060,108 +1060,108 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mEndCallLongPress:Ljava/lang/Runnable;
 
-    .line 2687
+    .line 2692
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$10;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$10;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mAllowSystemUiDelay:Ljava/lang/Runnable;
 
-    .line 2697
+    .line 2702
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$11;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$11;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHideNavInputHandler:Landroid/view/InputHandler;
 
-    .line 3676
+    .line 3681
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenshotLock:Ljava/lang/Object;
 
-    .line 3677
+    .line 3682
     iput-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenshotConnection:Landroid/content/ServiceConnection;
 
-    .line 3679
+    .line 3684
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$16;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$16;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenshotTimeout:Ljava/lang/Runnable;
 
-    .line 4331
+    .line 4336
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$18;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBroadcastDone:Landroid/content/BroadcastReceiver;
 
-    .line 4337
+    .line 4342
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$19;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mDockReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 4356
+    .line 4361
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$20;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$20;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mMirrorReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 4375
+    .line 4380
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$21;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$21;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHtcReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 4398
+    .line 4403
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mAutoMotiveEnabled:Z
 
-    .line 4399
+    .line 4404
     iput-wide v5, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHtcSpeakDownTime:J
 
-    .line 4401
+    .line 4406
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$22;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$22;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mAutoMotiveReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 4450
+    .line 4455
     iput-wide v5, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenCaptureLauchTime:J
 
-    .line 4458
+    .line 4463
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mSetupWizardHasRun:Z
 
-    .line 4460
+    .line 4465
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mFirstPenDown:Z
 
-    .line 5056
+    .line 5061
     iput-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBootMsgDialog:Landroid/app/ProgressDialog;
 
-    .line 5145
+    .line 5150
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$28;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$28;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenLockTimeout:Ljava/lang/Runnable;
 
-    .line 5156
+    .line 5161
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$29;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$29;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mSetLastUserActivity:Ljava/lang/Runnable;
 
-    .line 5694
+    .line 5699
     iput v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPenWorkingMode:I
 
-    .line 5703
+    .line 5708
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mIsGuestMode:Z
 
     return-void
@@ -1379,7 +1379,7 @@
     .parameter "outFallbackAction"
 
     .prologue
-    .line 2634
+    .line 2639
     invoke-virtual {p1, p2, p3, p4}, Landroid/view/KeyCharacterMap;->getFallbackAction(IILandroid/view/KeyCharacterMap$FallbackAction;)Z
 
     move-result v0
@@ -1479,29 +1479,29 @@
     .parameter "resid"
 
     .prologue
-    .line 5009
+    .line 5014
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
     move-result-object v0
 
-    .line 5010
+    .line 5015
     .local v0, ar:[I
     if-nez v0, :cond_1
 
-    .line 5011
+    .line 5016
     const/4 v2, 0x0
 
-    .line 5017
+    .line 5022
     :cond_0
     return-object v2
 
-    .line 5013
+    .line 5018
     :cond_1
     array-length v3, v0
 
     new-array v2, v3, [J
 
-    .line 5014
+    .line 5019
     .local v2, out:[J
     const/4 v1, 0x0
 
@@ -1511,14 +1511,14 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 5015
+    .line 5020
     aget v3, v0, v1
 
     int-to-long v3, v3
 
     aput-wide v3, v2, v1
 
-    .line 5014
+    .line 5019
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -1528,7 +1528,7 @@
     .locals 1
 
     .prologue
-    .line 3488
+    .line 3493
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mNavigationBarVisible:Z
 
     if-eqz v0, :cond_0
@@ -1548,7 +1548,7 @@
     .locals 1
 
     .prologue
-    .line 3484
+    .line 3489
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mNavigationBarVisible:Z
 
     if-eqz v0, :cond_0
@@ -15621,7 +15621,7 @@
 
     monitor-exit v1
 
-    .line 5596
+    .line 5601
     return-void
 
     :catchall_0
@@ -15807,7 +15807,7 @@
 
     goto :goto_0
 
-    .line 3876
+    .line 3881
     :sswitch_data_0
     .sparse-switch
         0x64 -> :sswitch_17

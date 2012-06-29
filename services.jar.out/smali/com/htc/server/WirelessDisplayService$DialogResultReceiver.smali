@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1404
+    .line 1426
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$DialogResultReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1404
+    .line 1426
     invoke-direct {p0, p1}, Lcom/htc/server/WirelessDisplayService$DialogResultReceiver;-><init>(Lcom/htc/server/WirelessDisplayService;)V
 
     return-void
@@ -54,12 +54,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 1407
+    .line 1429
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1408
+    .line 1430
     .local v0, action:Ljava/lang/String;
     const-string v2, "com.android.internal.app.intent.WIRELESS_DISPLAY_OUTPUTTV_RESULT"
 
@@ -69,7 +69,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1409
+    .line 1431
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
@@ -80,7 +80,7 @@
 
     move-result v1
 
-    .line 1410
+    .line 1432
     .local v1, finalDialogResult:I
     const-string v2, "WirelessDisplayService"
 
@@ -104,27 +104,27 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1411
+    .line 1433
     if-ne v1, v5, :cond_1
 
-    .line 1412
+    .line 1434
     iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$DialogResultReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #calls: Lcom/htc/server/WirelessDisplayService;->setDialogResult(I)V
     invoke-static {v2, v5}, Lcom/htc/server/WirelessDisplayService;->access$5800(Lcom/htc/server/WirelessDisplayService;I)V
 
-    .line 1417
+    .line 1439
     .end local v1           #finalDialogResult:I
     :cond_0
     :goto_0
     return-void
 
-    .line 1413
+    .line 1435
     .restart local v1       #finalDialogResult:I
     :cond_1
     if-nez v1, :cond_0
 
-    .line 1414
+    .line 1436
     iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$DialogResultReceiver;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     const/4 v3, 0x0

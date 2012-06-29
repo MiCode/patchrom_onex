@@ -45,7 +45,7 @@
     .locals 3
 
     .prologue
-    .line 557
+    .line 561
     new-instance v0, Landroid/os/StrictMode$VmPolicy;
 
     const/4 v1, 0x0
@@ -77,14 +77,14 @@
     .end annotation
 
     .prologue
-    .line 564
+    .line 568
     .local p2, classInstanceLimit:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Class;Ljava/lang/Integer;>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 565
+    .line 569
     if-nez p2, :cond_0
 
-    .line 566
+    .line 570
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "classInstanceLimit == null"
@@ -93,14 +93,14 @@
 
     throw v0
 
-    .line 568
+    .line 572
     :cond_0
     iput p1, p0, Landroid/os/StrictMode$VmPolicy;->mask:I
 
-    .line 569
+    .line 573
     iput-object p2, p0, Landroid/os/StrictMode$VmPolicy;->classInstanceLimit:Ljava/util/HashMap;
 
-    .line 570
+    .line 574
     return-void
 .end method
 
@@ -111,7 +111,7 @@
     .parameter "x2"
 
     .prologue
-    .line 553
+    .line 557
     invoke-direct {p0, p1, p2}, Landroid/os/StrictMode$VmPolicy;-><init>(ILjava/util/HashMap;)V
 
     return-void
@@ -123,7 +123,7 @@
     .locals 2
 
     .prologue
-    .line 574
+    .line 578
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

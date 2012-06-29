@@ -25,13 +25,13 @@
     .parameter "_info"
 
     .prologue
-    .line 3601
+    .line 3635
     invoke-direct {p0, p1, p2}, Landroid/content/pm/PackageParser$Component;-><init>(Landroid/content/pm/PackageParser$ParsePackageItemArgs;Landroid/content/pm/PackageItemInfo;)V
 
-    .line 3602
+    .line 3636
     iput-object p2, p0, Landroid/content/pm/PackageParser$Instrumentation;->info:Landroid/content/pm/InstrumentationInfo;
 
-    .line 3603
+    .line 3637
     return-void
 .end method
 
@@ -42,15 +42,15 @@
     .parameter "packageName"
 
     .prologue
-    .line 3606
+    .line 3640
     invoke-super {p0, p1}, Landroid/content/pm/PackageParser$Component;->setPackageName(Ljava/lang/String;)V
 
-    .line 3607
+    .line 3641
     iget-object v0, p0, Landroid/content/pm/PackageParser$Instrumentation;->info:Landroid/content/pm/InstrumentationInfo;
 
     iput-object p1, v0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
-    .line 3608
+    .line 3642
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .locals 2
 
     .prologue
-    .line 3611
+    .line 3645
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

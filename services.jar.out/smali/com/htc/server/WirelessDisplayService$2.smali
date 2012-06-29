@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1667
+    .line 1689
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$2;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +40,14 @@
     .parameter "intent"
 
     .prologue
-    .line 1670
+    .line 1692
     const-string v0, "WirelessDisplayService"
 
     const-string v1, "Receive dongle scan results available intent."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1671
+    .line 1693
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v0
@@ -68,6 +68,6 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/server/WirelessDisplayService$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1672
+    .line 1694
     return-void
 .end method

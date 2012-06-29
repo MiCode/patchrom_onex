@@ -204,7 +204,7 @@
 
     .line 256
     .local v0, e:Ljava/lang/IllegalArgumentException;
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -245,7 +245,7 @@
 
     .line 259
     .local v0, e:Landroid/database/SQLException;
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -284,7 +284,7 @@
     if-nez v3, :cond_0
 
     .line 375
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     const-string v4, "Ignore save crash"
 
@@ -329,7 +329,7 @@
 
     .line 384
     .local v1, t:Ljava/lang/Throwable;
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -394,7 +394,7 @@
     if-gez v7, :cond_2
 
     .line 344
-    const-string v7, "htcCheckin"
+    const-string/jumbo v7, "htcCheckin"
 
     const-string v8, "Crash logging skipped, too soon after logging failure"
 
@@ -439,7 +439,7 @@
     if-nez v4, :cond_0
 
     .line 354
-    const-string v7, "htcCheckin"
+    const-string/jumbo v7, "htcCheckin"
 
     const-string v8, "Error reporting crash"
 
@@ -466,7 +466,7 @@
 
     .line 360
     .local v3, t:Ljava/lang/Throwable;
-    const-string v7, "htcCheckin"
+    const-string/jumbo v7, "htcCheckin"
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -572,7 +572,7 @@
 
     .line 311
     .local v0, e:Ljava/lang/IllegalArgumentException;
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -613,7 +613,7 @@
 
     .line 314
     .local v0, e:Landroid/database/SQLException;
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -771,7 +771,7 @@
 
     .line 292
     .local v0, e:Ljava/lang/IllegalArgumentException;
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -812,7 +812,7 @@
 
     .line 295
     .local v0, e:Landroid/database/SQLException;
-    const-string v3, "htcCheckin"
+    const-string/jumbo v3, "htcCheckin"
 
     new-instance v4, Ljava/lang/StringBuilder;
 

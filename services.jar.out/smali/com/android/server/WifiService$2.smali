@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 671
+    .line 670
     iput-object p1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x1
 
-    .line 674
+    .line 673
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -57,14 +57,14 @@
 
     if-eqz v3, :cond_2
 
-    .line 675
+    .line 674
     const-string v3, "wifi_state"
 
     invoke-virtual {p2, v3, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 678
+    .line 677
     .local v0, wifiState:I
     iget-object v3, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
@@ -76,13 +76,13 @@
     #setter for: Lcom/android/server/WifiService;->mWifiEnabled:Z
     invoke-static {v3, v1}, Lcom/android/server/WifiService;->access$2002(Lcom/android/server/WifiService;Z)Z
 
-    .line 681
+    .line 680
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->resetNotification()V
     invoke-static {v1}, Lcom/android/server/WifiService;->access$2100(Lcom/android/server/WifiService;)V
 
-    .line 704
+    .line 703
     .end local v0           #wifiState:I
     :cond_0
     :goto_1
@@ -92,10 +92,10 @@
     :cond_1
     move v1, v2
 
-    .line 678
+    .line 677
     goto :goto_0
 
-    .line 682
+    .line 681
     .end local v0           #wifiState:I
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -110,7 +110,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 684
+    .line 683
     iget-object v2, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     const-string v1, "networkInfo"
@@ -123,7 +123,7 @@
 
     iput-object v1, v2, Lcom/android/server/WifiService;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 687
+    .line 686
     sget-object v1, Lcom/android/server/WifiService$13;->$SwitchMap$android$net$NetworkInfo$DetailedState:[I
 
     iget-object v2, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
@@ -144,14 +144,14 @@
 
     goto :goto_1
 
-    .line 690
+    .line 689
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->evaluateTrafficStatsPolling()V
     invoke-static {v1}, Lcom/android/server/WifiService;->access$2200(Lcom/android/server/WifiService;)V
 
-    .line 691
+    .line 690
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->resetNotification()V
@@ -159,7 +159,7 @@
 
     goto :goto_1
 
-    .line 694
+    .line 693
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 696
+    .line 695
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->checkAndSetNotification()V
@@ -181,7 +181,7 @@
 
     goto :goto_1
 
-    .line 698
+    .line 697
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -195,7 +195,7 @@
 
     if-eqz v3, :cond_5
 
-    .line 699
+    .line 698
     iget-object v1, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mScreenOffSaved:Z
@@ -203,7 +203,7 @@
 
     goto :goto_1
 
-    .line 700
+    .line 699
     :cond_5
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -217,7 +217,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 701
+    .line 700
     iget-object v2, p0, Lcom/android/server/WifiService$2;->this$0:Lcom/android/server/WifiService;
 
     #setter for: Lcom/android/server/WifiService;->mScreenOffSaved:Z
@@ -225,7 +225,7 @@
 
     goto :goto_1
 
-    .line 687
+    .line 686
     nop
 
     :pswitch_data_0

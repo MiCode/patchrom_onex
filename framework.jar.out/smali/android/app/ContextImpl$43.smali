@@ -32,7 +32,7 @@
 
     .prologue
     .line 592
-    const-string v1, "htc.sim_authentication"
+    const-string/jumbo v1, "htc.sim_authentication"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 

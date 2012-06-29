@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2647
+    .line 2652
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$9;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +42,10 @@
     .parameter "success"
 
     .prologue
-    .line 2649
+    .line 2654
     if-eqz p1, :cond_0
 
-    .line 2651
+    .line 2656
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -55,7 +55,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2654
+    .line 2659
     :goto_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$9;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -63,16 +63,16 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
 
-    .line 2655
+    .line 2660
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$9;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->startDockOrHome()V
 
-    .line 2657
+    .line 2662
     :cond_0
     return-void
 
-    .line 2652
+    .line 2657
     :catch_0
     move-exception v0
 

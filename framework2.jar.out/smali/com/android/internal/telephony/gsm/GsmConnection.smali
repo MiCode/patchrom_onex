@@ -2743,7 +2743,7 @@
 
     sget-object v8, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v7, v8, :cond_8
+    if-ne v7, v8, :cond_5
 
     move v4, v5
 
@@ -2766,7 +2766,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_3
+    if-nez v7, :cond_0
 
     .line 615
     const-string v7, "update: phone # changed!"
@@ -2778,80 +2778,18 @@
 
     iput-object v7, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->address:Ljava/lang/String;
 
-    .line 619
-    invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->QMI_CONFIG()Z
-
-    move-result v7
-
-    if-nez v7, :cond_0
-
-    sget-short v7, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v8, 0x61
-
-    if-eq v7, v8, :cond_0
-
-    sget-short v7, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v8, 0xad
-
-    if-ne v7, v8, :cond_2
-
-    .line 622
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmConnection;->isIncoming()Z
-
-    move-result v7
-
-    if-nez v7, :cond_1
-
-    .line 623
-    iget-object v7, p1, Lcom/android/internal/telephony/DriverCall;->number:Ljava/lang/String;
-
-    iput-object v7, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->dialString:Ljava/lang/String;
-
-    .line 624
-    :cond_1
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "Connection: update() phone # changed! address="
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    iget-object v8, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->address:Ljava/lang/String;
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {p0, v7}, Lcom/android/internal/telephony/gsm/GsmConnection;->log(Ljava/lang/String;)V
-
-    .line 625
-    const/4 v7, 0x0
-
-    invoke-virtual {p0, v7}, Lcom/android/internal/telephony/gsm/GsmConnection;->setUserData(Ljava/lang/Object;)V
-
     .line 628
-    :cond_2
     const/4 v0, 0x1
 
     .line 633
-    :cond_3
+    :cond_0
     iget-object v7, p1, Lcom/android/internal/telephony/DriverCall;->name:Ljava/lang/String;
 
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_6
 
     .line 634
     iget-object v7, p0, Lcom/android/internal/telephony/Connection;->cnapName:Ljava/lang/String;
@@ -2860,7 +2798,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_4
+    if-nez v7, :cond_1
 
     .line 635
     const/4 v0, 0x1
@@ -2871,7 +2809,7 @@
     iput-object v7, p0, Lcom/android/internal/telephony/Connection;->cnapName:Ljava/lang/String;
 
     .line 643
-    :cond_4
+    :cond_1
     :goto_1
     iget v7, p1, Lcom/android/internal/telephony/DriverCall;->namePresentation:I
 
@@ -2880,12 +2818,12 @@
     .line 646
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->parent:Lcom/android/internal/telephony/gsm/GsmCall;
 
-    if-eq v1, v7, :cond_a
+    if-eq v1, v7, :cond_7
 
     .line 647
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->parent:Lcom/android/internal/telephony/gsm/GsmCall;
 
-    if-eqz v7, :cond_5
+    if-eqz v7, :cond_2
 
     .line 648
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->parent:Lcom/android/internal/telephony/gsm/GsmCall;
@@ -2893,7 +2831,7 @@
     invoke-virtual {v7, p0}, Lcom/android/internal/telephony/gsm/GsmCall;->detach(Lcom/android/internal/telephony/gsm/GsmConnection;)V
 
     .line 650
-    :cond_5
+    :cond_2
     invoke-virtual {v1, p0, p1}, Lcom/android/internal/telephony/gsm/GsmCall;->attach(Lcom/android/internal/telephony/Connection;Lcom/android/internal/telephony/DriverCall;)V
 
     .line 651
@@ -2928,7 +2866,7 @@
 
     iget-object v8, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->parent:Lcom/android/internal/telephony/gsm/GsmCall;
 
-    if-eq v1, v8, :cond_d
+    if-eq v1, v8, :cond_a
 
     :goto_3
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
@@ -3010,22 +2948,22 @@
     invoke-direct {p0, v5}, Lcom/android/internal/telephony/gsm/GsmConnection;->log(Ljava/lang/String;)V
 
     .line 674
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_3
 
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GsmConnection;->isConnectingInOrOut()Z
 
     move-result v5
 
-    if-nez v5, :cond_6
+    if-nez v5, :cond_3
 
     .line 675
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmConnection;->onConnectedInOrOut()V
 
     .line 678
-    :cond_6
-    if-eqz v0, :cond_7
+    :cond_3
+    if-eqz v0, :cond_4
 
-    if-nez v4, :cond_7
+    if-nez v4, :cond_4
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/gsm/GsmConnection;->getState()Lcom/android/internal/telephony/Call$State;
 
@@ -3033,18 +2971,18 @@
 
     sget-object v6, Lcom/android/internal/telephony/Call$State;->HOLDING:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v5, v6, :cond_7
+    if-ne v5, v6, :cond_4
 
     .line 680
     invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GsmConnection;->onStartedHolding()V
 
     .line 683
-    :cond_7
+    :cond_4
     return v0
 
     .end local v1           #newParent:Lcom/android/internal/telephony/gsm/GsmCall;
     .end local v4           #wasHolding:Z
-    :cond_8
+    :cond_5
     move v4, v6
 
     .line 610
@@ -3053,7 +2991,7 @@
     .line 638
     .restart local v1       #newParent:Lcom/android/internal/telephony/gsm/GsmCall;
     .restart local v4       #wasHolding:Z
-    :cond_9
+    :cond_6
     iget-object v7, p1, Lcom/android/internal/telephony/DriverCall;->name:Ljava/lang/String;
 
     iget-object v8, p0, Lcom/android/internal/telephony/Connection;->cnapName:Ljava/lang/String;
@@ -3062,7 +3000,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_4
+    if-nez v7, :cond_1
 
     .line 639
     const/4 v0, 0x1
@@ -3075,7 +3013,7 @@
     goto/16 :goto_1
 
     .line 655
-    :cond_a
+    :cond_7
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/GsmConnection;->parent:Lcom/android/internal/telephony/gsm/GsmCall;
 
     invoke-virtual {v7, p0, p1}, Lcom/android/internal/telephony/gsm/GsmCall;->update(Lcom/android/internal/telephony/gsm/GsmConnection;Lcom/android/internal/telephony/DriverCall;)Z
@@ -3084,23 +3022,23 @@
 
     .line 656
     .local v2, parentStateChange:Z
-    if-nez v0, :cond_b
+    if-nez v0, :cond_8
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_9
 
-    :cond_b
+    :cond_8
     move v0, v5
 
     :goto_4
     goto/16 :goto_2
 
-    :cond_c
+    :cond_9
     move v0, v6
 
     goto :goto_4
 
     .end local v2           #parentStateChange:Z
-    :cond_d
+    :cond_a
     move v5, v6
 
     .line 661

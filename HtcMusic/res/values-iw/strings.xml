@@ -67,7 +67,7 @@
     <string name="phone_storage_busy_title">זכרון הטלפון אינו זמין</string>
     <string name="sdcard_busy_message">כרטיס הזכרון אינו זמין משום שהוא מחובר כהתקן אחסון USB. כדי לגשת לכרטיס הזכרון, נתק אותו מהחיבור כהתקן USB.</string>
     <string name="phone_storage_busy_message">התוכן אינו נגיש משום שמשום שהטלפון מחובר כהתקן אחסון USB. כדי לגשת לתוכן , נתק את הטלפון מהחיבור כהתקן USB.</string>
-    <string name="internal_memory_low">לא נותר כמעט מקום בזכרון הפנימי. לפני השימוש בישום, מחק בבקשה כמה קבצים כדי לפנות מקום.</string>
+    <string name="internal_memory_low">לא נותר כמעט מקום בזכרון הטלפון. לפני השימוש בישום, מחק בבקשה כמה קבצים כדי לפנות מקום.</string>
     <string name="sdcard_error_title">שגיאת כרטיס זכרון</string>
     <string name="phone_storage_error_title">שגיאת זכרון טלפון</string>
     <string name="unknown_artist_name">אמנים בלתי ידועים</string>
@@ -400,7 +400,7 @@
     <string name="terms_and_conditions_msg">תנאי שימוש</string>
     <string name="number_of_tracks">%s רצועות</string>
     <string name="number_of_one_track">רצועה %s</string>
-    <string name="release_year">שוחררו: %s</string>
+    <string name="release_year">שוחרר: %s</string>
     <string name="no_track_in_queue_msg">הקש על שיר כדי לנגנו</string>
     <string name="menu_album_detail">פרטי אלבום</string>
     <string name="car_mode">מצב רכב</string>

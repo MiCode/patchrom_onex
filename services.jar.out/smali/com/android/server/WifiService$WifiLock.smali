@@ -28,13 +28,13 @@
     .parameter "ws"
 
     .prologue
-    .line 2409
+    .line 2408
     iput-object p1, p0, Lcom/android/server/WifiService$WifiLock;->this$0:Lcom/android/server/WifiService;
 
-    .line 2410
+    .line 2409
     invoke-direct/range {p0 .. p5}, Lcom/android/server/WifiService$DeathRecipient;-><init>(Lcom/android/server/WifiService;ILjava/lang/String;Landroid/os/IBinder;Landroid/os/WorkSource;)V
 
-    .line 2411
+    .line 2410
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .locals 3
 
     .prologue
-    .line 2414
+    .line 2413
     iget-object v0, p0, Lcom/android/server/WifiService$WifiLock;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mLocks:Lcom/android/server/WifiService$LockList;
@@ -54,7 +54,7 @@
 
     monitor-enter v1
 
-    .line 2415
+    .line 2414
     :try_start_0
     iget-object v0, p0, Lcom/android/server/WifiService$WifiLock;->this$0:Lcom/android/server/WifiService;
 
@@ -63,13 +63,13 @@
     #calls: Lcom/android/server/WifiService;->releaseWifiLockLocked(Landroid/os/IBinder;)Z
     invoke-static {v0, v2}, Lcom/android/server/WifiService;->access$5100(Lcom/android/server/WifiService;Landroid/os/IBinder;)Z
 
-    .line 2416
+    .line 2415
     monitor-exit v1
 
-    .line 2417
+    .line 2416
     return-void
 
-    .line 2416
+    .line 2415
     :catchall_0
     move-exception v0
 
@@ -84,7 +84,7 @@
     .locals 2
 
     .prologue
-    .line 2420
+    .line 2419
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

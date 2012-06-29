@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1778
+    .line 1800
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$8;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,14 +42,14 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 1781
+    .line 1803
     const-string v1, "config_state"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1782
+    .line 1804
     .local v0, configState:I
     const-string v1, "WirelessDisplayService"
 
@@ -73,7 +73,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1783
+    .line 1805
     iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$8;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mIsBoundToAutoConfigService:Z
@@ -83,7 +83,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1784
+    .line 1806
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v1
@@ -100,7 +100,7 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/server/WirelessDisplayService$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1785
+    .line 1807
     :cond_0
     return-void
 .end method

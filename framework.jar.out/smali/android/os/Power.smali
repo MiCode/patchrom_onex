@@ -40,6 +40,12 @@
 .method public static native acquireWakeLock(ILjava/lang/String;)V
 .end method
 
+.method public static native disableTouchPokeCpu()V
+.end method
+
+.method public static native enableTouchPokeCpu()V
+.end method
+
 .method public static reboot(Ljava/lang/String;)V
     .locals 0
     .parameter "reason"
@@ -50,10 +56,10 @@
     .end annotation
 
     .prologue
-    .line 116
+    .line 121
     invoke-static {p0}, Landroid/os/Power;->rebootNative(Ljava/lang/String;)V
 
-    .line 117
+    .line 122
     return-void
 .end method
 
@@ -75,6 +81,9 @@
 .end method
 
 .method public static native setLastUserActivityTimeout(J)I
+.end method
+
+.method public static native setPowerSavePolicy(I)V
 .end method
 
 .method public static native setScreenState(Z)I

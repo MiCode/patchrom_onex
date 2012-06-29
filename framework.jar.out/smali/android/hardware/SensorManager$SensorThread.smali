@@ -31,40 +31,20 @@
     .locals 0
 
     .prologue
-    .line 454
+    .line 440
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 455
+    .line 441
     return-void
 .end method
 
 
 # virtual methods
-.method bThreadRunning()Z
-    .locals 1
-
-    .prologue
-    .line 482
-    iget-object v0, p0, Landroid/hardware/SensorManager$SensorThread;->mThread:Ljava/lang/Thread;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
 .method protected finalize()V
     .locals 0
 
     .prologue
-    .line 459
+    .line 445
     return-void
 .end method
 
@@ -74,23 +54,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 464
+    .line 450
     :try_start_0
     iget-object v3, p0, Landroid/hardware/SensorManager$SensorThread;->mThread:Ljava/lang/Thread;
 
     if-nez v3, :cond_0
 
-    .line 465
+    .line 451
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Landroid/hardware/SensorManager$SensorThread;->mSensorsReady:Z
 
-    .line 466
+    .line 452
     new-instance v0, Landroid/hardware/SensorManager$SensorThread$SensorThreadRunnable;
 
     invoke-direct {v0, p0}, Landroid/hardware/SensorManager$SensorThread$SensorThreadRunnable;-><init>(Landroid/hardware/SensorManager$SensorThread;)V
 
-    .line 467
+    .line 453
     .local v0, runnable:Landroid/hardware/SensorManager$SensorThread$SensorThreadRunnable;
     new-instance v1, Ljava/lang/Thread;
 
@@ -102,28 +82,28 @@
 
     invoke-direct {v1, v0, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 468
+    .line 454
     .local v1, thread:Ljava/lang/Thread;
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 469
+    .line 455
     monitor-enter v0
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 470
+    .line 456
     :goto_0
     :try_start_1
     iget-boolean v3, p0, Landroid/hardware/SensorManager$SensorThread;->mSensorsReady:Z
 
     if-nez v3, :cond_1
 
-    .line 471
+    .line 457
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
 
     goto :goto_0
 
-    .line 473
+    .line 459
     :catchall_0
     move-exception v3
 
@@ -136,13 +116,13 @@
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 476
+    .line 462
     .end local v0           #runnable:Landroid/hardware/SensorManager$SensorThread$SensorThreadRunnable;
     .end local v1           #thread:Ljava/lang/Thread;
     :catch_0
     move-exception v3
 
-    .line 478
+    .line 464
     :cond_0
     :goto_1
     iget-object v3, p0, Landroid/hardware/SensorManager$SensorThread;->mThread:Ljava/lang/Thread;
@@ -152,7 +132,7 @@
     :goto_2
     return v2
 
-    .line 473
+    .line 459
     .restart local v0       #runnable:Landroid/hardware/SensorManager$SensorThread$SensorThreadRunnable;
     .restart local v1       #thread:Ljava/lang/Thread;
     :cond_1
@@ -161,7 +141,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 474
+    .line 460
     :try_start_4
     iput-object v1, p0, Landroid/hardware/SensorManager$SensorThread;->mThread:Ljava/lang/Thread;
     :try_end_4
@@ -169,7 +149,7 @@
 
     goto :goto_1
 
-    .line 478
+    .line 464
     .end local v0           #runnable:Landroid/hardware/SensorManager$SensorThread$SensorThreadRunnable;
     .end local v1           #thread:Ljava/lang/Thread;
     :cond_2

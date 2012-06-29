@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 1898
+    .line 1906
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 1900
+    .line 1908
     const-string/jumbo v0, "window"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -58,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 1898
+    .line 1906
     invoke-virtual {p0}, Landroid/os/StrictMode$8;->create()Landroid/view/IWindowManager;
 
     move-result-object v0

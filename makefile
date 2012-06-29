@@ -3,7 +3,7 @@
 #
 
 # The original zip file, MUST be specified by each product
-local-zip-file     := onex_1.28.707.10.zip
+local-zip-file     := onex_1.29.707.11.zip
 
 # The output zip file of MIUI rom, the default is update.zip if not specified
 # local-out-zip-file :=
@@ -55,7 +55,6 @@ local-zip-misc:
 
 	@echo add system app
 	cp other/system_app/* $(ZIP_DIR)/system/app/
-	cp other/NvCPLSvc.apk $(ZIP_DIR)/system/bin/
 
 	@echo add system config
 	cp other/system_etc/* $(ZIP_DIR)/system/etc/

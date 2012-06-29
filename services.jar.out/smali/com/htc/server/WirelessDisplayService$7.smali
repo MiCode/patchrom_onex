@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1756
+    .line 1778
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +40,14 @@
     .parameter "intent"
 
     .prologue
-    .line 1759
+    .line 1781
     const-string v2, "WirelessDisplayService"
 
     const-string v3, "Receive com.htc.wifidisplay.SWITCH_ON_OFF_MIRROR_MODE intent."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1760
+    .line 1782
     iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #getter for: Lcom/htc/server/WirelessDisplayService;->mMirrorOnOff:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -61,25 +61,25 @@
 
     if-eqz v2, :cond_0
 
-    .line 1761
+    .line 1783
     const-string v2, "WirelessDisplayService"
 
     const-string v3, "Stop mirror mode from notification indicator."
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1762
+    .line 1784
     iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Lcom/htc/server/WirelessDisplayService;->mirrorModeStartStop(Z)Z
 
-    .line 1775
+    .line 1797
     :goto_0
     return-void
 
-    .line 1766
+    .line 1788
     :cond_0
     const-string v2, "WirelessDisplayService"
 
@@ -87,20 +87,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1767
+    .line 1789
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.htc.wifidisplay.CONFIGURE_MODE_NOTIFICATION_MIRROR"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1768
+    .line 1790
     .local v1, connectingIntent:Landroid/content/Intent;
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1770
+    .line 1792
     :try_start_0
     iget-object v2, p0, Lcom/htc/server/WirelessDisplayService$7;->this$0:Lcom/htc/server/WirelessDisplayService;
 
@@ -115,11 +115,11 @@
 
     goto :goto_0
 
-    .line 1771
+    .line 1793
     :catch_0
     move-exception v0
 
-    .line 1772
+    .line 1794
     .local v0, ae:Landroid/content/ActivityNotFoundException;
     const-string v2, "WirelessDisplayService"
 

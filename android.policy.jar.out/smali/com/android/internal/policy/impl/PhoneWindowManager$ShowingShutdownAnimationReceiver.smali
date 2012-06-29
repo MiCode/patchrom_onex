@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 5634
+    .line 5639
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ShowingShutdownAnimationReceiver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 5634
+    .line 5639
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$ShowingShutdownAnimationReceiver;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -54,23 +54,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 5640
+    .line 5645
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ShowingShutdownAnimationReceiver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mShowingShutdownAnim:Z
 
-    .line 5642
+    .line 5647
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ShowingShutdownAnimationReceiver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v2, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHtcMode:Z
 
-    .line 5643
+    .line 5648
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ShowingShutdownAnimationReceiver;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v0, v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->updateRotation(Z)V
 
-    .line 5652
+    .line 5657
     return-void
 .end method

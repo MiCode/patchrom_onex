@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3697
+    .line 3736
     iput-object p1, p0, Lcom/htc/server/WirelessDisplayService$RecorderErrorCallback;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3697
+    .line 3736
     invoke-direct {p0, p1}, Lcom/htc/server/WirelessDisplayService$RecorderErrorCallback;-><init>(Lcom/htc/server/WirelessDisplayService;)V
 
     return-void
@@ -58,7 +58,7 @@
     .prologue
     const/16 v4, 0x33
 
-    .line 3700
+    .line 3739
     const-string v1, "WirelessDisplayService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -91,13 +91,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3704
+    .line 3743
     iget-object v1, p0, Lcom/htc/server/WirelessDisplayService$RecorderErrorCallback;->this$0:Lcom/htc/server/WirelessDisplayService;
 
     #calls: Lcom/htc/server/WirelessDisplayService;->stopDisplayRecorder()I
     invoke-static {v1}, Lcom/htc/server/WirelessDisplayService;->access$4200(Lcom/htc/server/WirelessDisplayService;)I
 
-    .line 3709
+    .line 3748
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v1
@@ -110,7 +110,7 @@
 
     move-result-object v0
 
-    .line 3710
+    .line 3749
     .local v0, msg:Landroid/os/Message;
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v1, v4}, Lcom/htc/server/WirelessDisplayService$H;->removeMessages(I)V
 
-    .line 3711
+    .line 3750
     invoke-static {}, Lcom/htc/server/WirelessDisplayService;->access$2500()Lcom/htc/server/WirelessDisplayService$H;
 
     move-result-object v1
@@ -127,6 +127,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/htc/server/WirelessDisplayService$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3712
+    .line 3751
     return-void
 .end method

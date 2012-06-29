@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 319
+    .line 323
     iput-object p1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "binder"
 
     .prologue
-    .line 326
+    .line 330
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     invoke-static {p2}, Lcom/htc/dlnainterface/IDLNAPluginService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -52,7 +52,7 @@
 
     iput-object v3, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 327
+    .line 331
     const-string v2, "HtcDLNAServiceManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -99,14 +99,14 @@
 
     invoke-static {v2, v3}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 328
+    .line 332
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
     if-nez v2, :cond_1
 
-    .line 330
+    .line 334
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     #getter for: Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
@@ -114,19 +114,19 @@
 
     move-result-object v0
 
-    .line 331
+    .line 335
     .local v0, clientListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     if-eqz v0, :cond_0
 
-    .line 332
+    .line 336
     invoke-interface {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceDisconnected()V
 
-    .line 350
+    .line 354
     :cond_0
     :goto_0
     return-void
 
-    .line 338
+    .line 342
     .end local v0           #clientListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     :cond_1
     :try_start_0
@@ -150,7 +150,7 @@
 
     invoke-interface {v2, v3, v4}, Lcom/htc/dlnainterface/IDLNAPluginService;->registerCallback(ILcom/htc/dlnainterface/IDLNAPluginNotify;)V
 
-    .line 339
+    .line 343
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     iget-object v2, v2, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
@@ -168,7 +168,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 347
+    .line 351
     :goto_1
     iget-object v2, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
@@ -177,21 +177,21 @@
 
     move-result-object v0
 
-    .line 348
+    .line 352
     .restart local v0       #clientListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     if-eqz v0, :cond_0
 
-    .line 349
+    .line 353
     invoke-interface {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceConnected()V
 
     goto :goto_0
 
-    .line 341
+    .line 345
     .end local v0           #clientListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     :catch_0
     move-exception v1
 
-    .line 344
+    .line 348
     .local v1, ex:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -203,7 +203,7 @@
     .parameter "name"
 
     .prologue
-    .line 356
+    .line 360
     const-string v1, "HtcDLNAServiceManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -226,7 +226,7 @@
 
     invoke-static {v1, v2}, Lcom/htc/dlnasharedmodule/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 357
+    .line 361
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
     #getter for: Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mDLNAServiceStatusListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
@@ -234,14 +234,14 @@
 
     move-result-object v0
 
-    .line 358
+    .line 362
     .local v0, clientListener:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;
     if-eqz v0, :cond_0
 
-    .line 359
+    .line 363
     invoke-interface {v0}, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$DLNAServiceStatusListener;->onServiceDisconnected()V
 
-    .line 360
+    .line 364
     :cond_0
     iget-object v1, p0, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager$2;->this$0:Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;
 
@@ -249,6 +249,6 @@
 
     iput-object v2, v1, Lcom/htc/dlnasharedmodule/HtcDLNAServiceManager;->mService:Lcom/htc/dlnainterface/IDLNAPluginService;
 
-    .line 361
+    .line 365
     return-void
 .end method

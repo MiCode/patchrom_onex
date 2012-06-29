@@ -132,6 +132,7 @@
     <MPDP opname="Bouygyes" mccmnc="20820" pdps2g="1" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45400" pdps2g="2" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45402" pdps2g="2" pdps3g="2" />
+    <MPDP opname="CSL (HK)" mccmnc="45403" pdps2g="2" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45410" pdps2g="2" pdps3g="2" />
     <MPDP opname="CSL (HK)" mccmnc="45418" pdps2g="2" pdps3g="2" />
     <MPDP opname="DNA" mccmnc="24403" pdps2g="1" pdps3g="1" />

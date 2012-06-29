@@ -44,7 +44,7 @@
 
     .line 47
     :cond_0
-    const-string v0, "htc.sense.version"
+    const-string/jumbo v0, "htc.sense.version"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

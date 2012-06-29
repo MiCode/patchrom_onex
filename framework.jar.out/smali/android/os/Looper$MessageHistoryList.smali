@@ -35,23 +35,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 342
+    .line 394
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 344
+    .line 396
     const/16 v0, 0x14
 
     new-array v0, v0, [Landroid/os/Looper$MessageHistory;
 
     iput-object v0, p0, Landroid/os/Looper$MessageHistoryList;->array:[Landroid/os/Looper$MessageHistory;
 
-    .line 345
+    .line 397
     iput v1, p0, Landroid/os/Looper$MessageHistoryList;->tail:I
 
-    .line 346
+    .line 398
     iput v1, p0, Landroid/os/Looper$MessageHistoryList;->head:I
 
-    .line 347
+    .line 399
     iput v1, p0, Landroid/os/Looper$MessageHistoryList;->size:I
 
     return-void
@@ -62,7 +62,7 @@
     .parameter "x0"
 
     .prologue
-    .line 342
+    .line 394
     invoke-direct {p0}, Landroid/os/Looper$MessageHistoryList;-><init>()V
 
     return-void
@@ -76,10 +76,10 @@
     .parameter "start"
 
     .prologue
-    .line 361
+    .line 413
     const/4 v0, 0x0
 
-    .line 362
+    .line 414
     .local v0, ret:Landroid/os/Looper$MessageHistory;
     iget-object v1, p0, Landroid/os/Looper$MessageHistoryList;->array:[Landroid/os/Looper$MessageHistory;
 
@@ -89,13 +89,13 @@
 
     if-nez v1, :cond_0
 
-    .line 363
+    .line 415
     new-instance v0, Landroid/os/Looper$MessageHistory;
 
     .end local v0           #ret:Landroid/os/Looper$MessageHistory;
     invoke-direct {v0, p1, p2, p3}, Landroid/os/Looper$MessageHistory;-><init>(Landroid/os/Message;J)V
 
-    .line 364
+    .line 416
     .restart local v0       #ret:Landroid/os/Looper$MessageHistory;
     iget-object v1, p0, Landroid/os/Looper$MessageHistoryList;->array:[Landroid/os/Looper$MessageHistory;
 
@@ -103,7 +103,7 @@
 
     aput-object v0, v1, v2
 
-    .line 369
+    .line 421
     :goto_0
     iget v1, p0, Landroid/os/Looper$MessageHistoryList;->tail:I
 
@@ -113,7 +113,7 @@
 
     iput v1, p0, Landroid/os/Looper$MessageHistoryList;->tail:I
 
-    .line 370
+    .line 422
     iget v1, p0, Landroid/os/Looper$MessageHistoryList;->size:I
 
     const/16 v2, 0x14
@@ -126,11 +126,11 @@
 
     iput v1, p0, Landroid/os/Looper$MessageHistoryList;->size:I
 
-    .line 372
+    .line 424
     :goto_1
     return-object v0
 
-    .line 366
+    .line 418
     :cond_0
     iget-object v1, p0, Landroid/os/Looper$MessageHistoryList;->array:[Landroid/os/Looper$MessageHistory;
 
@@ -138,12 +138,12 @@
 
     aget-object v0, v1, v2
 
-    .line 367
+    .line 419
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Looper$MessageHistory;->setValue(Landroid/os/Message;J)V
 
     goto :goto_0
 
-    .line 371
+    .line 423
     :cond_1
     iget v1, p0, Landroid/os/Looper$MessageHistoryList;->tail:I
 
@@ -157,7 +157,7 @@
     .parameter "i"
 
     .prologue
-    .line 350
+    .line 402
     iget v0, p0, Landroid/os/Looper$MessageHistoryList;->size:I
 
     if-eqz v0, :cond_0
@@ -168,7 +168,7 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 351
+    .line 403
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -206,7 +206,7 @@
 
     throw v0
 
-    .line 353
+    .line 405
     :cond_1
     iget-object v0, p0, Landroid/os/Looper$MessageHistoryList;->array:[Landroid/os/Looper$MessageHistory;
 
@@ -225,7 +225,7 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 409
     iget v0, p0, Landroid/os/Looper$MessageHistoryList;->size:I
 
     return v0

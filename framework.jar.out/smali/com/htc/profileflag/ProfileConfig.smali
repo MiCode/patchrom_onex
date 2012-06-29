@@ -10,6 +10,8 @@
 
 .field public static final LOGTAG_RESUME:Ljava/lang/String; = "ProfileResume"
 
+.field private static final PROF_UI_MESSAGE_LIMITATION_FLASH:Ljava/lang/String; = "profiler.performance.flash"
+
 .field private static final PROP_ANRHISTORY:Ljava/lang/String; = "debugtool.anrhistory"
 
 .field private static final PROP_ANR_DUMP_BINDER:Ljava/lang/String; = "profiler.anr_dump_binder"
@@ -256,6 +258,8 @@
 
 .field private static profile_syncdetector:Z
 
+.field private static profile_ui_message_limitation:I
+
 .field private static profile_windowManagerService_debugUpDown:Z
 
 .field private static strictmode_policy_set:I
@@ -263,837 +267,862 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 11
 
     .prologue
-    const/high16 v8, 0x90
+    const/high16 v10, 0x90
 
-    const/4 v7, 0x5
+    const/16 v7, 0x1f4
 
-    const/4 v5, 0x1
+    const/4 v9, 0x5
 
-    const/4 v4, 0x0
+    const/4 v6, 0x1
 
-    .line 242
-    const-string/jumbo v3, "ro.factorytest"
+    const/4 v5, 0x0
 
-    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    .line 246
+    const-string/jumbo v4, "ro.factorytest"
+
+    invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 243
+    .line 247
     .local v2, factoryTestStr:Ljava/lang/String;
-    const-string v3, ""
+    const-string v4, ""
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_7
+    if-eqz v4, :cond_7
 
-    move v1, v4
+    move v1, v5
 
-    .line 244
+    .line 248
     .local v1, factoryTest:I
     :goto_0
     if-eqz v1, :cond_8
 
-    .line 245
-    sput-boolean v5, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_error_report:Z
-
     .line 249
+    sput-boolean v6, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_error_report:Z
+
+    .line 253
     :goto_1
-    sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
+    sget-object v4, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
-    const-string/jumbo v6, "user"
+    const-string/jumbo v8, "user"
 
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_9
-
-    .line 250
-    sput-boolean v5, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_ulog:Z
+    if-eqz v4, :cond_9
 
     .line 254
+    sput-boolean v6, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_ulog:Z
+
+    .line 258
     :goto_2
-    const-string/jumbo v3, "profiler.resume"
+    const-string/jumbo v4, "profiler.resume"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_resume:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_resume:Z
 
-    .line 255
-    const-string/jumbo v3, "profiler.launch"
+    .line 259
+    const-string/jumbo v4, "profiler.launch"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_launch:Z
-
-    .line 256
-    const-string/jumbo v3, "profiler.performance"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_performance:I
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_launch:Z
 
     .line 260
-    const-string/jumbo v3, "profiler.opencursor"
+    const-string/jumbo v4, "profiler.performance"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_opencursor:Z
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_performance:I
 
-    .line 261
-    const-string/jumbo v3, "profiler.checkheap"
+    .line 264
+    const-string/jumbo v4, "profiler.opencursor"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_checkheap:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_opencursor:Z
 
-    .line 262
-    const-string/jumbo v3, "profiler.recyclebmp"
+    .line 265
+    const-string/jumbo v4, "profiler.checkheap"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmp:Z
-
-    .line 263
-    sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v6, 0x42
-
-    if-eq v3, v6, :cond_0
-
-    sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v6, 0x62
-
-    if-eq v3, v6, :cond_0
-
-    sget-short v3, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
-
-    const/16 v6, 0x7e
-
-    if-ne v3, v6, :cond_a
-
-    :cond_0
-    move v0, v5
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_checkheap:Z
 
     .line 266
+    const-string/jumbo v4, "profiler.recyclebmp"
+
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmp:Z
+
+    .line 267
+    sget-short v4, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v8, 0x42
+
+    if-eq v4, v8, :cond_0
+
+    sget-short v4, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v8, 0x62
+
+    if-eq v4, v8, :cond_0
+
+    sget-short v4, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
+
+    const/16 v8, 0x7e
+
+    if-ne v4, v8, :cond_a
+
+    :cond_0
+    move v0, v6
+
+    .line 270
     .local v0, disablefreeNativeBmpDevice:Z
     :goto_3
     if-eqz v0, :cond_b
 
-    move v3, v4
+    move v4, v5
 
     :goto_4
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmp:I
-
-    .line 268
-    const-string/jumbo v3, "profiler.freeNativeBmpDebug"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmpDebug:Z
-
-    .line 269
-    const-string/jumbo v3, "profiler.recyclebmpsize"
-
-    const/16 v6, 0x32
-
-    invoke-static {v3, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmpsize:I
-
-    .line 270
-    const-string/jumbo v3, "profiler.checklowmemory"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_checklowmemory:Z
-
-    .line 271
-    const-string/jumbo v3, "profiler.debugmonitor"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_debugmonitor:Z
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmp:I
 
     .line 272
-    const-string/jumbo v3, "profiler.KIQdebugupdown"
+    const-string/jumbo v4, "profiler.freeNativeBmpDebug"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_keyInputQueue_debugUpDown:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmpDebug:Z
 
     .line 273
-    const-string/jumbo v3, "profiler.WMSdebugupdown"
+    const-string/jumbo v4, "profiler.recyclebmpsize"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    const/16 v8, 0x32
 
-    move-result v3
+    invoke-static {v4, v8}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_windowManagerService_debugUpDown:Z
+    move-result v4
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmpsize:I
 
     .line 274
-    const/4 v3, -0x1
+    const-string/jumbo v4, "profiler.checklowmemory"
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_launch_pid:I
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_checklowmemory:Z
 
     .line 275
-    const-string v3, "debugtool.anrhistory"
+    const-string/jumbo v4, "profiler.debugmonitor"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_anrhistory:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_debugmonitor:Z
 
     .line 276
-    const-string/jumbo v3, "profiler.hung.keepalive"
+    const-string/jumbo v4, "profiler.KIQdebugupdown"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_hung_keepalive:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_keyInputQueue_debugUpDown:Z
 
     .line 277
-    const-string/jumbo v3, "profiler.hung.dumpallprocesses"
+    const-string/jumbo v4, "profiler.WMSdebugupdown"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpallprocesses:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_windowManagerService_debugUpDown:Z
 
     .line 278
-    const-string/jumbo v3, "profiler.hung.dumpsysnative"
+    const/4 v4, -0x1
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpsysnative:Z
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_launch_pid:I
 
     .line 279
-    const-string/jumbo v3, "profiler.hung.dumpmedianative"
+    const-string v4, "debugtool.anrhistory"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpmedianative:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_anrhistory:Z
 
     .line 280
-    const-string/jumbo v3, "profiler.hung.dumpdobugreport"
+    const-string/jumbo v4, "profiler.hung.keepalive"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dobugreport:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_hung_keepalive:Z
 
     .line 281
-    const-string/jumbo v3, "profiler.monitorthreadcpuusage"
+    const-string/jumbo v4, "profiler.hung.dumpallprocesses"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_monitor_thread_cpu_usage:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpallprocesses:Z
 
     .line 282
-    const-string/jumbo v3, "profiler.wakelock"
+    const-string/jumbo v4, "profiler.hung.dumpsysnative"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_debug_wakelock:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpsysnative:Z
 
     .line 283
-    const-string/jumbo v3, "profiler.debugtool.kernelstack"
+    const-string/jumbo v4, "profiler.hung.dumpmedianative"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_kernelstack:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpmedianative:Z
 
     .line 284
-    const-string/jumbo v3, "profiler.anr_dump_binder"
+    const-string/jumbo v4, "profiler.hung.dumpdobugreport"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_c
-
-    move v3, v4
-
-    :goto_5
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_anr_dump_binder:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dobugreport:Z
 
     .line 285
-    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_anr_dump_native_uid:I
+    const-string/jumbo v4, "profiler.monitorthreadcpuusage"
+
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_monitor_thread_cpu_usage:Z
 
     .line 286
-    const-string/jumbo v3, "strictmode.policyset"
+    const-string/jumbo v4, "profiler.wakelock"
 
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->strictmode_policy_set:I
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_debug_wakelock:Z
 
     .line 287
-    const-string/jumbo v3, "profiler.no_RotationAnimation"
+    const-string/jumbo v4, "profiler.debugtool.kernelstack"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_1
-
-    :cond_1
-    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_no_RotationAnimation:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_kernelstack:Z
 
     .line 288
-    const-string/jumbo v3, "profiler.logfps"
+    const-string/jumbo v4, "profiler.anr_dump_binder"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_log_fps:I
+    if-nez v4, :cond_c
+
+    move v4, v5
+
+    :goto_5
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_anr_dump_binder:Z
+
+    .line 289
+    sput v5, Lcom/htc/profileflag/ProfileConfig;->profile_anr_dump_native_uid:I
+
+    .line 290
+    const-string/jumbo v4, "strictmode.policyset"
+
+    invoke-static {v4, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->strictmode_policy_set:I
 
     .line 291
-    const-string/jumbo v3, "profiler.checklowstorage"
+    const-string/jumbo v4, "profiler.no_RotationAnimation"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_checklowstorage:Z
+    if-eqz v4, :cond_1
+
+    :cond_1
+    sput-boolean v5, Lcom/htc/profileflag/ProfileConfig;->profile_no_RotationAnimation:Z
 
     .line 292
-    const-string/jumbo v3, "profiler.lowstoragethreshold"
+    const-string/jumbo v4, "profiler.logfps"
 
-    invoke-static {v3, v8}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    move-result v3
+    move-result v4
 
-    invoke-static {v3, v8}, Ljava/lang/Math;->max(II)I
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_log_fps:I
 
-    move-result v3
+    .line 295
+    const-string/jumbo v4, "profiler.checklowstorage"
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_lowstoragethreshold:I
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 301
-    const-string/jumbo v3, "ro.htc.framework.screencapture"
+    move-result v4
 
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_checklowstorage:Z
 
-    move-result v3
+    .line 296
+    const-string/jumbo v4, "profiler.lowstoragethreshold"
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_screencapture:Z
+    invoke-static {v4, v10}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    .line 304
-    const-string/jumbo v3, "ro.product.hwreset"
+    move-result v4
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v10}, Ljava/lang/Math;->max(II)I
 
-    move-result v3
+    move-result v4
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature:I
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_lowstoragethreshold:I
 
     .line 305
-    const-string/jumbo v3, "ro.product.hwreset.timer1"
+    const-string/jumbo v4, "ro.htc.framework.screencapture"
 
-    invoke-static {v3, v7}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v6}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
-
-    .line 306
-    const-string/jumbo v3, "ro.product.hwreset.timer2"
-
-    const/16 v6, 0x8
-
-    invoke-static {v3, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer2:I
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_screencapture:Z
 
     .line 308
-    sget v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+    const-string/jumbo v4, "ro.product.hwreset"
 
-    const/4 v6, 0x2
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    if-le v3, v6, :cond_2
+    move-result v4
 
-    sget v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
-
-    const/16 v6, 0xa
-
-    if-le v3, v6, :cond_3
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature:I
 
     .line 309
-    :cond_2
-    sput v7, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+    const-string/jumbo v4, "ro.product.hwreset.timer1"
 
-    .line 311
-    :cond_3
-    sget v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer2:I
+    invoke-static {v4, v9}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    sget v6, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+    move-result v4
 
-    if-gt v3, v6, :cond_4
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+
+    .line 310
+    const-string/jumbo v4, "ro.product.hwreset.timer2"
+
+    const/16 v8, 0x8
+
+    invoke-static {v4, v8}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer2:I
 
     .line 312
-    sget v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+    sget v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
 
-    add-int/lit8 v3, v3, 0x3
+    const/4 v8, 0x2
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer2:I
+    if-le v4, v8, :cond_2
+
+    sget v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+
+    const/16 v8, 0xa
+
+    if-le v4, v8, :cond_3
+
+    .line 313
+    :cond_2
+    sput v9, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+
+    .line 315
+    :cond_3
+    sget v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer2:I
+
+    sget v8, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+
+    if-gt v4, v8, :cond_4
 
     .line 316
+    sget v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
+
+    add-int/lit8 v4, v4, 0x3
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer2:I
+
+    .line 320
     :cond_4
-    const-string/jumbo v3, "ro.htc.sharekey.spkg"
+    const-string/jumbo v4, "ro.htc.sharekey.spkg"
 
-    invoke-static {v3}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
-
-    .line 317
-    const-string/jumbo v3, "ro.htc.sharekey.sact"
-
-    invoke-static {v3}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
-
-    .line 318
-    const-string/jumbo v3, "ro.htc.sharekey.sint"
-
-    invoke-static {v3}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
 
     .line 321
-    const-string v3, ""
+    const-string/jumbo v4, "ro.htc.sharekey.sact"
 
-    sget-object v6, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
+    invoke-static {v4}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v4
 
-    move-result v3
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
 
-    if-eqz v3, :cond_5
+    .line 322
+    const-string/jumbo v4, "ro.htc.sharekey.sint"
 
-    const-string v3, ""
+    invoke-static {v4}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v6, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
+    move-result-object v4
 
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    const-string v3, ""
-
-    sget-object v6, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    .line 324
-    const-string v3, "com.sina.mfweibo"
-
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
 
     .line 325
-    const-string v3, "com.sina.mfweibo.EditActivity"
+    const-string v4, ""
 
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
+    sget-object v8, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
 
-    .line 326
-    const-string v3, ""
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
+    move-result v4
 
-    .line 327
-    const-string v3, "ProfileConfig"
+    if-eqz v4, :cond_5
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    const-string v4, ""
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v8, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
 
-    const-string/jumbo v7, "share key short press:get default intent - package:"
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v4
 
-    move-result-object v6
+    if-eqz v4, :cond_5
 
-    sget-object v7, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
+    const-string v4, ""
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v8, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
 
-    move-result-object v6
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v7, ", activity:"
+    move-result v4
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v4, :cond_5
 
-    move-result-object v6
+    .line 328
+    const-string v4, "com.sina.mfweibo"
 
-    sget-object v7, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 329
+    const-string v4, "com.sina.mfweibo.EditActivity"
 
-    move-result-object v6
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
 
-    const-string v7, ", action:"
+    .line 330
+    const-string v4, ""
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
 
-    move-result-object v6
+    .line 331
+    const-string v4, "ProfileConfig"
 
-    sget-object v7, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v6
+    const-string/jumbo v9, "share key short press:get default intent - package:"
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    sget-object v9, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
 
-    .line 332
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, ", activity:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, ", action:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v4, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 336
     :cond_5
-    const-string/jumbo v3, "ro.htc.sharekey.lpkg"
+    const-string/jumbo v4, "ro.htc.sharekey.lpkg"
 
-    invoke-static {v3}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
-
-    .line 333
-    const-string/jumbo v3, "ro.htc.sharekey.lact"
-
-    invoke-static {v3}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
-
-    .line 334
-    const-string/jumbo v3, "ro.htc.sharekey.lint"
-
-    invoke-static {v3}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
 
     .line 337
-    const-string v3, ""
+    const-string/jumbo v4, "ro.htc.sharekey.lact"
 
-    sget-object v6, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
+    invoke-static {v4}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v4
 
-    move-result v3
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
 
-    if-eqz v3, :cond_6
+    .line 338
+    const-string/jumbo v4, "ro.htc.sharekey.lint"
 
-    const-string v3, ""
+    invoke-static {v4}, Lcom/htc/profileflag/ProfileConfig;->init_sharekey_property_value(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v6, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
+    move-result-object v4
 
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    const-string v3, ""
-
-    sget-object v6, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    .line 340
-    const-string v3, "com.sina.mfweibo"
-
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
 
     .line 341
-    const-string v3, "com.sina.mfweibo.LookAroundListActivity"
+    const-string v4, ""
 
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
+    sget-object v8, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
 
-    .line 342
-    const-string v3, ""
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
+    move-result v4
 
-    .line 343
-    const-string v3, "ProfileConfig"
+    if-eqz v4, :cond_6
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    const-string v4, ""
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v8, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
 
-    const-string/jumbo v7, "share key long press:get default intent - package:"
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v4
 
-    move-result-object v6
+    if-eqz v4, :cond_6
 
-    sget-object v7, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
+    const-string v4, ""
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v8, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
 
-    move-result-object v6
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v7, ", activity"
+    move-result v4
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v4, :cond_6
 
-    move-result-object v6
+    .line 344
+    const-string v4, "com.sina.mfweibo"
 
-    sget-object v7, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 345
+    const-string v4, "com.sina.mfweibo.LookAroundListActivity"
 
-    move-result-object v6
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
 
-    const-string v7, ", action:"
+    .line 346
+    const-string v4, ""
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
 
-    move-result-object v6
+    .line 347
+    const-string v4, "ProfileConfig"
 
-    sget-object v7, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v6
+    const-string/jumbo v9, "share key long press:get default intent - package:"
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    sget-object v9, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
 
-    .line 348
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, ", activity"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    const-string v9, ", action:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    sget-object v9, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v4, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 352
     :cond_6
-    const-string v3, "htc.fw.db.enable_wal"
+    const-string/jumbo v4, "htc.fw.db.enable_wal"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_force_write_ahead_logging:Z
-
-    .line 351
-    const-string v3, "htc.fw.db.enable_haptic"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_framework_enable_haptic:Z
-
-    .line 354
-    const-string/jumbo v3, "profiler.syncdetector"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_syncdetector:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_force_write_ahead_logging:Z
 
     .line 355
-    const-string/jumbo v3, "profiler.debugbroadcast"
+    const-string/jumbo v4, "htc.fw.db.enable_haptic"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_debugbroadcast:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_framework_enable_haptic:Z
 
-    .line 356
-    const-string/jumbo v3, "profiler.debug.timetick"
+    .line 358
+    const-string/jumbo v4, "profiler.syncdetector"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_debug_timetick:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_syncdetector:Z
 
-    .line 357
-    new-array v3, v4, [B
+    .line 359
+    const-string/jumbo v4, "profiler.debugbroadcast"
 
-    sput-object v3, Lcom/htc/profileflag/ProfileConfig;->mEnableReleaseBitmapDevices:[B
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_debugbroadcast:Z
+
+    .line 360
+    const-string/jumbo v4, "profiler.debug.timetick"
+
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_debug_timetick:Z
 
     .line 361
-    const-string v3, "fast_launch"
+    new-array v4, v5, [B
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    sput-object v4, Lcom/htc/profileflag/ProfileConfig;->mEnableReleaseBitmapDevices:[B
 
-    move-result v3
+    .line 365
+    const-string v4, "fast_launch"
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_fast_launch:Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 362
-    const-string/jumbo v3, "profiler.debug_schedule"
+    move-result v4
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_fast_launch:Z
 
-    move-result v3
+    .line 366
+    const-string/jumbo v4, "profiler.debug_schedule"
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_debug_schedule:Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 363
-    const-string/jumbo v3, "profiler.power"
+    move-result v4
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_power:Z
-
-    .line 364
-    const-string/jumbo v3, "profiler.dbg.batthistory"
-
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_debug_batteryhistory:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_debug_schedule:Z
 
     .line 367
-    const-string/jumbo v3, "profiler.debug.hide_bg_anr"
+    const-string/jumbo v4, "profiler.power"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_debug_hideBgAnr:I
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_power:Z
+
+    .line 368
+    const-string/jumbo v4, "profiler.dbg.batthistory"
+
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_debug_batteryhistory:Z
 
     .line 371
-    const-string/jumbo v3, "profiler.freeFileMap"
+    const-string/jumbo v4, "profiler.debug.hide_bg_anr"
 
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_freeFileMap:Z
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_debug_hideBgAnr:I
 
     .line 375
-    const-string/jumbo v3, "profiler.debug.disable_hw_accel"
+    const-string/jumbo v4, "profiler.freeFileMap"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v6}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_debug_disable_hw_accel:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_freeFileMap:Z
 
-    .line 380
-    const-string/jumbo v3, "persist.htc.multicore.switch"
+    .line 379
+    const-string/jumbo v4, "profiler.debug.disable_hw_accel"
 
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_feature_multicore_function_switch:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_debug_disable_hw_accel:Z
 
-    .line 381
-    const-string/jumbo v3, "persist.htc.multicore.timeout"
+    .line 384
+    const-string/jumbo v4, "persist.htc.multicore.switch"
 
-    const/16 v5, 0x7d0
+    invoke-static {v4, v6}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    move-result v4
 
-    move-result v3
-
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_feature_multicore_timeout_millisecond:I
-
-    .line 383
-    const-string/jumbo v3, "persist.htc.sbcollapsetimeout"
-
-    const/16 v5, 0x1f4
-
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_feature_statusbar_collapse_timeout_millisecond:I
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_feature_multicore_function_switch:Z
 
     .line 385
-    const-string/jumbo v3, "persist.htc.sbcd.wifidisplay"
+    const-string/jumbo v4, "persist.htc.multicore.timeout"
 
-    const/16 v5, 0x2bc
+    const/16 v6, 0x7d0
 
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_feature_multicore_timeout_millisecond:I
+
+    .line 387
+    const-string/jumbo v4, "persist.htc.sbcollapsetimeout"
+
+    invoke-static {v4, v7}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_feature_statusbar_collapse_timeout_millisecond:I
+
+    .line 389
+    const-string/jumbo v4, "persist.htc.sbcd.wifidisplay"
+
+    const/16 v6, 0x2bc
+
+    invoke-static {v4, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_feature_statusbar_collapse_delay_for_wifidisplay_only:I
+
+    .line 392
+    const-string v4, "4.0a"
+
+    sget-object v6, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_Extra_Sense_Version:Ljava/lang/String;
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    sput v3, Lcom/htc/profileflag/ProfileConfig;->profile_feature_statusbar_collapse_delay_for_wifidisplay_only:I
+    .line 393
+    .local v3, isSense40a:Z
+    const-string/jumbo v6, "profiler.performance.flash"
 
-    .line 1262
-    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->dumped:Z
+    if-eqz v3, :cond_d
+
+    move v4, v7
+
+    :goto_6
+    invoke-static {v6, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    sput v4, Lcom/htc/profileflag/ProfileConfig;->profile_ui_message_limitation:I
+
+    .line 1274
+    sput-boolean v5, Lcom/htc/profileflag/ProfileConfig;->dumped:Z
 
     return-void
 
-    .line 243
+    .line 247
     .end local v0           #disablefreeNativeBmpDevice:Z
     .end local v1           #factoryTest:I
+    .end local v3           #isSense40a:Z
     :cond_7
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1101,57 +1130,64 @@
 
     goto/16 :goto_0
 
-    .line 247
+    .line 251
     .restart local v1       #factoryTest:I
     :cond_8
-    const-string/jumbo v3, "profiler.force_disable_err_rpt"
+    const-string/jumbo v4, "profiler.force_disable_err_rpt"
 
-    invoke-static {v3, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v4, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v3
+    move-result v4
 
-    sput-boolean v3, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_error_report:Z
+    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_error_report:Z
 
     goto/16 :goto_1
 
-    .line 252
+    .line 256
     :cond_9
-    sput-boolean v4, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_ulog:Z
+    sput-boolean v5, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_ulog:Z
 
     goto/16 :goto_2
 
     :cond_a
-    move v0, v4
+    move v0, v5
 
-    .line 263
+    .line 267
     goto/16 :goto_3
 
-    .line 266
+    .line 270
     .restart local v0       #disablefreeNativeBmpDevice:Z
     :cond_b
-    const-string/jumbo v3, "profiler.freeNativeBmp"
+    const-string/jumbo v4, "profiler.freeNativeBmp"
 
-    invoke-static {v3, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v6}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
-    move-result v3
+    move-result v4
 
     goto/16 :goto_4
 
     :cond_c
-    move v3, v5
+    move v4, v6
 
-    .line 284
+    .line 288
     goto/16 :goto_5
+
+    .line 393
+    .restart local v3       #isSense40a:Z
+    :cond_d
+    const/16 v4, 0x12c
+
+    goto :goto_6
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 394
+    .line 401
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 397
+    .line 404
     return-void
 .end method
 
@@ -1160,7 +1196,7 @@
     .parameter "length"
 
     .prologue
-    .line 1268
+    .line 1280
     :try_start_0
     const-string/jumbo v19, "profiler.hprof.once"
 
@@ -1172,26 +1208,26 @@
 
     if-eqz v19, :cond_0
 
-    .line 1269
+    .line 1281
     sget-boolean v19, Lcom/htc/profileflag/ProfileConfig;->dumped:Z
 
     if-eqz v19, :cond_0
 
-    .line 1270
+    .line 1282
     const-string v19, "ProfileConfig"
 
     const-string v20, "HPROF already dumped"
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1271
+    .line 1283
     const/16 v16, 0x0
 
-    .line 1318
+    .line 1330
     :goto_0
     return v16
 
-    .line 1275
+    .line 1287
     :cond_0
     const-string v19, "ProfileConfig"
 
@@ -1233,12 +1269,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1276
+    .line 1288
     const-string v19, "chmod 777 /data/misc"
 
     invoke-static/range {v19 .. v19}, Lcom/htc/profileflag/ProfileConfig;->runRootCommand(Ljava/lang/String;)Z
 
-    .line 1277
+    .line 1289
     new-instance v5, Ljava/io/File;
 
     const-string v19, "/data/misc/"
@@ -1247,7 +1283,7 @@
 
     invoke-direct {v5, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1278
+    .line 1290
     .local v5, dir:Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
@@ -1273,7 +1309,7 @@
 
     if-eqz v19, :cond_2
 
-    .line 1279
+    .line 1291
     new-instance v19, Lcom/htc/profileflag/ProfileConfig$1;
 
     invoke-direct/range {v19 .. v19}, Lcom/htc/profileflag/ProfileConfig$1;-><init>()V
@@ -1284,7 +1320,7 @@
 
     move-result-object v8
 
-    .line 1285
+    .line 1297
     .local v8, hprofs:[Ljava/io/File;
     new-instance v19, Lcom/htc/profileflag/ProfileConfig$2;
 
@@ -1294,10 +1330,10 @@
 
     invoke-static {v8, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 1291
+    .line 1303
     const-wide/16 v17, 0x0
 
-    .line 1292
+    .line 1304
     .local v17, size:J
     move-object v2, v8
 
@@ -1313,7 +1349,7 @@
 
     aget-object v7, v2, v9
 
-    .line 1293
+    .line 1305
     .local v7, hprof:Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->length()J
 
@@ -1321,12 +1357,12 @@
 
     add-long v17, v17, v19
 
-    .line 1292
+    .line 1304
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 1296
+    .line 1308
     .end local v7           #hprof:Ljava/io/File;
     :cond_1
     const-string/jumbo v19, "profiler.hprof.max"
@@ -1355,13 +1391,13 @@
 
     int-to-long v12, v0
 
-    .line 1297
+    .line 1309
     .local v12, maxThreshold:J
     cmp-long v19, v17, v12
 
     if-lez v19, :cond_2
 
-    .line 1298
+    .line 1310
     const-string v19, "ProfileConfig"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -1398,7 +1434,7 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1299
+    .line 1311
     move-object v2, v8
 
     array-length v10, v2
@@ -1410,7 +1446,7 @@
 
     aget-object v7, v2, v9
 
-    .line 1300
+    .line 1312
     .restart local v7       #hprof:Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->length()J
 
@@ -1418,10 +1454,10 @@
 
     sub-long v17, v17, v19
 
-    .line 1301
+    .line 1313
     invoke-virtual {v7}, Ljava/io/File;->delete()Z
 
-    .line 1302
+    .line 1314
     const-string v19, "ProfileConfig"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -1448,12 +1484,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1303
+    .line 1315
     cmp-long v19, v17, v12
 
     if-gez v19, :cond_3
 
-    .line 1309
+    .line 1321
     .end local v2           #arr$:[Ljava/io/File;
     .end local v7           #hprof:Ljava/io/File;
     .end local v8           #hprofs:[Ljava/io/File;
@@ -1470,7 +1506,7 @@
 
     invoke-direct {v11, v0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 1310
+    .line 1322
     .local v11, mStatFs:Landroid/os/StatFs;
     invoke-virtual {v11}, Landroid/os/StatFs;->getAvailableBlocks()I
 
@@ -1494,7 +1530,7 @@
 
     mul-long v3, v19, v21
 
-    .line 1311
+    .line 1323
     .local v3, avail:J
     const-string/jumbo v19, "profiler.hprof.min"
 
@@ -1522,7 +1558,7 @@
 
     int-to-long v14, v0
 
-    .line 1312
+    .line 1324
     .local v14, minThreshold:J
     cmp-long v19, v3, v14
 
@@ -1530,7 +1566,7 @@
 
     const/16 v16, 0x1
 
-    .line 1313
+    .line 1325
     .local v16, result:Z
     :goto_3
     if-eqz v16, :cond_5
@@ -1544,7 +1580,7 @@
 
     goto/16 :goto_0
 
-    .line 1315
+    .line 1327
     .end local v3           #avail:J
     .end local v5           #dir:Ljava/io/File;
     .end local v11           #mStatFs:Landroid/os/StatFs;
@@ -1553,7 +1589,7 @@
     :catch_0
     move-exception v6
 
-    .line 1316
+    .line 1328
     .local v6, ex:Ljava/lang/Exception;
     const-string v19, "ProfileConfig"
 
@@ -1585,12 +1621,12 @@
 
     invoke-static {v0, v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1318
+    .line 1330
     const/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 1299
+    .line 1311
     .end local v6           #ex:Ljava/lang/Exception;
     .restart local v2       #arr$:[Ljava/io/File;
     .restart local v5       #dir:Ljava/io/File;
@@ -1605,7 +1641,7 @@
 
     goto/16 :goto_2
 
-    .line 1312
+    .line 1324
     .end local v2           #arr$:[Ljava/io/File;
     .end local v7           #hprof:Ljava/io/File;
     .end local v8           #hprofs:[Ljava/io/File;
@@ -1621,7 +1657,7 @@
 
     goto :goto_3
 
-    .line 1313
+    .line 1325
     .restart local v16       #result:Z
     :cond_5
     :try_start_1
@@ -1636,7 +1672,7 @@
     .locals 3
 
     .prologue
-    .line 1257
+    .line 1269
     const/4 v0, 0x1
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1673,14 +1709,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1258
+    .line 1270
     const-string v0, "ProfileConfig"
 
     const-string v1, "dump FD failed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1260
+    .line 1272
     :cond_0
     return-void
 .end method
@@ -1689,7 +1725,7 @@
     .locals 1
 
     .prologue
-    .line 436
+    .line 443
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_checkheap:Z
 
     return v0
@@ -1699,7 +1735,7 @@
     .locals 1
 
     .prologue
-    .line 475
+    .line 482
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_checklowmemory:Z
 
     return v0
@@ -1709,7 +1745,7 @@
     .locals 1
 
     .prologue
-    .line 492
+    .line 499
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_checklowstorage:Z
 
     return v0
@@ -1719,7 +1755,7 @@
     .locals 1
 
     .prologue
-    .line 608
+    .line 620
     const/4 v0, 0x1
 
     return v0
@@ -1733,12 +1769,12 @@
 
     const/4 v5, 0x0
 
-    .line 449
+    .line 456
     sget v6, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmp:I
 
     if-ne v4, v6, :cond_1
 
-    .line 461
+    .line 468
     .local v0, arr$:[B
     .local v2, i$:I
     .local v3, len$:I
@@ -1746,7 +1782,7 @@
     :goto_0
     return v4
 
-    .line 451
+    .line 458
     .end local v0           #arr$:[B
     .end local v2           #i$:I
     .end local v3           #len$:I
@@ -1757,10 +1793,10 @@
 
     move v4, v5
 
-    .line 452
+    .line 459
     goto :goto_0
 
-    .line 453
+    .line 460
     :cond_2
     const/4 v6, -0x1
 
@@ -1768,7 +1804,7 @@
 
     if-ne v6, v7, :cond_4
 
-    .line 454
+    .line 461
     sget-object v0, Lcom/htc/profileflag/ProfileConfig;->mEnableReleaseBitmapDevices:[B
 
     .restart local v0       #arr$:[B
@@ -1783,13 +1819,13 @@
 
     aget-byte v1, v0, v2
 
-    .line 455
+    .line 462
     .local v1, device:B
     sget-short v6, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     if-eq v6, v1, :cond_0
 
-    .line 454
+    .line 461
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -1798,7 +1834,7 @@
     :cond_3
     move v4, v5
 
-    .line 459
+    .line 466
     goto :goto_0
 
     .end local v0           #arr$:[B
@@ -1807,7 +1843,7 @@
     :cond_4
     move v4, v5
 
-    .line 461
+    .line 468
     goto :goto_0
 .end method
 
@@ -1815,7 +1851,7 @@
     .locals 1
 
     .prologue
-    .line 466
+    .line 473
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmpDebug:Z
 
     return v0
@@ -1825,7 +1861,7 @@
     .locals 1
 
     .prologue
-    .line 499
+    .line 506
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_lowstoragethreshold:I
 
     return v0
@@ -1835,7 +1871,7 @@
     .locals 1
 
     .prologue
-    .line 552
+    .line 559
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_anr_dump_binder:Z
 
     return v0
@@ -1845,7 +1881,7 @@
     .locals 1
 
     .prologue
-    .line 632
+    .line 644
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_anr_dump_native_uid:I
 
     return v0
@@ -1855,7 +1891,7 @@
     .locals 1
 
     .prologue
-    .line 915
+    .line 927
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_anrhistory:Z
 
     return v0
@@ -1865,7 +1901,7 @@
     .locals 1
 
     .prologue
-    .line 570
+    .line 577
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_debug_batteryhistory:Z
 
     return v0
@@ -1875,17 +1911,17 @@
     .locals 2
 
     .prologue
-    .line 1013
+    .line 1025
     const/16 v0, 0x93
 
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
 
     if-ne v0, v1, :cond_0
 
-    .line 1014
+    .line 1026
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_debugbroadcast:Z
 
-    .line 1016
+    .line 1028
     :goto_0
     return v0
 
@@ -1899,7 +1935,7 @@
     .locals 1
 
     .prologue
-    .line 619
+    .line 631
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_debug_disable_hw_accel:Z
 
     return v0
@@ -1909,7 +1945,7 @@
     .locals 1
 
     .prologue
-    .line 960
+    .line 972
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dobugreport:Z
 
     return v0
@@ -1919,7 +1955,7 @@
     .locals 1
 
     .prologue
-    .line 933
+    .line 945
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpallprocesses:Z
 
     return v0
@@ -1929,7 +1965,7 @@
     .locals 1
 
     .prologue
-    .line 951
+    .line 963
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpmedianative:Z
 
     return v0
@@ -1939,7 +1975,7 @@
     .locals 1
 
     .prologue
-    .line 942
+    .line 954
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_hung_dumpsysnative:Z
 
     return v0
@@ -1949,7 +1985,7 @@
     .locals 1
 
     .prologue
-    .line 924
+    .line 936
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_hung_keepalive:Z
 
     return v0
@@ -1959,7 +1995,7 @@
     .locals 1
 
     .prologue
-    .line 1034
+    .line 1046
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_kernelstack:Z
 
     return v0
@@ -1969,7 +2005,7 @@
     .locals 1
 
     .prologue
-    .line 525
+    .line 532
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_debugmonitor:Z
 
     return v0
@@ -1979,7 +2015,7 @@
     .locals 1
 
     .prologue
-    .line 1070
+    .line 1082
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_debug_schedule:Z
 
     return v0
@@ -1989,7 +2025,7 @@
     .locals 1
 
     .prologue
-    .line 1025
+    .line 1037
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_debug_timetick:Z
 
     return v0
@@ -1999,7 +2035,7 @@
     .locals 1
 
     .prologue
-    .line 978
+    .line 990
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_debug_wakelock:Z
 
     return v0
@@ -2009,7 +2045,7 @@
     .locals 1
 
     .prologue
-    .line 1061
+    .line 1073
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_fast_launch:Z
 
     return v0
@@ -2019,7 +2055,7 @@
     .locals 1
 
     .prologue
-    .line 982
+    .line 994
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_error_report:Z
 
     return v0
@@ -2029,7 +2065,7 @@
     .locals 1
 
     .prologue
-    .line 991
+    .line 1003
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_force_disable_ulog:Z
 
     return v0
@@ -2039,7 +2075,7 @@
     .locals 1
 
     .prologue
-    .line 509
+    .line 516
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_force_write_ahead_logging:Z
 
     return v0
@@ -2049,7 +2085,7 @@
     .locals 1
 
     .prologue
-    .line 517
+    .line 524
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_enable_haptic:Z
 
     return v0
@@ -2061,17 +2097,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 689
+    .line 701
     sget v1, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature:I
 
     if-ne v1, v0, :cond_0
 
-    .line 690
+    .line 702
     .local v0, enabled:Z
     :goto_0
     return v0
 
-    .line 689
+    .line 701
     .end local v0           #enabled:Z
     :cond_0
     const/4 v0, 0x0
@@ -2083,7 +2119,7 @@
     .locals 1
 
     .prologue
-    .line 698
+    .line 710
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer1:I
 
     mul-int/lit16 v0, v0, 0x3e8
@@ -2095,7 +2131,7 @@
     .locals 1
 
     .prologue
-    .line 706
+    .line 718
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_hardware_reset_feature_timer2:I
 
     mul-int/lit16 v0, v0, 0x3e8
@@ -2107,7 +2143,7 @@
     .locals 1
 
     .prologue
-    .line 576
+    .line 583
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_debug_hideBgAnr:I
 
     return v0
@@ -2117,7 +2153,7 @@
     .locals 1
 
     .prologue
-    .line 534
+    .line 541
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_keyInputQueue_debugUpDown:Z
 
     return v0
@@ -2127,7 +2163,7 @@
     .locals 1
 
     .prologue
-    .line 414
+    .line 421
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_launch:Z
 
     return v0
@@ -2137,7 +2173,7 @@
     .locals 1
 
     .prologue
-    .line 1125
+    .line 1137
     const/4 v0, -0x1
 
     return v0
@@ -2147,7 +2183,7 @@
     .locals 1
 
     .prologue
-    .line 1052
+    .line 1064
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_log_fps:I
 
     return v0
@@ -2157,7 +2193,7 @@
     .locals 1
 
     .prologue
-    .line 969
+    .line 981
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_monitor_thread_cpu_usage:Z
 
     return v0
@@ -2167,7 +2203,7 @@
     .locals 1
 
     .prologue
-    .line 584
+    .line 591
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_feature_multicore_function_switch:Z
 
     return v0
@@ -2177,7 +2213,7 @@
     .locals 1
 
     .prologue
-    .line 588
+    .line 595
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_feature_multicore_timeout_millisecond:I
 
     return v0
@@ -2187,7 +2223,7 @@
     .locals 1
 
     .prologue
-    .line 641
+    .line 653
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_no_RotationAnimation:Z
 
     return v0
@@ -2197,7 +2233,7 @@
     .locals 1
 
     .prologue
-    .line 427
+    .line 434
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_opencursor:Z
 
     return v0
@@ -2207,7 +2243,7 @@
     .locals 1
 
     .prologue
-    .line 423
+    .line 430
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_performance:I
 
     return v0
@@ -2217,7 +2253,7 @@
     .locals 1
 
     .prologue
-    .line 561
+    .line 568
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_power:Z
 
     return v0
@@ -2227,7 +2263,7 @@
     .locals 1
 
     .prologue
-    .line 405
+    .line 412
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_resume:Z
 
     return v0
@@ -2237,7 +2273,7 @@
     .locals 1
 
     .prologue
-    .line 651
+    .line 663
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_screencapture:Z
 
     return v0
@@ -2247,7 +2283,7 @@
     .locals 1
 
     .prologue
-    .line 751
+    .line 763
     sget-object v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_act:Ljava/lang/String;
 
     return-object v0
@@ -2257,7 +2293,7 @@
     .locals 1
 
     .prologue
-    .line 760
+    .line 772
     sget-object v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_intent_action:Ljava/lang/String;
 
     return-object v0
@@ -2267,7 +2303,7 @@
     .locals 1
 
     .prologue
-    .line 742
+    .line 754
     sget-object v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_long_press_pkg:Ljava/lang/String;
 
     return-object v0
@@ -2277,7 +2313,7 @@
     .locals 1
 
     .prologue
-    .line 724
+    .line 736
     sget-object v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_act:Ljava/lang/String;
 
     return-object v0
@@ -2287,7 +2323,7 @@
     .locals 1
 
     .prologue
-    .line 733
+    .line 745
     sget-object v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_intent_action:Ljava/lang/String;
 
     return-object v0
@@ -2297,7 +2333,7 @@
     .locals 1
 
     .prologue
-    .line 715
+    .line 727
     sget-object v0, Lcom/htc/profileflag/ProfileConfig;->profile_framework_sharekey_short_press_pkg:Ljava/lang/String;
 
     return-object v0
@@ -2307,7 +2343,7 @@
     .locals 1
 
     .prologue
-    .line 598
+    .line 605
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_feature_statusbar_collapse_delay_for_wifidisplay_only:I
 
     return v0
@@ -2317,7 +2353,7 @@
     .locals 1
 
     .prologue
-    .line 593
+    .line 600
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_feature_statusbar_collapse_timeout_millisecond:I
 
     return v0
@@ -2327,7 +2363,7 @@
     .locals 2
 
     .prologue
-    .line 1000
+    .line 1012
     const/16 v0, 0x93
 
     sget-short v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEVICE_flag:S
@@ -2344,11 +2380,11 @@
 
     if-nez v0, :cond_1
 
-    .line 1003
+    .line 1015
     :cond_0
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_syncdetector:Z
 
-    .line 1004
+    .line 1016
     :goto_0
     return v0
 
@@ -2358,11 +2394,21 @@
     goto :goto_0
 .end method
 
+.method public static getProfileUIMessageLimitation()I
+    .locals 1
+
+    .prologue
+    .line 611
+    sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_ui_message_limitation:I
+
+    return v0
+.end method
+
 .method public static getProfileWindowManagerServiceDebugUpDown()Z
     .locals 1
 
     .prologue
-    .line 543
+    .line 550
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_windowManagerService_debugUpDown:Z
 
     return v0
@@ -2372,7 +2418,7 @@
     .locals 1
 
     .prologue
-    .line 445
+    .line 452
     sget-boolean v0, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmp:Z
 
     return v0
@@ -2382,7 +2428,7 @@
     .locals 1
 
     .prologue
-    .line 484
+    .line 491
     sget v0, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmpsize:I
 
     return v0
@@ -2392,7 +2438,7 @@
     .locals 1
 
     .prologue
-    .line 1043
+    .line 1055
     sget v0, Lcom/htc/profileflag/ProfileConfig;->strictmode_policy_set:I
 
     return v0
@@ -2403,53 +2449,53 @@
     .parameter "featureString"
 
     .prologue
-    .line 657
+    .line 669
     const-string v3, ""
 
-    .line 658
+    .line 670
     .local v3, retString:Ljava/lang/String;
     sget-short v4, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_PROJECT_flag:S
 
     and-int/lit16 v1, v4, 0xff
 
-    .line 659
+    .line 671
     .local v1, HtcProjectFlagInInt:I
     sget-short v4, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_LANGUAGE_flag:S
 
     and-int/lit16 v0, v4, 0xff
 
-    .line 660
+    .line 672
     .local v0, HtcLanguageFlagInInt:I
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 662
+    .line 674
     .local v2, featureStringWithProject:Ljava/lang/StringBuilder;
     const-string v4, "."
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 663
+    .line 675
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 664
+    .line 676
     const-string v4, "."
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 665
+    .line 677
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 667
+    .line 679
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
@@ -2458,7 +2504,7 @@
 
     if-gt v4, v5, :cond_1
 
-    .line 668
+    .line 680
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -2469,7 +2515,7 @@
 
     move-result-object v3
 
-    .line 669
+    .line 681
     const-string v4, "ProfileConfig"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2506,7 +2552,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 675
+    .line 687
     :goto_0
     const-string v4, ""
 
@@ -2516,14 +2562,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 676
+    .line 688
     const-string v4, ""
 
     invoke-static {p0, v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 677
+    .line 689
     const-string v4, "ProfileConfig"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2556,11 +2602,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
+    .line 692
     :cond_0
     return-object v3
 
-    .line 671
+    .line 683
     :cond_1
     const-string v4, "ProfileConfig"
 
@@ -2612,7 +2658,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1214
+    .line 1226
     const-string v7, "ProfileConfig"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2635,14 +2681,14 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1215
+    .line 1227
     const/4 v4, 0x0
 
-    .line 1216
+    .line 1228
     .local v4, process:Ljava/lang/Process;
     const/4 v2, 0x0
 
-    .line 1218
+    .line 1230
     .local v2, output:Ljava/io/DataOutputStream;
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -2655,7 +2701,7 @@
 
     move-result-object v4
 
-    .line 1219
+    .line 1231
     new-instance v3, Ljava/io/DataOutputStream;
 
     invoke-virtual {v4}, Ljava/lang/Process;->getOutputStream()Ljava/io/OutputStream;
@@ -2667,7 +2713,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_6
 
-    .line 1220
+    .line 1232
     .end local v2           #output:Ljava/io/DataOutputStream;
     .local v3, output:Ljava/io/DataOutputStream;
     :try_start_1
@@ -2691,15 +2737,15 @@
 
     invoke-virtual {v3, v7}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 1221
+    .line 1233
     const-string v7, "exit\n"
 
     invoke-virtual {v3, v7}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
 
-    .line 1222
+    .line 1234
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->flush()V
 
-    .line 1224
+    .line 1236
     new-instance v5, Ljava/io/BufferedReader;
 
     new-instance v7, Ljava/io/InputStreamReader;
@@ -2715,7 +2761,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1227
+    .line 1239
     .local v5, reader:Ljava/io/BufferedReader;
     :goto_0
     :try_start_2
@@ -2726,7 +2772,7 @@
     .local v1, line:Ljava/lang/String;
     if-eqz v1, :cond_3
 
-    .line 1228
+    .line 1240
     const-string v7, "ProfileConfig"
 
     invoke-static {v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -2736,12 +2782,12 @@
 
     goto :goto_0
 
-    .line 1230
+    .line 1242
     .end local v1           #line:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1234
+    .line 1246
     .local v0, e:Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
@@ -2749,14 +2795,14 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 1243
+    .line 1255
     if-eqz v3, :cond_0
 
-    .line 1244
+    .line 1256
     :try_start_4
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->close()V
 
-    .line 1246
+    .line 1258
     :cond_0
     invoke-virtual {v4}, Ljava/lang/Process;->destroy()V
     :try_end_4
@@ -2765,7 +2811,7 @@
     :goto_1
     move-object v2, v3
 
-    .line 1250
+    .line 1262
     .end local v0           #e:Ljava/lang/Exception;
     .end local v3           #output:Ljava/io/DataOutputStream;
     .end local v5           #reader:Ljava/io/BufferedReader;
@@ -2773,7 +2819,7 @@
     :goto_2
     return v6
 
-    .line 1234
+    .line 1246
     .end local v2           #output:Ljava/io/DataOutputStream;
     .restart local v3       #output:Ljava/io/DataOutputStream;
     .restart local v5       #reader:Ljava/io/BufferedReader;
@@ -2788,14 +2834,14 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 1238
+    .line 1250
     .end local v5           #reader:Ljava/io/BufferedReader;
     :catch_1
     move-exception v0
 
     move-object v2, v3
 
-    .line 1239
+    .line 1251
     .end local v3           #output:Ljava/io/DataOutputStream;
     .restart local v0       #e:Ljava/lang/Exception;
     .restart local v2       #output:Ljava/io/DataOutputStream;
@@ -2829,14 +2875,14 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 1243
+    .line 1255
     if-eqz v2, :cond_1
 
-    .line 1244
+    .line 1256
     :try_start_7
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
 
-    .line 1246
+    .line 1258
     :cond_1
     invoke-virtual {v4}, Ljava/lang/Process;->destroy()V
     :try_end_7
@@ -2844,36 +2890,36 @@
 
     goto :goto_2
 
-    .line 1247
+    .line 1259
     :catch_2
     move-exception v7
 
     goto :goto_2
 
-    .line 1242
+    .line 1254
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_1
     move-exception v6
 
-    .line 1243
+    .line 1255
     :goto_4
     if-eqz v2, :cond_2
 
-    .line 1244
+    .line 1256
     :try_start_8
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
 
-    .line 1246
+    .line 1258
     :cond_2
     invoke-virtual {v4}, Ljava/lang/Process;->destroy()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 1242
+    .line 1254
     :goto_5
     throw v6
 
-    .line 1234
+    .line 1246
     .end local v2           #output:Ljava/io/DataOutputStream;
     .restart local v1       #line:Ljava/lang/String;
     .restart local v3       #output:Ljava/io/DataOutputStream;
@@ -2885,20 +2931,20 @@
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
 
-    .line 1243
+    .line 1255
     if-eqz v3, :cond_4
 
-    .line 1244
+    .line 1256
     :try_start_a
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->close()V
 
-    .line 1246
+    .line 1258
     :cond_4
     invoke-virtual {v4}, Ljava/lang/Process;->destroy()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_3
 
-    .line 1250
+    .line 1262
     :goto_6
     const/4 v6, 0x1
 
@@ -2908,7 +2954,7 @@
     .restart local v2       #output:Ljava/io/DataOutputStream;
     goto :goto_2
 
-    .line 1247
+    .line 1259
     .end local v2           #output:Ljava/io/DataOutputStream;
     .restart local v3       #output:Ljava/io/DataOutputStream;
     :catch_3
@@ -2932,7 +2978,7 @@
 
     goto :goto_5
 
-    .line 1242
+    .line 1254
     .end local v2           #output:Ljava/io/DataOutputStream;
     .restart local v3       #output:Ljava/io/DataOutputStream;
     :catchall_2
@@ -2944,7 +2990,7 @@
     .restart local v2       #output:Ljava/io/DataOutputStream;
     goto :goto_4
 
-    .line 1238
+    .line 1250
     :catch_6
     move-exception v0
 
@@ -2956,7 +3002,7 @@
     .parameter "command"
 
     .prologue
-    .line 1163
+    .line 1175
     const/4 v0, 0x0
 
     return v0
@@ -2967,10 +3013,10 @@
     .parameter "checkheap"
 
     .prologue
-    .line 806
+    .line 818
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_checkheap:Z
 
-    .line 807
+    .line 819
     return-void
 .end method
 
@@ -2979,10 +3025,10 @@
     .parameter "checklowmemory"
 
     .prologue
-    .line 846
+    .line 858
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_checklowmemory:Z
 
-    .line 847
+    .line 859
     return-void
 .end method
 
@@ -2991,10 +3037,10 @@
     .parameter "checklowstorage"
 
     .prologue
-    .line 854
+    .line 866
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_checklowstorage:Z
 
-    .line 855
+    .line 867
     return-void
 .end method
 
@@ -3003,19 +3049,19 @@
     .parameter "freeNativeBmp"
 
     .prologue
-    .line 824
+    .line 836
     if-eqz p0, :cond_0
 
-    .line 825
+    .line 837
     const/4 v0, 0x1
 
     sput v0, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmp:I
 
-    .line 829
+    .line 841
     :goto_0
     return-void
 
-    .line 827
+    .line 839
     :cond_0
     const/4 v0, 0x0
 
@@ -3029,10 +3075,10 @@
     .parameter "freeNativeBmpDebug"
 
     .prologue
-    .line 837
+    .line 849
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_freeNativeBmpDebug:Z
 
-    .line 838
+    .line 850
     return-void
 .end method
 
@@ -3041,10 +3087,10 @@
     .parameter "lowstoragethreshold"
 
     .prologue
-    .line 861
+    .line 873
     sput p0, Lcom/htc/profileflag/ProfileConfig;->profile_lowstoragethreshold:I
 
-    .line 862
+    .line 874
     return-void
 .end method
 
@@ -3053,10 +3099,10 @@
     .parameter "anr_dump_binder"
 
     .prologue
-    .line 906
+    .line 918
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_anr_dump_binder:Z
 
-    .line 907
+    .line 919
     return-void
 .end method
 
@@ -3065,10 +3111,10 @@
     .parameter "debugmonitor"
 
     .prologue
-    .line 879
+    .line 891
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_debugmonitor:Z
 
-    .line 880
+    .line 892
     return-void
 .end method
 
@@ -3077,10 +3123,10 @@
     .parameter "keyInputQueue_debugUpDown"
 
     .prologue
-    .line 888
+    .line 900
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_keyInputQueue_debugUpDown:Z
 
-    .line 889
+    .line 901
     return-void
 .end method
 
@@ -3089,10 +3135,10 @@
     .parameter "launch"
 
     .prologue
-    .line 779
+    .line 791
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_launch:Z
 
-    .line 780
+    .line 792
     return-void
 .end method
 
@@ -3101,7 +3147,7 @@
     .parameter "pid"
 
     .prologue
-    .line 1116
+    .line 1128
     return-void
 .end method
 
@@ -3110,10 +3156,10 @@
     .parameter "opencursor"
 
     .prologue
-    .line 797
+    .line 809
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_opencursor:Z
 
-    .line 798
+    .line 810
     return-void
 .end method
 
@@ -3122,10 +3168,10 @@
     .parameter "level"
 
     .prologue
-    .line 788
+    .line 800
     sput p0, Lcom/htc/profileflag/ProfileConfig;->profile_performance:I
 
-    .line 789
+    .line 801
     return-void
 .end method
 
@@ -3134,10 +3180,10 @@
     .parameter "resume"
 
     .prologue
-    .line 770
+    .line 782
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_resume:Z
 
-    .line 771
+    .line 783
     return-void
 .end method
 
@@ -3146,10 +3192,10 @@
     .parameter "windowManagerService_debugUpDown"
 
     .prologue
-    .line 897
+    .line 909
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_windowManagerService_debugUpDown:Z
 
-    .line 898
+    .line 910
     return-void
 .end method
 
@@ -3158,10 +3204,10 @@
     .parameter "recyclebmp"
 
     .prologue
-    .line 815
+    .line 827
     sput-boolean p0, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmp:Z
 
-    .line 816
+    .line 828
     return-void
 .end method
 
@@ -3170,9 +3216,9 @@
     .parameter "recyclebmpsize"
 
     .prologue
-    .line 870
+    .line 882
     sput p0, Lcom/htc/profileflag/ProfileConfig;->profile_recyclebmpsize:I
 
-    .line 871
+    .line 883
     return-void
 .end method

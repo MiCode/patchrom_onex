@@ -368,7 +368,7 @@
 
     .line 3120
     .local v0, defaultLimitSizeInKb:I
-    const-string v1, "htc.fw.db.soft_heap_limit"
+    const-string/jumbo v1, "htc.fw.db.soft_heap_limit"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 

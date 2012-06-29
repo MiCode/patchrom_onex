@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4642
+    .line 4647
     iput-object p1, p0, Landroid/app/Activity$1;->this$0:Landroid/app/Activity;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 6
 
     .prologue
-    .line 4644
+    .line 4649
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 4645
+    .line 4650
     .local v0, startTime:J
     invoke-static {}, Lcom/htc/tracker/ObjectTracker;->getInstance()Lcom/htc/tracker/ObjectTracker;
 
@@ -56,14 +56,14 @@
 
     invoke-virtual {v2, v3}, Lcom/htc/tracker/ObjectTracker;->visit(Ljava/lang/Object;)V
 
-    .line 4646
+    .line 4651
     invoke-static {}, Lcom/htc/profileflag/ProfileConfig;->getFreeNativeBitmapDebug()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 4647
+    .line 4652
     const-string v2, "Activity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -106,7 +106,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4649
+    .line 4654
     :cond_0
     return-void
 .end method
