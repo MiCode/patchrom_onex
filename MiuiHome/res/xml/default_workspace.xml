@@ -3,6 +3,7 @@
   xmlns:launcher="http://schemas.android.com/apk/res/com.miui.home">
     <default launcher:screen="2" />
     <folder launcher:screen="1" launcher:x="2" launcher:y="3" launcher:title="com.miui.home:string/default_folder_title_tools" />
+    <folder launcher:screen="2" launcher:x="2" launcher:y="1" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:presets_container="true" />
     <search launcher:screen="0" launcher:x="0" launcher:y="0" />
     <clock launcher:screen="1" launcher:x="1" launcher:y="0" />
     <favorite launcher:className="com.android.camera.CameraEntry" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="2" />
@@ -11,22 +12,43 @@
     <favorite launcher:className="com.android.thememanager.ThemeResourceTabActivity" launcher:packageName="com.android.thememanager" launcher:screen="1" launcher:x="3" launcher:y="2" />
     <favorite launcher:className="com.android.settings.MiuiSettings" launcher:packageName="com.android.settings" launcher:screen="1" launcher:x="0" launcher:y="3" />
     <favorite launcher:className="com.xiaomi.market.ui.MainTabActivity" launcher:packageName="com.xiaomi.market" launcher:screen="1" launcher:x="1" launcher:y="3" />
-    <favorite launcher:className="com.android.deskclock.DeskClock" launcher:packageName="com.android.deskclock" launcher:container="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.android.deskclock.DeskClockTabActivity" launcher:packageName="com.android.deskclock" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.calculator2.Calculator" launcher:packageName="com.android.calculator2" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.soundrecorder.SoundRecorder" launcher:packageName="com.android.soundrecorder" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.systemui.TorchActivity" launcher:packageName="com.android.systemui" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.htc.fm.activity.FMRadioMain" launcher:packageName="com.htc.fm" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.miui.compass.CompassActivity" launcher:packageName="com.miui.compass" launcher:container="1" launcher:x="0" launcher:y="0" />
-    <favorite launcher:className="com.android.monitor.MainActivity" launcher:packageName="com.android.monitor" launcher:container="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.wali.miui.networkassistant.NetworkAssistantActivity" launcher:packageName="com.wali.miui.networkassistant" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.miui.backup.BackupActivity" launcher:packageName="com.miui.backup" launcher:container="1" launcher:x="0" launcher:y="0" />
-    <favorite launcher:className="com.miui.uac.Su" launcher:packageName="com.miui.uac" launcher:container="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.miui.antispam.firewall.FirewallTab" launcher:packageName="com.miui.antispam" launcher:container="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.lbe.security.ui.MainActivity" launcher:packageName="com.lbe.security.miui" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.providers.downloads.ui.DownloadList" launcher:packageName="com.android.providers.downloads.ui" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.stk.StkLauncherActivity" launcher:packageName="com.android.stk" launcher:container="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.android.quicksearchbox.SearchActivity" launcher:packageName="com.android.quicksearchbox" launcher:container="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.miui.bugreport.BugReportActivity" launcher:packageName="com.miui.bugreport" launcher:container="1" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:x="3" launcher:y="3" />
     <favorite launcher:className="com.miui.notes.ui.NotesListActivity" launcher:packageName="com.miui.notes" launcher:screen="2" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.email.activity.Welcome" launcher:packageName="com.android.email" launcher:screen="2" launcher:x="1" launcher:y="0" />
     <favorite launcher:className="com.android.updater.MainActivity" launcher:packageName="com.android.updater" launcher:screen="2" launcher:x="2" launcher:y="0" />
     <favorite launcher:className="com.android.fileexplorer.FileExplorerTabActivity" launcher:packageName="com.android.fileexplorer" launcher:screen="2" launcher:x="1" launcher:y="1" />
+    <favorite launcher:className="com.UCMobile.main.UCMobile" launcher:packageName="com.UCMobile" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.tigerknows.Sphinx" launcher:packageName="com.tigerknows" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="cn.dpocket.moplusand.ui.WndLogin" launcher:packageName="cn.dpocket.moplusand.ui" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.meilishuo.app.activity.WelcomeActivity" launcher:packageName="com.meilishuo" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.xiaomi.channel.ui.ChannelLauncherActivity" launcher:packageName="com.xiaomi.channel" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.openet.hotel.view.Main" launcher:packageName="com.openet.hotel.view" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.vancl.pullinfo.HeadNullActivity" launcher:packageName="com.vancl.activity" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.netease.newsreader.activity.MainIndexActivity" launcher:packageName="com.netease.newsreader.activity" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.sohu.newsclient.app.SplashActivity" launcher:packageName="com.sohu.newsclient" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.duokan.reader.ReaderBrowserActivity" launcher:packageName="com.duokan.reader" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="ctrip.android.view.HomePageViewController" launcher:packageName="ctrip.android.view" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.sina.weibo.SplashActivity" launcher:packageName="com.sina.weibo" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.opera.mini.android.Browser" launcher:packageName="com.oupeng.mini.android" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.ijinshan.kbatterydoctor.SplashActivity" launcher:packageName="com.ijinshan.kbatterydoctor" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.keniu.security.main.SplashActivity" launcher:packageName="com.ijinshan.mguard" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.nd.android.pandareader.home.Pandareader" launcher:packageName="com.nd.android.pandareader" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="cn.kuaipan.android.activity.LogoActivity" launcher:packageName="cn.wps.livespace" launcher:container="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="cn.kuwo.player.activities.MainActivity" launcher:packageName="cn.kuwo.player" launcher:container="2" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="1" launcher:y="0" />
     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
