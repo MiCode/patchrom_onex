@@ -550,7 +550,7 @@
 
 .field mVirtualKeyVibePattern:[J
 
-.field private mVolumeDownKeyConsumedByScreenshotChord:Z
+.field mVolumeDownKeyConsumedByScreenshotChord:Z
 
 .field private mVolumeDownKeyTime:J
 
