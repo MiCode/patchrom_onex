@@ -60,6 +60,7 @@ local-zip-misc:
 	cp other/system_etc/* $(ZIP_DIR)/system/etc/
 	cp other/system_keylayout/* $(ZIP_DIR)/system/usr/keylayout/
 	cp other/system_lib/* $(ZIP_DIR)/system/lib/
+	cp other/system_xbin/* $(ZIP_DIR)/system/xbin/
 
 	@echo delete redundance files
 	rm -f $(ZIP_DIR)/system/customize/resource/*.png
