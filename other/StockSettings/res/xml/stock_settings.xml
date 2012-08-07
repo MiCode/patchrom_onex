@@ -29,4 +29,10 @@
             android:title="@string/htc_fastboot_title"
             android:summary="@string/htc_fastboot_summary"
             android:persistent="false"/>
+
+        <CheckBoxPreference
+            android:key="htc_internet_pt"
+            android:title="@string/htc_internet_pt_title"
+            android:summary="@string/htc_internet_pt_summary"
+            android:persistent="false"/>
 </PreferenceScreen>
