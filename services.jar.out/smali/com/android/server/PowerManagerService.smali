@@ -13,6 +13,7 @@
         Lcom/android/server/PowerManagerService$PMSInternalAPI;,
         Lcom/android/server/PowerManagerService$LockList;,
         Lcom/android/server/PowerManagerService$BrightnessState;,
+        Lcom/android/server/PowerManagerService$SendReleaseProximitySensorBroadCast;,
         Lcom/android/server/PowerManagerService$TimeoutTask;,
         Lcom/android/server/PowerManagerService$PokeLock;,
         Lcom/android/server/PowerManagerService$DumpLockRecordTask;,
@@ -467,6 +468,9 @@
 
 .field private runHtcPowerSaverCheck:Ljava/lang/Runnable;
 
+.field private mReleaseProximitySensorRunnable:Ljava/lang/Runnable;
+
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -863,115 +867,102 @@
     :goto_0
     iput-boolean v2, p0, Lcom/android/server/PowerManagerService;->IS_AMOLED:Z
 
-    .line 444
     new-instance v2, Lcom/android/server/PowerManagerService$1;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$1;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->runHtcPowerSaverCheck:Ljava/lang/Runnable;
 
-    .line 2031
     new-instance v2, Lcom/android/server/PowerManagerService$5;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$5;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mScreenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
 
-    .line 2046
     new-instance v2, Lcom/android/server/PowerManagerService$6;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$6;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mNotificationTask:Ljava/lang/Runnable;
 
-    .line 2129
     new-instance v2, Lcom/android/server/PowerManagerService$7;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$7;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mScreenOnBroadcastDone:Landroid/content/BroadcastReceiver;
 
-    .line 2140
     new-instance v2, Lcom/android/server/PowerManagerService$8;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$8;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mScreenOffBroadcastDone:Landroid/content/BroadcastReceiver;
 
-    .line 2300
+    new-instance v2, Lcom/android/server/PowerManagerService$SendReleaseProximitySensorBroadCast;
+
+    invoke-direct {v2, p0, v8}, Lcom/android/server/PowerManagerService$SendReleaseProximitySensorBroadCast;-><init>(Lcom/android/server/PowerManagerService;Lcom/android/server/PowerManagerService$1;)V
+
+    iput-object v2, p0, Lcom/android/server/PowerManagerService;->mReleaseProximitySensorRunnable:Ljava/lang/Runnable;
+
     new-instance v2, Lcom/android/server/PowerManagerService$9;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$9;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mForceReenableScreenTask:Ljava/lang/Runnable;
 
-    .line 3271
     new-instance v2, Lcom/android/server/PowerManagerService$10;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$10;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mClearScreenTimeoutTask:Ljava/lang/Runnable;
 
-    .line 3498
     new-instance v2, Lcom/android/server/PowerManagerService$11;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$11;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mProximityTask:Ljava/lang/Runnable;
 
-    .line 3512
     new-instance v2, Lcom/android/server/PowerManagerService$12;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$12;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mAutoBrightnessTask:Ljava/lang/Runnable;
 
-    .line 4503
     new-instance v2, Lcom/android/server/PowerManagerService$16;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$16;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mProximityListener:Landroid/hardware/SensorEventListener;
 
-    .line 4549
     new-instance v2, Lcom/android/server/PowerManagerService$17;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$17;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mLightListener:Landroid/hardware/SensorEventListener;
 
-    .line 4599
     const/4 v2, 0x2
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mPenButtonLed:I
 
-    .line 4656
     iput v3, p0, Lcom/android/server/PowerManagerService;->mOrientation:I
 
-    .line 4772
     iput-boolean v3, p0, Lcom/android/server/PowerManagerService;->mPowerSaverCalledDvcs:Z
 
-    .line 4808
     const/16 v2, 0xa
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mDelayInterval:I
 
-    .line 4839
     const/16 v2, 0x1e
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->SCREEN_BRIGHT_ANIMATION_MININUM_INIT_VALUE:I
 
-    .line 4840
     const/16 v2, 0x39
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->SCREEN_BRIGHT_ANIMATION_MININUM_TARGET_VALUE:I
 
-    .line 691
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 692
     .local v0, token:J
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -16619,7 +16610,7 @@
 .end method
 
 .method private releaseProximitySensor(II)V
-    .locals 3
+    .locals 2
     .parameter "newState"
     .parameter "reason"
     .annotation build Landroid/annotation/MiuiHook;
@@ -16629,8 +16620,19 @@
     .prologue
     and-int/lit8 v0, p1, 0x1
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
+    iget-object v0, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/android/server/PowerManagerService;->mReleaseProximitySensorRunnable:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mBootCompleted:Z
 
     if-eqz v0, :cond_0
@@ -16639,16 +16641,11 @@
 
     if-eq v0, p2, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/server/PowerManagerService;->mReleaseProximitySensorRunnable:Ljava/lang/Runnable;
 
-    const-string v2, "miui.intent.action.RELEASE_PROXIMITY_SENSOR"
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
-    :cond_0
-    return-void
+    goto :goto_0
 .end method
