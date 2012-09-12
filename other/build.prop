@@ -231,3 +231,4 @@ ro.vendor.extension_library=/system/lib/libhtc-opt2.so
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 tf.enable=y
+ro.hwui.texture_cache_size=48
