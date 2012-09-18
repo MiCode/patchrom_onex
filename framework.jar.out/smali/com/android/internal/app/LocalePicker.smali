@@ -498,6 +498,8 @@
     :cond_4
     invoke-static {v11}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
+    invoke-static {v11}, Lmiui/util/ExtraLocalePicker;->adjustLocaleOrder([Lcom/android/internal/app/LocalePicker$LocaleInfo;)V
+
     .line 181
     move-object/from16 v0, p0
 
