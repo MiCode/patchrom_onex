@@ -9,7 +9,7 @@ local-zip-file     := onex_1.29.707.11.zip
 # local-out-zip-file :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Camera SettingsProvider HtcMusic
+local-modified-apps := Camera SettingsProvider HtcMusic MediaProvider
 
 local-modified-jars := HTCExtension
 
