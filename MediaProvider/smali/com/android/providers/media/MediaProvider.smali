@@ -20678,7 +20678,7 @@
 .end method
 
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 42
+    .locals 44
     .parameter "uri"
     .parameter "projectionIn"
     .parameter "selection"
@@ -21093,14 +21093,27 @@
 
     if-eqz v3, :cond_9
 
-    .line 2860
     const/16 v29, 0x1
 
-    .line 2864
     :cond_9
+
+    move-object/from16 v42, p0
+
+    move/from16 v43, v17
+
+    invoke-direct/range {v42 .. v43}, Lcom/android/providers/media/MediaProvider;->isPrivacyMode(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_MIUI_ADD_1
+
+    const/16 v30, 0x0
+
+    goto/16 :goto_0
+
+    :cond_MIUI_ADD_1
     sparse-switch v17, :sswitch_data_0
 
-    .line 3499
     new-instance v3, Ljava/lang/IllegalStateException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -24702,4 +24715,68 @@
         0x320 -> :sswitch_0
         0x2711 -> :sswitch_2
     .end sparse-switch
+.end method
+
+.method private isPrivacyMode(I)Z
+    .locals 3
+    .parameter "table"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x1
+
+    if-eq p1, v1, :cond_0
+
+    const/4 v2, 0x2
+
+    if-eq p1, v2, :cond_0
+
+    const/4 v2, 0x4
+
+    if-eq p1, v2, :cond_0
+
+    const/4 v2, 0x3
+
+    if-eq p1, v2, :cond_0
+
+    const/16 v2, 0xc8
+
+    if-eq p1, v2, :cond_0
+
+    const/16 v2, 0xc9
+
+    if-eq p1, v2, :cond_0
+
+    const/16 v2, 0xca
+
+    if-eq p1, v2, :cond_0
+
+    const/16 v2, 0xcb
+
+    if-ne p1, v2, :cond_1
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/providers/media/MediaProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lmiui/provider/ExtraSettings$Secure;->checkPrivacyAndReturnCursor(Landroid/content/Context;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    .local v0, emptyCursor:Landroid/database/Cursor;
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    .end local v0           #emptyCursor:Landroid/database/Cursor;
+    :goto_0
+    return v1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    goto :goto_0
 .end method
